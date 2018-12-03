@@ -42,7 +42,7 @@ import slimebound.powers.TackleBuffPower;
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         /*    */
         /* 31 */
-        this.baseDamage = 32;
+        this.baseDamage = 24;
         this.magicNumber = this.baseMagicNumber = 1;
         /* 36 */     this.isMultiDamage = true;
         this.exhaust = true;
@@ -61,7 +61,7 @@ import slimebound.powers.TackleBuffPower;
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
+      //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
 
     }
         /*    */

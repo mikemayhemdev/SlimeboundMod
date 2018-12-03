@@ -26,29 +26,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/localization/Slimebound-CardStrings.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5340">
-              <caret line="388" column="20" selection-start-line="388" selection-start-column="20" selection-end-line="388" selection-end-column="20" />
+            <state relative-caret-position="233">
+              <caret line="370" column="51" selection-start-line="370" selection-start-column="51" selection-end-line="370" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/ModTheSpire.json">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/PrepareSlimeCrush.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="2" />
+            <state relative-caret-position="357">
+              <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/Tackle.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+            <state relative-caret-position="170">
+              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeHyperBeam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -98,20 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/PotencyPower.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
               <caret line="74" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/localization/Slimebound-PowerStrings.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -129,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bodybl</find>
       <find>recol</find>
       <find>rege</find>
       <find>tackle</find>
@@ -159,6 +158,7 @@
       <find>focuse</find>
       <find>super spl</find>
       <find>health</find>
+      <find>replacing them</find>
     </findStrings>
     <replaceStrings>
       <replace>Awakaned</replace>
@@ -200,11 +200,13 @@
       <dir>C:\Users\zanam\Documents\IdeaProjects\lib\desktop-1.0.jar</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPower.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPower.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyAutomaton.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyAwakened.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyChamp.java" />
@@ -225,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/main/java/slimebound/SlimeboundMod.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeBlockade.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/PolyBeam.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeHyperBeam.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StopTime.java" />
         <option value="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeleton.atlas" />
         <option value="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeleton.json" />
@@ -246,7 +247,6 @@
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/RandomSlimeCard4.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/actions/CoordinateAction.java" />
         <option value="$PROJECT_DIR$/src/main/resources/localization/Slimebound-PowerStrings.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/localization/Slimebound-CardStrings.json" />
         <option value="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/Tackle.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/PoisonTackle.java" />
@@ -254,6 +254,10 @@
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/FlameTackle.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/QuickTackle.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/powers/PotencyPower.java" />
+        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/PrepareSlimeCrush.java" />
+        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java" />
+        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeHyperBeam.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/localization/Slimebound-CardStrings.json" />
       </list>
     </option>
   </component>
@@ -278,6 +282,7 @@
     <option name="width" value="2420" />
     <option name="height" value="1300" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -510,14 +515,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543861173430" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543861803157" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -583,7 +588,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.23288591" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.23288591" />
       <window_info id="Structure" order="1" sideWeight="0.50083196" side_tool="true" weight="0.085607275" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -592,7 +597,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2592068" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2592068" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -651,31 +656,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/SlimeboundMod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="311" column="16" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeBlockade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="79" column="38" lean-forward="true" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/PolyBeam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeHyperBeam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="41" column="109" selection-start-line="41" selection-start-column="109" selection-end-line="41" selection-end-column="109" />
         </state>
       </provider>
     </entry>
@@ -948,13 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/localization/Slimebound-CardStrings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5340">
-          <caret line="388" column="20" selection-start-line="388" selection-start-column="20" selection-end-line="388" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ModTheSpire.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1008,6 +985,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/PrepareSlimeCrush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeHyperBeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/localization/Slimebound-CardStrings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="370" column="51" selection-start-line="370" selection-start-column="51" selection-end-line="370" selection-end-column="51" />
         </state>
       </provider>
     </entry>

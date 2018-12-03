@@ -35,7 +35,7 @@ import slimebound.powers.NextTurnGainStrengthPower;
 /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
     /*    */                private static final CardStrings cardStrings;
 /*    */
-/*    */   private static final int COST = 3;
+/*    */   private static final int COST = 2;
 /*    */   private static final int BLOCK = 5;
 /*    */   private static final int UPGRADE_BONUS = 3;
 /*    */
@@ -46,7 +46,7 @@ import slimebound.powers.NextTurnGainStrengthPower;
 /*    */
 
          this.exhaust = true;
-            this.magicNumber = this.baseMagicNumber = 3;
+            this.magicNumber = this.baseMagicNumber = 2;
     this.exhaust = true;
 /*    */   }
 /*    */
