@@ -41,7 +41,7 @@
     </dependencies>
 
     <build>
-        <finalName>GluttonMod</finalName>
+        <finalName>SlimeboundMod</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -61,7 +61,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target/GluttonMod.jar" tofile="D:\SteamLibrary\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar"/>
+                                <copy file="SlimeboundMod.jar" tofile="D:\SteamLibrary\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar"/>
                             </target>
                         </configuration>
                         <goals>
