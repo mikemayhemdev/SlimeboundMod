@@ -41,7 +41,7 @@ import slimebound.orbs.SpawnedSlime;
     /* 29 */
     this.type = POWER_TYPE;
     /* 30 */
-    this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+    DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
     /*  84 */
     this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 /* 20 */     updateDescription();

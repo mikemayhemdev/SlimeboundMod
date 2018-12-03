@@ -48,7 +48,7 @@
 /*  48 */       if (this.p.exhaustPile.size() == 1)
 /*     */       {
 /*     */ 
-/*  51 */         if (((AbstractCard)this.p.exhaustPile.group.get(0)).cardID.equals("Recollect")) {
+/*  51 */         if (this.p.exhaustPile.group.get(0).cardID.equals("Recollect")) {
 /*  52 */           this.isDone = true;
 /*  53 */           return;
 /*     */         }

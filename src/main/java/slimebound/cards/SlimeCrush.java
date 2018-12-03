@@ -18,7 +18,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.NextTurnGainStrengthPower;
 import slimebound.powers.StunnedPower;
 /*    */
 

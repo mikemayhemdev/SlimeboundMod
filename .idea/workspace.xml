@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3bc8146-c129-4fdc-9226-90a4d3b0a9c8" name="Default Changelist" comment="" />
+    <list default="true" id="b3bc8146-c129-4fdc-9226-90a4d3b0a9c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/SlimeboundMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/SlimeboundMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/ExhumeToDrawAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/actions/ExhumeToDrawAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/CorrosiveTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/CorrosiveTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/FlameTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/FlameTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Grow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/Grow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/MassFeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/MassFeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/PoisonTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/PoisonTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/QuickTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/QuickTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplittingStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplittingStrike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/StopTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/StopTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Tackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/cards/Tackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/potions/SlimedPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/potions/SlimedPotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormEnergyPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormEnergyPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormNoHealPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormNoHealPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/HexSlimePerTurnPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/HexSlimePerTurnPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/LoseThornsPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/LoseThornsPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainDivider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainDivider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainHyperBeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainHyperBeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainSlimeCrush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainSlimeCrush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainStrengthPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainStrengthPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/PoisonThornsPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/PoisonThornsPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/PotencyPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/PotencyPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/RecyclingPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/RecyclingPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SearingPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/SearingPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SelfFormingGooPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/SelfFormingGooPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimeRitualPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimeRitualPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimeSacrificePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimeSacrificePower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimedPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimedPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SplitForLessPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/SplitForLessPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAwakenedPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAwakenedPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAwakenedPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAwakenedPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyChampPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyChampPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyChampPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyChampPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyCollectorPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyCollectorPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyCollectorPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyCollectorPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyGuardianPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyGuardianPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyGuardianPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyGuardianPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyHexaghostPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyHexaghostPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyHexaghostPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyHexaghostPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPowerUpgraded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPowerUpgraded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StunnedPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/StunnedPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/TackleBuffPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/powers/TackleBuffPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeFlareEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeFlareEffect.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="590">
-              <caret line="66" column="31" lean-forward="true" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+              <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -53,11 +113,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPowerUpgraded.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePower.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormEnergyPower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1215">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,42 +172,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/CorrosiveTackle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/FlameTackle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/QuickTackle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/RecyclingPower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-650">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -208,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyAwakened.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyChamp.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyCollector.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyGuardian.java" />
@@ -255,10 +323,11 @@
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/QuickTackle.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/powers/PotencyPower.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/PrepareSlimeCrush.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeHyperBeam.java" />
         <option value="$PROJECT_DIR$/src/main/resources/localization/Slimebound-CardStrings.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java" />
+        <option value="$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePower.java" />
       </list>
     </option>
   </component>
@@ -456,7 +525,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543862177355" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543862821932" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -528,7 +597,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.23288591" />
       <window_info id="Structure" order="1" sideWeight="0.50083196" side_tool="true" weight="0.085607275" />
@@ -539,7 +607,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2592068" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2592068" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -556,7 +624,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info active="true" anchor="right" id="Maven" order="5" visible="true" weight="0.15637584" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.15637584" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
@@ -598,34 +666,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/StopTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="115" column="29" lean-forward="true" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/monsters/exordium/AcidSlime_L.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="96" column="7" selection-start-line="96" selection-start-column="7" selection-end-line="99" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeleton.atlas">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/desktop-1.0.jar!/images/monsters/theBottom/slimeL/skeleton.atlas">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="15" lean-forward="true" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../lib/desktop-1.0.jar!/images/monsters/theBottom/slimeL/skeleton.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -947,14 +987,51 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
-          <caret line="66" column="31" lean-forward="true" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPowerUpgraded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePower.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormEnergyPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1215">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

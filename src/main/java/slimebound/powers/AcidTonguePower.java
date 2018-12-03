@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import org.apache.logging.log4j.LogManager;
@@ -54,7 +53,7 @@ import slimebound.SlimeboundMod;
         this.type = POWER_TYPE;
         /* 30 */
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         /*  84 */
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         /* 31 */

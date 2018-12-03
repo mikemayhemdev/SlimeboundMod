@@ -43,7 +43,7 @@ import slimebound.SlimeboundMod;
             this.magicNumber = this.baseMagicNumber = 2;
 
     this.exhaust = true;
-    this.canPlay = true;
+    canPlay = true;
     this.isEthereal = true;
 /*    */   }
 /*    */
@@ -52,7 +52,7 @@ import slimebound.SlimeboundMod;
     public boolean canUse(AbstractPlayer p, AbstractMonster m)
         /*    */   {
         /* 50 */
-        /* 51 */      if(!this.canPlay){
+        /* 51 */      if(!canPlay){
 
             /*    */    this.cantUseMessage = EXTENDED_DESCRIPTION[0];
             return false;
@@ -98,12 +98,12 @@ import slimebound.SlimeboundMod;
 
 
     public void triggerOnCardPlayed(AbstractCard cardPlayed) {
-        this.canPlay = false;
+        canPlay = false;
     }
 
 
     public void atTurnStart() {
-        this.canPlay = true;
+        canPlay = true;
     }
 
     /*    */   public AbstractCard makeCopy()

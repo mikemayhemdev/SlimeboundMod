@@ -96,7 +96,7 @@ import slimebound.powers.SlimedPower;
             upgradeName();
             /* 52 */
             /* 58 */       upgradeDamage(2);
-            /* 59 */       upgradeMagicNumber(1);;
+            /* 59 */       upgradeMagicNumber(1);
             /*    */
         }
         /*    */

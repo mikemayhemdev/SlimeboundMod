@@ -53,8 +53,8 @@ import slimebound.patches.SlimeboundEnum;
 /*     */ 
 /*     */
 public SlimeboundCharacter(String name, PlayerClass setClass) {
-    super(name, setClass, orbTextures, "SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
-    this.initializeClass((String)null, "SlimeboundImages/char/shoulder2.png", "SlimeboundImages/char/shoulder.png", "SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F,300.0F, 180.0F, new EnergyManager(3));
+    super(name, setClass, orbTextures, "SlimeboundImages/char/orb/vfx.png", "", null);
+    this.initializeClass(null, "SlimeboundImages/char/shoulder2.png", "SlimeboundImages/char/shoulder.png", "SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F,300.0F, 180.0F, new EnergyManager(3));
     this.reloadAnimation();
     this.dialogX=-200;
     this.dialogY=-200;

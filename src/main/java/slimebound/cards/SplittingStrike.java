@@ -52,8 +52,8 @@ import static com.megacrit.cardcrawl.cards.DamageInfo.DamageType.THORNS;
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         /*    */
         /* 31 */
-        this.baseDamage = this.originalDamage = 12;
-        this.upgradeDamage = 3;
+        this.baseDamage = originalDamage = 12;
+        upgradeDamage = 3;
         this.magicNumber = this.baseMagicNumber = 1;
 
         /* 33 */

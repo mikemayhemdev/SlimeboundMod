@@ -34,7 +34,7 @@ import slimebound.powers.SlimedPower;
 /* 29 */     this.tips.add(new PowerTip(
 /*    */     
 /* 31 */       com.megacrit.cardcrawl.helpers.TipHelper.capitalize(GameDictionary.POISON.NAMES[0]), 
-/* 32 */       (String)GameDictionary.keywords.get(GameDictionary.POISON.NAMES[0])));
+/* 32 */       GameDictionary.keywords.get(GameDictionary.POISON.NAMES[0])));
 /*    */   }
 /*    */   
 /*    */   public void use(AbstractCreature target)
