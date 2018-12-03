@@ -47,10 +47,10 @@ import slimebound.powers.TackleBuffPower;
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         /*    */
         /* 31 */
-        this.baseDamage = originalDamage = 10;
-        this.baseBlock = originalBlock = 2;
-        upgradeDamage = 4;
-        upgradeSelfDamage = 0;
+        this.baseDamage = this.originalDamage = 10;
+        this.baseBlock = this.originalBlock = 2;
+        this.upgradeDamage = 4;
+        this.upgradeSelfDamage = 0;
         this.magicNumber = this.baseMagicNumber = 2;
         /* 33 */
         /*    */

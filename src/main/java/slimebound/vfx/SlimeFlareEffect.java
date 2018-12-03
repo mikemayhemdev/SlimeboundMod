@@ -23,11 +23,11 @@
 /*     */   private OrbFlareColor flareColor;
 /*     */   private Color color2;
 /*     */   
-/*     */   public enum OrbFlareColor
+/*     */   public static enum OrbFlareColor
 /*     */   {
 /*  28 */     POISON, AGGRESSIVE, SLIMING, LICKING, HEX, CULTIST, TORCHHEAD, BRONZE;
 /*     */     
-/*     */      OrbFlareColor() {} }
+/*     */     private OrbFlareColor() {} }
 /*     */   
 /*  32 */   public SlimeFlareEffect(AbstractOrb orb, OrbFlareColor setColor) { if (outer == null) {
 /*  33 */       outer = ImageMaster.vfxAtlas.findRegion("combat/orbFlareOuter");

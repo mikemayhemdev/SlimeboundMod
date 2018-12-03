@@ -55,7 +55,7 @@ import slimebound.patches.AbstractCardEnum;
         c = makeCopy();
         if (upgraded) {
             c.modifyCostForCombat(-1);
-            if (this.isCostModified) {c.modifyCostForCombat(-1);}
+            if (this.isCostModified) {c.modifyCostForCombat(-1);};
             c.upgrade();
         }
 

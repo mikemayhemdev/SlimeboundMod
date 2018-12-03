@@ -47,7 +47,7 @@ import slimebound.SlimeboundMod;
             this.type = POWER_TYPE;
             /* 30 */
             this.amount = amount;
-            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
             /*  84 */
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
             /* 31 */

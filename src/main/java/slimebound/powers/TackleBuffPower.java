@@ -56,7 +56,7 @@ import slimebound.cards.*;
         this.type = POWER_TYPE;
         /* 30 */
         this.amount = amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         /*  84 */
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         /* 31 */
@@ -94,55 +94,55 @@ import slimebound.cards.*;
                 /* 55 */
                 Tackle t = (Tackle) c;
                 if (t.upgraded) {
-                    t.baseDamage = Tackle.originalDamage + Tackle.upgradeDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + t.upgradeDamage + this.amount * 2;
 
-                    t.baseBlock = Tackle.originalBlock + Tackle.upgradeSelfDamage + this.amount;
+                    t.baseBlock = t.originalBlock + t.upgradeSelfDamage + this.amount;
 
                 } else {
-                    t.baseDamage = Tackle.originalDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + this.amount * 2;
                     /*    */
-                    t.baseBlock = Tackle.originalBlock + this.amount;
+                    t.baseBlock = t.originalBlock + this.amount;
                 }
                 /*    */
             } else if (c.cardID == "PoisonTackle") {
                 /* 55 */
                 PoisonTackle t = (PoisonTackle) c;
                 if (t.upgraded) {
-                    t.baseDamage = PoisonTackle.originalDamage + PoisonTackle.upgradeDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + t.upgradeDamage + this.amount * 2;
 
-                    t.baseBlock = PoisonTackle.originalBlock + PoisonTackle.upgradeSelfDamage + this.amount;
+                    t.baseBlock = t.originalBlock + t.upgradeSelfDamage + this.amount;
 
                 } else {
-                    t.baseDamage = PoisonTackle.originalDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + this.amount * 2;
                     /*    */
-                    t.baseBlock = PoisonTackle.originalBlock + this.amount;
+                    t.baseBlock = t.originalBlock + this.amount;
                 }
                 /*    */
             } else if (c.cardID == "QuickTackle") {
                 /* 55 */
                 QuickTackle t = (QuickTackle) c;
                 if (t.upgraded) {
-                    t.baseDamage = QuickTackle.originalDamage + QuickTackle.upgradeDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + t.upgradeDamage + this.amount * 2;
 
-                    t.baseBlock = QuickTackle.originalBlock + QuickTackle.upgradeSelfDamage + this.amount;
+                    t.baseBlock = t.originalBlock + t.upgradeSelfDamage + this.amount;
 
                 } else {
-                    t.baseDamage = QuickTackle.originalDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + this.amount * 2;
                     /*    */
-                    t.baseBlock = QuickTackle.originalBlock + this.amount;
+                    t.baseBlock = t.originalBlock + this.amount;
                 }
             } else if (c.cardID == "FlameTackle") {
                 /* 55 */
                 FlameTackle t = (FlameTackle) c;
                 if (t.upgraded) {
-                    t.baseDamage = FlameTackle.originalDamage + FlameTackle.upgradeDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + t.upgradeDamage + this.amount * 2;
 
-                    t.baseBlock = FlameTackle.originalBlock + FlameTackle.upgradeSelfDamage + this.amount;
+                    t.baseBlock = t.originalBlock + t.upgradeSelfDamage + this.amount;
 
                 } else {
-                    t.baseDamage = FlameTackle.originalDamage + this.amount * 2;
+                    t.baseDamage = t.originalDamage + this.amount * 2;
                     /*    */
-                    t.baseBlock = FlameTackle.originalBlock + this.amount;
+                    t.baseBlock = t.originalBlock + this.amount;
                 }
             }
         }
