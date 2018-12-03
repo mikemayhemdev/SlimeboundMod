@@ -221,7 +221,7 @@
   },
   "SickeningTendril": {
     "NAME": "Diseased Tendril",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison.  This amount is increased by the target's Slimed as if it were damage."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison.  Poison amount is increased by the target's Slimed as if it were damage."
   },
   "PoisonThorns": {
     "NAME": "Acid Gelatin",

@@ -46,7 +46,7 @@ import slimebound.powers.NextTurnGainStrengthPower;
 /*    */
 
          this.exhaust = true;
-            this.magicNumber = this.baseMagicNumber = 2;
+            this.magicNumber = this.baseMagicNumber = 3;
     this.exhaust = true;
 /*    */   }
 /*    */

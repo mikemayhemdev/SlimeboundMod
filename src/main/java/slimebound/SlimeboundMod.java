@@ -53,14 +53,17 @@ import java.nio.charset.StandardCharsets;
 /*     */   
 /*     */   private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
 /*     */   
-/*     */   private static final String ATTACK_CARD = "512/bg_attack_glutton.png";
-/*     */   private static final String SKILL_CARD = "512/bg_skill_glutton.png";
-/*     */   private static final String POWER_CARD = "512/bg_power_glutton.png";
-/*     */   private static final String ENERGY_ORB = "512/card_glutton_orb.png";
-/*     */   private static final String ATTACK_CARD_PORTRAIT = "1024/bg_attack_glutton.png";
-/*     */   private static final String SKILL_CARD_PORTRAIT = "1024/bg_skill_glutton.png";
-/*     */   private static final String POWER_CARD_PORTRAIT = "1024/bg_power_glutton.png";
-/*     */   private static final String ENERGY_ORB_PORTRAIT = "1024/card_glutton_orb.png";
+/*     */   private static final String ATTACK_CARD = "512/bg_attack_slimebound.png";
+/*     */   private static final String SKILL_CARD = "512/bg_skill_slimebound.png";
+/*     */   private static final String POWER_CARD = "512/bg_power_slimebound.png";
+/*     */   private static final String ENERGY_ORB = "512/card_slimebound_orb.png";
+            private static final String CARD_ENERGY_ORB = "512/card_small_orb.png";
+
+/*     */   private static final String ATTACK_CARD_PORTRAIT = "1024/bg_attack_slimebound.png";
+/*     */   private static final String SKILL_CARD_PORTRAIT = "1024/bg_skill_slimebound.png";
+/*     */   private static final String POWER_CARD_PORTRAIT = "1024/bg_power_slimebound.png";
+/*     */   private static final String ENERGY_ORB_PORTRAIT = "1024/card_slimebound_orb.png";
+
 /*     */   private static final String CHAR_BUTTON = "charSelect/button.png";
 /*     */   private static final String CHAR_PORTRAIT = "charSelect/portrait.png";
     public static int powersPlayedThisCombat;
@@ -75,16 +78,17 @@ import java.nio.charset.StandardCharsets;
 /*  57 */   public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 /*     */   
 /*     */   public SlimeboundMod() {
-/*  60 */     BaseMod.subscribe(this);
+    /*  60 */
+    BaseMod.subscribe(this);
 
-/*  62 */     BaseMod.addColor(AbstractCardEnum.SLIMEBOUND, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR,
-/*     */     
-/*  64 */       getResourcePath("512/bg_attack_glutton.png"), getResourcePath("512/bg_skill_glutton.png"), getResourcePath("512/bg_power_glutton.png"), 
-/*  65 */       getResourcePath("512/card_glutton_orb.png"), getResourcePath("1024/bg_attack_glutton.png"), 
-/*  66 */       getResourcePath("1024/bg_skill_glutton.png"), getResourcePath("1024/bg_power_glutton.png"), 
-/*  67 */       getResourcePath("1024/card_glutton_orb.png"));
-/*     */   }
-/*     */   
+    /*  62 */
+    BaseMod.addColor(AbstractCardEnum.SLIMEBOUND,
+            SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR,
+            getResourcePath(ATTACK_CARD), getResourcePath(SKILL_CARD),
+            getResourcePath(POWER_CARD), getResourcePath(ENERGY_ORB),
+            getResourcePath(ATTACK_CARD_PORTRAIT), getResourcePath(SKILL_CARD_PORTRAIT),
+            getResourcePath(POWER_CARD_PORTRAIT), getResourcePath(ENERGY_ORB_PORTRAIT), getResourcePath(CARD_ENERGY_ORB));
+}
 /*     */   public static void initialize() {
 /*  71 */     new SlimeboundMod();
 /*     */   }
