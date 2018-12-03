@@ -49,7 +49,7 @@ import slimebound.powers.TackleBuffPower;
         /* 31 */
         this.baseDamage = this.originalDamage = 10;
         this.baseBlock = this.originalBlock = 2;
-        this.upgradeDamage = 4;
+        this.upgradeDamage = 3;
         this.upgradeSelfDamage = 0;
         this.magicNumber = this.baseMagicNumber = 2;
         /* 33 */
