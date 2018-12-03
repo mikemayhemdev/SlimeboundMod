@@ -85,8 +85,8 @@
   },
     "SlimeTap": {
       "NAME": "Slime Tap",
-      "DESCRIPTION": "Absorb your oldest Slime.  Gain [G] and draw a card.",
-      "UPGRADE_DESCRIPTION": "Absorb up to 2 of your oldest Slimes.  Gain [G] and draw a card for each Absorbed.",
+      "DESCRIPTION": "Absorb your oldest Slime.  Gain [E] and draw a card.",
+      "UPGRADE_DESCRIPTION": "Absorb up to 2 of your oldest Slimes.  Gain [E] and draw a card for each Absorbed.",
       "EXTENDED_DESCRIPTION": [
         "Need... slimes..."
       ]
@@ -253,8 +253,8 @@
   },
   "Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "On your next turn, gain [G] [G] and draw !M! cards. NL Retain up to !M! cards this turn. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [G] [G] and draw !M! cards. NL Retain up to !M! cards this turn."
+    "DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn."
   },
   "Grow": {
     "NAME": "Grow",
@@ -287,7 +287,7 @@
   },
   "UsefulSlime": {
     "NAME": "Useful Slime!",
-    "DESCRIPTION": "Gain [G] [G]. NL Exhaust."
+    "DESCRIPTION": "Gain [E] [E]. NL Exhaust."
   },
   "TendrilFlail": {
     "NAME": "Rain of Goop",
@@ -308,7 +308,7 @@
   },
   "LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Gain [G] if the target is Weak, then repeat if it has Poison."
+    "DESCRIPTION": "Deal !D! damage. Gain [E] if the target is Weak, then repeat if it has Poison."
   },
   "Leech": {
     "NAME": "Leech Life",
@@ -340,8 +340,8 @@
   },
   "PrepareSlimeCrush": {
     "NAME": "Prepare: Crush",
-    "DESCRIPTION": "On your next turn, gain [G] [G] [G] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [G] [G] [G] [G] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust"
+    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust"
   },
   "SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
@@ -354,8 +354,8 @@
   },
   "PrepareDivider": {
     "NAME": "Prepare: Divide",
-    "DESCRIPTION": "On your next turn, gain [G] [G] [G] and !M! Strength, and add Divide to your hand. NL Ethereal, Exhaust",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [G] [G] [G] [G] and !M! Strength, and add Divide to your hand. NL Ethereal, Exhaust"
+    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Ethereal, Exhaust",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Ethereal, Exhaust"
   },
   "Divider": {
     "NAME": "Divide",
@@ -363,8 +363,8 @@
   },
   "PrepareBeam": {
     "NAME": "Prepare: Beam",
-    "DESCRIPTION": "On your next turn, gain [G] [G] [G] and !M! Strength, and add Hyper Beam to your hand. NL Ethereal, Exhaust",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [G] [G] [G] [G] and !M! Strength, and add Hyper Beam to your hand. NL Ethereal, Exhaust"
+    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Ethereal, Exhaust",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Ethereal, Exhaust"
   },
   "SlimeHyperBeam": {
     "NAME": "Hyper Beam",
