@@ -58,55 +58,58 @@ import slimebound.SlimeboundMod;
             }
 
             int exhaustSize = p.exhaustPile.size();
+            int healthLoss = exhaustSize;
             CardGroup cardsToReturn = AbstractDungeon.player.exhaustPile;
             logger.info("Exhaust size:" + exhaustSize);
             /*     */
             for (AbstractCard c : cardsToReturn.group) {
                 /*  44 */
+                if (c.cardID!="Overexertion") {
+                    /*  57 */
 
-                /*  57 */
+                    /*  58 */
+                    logger.info("Add to discard");
+                    this.p.drawPile.addToRandomSpot(c);
 
-                /*  58 */
-                logger.info("Add to discard");
-                this.p.drawPile.addToRandomSpot(c);
+                    /*  61 */
 
-                /*  61 */
-
-                logger.info("Modify Cost");
-                c.modifyCostForCombat(-1);
-                /*     */
-                /*  63 */
-
-
-                /*  64 */
-                /*  67 */
+                    logger.info("Modify Cost");
+                    c.modifyCostForCombat(-1);
+                    /*     */
+                    /*  63 */
 
 
-                /*  69 */
-                /*     */
+                    /*  64 */
+                    /*  67 */
+
+
+                    /*  69 */
+                    /*     */
+                } else {healthLoss--;}
             }
             for (int x = 0; x <= exhaustSize - 1; x++){
                 logger.info("Exhausting card");
                 AbstractCard cardReturning = p.exhaustPile.getBottomCard();
-                this.p.exhaustPile.removeCard(cardReturning);
+                if (cardReturning.cardID!="Overexertion") {
+                    this.p.exhaustPile.removeCard(cardReturning);
 
-                logger.info("Unfadeout");
-                cardReturning.unfadeOut();
+                    logger.info("Unfadeout");
+                    cardReturning.unfadeOut();
 
-                logger.info("Unhover");
-                cardReturning.unhover();
-                /*  68 */
+                    logger.info("Unhover");
+                    cardReturning.unhover();
+                    /*  68 */
 
-                logger.info("Fading out false");
-                cardReturning.fadingOut = false;
+                    logger.info("Fading out false");
+                    cardReturning.fadingOut = false;
 
-
+                }
 
         }
 
 
             logger.info("Losing HP");
-            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,  AbstractDungeon.player, exhaustSize));
+            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,  AbstractDungeon.player, healthLoss));
         /* 54 */
         this.isDone = true;
             /*  93 */

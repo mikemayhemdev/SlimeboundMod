@@ -61,7 +61,9 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="SlimeboundMod.jar" tofile="D:\SteamLibrary\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar"/>
+                                <copy file="target\SlimeboundMod.jar" tofile="C:\Users\zanam\Documents\IdeaProjects\STSSlimeMod\SlimeboundMod.jar"/>
+
+                                <copy file="target\SlimeboundMod.jar" tofile="D:\SteamLibrary\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar"/>
                             </target>
                         </configuration>
                         <goals>

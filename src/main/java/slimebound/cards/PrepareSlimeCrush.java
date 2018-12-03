@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.EnergizedSlimeboundPower;
 import slimebound.powers.NextTurnGainSlimeCrush;
 import slimebound.powers.NextTurnGainStrengthPower;
 
@@ -57,7 +58,7 @@ import slimebound.powers.NextTurnGainStrengthPower;
     //AbstractDungeon.actionManager.addToBottom(new ShoutAction(p, , 1.0F, 1.0F));
     AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
 
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p,3), 3));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainStrengthPower(p, p, this.magicNumber), this.magicNumber));
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainSlimeCrush(p, p, 1), 1));
 

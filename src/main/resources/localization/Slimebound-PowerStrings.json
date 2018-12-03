@@ -39,6 +39,15 @@
 			" cards."
 		]
 	},
+	"EnergizedSlimeboundPower": {
+		"NAME": "Energized",
+		"DESCRIPTIONS": [
+			"Gain #b",
+			" additional [E] next turn.",
+			" additional [E] next turn.",
+			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+		]
+	},
 	"SelfFormingGooPower": {
 		"NAME": "Self-Forming Goo",
 		"DESCRIPTIONS": [
@@ -71,7 +80,7 @@
 		"NAME": "Tag-Team",
 		"DESCRIPTIONS": [
 			"Gain ",
-			" [G] and draw ",
+			" [E] and draw ",
 			" card each turn.",
 			" cards each turn."
 		]

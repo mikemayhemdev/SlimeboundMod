@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.RetainCardPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.EnergizedSlimeboundPower;
 import slimebound.powers.LoseThornsPower;
 
 /*    */
@@ -49,7 +50,7 @@ import slimebound.powers.LoseThornsPower;
 /*    */   public void use(AbstractPlayer p, AbstractMonster m)
 /*    */   {
              AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
-             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
+             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p,this.magicNumber), this.magicNumber));
              AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(p, this.magicNumber));
 
             /*    */   }
