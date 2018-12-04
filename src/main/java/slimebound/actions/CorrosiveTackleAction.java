@@ -1,6 +1,6 @@
-/*    */ package slimebound.actions;
-/*    */ 
-/*    */
+ package slimebound.actions;
+
+
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -12,28 +12,28 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Random;
 
-/*    */
 
-/*    */
-/*    */ public class CorrosiveTackleAction extends AbstractGameAction {
+
+
+ public class CorrosiveTackleAction extends AbstractGameAction {
         public boolean upgradeCard;
-    /*    */   private int damage;
-    /*    */   private AbstractPlayer p;
-    /*    */   private AbstractMonster m;
-    /*    */
+       private int damage;
+       private AbstractPlayer p;
+       private AbstractMonster m;
+
     public CorrosiveTackleAction(AbstractPlayer p, boolean upgraded)
-    /*     */ {
+     {
         this.upgradeCard = upgraded;
-        /*  25 */
-        /*     */
+
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
+
+
     public void update()
-    /*    */ {
-        /* 19 */
+     {
+
         AbstractCard c = null;
         Random random = new Random();
         Integer chosenRand = random.nextInt(4);
@@ -58,14 +58,10 @@ import java.util.Random;
             }
 
 
-            this.isDone = true;  /*    */
+            this.isDone = true;
         }
-        /*    */
+
     }
 
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\actions\RandomBasicSlimeCardAction.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

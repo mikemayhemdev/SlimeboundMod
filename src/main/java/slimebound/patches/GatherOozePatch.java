@@ -23,7 +23,7 @@ import java.util.ArrayList;
         method="buttonEffect")
 
 public class GatherOozePatch {
-  public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName()); // lets us log output
+  public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
   public static void Postfix(GoopPuddle meObj, final int buttonPressed) {
     logger.info("Patch hit");

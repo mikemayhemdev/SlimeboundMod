@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
@@ -15,56 +15,56 @@ import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
 
-/*    */
-/*    */ public class PotencyGainCard extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "PotencyGainCard";
-    /*    */
+
+ public class PotencyGainCard extends CustomCard
+         {
+       public static final String ID = "PotencyGainCard";
+
                 private static final CardStrings cardStrings;
                 public static final String NAME;
                 public static final String DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/levelup.png";
-    /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */
-    /*    */   private static final int COST = 1;
+       public static final String IMG_PATH = "cards/levelup.png";
+       private static final CardType TYPE = CardType.POWER;
+       private static final CardRarity RARITY = CardRarity.UNCOMMON;
+       private static final CardTarget TARGET = CardTarget.SELF;
 
-    /*    */   private static int upgradedamount = 1;
-    /*    */
-    /*    */   public PotencyGainCard()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 1;
+
+       private static int upgradedamount = 1;
+
+       public PotencyGainCard()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
                     this.magicNumber = this.baseMagicNumber = 1;
 
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */   {
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+       {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, this.magicNumber), this.magicNumber));
-        /* 35 */     }
-    /*    */
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new PotencyGainCard();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+             }
+
+       public AbstractCard makeCopy()
+       {
+             return new PotencyGainCard();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             this.upgradeMagicNumber(1);
 
 
-            /*    */     }
-        /*    */   }
+                 }
+           }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
     }
-    /*    */ }
+     }
 

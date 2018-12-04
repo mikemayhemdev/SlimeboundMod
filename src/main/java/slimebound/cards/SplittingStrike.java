@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
@@ -21,51 +21,51 @@ import slimebound.powers.TackleBuffPower;
 import java.util.Random;
 
 import static com.megacrit.cardcrawl.cards.DamageInfo.DamageType.THORNS;
-/*    */
 
-/*    */
-/*    */ public class SplittingStrike extends CustomCard
-/*    */ {
-    /*    */   public static final String ID = "SplittingStrike";
-    /*    */   public static final String NAME;
-    /*    */   public static final String DESCRIPTION;
+
+
+ public class SplittingStrike extends CustomCard
+ {
+       public static final String ID = "SplittingStrike";
+       public static final String NAME;
+       public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/splittingstrike.png";
-    /* 19 */   private static final CardType TYPE = CardType.ATTACK;
-    /* 20 */   private static final CardRarity RARITY = CardRarity.COMMON;
-    /* 21 */   private static final CardTarget TARGET = CardTarget.ENEMY;
+       public static final String IMG_PATH = "cards/splittingstrike.png";
+       private static final CardType TYPE = CardType.ATTACK;
+       private static final CardRarity RARITY = CardRarity.COMMON;
+       private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    /*    */   private static final int COST = 2;
-    /*    */   private static int baseSelfDamage;
-    /*    */   public static int originalDamage;
-    /*    */   public static int originalBlock;
-    /*    */   public static int upgradeDamage;
-    /*    */   public static int upgradeSelfDamage;
-    /*    */   private static final int POWER = 6;
-    /*    */   private static final int UPGRADE_BONUS = 3;
+       private static final int COST = 2;
+       private static int baseSelfDamage;
+       public static int originalDamage;
+       public static int originalBlock;
+       public static int upgradeDamage;
+       public static int upgradeSelfDamage;
+       private static final int POWER = 6;
+       private static final int UPGRADE_BONUS = 3;
 
-    /*    */
+
     public SplittingStrike()
-    /*    */ {
-        /* 29 */
+     {
+
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        /*    */
-        /* 31 */
+
+
         this.baseDamage = this.originalDamage = 12;
         this.upgradeDamage = 3;
         this.magicNumber = this.baseMagicNumber = 1;
 
-        /* 33 */
+
         this.exhaust=true;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
+
+
     public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */ {
-        /* 38 */
+     {
+
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction(AbstractDungeon.player));
 
 
@@ -103,37 +103,37 @@ import static com.megacrit.cardcrawl.cards.DamageInfo.DamageType.THORNS;
 
             }
         }
-        /*    */
+
     }
 
 
 
-    /*    */
-    /*    */
-    /*    */
+
+
+
     public AbstractCard makeCopy()
-    /*    */ {
-        /* 44 */
+     {
+
         return new SplittingStrike();
-        /*    */
+
     }
 
-    /*    */
-    /*    */
+
+
     public void upgrade()
-    /*    */ {
-        /* 49 */
+     {
+
         if (!this.upgraded)
-            /*    */ {
-            /* 51 */
+             {
+
             upgradeName();
-            /* 52 */
+
             upgradeDamage(upgradeDamage);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-            /*    */
+
         }
-        /*    */
+
     }
 
     static {
@@ -141,12 +141,8 @@ import static com.megacrit.cardcrawl.cards.DamageInfo.DamageType.THORNS;
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        /*    */
+
     }
 }
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\cards\Strike_Slimebound.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

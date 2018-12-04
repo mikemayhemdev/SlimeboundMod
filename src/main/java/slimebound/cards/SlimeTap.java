@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,49 +14,49 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimeSacrificePower;
 
-/*    */
-/*    */ public class SlimeTap extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "SlimeTap";
-    /*    */   public static final String NAME;
-    /*    */   private static final CardStrings cardStrings;
-    /*    */   public static final String DESCRIPTION;
-    /* 18 */   public static final String[] EXTENDED_DESCRIPTION;
+
+ public class SlimeTap extends CustomCard
+         {
+       public static final String ID = "SlimeTap";
+       public static final String NAME;
+       private static final CardStrings cardStrings;
+       public static final String DESCRIPTION;
+       public static final String[] EXTENDED_DESCRIPTION;
                 public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/slimetap.png";
+       public static final String IMG_PATH = "cards/slimetap.png";
 
-    /* 17 */   private static final CardType TYPE = CardType.SKILL;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
+       private static final CardType TYPE = CardType.SKILL;
+       private static final CardRarity RARITY = CardRarity.UNCOMMON;
+       private static final CardTarget TARGET = CardTarget.SELF;
 
-    /*    */   private static final int COST = 0;
+       private static final int COST = 0;
                 private int numEaten = 0;
-    /*    */   private static final int BLOCK = 5;
-    /*    */   private static final int UPGRADE_BONUS = 3;
+       private static final int BLOCK = 5;
+       private static final int UPGRADE_BONUS = 3;
 
-    /*    */
-    /*    */
+
+
     public SlimeTap()
-    /*    */ {
-        /* 27 */
+     {
+
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        /*    */
-        /* 29 */
+
+
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
 
-        /*    */
+
     }
 
-    /*    */
-    /*    */
+
+
     public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    /*    */   {
-        /* 50 */     boolean canUse = super.canUse(p, m);
-        /* 51 */
-        /* 54 */     for (AbstractOrb o : p.orbs) {
-            /* 55 */       if (o.ID == "TorchHeadSlime" ||
+       {
+             boolean canUse = super.canUse(p, m);
+
+             for (AbstractOrb o : p.orbs) {
+                   if (o.ID == "TorchHeadSlime" ||
                     o.ID == "AttackSlime" ||
                     o.ID == "PoisonSlime" ||
                     o.ID == "SlimingSlime" ||
@@ -64,11 +64,11 @@ import slimebound.powers.SlimeSacrificePower;
                     o.ID == "DebuffSlime" ||
                     o.ID == "CultistSlime" ||
                     o.ID == "HexSlime") {
-                /* 56 */         return canUse=true;}
-            /*    */     }
-        /*    */    this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-        /* 61 */     return canUse=false;
-        /*    */   }
+                         return canUse=true;}
+                 }
+            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+             return canUse=false;
+           }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
@@ -82,7 +82,7 @@ import slimebound.powers.SlimeSacrificePower;
                         o.ID == "BronzeSlime" ||
                         o.ID == "DebuffSlime" ||
                         o.ID == "CultistSlime" ||
-                        o.ID == "HexSlime") { // when equipped (picked up) this relic counts how many ethereal cards are in the player's deck
+                        o.ID == "HexSlime") {
 
 
 
@@ -101,11 +101,11 @@ import slimebound.powers.SlimeSacrificePower;
     }
 
 
-            /* 35 */
 
 
 
-    /*    */
+
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
@@ -113,21 +113,21 @@ import slimebound.powers.SlimeSacrificePower;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new SlimeTap();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+       public AbstractCard makeCopy()
+       {
+             return new SlimeTap();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 
 
-            /*    */     }
-        /*    */   }
-    /*    */ }
+                 }
+           }
+     }
 

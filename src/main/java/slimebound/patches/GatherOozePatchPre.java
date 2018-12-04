@@ -17,7 +17,7 @@ import java.lang.reflect.Field;
         method="onEnterRoom")
 
 public class GatherOozePatchPre {
-  public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName()); // lets us log output
+  public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
   public static void Postfix(GoopPuddle meObj) {
     logger.info("Patch hit");

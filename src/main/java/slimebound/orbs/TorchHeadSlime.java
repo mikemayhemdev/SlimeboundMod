@@ -1,9 +1,9 @@
-/*    */ package slimebound.orbs;
-/*    */ 
+ package slimebound.orbs;
 
-/*    */
 
-/*    */
+
+
+
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -25,72 +25,72 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.vfx.SlimeFlareEffect;
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
 
-/*    */
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ public class TorchHeadSlime
-/*    */   extends SpawnedSlime
-/*    */ {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public class TorchHeadSlime
+   extends SpawnedSlime
+ {
 
 
     private float fireTimer = 0.0F;
     private static final float FIRE_TIME = 0.04F;
-    /*    */
+
     public TorchHeadSlime()
-    /*    */ {
-        /* 25 */
+     {
+
         super("TorchHeadSlime", 9, true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
 
     }
 
-    /*    */
-    /*    */
-    /*    */
+
+
+
     public void updateDescription()
 
-    /*     */ {
+     {
         this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];
     }
 
 
-    /*    */
-    /*    */
-    /*    */
-    /*    */
-    /*    */
-    /*    */
-    /*    */
+
+
+
+
+
+
+
     public void activateEffectUnique()
-    /*    */ {
+     {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(true),
                 new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS),
                 AbstractGameAction.AttackEffect.FIRE));
 
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
+
+
     public AbstractOrb makeCopy() {
-        /* 54 */
+
         return new TorchHeadSlime();
-        /*    */
+
     }
-    /*    */
+
 
     public void update() {
         super.update();
@@ -106,7 +106,3 @@ import slimebound.vfx.SlimeFlareEffect;
 }
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\TheDisciple.jar!\chronomuncher\orbs\BronzeSlime.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

@@ -23,8 +23,8 @@ public class SlimedTailRelic extends CustomRelic {
     private boolean isActive = false;
 
     public SlimedTailRelic() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)), // you could create the texture in this class if you wanted too
-                RelicTier.RARE, LandingSound.MAGICAL); // this relic is uncommon and sounds magic when you click it
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+                RelicTier.RARE, LandingSound.MAGICAL);
     }
 
     @Override
@@ -79,7 +79,7 @@ public class SlimedTailRelic extends CustomRelic {
 
 
     @Override
-    public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic
+    public AbstractRelic makeCopy() {
         return new SlimedTailRelic();
     }
 

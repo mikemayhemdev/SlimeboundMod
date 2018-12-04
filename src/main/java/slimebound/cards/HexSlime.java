@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,37 +19,37 @@ import slimebound.powers.StudyShapesPower;
 
 import java.util.ArrayList;
 
-/*    */
-/*    */ public class HexSlime extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "HexSlime";
-    /*    */   public static final String NAME;
-    /*    */   public static final String DESCRIPTION;
+
+ public class HexSlime extends CustomCard
+         {
+       public static final String ID = "HexSlime";
+       public static final String NAME;
+       public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/splithex.png";
+       public static final String IMG_PATH = "cards/splithex.png";
 
-    /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.SPECIAL;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */                private static final CardStrings cardStrings;
+       private static final CardType TYPE = CardType.POWER;
+       private static final CardRarity RARITY = CardRarity.SPECIAL;
+       private static final CardTarget TARGET = CardTarget.SELF;
+                    private static final CardStrings cardStrings;
 
-    /*    */   private static final int COST = 1;
-    /*    */   private static final int BLOCK = 5;
-    /*    */   private static final int UPGRADE_BONUS = 3;
-    /*    */
-    /*    */   public HexSlime()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 1;
+       private static final int BLOCK = 5;
+       private static final int UPGRADE_BONUS = 3;
 
-        /*    */
-        /* 29 */     this.exhaust=true;
+       public HexSlime()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+
+
+             this.exhaust=true;
         this.isEthereal=true;
         this.magicNumber = this.baseMagicNumber = 6;
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */ {
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+     {
         int slotGain = 0;
         slotGain = 6 - p.maxOrbs;
         if (slotGain > 0) {
@@ -66,27 +66,27 @@ import java.util.ArrayList;
 
 
 
-    /*    */
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new HexSlime();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+       public AbstractCard makeCopy()
+       {
+             return new HexSlime();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             upgradeBaseCost(0);
 
 
-            /*    */     }
-        /*    */   }
-    /*    */ }
+                 }
+           }
+     }
 

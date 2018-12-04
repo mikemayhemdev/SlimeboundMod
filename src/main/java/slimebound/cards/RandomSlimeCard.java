@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,36 +20,36 @@ import slimebound.powers.SlimeSacrificePower;
 
 import java.util.Random;
 
-/*    */
-/*    */ public class RandomSlimeCard extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "RandomSlimeCard";
-    /*    */   public static final String NAME;
-    /*    */   public static final String DESCRIPTION;
+
+ public class RandomSlimeCard extends CustomCard
+         {
+       public static final String ID = "RandomSlimeCard";
+       public static final String NAME;
+       public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/split.png";
+       public static final String IMG_PATH = "cards/split.png";
 
-    /* 17 */   private static final CardType TYPE = CardType.SKILL;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.BASIC;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */                private static final CardStrings cardStrings;
+       private static final CardType TYPE = CardType.SKILL;
+       private static final CardRarity RARITY = CardRarity.BASIC;
+       private static final CardTarget TARGET = CardTarget.SELF;
+                    private static final CardStrings cardStrings;
 
-    /*    */   private static final int COST = 1;
-    /*    */   private static final int BLOCK = 5;
-    /*    */   private static final int UPGRADE_BONUS = 3;
-    /*    */
-    /*    */   public RandomSlimeCard()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 1;
+       private static final int BLOCK = 5;
+       private static final int UPGRADE_BONUS = 3;
 
-        /*    */
-        /* 29 */     //this.exhaust=true;
+       public RandomSlimeCard()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+
+
+
         this.magicNumber = this.baseMagicNumber = 1;
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */   {
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+       {
 
         Random random = new Random();
         Integer chosenRand = random.nextInt(4);
@@ -67,30 +67,30 @@ import java.util.Random;
 
 
 
-                /*    */
-                /* 35 */
+
+
             }
 
-    /*    */
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new RandomSlimeCard();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+       public AbstractCard makeCopy()
+       {
+             return new RandomSlimeCard();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             upgradeBaseCost(0);
 
-            /*    */     }
-        /*    */   }
-    /*    */ }
+                 }
+           }
+     }
 

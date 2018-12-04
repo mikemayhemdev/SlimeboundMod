@@ -1,9 +1,9 @@
-/*    */ package slimebound.orbs;
-/*    */ 
+ package slimebound.orbs;
 
-/*    */
 
-/*    */
+
+
+
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -22,54 +22,54 @@ import slimebound.vfx.SlimeFlareEffect;
 
 import java.util.Random;
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
 
-/*    */
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ public class DebuffSlime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public class DebuffSlime
         extends SpawnedSlime
-/*    */ {
+ {
 
     public DebuffSlime()
-    /*    */ {
+     {
 
         super("DebuffSlime", 2,true, new Color(.83F,.83F,.39F,1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"),"SlimeboundImages/orbs/licking.png");
     }
 
-    /*    */
-    /*    */
-    /*    */
+
+
+
     public void updateDescription()
 
-    /*     */ {
+     {
         this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];
     }
 
 
-    /*    */
-    /*    */
-    /*    */
-    /*    */
-    /*    */
-    /*    */
-    /*    */
+
+
+
+
+
+
+
     public void activateEffectUnique()
-    /*    */ {
-        /* 38 */
+     {
 
 
-        /*    */
+
+
         AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
@@ -83,18 +83,14 @@ import java.util.Random;
 
 
         }
-        /*    */
-        /*    */
-        /*    */
+
+
+
         public AbstractOrb makeCopy() {return new DebuffSlime();}
-            /*    */   }
+               }
 
 
 
 
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\TheDisciple.jar!\chronomuncher\orbs\BronzeSlime.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

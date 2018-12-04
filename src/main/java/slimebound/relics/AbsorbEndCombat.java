@@ -17,8 +17,8 @@ public class AbsorbEndCombat extends CustomRelic {
     private static final int HP_PER_CARD = 1;
 
     public AbsorbEndCombat() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)), // you could create the texture in this class if you wanted too
-                RelicTier.STARTER, LandingSound.MAGICAL); // this relic is uncommon and sounds magic when you click it
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+                RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class AbsorbEndCombat extends CustomRelic {
 
 
     @Override
-    public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic
+    public AbstractRelic makeCopy() {
         return new AbsorbEndCombat();
     }
 

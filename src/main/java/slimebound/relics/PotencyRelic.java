@@ -17,8 +17,8 @@ public class PotencyRelic extends CustomRelic {
     private static final int HP_PER_CARD = 1;
 
     public PotencyRelic() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)), // you could create the texture in this class if you wanted too
-                RelicTier.RARE, LandingSound.MAGICAL); // this relic is uncommon and sounds magic when you click it
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+                RelicTier.RARE, LandingSound.MAGICAL);
     }
 
     @Override
@@ -30,13 +30,13 @@ public class PotencyRelic extends CustomRelic {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(),false,false));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
-        /* 35 */
+
     }
 
 
 
     @Override
-    public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic
+    public AbstractRelic makeCopy() {
         return new PotencyRelic();
     }
 

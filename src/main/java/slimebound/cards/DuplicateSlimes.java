@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -27,37 +27,37 @@ import slimebound.vfx.SlimeBuffParticleEffect;
 
 import java.util.ArrayList;
 
-/*    */
-/*    */ public class DuplicateSlimes extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "DuplicateSlimes";
-    /*    */   public static final String NAME;
-    /*    */   public static final String DESCRIPTION;
+
+ public class DuplicateSlimes extends CustomCard
+         {
+       public static final String ID = "DuplicateSlimes";
+       public static final String NAME;
+       public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/duplicateslimes.png";
+       public static final String IMG_PATH = "cards/duplicateslimes.png";
 
-    /*     */public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName()); // lets us log output
-    /* 17 */   private static final CardType TYPE = CardType.SKILL;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.RARE;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */                private static final CardStrings cardStrings;
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+       private static final CardType TYPE = CardType.SKILL;
+       private static final CardRarity RARITY = CardRarity.RARE;
+       private static final CardTarget TARGET = CardTarget.SELF;
+                    private static final CardStrings cardStrings;
 
-    /*    */   private static final int COST = 2;
-    /*    */   private static final int BLOCK = 5;
-    /*    */   private static final int UPGRADE_BONUS = 3;
-    /*    */
-    /*    */   public DuplicateSlimes()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 2;
+       private static final int BLOCK = 5;
+       private static final int UPGRADE_BONUS = 3;
 
-        /*    */
-        /* 29 */     this.exhaust=true;
+       public DuplicateSlimes()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */   {
-        //AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new SlimeBuffParticleEffect(p.hb_x,p.hb_y,Color.GREEN), 2F, true));
+
+             this.exhaust=true;
+
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+       {
+
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         int orbsize = p.orbs.size();
@@ -111,28 +111,28 @@ import java.util.ArrayList;
         logger.info("Finished.");
         }
 
-        /* 35 */
-    /*    */
+
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new DuplicateSlimes();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+       public AbstractCard makeCopy()
+       {
+             return new DuplicateSlimes();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             upgradeBaseCost(1);
 
 
-            /*    */     }
-        /*    */   }
-    /*    */ }
+                 }
+           }
+     }
 

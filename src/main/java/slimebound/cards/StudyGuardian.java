@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -20,58 +20,58 @@ import slimebound.powers.GluttonyPowerUpgraded;
 import slimebound.powers.StudyGuardianPower;
 import slimebound.powers.StudyGuardianPowerUpgraded;
 
-/*    */
-/*    */ public class StudyGuardian extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "StudyGuardian";
-    /*    */
+
+ public class StudyGuardian extends CustomCard
+         {
+       public static final String ID = "StudyGuardian";
+
                 private static final CardStrings cardStrings;
                 public static final String NAME;
                 public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/studyguardian.png";
-    /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.SPECIAL;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */
-    /*    */   private static final int COST = 2;
+       public static final String IMG_PATH = "cards/studyguardian.png";
+       private static final CardType TYPE = CardType.POWER;
+       private static final CardRarity RARITY = CardRarity.SPECIAL;
+       private static final CardTarget TARGET = CardTarget.SELF;
 
-    /*    */   private static int upgradedamount = 1;
-    /*    */
-    /*    */   public StudyGuardian()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 2;
+
+       private static int upgradedamount = 1;
+
+       public StudyGuardian()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
                     this.magicNumber = this.baseMagicNumber = 3;
 
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */ {
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+     {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX,p.hb.cY,false), 0.05F));
 
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyGuardianPower(p, p, this.magicNumber), this.magicNumber));
-            /* 35 */
+
 
     }
-    /*    */
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new StudyGuardian();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+
+       public AbstractCard makeCopy()
+       {
+             return new StudyGuardian();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             upgradeBaseCost(1);
 
 
-            /*    */     }
-        /*    */   }
+                 }
+           }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -79,5 +79,5 @@ import slimebound.powers.StudyGuardianPowerUpgraded;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-    /*    */ }
+     }
 

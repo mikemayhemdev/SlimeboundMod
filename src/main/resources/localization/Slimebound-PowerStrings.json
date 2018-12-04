@@ -34,9 +34,9 @@
 		"NAME": "Efficient Goo",
 		"DESCRIPTIONS": [
 			"Splitting costs ",
-			" less HP.  Whenever you Split, draw ",
-			" card.",
-			" cards."
+			" less HP.  Add ",
+			" random Split card to your hand each turn.",
+			" random Split cards to your hand each turn."
 		]
 	},
 	"EnergizedSlimeboundPower": {

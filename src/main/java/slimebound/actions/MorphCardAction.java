@@ -1,7 +1,7 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
+
+
+
+
 
 package slimebound.actions;
 
@@ -102,6 +102,6 @@ public class MorphCardAction extends AbstractGameAction {
     static {
         uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
         TEXT = uiStrings.TEXT;
-        //COULD MAKE CUSTOM TEXT HERE
+
     }
 }

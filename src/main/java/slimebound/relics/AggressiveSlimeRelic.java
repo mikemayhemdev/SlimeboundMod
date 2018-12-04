@@ -15,8 +15,8 @@ public class AggressiveSlimeRelic extends CustomRelic {
     private static final int HP_PER_CARD = 1;
 
     public AggressiveSlimeRelic() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)), // you could create the texture in this class if you wanted too
-                RelicTier.COMMON, LandingSound.MAGICAL); // this relic is uncommon and sounds magic when you click it
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+                RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
@@ -27,13 +27,13 @@ public class AggressiveSlimeRelic extends CustomRelic {
     public void atBattleStartPreDraw() {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(),false,false));
-        /* 35 */
+
     }
 
 
 
     @Override
-    public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic
+    public AbstractRelic makeCopy() {
         return new AggressiveSlimeRelic();
     }
 

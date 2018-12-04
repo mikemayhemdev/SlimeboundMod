@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -21,34 +21,34 @@ import slimebound.powers.*;
 
 import java.util.Random;
 
-/*    */
-/*    */ public class StudyRandomBoss extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "StudyRandomBoss";
-    /*    */
+
+ public class StudyRandomBoss extends CustomCard
+         {
+       public static final String ID = "StudyRandomBoss";
+
                 private static final CardStrings cardStrings;
                 public static final String NAME;
                 public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/studyspire.png";
-    /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.RARE;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */
-    /*    */   private static final int COST = 2;
+       public static final String IMG_PATH = "cards/studyspire.png";
+       private static final CardType TYPE = CardType.POWER;
+       private static final CardRarity RARITY = CardRarity.RARE;
+       private static final CardTarget TARGET = CardTarget.SELF;
 
-    /*    */   private static int upgradedamount = 1;
-    /*    */
-    /*    */   public StudyRandomBoss()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 2;
+
+       private static int upgradedamount = 1;
+
+       public StudyRandomBoss()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
                     this.magicNumber = this.baseMagicNumber = 3;
 
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */ {
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+     {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX,p.hb.cY,false), 0.05F));
 
@@ -75,22 +75,22 @@ import java.util.Random;
         }
 
     }
-    /*    */
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new StudyRandomBoss();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+
+       public AbstractCard makeCopy()
+       {
+             return new StudyRandomBoss();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             upgradeBaseCost(1);
 
 
-            /*    */     }
-        /*    */   }
+                 }
+           }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -98,5 +98,5 @@ import java.util.Random;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-    /*    */ }
+     }
 

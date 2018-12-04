@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,41 +19,41 @@ import slimebound.powers.NextTurnGainDivider;
 import slimebound.powers.NextTurnGainSlimeCrush;
 import slimebound.powers.NextTurnGainStrengthPower;
 
-/*    */
-/*    */ public class PrepareDivider extends CustomCard
-/*    */ {
-/*    */   public static final String ID = "PrepareDivider";
-    /*    */   public static final String NAME;
-    /*    */   public static final String DESCRIPTION;
+
+ public class PrepareDivider extends CustomCard
+ {
+   public static final String ID = "PrepareDivider";
+       public static final String NAME;
+       public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-/*    */   public static final String IMG_PATH = "cards/preparedivider.png";
+   public static final String IMG_PATH = "cards/preparedivider.png";
 
-/* 17 */   private static final CardType TYPE = CardType.SKILL;
-/* 18 */   private static final CardRarity RARITY = CardRarity.SPECIAL;
-/* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */                private static final CardStrings cardStrings;
-/*    */
-/*    */   private static final int COST = 3;
-/*    */   private static final int BLOCK = 5;
-/*    */   private static final int UPGRADE_BONUS = 3;
-/*    */
-/*    */   public PrepareDivider()
-/*    */   {
-/* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+   private static final CardType TYPE = CardType.SKILL;
+   private static final CardRarity RARITY = CardRarity.SPECIAL;
+   private static final CardTarget TARGET = CardTarget.SELF;
+                    private static final CardStrings cardStrings;
 
-/*    */
+   private static final int COST = 3;
+   private static final int BLOCK = 5;
+   private static final int UPGRADE_BONUS = 3;
+
+   public PrepareDivider()
+   {
+     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+
+
 
          this.exhaust = true;
             this.magicNumber = this.baseMagicNumber = 3;
     this.exhaust = true;
     this.isEthereal = true;
-/*    */   }
-/*    */
-/*    */   public void use(AbstractPlayer p, AbstractMonster m)
-/*    */   {
+   }
+
+   public void use(AbstractPlayer p, AbstractMonster m)
+   {
     AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX,  p.hb.cY, 1.0F, "~Slime...~ NL #r~DIVIDE!!!~", true));
 
-    //AbstractDungeon.actionManager.addToBottom(new ShoutAction(p, , 1.0F, 1.0F));
+
     AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
 
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
@@ -61,21 +61,21 @@ import slimebound.powers.NextTurnGainStrengthPower;
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainDivider(p, p, 1), 1));
 
 
-            /*    */   }
-/*    */   
-/*    */   public AbstractCard makeCopy()
-/*    */   {
-/* 40 */     return new PrepareDivider();
-/*    */   }
-/*    */   
-/*    */   public void upgrade()
-/*    */   {
-/* 45 */     if (!this.upgraded)
-/*    */     {
-/* 47 */       upgradeName();
+               }
+
+   public AbstractCard makeCopy()
+   {
+     return new PrepareDivider();
+   }
+
+   public void upgrade()
+   {
+     if (!this.upgraded)
+     {
+       upgradeName();
                 upgradeMagicNumber(1);
-/*    */     }
-/*    */   }
+     }
+   }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -83,10 +83,6 @@ import slimebound.powers.NextTurnGainStrengthPower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-/*    */ }
+ }
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\cards\Defend_Slimebound.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */
