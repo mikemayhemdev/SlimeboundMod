@@ -43,6 +43,8 @@ import slimebound.powers.StunnedPower;
         /* 31 */
         this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 6;
+        this.exhaust=true;
+        this.isEthereal=true;
         /* 33 */
         /*    */
     }

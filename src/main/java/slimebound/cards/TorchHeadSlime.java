@@ -38,6 +38,8 @@ import slimebound.patches.AbstractCardEnum;
 
 
         this.exhaust=true;
+        this.isEthereal=true;
+
         /*    */   }
 
     /*    */    static {

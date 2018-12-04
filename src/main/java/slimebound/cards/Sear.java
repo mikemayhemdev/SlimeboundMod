@@ -47,6 +47,7 @@ import slimebound.powers.SearingPower;
         this.magicNumber = this.baseMagicNumber = 2;
         /* 33 */
         this.exhaust=true;
+        this.isEthereal=true;
         /*    */
     }
 

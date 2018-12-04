@@ -42,6 +42,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 
         /*    */
         /* 29 */     this.exhaust=true;
+        this.isEthereal=true;
 
         /*    */   }
     /*    */

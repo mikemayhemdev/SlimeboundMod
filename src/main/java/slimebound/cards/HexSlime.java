@@ -43,6 +43,7 @@ import java.util.ArrayList;
 
         /*    */
         /* 29 */     this.exhaust=true;
+        this.isEthereal=true;
         this.magicNumber = this.baseMagicNumber = 6;
 
         /*    */   }

@@ -45,6 +45,7 @@ import slimebound.powers.SearingPower;
         this.baseDamage = 12;
         /* 33 */
         this.exhaust=true;
+        this.isEthereal=true;
         /*    */
     }
 
