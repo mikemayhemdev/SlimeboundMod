@@ -348,7 +348,7 @@
   },
   "ViolentStop": {
     "NAME": "Disrupting Slam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Weak to enemies who intend to Attack.  Deal !D! more damage to enemies who do not."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Enemies who do not intend to attack are struck twice."
   },
   "ChargeUp": {
     "NAME": "Charge Up",

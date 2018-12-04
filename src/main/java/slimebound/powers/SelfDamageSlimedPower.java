@@ -16,7 +16,7 @@ public class SelfDamageSlimedPower extends AbstractPower {
     public static final String POWER_ID = "SelfDamageSlimedPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static final String IMG = "powers/Malleable.png";
+    public static final String IMG = "powers/excessslime.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
     public static String[] DESCRIPTIONS;
