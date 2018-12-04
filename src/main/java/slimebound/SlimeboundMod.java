@@ -327,7 +327,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
         BaseMod.addKeyword(new String[]{"split"}, "Lose 3 Health and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
 
-        BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore health, consuming the effect.");
+        BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore health, consuming the effect. Half is removed at end of turn.");
 
         BaseMod.addKeyword(new String[]{"potency"}, "Increases the effectiveness of your Spawned Slimes.");
         BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains Strength when you do.");

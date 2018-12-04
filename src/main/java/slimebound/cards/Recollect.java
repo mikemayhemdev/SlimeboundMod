@@ -21,7 +21,7 @@ public class Recollect extends CustomCard {
     public static final String DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/slimetap.png";
+    public static final String IMG_PATH = "cards/recollect.png";
 
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;

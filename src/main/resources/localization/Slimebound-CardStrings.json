@@ -24,7 +24,7 @@
   "AttackSlime": {
     "NAME": "Split: Attacking",
     "DESCRIPTION": "Split into an Attacking Slime. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Split into a Aggressive Slime twice. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Split into a Attacking Slime twice. NL Exhaust"
   },
   "CultistSlime": {
     "NAME": "Split: Cultist",
@@ -34,17 +34,17 @@
   "DebuffSlime": {
     "NAME": "Split: Weakening",
     "DESCRIPTION": "Split into a Weakening Slime. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Split into a Licking Slime twice. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Split into a Weakening Slime twice. NL Exhaust"
   },
   "PoisonSlime": {
     "NAME": "Split: Poisoning",
     "DESCRIPTION": "Split into a Poisoning Slime. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Split into a Toxic Slime twice. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Split into a Poisoning Slime twice. NL Exhaust"
   },
   "SlimingSlime": {
     "NAME": "Split: Sliming",
     "DESCRIPTION": "Split into a Sliming Slime. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Split into a Sludging Slime twice. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Split into a Sliming Slime twice. NL Exhaust"
   },
   "SlimeSacrifice": {
     "NAME": "Protect the Boss",
@@ -79,9 +79,9 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. Split into two random slimes. NL Exhaust"
   },
   "SplitForLess": {
-    "NAME": "Efficient Goo",
-    "DESCRIPTION": "Splitting costs !M! less HP. NL At the start of each turn, add a random Split card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate NL Splitting costs !M! less HP. NL At the start of each turn, add a random Split card to your hand."
+    "NAME": "Lead By Example",
+    "DESCRIPTION": "The first Attack you play each turn also causes your oldest slime to Attack.",
+    "UPGRADE_DESCRIPTION": "The first !M! Attacks you play each turn also cause your oldest slime to Attack."
   },
     "SlimeTap": {
       "NAME": "Slime Tap",
@@ -246,7 +246,8 @@
   },
   "AcidTongue": {
     "NAME": "Acid Tongue",
-    "DESCRIPTION": "Apply !M! Poison whenever you apply Weak or Slimed."
+    "DESCRIPTION": "Apply !M! Poison whenever you apply Weak or Slimed.",
+    "UPGRADE_DESCRIPTION": "Innate NL Apply !M! Poison whenever you apply Weak or Slimed."
   },
   "TendrilStrike": {
     "NAME": "Tendril Strike",

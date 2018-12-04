@@ -39,7 +39,7 @@ public class SuperCorrosiveSpit extends CustomCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 20;
+        this.magicNumber = this.baseMagicNumber = 16;
 
 
     }

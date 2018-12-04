@@ -66,6 +66,7 @@ public class GrowingTendril extends CustomCard {
                 c.applyPowers();
                 c.baseDamage = c.misc;
                 c.baseBlock = c.misc;
+
                 c.isDamageModified = false;
             }
         }
@@ -74,6 +75,8 @@ public class GrowingTendril extends CustomCard {
             c = (AbstractCard) var1.next();
             c.misc += this.increaseAmount;
             c.applyPowers();
+            c.baseDamage = c.misc;
+            c.baseBlock = c.misc;
         }
 
     }

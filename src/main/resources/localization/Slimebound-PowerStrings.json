@@ -11,7 +11,7 @@
 		"DESCRIPTIONS": [
 			"The next Attack against this enemy deals ",
 			" more damage and heals ",
-			" HP, consuming all #ySlimed.  One stack decays per turn."
+			" HP, consuming all #ySlimed.  Half of the stack is removed at end of turn."
 		]
 	},
 	"HexSlimePerTurnPower": {
@@ -37,6 +37,22 @@
 			" less HP.  Add ",
 			" random Split card to your hand each turn.",
 			" random Split cards to your hand each turn."
+		]
+	},
+	"ComboAttackPower": {
+		"NAME": "Lead By Example",
+		"DESCRIPTIONS": [
+			"The first Attack you play each turn causes your oldest slime to also attack.",
+			"The first ",
+			" Attacks you play each turn causes your oldest slime to also attack."
+		]
+	},
+	"RetainCardsOneTurnPower": {
+		"NAME": "Preparing Cards",
+		"DESCRIPTIONS": [
+			"Retain ",
+			" card this turn.",
+			" cards this turn."
 		]
 	},
 	"EnergizedSlimeboundPower": {

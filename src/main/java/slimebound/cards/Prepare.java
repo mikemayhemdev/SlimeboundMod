@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.EnergizedSlimeboundPower;
+import slimebound.powers.RetainCardsOneTurnPower;
 
 
 public class Prepare extends CustomCard {
@@ -43,7 +44,7 @@ public class Prepare extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardsOneTurnPower(p,2)));
 
     }
 
