@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -17,69 +17,68 @@ import slimebound.actions.OverexertionAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
-/*    */
-/*    */ public class Overexertion extends CustomCard
-/*    */ {
-/*    */   public static final String ID = "Overexertion";
-    /*    */   public static final String NAME;
-    /*    */   public static final String DESCRIPTION;
+
+ public class Overexertion extends CustomCard
+ {
+   public static final String ID = "Overexertion";
+       public static final String NAME;
+       public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /* 18 */   public static final String[] EXTENDED_DESCRIPTION;
-/*    */   public static final String IMG_PATH = "cards/wastenot.png";
+       public static final String[] EXTENDED_DESCRIPTION;
+   public static final String IMG_PATH = "cards/wastenot.png";
 
-/* 17 */   private static final CardType TYPE = CardType.SKILL;
-/* 18 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
-/* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */                private static final CardStrings cardStrings;
-/*    */
-/*    */   private static final int COST = 2;
-/*    */   private static final int BLOCK = 5;
-/*    */   private static final int UPGRADE_BONUS = 3;
-/*    */
-/*    */   public Overexertion()
-/*    */   {
-/* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+   private static final CardType TYPE = CardType.SKILL;
+   private static final CardRarity RARITY = CardRarity.UNCOMMON;
+   private static final CardTarget TARGET = CardTarget.SELF;
+                    private static final CardStrings cardStrings;
 
-/*    */
-/* 29 */     this.exhaust = true;
+   private static final int COST = 2;
+   private static final int BLOCK = 5;
+   private static final int UPGRADE_BONUS = 3;
+
+   public Overexertion()
+   {
+     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+
+
+     this.exhaust = true;
 this.magicNumber = this.baseMagicNumber = 1;
-/*    */   }
+   }
 
 
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m)
-        /*    */   {
-        /* 50 */
-        /* 51 */      if (p.exhaustPile.size() > 0){
+           {
+
+              if (p.exhaustPile.size() > 0){
                         return true;} else {
-            /*    */    this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+                this.cantUseMessage = EXTENDED_DESCRIPTION[0];
                      return false;}
 
-        /* 61
-        /*    */   }
+           }
 
-/*    */   public void use(AbstractPlayer p, AbstractMonster m)
-/*    */   {
+   public void use(AbstractPlayer p, AbstractMonster m)
+   {
 
 
         AbstractDungeon.actionManager.addToBottom(new OverexertionAction(false));
     }
 
 
-/*    */   
-/*    */   public AbstractCard makeCopy()
-/*    */   {
-/* 40 */     return new Overexertion();
-/*    */   }
-/*    */   
-/*    */   public void upgrade()
-/*    */   {
-/* 45 */     if (!this.upgraded)
-/*    */     {
-/* 47 */       upgradeName();
+
+   public AbstractCard makeCopy()
+   {
+     return new Overexertion();
+   }
+
+   public void upgrade()
+   {
+     if (!this.upgraded)
+     {
+       upgradeName();
 upgradeBaseCost(1);
-/*    */     }
-/*    */   }
+     }
+   }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -88,10 +87,6 @@ upgradeBaseCost(1);
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
-/*    */ }
+ }
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\cards\Defend_Slimebound.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

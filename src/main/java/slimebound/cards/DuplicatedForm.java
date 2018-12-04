@@ -1,5 +1,5 @@
-/*    */ package slimebound.cards;
-/*    */
+ package slimebound.cards;
+
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -26,45 +26,44 @@ import slimebound.powers.DuplicatedFormPower;
 import slimebound.powers.SelfFormingGooPower;
 import slimebound.vfx.SlimeDripsEffect;
 
-/*    */
-/*    */ public class DuplicatedForm extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "DuplicatedForm";
-    /*    */
+
+ public class DuplicatedForm extends CustomCard
+         {
+       public static final String ID = "DuplicatedForm";
+
                 private static final CardStrings cardStrings;
                 public static final String NAME;
                 public static final String DESCRIPTION;
-    /* 18 */   public static final String[] EXTENDED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/duplicatedform.png";
-    /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.RARE;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */
-    /*    */   private static final int COST = 3;
+       public static final String[] EXTENDED_DESCRIPTION;
+       public static final String IMG_PATH = "cards/duplicatedform.png";
+       private static final CardType TYPE = CardType.POWER;
+       private static final CardRarity RARITY = CardRarity.RARE;
+       private static final CardTarget TARGET = CardTarget.SELF;
 
-    /*    */   private static int upgradedamount = 1;
-    /*    */
-    /*    */   public DuplicatedForm()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+       private static final int COST = 3;
+
+       private static int upgradedamount = 1;
+
+       public DuplicatedForm()
+       {
+             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
                     this.magicNumber = this.baseMagicNumber = 1;
 
 
-        /*    */   }
+           }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m)
-        /*    */   {
-        /* 50 */    double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
-        /* 51 */      if(currentPct > 0.5){
+           {
+            double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
+              if(currentPct > 0.5){
 
-            /*    */    this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+                this.cantUseMessage = EXTENDED_DESCRIPTION[0];
                         return false;} else {return true;}
 
-        /* 61
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */   {
+           }
+
+       public void use(AbstractPlayer p, AbstractMonster m)
+       {
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX,p.hb.cY,0));
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX,p.hb.cY,0));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
@@ -73,23 +72,23 @@ import slimebound.vfx.SlimeDripsEffect;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p, 1), 1));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, this.magicNumber), this.magicNumber));
 
-        /* 35 */     }
-    /*    */
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new DuplicatedForm();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
+             }
+
+       public AbstractCard makeCopy()
+       {
+             return new DuplicatedForm();
+           }
+
+       public void upgrade()
+       {
+             if (!this.upgraded)
+                 {
+                   upgradeName();
             upgradeMagicNumber(1);
 
 
-            /*    */     }
-        /*    */   }
+                 }
+           }
 
 
 
@@ -99,5 +98,5 @@ import slimebound.vfx.SlimeDripsEffect;
         DESCRIPTION = cardStrings.DESCRIPTION;
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
-    /*    */ }
+     }
 
