@@ -1,88 +1,62 @@
- package slimebound.orbs;
-
-
-
-
+package slimebound.orbs;
 
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import slimebound.actions.CheckForSixHexAction;
-import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeFlareEffect;
 
 
+public class HexSlime
+        extends SpawnedSlime {
+
+    private BobEffect effect = new BobEffect(2.0F);
+    private float activateTimer;
+    public boolean activated = false;
+    public boolean hidden = false;
+    public boolean playedSfx = false;
+    private Color color;
+    private float x;
+    private float y;
+    private float particleTimer = 0.0F;
+    private static final float PARTICLE_INTERVAL = 0.06F;
 
 
+    public HexSlime() {
+        super("HexSlime", 1, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
+        this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
+        this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
+        this.color = Color.CHARTREUSE.cpy();
+        this.color.a = 0.0F;
+        this.activated = true;
+        this.activated = true;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
- public class HexSlime
-   extends SpawnedSlime{
-
-        private BobEffect effect = new BobEffect(2.0F);
-           private float activateTimer;
-           public boolean activated = false; public boolean hidden = false; public boolean playedSfx = false;
-           private Color color;
-           private float x;
-           private float y; private float particleTimer = 0.0F;
-           private static final float PARTICLE_INTERVAL = 0.06F;
-
-
-   public HexSlime()
-   {
-     super("HexSlime", 1, false, new Color(.36F,.55F,.85F,1),SlimeFlareEffect.OrbFlareColor.HEX,new Texture("SlimeboundImages/orbs/sleep.png"),"SlimeboundImages/orbs/hex.png");
-                this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
-         this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
-         this.color = Color.CHARTREUSE.cpy();
-         this.color.a = 0.0F;
-    this.activated = true;
-    this.activated = true;
-            }
-
-
-    public void updateDescription()
-
- {
-    this.description = this.descriptions[0] + 1 + this.descriptions[1];}
+    public void updateDescription() {
+        this.description = this.descriptions[0] + 1 + this.descriptions[1];
+    }
 
     @Override
     public void applyFocus() {
 
     }
 
-    public void activateEffectUnique()
-           {
-
+    public void activateEffectUnique() {
 
 
         AbstractDungeon.actionManager.addToBottom(new CheckForSixHexAction(AbstractDungeon.player));
-             }
+    }
 
-    public void update()
-
-         {super.update();
+    public void update() {
+        super.update();
 
         this.activateTimer -= Gdx.graphics.getDeltaTime();
 
@@ -106,9 +80,7 @@ import slimebound.vfx.SlimeFlareEffect;
 
             }
 
-        }
-
-        else {
+        } else {
 
             this.effect.update();
 
@@ -127,18 +99,9 @@ import slimebound.vfx.SlimeFlareEffect;
     }
 
 
-
-
-
-
-
-
-
-
-
-   public AbstractOrb makeCopy() {
-     return new HexSlime();
-   }
- }
+    public AbstractOrb makeCopy() {
+        return new HexSlime();
+    }
+}
 
 

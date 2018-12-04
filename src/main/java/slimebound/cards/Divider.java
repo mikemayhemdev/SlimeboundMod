@@ -1,10 +1,8 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,45 +12,37 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.DividerAction;
-import slimebound.actions.TendrilFlailAction;
-import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.StunnedPower;
 
 
-
- public class Divider extends CustomCard
- {
-       public static final String ID = "Divider";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class Divider extends CustomCard {
+    public static final String ID = "Divider";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/divider.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.SPECIAL;
-       private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    public static final String IMG_PATH = "cards/divider.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 2;
+    private static final int COST = 2;
 
 
-    public Divider()
-     {
+    public Divider() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
         this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 6;
-        this.exhaust=true;
-        this.isEthereal=true;
+        this.exhaust = true;
+        this.isEthereal = true;
 
 
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ScreenOnFireEffect(), .6F));
 
@@ -64,26 +54,16 @@ import slimebound.powers.StunnedPower;
     }
 
 
-
-
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new Divider();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
             upgradeDamage(1);

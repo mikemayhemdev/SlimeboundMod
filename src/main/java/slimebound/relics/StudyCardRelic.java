@@ -3,12 +3,8 @@ package slimebound.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.colorless.Shiv;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.RandomStudyCardAction;
 import slimebound.vfx.TinyHatParticle;
@@ -20,7 +16,7 @@ public class StudyCardRelic extends CustomRelic {
     private static final int HP_PER_CARD = 1;
 
     public StudyCardRelic() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
@@ -35,9 +31,8 @@ public class StudyCardRelic extends CustomRelic {
         this.flash();
 
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-       AbstractDungeon.actionManager.addToBottom(new RandomStudyCardAction(false));
+        AbstractDungeon.actionManager.addToBottom(new RandomStudyCardAction(false));
     }
-
 
 
     @Override

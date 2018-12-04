@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -14,27 +11,18 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.RandomChampCardAction;
 
 
-
-
-
-
-
- public class StudyChampPowerUpgraded extends AbstractPower
- {
-       public static final String POWER_ID = "StudyChampPowerUpgraded";
-       public static final String NAME = "Potency";
+public class StudyChampPowerUpgraded extends AbstractPower {
+    public static final String POWER_ID = "StudyChampPowerUpgraded";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/StudyChampS.png";
+    public static final String IMG = "powers/StudyChampS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-    public StudyChampPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public StudyChampPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -60,23 +48,20 @@ import slimebound.actions.RandomChampCardAction;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
         if (this.amount == 1) {
-                   this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-                 } else {
-                   this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
-                 }
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
+        }
 
 
     }
 
 
-    public void atStartOfTurn()
-         {
+    public void atStartOfTurn() {
 
         flash();
 
@@ -84,7 +69,6 @@ import slimebound.actions.RandomChampCardAction;
 
 
     }
-
 
 
 }

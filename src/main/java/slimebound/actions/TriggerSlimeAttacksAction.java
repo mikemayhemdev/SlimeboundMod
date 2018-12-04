@@ -1,36 +1,23 @@
- package slimebound.actions;
-
+package slimebound.actions;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
-import java.util.Random;
 
+public class TriggerSlimeAttacksAction extends AbstractGameAction {
+    public boolean upgradeCard;
+    public AbstractPlayer p;
 
-
-
- public class TriggerSlimeAttacksAction extends AbstractGameAction {
-        public boolean upgradeCard;
-        public AbstractPlayer p;
-
-    public TriggerSlimeAttacksAction(AbstractPlayer p)
-     {
-        this.p=p;
+    public TriggerSlimeAttacksAction(AbstractPlayer p) {
+        this.p = p;
 
 
     }
 
 
-
-
-    public void update()
-     {
+    public void update() {
 
 
         for (AbstractOrb o : p.orbs) {
@@ -49,12 +36,10 @@ import java.util.Random;
         }
 
 
-
-
-            this.isDone = true;
-        }
-
+        this.isDone = true;
     }
+
+}
 
 
 

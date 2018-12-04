@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -14,27 +11,18 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.RandomTimeEaterCardAction;
 
 
-
-
-
-
-
- public class StudyTimeEaterPowerUpgraded extends AbstractPower
- {
-       public static final String POWER_ID = "StudyTimeEaterPowerUpgraded";
-       public static final String NAME = "Potency";
+public class StudyTimeEaterPowerUpgraded extends AbstractPower {
+    public static final String POWER_ID = "StudyTimeEaterPowerUpgraded";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/StudyTimeEaterS.png";
+    public static final String IMG = "powers/StudyTimeEaterS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-    public StudyTimeEaterPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public StudyTimeEaterPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -60,23 +48,20 @@ import slimebound.actions.RandomTimeEaterCardAction;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
         if (this.amount == 1) {
-                   this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-                 } else {
-                   this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
-                 }
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
+        }
 
 
     }
 
 
-    public void atStartOfTurn()
-         {
+    public void atStartOfTurn() {
 
         flash();
 
@@ -84,7 +69,6 @@ import slimebound.actions.RandomTimeEaterCardAction;
 
 
     }
-
 
 
 }

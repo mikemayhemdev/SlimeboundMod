@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -11,59 +11,51 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.GluttonyPower;
-import slimebound.powers.GluttonyPowerUpgraded;
 import slimebound.powers.RecyclingPower;
 
 
- public class Recycling extends CustomCard
-         {
-       public static final String ID = "Recycling";
+public class Recycling extends CustomCard {
+    public static final String ID = "Recycling";
 
-                private static final CardStrings cardStrings;
-                public static final String NAME;
-                public static final String DESCRIPTION;
+    private static final CardStrings cardStrings;
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/recycling.png";
-       private static final CardType TYPE = CardType.POWER;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.SELF;
+    public static final String IMG_PATH = "cards/recycling.png";
+    private static final CardType TYPE = CardType.POWER;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
-       private static final int COST = 1;
+    private static final int COST = 1;
 
-       private static int upgradedamount = 1;
+    private static int upgradedamount = 1;
 
-       public Recycling()
-       {
-             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-                    this.magicNumber = this.baseMagicNumber = 1;
-
-
-           }
-
-       public void use(AbstractPlayer p, AbstractMonster m)
-     {
-
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
+    public Recycling() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        this.magicNumber = this.baseMagicNumber = 1;
 
 
     }
 
-       public AbstractCard makeCopy()
-       {
-             return new Recycling();
-           }
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
-       public void upgrade()
-       {
-             if (!this.upgraded)
-                 {
-                   upgradeName();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
+
+
+    }
+
+    public AbstractCard makeCopy() {
+        return new Recycling();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
             upgradeMagicNumber(1);
 
 
-                 }
-           }
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -71,5 +63,5 @@ import slimebound.powers.RecyclingPower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-     }
+}
 

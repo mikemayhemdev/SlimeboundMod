@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -15,30 +15,26 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
 
 
-
- public class TendrilSlash extends CustomCard
- {
-       public static final String ID = "TendrilSlash";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class TendrilSlash extends CustomCard {
+    public static final String ID = "TendrilSlash";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/tendrilstrike.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/tendrilstrike.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 2;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 2;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
 
-    public TendrilSlash()
-     {
+    public TendrilSlash() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -49,59 +45,48 @@ import slimebound.powers.SlimedPower;
     }
 
 
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp)
-           {
-                         int bonus = 0;
-                         if (mo!=null){
-                        if (mo.hasPower("SlimedPower")) {
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        int bonus = 0;
+        if (mo != null) {
+            if (mo.hasPower("SlimedPower")) {
 
-                        bonus = mo.getPower("SlimedPower").amount;
-                     }
+                bonus = mo.getPower("SlimedPower").amount;
+            }
 
-                        if (bonus > 0) {
-                   this.isDamageModified = true;
-                 }}
-             return tmp + bonus;
-           }
-
-
+            if (bonus > 0) {
+                this.isDamageModified = true;
+            }
+        }
+        return tmp + bonus;
+    }
 
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (m.hasPower("SlimedPower")) {
 
 
             AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p,p, m.getPower("SlimedPower").amount));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower("SlimedPower").amount));
 
         }
 
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
 
     }
 
 
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new TendrilSlash();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

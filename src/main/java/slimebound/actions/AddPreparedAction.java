@@ -1,5 +1,4 @@
- package slimebound.actions;
-
+package slimebound.actions;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,26 +7,18 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 
-import java.util.Random;
 
+public class AddPreparedAction extends AbstractGameAction {
+    public boolean upgradeCard;
 
-
-
- public class AddPreparedAction extends AbstractGameAction {
-        public boolean upgradeCard;
-
-    public AddPreparedAction(boolean upgraded)
-     {
+    public AddPreparedAction(boolean upgraded) {
         this.upgradeCard = upgraded;
 
 
     }
 
 
-
-
-    public void update()
-     {
+    public void update() {
 
         AbstractCard c;
 
@@ -35,14 +26,15 @@ import java.util.Random;
         c.modifyCostForTurn(-9);
 
 
-
-        if(upgradeCard){c.upgrade();}
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
-
-            this.isDone = true;
+        if (upgradeCard) {
+            c.upgrade();
         }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
+        this.isDone = true;
     }
+
+}
 
 
 

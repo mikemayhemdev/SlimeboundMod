@@ -2,8 +2,6 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-
-
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +15,7 @@ public class AbsorbEndCombat extends CustomRelic {
     private static final int HP_PER_CARD = 1;
 
     public AbsorbEndCombat() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
@@ -51,7 +49,6 @@ public class AbsorbEndCombat extends CustomRelic {
 
         }
     }
-
 
 
     @Override

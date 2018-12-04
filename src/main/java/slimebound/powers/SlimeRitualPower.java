@@ -1,25 +1,21 @@
- package slimebound.powers;
+package slimebound.powers;
 
- import com.megacrit.cardcrawl.actions.GameActionManager;
- import com.megacrit.cardcrawl.core.AbstractCreature;
- import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
- import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 
- public class SlimeRitualPower extends AbstractPower
-         {
-       public static final String POWER_ID = "SlimeRitualPower";
-       public static final String NAME = "Slime Sacrifice";
+public class SlimeRitualPower extends AbstractPower {
+    public static final String POWER_ID = "SlimeRitualPower";
+    public static final String NAME = "Slime Sacrifice";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/ritual.png";
+    public static final String IMG = "powers/ritual.png";
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
-       public SlimeRitualPower(AbstractCreature owner, int strAmt) {
+    public SlimeRitualPower(AbstractCreature owner, int strAmt) {
 
         this.name = NAME;
 
@@ -27,7 +23,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
         this.amount = strAmt;
 
         this.owner = owner;
-
 
 
         this.img = new com.badlogic.gdx.graphics.Texture(slimebound.SlimeboundMod.getResourcePath(IMG));
@@ -41,17 +36,15 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
         updateDescription();
     }
 
-   public void updateDescription()
-   {
-     this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-   }
+    public void updateDescription() {
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+    }
 
-   public void atStartOfTurn()
-   {
+    public void atStartOfTurn() {
 
-       com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
 
-   }
- }
+    }
+}
 
 

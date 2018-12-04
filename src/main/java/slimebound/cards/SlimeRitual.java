@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -14,56 +14,50 @@ import slimebound.SlimeboundMod;
 import slimebound.powers.SlimeRitualPower;
 
 
- public class SlimeRitual extends CustomCard
- {
-   public static final String ID = "SlimeRitual";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class SlimeRitual extends CustomCard {
+    public static final String ID = "SlimeRitual";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-   public static final String IMG_PATH = "cards/ritual.png";
+    public static final String IMG_PATH = "cards/ritual.png";
 
-   private static final CardType TYPE = CardType.POWER;
-   private static final CardRarity RARITY = CardRarity.SPECIAL;
-   private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.POWER;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-   private static final int COST = 0;
-   private static final int BLOCK = 5;
-   private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 0;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
-   public SlimeRitual()
-   {
-     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
-
-     this.baseBlock = 15;
-            this.magicNumber = this.baseMagicNumber = 1;
+    public SlimeRitual() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-    this.isEthereal = true;
-   }
-
-   public void use(AbstractPlayer p, AbstractMonster m)
-   {
-    AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX,  p.hb.cY, 1.0F, "Caw... Caw...", true));
+        this.baseBlock = 15;
+        this.magicNumber = this.baseMagicNumber = 1;
 
 
-          AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimeRitualPower(p, this.magicNumber), this.magicNumber));
-   }
+        this.isEthereal = true;
+    }
 
-   public AbstractCard makeCopy()
-   {
-     return new SlimeRitual();
-   }
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "Caw... Caw...", true));
 
-   public void upgrade()
-   {
-     if (!this.upgraded)
-     {
-       upgradeName();
-                upgradeBaseCost(0);
-     }
-   }
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimeRitualPower(p, this.magicNumber), this.magicNumber));
+    }
+
+    public AbstractCard makeCopy() {
+        return new SlimeRitual();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBaseCost(0);
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -71,6 +65,6 @@ import slimebound.powers.SlimeRitualPower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
- }
+}
 
 

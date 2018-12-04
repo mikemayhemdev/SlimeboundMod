@@ -1,9 +1,7 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,75 +13,55 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.DoublePoisonSlimedWeakAction;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
 
 
-
- public class DoubleEverything extends CustomCard
- {
-       public static final String ID = "DoubleEverything";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class DoubleEverything extends CustomCard {
+    public static final String ID = "DoubleEverything";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/doubleeverything.png";
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.RARE;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/doubleeverything.png";
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
 
-    public DoubleEverything()
-     {
+    public DoubleEverything() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-
-        this.exhaust=true;
-
-
-    }
-
-
-
-
-
-
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
-
-
-          AbstractDungeon.actionManager.addToBottom(new DoublePoisonSlimedWeakAction(m,p));
-
+        this.exhaust = true;
 
 
     }
 
 
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
+        AbstractDungeon.actionManager.addToBottom(new DoublePoisonSlimedWeakAction(m, p));
 
 
-    public AbstractCard makeCopy()
-     {
+    }
+
+
+    public AbstractCard makeCopy() {
 
         return new DoubleEverything();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

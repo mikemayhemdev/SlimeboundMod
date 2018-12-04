@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -19,38 +19,34 @@ import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
-import slimebound.powers.SlimeSacrificePower;
 
 
- public class AbsorbAllPotency extends CustomCard
-         {
-       public static final String ID = "AbsorbAllPotency";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class AbsorbAllPotency extends CustomCard {
+    public static final String ID = "AbsorbAllPotency";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/knowledgepool.png";
+    public static final String IMG_PATH = "cards/knowledgepool.png";
 
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.RARE;
-       private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-       private static final int COST = 3;
-       private static final int BLOCK = 5;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 3;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
-       public AbsorbAllPotency()
-       {
-             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+    public AbsorbAllPotency() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-            this.magicNumber = this.baseMagicNumber = 1;
-            this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 1;
+        this.exhaust = true;
 
 
-           }
+    }
 
-       public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
 
@@ -65,7 +61,7 @@ import slimebound.powers.SlimeSacrificePower;
                         o.ID == "SlimingSlime" ||
                         o.ID == "BronzeSlime" ||
                         o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime"||
+                        o.ID == "CultistSlime" ||
                         o.ID == "HexSlime") {
 
                     slimeCount++;
@@ -89,20 +85,18 @@ import slimebound.powers.SlimeSacrificePower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-       public AbstractCard makeCopy()
-       {
-             return new AbsorbAllPotency();
-           }
 
-       public void upgrade()
-       {
-             if (!this.upgraded)
-                 {
-                   upgradeName();
+    public AbstractCard makeCopy() {
+        return new AbsorbAllPotency();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
             upgradeBaseCost(2);
 
 
-                 }
-           }
-     }
+        }
+    }
+}
 

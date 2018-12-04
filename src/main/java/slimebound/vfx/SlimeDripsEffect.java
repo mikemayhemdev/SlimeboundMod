@@ -1,111 +1,93 @@
- package slimebound.vfx;
+package slimebound.vfx;
 
- import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
- import com.megacrit.cardcrawl.core.CardCrawlGame;
- import com.megacrit.cardcrawl.core.Settings;
- import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 
-
- public class SlimeDripsEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
- {
-       private int count = 0;
-       private float timer = 0.0F;
-                public float xPos;
-                public float yPos;
+public class SlimeDripsEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
+    private int count = 0;
+    private float timer = 0.0F;
+    public float xPos;
+    public float yPos;
 
 
-     public SlimeDripsEffect(float x, float y, int count) {
+    public SlimeDripsEffect(float x, float y, int count) {
         this.xPos = x;
         this.yPos = y;
         this.count = count;
     }
 
 
-        public void update ()
+    public void update() {
 
-        {
+        this.timer -= com.badlogic.gdx.Gdx.graphics.getDeltaTime();
 
-            this.timer -= com.badlogic.gdx.Gdx.graphics.getDeltaTime();
+        if (this.timer < 0.0F) {
 
-            if (this.timer < 0.0F) {
-
-                this.timer += 0.15F;
+            this.timer += 0.15F;
 
 
-                switch (this.count) {
+            switch (this.count) {
 
-                    case 0:
+                case 0:
 
-                        CardCrawlGame.sound.playA("BLOOD_SPLAT", -0.75F);
+                    CardCrawlGame.sound.playA("BLOOD_SPLAT", -0.75F);
 
-                        AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos, yPos + 50.0F * Settings.scale));
-
-
+                    AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos, yPos + 50.0F * Settings.scale));
 
 
-                        break;
+                    break;
 
-                    case 1:
+                case 1:
 
-                        AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos + 50.0F * Settings.scale, yPos - 30.0F * Settings.scale));
-
-
+                    AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos + 50.0F * Settings.scale, yPos - 30.0F * Settings.scale));
 
 
-                        break;
+                    break;
 
-                    case 2:
+                case 2:
 
-                        AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos - 30.0F * Settings.scale, yPos + 50.0F * Settings.scale));
-
-
+                    AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos - 30.0F * Settings.scale, yPos + 50.0F * Settings.scale));
 
 
-                        break;
+                    break;
 
-                    case 3:
+                case 3:
 
-                        AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos + 40.0F * Settings.scale, yPos + 70.0F * Settings.scale));
-
-
+                    AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos + 40.0F * Settings.scale, yPos + 70.0F * Settings.scale));
 
 
-                        break;
+                    break;
 
-                    case 4:
+                case 4:
 
-                        AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos - 20.0F * Settings.scale, yPos - 50.0F * Settings.scale));
-
-
+                    AbstractDungeon.effectsQueue.add(new SlimeWaterDropEffect(xPos - 20.0F * Settings.scale, yPos - 50.0F * Settings.scale));
 
 
-                        break;
+                    break;
 
-                }
-
-
+            }
 
 
-                this.count += 1;
+            this.count += 1;
 
 
-                if (this.count == 6) {
+            if (this.count == 6) {
 
-                    this.isDone = true;
-
-                }
+                this.isDone = true;
 
             }
 
         }
 
-
-        public void render (SpriteBatch sb){
     }
 
+
+    public void render(SpriteBatch sb) {
     }
+
+}
 
 

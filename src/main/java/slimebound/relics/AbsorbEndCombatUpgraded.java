@@ -15,7 +15,7 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
     private static final int HP_PER_CARD = 1;
 
     public AbsorbEndCombatUpgraded() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.BOSS, LandingSound.MAGICAL);
     }
 

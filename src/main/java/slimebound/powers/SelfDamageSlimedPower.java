@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -15,28 +12,19 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TendrilFlailAction;
 
 
-
-
-
-
-
- public class SelfDamageSlimedPower extends AbstractPower
- {
-       public static final String POWER_ID = "SelfDamageSlimedPower";
-       public static final String NAME = "Potency";
-                public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/Malleable.png";
+public class SelfDamageSlimedPower extends AbstractPower {
+    public static final String POWER_ID = "SelfDamageSlimedPower";
+    public static final String NAME = "Potency";
+    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static final String IMG = "powers/Malleable.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
-    private boolean active =  true;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
+    private boolean active = true;
 
 
-
-
-    public SelfDamageSlimedPower(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public SelfDamageSlimedPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -62,29 +50,27 @@ import slimebound.actions.TendrilFlailAction;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
         this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 
 
     }
-    public int onAttacked(DamageInfo info, int damageAmount)
-           {
-             if ((AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT) &&
-                       (damageAmount > 0) && active) {
-                   flash();
+
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if ((AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT) &&
+                (damageAmount > 0) && active) {
+            flash();
             AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(this.owner,
-                               AbstractDungeon.getMonsters().getRandomMonster(true), 1,this.amount));
-                                   }
+                    AbstractDungeon.getMonsters().getRandomMonster(true), 1, this.amount));
+        }
 
-             return damageAmount;
-           }
+        return damageAmount;
+    }
 
-    public void atStartOfTurn(){
-            active = true;
+    public void atStartOfTurn() {
+        active = true;
     }
 
 

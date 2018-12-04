@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -12,31 +12,27 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-
- public class SickeningTendril extends CustomCard
- {
-       public static final String ID = "SickeningTendril";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class SickeningTendril extends CustomCard {
+    public static final String ID = "SickeningTendril";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/sickeningtendril.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/sickeningtendril.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public SickeningTendril()
-     {
+    public SickeningTendril() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -48,17 +44,15 @@ import slimebound.patches.AbstractCardEnum;
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
         if (m.hasPower("SlimedPower")) {
             int poisonAmount = this.magicNumber + m.getPower("SlimedPower").amount;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m,p,poisonAmount),poisonAmount, true, AbstractGameAction.AttackEffect.POISON));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, poisonAmount), poisonAmount, true, AbstractGameAction.AttackEffect.POISON));
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m,p,this.magicNumber),this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
 
         }
 
@@ -68,24 +62,16 @@ import slimebound.patches.AbstractCardEnum;
     }
 
 
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new SickeningTendril();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

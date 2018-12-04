@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -15,35 +15,31 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import slimebound.SlimeboundMod;
-import slimebound.powers.StunnedPower;
 
 
-
- public class Flail extends CustomCard
- {
-       public static final String ID = "Flail";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class Flail extends CustomCard {
+    public static final String ID = "Flail";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/flail.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.SPECIAL;
-       private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    public static final String IMG_PATH = "cards/flail.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public Flail()
-     {
+    public Flail() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
         this.baseDamage = 5;
-             this.isMultiDamage = true;
+        this.isMultiDamage = true;
 
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
@@ -53,15 +49,13 @@ import slimebound.powers.StunnedPower;
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        for(int i=0; i<2; i++){
-          AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
-          AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-          AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
+        for (int i = 0; i < 2; i++) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
 
 
         }
@@ -70,26 +64,16 @@ import slimebound.powers.StunnedPower;
     }
 
 
-
-
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new Flail();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
             upgradeDamage(2);

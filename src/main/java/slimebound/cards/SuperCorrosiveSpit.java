@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -17,27 +17,24 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 
 
-
- public class SuperCorrosiveSpit extends CustomCard
- {
-       public static final String ID = "SuperCorrosiveSpit";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class SuperCorrosiveSpit extends CustomCard {
+    public static final String ID = "SuperCorrosiveSpit";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/douseinslime.png";
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.RARE;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/douseinslime.png";
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 3;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 3;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
 
-    public SuperCorrosiveSpit()
-     {
+    public SuperCorrosiveSpit() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -48,40 +45,25 @@ import slimebound.powers.SlimedPower;
     }
 
 
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-
-
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
-
-
-          AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p,this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
     }
 
 
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new SuperCorrosiveSpit();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

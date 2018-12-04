@@ -1,66 +1,52 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
-import slimebound.powers.TackleBuffPower;
-import slimebound.vfx.SlimeDripsEffect;
 
 
-
- public class RollThrough extends CustomCard
- {
-       public static final String ID = "RollThrough";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class RollThrough extends CustomCard {
+    public static final String ID = "RollThrough";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/rollthrough.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    public static final String IMG_PATH = "cards/rollthrough.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
 
-    public RollThrough()
-     {
+    public RollThrough() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
         this.baseDamage = 9;
 
-             this.isMultiDamage = true;
+        this.isMultiDamage = true;
 
 
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
@@ -72,41 +58,30 @@ import slimebound.vfx.SlimeDripsEffect;
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     logger.info("Passed dead check.");
-                 if(monster.hasPower("SlimedPower")){
-                     logger.info("Found Slimed target, adding attack action.");
-                     AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                    if (monster.hasPower("SlimedPower")) {
+                        logger.info("Found Slimed target, adding attack action.");
+                        AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-                 }
+                    }
 
 
-
-                             }
-                       }
-                 }
+                }
+            }
+        }
 
     }
 
 
-
-
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new RollThrough();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
             upgradeDamage(3);

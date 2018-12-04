@@ -1,12 +1,6 @@
-
-
-
-
-
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+
 import java.util.Iterator;
 
 public class MorphCardAction extends AbstractGameAction {
@@ -34,7 +29,7 @@ public class MorphCardAction extends AbstractGameAction {
         this.canPickZero = false;
         this.anyNumber = anyNumber;
         this.canPickZero = canPickZero;
-        this.p = (AbstractPlayer)target;
+        this.p = (AbstractPlayer) target;
         this.isRandom = isRandom;
         this.setValues(target, source, amount);
         this.duration = Settings.ACTION_DUR_FAST;
@@ -58,7 +53,7 @@ public class MorphCardAction extends AbstractGameAction {
                 numExhausted = this.amount;
                 i = this.p.hand.size();
 
-                for(i = 0; i < i; ++i) {
+                for (i = 0; i < i; ++i) {
                     AbstractCard c = this.p.hand.getTopCard();
                     this.p.hand.moveToExhaustPile(c);
                     AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
@@ -75,7 +70,7 @@ public class MorphCardAction extends AbstractGameAction {
                 return;
             }
 
-            for(i = 0; i < this.amount; ++i) {
+            for (i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
             }
@@ -86,8 +81,8 @@ public class MorphCardAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
 
-            while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
+            while (var4.hasNext()) {
+                AbstractCard c = (AbstractCard) var4.next();
                 this.p.hand.moveToExhaustPile(c);
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
             }

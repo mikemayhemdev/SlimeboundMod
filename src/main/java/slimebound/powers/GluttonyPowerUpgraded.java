@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -14,27 +11,18 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.RandomLickCardAction;
 
 
-
-
-
-
-
- public class GluttonyPowerUpgraded extends AbstractPower
- {
-       public static final String POWER_ID = "GluttonyPowerUpgraded";
-       public static final String NAME = "Potency";
+public class GluttonyPowerUpgraded extends AbstractPower {
+    public static final String POWER_ID = "GluttonyPowerUpgraded";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/GluttonyS.png";
+    public static final String IMG = "powers/GluttonyS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-    public GluttonyPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public GluttonyPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -60,22 +48,19 @@ import slimebound.actions.RandomLickCardAction;
     }
 
 
+    public void updateDescription() {
 
-    public void updateDescription()
-     {
-
-                if (this.amount == 1) {
-                   this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-                 } else {
-                   this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
-                 }
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
+        }
 
 
     }
 
 
-    public void atStartOfTurn()
-         {
+    public void atStartOfTurn() {
 
         flash();
 
@@ -83,7 +68,6 @@ import slimebound.actions.RandomLickCardAction;
 
 
     }
-
 
 
 }

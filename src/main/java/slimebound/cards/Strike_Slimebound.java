@@ -1,69 +1,52 @@
- package slimebound.cards;
+package slimebound.cards;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import slimebound.SlimeboundMod;
-import slimebound.patches.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardTarget;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.ThornsPower;
+import slimebound.patches.AbstractCardEnum;
 
 
+public class Strike_Slimebound extends CustomCard {
+    public static final String ID = "Strike_Slimebound";
+    public static final String NAME = "Strike";
+    public static final String DESCRIPTION = "Deal !D! damage.";
+    public static final String IMG_PATH = "cards/attackSlime.png";
+    private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
+    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.BASIC;
+    private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
- public class Strike_Slimebound extends CustomCard
- {
-   public static final String ID = "Strike_Slimebound";
-   public static final String NAME = "Strike";
-   public static final String DESCRIPTION = "Deal !D! damage.";
-   public static final String IMG_PATH = "cards/attackSlime.png";
-   private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
-   private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.BASIC;
-   private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
 
-   private static final int COST = 1;
-   private static final int POWER = 6;
-   private static final int UPGRADE_BONUS = 3;
+    public Strike_Slimebound() {
+        super(ID, NAME, slimebound.SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-   public Strike_Slimebound()
-   {
-     super(ID, NAME, slimebound.SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        this.baseDamage = 6;
+        this.tags.add(BaseModCardTags.BASIC_STRIKE);
+        this.tags.add(AbstractCard.CardTags.STRIKE);
+    }
 
-     this.baseDamage = 6;
-     this.tags.add(BaseModCardTags.BASIC_STRIKE);
-     this.tags.add(AbstractCard.CardTags.STRIKE);
-   }
-
-   public void use(AbstractPlayer p, AbstractMonster m)
-   {
-     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-   }
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+    }
 
 
-   public AbstractCard makeCopy()
-   {
-     return new Strike_Slimebound();
-   }
+    public AbstractCard makeCopy() {
+        return new Strike_Slimebound();
+    }
 
-   public void upgrade()
-   {
-     if (!this.upgraded)
-     {
-       upgradeName();
-       upgradeDamage(3);
-     }
-   }
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeDamage(3);
+        }
+    }
 
 
- }
+}
 
 

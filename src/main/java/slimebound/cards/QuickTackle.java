@@ -1,11 +1,9 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,32 +13,28 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.TackleBuffPower;
 
 
-
- public class QuickTackle extends CustomCard
- {
-       public static final String ID = "QuickTackle";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class QuickTackle extends CustomCard {
+    public static final String ID = "QuickTackle";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/quicktackle.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.COMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/quicktackle.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static int baseSelfDamage;
-       public static int originalDamage;
-       public static int originalBlock;
-       public static int upgradeDamage;
-       public static int upgradeSelfDamage;
+    private static final int COST = 1;
+    private static int baseSelfDamage;
+    public static int originalDamage;
+    public static int originalBlock;
+    public static int upgradeDamage;
+    public static int upgradeSelfDamage;
 
 
-    public QuickTackle()
-     {
+    public QuickTackle() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -55,11 +49,7 @@ import slimebound.powers.TackleBuffPower;
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
-
-
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
@@ -68,35 +58,23 @@ import slimebound.powers.TackleBuffPower;
         AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
 
 
-
-        }
-
+    }
 
 
-
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new QuickTackle();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 
             upgradeDamage(upgradeDamage);
-
 
 
         }

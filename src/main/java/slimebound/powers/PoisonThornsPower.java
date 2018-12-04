@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,30 +12,20 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomLickCardAction;
 
 
-
-
-
-
-
- public class PoisonThornsPower extends AbstractPower
- {
-       public static final String POWER_ID = "PoisonThornsPower";
-       public static final String NAME = "Potency";
+public class PoisonThornsPower extends AbstractPower {
+    public static final String POWER_ID = "PoisonThornsPower";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/PoisonThornsS.png";
+    public static final String IMG = "powers/PoisonThornsS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-    public PoisonThornsPower(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public PoisonThornsPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -64,30 +51,22 @@ import slimebound.actions.RandomLickCardAction;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
-
-                   this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
 
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount)
-           {
-             if ((info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner))
-                 {
-                   flash();
-                   AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new PoisonPower(info.owner,this.owner,this.amount),this.amount, true, AbstractGameAction.AttackEffect.POISON));
-                 }
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if ((info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner)) {
+            flash();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new PoisonPower(info.owner, this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.POISON));
+        }
 
-             return damageAmount;
-           }
-
-
+        return damageAmount;
+    }
 
 
 }

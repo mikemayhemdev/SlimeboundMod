@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -16,27 +13,18 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 
 
-
-
-
-
-
- public class NextTurnGainDivider extends AbstractPower
- {
-       public static final String POWER_ID = "NextTurnGainDivider";
-       public static final String NAME = "Potency";
+public class NextTurnGainDivider extends AbstractPower {
+    public static final String POWER_ID = "NextTurnGainDivider";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/PrepareCardS.png";
+    public static final String IMG = "powers/PrepareCardS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-    public NextTurnGainDivider(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public NextTurnGainDivider(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -62,23 +50,20 @@ import slimebound.SlimeboundMod;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
         if (this.amount <= 1) {
-                   this.description = DESCRIPTIONS[0];
-                 } else {
-                   this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-                 }
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        }
 
 
     }
 
 
-    public void atStartOfTurn()
-         {
+    public void atStartOfTurn() {
 
         flash();
         AbstractCard c;

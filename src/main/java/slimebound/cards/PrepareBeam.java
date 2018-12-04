@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -15,67 +15,59 @@ import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.NextTurnGainDivider;
 import slimebound.powers.NextTurnGainHyperBeam;
 import slimebound.powers.NextTurnGainStrengthPower;
 
 
- public class PrepareBeam extends CustomCard
- {
-   public static final String ID = "PrepareBeam";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class PrepareBeam extends CustomCard {
+    public static final String ID = "PrepareBeam";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-   public static final String IMG_PATH = "cards/preparingbeam.png";
+    public static final String IMG_PATH = "cards/preparingbeam.png";
 
-   private static final CardType TYPE = CardType.SKILL;
-   private static final CardRarity RARITY = CardRarity.SPECIAL;
-   private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-   private static final int COST = 3;
-   private static final int BLOCK = 5;
-   private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 3;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
-   public PrepareBeam()
-   {
-     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
+    public PrepareBeam() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-         this.exhaust = true;
-            this.magicNumber = this.baseMagicNumber = 3;
-    this.exhaust = true;
-    this.isEthereal = true;
-   }
+        this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 3;
+        this.exhaust = true;
+        this.isEthereal = true;
+    }
 
-   public void use(AbstractPlayer p, AbstractMonster m)
-   {
-    AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX,  p.hb.cY, 1.0F, "~Slime...~ NL #r~BEAM!!!~", true));
-
-
-    AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
-
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainStrengthPower(p, p, this.magicNumber), this.magicNumber));
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainHyperBeam(p, p, 1), 1));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~Slime...~ NL #r~BEAM!!!~", true));
 
 
-               }
+        AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
 
-   public AbstractCard makeCopy()
-   {
-     return new PrepareBeam();
-   }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainStrengthPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainHyperBeam(p, p, 1), 1));
 
-   public void upgrade()
-   {
-     if (!this.upgraded)
-     {
-       upgradeName();
-                upgradeMagicNumber(1);
-     }
-   }
+
+    }
+
+    public AbstractCard makeCopy() {
+        return new PrepareBeam();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeMagicNumber(1);
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -83,6 +75,6 @@ import slimebound.powers.NextTurnGainStrengthPower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
- }
+}
 
 

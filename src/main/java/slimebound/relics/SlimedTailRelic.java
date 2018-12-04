@@ -7,11 +7,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import slimebound.actions.RandomStudyCardAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.powers.SlimeSacrificePower;
 
@@ -23,7 +20,7 @@ public class SlimedTailRelic extends CustomRelic {
     private boolean isActive = false;
 
     public SlimedTailRelic() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)),new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
+        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.RARE, LandingSound.MAGICAL);
     }
 
@@ -41,9 +38,9 @@ public class SlimedTailRelic extends CustomRelic {
 
 
                     AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, SlimedTailRelic.this));
-                    AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(),false,false));
-                    AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(),false,false));
-                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlimeSacrificePower(AbstractDungeon.player,2), 2, true));
+                    AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+                    AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlimeSacrificePower(AbstractDungeon.player, 2), 2, true));
 
                     SlimedTailRelic.this.isActive = false;
                     AbstractDungeon.player.hand.applyPowers();
@@ -61,9 +58,9 @@ public class SlimedTailRelic extends CustomRelic {
             AbstractPlayer p = AbstractDungeon.player;
             SlimedTailRelic.this.flash();
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(p, this));
-            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(),false,false));
-            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(),false,false));
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SlimeSacrificePower(AbstractDungeon.player,2), 2, true));
+            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SlimeSacrificePower(AbstractDungeon.player, 2), 2, true));
 
             this.isActive = false;
             AbstractDungeon.player.hand.applyPowers();

@@ -1,8 +1,7 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,36 +13,35 @@ import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
 
- public class DebuffSlime extends CustomCard
-         {
-       public static final String ID = "DebuffSlime";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class DebuffSlime extends CustomCard {
+    public static final String ID = "DebuffSlime";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/splitlicking.png";
+    public static final String IMG_PATH = "cards/splitlicking.png";
 
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.COMMON;
-       private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-       private static final int COST = 1;
-       private static final int BLOCK = 5;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
-       public DebuffSlime()
-       {
-             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+    public DebuffSlime() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.exhaust=true;
-           }
+        this.exhaust = true;
+    }
 
-       public void use(AbstractPlayer p, AbstractMonster m)
-       {
-                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(),false,true));
-        if (this.upgraded) { AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(),false,true));}
-             }
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -51,21 +49,19 @@ import slimebound.patches.AbstractCardEnum;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-       public AbstractCard makeCopy()
-       {
-             return new DebuffSlime();
-           }
 
-       public void upgrade()
-       {
-             if (!this.upgraded)
-                 {
-                   upgradeName();
+    public AbstractCard makeCopy() {
+        return new DebuffSlime();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 
 
-                 }
-           }
-     }
+        }
+    }
+}
 

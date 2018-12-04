@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -16,32 +16,28 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.TackleBuffPower;
 
 
-
- public class FlameTackle extends CustomCard
- {
-       public static final String ID = "FlameTackle";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class FlameTackle extends CustomCard {
+    public static final String ID = "FlameTackle";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/flametackle.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/flametackle.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 2;
-       private static int baseSelfDamage;
-       public static int originalDamage;
-       public static int originalBlock;
-       public static int upgradeDamage;
-       public static int upgradeSelfDamage;
+    private static final int COST = 2;
+    private static int baseSelfDamage;
+    public static int originalDamage;
+    public static int originalBlock;
+    public static int upgradeDamage;
+    public static int upgradeSelfDamage;
 
 
-    public FlameTackle()
-     {
+    public FlameTackle() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -57,11 +53,7 @@ import slimebound.powers.TackleBuffPower;
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
-
-
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
@@ -71,29 +63,19 @@ import slimebound.powers.TackleBuffPower;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
-        }
+    }
 
 
-
-
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new FlameTackle();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

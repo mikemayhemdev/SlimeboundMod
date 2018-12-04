@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -9,39 +9,33 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.ExhumeToDrawAction;
 import slimebound.patches.AbstractCardEnum;
 
 
- public class Recollect extends CustomCard
-         {
-       public static final String ID = "Recollect";
-       public static final String NAME;
-       private static final CardStrings cardStrings;
-       public static final String DESCRIPTION;
-       public static final String[] EXTENDED_DESCRIPTION;
-                public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/slimetap.png";
+public class Recollect extends CustomCard {
+    public static final String ID = "Recollect";
+    public static final String NAME;
+    private static final CardStrings cardStrings;
+    public static final String DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
+    public static final String IMG_PATH = "cards/slimetap.png";
 
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
-       private static final int COST = 1;
-                private int numEaten = 0;
-       private static final int BLOCK = 5;
-       private static final int UPGRADE_BONUS = 3;
-
+    private static final int COST = 1;
+    private int numEaten = 0;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public Recollect()
-     {
+    public Recollect() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
 
 
         this.baseBlock = 7;
@@ -51,21 +45,12 @@ import slimebound.patches.AbstractCardEnum;
     }
 
 
-
-
-
-
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new ExhumeToDrawAction(false));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,p,this.block));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
     }
-
-
-
-
-
 
 
     static {
@@ -75,20 +60,18 @@ import slimebound.patches.AbstractCardEnum;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
-       public AbstractCard makeCopy()
-       {
-             return new Recollect();
-           }
 
-       public void upgrade()
-       {
-             if (!this.upgraded)
-                 {
-                   upgradeName();
+    public AbstractCard makeCopy() {
+        return new Recollect();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
             upgradeBlock(3);
 
 
-                 }
-           }
-     }
+        }
+    }
+}
 

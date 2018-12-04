@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -16,78 +16,63 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-
- public class Retaliate extends CustomCard
- {
-       public static final String ID = "Retaliate";
-       public static final String NAME;
-       public static final String DESCRIPTION;
-                 public static final String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/retaliate.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+public class Retaliate extends CustomCard {
+    public static final String ID = "Retaliate";
+    public static final String NAME;
+    public static final String DESCRIPTION;
+    public static final String UPGRADED_DESCRIPTION;
+    public static final String IMG_PATH = "cards/retaliate.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
 
-       private static final int COST = 2;
-       private static final int POWER = 6;
-                public int missingHealth;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 2;
+    private static final int POWER = 6;
+    public int missingHealth;
+    private static final int UPGRADE_BONUS = 3;
 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-    public Retaliate()
-     {
+    public Retaliate() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
 
 
         this.baseDamage = 0;
     }
 
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp)
-           {
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
 
 
-             int bonus = (player.maxHealth - player.currentHealth) / 2;
+        int bonus = (player.maxHealth - player.currentHealth) / 2;
 
 
-                     if (bonus > 0) {
-                   this.isDamageModified = true;
-                 }
-             return tmp + bonus;
-           }
+        if (bonus > 0) {
+            this.isDamageModified = true;
+        }
+        return tmp + bonus;
+    }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
-        logger.info("max health: "+ p.maxHealth +", current health: "+ p.currentHealth);
+        logger.info("max health: " + p.maxHealth + ", current health: " + p.currentHealth);
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
     }
 
 
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new Retaliate();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
             upgradeBaseCost(1);

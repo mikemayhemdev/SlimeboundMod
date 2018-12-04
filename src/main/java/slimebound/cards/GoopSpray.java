@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -10,90 +10,71 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 
-import java.util.Random;
 
-
-
- public class GoopSpray extends CustomCard
- {
-       public static final String ID = "GoopSpray";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class GoopSpray extends CustomCard {
+    public static final String ID = "GoopSpray";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/goopspray.png";
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.COMMON;
-       private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    public static final String IMG_PATH = "cards/goopspray.png";
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public GoopSpray()
-     {
+    public GoopSpray() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
         this.magicNumber = this.baseMagicNumber = 4;
 
-        this.exhaust=true;
+        this.exhaust = true;
 
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
-
-
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                flash();
+            flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                 if ((!monster.isDead) && (!monster.isDying)) {
+                if ((!monster.isDead) && (!monster.isDying)) {
 
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster,p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster,p, this.magicNumber - 2), this.magicNumber - 2, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, this.magicNumber - 2), this.magicNumber - 2, true, AbstractGameAction.AttackEffect.NONE));
 
 
-                    }
+                }
 
-                       }
-                 }
+            }
+        }
 
 
     }
 
 
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new GoopSpray();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

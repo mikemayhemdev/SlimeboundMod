@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -12,67 +12,63 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomBasicSlimeCardAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.Random;
 
 
- public class RandomSlimeCard4 extends CustomCard
-         {
-       public static final String ID = "RandomSlimeCard4";
-       public static final String NAME;
-       public static final String DESCRIPTION;
-                public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/supersplit.png";
+public class RandomSlimeCard4 extends CustomCard {
+    public static final String ID = "RandomSlimeCard4";
+    public static final String NAME;
+    public static final String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
+    public static final String IMG_PATH = "cards/supersplit.png";
 
-       private static final CardType TYPE = CardType.SKILL;
-       private static final CardRarity RARITY = CardRarity.RARE;
-       private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-       private static final int COST = 2;
-       private static final int BLOCK = 5;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 2;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
     public static boolean UpgradeCard;
 
-       public RandomSlimeCard4()
-       {
-             super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+    public RandomSlimeCard4() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-             this.exhaust=true;
+        this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
 
 
-           }
+    }
 
-       public void use(AbstractPlayer p, AbstractMonster m)
-       {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
 
 
-
         Random random = new Random();
 
-        for(int i=0; i<4; i++){
-        Integer chosenRand = random.nextInt(4);
+        for (int i = 0; i < 4; i++) {
+            Integer chosenRand = random.nextInt(4);
 
 
-        if (chosenRand == 0) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(),false,true));
-        } else if (chosenRand == 1) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(),false,true));
-        } else if (chosenRand == 2) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(),false,true));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
-        }}
+            if (chosenRand == 0) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+            } else if (chosenRand == 1) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+            } else if (chosenRand == 2) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+            }
+        }
 
-             }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -80,19 +76,17 @@ import java.util.Random;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-       public AbstractCard makeCopy()
-       {
-             return new RandomSlimeCard4();
-           }
 
-       public void upgrade()
-       {
-             if (!this.upgraded)
-                 {
-                   upgradeName();
+    public AbstractCard makeCopy() {
+        return new RandomSlimeCard4();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
             upgradeMagicNumber(1);
 
-                 }
-           }
-     }
+        }
+    }
+}
 

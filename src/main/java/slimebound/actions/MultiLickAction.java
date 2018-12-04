@@ -1,41 +1,25 @@
- package slimebound.actions;
-
-
-
+package slimebound.actions;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
-import slimebound.powers.SlimedPower;
 
 
-
-
-
- public class MultiLickAction extends AbstractGameAction
- {
-       private DamageInfo info;
-       private static final float DURATION = 0.01F;
-       private static final float POST_ATTACK_WAIT_DUR = 0.2F;
-       private int numTimes;
+public class MultiLickAction extends AbstractGameAction {
+    private DamageInfo info;
+    private static final float DURATION = 0.01F;
+    private static final float POST_ATTACK_WAIT_DUR = 0.2F;
+    private int numTimes;
     private int energyOnUse = -1;
     private AbstractPlayer p;
 
 
-
-    public MultiLickAction(AbstractPlayer player, AbstractCreature target, DamageInfo info, int energyOnuse)
-     {
+    public MultiLickAction(AbstractPlayer player, AbstractCreature target, DamageInfo info, int energyOnuse) {
 
         this.info = info;
 
@@ -54,9 +38,7 @@ import slimebound.powers.SlimedPower;
     }
 
 
-
-    public void update()
-     {
+    public void update() {
 
         int effect = EnergyPanel.totalCount;
         if (this.energyOnUse != -1) {
@@ -71,31 +53,26 @@ import slimebound.powers.SlimedPower;
         if (effect > 0) {
             for (int i = 0; i < effect; ++i) {
 
-                    if (this.target.currentHealth > 0) {
+                if (this.target.currentHealth > 0) {
 
-                        AbstractDungeon.actionManager.addToBottom(new DamageAction(target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-
-                }
-
-                }
-                for (int i2 = 0; i2 < effect; ++i2) {
-
-                        AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
-
-
-
-
-
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
 
                 }
-            this.p.energy.use(EnergyPanel.totalCount);
+
+            }
+            for (int i2 = 0; i2 < effect; ++i2) {
+
+                AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
 
 
             }
-        this.isDone = true;
+            this.p.energy.use(EnergyPanel.totalCount);
+
+
         }
+        this.isDone = true;
     }
+}
 
 

@@ -1,5 +1,4 @@
- package slimebound.actions;
-
+package slimebound.actions;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,43 +10,44 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import java.util.Random;
 
 
+public class RandomAutomatonCardAction extends AbstractGameAction {
+    public boolean upgradeCard;
 
-
- public class RandomAutomatonCardAction extends AbstractGameAction {
-        public boolean upgradeCard;
-
-    public RandomAutomatonCardAction(boolean upgraded)
-     {
+    public RandomAutomatonCardAction(boolean upgraded) {
         this.upgradeCard = upgraded;
 
 
     }
 
 
-
-
-    public void update()
-     {
+    public void update() {
 
         AbstractCard c = null;
         Random random = new Random();
         Integer chosenRand = random.nextInt(3) + 1;
 
-        switch(chosenRand){
-            case 1: c = CardLibrary.getCard("BronzeSlime").makeCopy(); break;
-            case 2: c = CardLibrary.getCard("SlimeHyperBeam").makeCopy(); break;
-            case 3: c = CardLibrary.getCard("Flail").makeCopy(); break;
+        switch (chosenRand) {
+            case 1:
+                c = CardLibrary.getCard("BronzeSlime").makeCopy();
+                break;
+            case 2:
+                c = CardLibrary.getCard("SlimeHyperBeam").makeCopy();
+                break;
+            case 3:
+                c = CardLibrary.getCard("Flail").makeCopy();
+                break;
         }
 
 
-
-            if(upgradeCard){c.upgrade();}
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
-
-            this.isDone = true;
+        if (upgradeCard) {
+            c.upgrade();
         }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
+        this.isDone = true;
     }
+
+}
 
 
 

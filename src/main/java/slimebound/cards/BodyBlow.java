@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -16,25 +16,22 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-
- public class BodyBlow extends CustomCard
- {
-       public static final String ID = "BodyBlow";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class BodyBlow extends CustomCard {
+    public static final String ID = "BodyBlow";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADE_DESCRIPTION;
-       public static final String IMG_PATH = "cards/bodyblow.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/bodyblow.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public BodyBlow()
-     {
+    public BodyBlow() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -42,68 +39,52 @@ import slimebound.patches.AbstractCardEnum;
         this.baseDamage = 9;
 
 
+    }
+
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+
+
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        if ((p != null) && (m != null)) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
+        }
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL), com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction(p, p));
+        AbstractDungeon.effectsQueue.add(new HbBlockBrokenEffect(p.hb.cX, p.hb.cY));
 
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-       {
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
 
 
-                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-             if ((p != null) && (m != null)) {
-                   AbstractDungeon.actionManager.addToBottom(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
-                 }
-             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL), com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction(p, p));
-                    AbstractDungeon.effectsQueue.add(new HbBlockBrokenEffect(p.hb.cX, p.hb.cY));
-
-           }
-
-
-
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp)
-           {
-
-
-             int bonus = 0;
+        int bonus = 0;
 
         if (upgraded) {
             bonus = player.currentBlock * 2;
-        } else
-        {
+        } else {
             bonus = player.currentBlock;
         }
 
         if (bonus > 0) {
-                   this.isDamageModified = true;
-                 }
-             return tmp + bonus;
-           }
+            this.isDamageModified = true;
+        }
+        return tmp + bonus;
+    }
 
 
-
-
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new BodyBlow();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

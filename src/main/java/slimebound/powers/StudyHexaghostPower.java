@@ -1,7 +1,4 @@
- package slimebound.powers;
-
-
-
+package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -11,31 +8,21 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomGuardianCardAction;
 import slimebound.actions.RandomHexaghostCardAction;
 
 
-
-
-
-
-
- public class StudyHexaghostPower extends AbstractPower
- {
-       public static final String POWER_ID = "StudyHexaghostPower";
-       public static final String NAME = "Potency";
+public class StudyHexaghostPower extends AbstractPower {
+    public static final String POWER_ID = "StudyHexaghostPower";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/StudyHexaghostS.png";
+    public static final String IMG = "powers/StudyHexaghostS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-    public StudyHexaghostPower(AbstractCreature owner, AbstractCreature source, int amount)
-     {
+    public StudyHexaghostPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -61,23 +48,20 @@ import slimebound.actions.RandomHexaghostCardAction;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
         if (this.amount == 1) {
-                   this.description = DESCRIPTIONS[0];
-                 } else {
-                   this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
-                 }
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        }
 
 
     }
 
 
-    public void atStartOfTurn()
-         {
+    public void atStartOfTurn() {
 
         flash();
 
@@ -93,7 +77,6 @@ import slimebound.actions.RandomHexaghostCardAction;
 
         }
     }
-
 
 
 }

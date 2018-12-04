@@ -1,30 +1,21 @@
- package slimebound.actions;
+package slimebound.actions;
 
- import com.megacrit.cardcrawl.actions.AbstractGameAction;
- import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
- import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
- import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
- import com.megacrit.cardcrawl.cards.CardGroup;
- import com.megacrit.cardcrawl.characters.AbstractPlayer;
- import com.megacrit.cardcrawl.core.CardCrawlGame;
- import com.megacrit.cardcrawl.core.Settings;
- import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
- import com.megacrit.cardcrawl.localization.UIStrings;
- import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
- import java.util.ArrayList;
- import java.util.Iterator;
 
- public class OverexertionAction extends AbstractGameAction
- {
-       private AbstractPlayer p;
-       private final boolean upgrade;
+public class OverexertionAction extends AbstractGameAction {
+    private AbstractPlayer p;
+    private final boolean upgrade;
 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
 
 
     public OverexertionAction(boolean upgrade) {
@@ -42,12 +33,10 @@ import slimebound.SlimeboundMod;
     }
 
 
-
     public void update() {
 
 
-        if (this.duration == Settings.ACTION_DUR_FAST)
-             {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
 
             if (this.p.exhaustPile.isEmpty()) {
 
@@ -64,33 +53,25 @@ import slimebound.SlimeboundMod;
 
             for (AbstractCard c : cardsToReturn.group) {
 
-                if (c.cardID!="Overexertion") {
-
+                if (c.cardID != "Overexertion") {
 
 
                     logger.info("Add to discard");
                     this.p.drawPile.addToRandomSpot(c);
 
 
-
                     logger.info("Modify Cost");
                     c.modifyCostForCombat(-1);
 
 
-
-
-
-
-
-
-
-
-                } else {healthLoss--;}
+                } else {
+                    healthLoss--;
+                }
             }
-            for (int x = 0; x <= exhaustSize - 1; x++){
+            for (int x = 0; x <= exhaustSize - 1; x++) {
                 logger.info("Exhausting card");
                 AbstractCard cardReturning = p.exhaustPile.getBottomCard();
-                if (cardReturning.cardID!="Overexertion") {
+                if (cardReturning.cardID != "Overexertion") {
                     this.p.exhaustPile.removeCard(cardReturning);
 
                     logger.info("Unfadeout");
@@ -105,13 +86,13 @@ import slimebound.SlimeboundMod;
 
                 }
 
-        }
+            }
 
 
             logger.info("Losing HP");
-            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,  AbstractDungeon.player, healthLoss));
+            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, healthLoss));
 
-        this.isDone = true;
+            this.isDone = true;
 
             return;
 

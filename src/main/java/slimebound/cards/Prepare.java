@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -11,65 +11,54 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.EnergizedPower;
-import com.megacrit.cardcrawl.powers.RetainCardPower;
-import com.megacrit.cardcrawl.powers.ThornsPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.EnergizedSlimeboundPower;
-import slimebound.powers.LoseThornsPower;
 
 
- public class Prepare extends CustomCard
- {
-   public static final String ID = "Prepare";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class Prepare extends CustomCard {
+    public static final String ID = "Prepare";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-   public static final String IMG_PATH = "cards/prepare.png";
+    public static final String IMG_PATH = "cards/prepare.png";
 
-   private static final CardType TYPE = CardType.SKILL;
-   private static final CardRarity RARITY = CardRarity.UNCOMMON;
-   private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-   private static final int COST = 2;
-   private static final int BLOCK = 5;
-   private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 2;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
-   public Prepare()
-   {
-     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
+    public Prepare() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-         this.exhaust = true;
-            this.magicNumber = this.baseMagicNumber = 2;
-   }
+        this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 2;
+    }
 
-   public void use(AbstractPlayer p, AbstractMonster m)
-   {
-             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
-             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p,this.magicNumber), this.magicNumber));
-             AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(p, this.magicNumber));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(p, this.magicNumber));
 
-               }
+    }
 
-   public AbstractCard makeCopy()
-   {
-     return new Prepare();
-   }
+    public AbstractCard makeCopy() {
+        return new Prepare();
+    }
 
-   public void upgrade()
-   {
-     if (!this.upgraded)
-     {
-       upgradeName();
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
             this.exhaust = false;
-        this.rawDescription = UPGRADED_DESCRIPTION;
-        this.initializeDescription();
-     }
-   }
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -77,6 +66,6 @@ import slimebound.powers.LoseThornsPower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
- }
+}
 
 

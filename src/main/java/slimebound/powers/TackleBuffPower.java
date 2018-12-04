@@ -1,45 +1,31 @@
- package slimebound.powers;
+package slimebound.powers;
 
 
-
-
-
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.DamageHooks;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.cards.*;
+import slimebound.cards.FlameTackle;
+import slimebound.cards.PoisonTackle;
+import slimebound.cards.QuickTackle;
+import slimebound.cards.Tackle;
 
 
-
-
-
-
-
- public class TackleBuffPower extends AbstractPower
- {
-       public static final String POWER_ID = "TackleBuffPower";
-       public static final String NAME = "Potency";
+public class TackleBuffPower extends AbstractPower {
+    public static final String POWER_ID = "TackleBuffPower";
+    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-       public static final String IMG = "powers/bleed.png";
+    public static final String IMG = "powers/bleed.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-       public static String[] DESCRIPTIONS;
-       private AbstractCreature source;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
 
 
-
-
-
-    public TackleBuffPower(AbstractCreature owner, AbstractCreature source, int amount)
-         {
+    public TackleBuffPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -64,8 +50,7 @@ import slimebound.cards.*;
 
     }
 
-    public void stackPower(int stackAmount)
-         {
+    public void stackPower(int stackAmount) {
 
         this.fontScale = 8.0F;
 
@@ -76,9 +61,7 @@ import slimebound.cards.*;
     }
 
 
-
-    public void updateDescription()
-     {
+    public void updateDescription() {
 
 
         this.description = (DESCRIPTIONS[0] + this.amount * 2 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
@@ -150,8 +133,7 @@ import slimebound.cards.*;
     }
 
 
-    public void onDrawOrDiscard()
-     {
+    public void onDrawOrDiscard() {
 
         updateTacklesInHand();
 

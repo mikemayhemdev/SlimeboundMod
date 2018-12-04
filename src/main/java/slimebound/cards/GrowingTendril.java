@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -12,33 +12,29 @@ import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.VampireIntoBlockDamageAction;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.Iterator;
 
 
-
- public class GrowingTendril extends CustomCard
- {
-       public static final String ID = "GrowingTendril";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class GrowingTendril extends CustomCard {
+    public static final String ID = "GrowingTendril";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-       public static final String IMG_PATH = "cards/slimepunch.png";
-       private static final CardType TYPE = CardType.ATTACK;
-       private static final CardRarity RARITY = CardRarity.UNCOMMON;
-       private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String IMG_PATH = "cards/slimepunch.png";
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-       private static final int COST = 1;
+    private static final int COST = 1;
     private int increaseAmount;
-       private static final int POWER = 6;
-       private static final int UPGRADE_BONUS = 3;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public GrowingTendril()
-     {
+    public GrowingTendril() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
@@ -54,9 +50,7 @@ import java.util.Iterator;
     }
 
 
-
-    public void use(AbstractPlayer p, AbstractMonster m)
-     {
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
@@ -65,8 +59,8 @@ import java.util.Iterator;
         Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
 
         AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c.uuid.equals(this.uuid)) {
                 c.misc += this.increaseAmount;
                 c.applyPowers();
@@ -76,8 +70,8 @@ import java.util.Iterator;
             }
         }
 
-        for(var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = c.misc) {
-            c = (AbstractCard)var1.next();
+        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = c.misc) {
+            c = (AbstractCard) var1.next();
             c.misc += this.increaseAmount;
             c.applyPowers();
         }
@@ -85,24 +79,16 @@ import java.util.Iterator;
     }
 
 
-
-
-
-
-    public AbstractCard makeCopy()
-     {
+    public AbstractCard makeCopy() {
 
         return new GrowingTendril();
 
     }
 
 
+    public void upgrade() {
 
-    public void upgrade()
-     {
-
-        if (!this.upgraded)
-             {
+        if (!this.upgraded) {
 
             upgradeName();
 

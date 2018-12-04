@@ -1,4 +1,4 @@
- package slimebound.cards;
+package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
@@ -9,67 +9,58 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
 
 
- public class SquareOfProtection extends CustomCard
- {
-   public static final String ID = "SquareOfProtection";
-       public static final String NAME;
-       public static final String DESCRIPTION;
+public class SquareOfProtection extends CustomCard {
+    public static final String ID = "SquareOfProtection";
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-   public static final String IMG_PATH = "cards/squareofprotection.png";
+    public static final String IMG_PATH = "cards/squareofprotection.png";
 
-   private static final CardType TYPE = CardType.SKILL;
-   private static final CardRarity RARITY = CardRarity.SPECIAL;
-   private static final CardTarget TARGET = CardTarget.SELF;
-                    private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings;
 
-   private static final int COST = 1;
-   private static final int BLOCK = 5;
-   private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BONUS = 3;
 
-   public SquareOfProtection()
-   {
-     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+    public SquareOfProtection() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-            this.magicNumber = this.baseMagicNumber = 9;
+        this.magicNumber = this.baseMagicNumber = 9;
 
-    this.exhaust = true;
-    this.isEthereal = true;
-   }
+        this.exhaust = true;
+        this.isEthereal = true;
+    }
 
-   public void use(AbstractPlayer p, AbstractMonster m)
-   {
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1 ));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 3), 3));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 3), 3));
 
-                 AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
-         c.modifyCostForTurn(this.magicNumber * -1);
-         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
+        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
+        c.modifyCostForTurn(this.magicNumber * -1);
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
 
 
-}
+    }
 
-   public AbstractCard makeCopy()
-   {
-     return new SquareOfProtection();
-   }
+    public AbstractCard makeCopy() {
+        return new SquareOfProtection();
+    }
 
-   public void upgrade()
-   {
-     if (!this.upgraded)
-     {
-       upgradeName();
-                upgradeMagicNumber(1);
-     }
-   }
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeMagicNumber(1);
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -77,6 +68,6 @@ import slimebound.SlimeboundMod;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
- }
+}
 
 
