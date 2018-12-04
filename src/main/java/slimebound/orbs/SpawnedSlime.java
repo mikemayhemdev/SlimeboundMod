@@ -105,7 +105,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
 
         /*     */
         /*  78 */
-        this.channelAnimTimer = 0.3F;
+        this.channelAnimTimer = 0.5F;
         /*  79 */
         /*     */
         /*  83 */
@@ -170,6 +170,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
     }
 
     public void applyFocus() {
+        super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower("PotencyPower");
         if (power != null) {
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus;
@@ -178,6 +179,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
     }
 
         public void applyUniqueFocus(int StrAmount){
+
             logger.info("Torch head getting buffed by "+ StrAmount);
         this.UniqueFocus = this.UniqueFocus + StrAmount;
         this.passiveAmount = this.passiveAmount + StrAmount;
@@ -246,7 +248,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
         /* 155 */
         if (Settings.FAST_MODE) {
             /* 156 */
-            speedTime = 0.1F;
+            speedTime = 0.15F;
             /*     */
         }
         if (SlimeboundMod.slimeDelay == true){

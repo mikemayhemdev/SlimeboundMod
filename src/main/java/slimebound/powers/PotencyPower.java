@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.orbs.TorchHeadSlime;
 
 /*    */
@@ -75,13 +76,41 @@ import slimebound.orbs.TorchHeadSlime;
 
     public void onInitialApplication() {
 
-        AbstractDungeon.player.orbs.forEach(AbstractOrb::applyFocus);
+      //  AbstractDungeon.player.orbs.forEach(AbstractOrb::applyFocus);
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o.ID == "TorchHeadSlime" ||
+                    o.ID == "AttackSlime" ||
+                    o.ID == "PoisonSlime" ||
+                    o.ID == "SlimingSlime" ||
+                    o.ID == "BronzeSlime" ||
+                    o.ID == "DebuffSlime" ||
+                    o.ID == "CultistSlime" ||
+                    o.ID == "HexSlime") {
+                SpawnedSlime s = (SpawnedSlime) o;
+                s.applyFocus();
+            }
+        }
     }
 
 
-    public void stackPower(int stackAmount) {
 
-        AbstractDungeon.player.orbs.forEach(AbstractOrb::applyFocus);
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+       // AbstractDungeon.player.orbs.forEach(AbstractOrb::applyFocus);
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o.ID == "TorchHeadSlime" ||
+                    o.ID == "AttackSlime" ||
+                    o.ID == "PoisonSlime" ||
+                    o.ID == "SlimingSlime" ||
+                    o.ID == "BronzeSlime" ||
+                    o.ID == "DebuffSlime" ||
+                    o.ID == "CultistSlime" ||
+                    o.ID == "HexSlime") {
+                SpawnedSlime s = (SpawnedSlime) o;
+                s.applyFocus();
+            }
+        }
+
     }
 }
 /*    */
