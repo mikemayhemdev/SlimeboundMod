@@ -47,6 +47,7 @@ import slimebound.powers.SlimeSacrificePower;
     /*    */   public void use(AbstractPlayer p, AbstractMonster m)
     /*    */ {
         AbstractDungeon.effectsQueue.add(new HealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5));
+       int blockgain = 0;
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
@@ -61,9 +62,13 @@ import slimebound.powers.SlimeSacrificePower;
 
 
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));
-
+                    blockgain = blockgain + 3;
 
                 }
+            }
+            if (blockgain > 0){
+                /* 35 */     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, blockgain));
+
             }
         }
     }

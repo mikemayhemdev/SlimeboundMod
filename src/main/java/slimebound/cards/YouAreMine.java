@@ -67,7 +67,7 @@ import slimebound.powers.SlimedPower;
                      AbstractDungeon.actionManager.addToBottom(new VFXAction(new CollectorCurseEffect(monster.hb.cX, monster.hb.cY), .5F));
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                      AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, this.magicNumber,false), this.magicNumber , true, AbstractGameAction.AttackEffect.NONE));
-                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new FrailPower(monster, this.magicNumber, false), this.magicNumber , true, AbstractGameAction.AttackEffect.NONE));
+               //      AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new FrailPower(monster, this.magicNumber, false), this.magicNumber , true, AbstractGameAction.AttackEffect.NONE));
 
 
 

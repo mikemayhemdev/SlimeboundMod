@@ -16,8 +16,8 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 /*    */   private Texture img;
 /*    */   private AbstractOrb o;
 /*    */   
-/*    */   public SlimeIntentEffect(Texture img, AbstractOrb o) {
-/* 18 */     this.duration = .5F;
+/*    */   public SlimeIntentEffect(Texture img, AbstractOrb o,float duration) {
+/* 18 */     this.duration = duration;
 /* 19 */     this.img = img;
 /* 20 */     this.o = o;
 /*    */   }

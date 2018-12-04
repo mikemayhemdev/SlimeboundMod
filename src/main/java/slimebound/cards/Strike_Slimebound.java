@@ -2,6 +2,7 @@
 /*    */
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -44,7 +45,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 /*    */   
 /*    */   public void use(AbstractPlayer p, AbstractMonster m)
 /*    */   {
-/* 38 */     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+/* 38 */     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 /*    */   }
 /*    */   
 /*    */ 

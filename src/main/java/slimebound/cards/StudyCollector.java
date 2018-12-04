@@ -31,7 +31,7 @@ import slimebound.powers.StudyCollectorPowerUpgraded;
     public static String UPGRADED_DESCRIPTION;
     /*    */   public static final String IMG_PATH = "cards/studycollector.png";
     /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.RARE;
+    /* 18 */   private static final CardRarity RARITY = CardRarity.SPECIAL;
     /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
     /*    */
     /*    */   private static final int COST = 2;

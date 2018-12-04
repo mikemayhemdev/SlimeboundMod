@@ -13,7 +13,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.RandomBasicSlimeCardAction;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
+
+import java.util.Random;
 
 /*    */
 /*    */ public class RandomSlimeCard4 extends CustomCard
@@ -53,11 +56,22 @@ import slimebound.patches.AbstractCardEnum;
 
        // if (upgraded){UpgradeCard = true;}
 
-        AbstractDungeon.actionManager.addToBottom(new RandomBasicSlimeCardAction(UpgradeCard,true));
-        AbstractDungeon.actionManager.addToBottom(new RandomBasicSlimeCardAction(UpgradeCard,true));
-        AbstractDungeon.actionManager.addToBottom(new RandomBasicSlimeCardAction(UpgradeCard,true));
-        AbstractDungeon.actionManager.addToBottom(new RandomBasicSlimeCardAction(UpgradeCard,true));
-        /*    */
+        Random random = new Random();
+
+        for(int i=0; i<4; i++){
+        Integer chosenRand = random.nextInt(4);
+
+
+        if (chosenRand == 0) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(),false,true));
+        } else if (chosenRand == 1) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(),false,true));
+        } else if (chosenRand == 2) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(),false,true));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+        }}
+
         /* 35 */     }
     /*    */
     static {

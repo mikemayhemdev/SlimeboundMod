@@ -63,7 +63,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 /* 62 */         return;
 /*    */       }
 /*    */
-/* 65 */       if ((healAmount > 1) && (this.target.hasPower("IntangiblePlayer"))) {
+/* 65 */       if ((healAmount > 1) && (this.target.hasPower("Intangible"))) {
 /* 66 */         healAmount = 1;
 /*    */       }
 /*    */       

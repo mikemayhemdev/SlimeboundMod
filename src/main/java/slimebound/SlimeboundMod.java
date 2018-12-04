@@ -148,6 +148,7 @@ import java.nio.charset.StandardCharsets;
     /* 112 */ BaseMod.addCard(new slimebound.cards.PotencyGainCard());
     /* 112 */ BaseMod.addCard(new slimebound.cards.AttackSlime());
     /* 112 */ BaseMod.addCard(new slimebound.cards.TorchHeadSlime());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.StudyRandomBoss());
     /* 112 */ BaseMod.addCard(new slimebound.cards.CultistSlime());
     /* 112 */ BaseMod.addCard(new slimebound.cards.PoisonSlime());
     /* 112 */ BaseMod.addCard(new slimebound.cards.DebuffSlime());
@@ -168,6 +169,13 @@ import java.nio.charset.StandardCharsets;
     /* 112 */ BaseMod.addCard(new slimebound.cards.QuickSpikes());
     /* 112 */ BaseMod.addCard(new slimebound.cards.SlimeBlockade());
     /* 112 */ BaseMod.addCard(new slimebound.cards.Spiked());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.MorphEverything());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.SuperCorrosiveSpit());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.SuperTackle());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.SelfDamageSlimed());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.DoubleEverything());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.MultiLick());
+    /* 112 */ BaseMod.addCard(new slimebound.cards.Slimesplosion());
     /* 112 */ BaseMod.addCard(new slimebound.cards.Hardened());
     /* 112 */ BaseMod.addCard(new slimebound.cards.Dissolve());
     /* 112 */ BaseMod.addCard(new slimebound.cards.DuplicatedForm());
@@ -270,9 +278,17 @@ import java.nio.charset.StandardCharsets;
     UnlockTracker.unlockCard("SlimeBarrage");
     UnlockTracker.unlockCard("AllTogetherNow");
     UnlockTracker.unlockCard("MaxSlimes");
+    UnlockTracker.unlockCard("StudyRandomBoss");
     UnlockTracker.unlockCard("Hardened");
     UnlockTracker.unlockCard("QuickSpikes");
     UnlockTracker.unlockCard("Spiked");
+    /* 112 */ UnlockTracker.unlockCard("MorphEverything");
+    /* 112 */ UnlockTracker.unlockCard("SuperCorrosiveSpit");
+    /* 112 */ UnlockTracker.unlockCard("SuperTackle");
+    /* 112 */ UnlockTracker.unlockCard("SelfDamageSlimed");
+    /* 112 */ UnlockTracker.unlockCard("DoubleEverything");
+    /* 112 */ UnlockTracker.unlockCard("MultiLick");
+    /* 112 */ UnlockTracker.unlockCard("Slimesplosion");
     UnlockTracker.unlockCard("SlimeBlockade");
     UnlockTracker.unlockCard("LeechingTouch");
     UnlockTracker.unlockCard("DuplicatedForm");
@@ -360,19 +376,19 @@ import java.nio.charset.StandardCharsets;
 /*     */   public void receiveEditKeywords()
 /*     */   {
 /* 198 */
-/* 200 */     BaseMod.addKeyword(new String[] { "absorb" }, "Recombine with a spawned Slime, gaining 3 Block and 3 HP.");
+/* 200 */     BaseMod.addKeyword(new String[] { "absorb" }, "Recombine with a spawned Slime, healing 3 HP.");
 /*     */     
-/* 202 */     BaseMod.addKeyword(new String[] { "split" }, "Lose 3 Health and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, gaining 3 Block and 3 HP.");
+/* 202 */     BaseMod.addKeyword(new String[] { "split" }, "Lose 3 Health and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
 /*     */     
 /* 204 */     BaseMod.addKeyword(new String[] { "slimed" }, "Increase the next attack's damage and cause it to restore health, consuming the effect.");
 
     /* 204 */ BaseMod.addKeyword(new String[] { "potency" }, "Increases the effectiveness of your Spawned Slimes.");
     BaseMod.addKeyword(new String[] { "torch-head" }, "Attacks for 9 each turn, and gains Strength when you do.");
-    BaseMod.addKeyword(new String[] { "aggressive" }, "Attacks for 5 each turn.");
+    BaseMod.addKeyword(new String[] { "attacking" }, "Attacks for 5 each turn.");
     BaseMod.addKeyword(new String[] { "cultist" }, "Attacks for 6 each turn, then increases its Strength by 2.");
-    BaseMod.addKeyword(new String[] { "licking" }, "Attacks for 2 each turn and applies 1 Weaken.");
-    BaseMod.addKeyword(new String[] { "toxic" }, "Applies 3 Poison each turn.");
-    BaseMod.addKeyword(new String[] { "sludging" }, "Applies 3 Slimed each turn.");
+    BaseMod.addKeyword(new String[] { "weakening" }, "Attacks for 2 each turn and applies 1 Weaken.");
+    BaseMod.addKeyword(new String[] { "poisoning" }, "Applies 3 Poison each turn.");
+    BaseMod.addKeyword(new String[] { "sliming" }, "Applies 3 Slimed each turn.");
     BaseMod.addKeyword(new String[] { "plated" }, "Increases Block each turn.  Reduced when you take damage.");
     BaseMod.addKeyword(new String[] { "self-forming" }, "Taking damage from enemy attacks grant Block for next turn.");
     BaseMod.addKeyword(new String[] { "bronze" }, "Attacks for 5 each turn and grants you an equal amount of Block.");
@@ -381,7 +397,7 @@ import java.nio.charset.StandardCharsets;
     BaseMod.addKeyword(new String[] { "lick" }, "0-cost cards that apply a variety of debuffs.");
    // BaseMod.addKeyword(new String[] { "momentum" }, "Increases the damage and self-damage of Tackle attacks.");
     BaseMod.addKeyword(new String[] { "useful" }, "1-cost card that grants 2 energy.");
-    BaseMod.addKeyword(new String[] { "ghostflame" }, "Does not attack. Gain 1 Strength and Potency and 3 extra Block and HP when Absorbed. Absorb all slimes if you have 6 Ghostflames.");
+    BaseMod.addKeyword(new String[] { "ghostflame" }, "Does not attack. Gain 1 Strength and Potency, 6 Block and heal 6 HP when Absorbed. Absorb all slimes if you have 6 Ghostflames.");
     BaseMod.addKeyword(new String[] { "burn" }, "Deals damage each turn.  Does not decay.");
     BaseMod.addKeyword(new String[] { "transform" }, "Replace with a random new card.");
 

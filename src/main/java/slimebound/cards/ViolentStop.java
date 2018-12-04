@@ -69,10 +69,8 @@ import slimebound.patches.AbstractCardEnum;
                     if (monster != null && (monster.intent == AbstractMonster.Intent.ATTACK || monster.intent == AbstractMonster.Intent.ATTACK_BUFF || monster.intent == AbstractMonster.Intent.ATTACK_DEBUFF || monster.intent == AbstractMonster.Intent.ATTACK_DEFEND)) {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
-                    }
-
-                    if (monster != null && (monster.intent == AbstractMonster.Intent.DEFEND || monster.intent == AbstractMonster.Intent.DEFEND_BUFF || monster.intent == AbstractMonster.Intent.DEFEND_DEBUFF || monster.intent == AbstractMonster.Intent.ATTACK_DEFEND)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new FrailPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    } else  {
+                        /* 38 */     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(monster, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
                     }
 

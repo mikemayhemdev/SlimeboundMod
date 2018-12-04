@@ -8,7 +8,7 @@
     ]
   },
   "AttackSlime": {
-    "NAME": "Aggressive Slime",
+    "NAME": "Attack Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage at the start of your turn."
@@ -29,21 +29,21 @@
     ]
   },
   "DebuffSlime": {
-    "NAME": "Licking Slime",
+    "NAME": "Weakening Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage and applies 1 Weak at the start of your turn."
     ]
   },
   "PoisonSlime": {
-    "NAME": "Toxic Slime",
+    "NAME": "Poisoning Slime",
     "DESCRIPTION": [
       "Applies ",
       " Poison at the start of your turn."
     ]
   },
   "SlimingSlime": {
-    "NAME": "Sludging Slime",
+    "NAME": "Sliming Slime",
     "DESCRIPTION": [
       "Applies ",
       " Slimed at the start of your turn."

@@ -34,7 +34,7 @@ import slimebound.patches.AbstractCardEnum;
     /* 18 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
     /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
     /*    */
-    /*    */   private static final int COST = 1;
+    /*    */   private static final int COST = 2;
 
     /*    */   private static int upgradedamount = 1;
     /*    */
@@ -60,8 +60,8 @@ import slimebound.patches.AbstractCardEnum;
         }
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c, 1));
-        c = CardLibrary.getCard("UsefulSlime").makeCopy();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c, 1));
+        //c = CardLibrary.getCard("UsefulSlime").makeCopy();
+        //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c, 1));
             /* 35 */
         }
 

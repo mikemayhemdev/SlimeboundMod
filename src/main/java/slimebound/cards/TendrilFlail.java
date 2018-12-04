@@ -50,9 +50,9 @@ import slimebound.powers.TackleBuffPower;
     public void use(AbstractPlayer p, AbstractMonster m)
     /*    */ {
         /* 38 */
-        AbstractDungeon.actionManager.addToBottom(new TendrilFlailAction(
+        AbstractDungeon.actionManager.addToBottom(new TendrilFlailAction(p,
                 /*    */
-                /* 43 */       AbstractDungeon.getMonsters().getRandomMonster(true), new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseDamage), this.magicNumber));
+                /* 43 */       AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber,2));
         /*    */
     }
         /*    */

@@ -8,7 +8,7 @@
     "DESCRIPTION": "Gain !B! Block."
   },
   "BronzeSlime": {
-    "NAME": "Spawn Bronze",
+    "NAME": "Split: Bronze",
     "DESCRIPTION": "Split into a Bronze Slime. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Split into a Bronze Slime twice. NL Exhaust"
   },
@@ -22,8 +22,8 @@
     "UPGRADE_DESCRIPTION": "Split into a Torch-Head Slime twice. NL Exhaust"
   },
   "AttackSlime": {
-    "NAME": "Split: Aggressive",
-    "DESCRIPTION": "Split into an Aggressive Slime. NL Exhaust",
+    "NAME": "Split: Attacking",
+    "DESCRIPTION": "Split into an Attacking Slime. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Split into a Aggressive Slime twice. NL Exhaust"
   },
   "CultistSlime": {
@@ -32,18 +32,18 @@
     "UPGRADE_DESCRIPTION": "Split into a Cultist Slime twice. NL Exhaust"
   },
   "DebuffSlime": {
-    "NAME": "Split: Licking",
-    "DESCRIPTION": "Split into a Licking Slime. NL Exhaust",
+    "NAME": "Split: Weakening",
+    "DESCRIPTION": "Split into a Weakening Slime. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Split into a Licking Slime twice. NL Exhaust"
   },
   "PoisonSlime": {
-    "NAME": "Split: Toxic",
-    "DESCRIPTION": "Split into a Toxic Slime. NL Exhaust",
+    "NAME": "Split: Poisoning",
+    "DESCRIPTION": "Split into a Poisoning Slime. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Split into a Toxic Slime twice. NL Exhaust"
   },
   "SlimingSlime": {
-    "NAME": "Split: Sludging",
-    "DESCRIPTION": "Split into a Sludging Slime. NL Exhaust",
+    "NAME": "Split: Sliming",
+    "DESCRIPTION": "Split into a Sliming Slime. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Split into a Sludging Slime twice. NL Exhaust"
   },
   "SlimeSacrifice": {
@@ -57,7 +57,7 @@
   },
   "AbsorbAll": {
     "NAME": "Absorption",
-    "DESCRIPTION": "Absorb all of your spawned Slimes."
+    "DESCRIPTION": "Absorb all of your spawned Slimes.  Gain 3 Block per slime Absorbed."
   },
   "AbsorbAllPotency": {
     "NAME": "Knowledge Pool",
@@ -70,8 +70,8 @@
   },
   "RandomSlimeCard4": {
     "NAME": "Super Split",
-    "DESCRIPTION": "Gain !M! Slime slots. NL Add 4 random Split cards to your hand. They cost 0 this turn.  NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Gain 2 Slime slots. NL Add 4 random Upgraded Split cards to your hand. They cost 0 this turn.  NL Exhaust"
+    "DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime four times. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime four times. NL Exhaust"
   },
   "SplittingStrike": {
     "NAME": "Divide & Conquer",
@@ -128,18 +128,18 @@
   },
   "LeechingTouch": {
     "NAME": "Leeching Touch",
-    "DESCRIPTION": "Deal !D! damage.  Gain Block equal to the amount of unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage.  Gain Block equal to unblocked damage."
   },
   "Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Exhaust all cards in your hand. Gain !B! Block and !M! HP for each card Exhausted. NL Exhaust"
+    "DESCRIPTION": "Exhaust all cards in your hand. Gain !B! Block and heal !M! HP for each card Exhausted. NL Exhaust"
   },
   "DuplicatedForm": {
     "NAME": "Duplicated Form",
     "DESCRIPTION": "Can only be used while below half HP. NL Become Halved. NL Gain !M! Tag-Team. NL The first card you play each turn is played twice.",
     "UPGRADE_DESCRIPTION": "Can only be used while below half HP. NL Become Halved. NL Gain !M! Tag-Team. NL The first card you play each turn is played twice.",
     "EXTENDED_DESCRIPTION": [
-      "Too... HPy..."
+      "Too... Healthy..."
     ]
   },
   "Recollect": {
@@ -160,7 +160,7 @@
   },
   "Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "Whenever you Exhaust a card, gain !M! HP."
+    "DESCRIPTION": "Whenever you Exhaust a card, heal !M! HP."
   },
   "MorphCard": {
     "NAME": "Repurpose",
@@ -171,6 +171,14 @@
     "NAME": "Slime Slam",
     "DESCRIPTION": "Deal 9 damage plus your Block. (Deals !D! damage). NL Lose all Block.",
     "UPGRADE_DESCRIPTION": "Deal 9 damage plus twice your Block. (Deals !D! damage). NL Lose all Block."
+  },
+  "MorphEverything": {
+    "NAME": "Mass Repurpose",
+    "DESCRIPTION": "Transform all cards in your hand. Reduce their costs by 1 this combat. NL Exhaust"
+  },
+  "MultiLick": {
+    "NAME": "SO TASTY!",
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random Lick cards to your hand. NL Exhaust"
   },
   "RapidHeal": {
     "NAME": "Rapid Heal",
@@ -233,8 +241,8 @@
   },
   "LooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage.  Add a random Lick card if the target was Slimed.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage.  Add two random Lick cards if the target was Slimed."
+    "DESCRIPTION": "Deal !D! damage.  Add a random Lick card to your hand if the target was Slimed.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.  Add two random Lick cards to your hand if the target was Slimed."
   },
   "AcidTongue": {
     "NAME": "Acid Tongue",
@@ -258,12 +266,16 @@
   },
   "Grow": {
     "NAME": "Grow",
-    "DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Add a Grow and a Useful Slime to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Add a Grow that costs 1 less and a Useful Slime to your discard pile."
+    "DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Add a Grow to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Add a Grow that costs 1 less to your discard pile."
   },
   "Tackle": {
     "NAME": "Tackle",
     "DESCRIPTION": "Deal !D! damage and !B! damage to yourself. NL Apply !M! Weak. NL Draw a card."
+  },
+  "Slimesplosion": {
+    "NAME": "Slimesplosion",
+    "DESCRIPTION": "Apply !M! Slimed and !B! Poison to ALL enemies X times. NL Exhaust"
   },
   "QuickTackle": {
     "NAME": "Combo Tackle",
@@ -275,6 +287,14 @@
   },
   "CorrosiveSpit": {
     "NAME": "Corrosive Spit",
+    "DESCRIPTION": "Apply !M! Slimed."
+  },
+  "SuperTackle": {
+    "NAME": "Chomp",
+    "DESCRIPTION": "Deal !D! damage.  Heal HP equal to unblocked damage."
+  },
+  "SuperCorrosiveSpit": {
+    "NAME": "Douse in Slime",
     "DESCRIPTION": "Apply !M! Slimed."
   },
   "FlameTackle": {
@@ -302,6 +322,10 @@
     "NAME": "Mass Feed",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this kills a non-minion enemy, raise your Max HP by !M!. NL Exhaust."
   },
+  "SelfDamageSlimed": {
+    "NAME": "Stray Goop",
+    "DESCRIPTION": "Apply !M! Slimed to a random enemy whenever you lose HP on your turn."
+  },
   "TendrilSlash": {
     "NAME": "Slime Smash",
     "DESCRIPTION": "Deal !D! Damage.  This gains twice the normal benefit from Slimed."
@@ -312,7 +336,7 @@
   },
   "Leech": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Gain !M! HP. NL Exhaust"
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Heal !M! HP. NL Exhaust"
   },
   "Retaliate": {
     "NAME": "Equalize",
@@ -324,7 +348,7 @@
   },
   "ViolentStop": {
     "NAME": "Disrupting Slam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Weak to enemies who intend to Attack. NL Apply !M! Frail to enemies who intend to Defend."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Weak to enemies who intend to Attack.  Deal !D! more damage to enemies who do not."
   },
   "ChargeUp": {
     "NAME": "Charge Up",
@@ -380,13 +404,13 @@
   },
   "FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable and Frail. NL Ethereal, Exhaust"
+    "DESCRIPTION": "Remove all of the target's Block. NL Deal !D! damage. Apply !M! Vulnerable. NL Ethereal, Exhaust"
   },
   "LastStand": {
     "NAME": "Last Stand",
     "DESCRIPTION": "Can only be used while below half HP. NL Remove all Debuffs. NL Gain !M! Strength. NL Ethereal",
     "EXTENDED_DESCRIPTION": [
-      "Too... HPy..."
+      "Too... Healthy..."
     ] },
   "Collect": {
     "NAME": "Collect",
@@ -394,7 +418,11 @@
   },
   "YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Weak, Vulnerable, and Frail to ALL enemies. NL Ethereal, Exhaust"
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Ethereal, Exhaust"
+  },
+  "DoubleEverything": {
+    "NAME": "Ooze Bath",
+    "DESCRIPTION": "Double an enemy's Weak, Poison, and Slimed. NL Exhaust"
   },
   "SlimeRitual": {
     "NAME": "CA-CAW!",
@@ -440,6 +468,11 @@
     "NAME": "Study Automaton",
     "DESCRIPTION": "Add a random Automaton card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Automaton card to your hand at the start of each turn."
+  },
+  "StudyRandomBoss": {
+    "NAME": "Study the Spire",
+    "DESCRIPTION": "Add a random powerful Boss card to your hand at the start of your next !M! turns.",
+    "UPGRADE_DESCRIPTION": "Add a random powerful Boss card to your hand at the start of each turn."
   },
   "StudyAwakened": {
     "NAME": "Study Awakened",

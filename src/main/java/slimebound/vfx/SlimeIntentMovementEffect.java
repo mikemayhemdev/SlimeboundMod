@@ -20,8 +20,8 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 /* 13 */   private float intervalTimer = 0.0F;
 /*    */   private AbstractOrb o;
 /*    */
-/*    */   public SlimeIntentMovementEffect(AbstractOrb o) {
-/* 18 */     this.duration = .5F;
+/*    */   public SlimeIntentMovementEffect(AbstractOrb o,float duration) {
+/* 18 */     this.duration = duration;
 /* 20 */     this.o = o;
 /*    */   }
 /*    */   

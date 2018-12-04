@@ -105,7 +105,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
 
         /*     */
         /*  78 */
-        this.channelAnimTimer = 0.5F;
+        this.channelAnimTimer = 0.3F;
         /*  79 */
         /*     */
         /*  83 */
@@ -198,7 +198,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
 
         } else {
             if (evokeAmount == 1) {
-                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+                //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
                 AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
             }
         }
@@ -246,7 +246,7 @@ import slimebound.vfx.SlimeIntentMovementEffect;
         /* 155 */
         if (Settings.FAST_MODE) {
             /* 156 */
-            speedTime = 0.15F;
+            speedTime = 0.1F;
             /*     */
         }
         if (SlimeboundMod.slimeDelay == true){
@@ -255,9 +255,9 @@ import slimebound.vfx.SlimeIntentMovementEffect;
         }
         /* 158 */
         //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeIntentEffect(this.intentImage,this), speedTime));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeIntentEffect(this.intentImage,this,speedTime), speedTime));
         if (this.movesToAttack) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeIntentMovementEffect(this), speedTime));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeIntentMovementEffect(this,speedTime), speedTime));
         }
         activateEffectUnique();
         /*     */

@@ -47,6 +47,8 @@ import slimebound.powers.StunnedPower;
         /*    */
         /* 31 */
         this.baseDamage = 60;
+        this.exhaust = true;
+        this.isEthereal = true;
         /* 33 */
         /*    */
     }

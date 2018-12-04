@@ -129,6 +129,13 @@
 			" Poison whenever you apply Frail, Weaken, or Slimed."
 		]
 	},
+	"SelfDamageSlimedPower": {
+		"NAME": "Stray Goop",
+		"DESCRIPTIONS": [
+			"Apply ",
+			" Slimed to a random enemy whenever you lose HP on your turn."
+		]
+	},
 	"TackleBuffPower": {
 		"NAME": "Momentum",
 		"DESCRIPTIONS": [

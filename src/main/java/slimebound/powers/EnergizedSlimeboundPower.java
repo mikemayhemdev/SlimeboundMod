@@ -72,7 +72,7 @@ import slimebound.SlimeboundMod;
 /*    */   {
 /* 46 */     flash();
 /* 47 */     AbstractDungeon.player.gainEnergy(this.amount);
-/* 48 */     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "EnergizedBlue"));
+/* 48 */     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "EnergizedSlimeboundPower"));
 /*    */   }
 /*    */ }
 
