@@ -10,7 +10,7 @@
 		"NAME": "Slimed",
 		"DESCRIPTIONS": [
 			"The next Attack against this enemy deals ",
-			" more damage and restores ",
+			" more damage and heals ",
 			" HP, consuming all #ySlimed.  One stack decays per turn."
 		]
 	},

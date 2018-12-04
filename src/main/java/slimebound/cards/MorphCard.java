@@ -22,7 +22,7 @@ import slimebound.patches.AbstractCardEnum;
     /*    */   public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
     /* 18 */   public static final String[] EXTENDED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/overexertion.png";
+    /*    */   public static final String IMG_PATH = "cards/morphcard.png";
 
     /* 17 */   private static final CardType TYPE = CardType.SKILL;
     /* 18 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;

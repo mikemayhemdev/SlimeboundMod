@@ -30,7 +30,7 @@ import java.util.Random;
                 public static final String NAME;
                 public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/studyshapes.png";
+    /*    */   public static final String IMG_PATH = "cards/studyspire.png";
     /* 17 */   private static final CardType TYPE = CardType.POWER;
     /* 18 */   private static final CardRarity RARITY = CardRarity.RARE;
     /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;

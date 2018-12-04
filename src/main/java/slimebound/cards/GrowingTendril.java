@@ -25,7 +25,7 @@ import java.util.Iterator;
     /*    */   public static final String NAME;
     /*    */   public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/leechingtouch.png";
+    /*    */   public static final String IMG_PATH = "cards/slimepunch.png";
     /* 19 */   private static final CardType TYPE = CardType.ATTACK;
     /* 20 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
     /* 21 */   private static final CardTarget TARGET = CardTarget.ENEMY;

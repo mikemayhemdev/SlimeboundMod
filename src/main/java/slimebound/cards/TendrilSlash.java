@@ -25,7 +25,7 @@ import slimebound.powers.SlimedPower;
     /*    */   public static final String NAME;
     /*    */   public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/tendrilflail.png";
+    /*    */   public static final String IMG_PATH = "cards/tendrilstrike.png";
     /* 19 */   private static final CardType TYPE = CardType.ATTACK;
     /* 20 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
     /* 21 */   private static final CardTarget TARGET = CardTarget.ENEMY;

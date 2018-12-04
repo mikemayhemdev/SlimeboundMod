@@ -81,7 +81,8 @@ import slimebound.vfx.SlimeFlareEffect;
         /*    */     }
 
     public void update()
-        /*    */ {
+
+        /*    */ {super.update();
         /* 66 */
         this.activateTimer -= Gdx.graphics.getDeltaTime();
         /* 67 */

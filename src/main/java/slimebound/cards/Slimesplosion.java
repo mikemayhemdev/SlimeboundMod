@@ -25,7 +25,7 @@ import slimebound.powers.SlimedPower;
     /*    */   public static final String NAME;
     /*    */   public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/goopspray.png";
+    /*    */   public static final String IMG_PATH = "cards/slimewave.png";
     /* 19 */   private static final CardType TYPE = CardType.SKILL;
     /* 20 */   private static final CardRarity RARITY = CardRarity.RARE;
     /* 21 */   private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

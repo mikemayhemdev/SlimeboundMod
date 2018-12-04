@@ -4,6 +4,7 @@
 
 /*    */
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,10 +16,12 @@ import com.megacrit.cardcrawl.vfx.combat.WeakParticleEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
+import slimebound.vfx.SlimeDripsEffectPurple;
 
 
 
-        /*    */
+/*    */
         /*    */
 
 /*    */
@@ -74,6 +77,19 @@ import slimebound.SlimeboundMod;
         /*    */
     }
 
+    public void onInitialApplication() {
+
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX,this.owner.hb.cY,4),0.05F));
+
+    }
+
+
+
+    public void stackPower(int stackAmount) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX,this.owner.hb.cY,4),0.05F));
+
+
+    }
     /*    */
     /*    */
     public void atEndOfRound()

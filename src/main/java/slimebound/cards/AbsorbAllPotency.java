@@ -35,7 +35,7 @@ import slimebound.powers.SlimeSacrificePower;
     /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
     /*    */                private static final CardStrings cardStrings;
 
-    /*    */   private static final int COST = 2;
+    /*    */   private static final int COST = 3;
     /*    */   private static final int BLOCK = 5;
     /*    */   private static final int UPGRADE_BONUS = 3;
     /*    */
@@ -99,7 +99,7 @@ import slimebound.powers.SlimeSacrificePower;
         /* 45 */     if (!this.upgraded)
             /*    */     {
             /* 47 */       upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(2);
 
 
             /*    */     }
