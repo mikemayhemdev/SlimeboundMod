@@ -67,7 +67,6 @@ public class HexSlimePerTurnPower extends AbstractPower {
         flash();
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.HexSlime(), false, false));
-        AbstractDungeon.actionManager.addToBottom(new CheckForSixHexAction(AbstractDungeon.player));
 
         if (this.amount <= 1) {
 

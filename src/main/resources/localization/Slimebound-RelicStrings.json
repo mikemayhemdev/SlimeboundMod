@@ -3,13 +3,13 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "Never leave a slime behind.",
     "DESCRIPTIONS": [
-      "At the end of combat, for each Spawned slime, heal #b3 HP."
+      "Spawn a Slime at the start of combat. At the end of combat, for each Spawned slime, heal #b3 HP."
     ]
   },"AbsorbEndCombatUpgraded": {
   "NAME": "Black Heart of Goo",
   "FLAVOR": "Sometimes leave a slime behind.",
   "DESCRIPTIONS": [
-    "Replaces #gHeart #gof #gGoo. Gain [E] at the start of your turn. NL At the end of combat, for each Spawned slime, heal #b1 HP."
+    "Replaces #gHeart #gof #gGoo. Gain [E] at the start of your turn. NL At the end of combat, for each Spawned slime, heal #b3 HP."
   ]
 },"SlimedTailRelic": {
   "NAME": "Slimed Tail",

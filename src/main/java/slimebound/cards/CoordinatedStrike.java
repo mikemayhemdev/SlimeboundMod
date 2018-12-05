@@ -2,15 +2,19 @@ package slimebound.cards;
 
 
 
+import com.megacrit.cardcrawl.actions.unique.SkewerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CoordinateAction;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -33,18 +37,18 @@ public class CoordinatedStrike extends AbstractSlimeboundCard {
     public CoordinatedStrike() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 3;
-        this.tags.add(CardTags.STRIKE);
-        this.isMultiDamage = true;
-        this.exhaust = true;
+        this.baseDamage = 4;
+       // this.tags.add(CardTags.STRIKE);
+        //this.isMultiDamage = true;
+        //this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new slimebound.actions.CoordinateAction(p, m, this.baseDamage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
 
+        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
 
     }
 
@@ -64,7 +68,7 @@ public class CoordinatedStrike extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust = false;
+            this.upgradeDamage(3);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

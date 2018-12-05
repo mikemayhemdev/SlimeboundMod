@@ -1,5 +1,6 @@
 package slimebound.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -52,9 +53,9 @@ public class SlimeSacrificePower extends AbstractPower {
 
                             o.evokeAmount = 0;
                             this.flash();
-                            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
-                            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
-                            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));
+                            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
+                            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
+                            AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(o));
                             return AbstractDungeon.player.currentBlock;
 
                         }

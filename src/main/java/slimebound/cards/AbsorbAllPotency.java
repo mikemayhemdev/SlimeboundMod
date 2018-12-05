@@ -3,6 +3,7 @@ package slimebound.cards;
 
 
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -59,7 +60,7 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
                 if (o instanceof SpawnedSlime) {
 
                     slimeCount++;
-                    AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));
+                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
 
 
                 }

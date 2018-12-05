@@ -49,10 +49,11 @@ public class HexSlime
 
     }
 
+
+
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new CheckForSixHexAction(AbstractDungeon.player));
     }
 
     public void update() {

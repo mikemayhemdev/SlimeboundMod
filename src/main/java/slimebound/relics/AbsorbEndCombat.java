@@ -2,13 +2,20 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.SpawnedSlime;
+import slimebound.powers.PotencyPower;
+
+import java.util.Random;
 
 public class AbsorbEndCombat extends CustomRelic {
     public static final String ID = "AbsorbEndCombat";
@@ -43,6 +50,28 @@ public class AbsorbEndCombat extends CustomRelic {
             p.heal(slimeCount * 3);
 
         }
+    }
+
+    public void atBattleStartPreDraw() {
+        this.flash();
+        Random random = new Random();
+        Integer chosenRand = random.nextInt(4) + 1;
+
+        switch (chosenRand) {
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, false));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, false));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+                break;
+            case 4:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
+                break;
+        }
+
     }
 
     @Override

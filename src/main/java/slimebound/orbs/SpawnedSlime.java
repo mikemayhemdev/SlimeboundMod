@@ -80,7 +80,7 @@ public abstract class SpawnedSlime
 
 
         this.applyFocus();
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .5F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
 
         updateDescription();
 
@@ -141,7 +141,7 @@ public abstract class SpawnedSlime
     public void onEvoke() {
 
 
-        if (this.ID == "HexSlime") {
+        if (this instanceof HexSlime) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 6));
@@ -174,11 +174,11 @@ public abstract class SpawnedSlime
 
     public void activateEffect() {
 
-        float speedTime = 0.3F;
+        float speedTime = 0.2F / (float)AbstractDungeon.player.orbs.size();
 
         if (Settings.FAST_MODE) {
 
-            speedTime = 0.15F;
+            speedTime = 0.10F;
 
         }
         if (SlimeboundMod.slimeDelay == true) {

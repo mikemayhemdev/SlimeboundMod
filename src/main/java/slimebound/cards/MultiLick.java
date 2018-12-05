@@ -3,6 +3,7 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,7 +34,7 @@ public class MultiLick extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 6;
+        this.baseDamage = 7;
 
 
         this.isMultiDamage = true;
@@ -48,7 +49,7 @@ public class MultiLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new MultiLickAction(p,
 
-                AbstractDungeon.getMonsters().getRandomMonster(true), new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseDamage), this.energyOnUse));
+                AbstractDungeon.getMonsters().getRandomMonster(true), new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseDamage, DamageInfo.DamageType.NORMAL), this.energyOnUse));
 
     }
 

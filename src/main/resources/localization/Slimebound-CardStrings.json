@@ -93,8 +93,8 @@
   },
   "Coordinated": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times, then Absorb it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times, then Absorb it."
+    "DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times."
   },
   "SlimeBarrage": {
     "NAME": "Slime Barrage",

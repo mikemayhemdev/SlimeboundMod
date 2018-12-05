@@ -340,7 +340,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
         BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
-        BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack. Gain 1 Strength and Potency, 6 Block and heal 6 HP when Absorbed. Absorb all slimes if you have 6 Ghostflames.");
+        BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack. Gain 1 Strength and Potency, 6 Block and heal 6 HP when Absorbed. If you have 6 Ghostflames, Absorb them all.");
         BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
         BaseMod.addKeyword(new String[]{"transform"}, "Replace with a random new card.");
 

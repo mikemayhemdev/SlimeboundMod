@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -66,7 +67,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
 
 
                     numEaten = numEaten + 1;
-                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));
+                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
                     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, 1));
                     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
                     if (!upgraded) {

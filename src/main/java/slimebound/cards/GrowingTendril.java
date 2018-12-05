@@ -39,12 +39,15 @@ public class GrowingTendril extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.misc = 3;
-        this.baseBlock = this.misc;
+        //this.misc = 3;
+
         this.magicNumber = this.baseMagicNumber = 1;
         this.increaseAmount = this.magicNumber;
-        this.baseDamage = this.misc;
+
         this.exhaust = true;
+
+            this.baseDamage = 3 + this.misc;
+            this.baseBlock = 3 + this.misc;
 
 
     }
@@ -64,19 +67,19 @@ public class GrowingTendril extends AbstractSlimeboundCard {
             if (c.uuid.equals(this.uuid)) {
                 c.misc += this.increaseAmount;
                 c.applyPowers();
-                c.baseDamage = c.misc;
-                c.baseBlock = c.misc;
+                c.baseDamage = 3 + c.misc;
+                c.baseBlock = 3 + c.misc;
 
                 c.isDamageModified = false;
             }
         }
 
-        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = c.misc) {
+        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = 3 + c.misc) {
             c = (AbstractCard) var1.next();
             c.misc += this.increaseAmount;
             c.applyPowers();
-            c.baseDamage = c.misc;
-            c.baseBlock = c.misc;
+            c.baseDamage = 3 + c.misc;
+            c.baseBlock = 3 + c.misc;
         }
 
     }
@@ -88,6 +91,12 @@ public class GrowingTendril extends AbstractSlimeboundCard {
 
     }
 
+    public void applyPowers() {
+        this.baseDamage = 3 + this.misc;
+        this.baseBlock = 3 + this.misc;
+        super.applyPowers();
+        this.initializeDescription();
+    }
 
     public void upgrade() {
 

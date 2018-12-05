@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,7 +39,6 @@ public class AbsorbAll extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.effectsQueue.add(new HealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5));
         int blockgain = 0;
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
@@ -46,7 +46,7 @@ public class AbsorbAll extends AbstractSlimeboundCard {
                 if (o instanceof SpawnedSlime) {
 
 
-                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));
+                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
                     blockgain = blockgain + 3;
 
                 }

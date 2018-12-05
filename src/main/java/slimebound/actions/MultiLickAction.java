@@ -3,11 +3,14 @@ package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 
 public class MultiLickAction extends AbstractGameAction {
@@ -25,7 +28,7 @@ public class MultiLickAction extends AbstractGameAction {
 
         this.target = target;
 
-        this.actionType = ActionType.POWER;
+        this.actionType = ActionType.SPECIAL;
 
         this.attackEffect = AttackEffect.POISON;
 
@@ -51,14 +54,33 @@ public class MultiLickAction extends AbstractGameAction {
         }
 
         if (effect > 0) {
+
             for (int i = 0; i < effect; ++i) {
+                if (this.target == null) {
+                    this.isDone = true;
+                } else if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+                    AbstractDungeon.actionManager.clearPostCombatActions();
+                    this.isDone = true;
+                } else {
+                    if (this.target.currentHealth > 0) {
+                        this.target.damageFlash = true;
+                        this.target.damageFlashFrames = 4;
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
+                        this.info.applyPowers(this.info.owner, this.target);
+                        this.target.damage(this.info);
+                        if (this.numTimes > 1 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                            --this.numTimes;
+                            AbstractDungeon.actionManager.addToBottom(new DamageAction(target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                            AbstractDungeon.actionManager.addToTop(new WaitAction(0.2F));
 
-                if (this.target.currentHealth > 0) {
+                        }
 
-                    AbstractDungeon.actionManager.addToBottom(new DamageAction(target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                    }
 
 
                 }
+
+
 
             }
             for (int i2 = 0; i2 < effect; ++i2) {
@@ -68,10 +90,8 @@ public class MultiLickAction extends AbstractGameAction {
 
             }
             this.p.energy.use(EnergyPanel.totalCount);
-
-
+            this.isDone = true;
         }
-        this.isDone = true;
     }
 }
 
