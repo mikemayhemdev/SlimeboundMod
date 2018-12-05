@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -17,7 +17,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class TendrilSlash extends CustomCard {
+public class TendrilSlash extends AbstractSlimeboundCard {
     public static final String ID = "TendrilSlash";
     public static final String NAME;
     public static final String DESCRIPTION;

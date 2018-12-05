@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +14,7 @@ import slimebound.actions.ExhumeToDrawAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class Recollect extends CustomCard {
+public class Recollect extends AbstractSlimeboundCard {
     public static final String ID = "Recollect";
     public static final String NAME;
     private static final CardStrings cardStrings;

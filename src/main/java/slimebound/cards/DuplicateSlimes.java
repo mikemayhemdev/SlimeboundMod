@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,10 +16,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class DuplicateSlimes extends CustomCard {
+public class DuplicateSlimes extends AbstractSlimeboundCard {
     public static final String ID = "DuplicateSlimes";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -52,14 +53,7 @@ public class DuplicateSlimes extends CustomCard {
         int i = 0;
         String[] tempOrbs = new String[orbsize];
         for (AbstractOrb o : p.orbs) {
-            if (o.ID == "TorchHeadSlime" ||
-                    o.ID == "AttackSlime" ||
-                    o.ID == "PoisonSlime" ||
-                    o.ID == "SlimingSlime" ||
-                    o.ID == "BronzeSlime" ||
-                    o.ID == "DebuffSlime" ||
-                    o.ID == "CultistSlime" ||
-                    o.ID == "HexSlime") {
+            if (o instanceof SpawnedSlime) {
                 logger.info("Found a slime: " + o.ID);
                 tempOrbs[i] = o.ID;
             }

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -17,11 +17,12 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
 
 
-public class AbsorbAllPotency extends CustomCard {
+public class AbsorbAllPotency extends AbstractSlimeboundCard {
     public static final String ID = "AbsorbAllPotency";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -55,14 +56,7 @@ public class AbsorbAllPotency extends CustomCard {
             int slimeCount = 0;
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o.ID == "TorchHeadSlime" ||
-                        o.ID == "AttackSlime" ||
-                        o.ID == "PoisonSlime" ||
-                        o.ID == "SlimingSlime" ||
-                        o.ID == "BronzeSlime" ||
-                        o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime" ||
-                        o.ID == "HexSlime") {
+                if (o instanceof SpawnedSlime) {
 
                     slimeCount++;
                     AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));

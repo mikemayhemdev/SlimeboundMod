@@ -1,12 +1,15 @@
 package slimebound;
 
 import basemod.BaseMod;
+import basemod.ModLabel;
+import basemod.ModPanel;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.OnCardUseSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.PreMonsterTurnSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -27,6 +30,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.cards.SlimeRitual;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.helpers.SelfDamageVariable;
 import slimebound.orbs.TorchHeadSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
@@ -123,7 +127,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
 
     public void receiveEditCards() {
-
+        BaseMod.addDynamicVariable(new SelfDamageVariable());
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
@@ -170,7 +174,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
         BaseMod.addCard(new slimebound.cards.StrikeWeakPoint());
         BaseMod.addCard(new slimebound.cards.SickeningTendril());
-        BaseMod.addCard(new slimebound.cards.FocusedLick());
+       // BaseMod.addCard(new slimebound.cards.FocusedLick());
         BaseMod.addCard(new slimebound.cards.SlimedLick());
         BaseMod.addCard(new slimebound.cards.PoisonThorns());
         BaseMod.addCard(new slimebound.cards.SamplingLick());
@@ -281,7 +285,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
         UnlockTracker.unlockCard("StrikeWeakPoint");
         UnlockTracker.unlockCard("SickeningTendril");
-        UnlockTracker.unlockCard("FocusedLick");
+       // UnlockTracker.unlockCard("FocusedLick");
         UnlockTracker.unlockCard("SlimedLick");
         UnlockTracker.unlockCard("PoisonThorns");
         UnlockTracker.unlockCard("SamplingLick");
@@ -377,6 +381,18 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
     public void receivePostInitialize() {
 
+        logger.info("Load Badge Image and mod options");
+        // Load the Mod Badge
+        Texture badgeTexture = new Texture(getResourcePath("badge.png"));
+
+        // Create the Mod Menu
+        ModPanel settingsPanel = new ModPanel();
+        settingsPanel.addUIElement(new ModLabel("Slimebound Mod doesn't have any settings!", 400.0f, 700.0f,
+                settingsPanel, (me) -> {
+        }));
+        BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
+
+        logger.info("Done loading badge Image and mod options");
 
         BaseMod.addPotion(SlimedPotion.class, Color.GREEN, Color.GREEN, Color.GREEN, "SlimedPotion", SlimeboundEnum.SLIMEBOUND);
     }

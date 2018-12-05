@@ -1,14 +1,14 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.patches.AbstractCardEnum;
 
-public class Defend_Slimebound extends CustomCard {
+public class Defend_Slimebound extends AbstractSlimeboundCard {
     public static final String ID = "Defend_Slimebound";
     public static final String NAME = "Defend";
     public static final String DESCRIPTION = "Gain !B! Block.";

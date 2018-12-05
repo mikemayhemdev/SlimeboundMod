@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class SuperTackle extends CustomCard {
+public class SuperTackle extends AbstractSlimeboundCard {
     public static final String ID = "SuperTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

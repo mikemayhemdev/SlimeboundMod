@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +13,7 @@ import slimebound.SlimeboundMod;
 import slimebound.powers.NextTurnGainStrengthPower;
 
 
-public class ChargeUp extends CustomCard {
+public class ChargeUp extends AbstractSlimeboundCard {
     public static final String ID = "ChargeUp";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -21,7 +21,7 @@ public class ChargeUp extends CustomCard {
     public static final String IMG_PATH = "cards/chargeup.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
 
 
-public class StopTime extends CustomCard {
+public class StopTime extends AbstractSlimeboundCard {
     public static final String ID = "StopTime";
     public static final String NAME;
     public static final String DESCRIPTION;

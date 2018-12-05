@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,7 +18,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.StudyHexaghostPower;
 
 
-public class StudyHexaghost extends CustomCard {
+public class StudyHexaghost extends AbstractSlimeboundCard {
     public static final String ID = "StudyHexaghost";
 
     private static final CardStrings cardStrings;

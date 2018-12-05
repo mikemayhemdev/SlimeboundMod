@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,10 +10,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class SlimeTap extends CustomCard {
+public class SlimeTap extends AbstractSlimeboundCard {
     public static final String ID = "SlimeTap";
     public static final String NAME;
     private static final CardStrings cardStrings;
@@ -48,14 +49,7 @@ public class SlimeTap extends CustomCard {
         boolean canUse = super.canUse(p, m);
 
         for (AbstractOrb o : p.orbs) {
-            if (o.ID == "TorchHeadSlime" ||
-                    o.ID == "AttackSlime" ||
-                    o.ID == "PoisonSlime" ||
-                    o.ID == "SlimingSlime" ||
-                    o.ID == "BronzeSlime" ||
-                    o.ID == "DebuffSlime" ||
-                    o.ID == "CultistSlime" ||
-                    o.ID == "HexSlime") {
+            if (o instanceof SpawnedSlime) {
                 return canUse = true;
             }
         }
@@ -68,14 +62,7 @@ public class SlimeTap extends CustomCard {
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o.ID == "TorchHeadSlime" ||
-                        o.ID == "AttackSlime" ||
-                        o.ID == "PoisonSlime" ||
-                        o.ID == "SlimingSlime" ||
-                        o.ID == "BronzeSlime" ||
-                        o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime" ||
-                        o.ID == "HexSlime") {
+                if (o instanceof SpawnedSlime) {
 
 
                     numEaten = numEaten + 1;

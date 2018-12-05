@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import slimebound.SlimeboundMod;
 
 
-public class YouAreMine extends CustomCard {
+public class YouAreMine extends AbstractSlimeboundCard {
     public static final String ID = "YouAreMine";
     public static final String NAME;
     public static final String DESCRIPTION;

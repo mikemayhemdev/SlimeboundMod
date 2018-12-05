@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class CoordinatedStrike extends CustomCard {
+public class CoordinatedStrike extends AbstractSlimeboundCard {
     public static final String ID = "Coordinated";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,7 +19,7 @@ import slimebound.powers.NextTurnGainDivider;
 import slimebound.powers.NextTurnGainStrengthPower;
 
 
-public class PrepareDivider extends CustomCard {
+public class PrepareDivider extends AbstractSlimeboundCard {
     public static final String ID = "PrepareDivider";
     public static final String NAME;
     public static final String DESCRIPTION;

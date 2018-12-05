@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,7 +13,7 @@ import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class PoisonSlime extends CustomCard {
+public class PoisonSlime extends AbstractSlimeboundCard {
     public static final String ID = "PoisonSlime";
     public static final String NAME;
     public static final String DESCRIPTION;

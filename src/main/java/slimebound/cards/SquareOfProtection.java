@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import slimebound.SlimeboundMod;
 
 
-public class SquareOfProtection extends CustomCard {
+public class SquareOfProtection extends AbstractSlimeboundCard {
     public static final String ID = "SquareOfProtection";
     public static final String NAME;
     public static final String DESCRIPTION;

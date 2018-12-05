@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +14,7 @@ import slimebound.actions.MakeTempCardInHandActionReduceCost;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class MorphEverything extends CustomCard {
+public class MorphEverything extends AbstractSlimeboundCard {
     public static final String ID = "MorphEverything";
     public static final String NAME;
     public static final String DESCRIPTION;

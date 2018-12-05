@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import slimebound.SlimeboundMod;
 
 
-public class Ripple extends CustomCard {
+public class Ripple extends AbstractSlimeboundCard {
     public static final String ID = "Ripple";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.DividerAction;
 
 
-public class Divider extends CustomCard {
+public class Divider extends AbstractSlimeboundCard {
     public static final String ID = "Divider";
     public static final String NAME;
     public static final String DESCRIPTION;

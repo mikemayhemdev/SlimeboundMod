@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +14,7 @@ import slimebound.actions.MultiLickAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class MultiLick extends CustomCard {
+public class MultiLick extends AbstractSlimeboundCard {
     public static final String ID = "MultiLick";
     public static final String NAME;
     public static final String DESCRIPTION;

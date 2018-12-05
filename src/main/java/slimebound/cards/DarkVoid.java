@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import slimebound.SlimeboundMod;
 
 
-public class DarkVoid extends CustomCard {
+public class DarkVoid extends AbstractSlimeboundCard {
     public static final String ID = "DarkVoid";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.LoseThornsPower;
 
 
-public class QuickSpikes extends CustomCard {
+public class QuickSpikes extends AbstractSlimeboundCard {
     public static final String ID = "QuickSpikes";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +17,7 @@ import slimebound.powers.EnergizedSlimeboundPower;
 import slimebound.powers.RetainCardsOneTurnPower;
 
 
-public class Prepare extends CustomCard {
+public class Prepare extends AbstractSlimeboundCard {
     public static final String ID = "Prepare";
     public static final String NAME;
     public static final String DESCRIPTION;

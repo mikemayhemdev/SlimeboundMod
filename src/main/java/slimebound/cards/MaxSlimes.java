@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,7 +11,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class MaxSlimes extends CustomCard {
+public class MaxSlimes extends AbstractSlimeboundCard {
     public static final String ID = "MaxSlimes";
 
     private static final CardStrings cardStrings;

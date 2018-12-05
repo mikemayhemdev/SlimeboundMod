@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class LeechEnergy extends CustomCard {
+public class LeechEnergy extends AbstractSlimeboundCard {
     public static final String ID = "LeechEnergy";
     public static final String NAME;
     public static final String DESCRIPTION;

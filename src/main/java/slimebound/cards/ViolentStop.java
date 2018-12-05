@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -16,7 +16,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class ViolentStop extends CustomCard {
+public class ViolentStop extends AbstractSlimeboundCard {
     public static final String ID = "ViolentStop";
     public static final String NAME;
     public static final String DESCRIPTION;

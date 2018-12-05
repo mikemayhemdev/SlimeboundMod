@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +12,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 
 
-public class TorchHeadSlime extends CustomCard {
+public class TorchHeadSlime extends AbstractSlimeboundCard {
     public static final String ID = "TorchHeadSlime";
     public static final String NAME;
     public static final String DESCRIPTION;

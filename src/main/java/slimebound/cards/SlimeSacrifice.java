@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,7 +17,7 @@ import slimebound.powers.SlimeSacrificePower;
 import java.util.Random;
 
 
-public class SlimeSacrifice extends CustomCard {
+public class SlimeSacrifice extends AbstractSlimeboundCard {
     public static final String ID = "SlimeSacrifice";
     public static final String NAME;
     public static final String DESCRIPTION;

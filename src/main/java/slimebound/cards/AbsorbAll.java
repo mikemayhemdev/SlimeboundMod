@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,10 +11,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class AbsorbAll extends CustomCard {
+public class AbsorbAll extends AbstractSlimeboundCard {
     public static final String ID = "AbsorbAll";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -42,14 +43,7 @@ public class AbsorbAll extends CustomCard {
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o.ID == "TorchHeadSlime" ||
-                        o.ID == "AttackSlime" ||
-                        o.ID == "PoisonSlime" ||
-                        o.ID == "SlimingSlime" ||
-                        o.ID == "BronzeSlime" ||
-                        o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime" ||
-                        o.ID == "HexSlime") {
+                if (o instanceof SpawnedSlime) {
 
 
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));

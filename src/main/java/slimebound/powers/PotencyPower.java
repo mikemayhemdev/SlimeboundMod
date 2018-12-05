@@ -62,14 +62,7 @@ public class PotencyPower extends AbstractPower {
 
 
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o.ID == "TorchHeadSlime" ||
-                    o.ID == "AttackSlime" ||
-                    o.ID == "PoisonSlime" ||
-                    o.ID == "SlimingSlime" ||
-                    o.ID == "BronzeSlime" ||
-                    o.ID == "DebuffSlime" ||
-                    o.ID == "CultistSlime" ||
-                    o.ID == "HexSlime") {
+            if (o instanceof SpawnedSlime) {
                 SpawnedSlime s = (SpawnedSlime) o;
                 s.applyFocus();
             }
@@ -81,14 +74,7 @@ public class PotencyPower extends AbstractPower {
         super.stackPower(stackAmount);
 
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o.ID == "TorchHeadSlime" ||
-                    o.ID == "AttackSlime" ||
-                    o.ID == "PoisonSlime" ||
-                    o.ID == "SlimingSlime" ||
-                    o.ID == "BronzeSlime" ||
-                    o.ID == "DebuffSlime" ||
-                    o.ID == "CultistSlime" ||
-                    o.ID == "HexSlime") {
+            if (o instanceof SpawnedSlime) {
                 SpawnedSlime s = (SpawnedSlime) o;
                 s.applyFocus();
             }

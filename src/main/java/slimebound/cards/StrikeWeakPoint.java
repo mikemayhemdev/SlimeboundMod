@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +16,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class StrikeWeakPoint extends CustomCard {
+public class StrikeWeakPoint extends AbstractSlimeboundCard {
     public static final String ID = "StrikeWeakPoint";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -272,7 +272,7 @@
   },
   "Tackle": {
     "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage and !B! damage to yourself. NL Apply !M! Weak. NL Draw a card."
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Apply !M! Weak. NL Draw a card."
   },
   "Slimesplosion": {
     "NAME": "Slimesplosion",
@@ -280,11 +280,11 @@
   },
   "QuickTackle": {
     "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !B! damage to yourself. NL Upgrade a random card in your hand for the rest of combat."
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Upgrade a random card in your hand for the rest of combat."
   },
   "CorrosiveTackle": {
     "NAME": "Goop Tackle",
-    "DESCRIPTION": "Deal !D! damage and !B! damage to yourself. NL Add a random Attack card to your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Add a random Attack card to your hand. It costs 0 this turn."
   },
   "CorrosiveSpit": {
     "NAME": "Corrosive Spit",
@@ -300,11 +300,11 @@
   },
   "FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !B! damage to yourself. NL Gain !M! Strength. NL Exhaust"
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Gain !M! Strength. NL Exhaust"
   },
   "PoisonTackle": {
     "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !B! damage to yourself. NL Apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Apply !M! Poison."
   },
   "UsefulSlime": {
     "NAME": "Useful Slime!",

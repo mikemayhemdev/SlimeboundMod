@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
+import slimebound.orbs.SpawnedSlime;
 
 
 public class SlimeSacrificePower extends AbstractPower {
@@ -47,14 +48,7 @@ public class SlimeSacrificePower extends AbstractPower {
                 if (!AbstractDungeon.player.orbs.isEmpty()) {
                     for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                        if (o.ID == "TorchHeadSlime" ||
-                                o.ID == "AttackSlime" ||
-                                o.ID == "PoisonSlime" ||
-                                o.ID == "SlimingSlime" ||
-                                o.ID == "BronzeSlime" ||
-                                o.ID == "DebuffSlime" ||
-                                o.ID == "CultistSlime" ||
-                                o.ID == "HexSlime") {
+                        if (o instanceof SpawnedSlime) {
 
                             o.evokeAmount = 0;
                             this.flash();

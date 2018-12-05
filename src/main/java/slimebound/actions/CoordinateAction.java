@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import slimebound.orbs.SpawnedSlime;
 
 public class CoordinateAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
     private boolean freeToPlayOnce = false;
@@ -47,14 +48,7 @@ public class CoordinateAction extends com.megacrit.cardcrawl.actions.AbstractGam
 
             AbstractOrb oldestOrb = null;
             for (AbstractOrb o : p.orbs) {
-                if (o.ID == "TorchHeadSlime" ||
-                        o.ID == "AttackSlime" ||
-                        o.ID == "PoisonSlime" ||
-                        o.ID == "SlimingSlime" ||
-                        o.ID == "BronzeSlime" ||
-                        o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime" ||
-                        o.ID == "HexSlime") {
+                if (o instanceof SpawnedSlime) {
                     oldestOrb = o;
                     break;
                 }

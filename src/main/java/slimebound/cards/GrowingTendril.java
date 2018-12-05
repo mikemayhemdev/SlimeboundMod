@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +17,7 @@ import slimebound.patches.AbstractCardEnum;
 import java.util.Iterator;
 
 
-public class GrowingTendril extends CustomCard {
+public class GrowingTendril extends AbstractSlimeboundCard {
     public static final String ID = "GrowingTendril";
     public static final String NAME;
     public static final String DESCRIPTION;

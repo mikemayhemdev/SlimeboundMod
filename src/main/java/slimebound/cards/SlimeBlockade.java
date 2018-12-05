@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,10 +13,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class SlimeBlockade extends CustomCard {
+public class SlimeBlockade extends AbstractSlimeboundCard {
     public static final String ID = "SlimeBlockade";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -45,14 +46,7 @@ public class SlimeBlockade extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         for (AbstractOrb o : p.orbs) {
 
-            if (o.ID == "TorchHeadSlime" ||
-                    o.ID == "AttackSlime" ||
-                    o.ID == "PoisonSlime" ||
-                    o.ID == "SlimingSlime" ||
-                    o.ID == "BronzeSlime" ||
-                    o.ID == "DebuffSlime" ||
-                    o.ID == "CultistSlime" ||
-                    o.ID == "HexSlime") {
+            if (o instanceof SpawnedSlime) {
                 com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.magicNumber));
 

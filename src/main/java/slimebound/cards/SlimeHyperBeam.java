@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 
 
-public class SlimeHyperBeam extends CustomCard {
+public class SlimeHyperBeam extends AbstractSlimeboundCard {
     public static final String ID = "SlimeHyperBeam";
     public static final String NAME;
     public static final String DESCRIPTION;

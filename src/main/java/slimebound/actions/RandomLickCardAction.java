@@ -24,7 +24,7 @@ public class RandomLickCardAction extends AbstractGameAction {
 
         AbstractCard c = null;
         Random random = new Random();
-        Integer chosenRand = random.nextInt(6) + 1;
+        Integer chosenRand = random.nextInt(5) + 1;
 
         switch (chosenRand) {
             case 1:
@@ -34,15 +34,12 @@ public class RandomLickCardAction extends AbstractGameAction {
                 c = CardLibrary.getCard("PoisonLick").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("FocusedLick").makeCopy();
-                break;
-            case 4:
                 c = CardLibrary.getCard("SlimedLick").makeCopy();
                 break;
-            case 5:
+            case 4:
                 c = CardLibrary.getCard("MegaLick").makeCopy();
                 break;
-            case 6:
+            case 5:
                 c = CardLibrary.getCard("SamplingLick").makeCopy();
                 break;
         }

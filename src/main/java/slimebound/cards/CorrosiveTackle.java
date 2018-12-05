@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class CorrosiveTackle extends CustomCard {
+public class CorrosiveTackle extends AbstractSlimeboundCard {
     public static final String ID = "CorrosiveTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -40,7 +40,7 @@ public class CorrosiveTackle extends CustomCard {
 
 
         this.baseDamage = this.originalDamage = 11;
-        this.baseBlock = this.originalBlock = 3;
+        this.selfDamage = 3;
         this.upgradeDamage = 4;
 
 
@@ -51,7 +51,7 @@ public class CorrosiveTackle extends CustomCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseBlock, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
         c.setCostForTurn(0);
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));

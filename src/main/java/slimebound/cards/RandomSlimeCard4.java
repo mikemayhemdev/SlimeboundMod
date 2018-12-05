@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,7 +18,7 @@ import slimebound.patches.AbstractCardEnum;
 import java.util.Random;
 
 
-public class RandomSlimeCard4 extends CustomCard {
+public class RandomSlimeCard4 extends AbstractSlimeboundCard {
     public static final String ID = "RandomSlimeCard4";
     public static final String NAME;
     public static final String DESCRIPTION;

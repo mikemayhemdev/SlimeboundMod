@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +14,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.HexSlimePerTurnPower;
 
 
-public class HexSlime extends CustomCard {
+public class HexSlime extends AbstractSlimeboundCard {
     public static final String ID = "HexSlime";
     public static final String NAME;
     public static final String DESCRIPTION;

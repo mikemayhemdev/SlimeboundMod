@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +15,7 @@ import slimebound.actions.DoublePoisonSlimedWeakAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class DoubleEverything extends CustomCard {
+public class DoubleEverything extends AbstractSlimeboundCard {
     public static final String ID = "DoubleEverything";
     public static final String NAME;
     public static final String DESCRIPTION;

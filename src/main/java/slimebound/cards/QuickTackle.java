@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class QuickTackle extends CustomCard {
+public class QuickTackle extends AbstractSlimeboundCard {
     public static final String ID = "QuickTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -40,7 +40,7 @@ public class QuickTackle extends CustomCard {
 
 
         this.baseDamage = this.originalDamage = 10;
-        this.baseBlock = this.originalBlock = 3;
+        this.selfDamage = 3;
         this.upgradeDamage = 3;
 
         this.magicNumber = this.baseMagicNumber = 1;
@@ -53,7 +53,7 @@ public class QuickTackle extends CustomCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseBlock, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
         AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
 

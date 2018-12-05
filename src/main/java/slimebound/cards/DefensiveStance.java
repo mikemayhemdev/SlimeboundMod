@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import slimebound.SlimeboundMod;
 
 
-public class DefensiveStance extends CustomCard {
+public class DefensiveStance extends AbstractSlimeboundCard {
     public static final String ID = "DefensiveStance";
     public static final String NAME;
     public static final String DESCRIPTION;

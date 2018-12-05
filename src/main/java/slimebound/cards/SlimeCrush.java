@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
@@ -21,7 +21,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.StunnedPower;
 
 
-public class SlimeCrush extends CustomCard {
+public class SlimeCrush extends AbstractSlimeboundCard {
     public static final String ID = "SlimeCrush";
     public static final String NAME;
     public static final String DESCRIPTION;

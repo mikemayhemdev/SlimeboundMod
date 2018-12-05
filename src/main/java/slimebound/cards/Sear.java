@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,7 +16,7 @@ import slimebound.SlimeboundMod;
 import slimebound.powers.SearingPower;
 
 
-public class Sear extends CustomCard {
+public class Sear extends AbstractSlimeboundCard {
     public static final String ID = "Sear";
     public static final String NAME;
     public static final String DESCRIPTION;

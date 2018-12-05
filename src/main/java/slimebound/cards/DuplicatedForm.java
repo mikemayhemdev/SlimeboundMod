@@ -1,7 +1,8 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
+import basemod.helpers.BaseModCardTags;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,7 +22,7 @@ import slimebound.powers.DuplicatedFormPower;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class DuplicatedForm extends CustomCard {
+public class DuplicatedForm extends AbstractSlimeboundCard {
     public static final String ID = "DuplicatedForm";
 
     private static final CardStrings cardStrings;
@@ -40,6 +41,7 @@ public class DuplicatedForm extends CustomCard {
     public DuplicatedForm() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 1;
+        tags.add(BaseModCardTags.FORM);
 
 
     }

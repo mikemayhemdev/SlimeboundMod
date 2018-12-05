@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +15,7 @@ import slimebound.actions.TriggerSlimeAttacksAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class SlimeBarrage extends CustomCard {
+public class SlimeBarrage extends AbstractSlimeboundCard {
     public static final String ID = "SlimeBarrage";
     public static final String NAME;
     public static final String DESCRIPTION;

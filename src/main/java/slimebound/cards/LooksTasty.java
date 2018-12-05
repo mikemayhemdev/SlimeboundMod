@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +15,7 @@ import slimebound.actions.RandomLickCardAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class LooksTasty extends CustomCard {
+public class LooksTasty extends AbstractSlimeboundCard {
     public static final String ID = "LooksTasty";
     public static final String NAME;
     public static final String DESCRIPTION;

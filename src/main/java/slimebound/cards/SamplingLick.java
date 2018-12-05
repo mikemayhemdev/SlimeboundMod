@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -19,7 +19,7 @@ import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class SamplingLick extends CustomCard {
+public class SamplingLick extends AbstractSlimeboundCard {
     public static final String ID = "SamplingLick";
     public static final String NAME;
     public static final String DESCRIPTION;

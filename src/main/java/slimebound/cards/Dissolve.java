@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +13,7 @@ import slimebound.actions.DissolveAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class Dissolve extends CustomCard {
+public class Dissolve extends AbstractSlimeboundCard {
     public static final String ID = "Dissolve";
     public static final String NAME;
     public static final String DESCRIPTION;

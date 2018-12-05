@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import slimebound.SlimeboundMod;
 
 
-public class GuardianWhirl extends CustomCard {
+public class GuardianWhirl extends AbstractSlimeboundCard {
     public static final String ID = "GuardianWhirl";
     public static final String NAME;
     public static final String DESCRIPTION;

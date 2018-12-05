@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +15,7 @@ import slimebound.powers.ComboAttackPower;
 import slimebound.powers.SplitForLessPower;
 
 
-public class SplitForLess extends CustomCard {
+public class SplitForLess extends AbstractSlimeboundCard {
     public static final String ID = "SplitForLess";
 
     private static final CardStrings cardStrings;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +14,7 @@ import slimebound.actions.VampireIntoBlockDamageAction;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class LeechingTouch extends CustomCard {
+public class LeechingTouch extends AbstractSlimeboundCard {
     public static final String ID = "LeechingTouch";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 
 
-public class UsefulSlime extends CustomCard {
+public class UsefulSlime extends AbstractSlimeboundCard {
     public static final String ID = "UsefulSlime";
     public static final String NAME;
     private static final CardStrings cardStrings;

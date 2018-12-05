@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 import java.util.Random;
 
 
-public class RandomSlimeCard extends CustomCard {
+public class RandomSlimeCard extends AbstractSlimeboundCard {
     public static final String ID = "RandomSlimeCard";
     public static final String NAME;
     public static final String DESCRIPTION;

@@ -1,7 +1,7 @@
 package slimebound.cards;
 
 
-import basemod.abstracts.CustomCard;
+
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import slimebound.SlimeboundMod;
 
 
-public class LastStand extends CustomCard {
+public class LastStand extends AbstractSlimeboundCard {
     public static final String ID = "LastStand";
 
     private static final CardStrings cardStrings;

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import slimebound.orbs.SpawnedSlime;
 
 public class AbsorbEndCombat extends CustomRelic {
     public static final String ID = "AbsorbEndCombat";
@@ -33,14 +34,7 @@ public class AbsorbEndCombat extends CustomRelic {
         if (p.orbs.get(0) != null) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o.ID == "TorchHeadSlime" ||
-                        o.ID == "AttackSlime" ||
-                        o.ID == "PoisonSlime" ||
-                        o.ID == "SlimingSlime" ||
-                        o.ID == "BronzeSlime" ||
-                        o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime" ||
-                        o.ID == "HexSlime") {
+                if (o instanceof SpawnedSlime) {
                     slimeCount++;
                 }
 

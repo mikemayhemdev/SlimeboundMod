@@ -1,6 +1,6 @@
 package slimebound.cards;
 
-import basemod.abstracts.CustomCard;
+
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.patches.AbstractCardEnum;
 
 
-public class Strike_Slimebound extends CustomCard {
+public class Strike_Slimebound extends AbstractSlimeboundCard {
     public static final String ID = "Strike_Slimebound";
     public static final String NAME = "Strike";
     public static final String DESCRIPTION = "Deal !D! damage.";
