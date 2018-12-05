@@ -115,8 +115,8 @@
   },
   "Hardened": {
     "NAME": "Solid Outer Goop",
-    "DESCRIPTION": "Gain !M! Dexterity and 4 Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity and 6 Plated Armor."
+    "DESCRIPTION": "Gain 2 Dexterity and !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity and 4 Plated Armor."
   },
   "QuickSpikes": {
     "NAME": "Quick Spikes",
@@ -292,7 +292,7 @@
   },
   "SuperTackle": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage.  Heal HP equal to unblocked damage."
+    "DESCRIPTION": "Deal !D! damage. Heal HP equal to unblocked damage. NL Exhaust"
   },
   "SuperCorrosiveSpit": {
     "NAME": "Douse in Slime",

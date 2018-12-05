@@ -59,9 +59,22 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
 
 
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic("AbsorbEndCombatUpgraded");
+        return AbstractDungeon.player.hasRelic("AbsorbEndCombat");
     }
 
+    @Override
+    public void obtain() {
+        if (AbstractDungeon.player.hasRelic(AbsorbEndCombat.ID)) {
+            for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals(AbsorbEndCombat.ID)) {
+                    instantObtain(AbstractDungeon.player, i, true);
+                    break;
+                }
+            }
+        } else {
+            super.obtain();
+        }
+    }
 
     @Override
     public AbstractRelic makeCopy() {

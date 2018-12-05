@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -50,6 +51,15 @@ public class AbsorbEndCombat extends CustomRelic {
         }
     }
 
+    @Override
+    public void onUnequip() {
+        for (AbstractRelic relicInBossPool : RelicLibrary.bossList) {
+            if (relicInBossPool instanceof AbsorbEndCombatUpgraded) {
+                RelicLibrary.bossList.remove(relicInBossPool);
+                break;
+            }
+        }
+    }
 
     @Override
     public AbstractRelic makeCopy() {

@@ -9,7 +9,7 @@
   "NAME": "Black Heart of Goo",
   "FLAVOR": "Sometimes leave a slime behind.",
   "DESCRIPTIONS": [
-    "Gain [G] at the start of your turn. NL At the end of combat, for each Spawned slime, heal #b1 HP."
+    "Replaces #gHeart #gof #gGoo. Gain [E] at the start of your turn. NL At the end of combat, for each Spawned slime, heal #b1 HP."
   ]
 },"SlimedTailRelic": {
   "NAME": "Slimed Tail",

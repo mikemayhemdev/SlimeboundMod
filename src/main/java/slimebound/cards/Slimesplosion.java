@@ -49,7 +49,7 @@ public class Slimesplosion extends CustomCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        AbstractDungeon.actionManager.addToBottom(new SlimesplosionAction(p, this.magicNumber, this.magicNumber - 3, this.freeToPlayOnce, this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new SlimesplosionAction(p, this.magicNumber, this.magicNumber - 2, this.freeToPlayOnce, this.energyOnUse));
 
     }
 
@@ -68,6 +68,7 @@ public class Slimesplosion extends CustomCard {
             upgradeName();
 
             upgradeMagicNumber(1);
+            upgradeBlock(1);
 
         }
 

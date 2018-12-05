@@ -33,14 +33,14 @@ public class Hardened extends CustomCard {
 
     public Hardened() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
 
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber * 2), this.magicNumber * 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 2), 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber ), this.magicNumber));
     }
 
     public AbstractCard makeCopy() {
@@ -50,9 +50,7 @@ public class Hardened extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            this.upgradeMagicNumber(2);
 
 
         }

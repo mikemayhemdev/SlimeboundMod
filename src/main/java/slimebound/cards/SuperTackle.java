@@ -42,6 +42,7 @@ public class SuperTackle extends CustomCard {
         this.baseDamage = this.originalDamage = 7;
         this.baseBlock = this.originalBlock = 2;
         this.upgradeDamage = 3;
+        this.exhaust = true;
 
         this.magicNumber = this.baseMagicNumber = 2;
 

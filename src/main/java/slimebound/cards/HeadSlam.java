@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -50,7 +51,7 @@ public class HeadSlam extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         if (m.type != AbstractMonster.EnemyType.BOSS) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StunMonsterPower(m, 1), this.magicNumber, true, AbstractGameAction.AttackEffect.FIRE));
+            AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m,p,1));
 
         }
 

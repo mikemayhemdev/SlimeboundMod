@@ -325,22 +325,22 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
         BaseMod.addKeyword(new String[]{"absorb"}, "Recombine with a spawned Slime, healing 3 HP.");
 
-        BaseMod.addKeyword(new String[]{"split"}, "Lose 3 Health and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
+        BaseMod.addKeyword(new String[]{"split"}, "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
 
-        BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore health, consuming the effect. Half is removed at end of turn.");
+        BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore HP, consuming the effect. Half is removed at end of turn.");
 
         BaseMod.addKeyword(new String[]{"potency"}, "Increases the effectiveness of your Spawned Slimes.");
         BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains Strength when you do.");
         BaseMod.addKeyword(new String[]{"attacking"}, "Attacks for 5 each turn.");
         BaseMod.addKeyword(new String[]{"cultist"}, "Attacks for 6 each turn, then increases its Strength by 2.");
         BaseMod.addKeyword(new String[]{"weakening"}, "Attacks for 2 each turn and applies 1 Weaken.");
-        BaseMod.addKeyword(new String[]{"poisoning"}, "Applies 3 Poison each turn.");
-        BaseMod.addKeyword(new String[]{"sliming"}, "Applies 3 Slimed each turn.");
+        BaseMod.addKeyword(new String[]{"poisoning"}, "Applies 2 Poison each turn.");
+        BaseMod.addKeyword(new String[]{"sliming"}, "Applies 2 Slimed each turn.");
         BaseMod.addKeyword(new String[]{"plated"}, "Increases Block each turn.  Reduced when you take damage.");
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grant Block for next turn.");
         BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 5 each turn and grants you an equal amount of Block.");
         BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
-        BaseMod.addKeyword(new String[]{"halved"}, "You cannot heal beyond half of your maximum Health.");
+        BaseMod.addKeyword(new String[]{"halved"}, "You cannot heal beyond half of your maximum HP.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
         BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");

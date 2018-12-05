@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -69,7 +70,7 @@ public class StopTime extends CustomCard {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new StunMonsterPower(monster, 1), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(monster,p,1));
 
 
                 }

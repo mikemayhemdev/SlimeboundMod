@@ -3,7 +3,7 @@
   "name": "Slimebound Mod",
   "author_list": ["Michael Mayhem"],
   "description": "Adds a new playable enemy character: The Slimebound. \n\nThe Slimebound adds over 90 cards (not all in its card pool), 8 new character-specific Relics, 1 new Potion, and has a couple secrets to discover.  The character attempts to stay within the bounds of vanilla STS character design while still pushing new mechanics.\n\nExtra thanks to the creators of Mod the Spire and the Discord modding community. \nCredit: kiooeht - Tiny Bowler Hat icon",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "sts_version": "11-15-2018",
   "mts_version": "3.6.0",
   "dependencies": ["basemod", "stslib"],
