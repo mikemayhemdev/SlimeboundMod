@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
+import slimebound.actions.ReturnRandom0Cost;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -24,7 +25,7 @@ public class Tackle extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/tackle.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
@@ -41,11 +42,11 @@ public class Tackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 10;
+        this.baseDamage = this.originalDamage = 9;
         this.selfDamage = 2;
-        this.upgradeDamage = 3;
+        this.upgradeDamage = 2;
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
 
 
     }
@@ -58,7 +59,7 @@ public class Tackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(this.magicNumber));
 
     }
 
@@ -79,6 +80,8 @@ public class Tackle extends AbstractSlimeboundCard {
             upgradeDamage(upgradeDamage);
 
             upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

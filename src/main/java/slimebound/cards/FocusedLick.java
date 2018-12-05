@@ -38,6 +38,7 @@ public class FocusedLick extends AbstractSlimeboundCard {
 
 
         this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust = true;
 
 
     }

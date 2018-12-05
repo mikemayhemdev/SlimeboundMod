@@ -36,6 +36,7 @@ public class RandomSlimeCard extends AbstractSlimeboundCard {
 
 
         this.magicNumber = this.baseMagicNumber = 1;
+        this.exhaust= true;
 
     }
 

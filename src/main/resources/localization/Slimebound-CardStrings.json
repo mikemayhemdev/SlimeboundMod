@@ -14,7 +14,9 @@
   },
   "PotencyGainCard": {
     "NAME": "Level Up",
-    "DESCRIPTION": "Gain !M! Potency."
+    "DESCRIPTION": "Gain !M! Potency.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Potency and 1 Slime slot."
+
   },
   "TorchHeadSlime": {
     "NAME": "Split: Torch-Head",
@@ -49,7 +51,7 @@
   "SlimeSacrifice": {
     "NAME": "Protect the Boss",
     "DESCRIPTION": "Split into a random slime. NL Prevent the next time you would damaged by an Attack this turn, losing your oldest Slime instead. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Split into a random slime. NL Prevent the next time you would damaged by an Attack this turn, losing your oldest Slime instead."
+    "UPGRADE_DESCRIPTION": "Split into 2 random slimes. NL Prevent the next 2 times you would damaged by an Attack this turn, losing your oldest Slime instead. NL Exhaust"
   },
   "DuplicateSlimes": {
     "NAME": "Replication",
@@ -61,11 +63,11 @@
   },
   "AbsorbAllPotency": {
     "NAME": "Knowledge Pool",
-    "DESCRIPTION": "Absorb all of your spawned Slimes.  Gain 1 Potency, 1 Strength, and 1 Dexterity for each Slime Absorbed. NL Exhaust"
+    "DESCRIPTION": "Absorb all of your spawned Slimes.  Gain either 1 Potency, 1 Strength, or 1 Dexterity for each Slime Absorbed. NL Exhaust"
   },
   "RandomSlimeCard": {
     "NAME": "Split",
-    "DESCRIPTION": "Split into a random slime.",
+    "DESCRIPTION": "Split into a random slime. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Split into 2 random slimes."
   },
   "RandomSlimeCard4": {
@@ -144,8 +146,8 @@
   },
   "Recollect": {
     "NAME": "Recollect",
-    "DESCRIPTION": "Gain !B! Block. NL Return 1 Exhausted card to your Draw Pile.",
-    "UPGRADE_DESCRIPTION": "Return 1 Exhausted card to your Draw Pile.",
+    "DESCRIPTION": "Gain !B! Block. NL Return a random 0-cost Exhausted card to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Return 2 random 0-cost Exhausted cards to your hand.",
     "EXTENDED_DESCRIPTION": [
       "Not... exhausted..."
     ]
@@ -164,8 +166,8 @@
   },
   "MorphCard": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "Transform a card in your hand for the rest of combat. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Transform up to 2 cards in your hand for the rest of combat. NL Exhaust"
+    "DESCRIPTION": "Transform a card in your hand and reduce its cost by 1 for the rest of combat. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Transform up to 2 cards in your hand and reduce their costs by 1 for the rest of combat. NL Exhaust"
   },
   "BodyBlow": {
     "NAME": "Slime Slam",
@@ -181,7 +183,7 @@
     "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random Lick cards to your hand. NL Exhaust"
   },
   "RapidHeal": {
-    "NAME": "Rapid Heal",
+    "NAME": "Regenerate",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Gain !M! Regen. NL Draw a card. NL Exhaust",
     "EXTENDED_DESCRIPTION": [
@@ -190,29 +192,29 @@
   },
   "Lick": {
     "NAME": "Lick",
-    "DESCRIPTION": "Apply !M! Weaken and !M! Slimed. NL Draw a card."
+    "DESCRIPTION": "Apply !M! Weak and !M! Slimed. NL Draw a card. NL Exhaust"
   },
   "SlimedLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and 2 Slimed.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and 2 Slimed."
+    "DESCRIPTION": "Apply !M! Vulnerable and 3 Slimed. NL Draw a card. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and 3 Slimed. NL Draw a card. NL Exhaust"
   },
   "PoisonLick": {
     "NAME": "Poison Lick",
-    "DESCRIPTION": "Apply !M! Slimed and !M! Poison."
+    "DESCRIPTION": "Apply !M! Slimed and !M! Poison. NL Draw a card. NL Exhaust"
   },
   "MegaLick": {
     "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weaken and !M! Slimed to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak and !M! Slimed to ALL enemies. NL Draw a card. NL Exhaust"
   },
   "FocusedLick": {
     "NAME": "Focused Lick",
-    "DESCRIPTION": "Remove all Weaken and Poison, replacing them with Slimed. NL Apply !M! Slimed.",
-    "UPGRADE_DESCRIPTION": "Remove all Weaken and Poison, replacing them with Slimed. NL Apply !M! Slimed."
+    "DESCRIPTION": "Remove all Weak and Poison, replacing them with Slimed. NL Apply !M! Slimed.",
+    "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with Slimed. NL Apply !M! Slimed."
   },
   "SamplingLick": {
     "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !M! Weaken if enemy already has Weaken. Repeat for Slimed and Poison. NL Draw a card."
+    "DESCRIPTION": "Apply !M! Weak if enemy already has Weak. Repeat for Slimed and Poison. NL Draw a card. NL Exhaust"
   },
   "Gluttony": {
     "NAME": "Gluttony",
@@ -255,7 +257,7 @@
   },
   "Overexertion": {
     "NAME": "Waste Not",
-    "DESCRIPTION": "Return all Exhausted cards to your draw pile. Reduce their costs by 1 this combat. NL Lose 1 HP for each card returned. NL Exhaust",
+    "DESCRIPTION": "Return all 0-cost Exhausted cards to your hand. NL Exhaust",
     "EXTENDED_DESCRIPTION": [
       "Not... Exhausted..."
     ]
@@ -267,12 +269,13 @@
   },
   "Grow": {
     "NAME": "Grow",
-    "DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Add a Grow to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Add a Grow that costs 1 less to your discard pile."
+    "DESCRIPTION": "Gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength and !M! Dexterity. NL Reduce this card's cost by 1."
   },
   "Tackle": {
-    "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Apply !M! Weak. NL Draw a card."
+    "NAME": "Hungry Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
   },
   "Slimesplosion": {
     "NAME": "Slimesplosion",

@@ -53,23 +53,25 @@ public class AbsorbEndCombat extends CustomRelic {
     }
 
     public void atBattleStartPreDraw() {
-        this.flash();
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(4) + 1;
+        if(AbstractDungeon.player.currentHealth > 3) {
+            this.flash();
+            Random random = new Random();
+            Integer chosenRand = random.nextInt(4) + 1;
 
-        switch (chosenRand) {
-            case 1:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, false));
-                break;
-            case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, false));
-                break;
-            case 3:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-                break;
-            case 4:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
-                break;
+            switch (chosenRand) {
+                case 1:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, false));
+                    break;
+                case 2:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, false));
+                    break;
+                case 3:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+                    break;
+                case 4:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
+                    break;
+            }
         }
 
     }

@@ -56,7 +56,7 @@ public class MorphCardAction extends AbstractGameAction {
                 for (i = 0; i < i; ++i) {
                     AbstractCard c = this.p.hand.getTopCard();
                     this.p.hand.moveToExhaustPile(c);
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandActionReduceCost(AbstractDungeon.returnTrulyRandomCardInCombat()));
                 }
 
                 CardCrawlGame.dungeon.checkForPactAchievement();
@@ -72,7 +72,7 @@ public class MorphCardAction extends AbstractGameAction {
 
             for (i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandActionReduceCost(AbstractDungeon.returnTrulyRandomCardInCombat()));
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
@@ -84,7 +84,7 @@ public class MorphCardAction extends AbstractGameAction {
             while (var4.hasNext()) {
                 AbstractCard c = (AbstractCard) var4.next();
                 this.p.hand.moveToExhaustPile(c);
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandActionReduceCost(AbstractDungeon.returnTrulyRandomCardInCombat()));
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();

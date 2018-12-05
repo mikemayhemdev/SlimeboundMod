@@ -142,7 +142,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addCard(new slimebound.cards.SlimingSlime());
         BaseMod.addCard(new slimebound.cards.DuplicateSlimes());
         BaseMod.addCard(new slimebound.cards.SlimeSacrifice());
-        BaseMod.addCard(new slimebound.cards.AbsorbAll());
+        //BaseMod.addCard(new slimebound.cards.AbsorbAll());
         BaseMod.addCard(new slimebound.cards.AbsorbAllPotency());
         BaseMod.addCard(new slimebound.cards.RandomSlimeCard());
         BaseMod.addCard(new slimebound.cards.RandomSlimeCard4());
@@ -152,7 +152,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addCard(new slimebound.cards.CoordinatedStrike());
         BaseMod.addCard(new slimebound.cards.SlimeBarrage());
         BaseMod.addCard(new slimebound.cards.AllTogetherNow());
-        BaseMod.addCard(new slimebound.cards.MaxSlimes());
+        //BaseMod.addCard(new slimebound.cards.MaxSlimes());
         BaseMod.addCard(new slimebound.cards.QuickSpikes());
         BaseMod.addCard(new slimebound.cards.SlimeBlockade());
         BaseMod.addCard(new slimebound.cards.Spiked());
@@ -245,7 +245,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         UnlockTracker.unlockCard("SlimingSlime");
         UnlockTracker.unlockCard("SlimeSacrifice");
         UnlockTracker.unlockCard("DuplicateSlimes");
-        UnlockTracker.unlockCard("AbsorbAll");
+        //UnlockTracker.unlockCard("AbsorbAll");
         UnlockTracker.unlockCard("AbsorbAllPotency");
         UnlockTracker.unlockCard("RandomSlimeCard");
         UnlockTracker.unlockCard("RandomSlimeCard4");
@@ -256,7 +256,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         UnlockTracker.unlockCard("CoordinatedStrike");
         UnlockTracker.unlockCard("SlimeBarrage");
         UnlockTracker.unlockCard("AllTogetherNow");
-        UnlockTracker.unlockCard("MaxSlimes");
+        //UnlockTracker.unlockCard("MaxSlimes");
         UnlockTracker.unlockCard("StudyRandomBoss");
         UnlockTracker.unlockCard("Hardened");
         UnlockTracker.unlockCard("QuickSpikes");
@@ -343,6 +343,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack. Gain 1 Strength and Potency, 6 Block and heal 6 HP when Absorbed. If you have 6 Ghostflames, Absorb them all.");
         BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
         BaseMod.addKeyword(new String[]{"transform"}, "Replace with a random new card.");
+        BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
 
     }
 

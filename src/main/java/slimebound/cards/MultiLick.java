@@ -49,7 +49,7 @@ public class MultiLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new MultiLickAction(p,
 
-                AbstractDungeon.getMonsters().getRandomMonster(true), new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseDamage, DamageInfo.DamageType.NORMAL), this.energyOnUse));
+                AbstractDungeon.getMonsters().getRandomMonster(true), new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), this.energyOnUse));
 
     }
 

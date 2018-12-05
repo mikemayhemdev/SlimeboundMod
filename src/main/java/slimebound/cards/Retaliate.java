@@ -38,8 +38,12 @@ public class Retaliate extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
+        if (AbstractDungeon.player != null) {
+            this.baseDamage = (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth) / 2;
+        } else{
+            this.baseDamage = 0;
+        }
 
-        this.baseDamage = 0;
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
@@ -55,6 +59,7 @@ public class Retaliate extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.baseDamage = 0;
 
         logger.info("max health: " + p.maxHealth + ", current health: " + p.currentHealth);
 

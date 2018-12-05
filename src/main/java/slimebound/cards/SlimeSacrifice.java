@@ -56,7 +56,21 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
         } else {
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
         }
+
+        if (upgraded){
+            if (chosenRand == 0) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+            } else if (chosenRand == 1) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+            } else if (chosenRand == 2) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+            }
+        }
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimeSacrificePower(p, this.magicNumber), this.magicNumber, true));
+
 
     }
 
@@ -74,7 +88,8 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust = false;
+           // this.exhaust = false;
+            upgradeMagicNumber(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -21,6 +22,8 @@ import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
+
+import java.util.Random;
 
 
 public class AbsorbAllPotency extends AbstractSlimeboundCard {
@@ -35,7 +38,7 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -54,22 +57,33 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectsQueue.add(new HealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5));
         if (!AbstractDungeon.player.orbs.isEmpty()) {
-            int slimeCount = 0;
+            Random random = new Random();
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
                 if (o instanceof SpawnedSlime) {
 
-                    slimeCount++;
                     AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
 
+                    Integer chosenRand = random.nextInt(3) + 1;
+
+                    switch (chosenRand) {
+                        case 1:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1, true));
+                            break;
+                        case 2:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1, true));
+                            break;
+                        case 3:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1, true));
+                            break;
+                    }
 
                 }
 
 
             }
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, slimeCount), slimeCount, true));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, slimeCount), slimeCount, true));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, slimeCount), slimeCount, true));
+
+
 
         }
     }
@@ -88,7 +102,7 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(1);
 
 
         }

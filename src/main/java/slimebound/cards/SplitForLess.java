@@ -22,7 +22,7 @@ public class SplitForLess extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/efficiency.png";
+    public static final String IMG_PATH = "cards/makesomeroom.png";
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -36,6 +36,7 @@ public class MaxSlimes extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
+
     }
 
     public AbstractCard makeCopy() {
@@ -45,7 +46,7 @@ public class MaxSlimes extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+           // this.upgradeMagicNumber(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
 

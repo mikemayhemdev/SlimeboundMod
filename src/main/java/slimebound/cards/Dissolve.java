@@ -21,7 +21,7 @@ public class Dissolve extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/dissolve.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
@@ -33,10 +33,10 @@ public class Dissolve extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseBlock = 4;
+        this.baseBlock = 5;
         this.exhaust = true;
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

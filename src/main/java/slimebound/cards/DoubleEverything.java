@@ -46,7 +46,7 @@ public class DoubleEverything extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new DoublePoisonSlimedWeakAction(m, p));
+        AbstractDungeon.actionManager.addToBottom(new DoublePoisonSlimedWeakAction(m, p,true));
 
 
     }
@@ -65,7 +65,8 @@ public class DoubleEverything extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeBaseCost(0);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

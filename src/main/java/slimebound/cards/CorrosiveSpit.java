@@ -67,7 +67,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
         }
 

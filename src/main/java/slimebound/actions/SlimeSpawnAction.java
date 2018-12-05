@@ -52,6 +52,9 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
         AbstractDungeon.player.channelOrb(this.orbType);
 
+
+        if (currentAmount > 0) AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,AbstractDungeon.player,this.currentAmount));
+
         if (this.orbType instanceof HexSlime)  AbstractDungeon.actionManager.addToTop(new CheckForSixHexAction(AbstractDungeon.player));
 
 

@@ -37,7 +37,7 @@ public class RapidHeal extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
 
     }
 
@@ -45,9 +45,7 @@ public class RapidHeal extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-        }
+
 
     }
 
@@ -59,8 +57,6 @@ public class RapidHeal extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
         }
     }
 

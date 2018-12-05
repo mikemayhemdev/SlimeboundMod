@@ -3,7 +3,7 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "Never leave a slime behind.",
     "DESCRIPTIONS": [
-      "Spawn a Slime at the start of combat. At the end of combat, for each Spawned slime, heal #b3 HP."
+      "Spawn a random Slime at the start of combat. At the end of combat, for each Spawned slime, heal #b3 HP."
     ]
   },"AbsorbEndCombatUpgraded": {
   "NAME": "Black Heart of Goo",

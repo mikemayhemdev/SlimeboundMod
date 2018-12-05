@@ -24,7 +24,7 @@ public class Grow extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/grow.png";
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
@@ -43,18 +43,11 @@ public class Grow extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
 
-        AbstractCard c;
-        c = makeCopy();
+
         if (upgraded) {
-            c.modifyCostForCombat(-1);
-            if (this.isCostModified) {
-                c.modifyCostForCombat(-1);
-            }
-            ;
-            c.upgrade();
+            this.modifyCostForCombat(-1);
         }
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c, 1));
 
 
     }

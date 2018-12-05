@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.ExhumeToDrawAction;
+import slimebound.actions.ReturnRandom0Cost;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -21,7 +22,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/recollect.png";
+    public static final String IMG_PATH = "cards/absorball.png";
 
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -40,6 +41,7 @@ public class Recollect extends AbstractSlimeboundCard {
 
         this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 1;
+        //this.exhaust = true;
 
 
     }
@@ -47,8 +49,9 @@ public class Recollect extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new ExhumeToDrawAction(false));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(this.magicNumber));
+
 
     }
 
@@ -68,7 +71,10 @@ public class Recollect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
+            upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }
