@@ -35,7 +35,7 @@ public class QuickSpikes extends CustomCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseBlock = 7;
+        this.baseBlock = 6;
         this.magicNumber = this.baseMagicNumber = 3;
     }
 
@@ -52,7 +52,7 @@ public class QuickSpikes extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             upgradeMagicNumber(2);
         }
     }

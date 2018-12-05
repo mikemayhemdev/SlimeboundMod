@@ -27,7 +27,7 @@ public class GoopSpray extends CustomCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -37,7 +37,7 @@ public class GoopSpray extends CustomCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 5;
 
         this.exhaust = true;
 

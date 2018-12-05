@@ -30,11 +30,7 @@ public class ExhumeToDrawAction extends AbstractGameAction {
     public void update() {
         Iterator<AbstractCard> card;
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (AbstractDungeon.player.hand.size() == 10) {
-                AbstractDungeon.player.createHandIsFullDialog();
-                this.isDone = true;
-                return;
-            }
+
 
 
             if (this.p.exhaustPile.isEmpty()) {
@@ -51,10 +47,8 @@ public class ExhumeToDrawAction extends AbstractGameAction {
 
                 c = this.p.exhaustPile.getTopCard();
                 c.unfadeOut();
-                this.p.hand.addToHand(c);
-                if ((AbstractDungeon.player.hasPower("Corruption")) && (c.type == AbstractCard.CardType.SKILL)) {
-                    c.setCostForTurn(-9);
-                }
+                this.p.drawPile.addToRandomSpot(c);
+
                 this.p.exhaustPile.removeCard(c);
                 if ((this.upgrade) && (c.canUpgrade())) {
                     c.upgrade();
@@ -89,9 +83,7 @@ public class ExhumeToDrawAction extends AbstractGameAction {
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 this.p.drawPile.addToRandomSpot(c);
-                if ((AbstractDungeon.player.hasPower("Corruption")) && (c.type == AbstractCard.CardType.SKILL)) {
-                    c.setCostForTurn(-9);
-                }
+
                 this.p.exhaustPile.removeCard(c);
                 if ((this.upgrade) && (c.canUpgrade())) {
                     c.upgrade();
@@ -99,7 +91,7 @@ public class ExhumeToDrawAction extends AbstractGameAction {
                 c.unhover();
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.p.hand.refreshHandLayout();
+            //this.p.hand.refreshHandLayout();
 
 
             this.p.exhaustPile.group.addAll(this.exhumes);

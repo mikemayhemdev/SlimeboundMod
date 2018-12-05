@@ -44,7 +44,7 @@ public class Prepare extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardsOneTurnPower(p,2)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardsOneTurnPower(p,2),2));
 
     }
 

@@ -194,8 +194,8 @@
   },
   "SlimedLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and 3 Slimed.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and 5 Slimed."
+    "DESCRIPTION": "Apply !M! Vulnerable and 2 Slimed.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and 2 Slimed."
   },
   "PoisonLick": {
     "NAME": "Poison Lick",
@@ -312,12 +312,13 @@
   },
   "TendrilFlail": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply 2 Slimed to a random enemy !M! times."
+    "DESCRIPTION": "Apply 2 Slimed to a random enemy !M! times. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Apply 2 Slimed to a random enemy !M! times."
   },
   "GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !M! Slimed and 2 Poison to ALL enemies. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Apply !M! Slimed and 4 Poison to ALL enemies. NL Exhaust"
+    "DESCRIPTION": "Apply !M! Slimed and 3 Poison to ALL enemies. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Apply !M! Slimed and 5 Poison to ALL enemies. NL Exhaust"
   },
   "MassFeed": {
     "NAME": "Mass Feed",

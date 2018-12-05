@@ -23,27 +23,10 @@ public class RandomStudyCardAction extends AbstractGameAction {
     public void update() {
 
         AbstractCard c;
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(8);
+        //Random random = new Random();
+        //Integer chosenRand = random.nextInt(8);
+        c = CardLibrary.getCard("StudyRandomBoss").makeCopy();
 
-
-        if (chosenRand == 0) {
-            c = CardLibrary.getCard("StudyAutomaton").makeCopy();
-        } else if (chosenRand == 1) {
-            c = CardLibrary.getCard("StudyAwakened").makeCopy();
-        } else if (chosenRand == 2) {
-            c = CardLibrary.getCard("StudyChamp").makeCopy();
-        } else if (chosenRand == 3) {
-            c = CardLibrary.getCard("StudyCollector").makeCopy();
-        } else if (chosenRand == 4) {
-            c = CardLibrary.getCard("StudyGuardian").makeCopy();
-        } else if (chosenRand == 5) {
-            c = CardLibrary.getCard("StudyHexaghost").makeCopy();
-        } else if (chosenRand == 6) {
-            c = CardLibrary.getCard("StudyShapes").makeCopy();
-        } else {
-            c = CardLibrary.getCard("StudyTimeEater").makeCopy();
-        }
 
 
         if (upgradeCard) {

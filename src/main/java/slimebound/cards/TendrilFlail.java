@@ -34,6 +34,7 @@ public class TendrilFlail extends CustomCard {
 
         this.baseDamage = 0;
         this.magicNumber = this.baseMagicNumber = 3;
+        this.exhaust=true;
 
 
     }
@@ -61,7 +62,9 @@ public class TendrilFlail extends CustomCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            this.exhaust=false;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

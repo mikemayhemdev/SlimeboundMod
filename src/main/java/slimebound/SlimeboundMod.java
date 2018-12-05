@@ -225,14 +225,6 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addCard(new slimebound.cards.CircleOfPower());
         BaseMod.addCard(new slimebound.cards.SquareOfProtection());
         BaseMod.addCard(new slimebound.cards.PolyBeam());
-        BaseMod.addCard(new slimebound.cards.StudyAutomaton());
-        BaseMod.addCard(new slimebound.cards.StudyAwakened());
-        BaseMod.addCard(new slimebound.cards.StudyChamp());
-        BaseMod.addCard(new slimebound.cards.StudyCollector());
-        BaseMod.addCard(new slimebound.cards.StudyGuardian());
-        BaseMod.addCard(new slimebound.cards.StudyHexaghost());
-        BaseMod.addCard(new slimebound.cards.StudyShapes());
-        BaseMod.addCard(new slimebound.cards.StudyTimeEater());
         BaseMod.addCard(new slimebound.cards.MorphCard());
         BaseMod.addCard(new slimebound.cards.GrowingTendril());
         BaseMod.addCard(new slimebound.cards.Recycling());
@@ -338,7 +330,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addKeyword(new String[]{"sliming"}, "Applies 2 Slimed each turn.");
         BaseMod.addKeyword(new String[]{"plated"}, "Increases Block each turn.  Reduced when you take damage.");
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grant Block for next turn.");
-        BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 5 each turn and grants you an equal amount of Block.");
+        BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 6 each turn and grants you an equal amount of Block.");
         BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
         BaseMod.addKeyword(new String[]{"halved"}, "You cannot heal beyond half of your maximum HP.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");

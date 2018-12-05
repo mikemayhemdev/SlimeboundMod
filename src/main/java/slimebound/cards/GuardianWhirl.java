@@ -67,7 +67,7 @@ public class GuardianWhirl extends CustomCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeDamage(1);
 
 
         }
