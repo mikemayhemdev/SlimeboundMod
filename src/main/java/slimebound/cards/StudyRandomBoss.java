@@ -53,34 +53,74 @@ public class StudyRandomBoss extends AbstractSlimeboundCard {
 
         switch (chosenRand) {
             case 1:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAutomatonPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAutomatonPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAutomatonPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAwakenedPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAwakenedPower(p, p, this.magicNumber), this.magicNumber));
+                }  else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAwakenedPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
             case 3:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyChampPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyChampPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyChampPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
             case 4:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyCollectorPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyCollectorPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyCollectorPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
             case 5:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyGuardianPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyGuardianPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyGuardianPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
             case 6:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyHexaghostPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyHexaghostPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyHexaghostPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
             case 7:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyShapesPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyShapesPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyShapesPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
             case 8:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyTimeEaterPower(p, p, this.magicNumber), this.magicNumber));
+                if (!upgraded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyTimeEaterPower(p, p, this.magicNumber), this.magicNumber));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyTimeEaterPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+                }
                 break;
 
         }
@@ -94,7 +134,9 @@ public class StudyRandomBoss extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+           // upgradeBaseCost(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

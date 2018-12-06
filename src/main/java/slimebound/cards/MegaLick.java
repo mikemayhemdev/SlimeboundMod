@@ -41,7 +41,9 @@ public class MegaLick extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 1;
+
+        this.magicNumber = this.baseMagicNumber = 2;
+        this.poison = 1;
         this.exhaust = true;
 
 
@@ -51,7 +53,6 @@ public class MegaLick extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        Random random = new Random();
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
@@ -61,7 +62,7 @@ public class MegaLick extends AbstractSlimeboundCard {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
                 }
             }

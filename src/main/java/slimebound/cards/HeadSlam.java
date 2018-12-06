@@ -71,7 +71,7 @@ public class HeadSlam extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(5);
+            upgradeDamage(3);
 
         }
 

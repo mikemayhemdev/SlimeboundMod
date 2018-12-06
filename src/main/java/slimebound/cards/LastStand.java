@@ -38,12 +38,13 @@ public class LastStand extends AbstractSlimeboundCard {
 
     public LastStand() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 6;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.isEthereal = true;
+        this.poison = this.magicNumber +4;
 
 
     }
-
+/*
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
         if (currentPct > 0.5) {
@@ -55,21 +56,29 @@ public class LastStand extends AbstractSlimeboundCard {
         }
 
     }
+    */
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~DIE~ ~.~ ~.~ ~.~", true));
 
 
+        this.poison = this.magicNumber +4;
         AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.15F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.15F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.15F));
         AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(p));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
+        if (currentPct > 0.5) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        } else{
+            AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~DIE~ ~.~ ~.~ ~.~", true));
 
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.poison), this.poison));
+
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.15F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.15F));
+        }
 
     }
 
@@ -81,7 +90,7 @@ public class LastStand extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
 
 
         }

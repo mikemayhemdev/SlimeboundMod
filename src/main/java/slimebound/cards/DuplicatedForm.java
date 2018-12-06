@@ -51,7 +51,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
     }
 
-
+/*
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
         if (currentPct > 0.5) {
@@ -63,33 +63,22 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
         }
 
     }
+    */
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        /*
-        AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
-        if (p instanceof SlimeboundCharacter) {
-            SlimeboundCharacter hero = (SlimeboundCharacter)p;
-            hero.setRenderscale(1.5F);
-        } else {
-            p.hb_x = p.hb_x + (100 * Settings.scale);
-            p.drawX = p.drawX - (100 * Settings.scale);
-            p.hb.cX = p.hb.cX + (100 * Settings.scale);
 
 
 
-        }
-        */
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, 1), 1));
 
     }
 

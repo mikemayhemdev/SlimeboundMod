@@ -2,13 +2,22 @@ package slimebound.powers;
 
 
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
+import slimebound.orbs.SpawnedSlime;
+import slimebound.vfx.DoubleSlimeParticle;
 
 
 public class DuplicatedFormNoHealPower extends AbstractPower {
@@ -76,6 +85,16 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
             }
         }
         return healAmount;
+    }
+
+    public void onInitialApplication() {
+        AbstractPlayer p = AbstractDungeon.player;
+
+        if (p.currentHealth > (p.maxHealth/2)){
+            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,AbstractDungeon.player,p.currentHealth-(p.maxHealth/2)));
+
+
+        }
     }
 
 }

@@ -14,7 +14,7 @@ public class SlimeTalkSpikeS {
 
     public static void Prefix(SpikeSlime_S sb) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedSpikeS == false) {
-            AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, "~Its~ ~like~ ~us...~", 1.0F, 2.0F));
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, "~It's~ ~like~ ~us...~", 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedSpikeS = true;
         }
     }

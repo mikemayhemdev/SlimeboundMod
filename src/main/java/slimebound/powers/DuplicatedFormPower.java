@@ -1,17 +1,24 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
+import slimebound.orbs.SpawnedSlime;
+import slimebound.vfx.DoubleSlimeParticle;
 
 
 public class DuplicatedFormPower extends AbstractPower {
@@ -68,9 +75,31 @@ public class DuplicatedFormPower extends AbstractPower {
 
     }
 
+    public void onInitialApplication() {
+        AbstractPlayer p = AbstractDungeon.player;
+
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof SpawnedSlime) {
+                SpawnedSlime s = (SpawnedSlime) o;
+                s.applyFocus();
+            }
+        }
+
+        AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
+        if (p instanceof SlimeboundCharacter) {
+            SlimeboundCharacter hero = (SlimeboundCharacter) p;
+            hero.setRenderscale(1.5F);
+        } else {
+            p.hb_x = p.hb_x + (100 * Settings.scale);
+            p.drawX = p.drawX - (100 * Settings.scale);
+            p.hb.cX = p.hb.cX + (100 * Settings.scale);
+
+        }
+    }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0) && (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - this.cardsDoubledThisTurn <= this.amount)) {
+        if ((!card.purgeOnUse) && (this.amount > 0) && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY) && this.cardsDoubledThisTurn < this.amount) {
             this.cardsDoubledThisTurn += 1;
             flash();
             AbstractMonster m = null;

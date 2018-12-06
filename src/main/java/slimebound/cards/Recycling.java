@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.RecyclingPower;
+import slimebound.powers.RecyclingPowerUpgraded;
 
 
 public class Recycling extends AbstractSlimeboundCard {
@@ -23,7 +24,7 @@ public class Recycling extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/recycling.png";
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 1;
@@ -39,8 +40,12 @@ public class Recycling extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
 
+        if (!upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+        }
 
     }
 
@@ -51,7 +56,10 @@ public class Recycling extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
+            //upgradeMagicNumber(1);
 
 
         }

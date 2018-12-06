@@ -26,7 +26,7 @@ public class SlimeRitual extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -55,7 +55,7 @@ public class SlimeRitual extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
         }
     }
 

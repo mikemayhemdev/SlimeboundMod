@@ -138,8 +138,8 @@
   },
   "DuplicatedForm": {
     "NAME": "Duplicated Form",
-    "DESCRIPTION": "Can only be used while below half HP. NL Become Halved. NL Gain !M! Tag-Team. NL The first card you play each turn is played twice.",
-    "UPGRADE_DESCRIPTION": "Can only be used while below half HP. NL Become Halved. NL Gain !M! Tag-Team. NL The first card you play each turn is played twice.",
+    "DESCRIPTION": "Become Halved. NL Gain [E] and draw 1 card each turn. NL The first card you play each turn that targets enemies is played twice.",
+    "UPGRADE_DESCRIPTION": "Become Halved. NL Gain [E] and draw 1 card each turn. NL The first 2 cards you play each turn that targets enemies is played twice.",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ]
@@ -162,7 +162,8 @@
   },
   "Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "Whenever you Exhaust a card, heal !M! HP."
+    "DESCRIPTION": "Whenever you Exhaust a 0-cost card, heal !M! HP.",
+    "UPGRADE_DESCRIPTION": "Whenever you Exhaust a 0-cost card, heal !M! HP and draw 1 card."
   },
   "MorphCard": {
     "NAME": "Repurpose",
@@ -205,7 +206,7 @@
   },
   "MegaLick": {
     "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weak and !M! Slimed to ALL enemies. NL Exhaust"
+    "DESCRIPTION": "Apply !SlimePoison! Weak and !M! Slimed to ALL enemies. NL Exhaust"
   },
   "FocusedLick": {
     "NAME": "Focused Lick",
@@ -413,7 +414,7 @@
   },
   "LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Can only be used while below half HP. NL Remove all Debuffs. NL Gain !M! Strength. NL Ethereal",
+    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength, or !SlimePoison! Strength if you are below half HP. NL Ethereal",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ] },
@@ -423,7 +424,7 @@
   },
   "YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Ethereal, Exhaust"
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies and remove all of their Block. NL Ethereal, Exhaust"
   },
   "DoubleEverything": {
     "NAME": "Ooze Bath",
@@ -456,11 +457,11 @@
   },
   "CircleOfPower": {
     "NAME": "Donu's Power",
-    "DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Ethereal, Exhaust"
+    "DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Ethereal, Exhaust"
   },
   "SquareOfProtection": {
     "NAME": "Deca's Protection",
-    "DESCRIPTION": "Gain 1 Dexterity and 3 Plated Armor. NL Add a random Skill card to your hand. It costs 0 this turn. NL Ethereal, Exhaust"
+    "DESCRIPTION": "Gain 1 Dexterity and 3 Plated Armor. NL Add a random Power card to your hand. It costs 0 this turn. NL Ethereal, Exhaust"
   },
   "PolyBeam": {
     "NAME": "Poly Beam",
@@ -468,7 +469,7 @@
   },
   "Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Deal !D! damage. Enemy takes an additional 2 damage every turn this combat. NL Ethereal, Exhaust"
+    "DESCRIPTION": "Deal !D! damage. Enemy takes an additional !M! damage every turn this combat. NL Ethereal, Exhaust"
   },
   "StudyAutomaton": {
     "NAME": "Study Automaton",
@@ -478,7 +479,7 @@
   "StudyRandomBoss": {
     "NAME": "Study the Spire",
     "DESCRIPTION": "Add a random powerful Boss card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random powerful Boss card to your hand at the start of each turn."
+    "UPGRADE_DESCRIPTION": "Add a random powerful Upgraded Boss card to your hand at the start of your next !M! turns."
   },
   "StudyAwakened": {
     "NAME": "Study Awakened",

@@ -67,7 +67,7 @@ public class SlimeHyperBeam extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(10);
+            upgradeDamage(8);
 
 
         }

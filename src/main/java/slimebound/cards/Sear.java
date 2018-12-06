@@ -68,7 +68,7 @@ public class Sear extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(1);
-            upgradeDamage(1);
+            upgradeDamage(3);
 
         }
 

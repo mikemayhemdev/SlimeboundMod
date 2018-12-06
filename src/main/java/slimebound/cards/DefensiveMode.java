@@ -34,7 +34,7 @@ public class DefensiveMode extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseBlock = 9;
+        this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 2;
 
         this.exhaust = true;
@@ -54,7 +54,7 @@ public class DefensiveMode extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

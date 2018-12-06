@@ -3,10 +3,7 @@ package slimebound;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.OnCardUseSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
-import basemod.interfaces.PreMonsterTurnSubscriber;
+import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -28,6 +25,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.cards.Grow;
 import slimebound.cards.SlimeRitual;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.helpers.PoisonVariable;
@@ -70,7 +68,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
     public static boolean slimeTalkedSpikeL = false;
     public static boolean slimeTalkedSpikeM = false;
     public static boolean slimeTalkedSpikeS = false;
-    public static boolean slimeTalkedDark = false;
+    public static int slimeTalkedDark = 0;
     public static boolean slimeTalkedCollector = false;
 
 
@@ -348,7 +346,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grant Block for next turn.");
         BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 6 each turn and grants you an equal amount of Block.");
         BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
-        BaseMod.addKeyword(new String[]{"halved"}, "You cannot heal beyond half of your maximum HP.");
+        BaseMod.addKeyword(new String[]{"halved"}, "Your Max HP is cut in half this combat, losing HP if you are currently above half, and preventing healing beyond half.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
         BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
@@ -435,6 +433,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
     }
 
 
+
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         slimeDelay = true;
         return true;
@@ -442,7 +441,9 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
     public void receiveOnBattleStart(AbstractRoom room) {
         powersPlayedThisCombat = 0;
+
     }
+
 
 
 }

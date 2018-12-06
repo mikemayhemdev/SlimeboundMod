@@ -77,7 +77,7 @@ public class PolyBeam extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(1);
-            upgradeDamage(1);
+            upgradeDamage(2);
 
         }
 

@@ -49,7 +49,7 @@ public class RecyclingPower extends AbstractPower {
     }
 
     public void onExhaust(AbstractCard card) {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+        if (card.cost == 0) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
         }

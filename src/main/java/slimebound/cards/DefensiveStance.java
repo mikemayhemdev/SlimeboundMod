@@ -51,7 +51,7 @@ public class DefensiveStance extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

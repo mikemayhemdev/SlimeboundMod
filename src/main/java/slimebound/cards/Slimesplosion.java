@@ -21,7 +21,7 @@ public class Slimesplosion extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/slimewave.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
@@ -37,7 +37,7 @@ public class Slimesplosion extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 4;
         //this.baseBlock = 2;
-        this.poison = 2;
+        this.poison = this.magicNumber-2;
 
         this.exhaust = true;
 
@@ -50,6 +50,8 @@ public class Slimesplosion extends AbstractSlimeboundCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
+        this.poison = this.magicNumber -2;
+
         AbstractDungeon.actionManager.addToBottom(new SlimesplosionAction(p, this.magicNumber, this.poison, this.freeToPlayOnce, this.energyOnUse));
 
     }
@@ -69,7 +71,8 @@ public class Slimesplosion extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(1);
-            upgradeBlock(1);
+
+            //upgradeBlock(1);
 
         }
 

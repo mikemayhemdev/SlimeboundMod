@@ -81,9 +81,9 @@
 	"DuplicatedFormPower": {
 		"NAME": "Duplicated Form",
 		"DESCRIPTIONS": [
-			"The first card you play each turn is played twice.",
+			"The first card you play that targets enemies each turn is played twice.",
 			"The first #b",
-			" cards you play each turn are played twice."
+			" cards you play that targets enemies each turn are played twice."
 		]
 	},
 	"DuplicatedFormNoHealPower": {
@@ -134,8 +134,15 @@
 	"RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" Regen when you Exhaust a card."
+			"Heal ",
+			" HP when you Exhaust a 0-cost card."
+		]
+	},
+	"RecyclingPowerUpgraded": {
+		"NAME": "Recycling+",
+		"DESCRIPTIONS": [
+			"Heal ",
+			" HP and draw a card when you Exhaust a 0-cost card."
 		]
 	},
 	"AcidTonguePower": {
@@ -217,9 +224,9 @@
 	"StudyAutomatonPowerUpgraded": {
 		"NAME": "Study Automaton+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Automaton card to your hand each turn.",
-			" random Automaton cards to your hand each turn."
+			"Gain a random Upgraded Automaton card at the start of next turn.",
+			"Gain a random Upgraded Automaton card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyAwakenedPower": {
@@ -233,9 +240,9 @@
 	"StudyAwakenedPowerUpgraded": {
 		"NAME": "Study Awakened One+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Awakened One card to your hand each turn.",
-			" random Awakened One cards to your hand each turn."
+			"Gain a random Upgraded Awakened One card at the start of next turn.",
+			"Gain a random Upgraded Awakened One card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyChampPower": {
@@ -249,9 +256,9 @@
 	"StudyChampPowerUpgraded": {
 		"NAME": "Study Champ+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Champ card to your hand each turn.",
-			" random Champ cards to your hand each turn."
+			"Gain a random Upgraded Champ card at the start of next turn.",
+			"Gain a random Upgraded Champ card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyCollectorPower": {
@@ -265,9 +272,9 @@
 	"StudyCollectorPowerUpgraded": {
 		"NAME": "Study Collector+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Collector card to your hand each turn.",
-			" random Collector cards to your hand each turn."
+			"Gain a random Upgraded Collector card at the start of next turn.",
+			"Gain a random Upgraded Collector card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyGuardianPower": {
@@ -281,9 +288,9 @@
 	"StudyGuardianPowerUpgraded": {
 		"NAME": "Study Guardian+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Guardian card to your hand each turn.",
-			" random Guardian cards to your hand each turn."
+			"Gain a random Upgraded Guardian card at the start of next turn.",
+			"Gain a random Upgraded Guardian card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyHexaghostPower": {
@@ -297,9 +304,9 @@
 	"StudyHexaghostPowerUpgraded": {
 		"NAME": "Study Hexaghost+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Hexaghost card to your hand each turn.",
-			" random Hexaghost cards to your hand each turn."
+			"Gain a random Upgraded Hexaghost card at the start of next turn.",
+			"Gain a random Upgraded Hexaghost card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyShapesPower": {
@@ -313,9 +320,9 @@
 	"StudyShapesPowerUpgraded": {
 		"NAME": "Study Donu & Deca+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Donu & Deca card to your hand each turn.",
-			" random Donu & Deca cards to your hand each turn."
+			"Gain a random Upgraded Donu & Deca card at the start of next turn.",
+			"Gain a random Upgraded Donu & Deca card at the start of your next ",
+			" turns."
 		]
 	},
 	"StudyTimeEaterPower": {
@@ -329,9 +336,9 @@
 	"StudyTimeEaterPowerUpgraded": {
 		"NAME": "Study Time Eater+",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" random Time Eater card to your hand each turn.",
-			" random TimeEater cards to your hand each turn."
+			"Gain a random Upgraded Time Eater card at the start of next turn.",
+			"Gain a random Upgraded Time Eater card at the start of your next ",
+			" turns."
 		]
 	}
 }

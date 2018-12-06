@@ -82,7 +82,7 @@ public class DarkVoid extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(5);
+            upgradeDamage(3);
 
 
         }

@@ -12,9 +12,15 @@ import slimebound.characters.SlimeboundCharacter;
 public class SlimeTalkDark {
 
     public static void Prefix(Darkling sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedDark == false) {
-            AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, "~What~ ~is~ ~it~ ~doing~ ~here...~", 1.0F, 2.0F));
-            SlimeboundMod.slimeTalkedDark = true;
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedDark < 3) {
+            String speech = "";
+            switch (SlimeboundMod.slimeTalkedDark){
+                case 0: speech = "~What~ ~is...~"; break;
+                case 1: speech = "~...it~ ~doing...~"; break;
+                case 2: speech = "~...in~ ~the~ ~Beyond...~"; break;
+            }
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, speech, 0.5F, 2.0F));
+            SlimeboundMod.slimeTalkedDark++;
         }
     }
 }
