@@ -39,7 +39,6 @@ public class SlimeBlockade extends AbstractSlimeboundCard {
 
         this.baseBlock = 5;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -36,7 +36,8 @@ public class Slimesplosion extends AbstractSlimeboundCard {
 
 
         this.magicNumber = this.baseMagicNumber = 4;
-        this.baseBlock = 2;
+        //this.baseBlock = 2;
+        this.poison = 2;
 
         this.exhaust = true;
 
@@ -49,7 +50,7 @@ public class Slimesplosion extends AbstractSlimeboundCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        AbstractDungeon.actionManager.addToBottom(new SlimesplosionAction(p, this.magicNumber, this.magicNumber - 2, this.freeToPlayOnce, this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new SlimesplosionAction(p, this.magicNumber, this.poison, this.freeToPlayOnce, this.energyOnUse));
 
     }
 

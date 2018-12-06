@@ -15,4 +15,8 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     public int selfDamage;
     public boolean upgradeSelfDamage;
     public boolean isSelfDamageModified;
+    public int poison;
+    public boolean upgradePoison;
+    public boolean isPoisonModified;
+
 }

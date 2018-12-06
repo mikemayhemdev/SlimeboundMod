@@ -1,5 +1,6 @@
 package slimebound.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -61,8 +62,11 @@ public class ReturnRandom0Cost extends AbstractGameAction {
 
 
                     logger.info("Add to hand");
-                    this.p.hand.addToHand(c);
-                    c.unfadeOut();
+                    if (p.hand.size() >= BaseMod.MAX_HAND_SIZE){
+                        this.p.discardPile.addToTop(c);
+                    } else {
+                        this.p.hand.addToHand(c);
+                    }                    c.unfadeOut();
                     c.unhover();
                     c.fadingOut = false;
                     cardsReturned++;

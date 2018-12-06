@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 
 
@@ -25,8 +26,8 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
         W = img.getWidth();
         this.p = p;
         this.px = p.hb.cX;
-        this.x = (p.hb.cX - W / 2.0F - 22);
-        this.y = ((p.hb.cY - W / 2.0F) + 50);
+        this.x = (p.hb.cX - W / 2.0F - (22 * Settings.scale));
+        this.y = ((p.hb.cY - W / 2.0F) + (50 * Settings.scale));
         this.renderBehind = false;
 
 
@@ -47,7 +48,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
 
         sb.setColor(new Color(1F, 1F, 1F, 2F));
 
-        sb.draw(this.img, this.x, this.y, W / 2.0F, W / 2.0F, W, W, this.scale, this.scale, 0.0F, 0, 0, W, W, false, false);
+        sb.draw(this.img, this.x, this.y, W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
 
 
     }

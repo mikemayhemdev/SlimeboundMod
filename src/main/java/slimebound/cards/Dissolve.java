@@ -35,7 +35,6 @@ public class Dissolve extends AbstractSlimeboundCard {
 
         this.baseBlock = 5;
         this.exhaust = true;
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.magicNumber = this.baseMagicNumber = 2;
     }
 

@@ -1,5 +1,6 @@
 package slimebound.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -63,7 +64,11 @@ public class OverexertionAction extends AbstractGameAction {
 
                     logger.info("Add to hand");
                     logger.info("Add to hand");
-                    this.p.hand.addToHand(c);
+                    if (p.hand.size() >= BaseMod.MAX_HAND_SIZE){
+                        this.p.discardPile.addToTop(c);
+                    } else {
+                        this.p.hand.addToHand(c);
+                    }
                     cardsToExhaust.add(c);
                     c.unfadeOut();
                     c.unhover();

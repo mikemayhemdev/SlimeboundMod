@@ -68,7 +68,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
 
                     numEaten = numEaten + 1;
                     AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, 1));
+                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, 2));
                     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
                     if (!upgraded) {
                         return;

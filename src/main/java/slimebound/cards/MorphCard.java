@@ -39,7 +39,7 @@ public class MorphCard extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new MorphCardAction(p, p, this.magicNumber, false, true, false));
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new MorphCardAction(p, p, this.magicNumber, false, true, true));
     }
 
     public AbstractCard makeCopy() {

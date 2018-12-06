@@ -65,7 +65,7 @@ public class MegaLick extends AbstractSlimeboundCard {
 
                 }
             }
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+          //  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         }
 

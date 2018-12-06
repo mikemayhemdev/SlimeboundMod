@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
@@ -30,8 +31,18 @@ public class SlimeboundCharacter extends CustomPlayer {
     public static final String SKELETON_ATLAS = "SlimeboundImages/char/skeleton.atlas";
     public static final String SKELETON_JSON = "SlimeboundImages/char/skeleton.json";
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
+    public float renderscale = 1.0F;
+
     public static final String[] orbTextures = {"SlimeboundImages/char/orb/layer1.png", "SlimeboundImages/char/orb/layer2.png", "SlimeboundImages/char/orb/layer3.png", "SlimeboundImages/char/orb/layer4.png", "SlimeboundImages/char/orb/layer5.png", "SlimeboundImages/char/orb/layer6.png", "SlimeboundImages/char/orb/layer1d.png", "SlimeboundImages/char/orb/layer2d.png", "SlimeboundImages/char/orb/layer3d.png", "SlimeboundImages/char/orb/layer4d.png", "SlimeboundImages/char/orb/layer5d.png"};
 
+    public void setRenderscale(float renderscale) {
+        this.renderscale = renderscale;
+        this.hb_x = this.hb_x + (100 * Settings.scale);
+        this.drawX = this.drawX - (100 * Settings.scale);
+        this.hb.cX = this.hb.cX + (100 * Settings.scale);
+
+        reloadAnimation();
+    }
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
@@ -42,7 +53,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        this.loadAnimation("SlimeboundImages/char/skeleton.atlas", "SlimeboundImages/char/skeleton.json", 1.0F);
+        this.loadAnimation("SlimeboundImages/char/skeleton.atlas", "SlimeboundImages/char/skeleton.json", renderscale);
         TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
@@ -72,7 +83,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Slimebound", "A rogue minion of the Spire, driven to conquer it.", 60, 60, 4, 99, 5, this,
+        return new CharSelectInfo("The Slimebound", "A rogue minion of the Spire, driven to conquer it.", 55, 55, 4, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }

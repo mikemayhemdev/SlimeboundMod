@@ -42,6 +42,7 @@ public class Lick extends AbstractSlimeboundCard {
 
 
         this.magicNumber = this.baseMagicNumber = 2;
+        this.poison = this.baseMagicNumber;
         this.exhaust = true;
 
 
@@ -56,10 +57,10 @@ public class Lick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber ), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
 
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
 

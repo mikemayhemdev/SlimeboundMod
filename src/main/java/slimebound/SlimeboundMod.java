@@ -30,6 +30,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.cards.SlimeRitual;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.orbs.TorchHeadSlime;
 import slimebound.patches.AbstractCardEnum;
@@ -62,6 +63,16 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
     public static int powersPlayedThisCombat;
     public static boolean slimeDelay;
     public static SlimeboundCharacter slimeboundCharacter;
+    public static boolean slimeTalked = false;
+    public static boolean slimeTalkedAcidL = false;
+    public static boolean slimeTalkedAcidM = false;
+    public static boolean slimeTalkedAcidS = false;
+    public static boolean slimeTalkedSpikeL = false;
+    public static boolean slimeTalkedSpikeM = false;
+    public static boolean slimeTalkedSpikeS = false;
+    public static boolean slimeTalkedDark = false;
+    public static boolean slimeTalkedCollector = false;
+
 
     public static final String getResourcePath(String resource) {
         return "SlimeboundImages/" + resource;
@@ -128,6 +139,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SelfDamageVariable());
+        BaseMod.addDynamicVariable(new PoisonVariable());
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());

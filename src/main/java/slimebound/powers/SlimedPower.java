@@ -53,7 +53,7 @@ public class SlimedPower extends AbstractPower {
 
     public void updateDescription() {
 
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount/2 + DESCRIPTIONS[2]);
 
 
     }
@@ -107,7 +107,7 @@ public class SlimedPower extends AbstractPower {
         if (!this.triggered) {
             if (info.type == DamageInfo.DamageType.NORMAL) {
                 this.triggered = true;
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, this.amount));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, this.amount / 2));
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "SlimedPower"));
             }
 

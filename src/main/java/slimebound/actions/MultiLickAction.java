@@ -56,14 +56,14 @@ public class MultiLickAction extends AbstractGameAction {
         if (effect > 0) {
 
             for (int i = 0; i < effect; ++i) {
-            //    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+               this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
                 if (this.target == null) {
                     this.isDone = true;
                 } else if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.clearPostCombatActions();
                     this.isDone = true;
                 } else {
-                    this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
+
                     if (this.target.currentHealth > 0) {
                         this.target.damageFlash = true;
                         this.target.damageFlashFrames = 4;
@@ -93,8 +93,9 @@ public class MultiLickAction extends AbstractGameAction {
 
             }
             this.p.energy.use(EnergyPanel.totalCount);
-            this.isDone = true;
+
         }
+        this.isDone = true;
     }
 }
 

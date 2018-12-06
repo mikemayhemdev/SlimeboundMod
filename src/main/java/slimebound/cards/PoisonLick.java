@@ -53,7 +53,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+       // AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
     }
 

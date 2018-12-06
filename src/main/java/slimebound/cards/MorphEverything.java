@@ -41,10 +41,11 @@ public class MorphEverything extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int handSize = p.hand.group.size();
+        int handSize = 0;
 
 
         for (AbstractCard c : p.hand.group) {
+            if (c != this) handSize++;
             AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, p.hand, true));
         }
 
