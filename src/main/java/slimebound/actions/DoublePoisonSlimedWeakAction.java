@@ -38,6 +38,7 @@ public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions
                         this.target.getPower("Poison").amount),
                         this.target.getPower("Poison").amount));
             }
+            /*
             if ((this.duration == this.startingDuration) &&
                     (this.target != null) && (this.target.hasPower("Weakened"))) {
                 com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.target, this.source, new WeakPower(this.target,
@@ -46,6 +47,7 @@ public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions
                         this.target.getPower("Weakened").amount, false),
                         this.target.getPower("Weakened").amount));
             }
+            */
         }
 
 

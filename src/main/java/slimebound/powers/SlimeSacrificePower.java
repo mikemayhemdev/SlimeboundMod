@@ -71,12 +71,6 @@ public class SlimeSacrificePower extends AbstractPower {
         this.amount += stackAmount;
     }
 
-    public void atEndOfRound() {
-
-
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "SlimeSacrifice"));
-
-    }
 
     public void updateDescription() {
         if (this.amount <= 1) {

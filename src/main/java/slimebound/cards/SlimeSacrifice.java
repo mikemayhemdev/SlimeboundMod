@@ -43,10 +43,10 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(4);
+       // Random random = new Random();
+        //Integer chosenRand = random.nextInt(4);
 
-
+/*
         if (chosenRand == 0) {
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
         } else if (chosenRand == 1) {
@@ -68,7 +68,7 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
             }
         }
-
+*/
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimeSacrificePower(p, this.magicNumber), this.magicNumber, true));
 
 

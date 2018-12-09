@@ -17,7 +17,7 @@
     "NAME": "Slimed Tail",
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
-      "When you fall below 50% of your Maximum HP, spawn two Poisoning Slimes who will block up to 2 attacks made to you this turn (works once per combat)."
+      "When you fall below 50% of your Maximum HP, spawn a Poisoning Slime, and the next time you take damage, your oldest slime is removed instead. (works once per combat)."
     ]
   },
   "PotencyRelic": {

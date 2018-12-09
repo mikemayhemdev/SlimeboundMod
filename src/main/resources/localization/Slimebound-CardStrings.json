@@ -50,8 +50,8 @@
   },
   "SlimeSacrifice": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Split into a random slime. NL Prevent the next time you would damaged by an Attack this turn, losing your oldest Slime instead. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Split into 2 random slimes. NL Prevent the next 2 times you would damaged by an Attack this turn, losing your oldest Slime instead. NL Exhaust"
+    "DESCRIPTION": "Prevent the next time you would damaged by an Attack, losing your oldest Slime instead. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an Attack, losing your oldest Slime instead. NL Exhaust"
   },
   "DuplicateSlimes": {
     "NAME": "Replication",
@@ -99,7 +99,7 @@
   },
   "Coordinated": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times.",
+    "DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times."
   },
   "SlimeBarrage": {
@@ -166,8 +166,8 @@
   },
   "Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "Whenever you Exhaust a 0-cost card, heal !M! HP.",
-    "UPGRADE_DESCRIPTION": "Whenever you Exhaust a 0-cost card, heal !M! HP and draw 1 card."
+    "DESCRIPTION": "At the start of your turn, return an Exhausted 0-cost card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, return an Exhausted 0-cost card to your hand."
   },
   "MorphCard": {
     "NAME": "Repurpose",
@@ -229,7 +229,7 @@
   "StrikeWeakPoint": {
     "NAME": "Cull the Weak",
     "DESCRIPTION": "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack.",
-    "UPGRADE_DESCRIPTION":  "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack, then repeat s they have Poison."
+    "UPGRADE_DESCRIPTION":  "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack, then repeat if it has Poison."
   },
   "StrikeFrailPoint": {
     "NAME": "Cull the Frail",
@@ -280,8 +280,8 @@
   },
   "Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn."
+    "DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust"
   },
   "Grow": {
     "NAME": "Grow",
@@ -297,14 +297,17 @@
     "NAME": "Finishing Tackle",
     "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL If this kills an enemy, gain !B! Block."
   },
-  "Slimesplosion": {
+  "SlimesplosionOLD": {
     "NAME": "Slimesplosion",
     "DESCRIPTION": "Apply !M! Slimed and !SlimePoison! Poison to ALL enemies X times. NL Exhaust"
   },
+  "Slimesplosion": {
+    "NAME": "Living Wall",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Slimed to attackers this turn. NL Exhaust"
+  },
   "Slimepotheosis": {
     "NAME": "Slimepotheosis",
-    "DESCRIPTION": "Upgrade ALL of your 0-cost cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Upgrade ALL of your 0-cost cards. NL Reduce the cost of all Exhausted cards by 1 this combat. NL Exhaust."
+    "DESCRIPTION": "Upgrade all cards in your hand. Lose !M! HP for each card Upgraded. NL Exhaust."
   },
   "QuickTackle": {
     "NAME": "Combo Tackle",
@@ -453,7 +456,7 @@
   "DoubleEverything": {
     "NAME": "Ooze Bath",
     "DESCRIPTION": "Double an enemy's Slimed. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Double an enemy's Weak, Poison, and Slimed. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Double an enemy's Poison and Slimed. NL Exhaust"
   },
   "SlimeRitual": {
     "NAME": "CA-CAW!",

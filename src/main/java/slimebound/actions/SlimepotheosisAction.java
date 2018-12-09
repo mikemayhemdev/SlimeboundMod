@@ -2,12 +2,15 @@
 /*    */ 
 /*    */ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-/*    */ import com.megacrit.cardcrawl.cards.AbstractCard;
+/*    */ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 /*    */ import com.megacrit.cardcrawl.cards.CardGroup;
 /*    */ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 /*    */ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 /*    */ import com.megacrit.cardcrawl.core.Settings;
-/*    */ 
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+/*    */
 /*    */ public class SlimepotheosisAction extends com.megacrit.cardcrawl.actions.AbstractGameAction
 /*    */ {
     public boolean upgraded;
@@ -24,30 +27,28 @@ this.upgraded=upgraded;
 /* 20 */     if (this.duration == Settings.ACTION_DUR_MED) {
 /* 21 */       AbstractPlayer p = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 /*    */       
-/* 23 */       upgradeAllCardsInGroup(p.hand);
-/* 24 */       upgradeAllCardsInGroup(p.drawPile);
-/* 25 */       upgradeAllCardsInGroup(p.discardPile);
-/* 26 */       upgradeAllCardsInGroup(p.exhaustPile);
+/* 23 */       int healthloss = upgradeAllCardsInGroup(p.hand, upgraded);
 
 
-                if(upgraded)
-                for (AbstractCard c : p.exhaustPile.group){
-                    c.modifyCostForCombat(-1);
-                  }
-/*    */       
-/* 28 */       this.isDone = true;
+        if (healthloss > 0) AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, healthloss));
+
+        /* 28 */       this.isDone = true;
 /*    */     }
 /*    */   }
 /*    */   
-/*    */   private void upgradeAllCardsInGroup(CardGroup cardGroup) {
+/*    */   private int upgradeAllCardsInGroup(CardGroup cardGroup, boolean upgradedV) {
+            int cards = 0;
 /* 33 */     for (AbstractCard c : cardGroup.group) {
-/* 34 */       if (c.canUpgrade() && c.cost ==0) {
+/* 34 */       if (c.canUpgrade()) {
 /* 35 */         if (cardGroup.type == CardGroup.CardGroupType.HAND) {
 /* 36 */           c.superFlash();
 /*    */         }
 /* 38 */         c.upgrade();
 /* 39 */         c.applyPowers();
+                cards++;
+                if(!upgradedV) cards++;
 /*    */       }
 /*    */     }
+            return cards;
 /*    */   }
 /*    */ }

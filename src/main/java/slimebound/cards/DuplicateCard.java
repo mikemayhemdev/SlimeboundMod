@@ -30,7 +30,7 @@ public class DuplicateCard extends AbstractSlimeboundCard {
 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 

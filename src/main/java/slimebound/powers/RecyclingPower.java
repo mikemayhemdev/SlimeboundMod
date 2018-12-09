@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.RandomLickCardAction;
+import slimebound.actions.ReturnRandom0Cost;
 
 
 public class RecyclingPower extends AbstractPower {
@@ -48,6 +50,7 @@ public class RecyclingPower extends AbstractPower {
 
     }
 
+    /*
     public void onExhaust(AbstractCard card) {
         if (card.cost == 0) {
             this.flash();
@@ -55,12 +58,27 @@ public class RecyclingPower extends AbstractPower {
         }
 
     }
+    */
+
+    public void atStartOfTurn() {
+
+        flash();
+
+        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(this.amount));
+
+
+    }
 
 
     public void updateDescription() {
 
+        if (this.amount>1) {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
 
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        }else{
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+
+        }
 
 
     }

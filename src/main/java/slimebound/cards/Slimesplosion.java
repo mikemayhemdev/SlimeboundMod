@@ -2,16 +2,19 @@ package slimebound.cards;
 
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimesplosionAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedThornsPower;
 
 
 public class Slimesplosion extends AbstractSlimeboundCard {
@@ -22,10 +25,10 @@ public class Slimesplosion extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/slimewave.png";
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final CardStrings cardStrings;
-    private static final int COST = -1;
+    private static final int COST = 2;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -37,7 +40,8 @@ public class Slimesplosion extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 4;
         //this.baseBlock = 2;
-        this.poison = this.magicNumber-2;
+
+        this.baseBlock = 10;
 
         this.exhaust = true;
 
@@ -46,13 +50,8 @@ public class Slimesplosion extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
-        if (this.energyOnUse < EnergyPanel.totalCount) {
-            this.energyOnUse = EnergyPanel.totalCount;
-        }
-        this.poison = this.magicNumber -2;
-
-        AbstractDungeon.actionManager.addToBottom(new SlimesplosionAction(p, this.magicNumber, this.poison, this.freeToPlayOnce, this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimedThornsPower(p, p,this.magicNumber), this.magicNumber));
 
     }
 
@@ -70,7 +69,8 @@ public class Slimesplosion extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
+            upgradeBlock(2);
 
             //upgradeBlock(1);
 

@@ -134,8 +134,9 @@
 	"RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
-			"Heal ",
-			" HP when you Exhaust a 0-cost card."
+			"Return ",
+			" 0-cost Exhausted card to your hand each turn.",
+			" 0-cost Exhausted cards to your hand each turn."
 		]
 	},
 	"RecyclingPowerUpgraded": {

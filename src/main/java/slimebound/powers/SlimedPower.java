@@ -73,7 +73,8 @@ public class SlimedPower extends AbstractPower {
     }
 
 
-    public void atEndOfRound() {
+
+    public void atStartOfTurn() {
 
 
         if (this.amount <= 1) {

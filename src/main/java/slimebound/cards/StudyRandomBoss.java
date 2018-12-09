@@ -38,7 +38,7 @@ public class StudyRandomBoss extends AbstractSlimeboundCard {
 
     public StudyRandomBoss() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
 
 
     }

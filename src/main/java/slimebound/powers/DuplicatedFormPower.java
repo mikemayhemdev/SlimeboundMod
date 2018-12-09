@@ -92,7 +92,7 @@ public class DuplicatedFormPower extends AbstractPower {
             SlimeboundCharacter hero = (SlimeboundCharacter) p;
             hero.setRenderscale(1.5F);
         }
-            p.hb_x = p.hb_x + (100 * Settings.scale);
+            //p.hb_x = p.hb_x + (100 * Settings.scale);
             p.drawX = p.drawX - (100 * Settings.scale);
             p.hb.cX = p.hb.cX + (100 * Settings.scale);
 

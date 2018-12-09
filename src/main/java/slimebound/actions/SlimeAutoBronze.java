@@ -55,20 +55,21 @@ public class SlimeAutoBronze extends AbstractGameAction {
 
         }
         AbstractCreature mo = AbstractDungeon.getMonsters().getRandomMonster(true);
+        if (mo != null) {
 
-        AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.damage));
-
-
-        AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
-                new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
-                AttackEffect.NONE));
-
-        AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
-
-        AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX, slime.cY, mo.hb.cX, mo.hb.cY)));
+            AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.damage));
 
 
+            AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
+                    new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
+                    AttackEffect.NONE));
 
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
+
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX, slime.cY, mo.hb.cX, mo.hb.cY)));
+
+
+        }
 
         this.isDone = true;
     }

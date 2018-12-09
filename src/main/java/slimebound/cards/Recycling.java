@@ -41,11 +41,8 @@ public class Recycling extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (!upgraded) {
+
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-        }
 
     }
 
@@ -59,6 +56,7 @@ public class Recycling extends AbstractSlimeboundCard {
 
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
+            this.isInnate=true;
             //upgradeMagicNumber(1);
 
 

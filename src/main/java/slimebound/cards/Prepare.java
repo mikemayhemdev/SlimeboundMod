@@ -44,7 +44,7 @@ public class Prepare extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardsOneTurnPower(p,2),2));
+       if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardsOneTurnPower(p,2),2));
 
     }
 
@@ -55,7 +55,6 @@ public class Prepare extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust = false;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

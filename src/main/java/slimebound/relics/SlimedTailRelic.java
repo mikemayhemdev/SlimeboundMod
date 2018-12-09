@@ -39,8 +39,8 @@ public class SlimedTailRelic extends CustomRelic {
 
                     AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, SlimedTailRelic.this));
                     AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-                    AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlimeSacrificePower(AbstractDungeon.player, 2), 2, true));
+                   // AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlimeSacrificePower(AbstractDungeon.player, 1), 1, true));
 
                     SlimedTailRelic.this.isActive = false;
                     AbstractDungeon.player.hand.applyPowers();

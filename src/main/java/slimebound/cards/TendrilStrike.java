@@ -108,6 +108,8 @@ public class TendrilStrike extends AbstractSlimeboundCard {
 
             upgradeDamage(2);
             this.timesReturnedAllowed = 2;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

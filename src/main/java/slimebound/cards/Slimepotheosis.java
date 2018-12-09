@@ -29,7 +29,7 @@ public class Slimepotheosis extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private int numEaten = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
@@ -41,6 +41,7 @@ public class Slimepotheosis extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 2;
 
 
     }
@@ -68,8 +69,7 @@ public class Slimepotheosis extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(-1);
 
 
         }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -20,7 +21,7 @@ public class AllTogetherNow extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/alltogether.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
@@ -48,14 +49,7 @@ public class AllTogetherNow extends AbstractSlimeboundCard {
         {
 
             for (AbstractOrb o : p.orbs) {
-                if (o.ID == "TorchHeadSlime" ||
-                        o.ID == "AttackSlime" ||
-                        o.ID == "PoisonSlime" ||
-                        o.ID == "SlimingSlime" ||
-                        o.ID == "BronzeSlime" ||
-                        o.ID == "DebuffSlime" ||
-                        o.ID == "CultistSlime" ||
-                        o.ID == "Hex") {
+                if (o instanceof SpawnedSlime) {
                     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.PlayTopCardAction(
 
                             AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRng), true));

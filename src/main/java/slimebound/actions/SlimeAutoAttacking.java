@@ -62,18 +62,19 @@ public class SlimeAutoAttacking extends AbstractGameAction {
 
         }
         AbstractCreature mo = AbstractDungeon.getMonsters().getRandomMonster(true);
+        if (mo != null) {
 
-        AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
-                new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
-                AE));
+            AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
+                    new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
+                    AE));
 
-        AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
-        if (slime.movesToAttack) {
-            AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentMovementEffect(slime, speedTime), speedTime));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
+            if (slime.movesToAttack) {
+                AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentMovementEffect(slime, speedTime), speedTime));
+            }
+            //logger.info("Targetng " + mo.name);
+
         }
-        logger.info("Targetng " + mo.name);
-
-
 
 
         this.isDone = true;
