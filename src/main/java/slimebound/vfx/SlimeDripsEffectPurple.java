@@ -19,7 +19,10 @@ public class SlimeDripsEffectPurple extends com.megacrit.cardcrawl.vfx.AbstractG
         this.yPos = y;
         this.count = count;
     }
+    public void dispose() {
 
+
+    }
 
     public void update() {
 

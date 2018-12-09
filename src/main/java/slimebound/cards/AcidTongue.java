@@ -55,6 +55,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
             this.initializeDescription();
 
 
+
         }
     }
 

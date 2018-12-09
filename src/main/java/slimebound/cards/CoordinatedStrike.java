@@ -37,10 +37,10 @@ public class CoordinatedStrike extends AbstractSlimeboundCard {
     public CoordinatedStrike() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 4;
+        this.baseDamage = 2;
        // this.tags.add(CardTags.STRIKE);
         //this.isMultiDamage = true;
-        //this.exhaust = true;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -68,7 +68,8 @@ public class CoordinatedStrike extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(1);
+            this.exhaust=false;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

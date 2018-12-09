@@ -5,14 +5,18 @@ package slimebound.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
+import slimebound.actions.TrigggerSpecificSlimeAttackAction;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -38,7 +42,7 @@ public class StrikeWeakPoint extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 4;
-        this.tags.add(AbstractCard.CardTags.STRIKE);
+
 
 
     }
@@ -48,19 +52,36 @@ public class StrikeWeakPoint extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        if (m.hasPower("Weakened")) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-            if (m.getPower("Weakened").amount > 1) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(p, -1, false), -1, true, AbstractGameAction.AttackEffect.NONE));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(m, p, "Weakened"));
-
+        AbstractOrb oldestOrb = null;
+        for (AbstractOrb o : p.orbs) {
+            if (o instanceof SpawnedSlime) {
+                oldestOrb = o;
+                break;
             }
+
         }
 
 
+
+        if (m.hasPower("Weakened")) {
+
+                if (oldestOrb != null) {
+                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+                }            } else {
+
+            }
+
+
+        if (upgraded && m.hasPower("Poison")) {
+
+        if (oldestOrb != null) {
+            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+        }            } else {
+
     }
+}
+
+
 
 
     public AbstractCard makeCopy() {
@@ -76,7 +97,9 @@ public class StrikeWeakPoint extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
+            upgradeDamage(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

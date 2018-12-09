@@ -25,7 +25,10 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
         private OrbFlareColor() {
         }
     }
+    public void dispose() {
 
+
+    }
     public SlimeFlareEffect(AbstractOrb orb, OrbFlareColor setColor) {
         if (outer == null) {
             outer = ImageMaster.vfxAtlas.findRegion("combat/orbFlareOuter");

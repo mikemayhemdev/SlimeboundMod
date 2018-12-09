@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.actions.SlimeAutoAttacking;
+import slimebound.actions.SlimeAutoCultist;
 import slimebound.vfx.SlimeFlareEffect;
 
 
@@ -25,11 +27,8 @@ public class CultistSlime
 
     public void activateEffectUnique() {
 
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoCultist(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL,this));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(true),
-                new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        this.applyUniqueFocus(2);
 
     }
 

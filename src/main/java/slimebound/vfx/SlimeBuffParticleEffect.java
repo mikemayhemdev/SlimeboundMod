@@ -40,7 +40,10 @@ public class SlimeBuffParticleEffect extends com.megacrit.cardcrawl.vfx.Abstract
         this.scale = (MathUtils.random(1.0F, 1.5F) * Settings.scale);
     }
 
+    public void dispose() {
 
+
+    }
     public void update() {
         this.scale += Gdx.graphics.getDeltaTime() / 2.0F;
 

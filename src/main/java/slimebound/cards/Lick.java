@@ -76,7 +76,7 @@ public class Lick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
         }
 

@@ -38,7 +38,10 @@ public class SlimeWaterDropEffectPurple extends com.megacrit.cardcrawl.vfx.Abstr
         this.scale *= Settings.scale;
         this.color = new Color(0.65F, 0.2F, 0.65F, 1F);
     }
+    public void dispose() {
 
+
+    }
     public void update() {
         this.color.a = com.megacrit.cardcrawl.helpers.MathHelper.fadeLerpSnap(this.color.a, 1.0F);
         this.animTimer -= Gdx.graphics.getDeltaTime();

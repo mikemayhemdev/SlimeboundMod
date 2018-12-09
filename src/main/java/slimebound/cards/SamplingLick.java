@@ -24,7 +24,7 @@ public class SamplingLick extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/samplinglick.png";
+    public static final String IMG_PATH = "cards/focusedlick.png";
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -52,6 +52,8 @@ public class SamplingLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
         int slimedAmount;
+
+        /*
         if (m.hasPower("Weakened")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(p, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
@@ -61,6 +63,10 @@ public class SamplingLick extends AbstractSlimeboundCard {
         if (m.hasPower("SlimedPower")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
+        */
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
     }
@@ -79,7 +85,7 @@ public class SamplingLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
         }
 

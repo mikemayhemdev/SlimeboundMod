@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import slimebound.actions.SlimeAutoAttacking;
+import slimebound.actions.SlimeAutoPoisoning;
 import slimebound.vfx.SlimeFlareEffect;
 
 
@@ -27,8 +29,8 @@ public class PoisonSlime
     public void activateEffectUnique() {
 
 
-        AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new PoisonPower(mo, AbstractDungeon.player, this.passiveAmount), this.passiveAmount, true, AbstractGameAction.AttackEffect.POISON));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoPoisoning(AbstractDungeon.player,this.passiveAmount,this));
+
     }
 
 

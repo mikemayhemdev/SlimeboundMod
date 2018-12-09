@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.actions.SlimeAutoAttacking;
+import slimebound.actions.SlimeAutoSliming;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -26,10 +28,9 @@ public class SlimingSlime
 
     public void activateEffectUnique() {
 
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoSliming(AbstractDungeon.player,this.passiveAmount,this));
 
-        AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new SlimedPower(mo, AbstractDungeon.player, this.passiveAmount), this.passiveAmount, true, AbstractGameAction.AttackEffect.POISON));
-    }
+         }
 
 
     public AbstractOrb makeCopy() {

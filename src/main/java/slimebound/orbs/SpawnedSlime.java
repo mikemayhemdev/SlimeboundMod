@@ -174,23 +174,12 @@ public abstract class SpawnedSlime
 
     public void activateEffect() {
 
-        float speedTime = 0.2F / (float)AbstractDungeon.player.orbs.size();
 
-        if (Settings.FAST_MODE) {
-
-            speedTime = 0.10F;
-
-        }
         if (SlimeboundMod.slimeDelay == true) {
             AbstractDungeon.actionManager.addToTop(new WaitAction(1.4F));
             SlimeboundMod.slimeDelay = false;
         }
 
-
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeIntentEffect(this.intentImage, this, speedTime), speedTime));
-        if (this.movesToAttack) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeIntentMovementEffect(this, speedTime), speedTime));
-        }
         activateEffectUnique();
 
     }

@@ -41,7 +41,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
-
+        this.poison=2;
 
     }
 
@@ -51,7 +51,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.poison), this.poison, true, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
        // AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
@@ -71,7 +71,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
         }
 

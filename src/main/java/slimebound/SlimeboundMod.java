@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
@@ -22,6 +23,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,7 +42,7 @@ import java.nio.charset.StandardCharsets;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber, basemod.interfaces.PostPowerApplySubscriber, basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber, basemod.interfaces.PostPowerApplySubscriber, basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
@@ -70,6 +72,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
     public static boolean slimeTalkedSpikeS = false;
     public static int slimeTalkedDark = 0;
     public static boolean slimeTalkedCollector = false;
+    public static boolean spritealtered = false;
 
 
     public static final String getResourcePath(String resource) {
@@ -122,7 +125,10 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         }
     }
 
-
+public static String printString(String s){
+        logger.info(s);
+        return s;
+}
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new AbsorbEndCombat(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new AbsorbEndCombatUpgraded(), AbstractCardEnum.SLIMEBOUND);
@@ -150,7 +156,6 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addCard(new slimebound.cards.PoisonSlime());
         BaseMod.addCard(new slimebound.cards.DebuffSlime());
         BaseMod.addCard(new slimebound.cards.SlimingSlime());
-        BaseMod.addCard(new slimebound.cards.DuplicateSlimes());
         BaseMod.addCard(new slimebound.cards.SlimeSacrifice());
         //BaseMod.addCard(new slimebound.cards.AbsorbAll());
         BaseMod.addCard(new slimebound.cards.AbsorbAllPotency());
@@ -233,6 +238,11 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         BaseMod.addCard(new slimebound.cards.YouAreMine());
         BaseMod.addCard(new SlimeRitual());
         BaseMod.addCard(new slimebound.cards.DarkVoid());
+        BaseMod.addCard(new slimebound.cards.Slimepotheosis());
+        BaseMod.addCard(new slimebound.cards.FinishingTackle());
+        BaseMod.addCard(new slimebound.cards.RandomBossCard());
+        BaseMod.addCard(new slimebound.cards.AccelerateToxins());
+        BaseMod.addCard(new slimebound.cards.DuplicateCard());
         BaseMod.addCard(new slimebound.cards.Ripple());
         BaseMod.addCard(new slimebound.cards.HeadSlam());
         BaseMod.addCard(new slimebound.cards.StopTime());
@@ -254,7 +264,6 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         UnlockTracker.unlockCard("PoisonSlime");
         UnlockTracker.unlockCard("SlimingSlime");
         UnlockTracker.unlockCard("SlimeSacrifice");
-        UnlockTracker.unlockCard("DuplicateSlimes");
         //UnlockTracker.unlockCard("AbsorbAll");
         UnlockTracker.unlockCard("AbsorbAllPotency");
         UnlockTracker.unlockCard("RandomSlimeCard");
@@ -281,6 +290,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         UnlockTracker.unlockCard("SlimeBlockade");
         UnlockTracker.unlockCard("LeechingTouch");
         UnlockTracker.unlockCard("DuplicatedForm");
+        UnlockTracker.unlockCard("AccelerateToxins");
         UnlockTracker.unlockCard("Dissolve");
         UnlockTracker.unlockCard("BodyBlow");
         UnlockTracker.unlockCard("CorrosiveSpit");
@@ -299,6 +309,10 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         UnlockTracker.unlockCard("SlimedLick");
         UnlockTracker.unlockCard("PoisonThorns");
         UnlockTracker.unlockCard("SamplingLick");
+        UnlockTracker.unlockCard("DuplicateCard");
+        UnlockTracker.unlockCard("RandomBossCard");
+        UnlockTracker.unlockCard("FinishingTackle");
+        UnlockTracker.unlockCard("Slimepotheosis");
         UnlockTracker.unlockCard("TongueLash");
         UnlockTracker.unlockCard("PoisonLick");
         UnlockTracker.unlockCard("LooksTasty");
@@ -374,6 +388,25 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
         logger.info("done editing strings");
     }
 
+    public void receivePostBattle(AbstractRoom r) {
+
+        AbstractPlayer p = AbstractDungeon.player;
+        if (spritealtered){
+            AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
+            // AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
+            if (p instanceof SlimeboundCharacter) {
+                SlimeboundCharacter hero = (SlimeboundCharacter) p;
+                hero.setRenderscale(1F);
+            }
+                p.hb_x = p.hb_x - (100 * Settings.scale);
+                p.drawX = p.drawX + (100 * Settings.scale);
+                p.hb.cX = p.hb.cX - (100 * Settings.scale);
+
+
+            spritealtered = false;
+        }
+    }
+
     public void receivePostDraw(AbstractCard c) {
         AbstractPlayer player = AbstractDungeon.player;
 
@@ -436,6 +469,7 @@ public class SlimeboundMod implements PostInitializeSubscriber, PreMonsterTurnSu
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         slimeDelay = true;
+
         return true;
     }
 

@@ -19,7 +19,10 @@ public class SlimeDripsEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
         this.count = count;
     }
 
+    public void dispose() {
 
+
+    }
     public void update() {
 
         this.timer -= com.badlogic.gdx.Gdx.graphics.getDeltaTime();

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import slimebound.actions.SlimeAutoCultist;
+import slimebound.actions.SlimeAutoWeakening;
 import slimebound.vfx.SlimeFlareEffect;
 
 import java.util.Random;
@@ -33,16 +35,9 @@ public class DebuffSlime
     public void activateEffectUnique() {
 
 
-        AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
-
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
-                new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS),
-                AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
-        Random random = new Random();
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoWeakening(AbstractDungeon.player,this.passiveAmount,this));
 
 
     }

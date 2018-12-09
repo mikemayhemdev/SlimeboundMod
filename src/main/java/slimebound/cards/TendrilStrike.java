@@ -33,6 +33,8 @@ public class TendrilStrike extends AbstractSlimeboundCard {
     private static final int POWER = 6;
     private boolean returnThis;
     private static final int UPGRADE_BONUS = 3;
+    private  int timesReturnedThisTurn = 0;
+    private  int timesReturnedAllowed = 1;
 
 
     public TendrilStrike() {
@@ -52,6 +54,7 @@ public class TendrilStrike extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
+        if(this.timesReturnedThisTurn < this.timesReturnedAllowed)
         if (m.hasPower("Weakened") && m.hasPower("Poison")) {
             this.returnThis = true;
 
@@ -77,11 +80,18 @@ public class TendrilStrike extends AbstractSlimeboundCard {
     public void onMoveToDiscard() {
         if (returnThis) {
             AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(this));
+            this.timesReturnedThisTurn++;
             returnThis = false;
 
         }
     }
 
+
+
+    public void atTurnStart() {
+        this.timesReturnedThisTurn = 0;
+
+    }
 
     public AbstractCard makeCopy() {
 
@@ -97,6 +107,7 @@ public class TendrilStrike extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(2);
+            this.timesReturnedAllowed = 2;
 
         }
 

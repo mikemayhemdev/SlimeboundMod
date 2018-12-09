@@ -24,12 +24,6 @@ import java.util.ArrayList;
 
 
 public class SlimeboundCharacter extends CustomPlayer {
-    public static final int ENERGY_PER_TURN = 3;
-    public static final String SHOULDER_2 = "SlimeboundImages/char/shoulder2.png";
-    public static final String SHOULDER_1 = "SlimeboundImages/char/shoulder.png";
-    public static final String CORPSE = "SlimeboundImages/char/corpse.png";
-    public static final String SKELETON_ATLAS = "SlimeboundImages/char/skeleton.atlas";
-    public static final String SKELETON_JSON = "SlimeboundImages/char/skeleton.json";
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
     public float renderscale = 1.0F;
 
@@ -37,9 +31,6 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public void setRenderscale(float renderscale) {
         this.renderscale = renderscale;
-        this.hb_x = this.hb_x + (100 * Settings.scale);
-        this.drawX = this.drawX - (100 * Settings.scale);
-        this.hb.cX = this.hb.cX + (100 * Settings.scale);
 
         reloadAnimation();
     }
@@ -152,7 +143,10 @@ public class SlimeboundCharacter extends CustomPlayer {
         return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[5];
     }
 
-
+    @Override
+    public void applyStartOfTurnCards() {
+        super.applyStartOfTurnCards();
+    }
 }
 
 

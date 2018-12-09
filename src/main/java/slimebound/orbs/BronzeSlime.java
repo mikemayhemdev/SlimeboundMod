@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
+import slimebound.actions.SlimeAutoBronze;
+import slimebound.actions.SlimeAutoCultist;
 import slimebound.vfx.SlimeFlareEffect;
 
 
@@ -29,14 +31,7 @@ public class BronzeSlime
 
     public void activateEffectUnique() {
 
-        AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.cX, this.cY, mo.hb.cX, mo.hb.cY)));
-
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
-                new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS),
-                AbstractGameAction.AttackEffect.NONE));
-
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.passiveAmount));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoBronze(AbstractDungeon.player,this.passiveAmount,this));
 
     }
 

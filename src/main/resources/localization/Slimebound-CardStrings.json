@@ -57,6 +57,10 @@
     "NAME": "Replication",
     "DESCRIPTION": "Duplicate all of your spawned Slimes. NL Exhaust"
   },
+  "DuplicateCard": {
+    "NAME": "Replication",
+    "DESCRIPTION": "Choose a card. Add a copy of that card to your hand. NL Exhaust"
+  },
   "AbsorbAll": {
     "NAME": "Absorption",
     "DESCRIPTION": "Absorb all of your spawned Slimes.  Gain 3 Block per slime Absorbed."
@@ -197,7 +201,7 @@
   },
   "SlimedLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and 3 Slimed. NL Exhaust",
+    "DESCRIPTION": "Apply 1 Vulnerable and !M! Slimed. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and 3 Slimed. NL Exhaust"
   },
   "PoisonLick": {
@@ -214,8 +218,8 @@
     "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with Slimed. NL Apply !M! Slimed."
   },
   "SamplingLick": {
-    "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !M! Weak if enemy already has Weak. Repeat for Slimed and Poison. NL Draw a card. NL Exhaust"
+    "NAME": "Quick Lick",
+    "DESCRIPTION": "Apply !M! Slimed. NL Draw a card. NL Exhaust"
   },
   "Gluttony": {
     "NAME": "Gluttony",
@@ -224,7 +228,8 @@
   },
   "StrikeWeakPoint": {
     "NAME": "Cull the Weak",
-    "DESCRIPTION": "Deal !D! damage. Repeat if the target is Weak, then remove 1 Weak."
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack.",
+    "UPGRADE_DESCRIPTION":  "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack, then repeat s they have Poison."
   },
   "StrikeFrailPoint": {
     "NAME": "Cull the Frail",
@@ -254,7 +259,17 @@
   },
   "TendrilStrike": {
     "NAME": "Tendril Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL If the enemy has Weak AND Poison, remove 1 of each and return this to your hand."
+    "DESCRIPTION": "Deal !D! Damage. NL If the enemy has Weak AND Poison, remove 1 of each and return this to your hand (once per turn).",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If the enemy has Weak AND Poison, remove 1 of each and return this to your hand (twice per turn)."
+  },
+  "AccelerateToxins": {
+    "NAME": "Accelerate Toxins",
+    "DESCRIPTION": "For each Poisoned enemy, trigger the Poison's effect. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "For each Poisoned enemy, trigger the Poison's effect twice. NL Exhaust"
+  },
+  "RandomBossCard": {
+    "NAME": "Quick Study",
+    "DESCRIPTION": "Add a random powerful Boss card to your hand. NL Exhaust"
   },
   "Overexertion": {
     "NAME": "Waste Not",
@@ -278,9 +293,18 @@
     "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
   },
+  "FinishingTackle": {
+    "NAME": "Finishing Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SelfDamage! damage to yourself. NL If this kills an enemy, gain !B! Block."
+  },
   "Slimesplosion": {
     "NAME": "Slimesplosion",
     "DESCRIPTION": "Apply !M! Slimed and !SlimePoison! Poison to ALL enemies X times. NL Exhaust"
+  },
+  "Slimepotheosis": {
+    "NAME": "Slimepotheosis",
+    "DESCRIPTION": "Upgrade ALL of your 0-cost cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Upgrade ALL of your 0-cost cards. NL Reduce the cost of all Exhausted cards by 1 this combat. NL Exhaust."
   },
   "QuickTackle": {
     "NAME": "Combo Tackle",
@@ -338,7 +362,7 @@
   },
   "LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Gain [E] if the target is Weak, then repeat if it has Poison."
+    "DESCRIPTION": "Deal !D! damage. Gain [E] if the target has Weak, then repeat if it has Poison."
   },
   "Leech": {
     "NAME": "Leech Life",

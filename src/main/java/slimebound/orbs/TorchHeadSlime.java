@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
+import slimebound.actions.SlimeAutoAttacking;
 import slimebound.vfx.SlimeFlareEffect;
 
 
@@ -34,9 +35,8 @@ public class TorchHeadSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(true),
-                new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS),
-                AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttacking(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.FIRE,this));
+
 
 
     }

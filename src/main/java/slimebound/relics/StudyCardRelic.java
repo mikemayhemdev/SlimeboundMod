@@ -6,7 +6,9 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import slimebound.SlimeboundMod;
 import slimebound.actions.RandomStudyCardAction;
+import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.TinyHatParticle;
 
 public class StudyCardRelic extends CustomRelic {
@@ -27,7 +29,8 @@ public class StudyCardRelic extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new TinyHatParticle(AbstractDungeon.player)));
+        if (AbstractDungeon.player instanceof SlimeboundCharacter)
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new TinyHatParticle(AbstractDungeon.player)));
         this.flash();
 
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));

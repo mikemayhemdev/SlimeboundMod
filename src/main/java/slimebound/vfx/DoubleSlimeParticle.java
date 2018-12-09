@@ -68,7 +68,10 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
 
 
 
+    public void dispose() {
 
+
+    }
     public void update() {
 
 

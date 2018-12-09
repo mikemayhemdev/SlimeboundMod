@@ -20,7 +20,10 @@ public class SlimeIntentMovement extends com.megacrit.cardcrawl.vfx.AbstractGame
 
         this.renderBehind = true;
     }
+    public void dispose() {
 
+
+    }
     public void update() {
 
 

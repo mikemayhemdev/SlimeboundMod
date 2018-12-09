@@ -37,7 +37,8 @@ public class GoopSpray extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 6;
+
 
         this.exhaust = true;
 
@@ -53,7 +54,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, this.magicNumber - 2), this.magicNumber - 2, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, this.magicNumber - 3), this.magicNumber - 3, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }

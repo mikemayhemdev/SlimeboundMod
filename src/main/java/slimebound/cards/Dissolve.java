@@ -39,7 +39,7 @@ public class Dissolve extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, this.baseBlock, this.magicNumber));
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, this.block, this.magicNumber));
     }
 
     public AbstractCard makeCopy() {
