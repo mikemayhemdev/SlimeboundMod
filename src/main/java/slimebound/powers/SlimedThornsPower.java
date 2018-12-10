@@ -70,7 +70,7 @@ public class SlimedThornsPower extends AbstractPower {
     public void atStartOfTurn() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "SlimedThornsPower"));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:SlimedThornsPower"));
 
 
     }

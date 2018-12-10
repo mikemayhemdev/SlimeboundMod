@@ -70,7 +70,7 @@ public class NextTurnGainDivider extends AbstractPower {
         c = CardLibrary.getCard("Slimebound:Divider").makeCopy();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "NextTurnGainDivider"));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:NextTurnGainDivider"));
 
     }
 

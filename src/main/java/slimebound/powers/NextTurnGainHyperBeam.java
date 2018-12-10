@@ -70,7 +70,7 @@ public class NextTurnGainHyperBeam extends AbstractPower {
         c = CardLibrary.getCard("Slimebound:HyperBeamSlimedbound").makeCopy();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "NextTurnGainHyperBeam"));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:NextTurnGainHyperBeam"));
 
     }
 

@@ -13,7 +13,7 @@ import slimebound.powers.SlimedPower;
 
 public class SlimedPotion extends CustomPotion {
     public static final String POTION_ID = "Slimebound:SlimedPotion";
-    private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString("SlimedPotion");
+    private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 

@@ -63,7 +63,7 @@ public class EnergizedSlimeboundPower extends AbstractPower {
     public void onEnergyRecharge() {
         flash();
         AbstractDungeon.player.gainEnergy(this.amount);
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "EnergizedSlimeboundPower"));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:EnergizedSlimeboundPower"));
     }
 }
 

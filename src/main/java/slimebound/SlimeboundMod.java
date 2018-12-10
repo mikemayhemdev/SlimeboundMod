@@ -441,7 +441,7 @@ public static String printString(String s){
 
         logger.info("Done loading badge Image and mod options");
 
-        BaseMod.addPotion(SlimedPotion.class, Color.GREEN, Color.GREEN, Color.GREEN, "SlimedPotion", SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SlimedPotion.class, Color.GREEN, Color.GREEN, Color.GREEN, "Slimebound:SlimedPotion", SlimeboundEnum.SLIMEBOUND);
     }
 
 

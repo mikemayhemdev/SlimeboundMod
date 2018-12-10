@@ -62,7 +62,7 @@ public class RetainCardsOneTurnPower extends AbstractPower
      if ((isPlayer) && (!AbstractDungeon.player.hand.isEmpty()) && (!AbstractDungeon.player.hasRelic("Runic Pyramid")) &&
        (!AbstractDungeon.player.hasPower("Equilibrium"))) {
        AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(this.owner, this.amount));
-       AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "RetainCardsOneTurnPower"));
+       AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:RetainCardsOneTurnPower"));
 
      }
    }

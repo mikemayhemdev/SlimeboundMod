@@ -70,7 +70,7 @@ public class NextTurnGainSlimeCrush extends AbstractPower {
         c = CardLibrary.getCard("Slimebound:SlimeCrush").makeCopy();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "NextTurnGainSlimeCrush"));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:NextTurnGainSlimeCrush"));
 
     }
 

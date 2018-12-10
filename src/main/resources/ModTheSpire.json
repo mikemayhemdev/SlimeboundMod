@@ -3,7 +3,7 @@
   "name": "Slimebound Mod",
   "author_list": ["Michael Mayhem"],
   "description": "Adds a new playable enemy character: The Slimebound. \n\nThe Slimebound adds over 90 cards (not all in its card pool), 8 new character-specific Relics, 1 new Potion, and has a couple secrets to discover.  The character attempts to stay within the bounds of vanilla STS character design while still pushing new mechanics.\n\nExtra thanks to the creators of Mod the Spire and the Discord modding community. \nCredit: kiooeht - Nothing would be possible without MTS.  And thanks for the hat.\nJohnnyDevo - Cure Light Wounds art and card hijack from the Mystic mod.\nReina - Lots of helpful tidbits and advice\nJohnnyBazooka89 - Forcing me to keep cleaner code.\nSkyson - Rapid aggressive testing\nHypoSoc - Glutton mod for early mod reference and a couple art hijackings from it",
-  "version": "0.3.7",
+  "version": "0.3.10",
   "sts_version": "12-6-2018",
   "mts_version": "3.6.0",
   "dependencies": ["basemod", "stslib"],

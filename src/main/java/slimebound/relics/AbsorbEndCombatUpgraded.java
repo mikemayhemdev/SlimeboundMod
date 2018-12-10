@@ -53,7 +53,7 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
 
 
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic("AbsorbEndCombat");
+        return AbstractDungeon.player.hasRelic("Slimebound:AbsorbEndCombat");
     }
 
     @Override
