@@ -28,7 +28,7 @@ import slimebound.vfx.TinyHatParticle;
 
 
 public class DuplicatedForm extends AbstractSlimeboundCard {
-    public static final String ID = "DuplicatedForm";
+    public static final String ID = "Slimebound:DuplicatedForm";
 
     private static final CardStrings cardStrings;
     public static final String NAME;

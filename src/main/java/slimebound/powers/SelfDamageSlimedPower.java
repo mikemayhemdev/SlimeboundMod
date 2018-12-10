@@ -13,7 +13,7 @@ import slimebound.actions.TendrilFlailAction;
 
 
 public class SelfDamageSlimedPower extends AbstractPower {
-    public static final String POWER_ID = "SelfDamageSlimedPower";
+    public static final String POWER_ID = "Slimebound:SelfDamageSlimedPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/excessslime.png";

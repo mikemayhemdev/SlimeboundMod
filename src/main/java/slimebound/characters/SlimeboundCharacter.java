@@ -53,23 +53,23 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList();
-        retVal.add("Strike_Slimebound");
-        retVal.add("Strike_Slimebound");
-        retVal.add("Strike_Slimebound");
-        retVal.add("Strike_Slimebound");
-        retVal.add("Defend_Slimebound");
-        retVal.add("Defend_Slimebound");
-        retVal.add("Defend_Slimebound");
-        retVal.add("Defend_Slimebound");
-        retVal.add("RandomSlimeCard");
-        retVal.add("CorrosiveSpit");
+        retVal.add("Slimebound:Strike_Slimebound");
+        retVal.add("Slimebound:Strike_Slimebound");
+        retVal.add("Slimebound:Strike_Slimebound");
+        retVal.add("Slimebound:Strike_Slimebound");
+        retVal.add("Slimebound:Defend_Slimebound");
+        retVal.add("Slimebound:Defend_Slimebound");
+        retVal.add("Slimebound:Defend_Slimebound");
+        retVal.add("Slimebound:Defend_Slimebound");
+        retVal.add("Slimebound:Split");
+        retVal.add("Slimebound:CorrosiveSpit");
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList();
-        retVal.add("AbsorbEndCombat");
-        UnlockTracker.markRelicAsSeen("AbsorbEndCombat");
+        retVal.add("Slimebound:AbsorbEndCombat");
+        UnlockTracker.markRelicAsSeen("Slimebound:AbsorbEndCombat");
         return retVal;
     }
 

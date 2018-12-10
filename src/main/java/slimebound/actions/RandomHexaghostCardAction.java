@@ -28,13 +28,13 @@ public class RandomHexaghostCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("HexSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitGhostflame").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Divider").makeCopy();
+                c = CardLibrary.getCard("Slimebound:Divider").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Sear").makeCopy();
+                c = CardLibrary.getCard("Slimebound:Sear").makeCopy();
                 break;
         }
 

@@ -12,7 +12,7 @@ import slimebound.SlimeboundMod;
 
 public class SearingPower extends AbstractPower {
 
-    public static final String POWER_ID = "SearingPower";
+    public static final String POWER_ID = "Slimebound:SearingPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/BurningS.png";

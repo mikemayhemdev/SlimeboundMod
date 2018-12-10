@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 
 
 public class NextTurnGainHyperBeam extends AbstractPower {
-    public static final String POWER_ID = "NextTurnGainHyperBeam";
+    public static final String POWER_ID = "Slimebound:NextTurnGainHyperBeam";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/PrepareCardS.png";
@@ -67,7 +67,7 @@ public class NextTurnGainHyperBeam extends AbstractPower {
 
         flash();
         AbstractCard c;
-        c = CardLibrary.getCard("SlimeHyperBeam").makeCopy();
+        c = CardLibrary.getCard("Slimebound:HyperBeamSlimedbound").makeCopy();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "NextTurnGainHyperBeam"));

@@ -28,13 +28,13 @@ public class RandomAutomatonCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("BronzeSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitBronze").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("SlimeHyperBeam").makeCopy();
+                c = CardLibrary.getCard("Slimebound:HyperBeamSlimedbound").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Flail").makeCopy();
+                c = CardLibrary.getCard("Slimebound:Flail").makeCopy();
                 break;
         }
 

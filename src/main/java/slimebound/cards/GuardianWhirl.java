@@ -16,7 +16,7 @@ import slimebound.SlimeboundMod;
 
 
 public class GuardianWhirl extends AbstractSlimeboundCard {
-    public static final String ID = "GuardianWhirl";
+    public static final String ID = "Slimebound:GuardianWhirl";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

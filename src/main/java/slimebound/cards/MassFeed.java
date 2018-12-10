@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class MassFeed extends AbstractSlimeboundCard {
-    public static final String ID = "MassFeed";
+    public static final String ID = "Slimebound:MassFeed";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

@@ -28,16 +28,16 @@ public class RandomBasicSlimeCardAction extends com.megacrit.cardcrawl.actions.A
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("AttackSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitAttack").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("PoisonSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitPoison").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("DebuffSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitWeaken").makeCopy();
                 break;
             case 4:
-                c = CardLibrary.getCard("SlimingSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitSliming").makeCopy();
                 break;
         }
 

@@ -22,7 +22,7 @@ public class AddPreparedAction extends AbstractGameAction {
 
         AbstractCard c;
 
-        c = CardLibrary.getCard("Prepare").makeCopy();
+        c = CardLibrary.getCard("Slimebound:Prepare").makeCopy();
         c.modifyCostForTurn(-9);
 
 

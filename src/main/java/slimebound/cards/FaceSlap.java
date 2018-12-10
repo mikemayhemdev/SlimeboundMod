@@ -17,7 +17,7 @@ import slimebound.SlimeboundMod;
 
 
 public class FaceSlap extends AbstractSlimeboundCard {
-    public static final String ID = "FaceSlap";
+    public static final String ID = "Slimebound:FaceSlap";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

@@ -18,7 +18,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class Grow extends AbstractSlimeboundCard {
-    public static final String ID = "Grow";
+    public static final String ID = "Slimebound:Grow";
 
     private static final CardStrings cardStrings;
     public static final String NAME;

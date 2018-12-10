@@ -15,7 +15,7 @@ import slimebound.powers.GluttonyPower;
 
 
 public class Gluttony extends AbstractSlimeboundCard {
-    public static final String ID = "Gluttony";
+    public static final String ID = "Slimebound:Gluttony";
 
     private static final CardStrings cardStrings;
     public static final String NAME;

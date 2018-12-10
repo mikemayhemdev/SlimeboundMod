@@ -22,12 +22,12 @@ public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions
 
     public void update() {
         if ((this.duration == this.startingDuration) &&
-                (this.target != null) && (this.target.hasPower("SlimedPower"))) {
+                (this.target != null) && (this.target.hasPower("Slimebound:SlimedPower"))) {
             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.target, this.source, new SlimedPower(this.target, this.source,
 
 
-                    this.target.getPower("SlimedPower").amount),
-                    this.target.getPower("SlimedPower").amount));
+                    this.target.getPower("Slimebound:SlimedPower").amount),
+                    this.target.getPower("Slimebound:SlimedPower").amount));
         }
         if (upgraded) {
             if ((this.duration == this.startingDuration) &&

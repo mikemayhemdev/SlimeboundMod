@@ -14,7 +14,7 @@ import slimebound.vfx.SlimeDripsEffectPurple;
 
 
 public class SlimedPower extends AbstractPower {
-    public static final String POWER_ID = "SlimedPower";
+    public static final String POWER_ID = "Slimebound:SlimedPower";
     public static final String NAME = "UsefulSlime";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/SlimedS.png";
@@ -76,7 +76,7 @@ public class SlimedPower extends AbstractPower {
 
     public void atStartOfTurn() {
 
-        if (!this.owner.hasPower("PreventSlimeDecayPower")) {
+        if (!this.owner.hasPower("Slimebound:PreventSlimeDecayPower")) {
             if (this.amount <= 1) {
 
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "SlimedPower"));

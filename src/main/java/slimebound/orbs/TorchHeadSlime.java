@@ -23,7 +23,7 @@ public class TorchHeadSlime
 
     public TorchHeadSlime() {
 
-        super("TorchHeadSlime", 9, 0,true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
+        super("Slimebound:TorchHeadSlime", 9, 0,true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
 
     }
 

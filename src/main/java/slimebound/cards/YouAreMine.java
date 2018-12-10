@@ -19,7 +19,7 @@ import slimebound.SlimeboundMod;
 
 
 public class YouAreMine extends AbstractSlimeboundCard {
-    public static final String ID = "YouAreMine";
+    public static final String ID = "Slimebound:YouAreMine";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

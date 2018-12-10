@@ -30,7 +30,7 @@ public class HexSlime
 
 
     public HexSlime() {
-        super("HexSlime", 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
+        super("Slimebound:HexSlime", 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
         this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.color = Color.CHARTREUSE.cpy();

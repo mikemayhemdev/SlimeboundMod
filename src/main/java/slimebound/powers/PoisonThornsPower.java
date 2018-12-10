@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 
 
 public class PoisonThornsPower extends AbstractPower {
-    public static final String POWER_ID = "PoisonThornsPower";
+    public static final String POWER_ID = "Slimebound:PoisonThornsPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/PoisonThornsS.png";

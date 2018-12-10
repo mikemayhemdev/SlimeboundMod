@@ -17,7 +17,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class Slimepotheosis extends AbstractSlimeboundCard {
-    public static final String ID = "Slimepotheosis";
+    public static final String ID = "Slimebound:Slimepotheosis";
     public static final String NAME;
     private static final CardStrings cardStrings;
     public static final String DESCRIPTION;

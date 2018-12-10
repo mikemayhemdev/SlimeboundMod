@@ -12,7 +12,7 @@ import slimebound.actions.RandomHexaghostCardAction;
 
 
 public class StudyHexaghostPower extends AbstractPower {
-    public static final String POWER_ID = "StudyHexaghostPower";
+    public static final String POWER_ID = "Slimebound:StudyHexaghostPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/StudyHexaghostS.png";

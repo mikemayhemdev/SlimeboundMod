@@ -18,7 +18,7 @@ import slimebound.powers.PotencyPower;
 import java.util.Random;
 
 public class AbsorbEndCombat extends CustomRelic {
-    public static final String ID = "AbsorbEndCombat";
+    public static final String ID = "Slimebound:AbsorbEndCombat";
     public static final String IMG_PATH = "relics/heartofgoo.png";
     public static final String OUTLINE_IMG_PATH = "relics/heartofgooOutline.png";
     private static final int HP_PER_CARD = 1;

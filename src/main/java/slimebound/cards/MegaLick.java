@@ -21,7 +21,7 @@ import java.util.Random;
 
 
 public class MegaLick extends AbstractSlimeboundCard {
-    public static final String ID = "MegaLick";
+    public static final String ID = "Slimebound:MegaLick";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

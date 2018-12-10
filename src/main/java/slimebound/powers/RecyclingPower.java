@@ -15,7 +15,7 @@ import slimebound.actions.ReturnRandom0Cost;
 
 
 public class RecyclingPower extends AbstractPower {
-    public static final String POWER_ID = "RecyclingPower";
+    public static final String POWER_ID = "Slimebound:RecyclingPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/RecyclingS.png";

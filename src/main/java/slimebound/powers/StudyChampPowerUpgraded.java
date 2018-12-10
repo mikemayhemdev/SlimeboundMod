@@ -12,7 +12,7 @@ import slimebound.actions.RandomChampCardAction;
 
 
 public class StudyChampPowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "StudyChampPowerUpgraded";
+    public static final String POWER_ID = "Slimebound:StudyChampPowerUpgraded";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/StudyChampS.png";

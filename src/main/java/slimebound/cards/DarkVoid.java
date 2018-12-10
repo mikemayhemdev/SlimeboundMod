@@ -18,7 +18,7 @@ import slimebound.SlimeboundMod;
 
 
 public class DarkVoid extends AbstractSlimeboundCard {
-    public static final String ID = "DarkVoid";
+    public static final String ID = "Slimebound:DarkVoid";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

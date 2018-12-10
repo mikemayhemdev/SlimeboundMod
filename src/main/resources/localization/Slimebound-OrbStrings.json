@@ -1,5 +1,5 @@
 {
-  "BronzeSlime": {
+  "Slimebound:BronzeSlime": {
     "NAME": "Bronze Orb Slime",
     "DESCRIPTION": [
       "Deals ",
@@ -7,49 +7,49 @@
       " Block."
     ]
   },
-  "AttackSlime": {
+  "Slimebound:AttackSlime": {
     "NAME": "Attack Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage at the start of your turn."
     ]
   },
-  "TorchHeadSlime": {
+  "Slimebound:TorchHeadSlime": {
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage at the start of your turn.  Torch Heads gain Strength when you do."
     ]
   },
-  "CultistSlime": {
+  "Slimebound:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage at the start of your turn, then increases it's Strength by 2."
     ]
   },
-  "DebuffSlime": {
+  "Slimebound:DebuffSlime": {
     "NAME": "Weakening Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage and applies 1 Weak at the start of your turn."
     ]
   },
-  "PoisonSlime": {
+  "Slimebound:PoisonSlime": {
     "NAME": "Poisoning Slime",
     "DESCRIPTION": [
       "Applies ",
       " Poison at the start of your turn."
     ]
   },
-  "SlimingSlime": {
+  "Slimebound:SlimingSlime": {
     "NAME": "Sliming Slime",
     "DESCRIPTION": [
       "Applies ",
       " Slimed at the start of your turn."
     ]
   },
-  "HexSlime": {
+  "Slimebound:HexSlime": {
     "NAME": "Ghostflame Slime",
     "DESCRIPTION": [
       "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency."

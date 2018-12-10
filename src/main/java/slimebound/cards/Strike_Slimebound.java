@@ -10,7 +10,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class Strike_Slimebound extends AbstractSlimeboundCard {
-    public static final String ID = "Strike_Slimebound";
+    public static final String ID = "Slimebound:Strike_Slimebound";
     public static final String NAME = "Strike";
     public static final String DESCRIPTION = "Deal !D! damage.";
     public static final String IMG_PATH = "cards/attackSlime.png";

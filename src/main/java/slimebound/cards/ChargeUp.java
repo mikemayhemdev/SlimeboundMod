@@ -14,7 +14,7 @@ import slimebound.powers.NextTurnGainStrengthPower;
 
 
 public class ChargeUp extends AbstractSlimeboundCard {
-    public static final String ID = "ChargeUp";
+    public static final String ID = "Slimebound:ChargeUp";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

@@ -13,7 +13,7 @@ import slimebound.actions.SlimeSpawnAction;
 import slimebound.powers.SlimeSacrificePower;
 
 public class SlimedTailRelic extends CustomRelic {
-    public static final String ID = "SlimedTailRelic";
+    public static final String ID = "Slimebound:SlimedTailRelic";
     public static final String IMG_PATH = "relics/slimedTail.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimedTailOutline.png";
     private static final int HP_PER_CARD = 1;
@@ -39,7 +39,7 @@ public class SlimedTailRelic extends CustomRelic {
 
                     AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, SlimedTailRelic.this));
                     AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-                   // AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+                   // AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.SplitPoison(), false, false));
                     AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlimeSacrificePower(AbstractDungeon.player, 1), 1, true));
 
                     SlimedTailRelic.this.isActive = false;

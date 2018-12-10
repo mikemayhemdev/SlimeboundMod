@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 
 
 public class DefensiveStance extends AbstractSlimeboundCard {
-    public static final String ID = "DefensiveStance";
+    public static final String ID = "Slimebound:DefensiveStance";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

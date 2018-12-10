@@ -132,7 +132,7 @@ public abstract class SpawnedSlime
 
     public void applyFocus() {
         super.applyFocus();
-        AbstractPower power = AbstractDungeon.player.getPower("PotencyPower");
+        AbstractPower power = AbstractDungeon.player.getPower("Slimebound:PotencyPower");
         if (power != null) {
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus;
 

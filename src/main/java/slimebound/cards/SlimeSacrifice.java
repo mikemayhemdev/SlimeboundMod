@@ -18,7 +18,7 @@ import java.util.Random;
 
 
 public class SlimeSacrifice extends AbstractSlimeboundCard {
-    public static final String ID = "SlimeSacrifice";
+    public static final String ID = "Slimebound:SlimeSacrifice";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -48,24 +48,24 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
 
 /*
         if (chosenRand == 0) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitAttack(), false, true));
         } else if (chosenRand == 1) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitWeaken(), false, true));
         } else if (chosenRand == 2) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitPoison(), false, true));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitSliming(), false, true));
         }
 
         if (upgraded){
             if (chosenRand == 0) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitAttack(), false, true));
             } else if (chosenRand == 1) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitWeaken(), false, true));
             } else if (chosenRand == 2) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitPoison(), false, true));
             } else {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitSliming(), false, true));
             }
         }
 */

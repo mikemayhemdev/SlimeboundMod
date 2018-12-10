@@ -28,13 +28,13 @@ public class RandomGuardianCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("ChargeUp").makeCopy();
+                c = CardLibrary.getCard("Slimebound:ChargeUp").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("DefensiveMode").makeCopy();
+                c = CardLibrary.getCard("Slimebound:DefensiveMode").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("GuardianWhirl").makeCopy();
+                c = CardLibrary.getCard("Slimebound:GuardianWhirl").makeCopy();
                 break;
         }
 

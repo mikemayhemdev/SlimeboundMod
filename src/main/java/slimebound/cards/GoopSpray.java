@@ -17,7 +17,7 @@ import slimebound.powers.SlimedPower;
 
 
 public class GoopSpray extends AbstractSlimeboundCard {
-    public static final String ID = "GoopSpray";
+    public static final String ID = "Slimebound:GoopSpray";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

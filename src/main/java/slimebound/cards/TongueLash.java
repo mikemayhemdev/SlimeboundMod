@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class TongueLash extends AbstractSlimeboundCard {
-    public static final String ID = "TongueLash";
+    public static final String ID = "Slimebound:TongueLash";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

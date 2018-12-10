@@ -28,13 +28,13 @@ public class RandomCollectorCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("TorchHeadSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitTorchHead").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Collect").makeCopy();
+                c = CardLibrary.getCard("Slimebound:Collect").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("YouAreMine").makeCopy();
+                c = CardLibrary.getCard("Slimebound:YouAreMine").makeCopy();
                 break;
         }
 

@@ -12,7 +12,7 @@ import slimebound.actions.RandomAutomatonCardAction;
 
 
 public class StudyAutomatonPower extends AbstractPower {
-    public static final String POWER_ID = "StudyAutomatonPower";
+    public static final String POWER_ID = "Slimebound:StudyAutomatonPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/StudyAutomatonS.png";

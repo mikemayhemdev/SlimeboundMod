@@ -16,7 +16,7 @@ import slimebound.powers.RecyclingPowerUpgraded;
 
 
 public class Recycling extends AbstractSlimeboundCard {
-    public static final String ID = "Recycling";
+    public static final String ID = "Slimebound:Recycling";
 
     private static final CardStrings cardStrings;
     public static final String NAME;

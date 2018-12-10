@@ -15,7 +15,7 @@ import slimebound.powers.PotencyPower;
 
 
 public class Collect extends AbstractSlimeboundCard {
-    public static final String ID = "Collect";
+    public static final String ID = "Slimebound:Collect";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

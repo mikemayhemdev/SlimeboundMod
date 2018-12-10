@@ -12,7 +12,7 @@ import slimebound.SlimeboundMod;
 
 
 public class LoseThornsPower extends AbstractPower {
-    public static final String POWER_ID = "LoseThornsPower";
+    public static final String POWER_ID = "Slimebound:LoseThornsPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/ThornsDownS.png";

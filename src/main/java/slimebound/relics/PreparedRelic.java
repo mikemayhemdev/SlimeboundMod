@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.AddPreparedAction;
 
 public class PreparedRelic extends CustomRelic {
-    public static final String ID = "PreparedRelic";
+    public static final String ID = "Slimebound:PreparedRelic";
     public static final String IMG_PATH = "relics/slimedteaSet.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimedteaSetOutline.png";
     private static final int HP_PER_CARD = 1;

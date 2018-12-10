@@ -12,7 +12,7 @@ import slimebound.SlimeboundMod;
 
 
 public class PreventSlimeDecayPower extends AbstractPower {
-    public static final String POWER_ID = "PreventSlimeDecayPower";
+    public static final String POWER_ID = "Slimebound:PreventSlimeDecayPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/SlimedS.png";

@@ -16,7 +16,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class SlimeTap extends AbstractSlimeboundCard {
-    public static final String ID = "SlimeTap";
+    public static final String ID = "Slimebound:SlimeTap";
     public static final String NAME;
     private static final CardStrings cardStrings;
     public static final String DESCRIPTION;

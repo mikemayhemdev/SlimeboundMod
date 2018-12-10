@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class LeechingTouch extends AbstractSlimeboundCard {
-    public static final String ID = "LeechingTouch";
+    public static final String ID = "Slimebound:LeechingTouch";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

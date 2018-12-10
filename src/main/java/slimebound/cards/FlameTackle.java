@@ -19,7 +19,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class FlameTackle extends AbstractSlimeboundCard {
-    public static final String ID = "FlameTackle";
+    public static final String ID = "Slimebound:FlameTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

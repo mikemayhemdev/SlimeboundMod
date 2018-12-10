@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 
 public class RetainCardsOneTurnPower extends AbstractPower
  {
-    public static final String POWER_ID = "RetainCardsOneTurnPower";
+    public static final String POWER_ID = "Slimebound:RetainCardsOneTurnPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/retaingreen.png";

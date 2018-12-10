@@ -18,7 +18,7 @@ import slimebound.powers.SlimedPower;
 
 
 public class CorrosiveSpit extends AbstractSlimeboundCard {
-    public static final String ID = "CorrosiveSpit";
+    public static final String ID = "Slimebound:CorrosiveSpit";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

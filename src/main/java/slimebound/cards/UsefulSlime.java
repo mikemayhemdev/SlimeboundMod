@@ -12,7 +12,7 @@ import slimebound.SlimeboundMod;
 
 
 public class UsefulSlime extends AbstractSlimeboundCard {
-    public static final String ID = "UsefulSlime";
+    public static final String ID = "Slimebound:UsefulSlime";
     public static final String NAME;
     private static final CardStrings cardStrings;
     public static final String DESCRIPTION;

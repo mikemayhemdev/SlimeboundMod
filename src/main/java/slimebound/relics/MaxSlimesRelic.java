@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
 
 public class MaxSlimesRelic extends CustomRelic {
-    public static final String ID = "MaxSlimesRelic";
+    public static final String ID = "Slimebound:MaxSlimesRelic";
     public static final String IMG_PATH = "relics/slimeplushie.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimeplushieOutline.png";
     private static final int HP_PER_CARD = 1;

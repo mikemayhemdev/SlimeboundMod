@@ -12,14 +12,14 @@ import slimebound.powers.SlimedPower;
 
 
 public class SlimedPotion extends CustomPotion {
-    public static final String POTION_ID = "SlimedPotion";
+    public static final String POTION_ID = "Slimebound:SlimedPotion";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString("SlimedPotion");
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
 
     public SlimedPotion() {
-        super(NAME, "SlimedPotion", PotionRarity.COMMON, PotionSize.BOTTLE, PotionColor.POISON);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.BOTTLE, PotionColor.POISON);
         this.potency = getPotency();
         this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.isThrown = true;

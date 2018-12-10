@@ -12,7 +12,7 @@ import slimebound.characters.SlimeboundCharacter;
 public class SlimeTalkCollector {
 
     public static void Prefix(TheCollector sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedCollector == false && AbstractDungeon.player.hasRelic("StudyCardRelic")) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedCollector == false && AbstractDungeon.player.hasRelic("Slimebound:StudyCardRelic")) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, "That hat... NL #r~I~ #r~must~ #r~have~ #r~it!~", 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedCollector = true;
         }

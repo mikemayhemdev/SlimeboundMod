@@ -20,7 +20,7 @@ import slimebound.SlimeboundMod;
 
 
 public class LastStand extends AbstractSlimeboundCard {
-    public static final String ID = "LastStand";
+    public static final String ID = "Slimebound:LastStand";
 
     private static final CardStrings cardStrings;
     public static final String NAME;

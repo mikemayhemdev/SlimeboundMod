@@ -12,7 +12,7 @@ import slimebound.SlimeboundMod;
 
 
 public class NextTurnGainStrengthPower extends AbstractPower {
-    public static final String POWER_ID = "NextTurnGainStrengthPower";
+    public static final String POWER_ID = "Slimebound:NextTurnGainStrengthPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/DelayedAttackSmall.png";

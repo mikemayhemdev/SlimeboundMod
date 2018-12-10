@@ -25,7 +25,7 @@ public class RandomStudyCardAction extends AbstractGameAction {
         AbstractCard c;
         //Random random = new Random();
         //Integer chosenRand = random.nextInt(8);
-        c = CardLibrary.getCard("StudyRandomBoss").makeCopy();
+        c = CardLibrary.getCard("Slimebound:StudyTheSpire").makeCopy();
 
 
 

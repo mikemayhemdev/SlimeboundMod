@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.patches.AbstractCardEnum;
 
 public class Defend_Slimebound extends AbstractSlimeboundCard {
-    public static final String ID = "Defend_Slimebound";
+    public static final String ID = "Slimebound:Defend_Slimebound";
     public static final String NAME = "Defend";
     public static final String DESCRIPTION = "Gain !B! Block.";
     public static final String IMG_PATH = "cards/defendSlime.png";

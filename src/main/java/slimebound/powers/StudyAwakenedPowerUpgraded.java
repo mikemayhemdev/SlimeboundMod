@@ -12,7 +12,7 @@ import slimebound.actions.RandomAwakanedCardAction;
 
 
 public class StudyAwakenedPowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "StudyAwakenedPowerUpgraded";
+    public static final String POWER_ID = "Slimebound:StudyAwakenedPowerUpgraded";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/StudyAwakenedS.png";

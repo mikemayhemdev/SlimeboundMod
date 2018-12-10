@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 
 
 public class AcidTonguePowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "AcidTonguePowerUpgraded";
+    public static final String POWER_ID = "Slimebound:AcidTonguePowerUpgraded";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/AcidTongueS.png";

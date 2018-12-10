@@ -19,7 +19,7 @@ import slimebound.vfx.SlimeDripsEffect;
 
 
 public class PoisonLick extends AbstractSlimeboundCard {
-    public static final String ID = "PoisonLick";
+    public static final String ID = "Slimebound:PoisonLick";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

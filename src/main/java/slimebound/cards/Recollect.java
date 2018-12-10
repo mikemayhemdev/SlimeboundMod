@@ -16,7 +16,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class Recollect extends AbstractSlimeboundCard {
-    public static final String ID = "Recollect";
+    public static final String ID = "Slimebound:Recollect";
     public static final String NAME;
     private static final CardStrings cardStrings;
     public static final String DESCRIPTION;

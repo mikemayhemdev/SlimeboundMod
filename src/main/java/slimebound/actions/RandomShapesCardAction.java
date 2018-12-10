@@ -28,13 +28,13 @@ public class RandomShapesCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("CircleOfPower").makeCopy();
+                c = CardLibrary.getCard("Slimebound:DonusPower").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("SquareOfProtection").makeCopy();
+                c = CardLibrary.getCard("Slimebound:DecasProtection").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("PolyBeam").makeCopy();
+                c = CardLibrary.getCard("Slimebound:PolyBeam").makeCopy();
                 break;
         }
 

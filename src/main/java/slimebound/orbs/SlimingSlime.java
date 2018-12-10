@@ -17,7 +17,7 @@ import slimebound.vfx.SlimeFlareEffect;
 public class SlimingSlime
         extends SpawnedSlime {
     public SlimingSlime() {
-        super("SlimingSlime", 2, 2,true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("SlimeboundImages/orbs/debuff2.png"), "SlimeboundImages/orbs/sliming.png");
+        super("Slimebound:SlimingSlime", 2, 2,true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("SlimeboundImages/orbs/debuff2.png"), "SlimeboundImages/orbs/sliming.png");
     }
 
 

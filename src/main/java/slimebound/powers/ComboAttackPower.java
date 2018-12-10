@@ -14,7 +14,7 @@ import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 
 
 public class ComboAttackPower extends AbstractPower {
-    public static final String POWER_ID = "ComboAttackPower";
+    public static final String POWER_ID = "Slimebound:ComboAttackPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/SplitForLessS.png";

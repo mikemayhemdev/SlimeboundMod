@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 
 public class SlimeRitualPower extends AbstractPower {
-    public static final String POWER_ID = "SlimeRitualPower";
+    public static final String POWER_ID = "Slimebound:SlimeRitualPower";
     public static final String NAME = "Slime Sacrifice";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/ritual.png";

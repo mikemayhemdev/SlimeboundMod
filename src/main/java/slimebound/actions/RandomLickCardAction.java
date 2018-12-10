@@ -28,19 +28,19 @@ public class RandomLickCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Lick").makeCopy();
+                c = CardLibrary.getCard("Slimebound:Lick").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("PoisonLick").makeCopy();
+                c = CardLibrary.getCard("Slimebound:PoisonLick").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("SlimedLick").makeCopy();
+                c = CardLibrary.getCard("Slimebound:HauntingLick").makeCopy();
                 break;
             case 4:
-                c = CardLibrary.getCard("MegaLick").makeCopy();
+                c = CardLibrary.getCard("Slimebound:MegaLick").makeCopy();
                 break;
             case 5:
-                c = CardLibrary.getCard("SamplingLick").makeCopy();
+                c = CardLibrary.getCard("Slimebound:QuickLick").makeCopy();
                 break;
         }
 

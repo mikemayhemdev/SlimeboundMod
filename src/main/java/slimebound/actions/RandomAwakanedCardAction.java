@@ -28,13 +28,13 @@ public class RandomAwakanedCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("SlimeRitual").makeCopy();
+                c = CardLibrary.getCard("Slimebound:CaCaw").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("CultistSlime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:SplitCultist").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("DarkVoid").makeCopy();
+                c = CardLibrary.getCard("Slimebound:DarkVoid").makeCopy();
                 break;
         }
 

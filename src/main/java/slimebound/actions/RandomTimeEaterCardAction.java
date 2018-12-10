@@ -28,13 +28,13 @@ public class RandomTimeEaterCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Ripple").makeCopy();
+                c = CardLibrary.getCard("Slimebound:TimeRipple").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("StopTime").makeCopy();
+                c = CardLibrary.getCard("Slimebound:ManipulateTime").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("HeadSlam").makeCopy();
+                c = CardLibrary.getCard("Slimebound:HeadSlam").makeCopy();
                 break;
         }
 

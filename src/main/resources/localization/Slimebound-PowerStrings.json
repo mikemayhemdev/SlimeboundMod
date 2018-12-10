@@ -1,12 +1,12 @@
 {
-	"PotencyPower": {
+	"Slimebound:PotencyPower": {
 		"NAME": "Potency",
 		"DESCRIPTIONS": [
 			"Increase the effectiveness of your spawned #ySlimes by ",
 			"."
 		]
 	},
-	"SlimedPower": {
+	"Slimebound:SlimedPower": {
 		"NAME": "Slimed",
 		"DESCRIPTIONS": [
 			"The next Attack against this enemy deals ",
@@ -14,7 +14,7 @@
 			" HP, consuming all #ySlimed.  Half of the stack is removed at end of turn."
 		]
 	},
-	"HexSlimePerTurnPower": {
+	"Slimebound:HexSlimePerTurnPower": {
 		"NAME": "Hex Power",
 		"DESCRIPTIONS": [
 			"Spawn a Ghostflame slime at the start of your next turn.",
@@ -22,7 +22,7 @@
 			" turns."
 		]
 	},
-	"SlimeSacrifice": {
+	"Slimebound:SlimeSacrifice": {
 		"NAME": "Slime Sacrifice",
 		"DESCRIPTIONS": [
 			"Prevent the next time you would be damaged by an Attack this turn at the cost of your oldest Slime.",
@@ -30,7 +30,7 @@
 			" times you would damaged by an Attack this turn at the cost of your oldest Slime."
 		]
 	},
-	"SplitForLessPower": {
+	"Slimebound:SplitForLessPower": {
 		"NAME": "Efficient Goo",
 		"DESCRIPTIONS": [
 			"Splitting costs ",
@@ -39,7 +39,7 @@
 			" random Split cards to your hand each turn."
 		]
 	},
-	"ComboAttackPower": {
+	"Slimebound:ComboAttackPower": {
 		"NAME": "Lead By Example",
 		"DESCRIPTIONS": [
 			"The first Attack you play each turn causes your oldest slime to also attack.",
@@ -47,7 +47,7 @@
 			" Attacks you play each turn causes your oldest slime to also attack."
 		]
 	},
-	"RetainCardsOneTurnPower": {
+	"Slimebound:RetainCardsOneTurnPower": {
 		"NAME": "Preparing Cards",
 		"DESCRIPTIONS": [
 			"Retain ",
@@ -55,7 +55,7 @@
 			" cards this turn."
 		]
 	},
-	"EnergizedSlimeboundPower": {
+	"Slimebound:EnergizedSlimeboundPower": {
 		"NAME": "Energized",
 		"DESCRIPTIONS": [
 			"Gain #b",
@@ -64,35 +64,35 @@
 			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
 		]
 	},
-	"SelfFormingGooPower": {
+	"Slimebound:SelfFormingGooPower": {
 		"NAME": "Self-Forming Goo",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" Block whenever you lose HP."
 		]
 	},
-	"LoseSlimesPower": {
+	"Slimebound:LoseSlimesPower": {
 		"NAME": "Knowledge Pool",
 		"DESCRIPTIONS": [
 			"Next turn, Absorb all of your spawned slimes.",
 			" turns from now, Absorb all of your spawned slimes."
 		]
 	},
-	"LoseThornsPower": {
+	"Slimebound:LoseThornsPower": {
 		"NAME": "Retracting Spikes",
 		"DESCRIPTIONS": [
 			"Lose ",
 			" Thorns at the start of your next turn."
 		]
 	},
-	"SlimedThornsPower": {
+	"Slimebound:SlimedThornsPower": {
 		"NAME": "Living Wall",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Slimed to attackers this turn."
 		]
 	},
-	"PreventSlimeDecayPower": {
+	"Slimebound:PreventSlimeDecayPower": {
 		"NAME": "Doused in Slime",
 		"DESCRIPTIONS": [
 			"Slimed will not decay this turn.",
@@ -100,7 +100,7 @@
 			" turns."
 		]
 	},
-	"DuplicatedFormPower": {
+	"Slimebound:DuplicatedFormPower": {
 		"NAME": "Duplicated Form",
 		"DESCRIPTIONS": [
 			"The first card you play that targets enemies each turn is played twice.",
@@ -108,13 +108,13 @@
 			" cards you play that targets enemies each turn are played twice."
 		]
 	},
-	"DuplicatedFormNoHealPower": {
+	"Slimebound:DuplicatedFormNoHealPower": {
 		"NAME": "Permanently Halved",
 		"DESCRIPTIONS": [
 			"You cannot heal beyond 50% of your Maximum HP."
 		]
 	},
-	"DuplicatedFormEnergyPower": {
+	"Slimebound:DuplicatedFormEnergyPower": {
 		"NAME": "Tag-Team",
 		"DESCRIPTIONS": [
 			"Gain ",
@@ -123,7 +123,7 @@
 			" cards each turn."
 		]
 	},
-	"GluttonyPower": {
+	"Slimebound:GluttonyPower": {
 		"NAME": "Gluttony",
 		"DESCRIPTIONS": [
 			"Add ",
@@ -131,7 +131,7 @@
 			" random Lick cards to your hand each turn."
 		]
 	},
-	"GluttonyPowerUpgraded": {
+	"Slimebound:GluttonyPowerUpgraded": {
 		"NAME": "Gluttony+",
 		"DESCRIPTIONS": [
 			"Add ",
@@ -139,21 +139,21 @@
 			" random Upgraded Lick cards to your hand each turn."
 		]
 	},
-	"PoisonThornsPower": {
+	"Slimebound:PoisonThornsPower": {
 		"NAME": "Acid Gelatin",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Poison to attackers."
 		]
 	},
-	"SlimeRitualPower": {
+	"Slimebound:SlimeRitualPower": {
 		"NAME": "Ritual",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" Strength at the start of each turn."
 		]
 	},
-	"RecyclingPower": {
+	"Slimebound:RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
 			"Return ",
@@ -161,35 +161,35 @@
 			" 0-cost Exhausted cards to your hand each turn."
 		]
 	},
-	"RecyclingPowerUpgraded": {
+	"Slimebound:RecyclingPowerUpgraded": {
 		"NAME": "Recycling+",
 		"DESCRIPTIONS": [
 			"Heal ",
 			" HP and draw a card when you Exhaust a 0-cost card."
 		]
 	},
-	"AcidTonguePower": {
+	"Slimebound:AcidTonguePower": {
 		"NAME": "Acid Tongue",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Poison whenever you apply Slimed."
 		]
 	},
-	"AcidTonguePowerUpgraded": {
+	"Slimebound:AcidTonguePowerUpgraded": {
 		"NAME": "Acid Tongue+",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Poison whenever you apply Weaken."
 		]
 	},
-	"SelfDamageSlimedPower": {
+	"Slimebound:SelfDamageSlimedPower": {
 		"NAME": "Stray Goop",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Slimed to a random enemy whenever you lose HP on your turn."
 		]
 	},
-	"TackleBuffPower": {
+	"Slimebound:TackleBuffPower": {
 		"NAME": "Momentum",
 		"DESCRIPTIONS": [
 			"Tackle Attacks deal ",
@@ -197,14 +197,14 @@
 			" more damage to you."
 		]
 	},
-	"NextTurnGainStrengthPower": {
+	"Slimebound:NextTurnGainStrengthPower": {
 		"NAME": "Charging Up",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" Strength on your next turn."
 		]
 	},
-	"NextTurnGainSlimeCrush": {
+	"Slimebound:NextTurnGainSlimeCrush": {
 		"NAME": "Preparing to Crush",
 		"DESCRIPTIONS": [
 			"Gain a SLIME CRUSH on your next turn.",
@@ -212,7 +212,7 @@
 			" copies of SLIME CRUSH on your next turn."
 		]
 	},
-	"StunnedPower": {
+	"Slimebound:StunnedPower": {
 		"NAME": "Completely Exhausted",
 		"DESCRIPTIONS": [
 			"Skip your next turn.",
@@ -220,14 +220,14 @@
 			" turns."
 		]
 	},
-	"SearingPower": {
+	"Slimebound:SearingPower": {
 		"NAME": "Burn",
 		"DESCRIPTIONS": [
 			"Taking ",
 			" damage each turn."
 		]
 	},
-	"NextTurnGainHyperBeam": {
+	"Slimebound:NextTurnGainHyperBeam": {
 		"NAME": "Preparing to Beam",
 		"DESCRIPTIONS": [
 			"Gain a Hyper Beam on your next turn.",
@@ -235,7 +235,7 @@
 			" copies of Hyper Beam on your next turn."
 		]
 	},
-	"NextTurnGainDivider": {
+	"Slimebound:NextTurnGainDivider": {
 		"NAME": "Preparing to Divide",
 		"DESCRIPTIONS": [
 			"Gain a Divide on your next turn.",
@@ -243,7 +243,7 @@
 			" copies of Divide on your next turn."
 		]
 	},
-	"StudyAutomatonPower": {
+	"Slimebound:StudyAutomatonPower": {
 		"NAME": "Study Automaton",
 		"DESCRIPTIONS": [
 			"Gain a random Automaton card at the start of next turn.",
@@ -251,7 +251,7 @@
 			" turns."
 		]
 	},
-	"StudyAutomatonPowerUpgraded": {
+	"Slimebound:StudyAutomatonPowerUpgraded": {
 		"NAME": "Study Automaton+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Automaton card at the start of next turn.",
@@ -259,7 +259,7 @@
 			" turns."
 		]
 	},
-	"StudyAwakenedPower": {
+	"Slimebound:StudyAwakenedPower": {
 		"NAME": "Study Awakened One",
 		"DESCRIPTIONS": [
 			"Gain a random Awakened One card at the start of next turn.",
@@ -267,7 +267,7 @@
 			" turns."
 		]
 	},
-	"StudyAwakenedPowerUpgraded": {
+	"Slimebound:StudyAwakenedPowerUpgraded": {
 		"NAME": "Study Awakened One+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Awakened One card at the start of next turn.",
@@ -275,7 +275,7 @@
 			" turns."
 		]
 	},
-	"StudyChampPower": {
+	"Slimebound:StudyChampPower": {
 		"NAME": "Study Champ",
 		"DESCRIPTIONS": [
 			"Gain a random Champ card at the start of next turn.",
@@ -283,7 +283,7 @@
 			" turns."
 		]
 	},
-	"StudyChampPowerUpgraded": {
+	"Slimebound:StudyChampPowerUpgraded": {
 		"NAME": "Study Champ+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Champ card at the start of next turn.",
@@ -291,7 +291,7 @@
 			" turns."
 		]
 	},
-	"StudyCollectorPower": {
+	"Slimebound:StudyCollectorPower": {
 		"NAME": "Study Collector",
 		"DESCRIPTIONS": [
 			"Gain a random Collector card at the start of next turn.",
@@ -299,7 +299,7 @@
 			" turns."
 		]
 	},
-	"StudyCollectorPowerUpgraded": {
+	"Slimebound:StudyCollectorPowerUpgraded": {
 		"NAME": "Study Collector+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Collector card at the start of next turn.",
@@ -307,7 +307,7 @@
 			" turns."
 		]
 	},
-	"StudyGuardianPower": {
+	"Slimebound:StudyGuardianPower": {
 		"NAME": "Study Guardian",
 		"DESCRIPTIONS": [
 			"Gain a random Guardian card at the start of next turn.",
@@ -315,7 +315,7 @@
 			" turns."
 		]
 	},
-	"StudyGuardianPowerUpgraded": {
+	"Slimebound:StudyGuardianPowerUpgraded": {
 		"NAME": "Study Guardian+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Guardian card at the start of next turn.",
@@ -323,7 +323,7 @@
 			" turns."
 		]
 	},
-	"StudyHexaghostPower": {
+	"Slimebound:StudyHexaghostPower": {
 		"NAME": "Study Hexaghost",
 		"DESCRIPTIONS": [
 			"Gain a random Hexaghost card at the start of next turn.",
@@ -331,7 +331,7 @@
 			" turns."
 		]
 	},
-	"StudyHexaghostPowerUpgraded": {
+	"Slimebound:StudyHexaghostPowerUpgraded": {
 		"NAME": "Study Hexaghost+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Hexaghost card at the start of next turn.",
@@ -339,7 +339,7 @@
 			" turns."
 		]
 	},
-	"StudyShapesPower": {
+	"Slimebound:StudyShapesPower": {
 		"NAME": "Study Donu & Deca",
 		"DESCRIPTIONS": [
 			"Gain a random Donu & Deca card at the start of next turn.",
@@ -347,7 +347,7 @@
 			" turns."
 		]
 	},
-	"StudyShapesPowerUpgraded": {
+	"Slimebound:StudyShapesPowerUpgraded": {
 		"NAME": "Study Donu & Deca+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Donu & Deca card at the start of next turn.",
@@ -355,7 +355,7 @@
 			" turns."
 		]
 	},
-	"StudyTimeEaterPower": {
+	"Slimebound:StudyTimeEaterPower": {
 		"NAME": "Study Time Eater",
 		"DESCRIPTIONS": [
 			"Gain a random Time Eater card at the start of next turn.",
@@ -363,7 +363,7 @@
 			" turns."
 		]
 	},
-	"StudyTimeEaterPowerUpgraded": {
+	"Slimebound:StudyTimeEaterPowerUpgraded": {
 		"NAME": "Study Time Eater+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Time Eater card at the start of next turn.",

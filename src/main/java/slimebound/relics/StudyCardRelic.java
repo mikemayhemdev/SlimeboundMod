@@ -12,7 +12,7 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.TinyHatParticle;
 
 public class StudyCardRelic extends CustomRelic {
-    public static final String ID = "StudyCardRelic";
+    public static final String ID = "Slimebound:StudyCardRelic";
     public static final String IMG_PATH = "relics/tinybowlerhat.png";
     public static final String OUTLINE_IMG_PATH = "relics/tinybowlerhatOutline.png";
     private static final int HP_PER_CARD = 1;

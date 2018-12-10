@@ -19,7 +19,7 @@ import slimebound.SlimeboundMod;
 
 
 public class Flail extends AbstractSlimeboundCard {
-    public static final String ID = "Flail";
+    public static final String ID = "Slimebound:Flail";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

@@ -13,7 +13,7 @@ import slimebound.orbs.SpawnedSlime;
 
 
 public class SlimeSacrificePower extends AbstractPower {
-    public static final String POWER_ID = "SlimeSacrifice";
+    public static final String POWER_ID = "Slimebound:SlimeSacrifice";
     public static final String NAME = "Slime Sacrifice";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/SlimeSacrificeS.png";

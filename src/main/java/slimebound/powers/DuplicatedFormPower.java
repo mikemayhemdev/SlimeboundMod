@@ -22,7 +22,7 @@ import slimebound.vfx.DoubleSlimeParticle;
 
 
 public class DuplicatedFormPower extends AbstractPower {
-    public static final String POWER_ID = "DuplicatedFormPower";
+    public static final String POWER_ID = "Slimebound:DuplicatedFormPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/DuplicatedEchoS.png";

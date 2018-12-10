@@ -28,13 +28,13 @@ public class RandomChampCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("FaceSlap").makeCopy();
+                c = CardLibrary.getCard("Slimebound:FaceSlap").makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("DefensiveStance").makeCopy();
+                c = CardLibrary.getCard("Slimebound:DefensiveStance").makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("LastStand").makeCopy();
+                c = CardLibrary.getCard("Slimebound:LastStand").makeCopy();
                 break;
         }
 

@@ -15,7 +15,7 @@ import slimebound.orbs.SpawnedSlime;
 
 
 public class LoseSlimesPower extends AbstractPower {
-    public static final String POWER_ID = "LoseSlimesPower";
+    public static final String POWER_ID = "Slimebound:LoseSlimesPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/nostalgia.png";

@@ -16,7 +16,7 @@ import slimebound.powers.AcidTonguePowerUpgraded;
 
 
 public class AcidTongue extends AbstractSlimeboundCard {
-    public static final String ID = "AcidTongue";
+    public static final String ID = "Slimebound:AcidTongue";
 
     private static final CardStrings cardStrings;
     public static final String NAME;

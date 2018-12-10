@@ -17,7 +17,7 @@ import slimebound.powers.SearingPower;
 
 
 public class Sear extends AbstractSlimeboundCard {
-    public static final String ID = "Sear";
+    public static final String ID = "Slimebound:Sear";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

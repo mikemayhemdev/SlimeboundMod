@@ -21,7 +21,7 @@ import java.util.Random;
 
 
 public class Lick extends AbstractSlimeboundCard {
-    public static final String ID = "Lick";
+    public static final String ID = "Slimebound:Lick";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

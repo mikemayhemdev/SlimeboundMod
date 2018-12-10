@@ -16,7 +16,7 @@ import slimebound.vfx.SlimeDripsEffectPurple;
 
 
 public class SlimedThornsPower extends AbstractPower {
-    public static final String POWER_ID = "SlimedThornsPower";
+    public static final String POWER_ID = "Slimebound:SlimedThornsPower";
     public static final String NAME = "UsefulSlime";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/SlimedS.png";

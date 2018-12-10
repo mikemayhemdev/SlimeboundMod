@@ -16,7 +16,7 @@ import slimebound.patches.AbstractCardEnum;
 
 
 public class LeechEnergy extends AbstractSlimeboundCard {
-    public static final String ID = "LeechEnergy";
+    public static final String ID = "Slimebound:LeechEnergy";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
