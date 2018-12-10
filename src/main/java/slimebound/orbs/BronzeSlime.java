@@ -20,7 +20,7 @@ import slimebound.vfx.SlimeFlareEffect;
 public class BronzeSlime
         extends SpawnedSlime {
     public BronzeSlime() {
-        super("BronzeSlime", 6, false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("SlimeboundImages/orbs/attackDefend.png"), "SlimeboundImages/orbs/bronzeslime.png");
+        super("BronzeSlime", 6, 0,false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("SlimeboundImages/orbs/attackDefend.png"), "SlimeboundImages/orbs/bronzeslime.png");
     }
 
 

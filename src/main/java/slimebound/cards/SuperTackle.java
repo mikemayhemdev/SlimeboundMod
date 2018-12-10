@@ -39,10 +39,10 @@ public class SuperTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 7;
+        this.baseDamage = this.originalDamage = 6;
         this.baseBlock = this.originalBlock = 2;
         this.upgradeDamage = 3;
-        this.exhaust = true;
+       // this.exhaust = true;
 
         this.magicNumber = this.baseMagicNumber = 2;
 

@@ -52,14 +52,14 @@ public class Lick extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber ), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
 
-        //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
 
@@ -77,6 +77,8 @@ public class Lick extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

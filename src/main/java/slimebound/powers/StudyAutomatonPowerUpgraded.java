@@ -67,7 +67,15 @@ public class StudyAutomatonPowerUpgraded extends AbstractPower {
 
         AbstractDungeon.actionManager.addToBottom(new RandomAutomatonCardAction(true));
 
+        if (this.amount <= 1) {
 
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "StudyAutomatonPowerUpgraded"));
+
+        } else {
+
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "StudyAutomatonPowerUpgraded", 1));
+
+        }
     }
 
 

@@ -31,7 +31,7 @@ public class StrikeWeakPoint extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -41,7 +41,7 @@ public class StrikeWeakPoint extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 4;
+        this.baseDamage = 8;
 
 
 
@@ -97,7 +97,7 @@ public class StrikeWeakPoint extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(1);
+            upgradeDamage(3);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

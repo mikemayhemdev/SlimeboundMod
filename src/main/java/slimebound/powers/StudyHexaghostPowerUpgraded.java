@@ -66,7 +66,15 @@ public class StudyHexaghostPowerUpgraded extends AbstractPower {
         flash();
 
         AbstractDungeon.actionManager.addToBottom(new RandomHexaghostCardAction(true));
+        if (this.amount <= 1) {
 
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "StudyHexaghostPowerUpgraded"));
+
+        } else {
+
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "StudyHexaghostPowerUpgraded", 1));
+
+        }
 
     }
 

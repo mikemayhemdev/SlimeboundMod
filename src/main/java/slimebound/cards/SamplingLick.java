@@ -68,6 +68,7 @@ public class SamplingLick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
     }
 
@@ -86,6 +87,8 @@ public class SamplingLick extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

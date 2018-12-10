@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.LoseSlimesPower;
 import slimebound.powers.PotencyPower;
 
 import java.util.Random;
@@ -38,14 +39,14 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
     public AbsorbAllPotency() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
 
 
@@ -55,37 +56,15 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
 
-        AbstractDungeon.effectsQueue.add(new HealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5));
-        if (!AbstractDungeon.player.orbs.isEmpty()) {
-            Random random = new Random();
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-
-                if (o instanceof SpawnedSlime) {
-
-                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-
-                    Integer chosenRand = random.nextInt(3) + 1;
-
-                    switch (chosenRand) {
-                        case 1:
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1, true));
-                            break;
-                        case 2:
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1, true));
-                            break;
-                        case 3:
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1, true));
-                            break;
-                    }
-
-                }
 
 
-            }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p,p,3),3));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p,p,this.magicNumber),this.magicNumber));
 
 
 
-        }
+
+
     }
 
     static {
@@ -102,7 +81,7 @@ public class AbsorbAllPotency extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
 
 
         }

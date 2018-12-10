@@ -30,7 +30,7 @@ public class HexSlime
 
 
     public HexSlime() {
-        super("HexSlime", 1, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
+        super("HexSlime", 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
         this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.color = Color.CHARTREUSE.cpy();
@@ -41,7 +41,8 @@ public class HexSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + 1 + this.descriptions[1];
+
+        this.description = this.descriptions[0];
     }
 
     @Override

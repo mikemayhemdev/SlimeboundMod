@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.AcidTonguePower;
+import slimebound.powers.AcidTonguePowerUpgraded;
 
 
 public class AcidTongue extends AbstractSlimeboundCard {
@@ -38,7 +39,14 @@ public class AcidTongue extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AcidTonguePower(p, p, this.magicNumber), this.magicNumber));
+
+        if (upgraded)  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AcidTonguePowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+
+
+
 
     }
 
@@ -50,7 +58,6 @@ public class AcidTongue extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isInnate=true;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

@@ -42,7 +42,7 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 18;
-        this.selfDamage = 6;
+        this.selfDamage = 5;
         this.upgradeDamage = 6;
 
         this.baseBlock = 10;

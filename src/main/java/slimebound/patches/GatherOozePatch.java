@@ -32,7 +32,7 @@ public class GatherOozePatch {
                     break;
 
                 case "RESULT":
-                    if (buttonPressed == 0 && !AbstractDungeon.player.hasRelic(AggressiveSlimeRelic.ID)) {
+                    if (buttonPressed == 0) {
                         meObj.imageEventText.updateBodyText("Feeling the sting of the goop as the prolonged exposure starts to melt away at your skin, you manage to fish out the #ygold - and find a #gfriend in the process!");
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(AggressiveSlimeRelic.ID).makeCopy());
                     }

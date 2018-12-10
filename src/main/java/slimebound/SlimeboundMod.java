@@ -32,6 +32,7 @@ import slimebound.cards.SlimeRitual;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.orbs.TorchHeadSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
@@ -73,6 +74,9 @@ public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscr
     public static int slimeTalkedDark = 0;
     public static boolean slimeTalkedCollector = false;
     public static boolean spritealtered = false;
+    public static boolean bumpnextlime = false;
+    public static SpawnedSlime mostRecentSlime;
+
 
 
     public static final String getResourcePath(String resource) {
@@ -357,16 +361,16 @@ public static String printString(String s){
         BaseMod.addKeyword(new String[]{"poisoning"}, "Applies 2 Poison each turn.");
         BaseMod.addKeyword(new String[]{"sliming"}, "Applies 2 Slimed each turn.");
         BaseMod.addKeyword(new String[]{"plated"}, "Increases Block each turn.  Reduced when you take damage.");
-        BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grant Block for next turn.");
+        BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grants Block for next turn.");
         BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 6 each turn and grants you an equal amount of Block.");
         BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
         BaseMod.addKeyword(new String[]{"halved"}, "Your Max HP is cut in half this combat, losing HP if you are currently above half, and preventing healing beyond half.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
         BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
-        BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack. Gain 1 Strength and Potency, 6 Block and heal 6 HP when Absorbed. If you have 6 Ghostflames, Absorb them all.");
+        BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency.");
         BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
-        BaseMod.addKeyword(new String[]{"transform"}, "Replace with a random new card.");
+        BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type.");
         BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
 
     }
@@ -442,14 +446,6 @@ public static String printString(String s){
     }
 
 
-    public static boolean hasDebuff(AbstractCreature c) {
-        for (AbstractPower power : c.powers) {
-            if (power.type == AbstractPower.PowerType.DEBUFF) {
-                return true;
-            }
-        }
-        return false;
-    }
 
 
     public void receiveCardUsed(AbstractCard c) {

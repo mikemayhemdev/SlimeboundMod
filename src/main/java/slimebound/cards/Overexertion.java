@@ -39,16 +39,6 @@ public class Overexertion extends AbstractSlimeboundCard {
     }
 
 
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-
-        if (p.exhaustPile.size() > 0) {
-            return true;
-        } else {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 

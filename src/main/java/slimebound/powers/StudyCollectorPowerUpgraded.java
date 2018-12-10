@@ -67,7 +67,15 @@ public class StudyCollectorPowerUpgraded extends AbstractPower {
 
         AbstractDungeon.actionManager.addToBottom(new RandomCollectorCardAction(true));
 
+        if (this.amount <= 1) {
 
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "StudyCollectorPowerUpgraded"));
+
+        } else {
+
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "StudyCollectorPowerUpgraded", 1));
+
+        }
     }
 
 

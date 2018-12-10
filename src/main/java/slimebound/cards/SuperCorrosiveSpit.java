@@ -14,6 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.PreventSlimeDecayPower;
 import slimebound.powers.SlimedPower;
 
 
@@ -49,6 +50,7 @@ public class SuperCorrosiveSpit extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
 
 
     }

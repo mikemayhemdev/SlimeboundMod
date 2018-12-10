@@ -30,72 +30,48 @@ public class StopTime extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
 
     private static final int COST = 0;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
-    public static boolean canPlay = true;
 
     public StopTime() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseBlock = 15;
-        this.magicNumber = this.baseMagicNumber = 2;
-
         this.exhaust = true;
-        this.canPlay = true;
+        //this.canPlay = true;
         this.isEthereal = true;
     }
 
 
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
 
-        if (!this.canPlay) {
-
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            return false;
-        } else {
-            return true;
-        }
-
-
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-
-
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(monster,p,1));
-
-
-                }
-            }
-        }
-
-
-        AbstractDungeon.overlayMenu.endTurnButton.disable(true);
 
         CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
 
+        AbstractDungeon.player.applyStartOfTurnPowers();
+        AbstractDungeon.player.applyStartOfTurnCards();
+        AbstractDungeon.player.applyStartOfTurnPostDrawRelics();
+        AbstractDungeon.player.applyStartOfTurnRelics();
+        AbstractDungeon.player.applyStartOfTurnPostDrawPowers();
+        AbstractDungeon.player.applyStartOfTurnOrbs();
+
+        if (upgraded){
+
+            AbstractDungeon.player.applyStartOfTurnPowers();
+            AbstractDungeon.player.applyStartOfTurnCards();
+            AbstractDungeon.player.applyStartOfTurnPostDrawRelics();
+            AbstractDungeon.player.applyStartOfTurnRelics();
+            AbstractDungeon.player.applyStartOfTurnPostDrawPowers();
+            AbstractDungeon.player.applyStartOfTurnOrbs();
+        }
+
+
+
 
     }
 
 
-    public void triggerOnCardPlayed(AbstractCard cardPlayed) {
-        this.canPlay = false;
-    }
-
-
-    public void atTurnStart() {
-        this.canPlay = true;
-    }
 
     public AbstractCard makeCopy() {
         return new StopTime();
@@ -104,7 +80,8 @@ public class StopTime extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

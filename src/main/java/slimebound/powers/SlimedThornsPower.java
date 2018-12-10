@@ -16,9 +16,9 @@ import slimebound.vfx.SlimeDripsEffectPurple;
 
 
 public class SlimedThornsPower extends AbstractPower {
-    public static final String POWER_ID = "SlimedPower";
+    public static final String POWER_ID = "SlimedThornsPower";
     public static final String NAME = "UsefulSlime";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/SlimedS.png";
     public boolean doubleUp = false;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
@@ -55,7 +55,7 @@ public class SlimedThornsPower extends AbstractPower {
 
     public void updateDescription() {
 
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount/2 + DESCRIPTIONS[2]);
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
 
     }

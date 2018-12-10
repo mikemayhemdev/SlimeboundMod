@@ -59,14 +59,15 @@ public class MegaLick extends AbstractSlimeboundCard {
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
                     AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(monster.hb.cX, monster.hb.cY, 3));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
+
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
                 }
             }
-          //  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+            if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         }
 
@@ -88,6 +89,8 @@ public class MegaLick extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

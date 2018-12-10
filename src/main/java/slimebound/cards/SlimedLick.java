@@ -52,7 +52,7 @@ public class SlimedLick extends AbstractSlimeboundCard {
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
 
     }
@@ -72,6 +72,8 @@ public class SlimedLick extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeMagicNumber(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

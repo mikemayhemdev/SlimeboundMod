@@ -26,7 +26,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -36,7 +36,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 5;
+        this.baseDamage = 4;
 
 
     }
@@ -48,8 +48,10 @@ public class LeechEnergy extends AbstractSlimeboundCard {
         if (m.hasPower("Poison")) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         }
-        if (m.hasPower("Weakened")) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        if (upgraded) {
+            if (m.hasPower("Weakened")) {
+                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+            }
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
@@ -69,7 +71,9 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(3);
+            upgradeDamage(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

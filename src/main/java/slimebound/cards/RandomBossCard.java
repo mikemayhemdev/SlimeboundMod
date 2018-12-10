@@ -3,6 +3,7 @@ package slimebound.cards;
 
 
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,7 +34,7 @@ public class RandomBossCard extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -44,7 +45,7 @@ public class RandomBossCard extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 4;
 
 
     }
@@ -55,6 +56,7 @@ public class RandomBossCard extends AbstractSlimeboundCard {
 
         Random random = new Random();
         Integer chosenRand = random.nextInt(8) + 1;
+        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
 
 
         switch (chosenRand) {
@@ -102,7 +104,7 @@ public class RandomBossCard extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(-2);
 
 
         }

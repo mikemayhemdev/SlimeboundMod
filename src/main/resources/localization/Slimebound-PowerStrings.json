@@ -71,11 +71,33 @@
 			" Block whenever you lose HP."
 		]
 	},
+	"LoseSlimesPower": {
+		"NAME": "Knowledge Pool",
+		"DESCRIPTIONS": [
+			"Next turn, Absorb all of your spawned slimes.",
+			" turns from now, Absorb all of your spawned slimes."
+		]
+	},
 	"LoseThornsPower": {
 		"NAME": "Retracting Spikes",
 		"DESCRIPTIONS": [
 			"Lose ",
 			" Thorns at the start of your next turn."
+		]
+	},
+	"SlimedThornsPower": {
+		"NAME": "Living Wall",
+		"DESCRIPTIONS": [
+			"Apply ",
+			" Slimed to attackers this turn."
+		]
+	},
+	"PreventSlimeDecayPower": {
+		"NAME": "Doused in Slime",
+		"DESCRIPTIONS": [
+			"Slimed will not decay this turn.",
+			"Slimed will not decay for the next ",
+			" turns."
 		]
 	},
 	"DuplicatedFormPower": {
@@ -150,7 +172,14 @@
 		"NAME": "Acid Tongue",
 		"DESCRIPTIONS": [
 			"Apply ",
-			" Poison whenever you apply Frail, Weaken, or Slimed."
+			" Poison whenever you apply Slimed."
+		]
+	},
+	"AcidTonguePowerUpgraded": {
+		"NAME": "Acid Tongue+",
+		"DESCRIPTIONS": [
+			"Apply ",
+			" Poison whenever you apply Weaken."
 		]
 	},
 	"SelfDamageSlimedPower": {

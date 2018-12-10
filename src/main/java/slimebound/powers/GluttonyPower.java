@@ -65,8 +65,9 @@ public class GluttonyPower extends AbstractPower {
 
         flash();
 
-        AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
-
+        for (int i = 0; i < this.amount; i++) {
+            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
+        }
 
     }
 

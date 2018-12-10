@@ -41,7 +41,7 @@ public class QuickTackle extends AbstractSlimeboundCard {
 
         this.baseDamage = this.originalDamage = 10;
         this.selfDamage = 3;
-        this.upgradeDamage = 3;
+        this.upgradeDamage = 2;
 
         this.magicNumber = this.baseMagicNumber = 1;
 
@@ -56,6 +56,8 @@ public class QuickTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
         AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
 
 
     }
@@ -75,6 +77,8 @@ public class QuickTackle extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(upgradeDamage);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

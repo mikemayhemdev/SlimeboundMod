@@ -16,7 +16,7 @@ import slimebound.vfx.SlimeFlareEffect;
 public class CultistSlime
         extends SpawnedSlime {
     public CultistSlime() {
-        super("CultistSlime", 6, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("SlimeboundImages/orbs/attackBuff.png"), "SlimeboundImages/orbs/cultist.png");
+        super("CultistSlime", 6,0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("SlimeboundImages/orbs/attackBuff.png"), "SlimeboundImages/orbs/cultist.png");
     }
 
 

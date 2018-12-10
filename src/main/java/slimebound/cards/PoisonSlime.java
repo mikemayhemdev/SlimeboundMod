@@ -37,7 +37,7 @@ public class PoisonSlime extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), this.upgraded, true));
 
     }
 
@@ -55,7 +55,9 @@ public class PoisonSlime extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
 

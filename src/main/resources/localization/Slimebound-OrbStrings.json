@@ -52,8 +52,7 @@
   "HexSlime": {
     "NAME": "Ghostflame Slime",
     "DESCRIPTION": [
-      "Does not attack.  When absorbed, gain ",
-      " Strength and Potency and an extra 3 Block and HP. NL If 6 Ghostflames exist at any point, Absorb them."
+      "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency."
     ]
   }
 }

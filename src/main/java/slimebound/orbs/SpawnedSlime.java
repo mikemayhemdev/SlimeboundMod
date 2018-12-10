@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import org.apache.logging.log4j.LogManager;
@@ -43,6 +44,7 @@ public abstract class SpawnedSlime
     public boolean activatedThisTurn = false;
     public int UniqueFocus;
     public boolean movesToAttack;
+    public int upgradedInitialBoost;
     public String originalRelic = "";
     public String[] descriptions;
     public com.badlogic.gdx.graphics.Texture intentImage;
@@ -52,7 +54,7 @@ public abstract class SpawnedSlime
     public String customDescription;
 
 
-    public SpawnedSlime(String ID, int passive, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
+    public SpawnedSlime(String ID, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
 
         this.ID = ID;
 
@@ -69,6 +71,7 @@ public abstract class SpawnedSlime
         this.passiveAmount = this.basePassiveAmount;
         this.OrbVFXColor = OrbFlareColor;
         this.intentImage = intentImage;
+        this.upgradedInitialBoost = initialBoost;
 
 
         this.channelAnimTimer = 0.5F;
@@ -77,13 +80,22 @@ public abstract class SpawnedSlime
         this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
 
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
+        SlimeboundMod.mostRecentSlime = this;
 
 
-        this.applyFocus();
+
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
+        this.applyFocus();
 
         updateDescription();
 
+        if (this instanceof HexSlime) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 3), 3));
+
+        }
 
     }
 
@@ -123,8 +135,12 @@ public abstract class SpawnedSlime
         AbstractPower power = AbstractDungeon.player.getPower("PotencyPower");
         if (power != null) {
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus;
-            updateDescription();
+
+        } else {
+            this.passiveAmount = this.basePassiveAmount + this.UniqueFocus;
+
         }
+        updateDescription();
     }
 
     public void applyUniqueFocus(int StrAmount) {
@@ -133,7 +149,7 @@ public abstract class SpawnedSlime
         this.UniqueFocus = this.UniqueFocus + StrAmount;
         this.passiveAmount = this.passiveAmount + StrAmount;
         updateDescription();
-        AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
+        //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
     }
 
 
@@ -142,10 +158,10 @@ public abstract class SpawnedSlime
 
 
         if (this instanceof HexSlime) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
-            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 6));
-            AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
 
         }
 

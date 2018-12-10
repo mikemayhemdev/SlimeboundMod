@@ -17,7 +17,7 @@ import slimebound.vfx.SlimeFlareEffect;
 public class PoisonSlime
         extends SpawnedSlime {
     public PoisonSlime() {
-        super("PoisonSlime", 2, true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
+        super("PoisonSlime", 2, 2,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
     }
 
 

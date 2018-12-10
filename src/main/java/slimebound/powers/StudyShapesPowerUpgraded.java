@@ -66,7 +66,15 @@ public class StudyShapesPowerUpgraded extends AbstractPower {
         flash();
 
         AbstractDungeon.actionManager.addToBottom(new RandomShapesCardAction(true));
+        if (this.amount <= 1) {
 
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "StudyShapesPowerUpgraded"));
+
+        } else {
+
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "StudyShapesPowerUpgraded", 1));
+
+        }
 
     }
 

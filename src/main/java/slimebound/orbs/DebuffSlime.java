@@ -23,7 +23,7 @@ public class DebuffSlime
 
     public DebuffSlime() {
 
-        super("DebuffSlime", 2, true, new Color(.83F, .83F, .39F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"), "SlimeboundImages/orbs/licking.png");
+        super("DebuffSlime", 2, 2,true, new Color(.83F, .83F, .39F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"), "SlimeboundImages/orbs/licking.png");
     }
 
 

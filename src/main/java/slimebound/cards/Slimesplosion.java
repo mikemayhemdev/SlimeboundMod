@@ -43,7 +43,7 @@ public class Slimesplosion extends AbstractSlimeboundCard {
 
         this.baseBlock = 10;
 
-        this.exhaust = true;
+      //  this.exhaust = true;
 
     }
 
