@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -55,7 +56,7 @@ public class SlimeAutoCultist extends AbstractGameAction {
             speedTime = 0.10F;
 
         }
-
+        CardCrawlGame.sound.playA("VO_CULTIST_1A", .3f);
         AbstractDungeon.actionManager.addToTop(new SlimeAutoCultistBuff(2,slime));
         AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),AE));
 

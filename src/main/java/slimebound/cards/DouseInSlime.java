@@ -2,20 +2,25 @@ package slimebound.cards;
 
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventSlimeDecayPower;
 import slimebound.powers.SlimedPower;
+import slimebound.vfx.SlimeProjectileEffect;
 
 
 public class DouseInSlime extends AbstractSlimeboundCard {
@@ -47,7 +52,8 @@ public class DouseInSlime extends AbstractSlimeboundCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        AbstractDungeon.effectList.add(new WeightyImpactEffect(m.hb.cX, m.hb.cY, Color.PURPLE));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.75F));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1, true, AbstractGameAction.AttackEffect.NONE));

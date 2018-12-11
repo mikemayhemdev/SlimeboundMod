@@ -348,8 +348,8 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply 2 Slimed to a random enemy !M! times. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Apply 2 Slimed to a random enemy !M! times."
+    "DESCRIPTION": "Apply 1 Slimed to a random enemy !M! times. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Apply 1 Slimed to a random enemy !M! times."
   },
 "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
@@ -447,7 +447,7 @@
   },
 "Slimebound:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Ethereal NL Remove all Debuffs. NL Gain !M! Strength, or !SlimePoison! Strength if you are below half HP. NL Ethereal",
+    "DESCRIPTION": "Ethereal NL Remove all Debuffs. NL Gain !M! Strength, or !SlimePoison! Strength if you are below half HP. NL Exhaust",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ] },
@@ -490,11 +490,11 @@
   },
 "Slimebound:DonusPower": {
     "NAME": "Donu's Power",
-    "DESCRIPTION": "Ethereal NL Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Gain 1 Strength and 1 Artifact. Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust"
   },
 "Slimebound:DecasProtection": {
     "NAME": "Deca's Protection",
-    "DESCRIPTION": "Ethereal NL Gain 1 Dexterity and 3 Plated Armor. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Gain 1 Dexterity and 3 Plated Armor. Add a random Power card to your hand. It costs 0 this turn. NL Exhaust"
   },
 "Slimebound:PolyBeam": {
     "NAME": "Poly Beam",

@@ -33,7 +33,7 @@ public class RainOfGoop extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 0;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 8;
         this.exhaust=true;
 
 
@@ -44,7 +44,7 @@ public class RainOfGoop extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new TendrilFlailAction(p,
 
-                AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber, 2));
+                AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber, 1));
 
     }
 

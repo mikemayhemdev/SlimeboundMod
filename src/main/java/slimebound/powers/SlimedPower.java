@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.vfx.FakeFlashAtkImgEffect;
 import slimebound.vfx.SlimeDripsEffectPurple;
 
 
@@ -59,6 +61,7 @@ public class SlimedPower extends AbstractPower {
     }
 
     public void onInitialApplication() {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),false)));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX, this.owner.hb.cY, 4), 0.05F));
 
@@ -67,6 +70,8 @@ public class SlimedPower extends AbstractPower {
 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
+        AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),false)));
+
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX, this.owner.hb.cY, 4), 0.05F));
 
 

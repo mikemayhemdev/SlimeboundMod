@@ -25,10 +25,6 @@ public class SlimedPotion extends CustomPotion {
         this.isThrown = true;
         this.targetRequired = true;
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(
-
-                com.megacrit.cardcrawl.helpers.TipHelper.capitalize(GameDictionary.POISON.NAMES[0]),
-                (String) GameDictionary.keywords.get(GameDictionary.POISON.NAMES[0])));
     }
 
     public void use(AbstractCreature target) {

@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
 public class GatherOozePatch {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-    public static void Postfix(GoopPuddle meObj, final int buttonPressed) {
+    public static void Prefix(GoopPuddle meObj, final int buttonPressed) {
         logger.info("Patch hit");
         if (!(AbstractDungeon.player instanceof SlimeboundCharacter)) return;
 
@@ -29,13 +29,14 @@ public class GatherOozePatch {
 
             switch (screenField.get(meObj).toString()) {
                 case "INTRO":
-                    break;
-
-                case "RESULT":
                     if (buttonPressed == 0) {
                         meObj.imageEventText.updateBodyText("Feeling the sting of the goop as the prolonged exposure starts to melt away at your skin, you manage to fish out the #ygold - and find a #gfriend in the process!");
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(AggressiveSlimeRelic.ID).makeCopy());
                     }
+                    break;
+
+                case "RESULT":
+
                     break;
             }
         } catch (Exception e) {

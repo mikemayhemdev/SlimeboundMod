@@ -28,7 +28,7 @@ public class LastStand extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "cards/laststand.png";
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
 

@@ -3,7 +3,9 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +16,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
+import slimebound.vfx.SlimeProjectileEffect;
 
 
 public class GoopSpray extends AbstractSlimeboundCard {
@@ -50,6 +53,14 @@ public class GoopSpray extends AbstractSlimeboundCard {
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if ((!monster.isDead) && (!monster.isDying)) {
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cY, p.hb.cX, monster.hb.cX, monster.hb.cY,3F,false,0.6F), 0.01F));
+
+
+                }
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
+            }
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
