@@ -5,6 +5,7 @@ package slimebound.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -46,8 +47,15 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
     }
 
-
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        int bonus = 0;
+        if (player.hasPower("Slimebound:TackleBuffPower")){
+            bonus = player.getPower("Slimebound:TackleBuffPower").amount;
+        }
+        return tmp + bonus;
+    }
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,"Slimebound:TackleBuffPower"));
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));

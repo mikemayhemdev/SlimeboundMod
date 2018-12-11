@@ -25,9 +25,9 @@
 	"Slimebound:SlimeSacrifice": {
 		"NAME": "Slime Sacrifice",
 		"DESCRIPTIONS": [
-			"Prevent the next time you would be damaged by an Attack this turn at the cost of your oldest Slime.",
+			"Prevent the next time you would be damaged by an Attack at the cost of your oldest Slime.",
 			"Prevent the next #b",
-			" times you would damaged by an Attack this turn at the cost of your oldest Slime."
+			" times you would damaged by an Attack at the cost of your oldest Slime."
 		]
 	},
 	"Slimebound:SplitForLessPower": {
@@ -190,11 +190,34 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "Momentum",
+		"NAME": "Follow Through",
 		"DESCRIPTIONS": [
-			"Tackle Attacks deal ",
-			" more damage, and ",
-			" more damage to you."
+			"Your next card containing Tackle deals ",
+			" more damage."
+		]
+	},
+	"Slimebound:PolyBeamAgainPower": {
+		"NAME": "Alternating Beam",
+		"DESCRIPTIONS": [
+			"Poly Beam will be played at the start of your next turn. ",
+			"Poly Beam will be played at the start of your next ",
+			" turns."
+		]
+	},
+	"Slimebound:PolyBeamAgainPowerUpgraded": {
+		"NAME": "Alternating Beam+",
+		"DESCRIPTIONS": [
+			"Poly Beam+ will be played at the start of your next turn. ",
+			"Poly Beam+ will be played at the start of your next ",
+			" turns."
+		]
+	},
+	"Slimebound:FirmFortitudePower": {
+		"NAME": "Firm Fortitude",
+		"DESCRIPTIONS": [
+			"Prevent the next time you would lose HP on your turn.",
+			"Prevent the next ",
+			" times you would lose HP on your turn."
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -273,6 +296,13 @@
 			"Gain a random Upgraded Awakened One card at the start of next turn.",
 			"Gain a random Upgraded Awakened One card at the start of your next ",
 			" turns."
+		]
+	},
+	"Slimebound:AwakenedOnePower": {
+		"NAME": "Dark Ritual",
+		"DESCRIPTIONS": [
+			"Gain ",
+			" Strength if this enemy does not attack on its turn."
 		]
 	},
 	"Slimebound:StudyChampPower": {

@@ -50,6 +50,7 @@ public abstract class SpawnedSlime
     public com.badlogic.gdx.graphics.Texture intentImage;
     private SlimeFlareEffect.OrbFlareColor OrbVFXColor;
     private Color deathColor;
+    public boolean noEvokeBonus;
 
     public String customDescription;
 
@@ -156,18 +157,18 @@ public abstract class SpawnedSlime
 
     public void onEvoke() {
 
+        if (!noEvokeBonus){
+            if (this instanceof HexSlime) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
 
-        if (this instanceof HexSlime) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
+            }
 
-        }
+        AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 
-            AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
-
-
+    }
         triggerEvokeAnimation();
 
     }

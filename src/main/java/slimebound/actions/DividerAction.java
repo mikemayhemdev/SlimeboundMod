@@ -49,7 +49,7 @@ public class DividerAction extends AbstractGameAction {
             }
             this.info.applyPowers(this.info.owner, this.target);
             this.target.damage(this.info);
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.info.owner, new SearingPower(this.target, this.info.owner, 1), 1, true, AttackEffect.NONE));
+          //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.info.owner, new SearingPower(this.target, this.info.owner, 1), 1, true, AttackEffect.NONE));
 
             if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
                 this.numTimes -= 1;

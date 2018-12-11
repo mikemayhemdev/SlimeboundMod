@@ -51,7 +51,8 @@ public class SlimeSacrificePower extends AbstractPower {
 
                         if (o instanceof SpawnedSlime) {
 
-                            o.evokeAmount = 0;
+                            SpawnedSlime s = (SpawnedSlime)o;
+                            s.noEvokeBonus = true;
                             this.flash();
                             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
                             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));

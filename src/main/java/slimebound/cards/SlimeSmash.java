@@ -67,7 +67,7 @@ public class SlimeSmash extends AbstractSlimeboundCard {
 
 
             AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower("Slimebound:SlimedPower").amount));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower("Slimebound:SlimedPower").amount / 2));
 
         }
 

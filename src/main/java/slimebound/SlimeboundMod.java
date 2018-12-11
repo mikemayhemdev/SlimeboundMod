@@ -191,7 +191,7 @@ public static String printString(String s){
         BaseMod.addCard(new slimebound.cards.MegaLick());
 
         BaseMod.addCard(new CullTheWeak());
-        BaseMod.addCard(new DiseasedTendril());
+        BaseMod.addCard(new SoulSicken());
        // BaseMod.addCard(new slimebound.cards.zzzFocusedLick());
         BaseMod.addCard(new HauntingLick());
         BaseMod.addCard(new AcidGelatin());
@@ -204,7 +204,7 @@ public static String printString(String s){
         BaseMod.addCard(new slimebound.cards.WasteNot());
         BaseMod.addCard(new HungryTackle());
         BaseMod.addCard(new slimebound.cards.FlameTackle());
-        BaseMod.addCard(new SlimeSlam());
+        BaseMod.addCard(new RollThrough());
         BaseMod.addCard(new ComboTackle());
         BaseMod.addCard(new GoopTackle());
         BaseMod.addCard(new VenomTackle());
@@ -244,7 +244,7 @@ public static String printString(String s){
         BaseMod.addCard(new slimebound.cards.Slimepotheosis());
         BaseMod.addCard(new slimebound.cards.FinishingTackle());
         BaseMod.addCard(new QuickStudy());
-        BaseMod.addCard(new slimebound.cards.AccelerateToxins());
+        BaseMod.addCard(new FirmFortitude());
         BaseMod.addCard(new Replication());
         BaseMod.addCard(new TimeRipple());
         BaseMod.addCard(new slimebound.cards.HeadSlam());
@@ -293,9 +293,9 @@ public static String printString(String s){
         UnlockTracker.unlockCard("FormABlockade");
         UnlockTracker.unlockCard("LeechingTouch");
         UnlockTracker.unlockCard("DuplicatedForm");
-        UnlockTracker.unlockCard("AccelerateToxins");
+        UnlockTracker.unlockCard("FirmFortitude");
         UnlockTracker.unlockCard("Dissolve");
-        UnlockTracker.unlockCard("SlimeSlam");
+        UnlockTracker.unlockCard("RollThrough");
         UnlockTracker.unlockCard("CorrosiveSpit");
         UnlockTracker.unlockCard("Regenerate");
         UnlockTracker.unlockCard("Recycling");
@@ -307,7 +307,7 @@ public static String printString(String s){
         UnlockTracker.unlockCard("MegaLick");
 
         UnlockTracker.unlockCard("CullTheWeak");
-        UnlockTracker.unlockCard("DiseasedTendril");
+        UnlockTracker.unlockCard("SoulSicken");
        // UnlockTracker.unlockCard("zzzFocusedLick");
         UnlockTracker.unlockCard("HauntingLick");
         UnlockTracker.unlockCard("AcidGelatin");
@@ -369,8 +369,11 @@ public static String printString(String s){
         BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
         BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency.");
         BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
-        BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type.");
+        BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type. It costs 1 less.");
         BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
+        BaseMod.addKeyword(new String[]{"purge"}, "Removed from the game entirely when played (not Exhausted).");
+        BaseMod.addKeyword(new String[]{"slow"}, "Receives 10% more damage per card played in a turn.");
+
 
     }
 

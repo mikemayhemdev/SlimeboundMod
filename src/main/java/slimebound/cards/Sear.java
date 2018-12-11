@@ -37,8 +37,8 @@ public class Sear extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = 8;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.baseDamage = 11;
+        this.magicNumber = this.baseMagicNumber = 3;
 
         this.exhaust = true;
         this.isEthereal = true;

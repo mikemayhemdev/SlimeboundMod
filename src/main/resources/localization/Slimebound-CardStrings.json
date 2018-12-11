@@ -82,7 +82,7 @@
 "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
     "DESCRIPTION": "Deal !D! damage. Split into a random slime. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Split into two random slimes. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Split into a random slime twice. NL Exhaust"
   },
 "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -91,8 +91,8 @@
   },
   "Slimebound:SlimeTap": {
       "NAME": "Slime Tap",
-      "DESCRIPTION": "Absorb your oldest Slime.  Gain [E] and draw 2 cards. NL Exhaust",
-      "UPGRADE_DESCRIPTION": "Absorb up to 2 of your oldest Slimes.  Gain [E] and draw 2 cards for each Absorbed. NL Exhaust",
+      "DESCRIPTION": "Absorb your oldest Slime.  Gain [E] [E] and draw 2 cards. NL Exhaust",
+      "UPGRADE_DESCRIPTION": "Absorb up to 2 of your oldest Slimes.  Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust",
       "EXTENDED_DESCRIPTION": [
         "Need... slimes..."
       ]
@@ -117,12 +117,11 @@
   },
 "Slimebound:SpikyOuterGoop": {
     "NAME": "Spiky Outer Goop",
-    "DESCRIPTION": "Gain !M! Thorns and !M! Self-Forming Goo."
+    "DESCRIPTION": "Gain !M! Thorns and !M! Plated Armor."
   },
 "Slimebound:SolidOuterGoop": {
     "NAME": "Solid Outer Goop",
-    "DESCRIPTION": "Gain 2 Dexterity and !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity and 4 Plated Armor."
+    "DESCRIPTION": "Gain 2 Dexterity and !M! Self-Forming Goo."
   },
 "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
@@ -130,7 +129,8 @@
   },
 "Slimebound:FormABlockade": {
     "NAME": "Form A Blockade",
-    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime."
+    "DESCRIPTION": "Split into a random slime. NL Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust",
+  "UPGRADE_DESCRIPTION": "Split into a random slime twice. NL Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust"
   },
 "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
@@ -171,17 +171,16 @@
   },
 "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "Morph a card in your hand and reduce its cost by 1 for the rest of combat. NL Exhaust",
+    "DESCRIPTION": "Morph a card in your hand. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Morph up to 2 cards in your hand and reduce their costs by 1 for the rest of combat. NL Exhaust"
   },
-"Slimebound:SlimeSlam": {
-    "NAME": "Slime Slam",
-    "DESCRIPTION": "Deal 9 damage plus your Block. (Deals !D! damage). NL Lose all Block.",
-    "UPGRADE_DESCRIPTION": "Deal 9 damage plus twice your Block. (Deals !D! damage). NL Lose all Block."
+"Slimebound:RollThrough": {
+    "NAME": "Roll Through",
+    "DESCRIPTION": "Deal !D! damage. NL Increase the damage of the next card containing \"Tackle\" by !M!."
   },
 "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "Morph all cards in your hand. Reduce their costs by 1 this combat. NL Exhaust"
+    "DESCRIPTION": "Morph all cards in your hand. NL Exhaust"
   },
 "Slimebound:SoTasty": {
     "NAME": "SO TASTY!",
@@ -239,9 +238,10 @@
     "NAME": "Cull the Frail",
     "DESCRIPTION": "If the target is Frail, remove all of their Block, then remove 1 Frail. NL Deal !D! damage."
   },
-"Slimebound:DiseasedTendril": {
-    "NAME": "Diseased Tendril",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison, plus additional Poison equal to the target's Slimed."
+"Slimebound:SoulSicken": {
+    "NAME": "Soul Sicken",
+    "DESCRIPTION": "Apply !M! Poison. Poison amount is increased by target's Slimed, and removes all Slimed. NL Exhaust",
+  "DESCRIPTION": "Apply !M! Poison. Poison amount is increased by target's Slimed, and removes all Slimed."
   },
 "Slimebound:AcidGelatin": {
     "NAME": "Acid Gelatin",
@@ -263,8 +263,12 @@
   },
 "Slimebound:TendrilStrike": {
     "NAME": "Tendril Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL If the enemy has Weak AND Poison, remove 1 of each and return this to your hand (once per turn).",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If the enemy has Weak AND Poison, remove 1 of each and return this to your hand (twice per turn)."
+    "DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect twice."
+},
+  "Slimebound:FirmFortitude": {
+    "NAME": "Firm Fortitude",
+    "DESCRIPTION": "Prevent the next !M! times you would lose HP on your turn. NL Exhaust"
   },
 "Slimebound:AccelerateToxins": {
     "NAME": "Accelerate Toxins",
@@ -377,13 +381,10 @@
     "NAME": "Leech Life",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Heal !M! HP. NL Exhaust"
   },
-"Slimebound:Equalize": {
+  "Slimebound:Equalize": {
     "NAME": "Equalize",
-    "DESCRIPTION": "Deal damage equal to half of your missing HP. (Deals !D! damage)."
-  },
-"Slimebound:RollThrough": {
-    "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL Slimed enemies."
+    "DESCRIPTION": "Deal !D! damage, heal !M! HP. NL This card is played twice if played while below half of max HP. NL Exhaust"
+
   },
 "Slimebound:DisruptingSlam": {
     "NAME": "Disrupting Slam",
@@ -391,7 +392,7 @@
   },
 "Slimebound:ChargeUp": {
     "NAME": "Charge Up",
-    "DESCRIPTION": "Ethereal NL Gain !B! Block. NL On your next turn, gain !M! Strength. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL On your next turn, gain !B! Block and !M! Strength. NL Exhaust"
   },
 "Slimebound:GuardianWhirl": {
     "NAME": "Guardian Whirl",
@@ -422,7 +423,7 @@
   },
 "Slimebound:Divider": {
     "NAME": "Divide",
-    "DESCRIPTION": "Ethereal NL Deal !D! damage to a random enemy !M! times. Each enemy hit takes a 1 additional damage every turn.  NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Deal !D! damage to a random enemy !M! times. NL Exhaust"
   },
 "Slimebound:PrepareBeam": {
     "NAME": "Prepare: Beam",
@@ -470,11 +471,11 @@
   },
 "Slimebound:DarkVoid": {
     "NAME": "Dark Void",
-    "DESCRIPTION": "Ethereal NL Deal !D! damage to ALL enemies. This combat, each enemy receives 10% more damage for each card played in a turn. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust"
   },
 "Slimebound:TimeRipple": {
     "NAME": "Time Ripple",
-    "DESCRIPTION": "Ethereal NL Gain !B! Block. NL Apply !M! Vulnerable and Weak to ALL enemies. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Gain !B! Block. NL Apply Slow to ALL enemies. Exhaust"
   },
 "Slimebound:HeadSlam": {
     "NAME": "Head Slam",
@@ -494,15 +495,16 @@
   },
 "Slimebound:DecasProtection": {
     "NAME": "Deca's Protection",
-    "DESCRIPTION": "Ethereal NL Gain 1 Dexterity and 3 Plated Armor. Add a random Power card to your hand. It costs 0 this turn. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Gain 1 Dexterity and 1 Artifact. Add a random Power card to your hand. It costs 0 this turn. NL Exhaust"
   },
 "Slimebound:PolyBeam": {
     "NAME": "Poly Beam",
-    "DESCRIPTION": "Ethereal NL Deal !D! damage twice. Damage is increased by 1 for each Power played this combat (Played !M! Powers). NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust",
+  "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust"
   },
 "Slimebound:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal NL Deal !D! damage. Enemy takes an additional !M! damage every turn this combat. NL Exhaust"
+    "DESCRIPTION": "Ethereal NL Deal !D! damage, plus an additional !M! damage every turn this combat. NL Exhaust"
   },
 "Slimebound:StudyAutomaton": {
     "NAME": "Study Automaton",

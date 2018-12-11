@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import slimebound.SlimeboundMod;
+import slimebound.powers.AwakenedOnePower;
 
 
 public class DarkVoid extends AbstractSlimeboundCard {
@@ -59,7 +60,7 @@ public class DarkVoid extends AbstractSlimeboundCard {
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlowPower(monster, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new AwakenedOnePower(monster, p,1), 1, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }

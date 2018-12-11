@@ -4,9 +4,11 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -31,6 +33,7 @@ public class Equalize extends AbstractSlimeboundCard {
     private static final int POWER = 6;
     public int missingHealth;
     private static final int UPGRADE_BONUS = 3;
+    private boolean isACopy;
 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
@@ -38,34 +41,44 @@ public class Equalize extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        if (AbstractDungeon.player != null) {
-            this.baseDamage = (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth) / 2;
-        } else{
-            this.baseDamage = 0;
-        }
+
+            this.baseDamage = 7;
+            this.magicNumber = this.baseMagicNumber = 7;
+        this.exhaust = true;
 
     }
 
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-
-
-        int bonus = (player.maxHealth - player.currentHealth) / 2;
-
-
-        if (bonus > 0) {
-            this.isDamageModified = true;
-        }
-        return tmp + bonus;
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.baseDamage = 0;
+
 
         logger.info("max health: " + p.maxHealth + ", current health: " + p.currentHealth);
+        if (p.currentHealth <= (p.maxHealth / 2F) && !this.isACopy)
+        {
+            //this.isACopy = true;
+            AbstractCard tmp = this.makeStatEquivalentCopy();
+            Equalize tmpEq = (Equalize)tmp;
 
+            tmpEq.isACopy=true;
+            AbstractDungeon.player.limbo.addToBottom(tmpEq);
+            tmpEq.current_x = this.current_x;
+            tmpEq.current_y = this.current_y;
+            tmpEq.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+            tmpEq.target_y = (Settings.HEIGHT / 2.0F);
+            tmpEq.freeToPlayOnce = true;
+
+            //if (m != null) {
+            tmpEq.calculateCardDamage(m);
+
+
+            tmpEq.purgeOnUse = true;
+            AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmpEq, m, this.energyOnUse));
+
+        }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
+        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
     }
+
 
 
     public AbstractCard makeCopy() {
@@ -80,7 +93,8 @@ public class Equalize extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeDamage(3);
+            upgradeMagicNumber(3);
 
 
         }

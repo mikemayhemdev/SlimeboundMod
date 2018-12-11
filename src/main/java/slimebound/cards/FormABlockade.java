@@ -12,8 +12,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import slimebound.SlimeboundMod;
+import slimebound.actions.FormABlockadeAction;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+
+import java.util.Random;
 
 
 public class FormABlockade extends AbstractSlimeboundCard {
@@ -38,18 +42,42 @@ public class FormABlockade extends AbstractSlimeboundCard {
 
         this.baseBlock = 5;
         this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust=true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
-        for (AbstractOrb o : p.orbs) {
+        Random random = new Random();
+        Integer chosenRand = random.nextInt(4);
 
-            if (o instanceof SpawnedSlime) {
-                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.magicNumber));
+
+        if (chosenRand == 0) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+        } else if (chosenRand == 1) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+        } else if (chosenRand == 2) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+        }
+
+        if (upgraded) {
+            chosenRand = random.nextInt(4);
+
+
+            if (chosenRand == 0) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+            } else if (chosenRand == 1) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+            } else if (chosenRand == 2) {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+
 
             }
         }
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new FormABlockadeAction(this.magicNumber));
     }
 
     public AbstractCard makeCopy() {
@@ -59,8 +87,10 @@ public class FormABlockade extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(1);
+            //upgradeBlock(1);
             upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
