@@ -41,6 +41,11 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
 
     }
+    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int count, int upgradedamount){
+        this(newOrbType,upgraded,SelfDamage,count);
+
+        this.upgradedamount = upgradedamount;
+    }
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
 

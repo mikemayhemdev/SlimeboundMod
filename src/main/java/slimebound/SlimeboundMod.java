@@ -179,8 +179,9 @@ public static String printString(String s){
         BaseMod.addCard(new Chomp());
         BaseMod.addCard(new StrayGoop());
         BaseMod.addCard(new OozeBath());
-        BaseMod.addCard(new SoTasty());
+        //BaseMod.addCard(new zzzSoTasty());
         BaseMod.addCard(new LivingWall());
+        BaseMod.addCard(new GangUp());
         BaseMod.addCard(new SolidOuterGoop());
         BaseMod.addCard(new slimebound.cards.Dissolve());
         BaseMod.addCard(new slimebound.cards.DuplicatedForm());
@@ -288,7 +289,8 @@ public static String printString(String s){
         UnlockTracker.unlockCard(Chomp.ID);
         UnlockTracker.unlockCard(StrayGoop.ID);
         UnlockTracker.unlockCard(OozeBath.ID);
-        UnlockTracker.unlockCard(SoTasty.ID);
+        UnlockTracker.unlockCard(GangUp.ID);
+      // UnlockTracker.unlockCard(zzzSoTasty.ID);
         UnlockTracker.unlockCard(LivingWall.ID);
         UnlockTracker.unlockCard(FormABlockade.ID);
         UnlockTracker.unlockCard(LeechingTouch.ID);
