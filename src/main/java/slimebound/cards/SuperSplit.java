@@ -58,13 +58,13 @@ public class SuperSplit extends AbstractSlimeboundCard {
 
 
             if (chosenRand == 0) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
             } else if (chosenRand == 1) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
+                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
             } else if (chosenRand == 2) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
+                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
             } else {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
             }
         }
 

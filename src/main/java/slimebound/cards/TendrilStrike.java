@@ -45,7 +45,7 @@ public class TendrilStrike extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 5;
+        this.baseDamage = 3;
         this.returnThis = false;
         this.tags.add(AbstractCard.CardTags.STRIKE);
 

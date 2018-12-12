@@ -21,14 +21,24 @@ public class SlimeSpawnAction extends AbstractGameAction {
     private boolean upgraded = false;
     private int currentAmount;
     private int upgradedamount;
+    private int count;
 
 
-    public SlimeSpawnAction(AbstractOrb newOrbType, boolean selfDamage) {
+    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int count) {
 
-        this(newOrbType, true, selfDamage);
+        this.duration = Settings.ACTION_DUR_FAST;
+
+        this.orbType = newOrbType;
+
+        this.upgraded = upgraded;
+        this.SelfDamage = SelfDamage;
+        this.currentAmount = 3;
+        SpawnedSlime s = (SpawnedSlime) newOrbType;
+        this.upgradedamount = s.upgradedInitialBoost;
+        this.count = count;
+
 
     }
-
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
 
@@ -41,6 +51,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
         this.currentAmount = 3;
         SpawnedSlime s = (SpawnedSlime) newOrbType;
         this.upgradedamount = s.upgradedInitialBoost;
+        this.count = 1;
 
 
     }
@@ -48,30 +59,32 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
     public void update() {
 
-        if (SelfDamage) {
+        for (int i = 0; i < count; i++) {
 
-            if (currentAmount >= AbstractDungeon.player.currentHealth) {
-                AbstractDungeon.effectList.add(new SpeechBubble(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 1.0F, "Need... health...", true));
-                this.isDone = true;
-                return;
+            if (SelfDamage) {
+
+                if (currentAmount >= AbstractDungeon.player.currentHealth && !AbstractDungeon.player.hasPower("Buffer") && !AbstractDungeon.player.hasPower("FirmFortitudePower")) {
+                    AbstractDungeon.effectList.add(new SpeechBubble(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 1.0F, "Need... health...", true));
+                    this.isDone = true;
+                    return;
+                }
+                if (currentAmount > 0)
+                    AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, this.currentAmount));
             }
-            if (currentAmount > 0)
-                AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, this.currentAmount));
+            AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
+
+
+            AbstractDungeon.player.channelOrb(this.orbType);
+
+
+            if (this.upgraded) {
+                AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
+            }
+            tickDuration();
+
+
         }
-        AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
-
-
-        AbstractDungeon.player.channelOrb(this.orbType);
-
-
-        if (this.upgraded){
-            AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
-        }
-
-
-
-        tickDuration();
 
         this.isDone = true;
 

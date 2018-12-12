@@ -262,7 +262,7 @@
     "UPGRADE_DESCRIPTION": "Apply !M! Poison whenever you apply Weak or Slimed."
   },
 "Slimebound:TendrilStrike": {
-    "NAME": "Tendril Strike",
+    "NAME": "Toxin Strike",
     "DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect.",
     "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect twice."
 },
