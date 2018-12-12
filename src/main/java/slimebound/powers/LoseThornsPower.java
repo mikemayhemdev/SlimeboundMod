@@ -20,6 +20,7 @@ public class LoseThornsPower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
+    private static boolean naturalclear = false;
 
 
     public LoseThornsPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -65,15 +66,16 @@ public class LoseThornsPower extends AbstractPower {
 
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:LoseThornsPower"));
-
+        this.naturalclear = true;
 
     }
 
 
     public void onRemove() {
-
-        if (this.owner.getPower("Thorns").amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Thorns"));
+        if (naturalclear) {
+            if (this.owner.getPower("Thorns").amount <= 0) {
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Thorns"));
+            }
         }
     }
 }

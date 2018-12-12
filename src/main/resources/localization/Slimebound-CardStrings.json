@@ -143,7 +143,7 @@
 "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
     "DESCRIPTION": "Become Halved. NL Gain [E] and draw 1 card each turn. NL The first card you play each turn that targets enemies is played twice.",
-    "UPGRADE_DESCRIPTION": "Become Halved. NL Gain [E] and draw 1 card each turn. NL The first 2 cards you play each turn that targets enemies is played twice.",
+    "UPGRADE_DESCRIPTION": "Become Halved. NL Gain [E] and draw 1 card each turn. NL The first 2 cards you play each turn that targets enemies are played twice.",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ]

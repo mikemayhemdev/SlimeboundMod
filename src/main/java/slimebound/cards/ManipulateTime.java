@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.TriggerStartOfTurnEffectsAction;
 
 
 public class ManipulateTime extends AbstractSlimeboundCard {
@@ -44,21 +45,11 @@ public class ManipulateTime extends AbstractSlimeboundCard {
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
 
-        AbstractDungeon.player.applyStartOfTurnPowers();
-        AbstractDungeon.player.applyStartOfTurnCards();
-        AbstractDungeon.player.applyStartOfTurnPostDrawRelics();
-        AbstractDungeon.player.applyStartOfTurnRelics();
-        AbstractDungeon.player.applyStartOfTurnPostDrawPowers();
-        AbstractDungeon.player.applyStartOfTurnOrbs();
-
+        AbstractDungeon.actionManager.addToBottom(new TriggerStartOfTurnEffectsAction(p));
         if (upgraded){
 
-            AbstractDungeon.player.applyStartOfTurnPowers();
-            AbstractDungeon.player.applyStartOfTurnCards();
-            AbstractDungeon.player.applyStartOfTurnPostDrawRelics();
-            AbstractDungeon.player.applyStartOfTurnRelics();
-            AbstractDungeon.player.applyStartOfTurnPostDrawPowers();
-            AbstractDungeon.player.applyStartOfTurnOrbs();
+            AbstractDungeon.actionManager.addToBottom(new TriggerStartOfTurnEffectsAction(p));
+
         }
 
 

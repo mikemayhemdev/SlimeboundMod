@@ -23,6 +23,7 @@ public class LoseSlimesPower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
+    private static boolean naturalclear = false;
 
 
     public LoseSlimesPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -73,7 +74,7 @@ public class LoseSlimesPower extends AbstractPower {
 
 
         if (this.amount <= 1) {
-
+            this.naturalclear = true;
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:LoseSlimesPower"));
 
         } else {
@@ -86,17 +87,19 @@ public class LoseSlimesPower extends AbstractPower {
 
 
     public void onRemove() {
-        if (!AbstractDungeon.player.orbs.isEmpty()) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+        if (naturalclear) {
+            if (!AbstractDungeon.player.orbs.isEmpty()) {
+                for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o instanceof SpawnedSlime) {
+                    if (o instanceof SpawnedSlime) {
 
 
-                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+                        AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
 
+                    }
                 }
-            }
 
+            }
         }
 
 
