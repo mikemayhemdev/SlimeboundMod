@@ -16,6 +16,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.FinishingTackleAction;
 import slimebound.actions.ReturnRandom0Cost;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.TackleBuffPower;
 
 
 public class FinishingTackle extends AbstractSlimeboundCard {
@@ -54,7 +55,7 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,"Slimebound:TackleBuffPower"));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
         AbstractDungeon.actionManager.addToBottom(new FinishingTackleAction(p,m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn),this.block));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
@@ -65,8 +66,8 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
-        if (player.hasPower("Slimebound:TackleBuffPower")){
-            bonus = player.getPower("Slimebound:TackleBuffPower").amount;
+        if (player.hasPower(TackleBuffPower.POWER_ID)){
+            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
         }
         return tmp + bonus;
     }

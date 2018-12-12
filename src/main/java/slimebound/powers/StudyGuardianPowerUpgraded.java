@@ -69,11 +69,11 @@ public class StudyGuardianPowerUpgraded extends AbstractPower {
 
         if (this.amount <= 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:StudyGuardianPowerUpgraded"));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudyGuardianPowerUpgraded.POWER_ID));
 
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "Slimebound:StudyGuardianPowerUpgraded", 1));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudyGuardianPowerUpgraded.POWER_ID, 1));
 
         }
     }

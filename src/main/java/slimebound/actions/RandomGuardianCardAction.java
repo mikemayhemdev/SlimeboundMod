@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.ChargeUp;
+import slimebound.cards.DefensiveMode;
+import slimebound.cards.GuardianWhirl;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomGuardianCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:ChargeUp").makeCopy();
+                c = CardLibrary.getCard(ChargeUp.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:DefensiveMode").makeCopy();
+                c = CardLibrary.getCard(DefensiveMode.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:GuardianWhirl").makeCopy();
+                c = CardLibrary.getCard(GuardianWhirl.ID).makeCopy();
                 break;
         }
 

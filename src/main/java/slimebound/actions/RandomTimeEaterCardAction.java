@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.HeadSlam;
+import slimebound.cards.ManipulateTime;
+import slimebound.cards.TimeRipple;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomTimeEaterCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:TimeRipple").makeCopy();
+                c = CardLibrary.getCard(TimeRipple.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:ManipulateTime").makeCopy();
+                c = CardLibrary.getCard(ManipulateTime.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:HeadSlam").makeCopy();
+                c = CardLibrary.getCard(HeadSlam.ID).makeCopy();
                 break;
         }
 

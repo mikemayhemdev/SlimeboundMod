@@ -71,7 +71,7 @@ public class AwakenedOnePower extends AbstractPower {
         {
             AbstractCreature p = AbstractDungeon.player;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:AwakenedOnePower"));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, AwakenedOnePower.POWER_ID));
 
 
         }

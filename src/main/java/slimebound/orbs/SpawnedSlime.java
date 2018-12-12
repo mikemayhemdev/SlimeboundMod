@@ -50,6 +50,7 @@ public abstract class SpawnedSlime
     public com.badlogic.gdx.graphics.Texture intentImage;
     private SlimeFlareEffect.OrbFlareColor OrbVFXColor;
     private Color deathColor;
+    public static String orbID = "";
     public boolean noEvokeBonus;
 
     public String customDescription;
@@ -133,7 +134,7 @@ public abstract class SpawnedSlime
 
     public void applyFocus() {
         super.applyFocus();
-        AbstractPower power = AbstractDungeon.player.getPower("Slimebound:PotencyPower");
+        AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         if (power != null) {
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus;
 

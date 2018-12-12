@@ -81,14 +81,14 @@ public class SlimedPower extends AbstractPower {
 
     public void atStartOfTurn() {
 
-        if (!this.owner.hasPower("Slimebound:PreventSlimeDecayPower")) {
+        if (!this.owner.hasPower(PreventSlimeDecayPower.POWER_ID)) {
             if (this.amount <= 1) {
 
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:Slimebound:SlimedPower"));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, SlimedPower.POWER_ID));
 
             } else {
 
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "Slimebound:SlimedPower", this.amount / 2));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, SlimedPower.POWER_ID, this.amount / 2));
 
             }
         }
@@ -116,7 +116,7 @@ public class SlimedPower extends AbstractPower {
                 this.triggered = true;
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, this.amount / 2));
 
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:SlimedPower"));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, SlimedPower.POWER_ID));
             }
 
 

@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.Flail;
+import slimebound.cards.HyperBeamSlimedbound;
+import slimebound.cards.SplitBronze;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomAutomatonCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:SplitBronze").makeCopy();
+                c = CardLibrary.getCard(SplitBronze.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:HyperBeamSlimedbound").makeCopy();
+                c = CardLibrary.getCard(HyperBeamSlimedbound.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:Flail").makeCopy();
+                c = CardLibrary.getCard(Flail.ID).makeCopy();
                 break;
         }
 

@@ -16,6 +16,7 @@ import slimebound.vfx.SlimeFlareEffect;
 
 public class TorchHeadSlime
         extends SpawnedSlime {
+    public static final String ID = "Slimebound:TorchHeadSlime";
 
 
     private float fireTimer = 0.0F;
@@ -23,7 +24,7 @@ public class TorchHeadSlime
 
     public TorchHeadSlime() {
 
-        super("Slimebound:TorchHeadSlime", 9, 0,true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
+        super(ID, 9, 0,true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
 
     }
 

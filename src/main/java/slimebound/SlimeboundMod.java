@@ -116,7 +116,7 @@ public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscr
 
                 for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                    if (o.ID == "Slimebound:SplitTorchHead") {
+                    if (o.ID == TorchHeadSlime.ID) {
                         logger.info("Sending power amount" + power.amount);
                         ((TorchHeadSlime) o).applyUniqueFocus(power.amount);
                     }
@@ -256,89 +256,89 @@ public static String printString(String s){
         BaseMod.addCard(new GrowthPunch());
         BaseMod.addCard(new slimebound.cards.Recycling());
         BaseMod.addCard(new slimebound.cards.Recollect());
-        UnlockTracker.unlockCard("Strike_Slimebound");
-        UnlockTracker.unlockCard("Defend_Slimebound");
-        UnlockTracker.unlockCard("SplitBronze");
-        UnlockTracker.unlockCard("LevelUp");
-        UnlockTracker.unlockCard("SplitTorchHead");
-        UnlockTracker.unlockCard("SplitAttack");
-        UnlockTracker.unlockCard("SplitCultist");
-        UnlockTracker.unlockCard("SplitWeaken");
-        UnlockTracker.unlockCard("SplitPoison");
-        UnlockTracker.unlockCard("SplitSliming");
-        UnlockTracker.unlockCard("SlimeSacrifice");
-        //UnlockTracker.unlockCard("zzzAbsorbAll");
-        UnlockTracker.unlockCard("Overexert");
-        UnlockTracker.unlockCard("Split");
-        UnlockTracker.unlockCard("SuperSplit");
-        UnlockTracker.unlockCard("DivideAndConquer");
-        UnlockTracker.unlockCard("LeadByExample");
-        UnlockTracker.unlockCard("SlimeTap");
-        UnlockTracker.unlockCard("RainOfGoop");
-        UnlockTracker.unlockCard("Teamwork");
-        UnlockTracker.unlockCard("SlimeBarrage");
-        UnlockTracker.unlockCard("SlimeBrawl");
-        //UnlockTracker.unlockCard("zzzMaxSlimes");
-        UnlockTracker.unlockCard("StudyTheSpire");
-        UnlockTracker.unlockCard("SolidOuterGoop");
-        UnlockTracker.unlockCard("SlimeSpikes");
-        UnlockTracker.unlockCard("SpikyOuterGoop");
-        UnlockTracker.unlockCard("MassRepurpose");
-        UnlockTracker.unlockCard("DouseInSlime");
-        UnlockTracker.unlockCard("Chomp");
-        UnlockTracker.unlockCard("StrayGoop");
-        UnlockTracker.unlockCard("OozeBath");
-        UnlockTracker.unlockCard("SoTasty");
-        UnlockTracker.unlockCard("LivingWall");
-        UnlockTracker.unlockCard("FormABlockade");
-        UnlockTracker.unlockCard("LeechingTouch");
-        UnlockTracker.unlockCard("DuplicatedForm");
-        UnlockTracker.unlockCard("FirmFortitude");
-        UnlockTracker.unlockCard("Dissolve");
-        UnlockTracker.unlockCard("RollThrough");
-        UnlockTracker.unlockCard("CorrosiveSpit");
-        UnlockTracker.unlockCard("Regenerate");
-        UnlockTracker.unlockCard("Recycling");
-        UnlockTracker.unlockCard("GrowthPunch");
-        UnlockTracker.unlockCard("Recollect");
-        UnlockTracker.unlockCard("FormOfPuddle");
-        UnlockTracker.unlockCard("Gluttony");
-        UnlockTracker.unlockCard("Lick");
-        UnlockTracker.unlockCard("MegaLick");
+        UnlockTracker.unlockCard(Strike_Slimebound.ID);
+        UnlockTracker.unlockCard(Defend_Slimebound.ID);
+        UnlockTracker.unlockCard(SplitBronze.ID);
+        UnlockTracker.unlockCard(LevelUp.ID);
+        UnlockTracker.unlockCard(SplitTorchHead.ID);
+        UnlockTracker.unlockCard(SplitAttack.ID);
+        UnlockTracker.unlockCard(SplitCultist.ID);
+        UnlockTracker.unlockCard(SplitWeaken.ID);
+        UnlockTracker.unlockCard(SplitPoison.ID);
+        UnlockTracker.unlockCard(SplitSliming.ID);
+        UnlockTracker.unlockCard(SlimeSacrifice.ID);
+        //UnlockTracker.unlockCard(zzzAbsorbAll.ID);
+        UnlockTracker.unlockCard(Overexert.ID);
+        UnlockTracker.unlockCard(Split.ID);
+        UnlockTracker.unlockCard(SuperSplit.ID);
+        UnlockTracker.unlockCard(DivideAndConquer.ID);
+        UnlockTracker.unlockCard(LeadByExample.ID);
+        UnlockTracker.unlockCard(SlimeTap.ID);
+        UnlockTracker.unlockCard(RainOfGoop.ID);
+        UnlockTracker.unlockCard(Teamwork.ID);
+        UnlockTracker.unlockCard(SlimeBarrage.ID);
+        UnlockTracker.unlockCard(SlimeBrawl.ID);
+        //UnlockTracker.unlockCard(zzzMaxSlimes.ID);
+        UnlockTracker.unlockCard(StudyTheSpire.ID);
+        UnlockTracker.unlockCard(SolidOuterGoop.ID);
+        UnlockTracker.unlockCard(SlimeSpikes.ID);
+        UnlockTracker.unlockCard(SpikyOuterGoop.ID);
+        UnlockTracker.unlockCard(MassRepurpose.ID);
+        UnlockTracker.unlockCard(DouseInSlime.ID);
+        UnlockTracker.unlockCard(Chomp.ID);
+        UnlockTracker.unlockCard(StrayGoop.ID);
+        UnlockTracker.unlockCard(OozeBath.ID);
+        UnlockTracker.unlockCard(SoTasty.ID);
+        UnlockTracker.unlockCard(LivingWall.ID);
+        UnlockTracker.unlockCard(FormABlockade.ID);
+        UnlockTracker.unlockCard(LeechingTouch.ID);
+        UnlockTracker.unlockCard(DuplicatedForm.ID);
+        UnlockTracker.unlockCard(FirmFortitude.ID);
+        UnlockTracker.unlockCard(Dissolve.ID);
+        UnlockTracker.unlockCard(RollThrough.ID);
+        UnlockTracker.unlockCard(CorrosiveSpit.ID);
+        UnlockTracker.unlockCard(Regenerate.ID);
+        UnlockTracker.unlockCard(Recycling.ID);
+        UnlockTracker.unlockCard(GrowthPunch.ID);
+        UnlockTracker.unlockCard(Recollect.ID);
+        UnlockTracker.unlockCard(FormOfPuddle.ID);
+        UnlockTracker.unlockCard(Gluttony.ID);
+        UnlockTracker.unlockCard(Lick.ID);
+        UnlockTracker.unlockCard(MegaLick.ID);
 
-        UnlockTracker.unlockCard("CullTheWeak");
-        UnlockTracker.unlockCard("SoulSicken");
-       // UnlockTracker.unlockCard("zzzFocusedLick");
-        UnlockTracker.unlockCard("HauntingLick");
-        UnlockTracker.unlockCard("AcidGelatin");
-        UnlockTracker.unlockCard("QuickLick");
-        UnlockTracker.unlockCard("Replication");
-        UnlockTracker.unlockCard("QuickStudy");
-        UnlockTracker.unlockCard("FinishingTackle");
-        UnlockTracker.unlockCard("Slimepotheosis");
-        UnlockTracker.unlockCard("TongueLash");
-        UnlockTracker.unlockCard("PoisonLick");
-        UnlockTracker.unlockCard("ItLooksTasty");
-        UnlockTracker.unlockCard("AcidTongue");
-        UnlockTracker.unlockCard("TendrilStrike");
-        UnlockTracker.unlockCard("WasteNot");
-        UnlockTracker.unlockCard("HungryTackle");
-        UnlockTracker.unlockCard("VenomTackle");
-        UnlockTracker.unlockCard("GoopTackle");
-        UnlockTracker.unlockCard("FlameTackle");
-        UnlockTracker.unlockCard("GoopSpray");
-        UnlockTracker.unlockCard("ComboTackle");
-        UnlockTracker.unlockCard("Grow");
-        UnlockTracker.unlockCard("Prepare");
-        UnlockTracker.unlockCard("MassFeed");
-        UnlockTracker.unlockCard("SlimeSmash");
-        UnlockTracker.unlockCard("LeechEnergy");
-        UnlockTracker.unlockCard("LeechLife");
-        UnlockTracker.unlockCard("Equalize");
+        UnlockTracker.unlockCard(CullTheWeak.ID);
+        UnlockTracker.unlockCard(SoulSicken.ID);
+       // UnlockTracker.unlockCard(zzzFocusedLick.ID);
+        UnlockTracker.unlockCard(HauntingLick.ID);
+        UnlockTracker.unlockCard(AcidGelatin.ID);
+        UnlockTracker.unlockCard(QuickLick.ID);
+        UnlockTracker.unlockCard(Replication.ID);
+        UnlockTracker.unlockCard(QuickStudy.ID);
+        UnlockTracker.unlockCard(FinishingTackle.ID);
+        UnlockTracker.unlockCard(Slimepotheosis.ID);
+        UnlockTracker.unlockCard(TongueLash.ID);
+        UnlockTracker.unlockCard(PoisonLick.ID);
+        UnlockTracker.unlockCard(ItLooksTasty.ID);
+        UnlockTracker.unlockCard(AcidTongue.ID);
+        UnlockTracker.unlockCard(TendrilStrike.ID);
+        UnlockTracker.unlockCard(WasteNot.ID);
+        UnlockTracker.unlockCard(HungryTackle.ID);
+        UnlockTracker.unlockCard(VenomTackle.ID);
+        UnlockTracker.unlockCard(GoopTackle.ID);
+        UnlockTracker.unlockCard(FlameTackle.ID);
+        UnlockTracker.unlockCard(GoopSpray.ID);
+        UnlockTracker.unlockCard(ComboTackle.ID);
+        UnlockTracker.unlockCard(Grow.ID);
+        UnlockTracker.unlockCard(Prepare.ID);
+        UnlockTracker.unlockCard(MassFeed.ID);
+        UnlockTracker.unlockCard(SlimeSmash.ID);
+        UnlockTracker.unlockCard(LeechEnergy.ID);
+        UnlockTracker.unlockCard(LeechLife.ID);
+        UnlockTracker.unlockCard(Equalize.ID);
 
-        UnlockTracker.unlockCard("DisruptingSlam");
-        UnlockTracker.unlockCard("PrepareCrush");
-        UnlockTracker.unlockCard("Repurpose");
+        UnlockTracker.unlockCard(DisruptingSlam.ID);
+        UnlockTracker.unlockCard(PrepareCrush.ID);
+        UnlockTracker.unlockCard(Repurpose.ID);
 
 
     }
@@ -421,7 +421,7 @@ public static String printString(String s){
             if (player.chosenClass.name() == "SLIMEBOUND") {
 
 
-                AbstractCard slimeCard = CardLibrary.getCard("Slimebound:UsefulSlime").makeCopy();
+                AbstractCard slimeCard = CardLibrary.getCard(UsefulSlime.ID).makeCopy();
                 AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, player.hand));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(slimeCard));
             }
@@ -444,7 +444,7 @@ public static String printString(String s){
 
         logger.info("Done loading badge Image and mod options");
 
-        BaseMod.addPotion(SlimedPotion.class, Color.GREEN, Color.GREEN, Color.GREEN, "Slimebound:SlimedPotion", SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SlimedPotion.class, Color.GREEN, Color.GREEN, Color.GREEN, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
     }
 
 
@@ -475,8 +475,6 @@ public static String printString(String s){
         powersPlayedThisCombat = 0;
 
     }
-
-
 
 }
 

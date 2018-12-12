@@ -68,11 +68,11 @@ public class StudyChampPower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new RandomChampCardAction(false));
         if (this.amount <= 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:StudyChampPower"));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudyChampPower.POWER_ID));
 
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "Slimebound:StudyChampPower", 1));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudyChampPower.POWER_ID, 1));
 
         }
 

@@ -14,9 +14,11 @@ import slimebound.vfx.SlimeFlareEffect;
 
 public class AttackSlime
         extends SpawnedSlime {
+    public static final String ID = "Slimebound:AttackSlime";
 
     public AttackSlime() {
-        super("Slimebound:AttackSlime", 5, 2, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("SlimeboundImages/orbs/3.png"), "SlimeboundImages/orbs/aggressive.png");
+
+        super(ID, 5, 2, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("SlimeboundImages/orbs/3.png"), "SlimeboundImages/orbs/aggressive.png");
 
     }
 

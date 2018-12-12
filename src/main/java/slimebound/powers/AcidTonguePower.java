@@ -51,7 +51,7 @@ public class AcidTonguePower extends AbstractPower {
 
 
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID == "Slimebound:SlimedPower") {
+        if (power.ID == SlimedPower.POWER_ID) {
             if (source == AbstractDungeon.player) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, source, new PoisonPower(target, source, this.amount), this.amount, true, AbstractGameAction.AttackEffect.POISON));
             }

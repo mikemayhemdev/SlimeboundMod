@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.*;
 
 import java.util.Random;
 
@@ -28,19 +29,19 @@ public class RandomLickCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:Lick").makeCopy();
+                c = CardLibrary.getCard(Lick.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:PoisonLick").makeCopy();
+                c = CardLibrary.getCard(PoisonLick.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:HauntingLick").makeCopy();
+                c = CardLibrary.getCard(HauntingLick.ID).makeCopy();
                 break;
             case 4:
-                c = CardLibrary.getCard("Slimebound:MegaLick").makeCopy();
+                c = CardLibrary.getCard(MegaLick.ID).makeCopy();
                 break;
             case 5:
-                c = CardLibrary.getCard("Slimebound:QuickLick").makeCopy();
+                c = CardLibrary.getCard(QuickLick.ID).makeCopy();
                 break;
         }
 

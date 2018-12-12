@@ -69,11 +69,11 @@ public class StudyShapesPower extends AbstractPower {
 
         if (this.amount <= 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:StudyShapesPower"));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudyShapesPower.POWER_ID));
 
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "Slimebound:StudyShapesPower", 1));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudyShapesPower.POWER_ID, 1));
 
         }
     }

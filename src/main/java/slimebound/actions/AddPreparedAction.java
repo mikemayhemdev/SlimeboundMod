@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.Prepare;
 
 
 public class AddPreparedAction extends AbstractGameAction {
@@ -22,7 +23,7 @@ public class AddPreparedAction extends AbstractGameAction {
 
         AbstractCard c;
 
-        c = CardLibrary.getCard("Slimebound:Prepare").makeCopy();
+        c = CardLibrary.getCard(Prepare.ID).makeCopy();
         c.modifyCostForTurn(-9);
 
 

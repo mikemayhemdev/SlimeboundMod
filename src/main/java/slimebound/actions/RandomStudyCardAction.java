@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.StudyTheSpire;
 
 import java.util.Random;
 
@@ -25,7 +26,7 @@ public class RandomStudyCardAction extends AbstractGameAction {
         AbstractCard c;
         //Random random = new Random();
         //Integer chosenRand = random.nextInt(8);
-        c = CardLibrary.getCard("Slimebound:StudyTheSpire").makeCopy();
+        c = CardLibrary.getCard(StudyTheSpire.ID).makeCopy();
 
 
 

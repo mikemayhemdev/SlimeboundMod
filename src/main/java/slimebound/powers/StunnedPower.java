@@ -55,9 +55,9 @@ public class StunnedPower extends AbstractPower {
 
     public void atEndOfRound() {
         if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:StunnedPower"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, StunnedPower.POWER_ID));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Slimebound:StunnedPower", 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, StunnedPower.POWER_ID, 1));
         }
 
     }

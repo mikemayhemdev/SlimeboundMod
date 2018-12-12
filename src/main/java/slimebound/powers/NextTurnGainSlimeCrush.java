@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.cards.SlimeCrush;
 
 
 public class NextTurnGainSlimeCrush extends AbstractPower {
@@ -67,10 +68,10 @@ public class NextTurnGainSlimeCrush extends AbstractPower {
 
         flash();
         AbstractCard c;
-        c = CardLibrary.getCard("Slimebound:SlimeCrush").makeCopy();
+        c = CardLibrary.getCard(SlimeCrush.ID).makeCopy();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:NextTurnGainSlimeCrush"));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, NextTurnGainSlimeCrush.POWER_ID));
 
     }
 

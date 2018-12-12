@@ -14,6 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 
 
 public class zzzRollThrough extends AbstractSlimeboundCard {
@@ -58,7 +59,7 @@ public class zzzRollThrough extends AbstractSlimeboundCard {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     logger.info("Passed dead check.");
-                    if (monster.hasPower("Slimebound:SlimedPower")) {
+                    if (monster.hasPower(SlimedPower.POWER_ID)) {
                         logger.info("Found Slimed target, adding attack action.");
                         AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 

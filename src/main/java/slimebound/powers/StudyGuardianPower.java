@@ -68,11 +68,11 @@ public class StudyGuardianPower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new RandomGuardianCardAction(false));
         if (this.amount <= 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "Slimebound:StudyGuardianPower"));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudyGuardianPower.POWER_ID));
 
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "Slimebound:StudyGuardianPower", 1));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudyGuardianPower.POWER_ID, 1));
 
         }
 

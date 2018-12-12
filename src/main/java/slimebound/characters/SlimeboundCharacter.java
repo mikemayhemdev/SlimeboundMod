@@ -16,9 +16,13 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import slimebound.cards.CorrosiveSpit;
+import slimebound.cards.Defend_Slimebound;
+import slimebound.cards.Split;
 import slimebound.cards.Strike_Slimebound;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
+import slimebound.relics.AbsorbEndCombat;
 
 import java.util.ArrayList;
 
@@ -53,23 +57,23 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList();
-        retVal.add("Slimebound:Strike_Slimebound");
-        retVal.add("Slimebound:Strike_Slimebound");
-        retVal.add("Slimebound:Strike_Slimebound");
-        retVal.add("Slimebound:Strike_Slimebound");
-        retVal.add("Slimebound:Defend_Slimebound");
-        retVal.add("Slimebound:Defend_Slimebound");
-        retVal.add("Slimebound:Defend_Slimebound");
-        retVal.add("Slimebound:Defend_Slimebound");
-        retVal.add("Slimebound:Split");
-        retVal.add("Slimebound:CorrosiveSpit");
+        retVal.add(Strike_Slimebound.ID);
+        retVal.add(Strike_Slimebound.ID);
+        retVal.add(Strike_Slimebound.ID);
+        retVal.add(Strike_Slimebound.ID);
+        retVal.add(Defend_Slimebound.ID);
+        retVal.add(Defend_Slimebound.ID);
+        retVal.add(Defend_Slimebound.ID);
+        retVal.add(Defend_Slimebound.ID);
+        retVal.add(Split.ID);
+        retVal.add(CorrosiveSpit.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList();
-        retVal.add("Slimebound:AbsorbEndCombat");
-        UnlockTracker.markRelicAsSeen("Slimebound:AbsorbEndCombat");
+        retVal.add(AbsorbEndCombat.ID);
+        UnlockTracker.markRelicAsSeen(AbsorbEndCombat.ID);
         return retVal;
     }
 

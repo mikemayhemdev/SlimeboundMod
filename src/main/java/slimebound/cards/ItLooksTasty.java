@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.RandomLickCardAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 
 
 public class ItLooksTasty extends AbstractSlimeboundCard {
@@ -45,7 +46,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (m.hasPower("Slimebound:SlimedPower")) {
+        if (m.hasPower(SlimedPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
             if (upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));

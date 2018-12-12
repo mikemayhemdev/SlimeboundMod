@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.DefensiveStance;
+import slimebound.cards.FaceSlap;
+import slimebound.cards.LastStand;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomChampCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:FaceSlap").makeCopy();
+                c = CardLibrary.getCard(FaceSlap.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:DefensiveStance").makeCopy();
+                c = CardLibrary.getCard(DefensiveStance.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:LastStand").makeCopy();
+                c = CardLibrary.getCard(LastStand.ID).makeCopy();
                 break;
         }
 

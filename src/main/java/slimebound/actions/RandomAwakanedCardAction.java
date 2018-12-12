@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.CaCaw;
+import slimebound.cards.DarkVoid;
+import slimebound.cards.SplitCultist;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomAwakanedCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:CaCaw").makeCopy();
+                c = CardLibrary.getCard(CaCaw.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:SplitCultist").makeCopy();
+                c = CardLibrary.getCard(SplitCultist.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:DarkVoid").makeCopy();
+                c = CardLibrary.getCard(DarkVoid.ID).makeCopy();
                 break;
         }
 

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 
 
 public class SoulSicken extends AbstractSlimeboundCard {
@@ -47,10 +48,10 @@ public class SoulSicken extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (m.hasPower("Slimebound:SlimedPower")) {
-            int poisonAmount = this.magicNumber + m.getPower("Slimebound:SlimedPower").amount;
+        if (m.hasPower(SlimedPower.POWER_ID)) {
+            int poisonAmount = this.magicNumber + m.getPower(SlimedPower.POWER_ID).amount;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, poisonAmount), poisonAmount, true, AbstractGameAction.AttackEffect.POISON));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(m, m, "Slimebound:SlimedPower"));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(m, m, SlimedPower.POWER_ID));
 
         } else {
 

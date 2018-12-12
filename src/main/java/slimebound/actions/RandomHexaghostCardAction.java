@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.Divider;
+import slimebound.cards.Sear;
+import slimebound.cards.SplitGhostflame;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomHexaghostCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:SplitGhostflame").makeCopy();
+                c = CardLibrary.getCard(SplitGhostflame.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:Divider").makeCopy();
+                c = CardLibrary.getCard(Divider.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:Sear").makeCopy();
+                c = CardLibrary.getCard(Sear.ID).makeCopy();
                 break;
         }
 

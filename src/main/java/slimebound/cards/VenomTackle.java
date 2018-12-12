@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.TackleBuffPower;
 
 
 public class VenomTackle extends AbstractSlimeboundCard {
@@ -52,15 +53,15 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
-        if (player.hasPower("Slimebound:TackleBuffPower")){
-            bonus = player.getPower("Slimebound:TackleBuffPower").amount;
+        if (player.hasPower(TackleBuffPower.POWER_ID)){
+            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
         }
         return tmp + bonus;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,"Slimebound:TackleBuffPower"));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));

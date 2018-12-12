@@ -13,6 +13,7 @@ import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.HexSlime;
 import slimebound.orbs.SpawnedSlime;
+import slimebound.powers.FirmFortitudePower;
 import slimebound.vfx.SlimeDripsEffect;
 
 
@@ -69,7 +70,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
             if (SelfDamage) {
 
-                if (currentAmount >= currentHealth && !AbstractDungeon.player.hasPower("Buffer") && !AbstractDungeon.player.hasPower("Slimebound:FirmFortitudePower")) {
+                if (currentAmount >= currentHealth && !AbstractDungeon.player.hasPower("Buffer") && !AbstractDungeon.player.hasPower(FirmFortitudePower.POWER_ID)) {
                     AbstractDungeon.effectList.add(new SpeechBubble(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 1.0F, "Need... health...", true));
                     this.isDone = true;
                     return;

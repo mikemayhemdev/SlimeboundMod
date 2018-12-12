@@ -4,6 +4,10 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.SplitAttack;
+import slimebound.cards.SplitPoison;
+import slimebound.cards.SplitSliming;
+import slimebound.cards.SplitWeaken;
 
 import java.util.Random;
 
@@ -28,16 +32,16 @@ public class RandomBasicSlimeCardAction extends com.megacrit.cardcrawl.actions.A
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:SplitAttack").makeCopy();
+                c = CardLibrary.getCard(SplitAttack.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:SplitPoison").makeCopy();
+                c = CardLibrary.getCard(SplitPoison.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:SplitWeaken").makeCopy();
+                c = CardLibrary.getCard(SplitWeaken.ID).makeCopy();
                 break;
             case 4:
-                c = CardLibrary.getCard("Slimebound:SplitSliming").makeCopy();
+                c = CardLibrary.getCard(SplitSliming.ID).makeCopy();
                 break;
         }
 

@@ -6,6 +6,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.cards.DecasProtection;
+import slimebound.cards.DonusPower;
+import slimebound.cards.PolyBeam;
 
 import java.util.Random;
 
@@ -28,13 +31,13 @@ public class RandomShapesCardAction extends AbstractGameAction {
 
         switch (chosenRand) {
             case 1:
-                c = CardLibrary.getCard("Slimebound:DonusPower").makeCopy();
+                c = CardLibrary.getCard(DonusPower.ID).makeCopy();
                 break;
             case 2:
-                c = CardLibrary.getCard("Slimebound:DecasProtection").makeCopy();
+                c = CardLibrary.getCard(DecasProtection.ID).makeCopy();
                 break;
             case 3:
-                c = CardLibrary.getCard("Slimebound:PolyBeam").makeCopy();
+                c = CardLibrary.getCard(PolyBeam.ID).makeCopy();
                 break;
         }
 

@@ -20,10 +20,12 @@ import java.util.Random;
 
 public class DebuffSlime
         extends SpawnedSlime {
+    public static final String ID = "Slimebound:DebuffSlime";
+
 
     public DebuffSlime() {
 
-        super("Slimebound:DebuffSlime", 2, 2,true, new Color(.83F, .83F, .39F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"), "SlimeboundImages/orbs/licking.png");
+        super(ID, 2, 2,true, new Color(.83F, .83F, .39F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"), "SlimeboundImages/orbs/licking.png");
     }
 
 

@@ -16,6 +16,8 @@ import slimebound.vfx.SlimeFlareEffect;
 
 public class HexSlime
         extends SpawnedSlime {
+    public static final String ID = "Slimebound:HexSlime";
+
 
     private BobEffect effect = new BobEffect(2.0F);
     private float activateTimer;
@@ -30,7 +32,7 @@ public class HexSlime
 
 
     public HexSlime() {
-        super("Slimebound:HexSlime", 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
+        super(ID, 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
         this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.color = Color.CHARTREUSE.cpy();

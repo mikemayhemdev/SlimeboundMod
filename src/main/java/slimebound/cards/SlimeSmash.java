@@ -15,6 +15,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 
 
 public class SlimeSmash extends AbstractSlimeboundCard {
@@ -48,9 +49,9 @@ public class SlimeSmash extends AbstractSlimeboundCard {
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
         if (mo != null) {
-            if (mo.hasPower("Slimebound:SlimedPower")) {
+            if (mo.hasPower(SlimedPower.POWER_ID)) {
 
-                bonus = mo.getPower("Slimebound:SlimedPower").amount;
+                bonus = mo.getPower(SlimedPower.POWER_ID).amount;
             }
 
             if (bonus > 0) {
@@ -63,11 +64,11 @@ public class SlimeSmash extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (m.hasPower("Slimebound:SlimedPower")) {
+        if (m.hasPower(SlimedPower.POWER_ID)) {
 
 
             AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower("Slimebound:SlimedPower").amount / 2));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower(SlimedPower.POWER_ID).amount / 2));
 
         }
 
