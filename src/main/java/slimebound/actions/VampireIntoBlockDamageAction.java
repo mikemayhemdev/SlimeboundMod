@@ -1,9 +1,12 @@
 package slimebound.actions;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import slimebound.vfx.LeechEffect;
 
 public class VampireIntoBlockDamageAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
     private DamageInfo info;
@@ -54,8 +57,13 @@ public class VampireIntoBlockDamageAction extends com.megacrit.cardcrawl.actions
                 healAmount = 1;
             }
 
+
             AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this.source, this.source, healAmount));
+
+
             AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.1F));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new LeechEffect(this.target.hb.cX, this.target.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5, new Color(0.6F,0.6F,1F,1F)), 0.25F));
+
         }
     }
 }

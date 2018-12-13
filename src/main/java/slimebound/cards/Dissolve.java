@@ -3,9 +3,12 @@ package slimebound.cards;
 
 
 import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
@@ -33,13 +36,23 @@ public class Dissolve extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseBlock = 5;
+        this.baseBlock = 7;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
+        this.poison=4;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, this.block, this.magicNumber));
+
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, true,this.block,this.poison));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false,this.block,this.poison));
+        }
+
     }
 
     public AbstractCard makeCopy() {
@@ -49,8 +62,8 @@ public class Dissolve extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
-            upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

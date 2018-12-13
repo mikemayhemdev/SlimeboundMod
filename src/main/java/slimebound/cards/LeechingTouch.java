@@ -2,7 +2,9 @@ package slimebound.cards;
 
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.VampireIntoBlockDamageAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.vfx.LeechEffect;
 
 
 public class LeechingTouch extends AbstractSlimeboundCard {

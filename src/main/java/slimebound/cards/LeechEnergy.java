@@ -2,8 +2,11 @@ package slimebound.cards;
 
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,8 +14,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.vfx.LeechEffect;
 
 
 public class LeechEnergy extends AbstractSlimeboundCard {
@@ -36,7 +41,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 4;
+        this.baseDamage = 3;
 
 
     }
@@ -46,13 +51,18 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
 
         if (m.hasPower("Poison")) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, 3, new Color(0.5F,0.75F,0.5F,1F)), 0.25F));
+
         }
         if (upgraded) {
             if (m.hasPower("Weakened")) {
                 AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 3, new Color(0F,0.75F,0F,1F)), 0.25F));
+
             }
         }
+
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
     }
@@ -71,7 +81,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
+            upgradeDamage(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

@@ -143,8 +143,9 @@
   },
 "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Exhaust. all cards in your hand. Gain !B! Block and heal !M! HP for each card Exhausted. NL Exhaust."
-  },
+    "DESCRIPTION": "Exhaust a random card in your hand. NL Gain !B! Block. NL Heal !SlimePoison! HP if the card was Uncommon, or Gain 1 Dexterity if Rare.",
+  "UPGRADE_DESCRIPTION": "Exhaust a card in your hand. NL Gain !B! Block. NL Heal !SlimePoison! HP if the card was Uncommon, or Gain 1 Dexterity if Rare."
+},
 "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
     "DESCRIPTION": "Become Halved. NL Gain [E] and draw 1 card each turn. NL The first card you play each turn that targets enemies is played twice.",
@@ -380,8 +381,8 @@
   },
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Gain [E] if the target has Poison.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] if the target has Poison, then repeat if it has Weak."
+    "DESCRIPTION": "Deal !D! damage. Draw a card if the target has Poison.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw a card if the target has Poison. Gain [E] if they have Weak."
   },
 "Slimebound:LeechLife": {
     "NAME": "Leech Life",
