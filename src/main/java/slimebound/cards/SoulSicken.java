@@ -37,7 +37,7 @@ public class SoulSicken extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 3;
+        //this.baseDamage = 2;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 3;
 
@@ -49,9 +49,10 @@ public class SoulSicken extends AbstractSlimeboundCard {
 
 
         if (m.hasPower(SlimedPower.POWER_ID)) {
-            int poisonAmount = this.magicNumber + m.getPower(SlimedPower.POWER_ID).amount;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, poisonAmount), poisonAmount, true, AbstractGameAction.AttackEffect.POISON));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(m, m, SlimedPower.POWER_ID));
+            int slimedReduce = m.getPower(SlimedPower.POWER_ID).amount /2;
+            int poisonAmount = this.magicNumber + slimedReduce;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, poisonAmount ), poisonAmount , true, AbstractGameAction.AttackEffect.POISON));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(m, m, SlimedPower.POWER_ID, slimedReduce ));
 
         } else {
 

@@ -37,7 +37,7 @@ public class RollThrough extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 7;
-        this.magicNumber=this.baseMagicNumber=5;
+        this.magicNumber=this.baseMagicNumber=3;
         this.selfDamage= 2;
 
 

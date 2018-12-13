@@ -29,7 +29,7 @@ public class SpikyOuterGoop extends AbstractSlimeboundCard {
 
     private static final int COST = 2;
 
-    private static int upgradedamount = 1;
+    private static int upgradedamount = 2;
 
     public SpikyOuterGoop() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
