@@ -355,9 +355,9 @@ public static String printString(String s){
         BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore HP, consuming the effect. Half is removed at end of turn.");
 
         BaseMod.addKeyword(new String[]{"potency"}, "Increases the effectiveness of your Spawned Slimes.");
-        BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains Strength when you do.");
+        BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains damage when you gain Strength.");
         BaseMod.addKeyword(new String[]{"attacking"}, "Attacks for 5 each turn.");
-        BaseMod.addKeyword(new String[]{"cultist"}, "Attacks for 6 each turn, then increases its Strength by 2.");
+        BaseMod.addKeyword(new String[]{"cultist"}, "Attacks for 6 each turn, then increases it's damage by 2.");
         BaseMod.addKeyword(new String[]{"weakening"}, "Attacks for 2 each turn and applies 1 Weaken.");
         BaseMod.addKeyword(new String[]{"poisoning"}, "Applies 2 Poison each turn.");
         BaseMod.addKeyword(new String[]{"sliming"}, "Applies 2 Slimed each turn.");

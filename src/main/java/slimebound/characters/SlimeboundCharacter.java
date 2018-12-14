@@ -2,7 +2,9 @@ package slimebound.characters;
 
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,7 +13,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -25,17 +29,19 @@ import slimebound.patches.SlimeboundEnum;
 import slimebound.relics.AbsorbEndCombat;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class SlimeboundCharacter extends CustomPlayer {
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
     public float renderscale = 1.0F;
+    public float hatX;
+    public float hatY;
 
     public static final String[] orbTextures = {"SlimeboundImages/char/orb/layer1.png", "SlimeboundImages/char/orb/layer2.png", "SlimeboundImages/char/orb/layer3.png", "SlimeboundImages/char/orb/layer4.png", "SlimeboundImages/char/orb/layer5.png", "SlimeboundImages/char/orb/layer6.png", "SlimeboundImages/char/orb/layer1d.png", "SlimeboundImages/char/orb/layer2d.png", "SlimeboundImages/char/orb/layer3d.png", "SlimeboundImages/char/orb/layer4d.png", "SlimeboundImages/char/orb/layer5d.png"};
 
     public void setRenderscale(float renderscale) {
         this.renderscale = renderscale;
-
         reloadAnimation();
     }
 
@@ -46,6 +52,25 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.dialogX = -200;
         this.dialogY = -200;
     }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("images/scenes/greenBg.jpg");
+
+    }
+
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("SlimeboundImages/scenes/slimebound1.png", "VO_SLIMEBOSS_1A"));
+        panels.add(new CutscenePanel("SlimeboundImages/scenes/slimebound2.png"));
+        panels.add(new CutscenePanel("SlimeboundImages/scenes/slimebound3.png"));
+        return panels;
+    }
+
+
+
 
     public void reloadAnimation() {
         this.loadAnimation("SlimeboundImages/char/skeleton.atlas", "SlimeboundImages/char/skeleton.json", renderscale);
@@ -150,6 +175,14 @@ public class SlimeboundCharacter extends CustomPlayer {
     @Override
     public void applyStartOfTurnCards() {
         super.applyStartOfTurnCards();
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        this.hatX = this.skeleton.findBone("eyeback1").getX();
+        this.hatY = this.skeleton.findBone("eyeback1").getY();
+
     }
 }
 

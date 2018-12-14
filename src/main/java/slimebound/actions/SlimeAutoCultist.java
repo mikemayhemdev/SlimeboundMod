@@ -62,8 +62,7 @@ public class SlimeAutoCultist extends AbstractGameAction {
 
         AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
         if (slime.movesToAttack) {
-            AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentMovementEffect(slime, speedTime), speedTime));
-        }
+            slime.useFastAttackAnimation();        }
 
 
 

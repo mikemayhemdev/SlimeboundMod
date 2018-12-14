@@ -18,14 +18,14 @@
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn.  Torch Heads gain Strength when you do."
+      " Damage at the start of your turn.  Torch Heads gain damage when you gain Strength."
     ]
   },
   "Slimebound:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn, then increases it's Strength by 2."
+      " Damage at the start of your turn, then increases it's damage by 2."
     ]
   },
   "Slimebound:DebuffSlime": {

@@ -19,7 +19,7 @@ public class SlimingSlime
     public static final String ID = "Slimebound:SlimingSlime";
 
     public SlimingSlime() {
-        super(ID, 2, 2,true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("SlimeboundImages/orbs/debuff2.png"), "SlimeboundImages/orbs/sliming.png");
+        super(ID, "images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",.85F,new Color(224F/255F,113F/255F,224F/255F,2F),2, 2,true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("SlimeboundImages/orbs/debuff2.png"), "SlimeboundImages/orbs/sliming.png");
     }
 
 

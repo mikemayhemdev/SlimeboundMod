@@ -109,7 +109,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
         sb.setBlendFunction(770, 1);
         sb.setColor(new Color(1F, 1.0F, 1.0F, this.color.a / 1.5F));
 
-        for(int i = 5; i < this.previousPos.size(); ++i) {
+        for(int i = 2; i < this.previousPos.size(); ++i) {
             sb.draw(ImageMaster.POWER_UP_2, ((Vector2)this.previousPos.get(i)).x - (float)(img.getWidth() / 2), ((Vector2)this.previousPos.get(i)).y - (float)(img.getHeight() / 2), (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale / (40.0F / (float)i), this.scale / (40.0F / (float)i), this.rotation);
         }
 

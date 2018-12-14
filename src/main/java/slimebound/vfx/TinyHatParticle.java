@@ -18,8 +18,8 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
     private static int W;
     private Texture img;
     public SlimeboundCharacter p;
-    private static int xOffset = -30;
-    private static int yOffset = 135;
+    private static int xOffset = 45;
+    private static int yOffset = 85;
 
     public TinyHatParticle(AbstractPlayer p) {
         this.duration = 0.05F;
@@ -49,7 +49,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
 
         sb.setColor(new Color(1F, 1F, 1F, 2F));
 
-        sb.draw(this.img, this.p.drawX + p.animX - W / 2.0F + ((xOffset / p.renderscale) * Settings.scale), this.p.drawY + p.animY - W / 2.0F + ((yOffset/p.renderscale) * Settings.scale), W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
+        sb.draw(this.img, this.p.hatX + p.animX + this.p.drawX - W / 2.0F + ((xOffset / p.renderscale) * Settings.scale), this.p.hatY + this.p.animY + this.p.drawY - W / 2.0F + ((yOffset/p.renderscale) * Settings.scale), W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
 
 
     }

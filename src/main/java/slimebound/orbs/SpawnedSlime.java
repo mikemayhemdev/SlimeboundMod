@@ -1,31 +1,38 @@
 package slimebound.orbs;
 
+import basemod.animations.AbstractAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
+import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.powers.PotencyPower;
-import slimebound.vfx.SlimeDeathParticleEffect;
-import slimebound.vfx.SlimeFlareEffect;
-import slimebound.vfx.SlimeIntentEffect;
-import slimebound.vfx.SlimeIntentMovementEffect;
+import slimebound.vfx.*;
 
 
 public abstract class SpawnedSlime
@@ -43,6 +50,8 @@ public abstract class SpawnedSlime
     public boolean showPassive = true;
     public boolean activatedThisTurn = false;
     public int UniqueFocus;
+    public float animX;
+    public float animY;
     public boolean movesToAttack;
     public int upgradedInitialBoost;
     public String originalRelic = "";
@@ -50,17 +59,58 @@ public abstract class SpawnedSlime
     public com.badlogic.gdx.graphics.Texture intentImage;
     private SlimeFlareEffect.OrbFlareColor OrbVFXColor;
     private Color deathColor;
+    private Color modelColor;
     public static String orbID = "";
     public boolean noEvokeBonus;
+    private float scale = 1F;
+    private static int W;
+    private Texture img;
+    private float x;
+    private float px;
+    public static SkeletonMeshRenderer sr;
+    private AbstractCreature.CreatureAnimation animation;
+    private float animationTimer;
+
+    private float animationTimerStart;
+    private TextureAtlas atlas;
+    public Skeleton skeleton;
+    public AnimationState state;
+    private AnimationStateData stateData;
+    private AbstractAnimation animationA;
+    public AbstractPlayer p;
+    private float y;
+    private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
+    private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
+    private String animString = "idle";
 
     public String customDescription;
 
 
     public SpawnedSlime(String ID, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
+    this(ID,"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",1F,Color.WHITE,passive,initialBoost,movesToAttack,deathColor,OrbFlareColor,intentImage,IMGURL);
+    }
+    public SpawnedSlime(String ID, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
+
+        this.scale=scale;
+        this.modelColor=modelColor;
+        this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
+        SkeletonJson json = new SkeletonJson(this.atlas);
+
+
+
+        json.setScale(Settings.scale / scale);
+        SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
+        this.skeleton = new Skeleton(skeletonData);
+        this.skeleton.setColor(Color.WHITE);
+        this.stateData = new AnimationStateData(skeletonData);
+        this.state = new AnimationState(this.stateData);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, animString, true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        this.state.addListener(new SlimeAnimListener());
 
         this.ID = ID;
 
-        this.img = ImageMaster.loadImage(IMGURL);
+        //this.img = ImageMaster.loadImage(IMGURL);
 
 
         this.basePassiveAmount = passive;
@@ -86,7 +136,9 @@ public abstract class SpawnedSlime
 
 
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY,this,1F,deathColor)));
+
+        //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
         this.applyFocus();
 
         updateDescription();
@@ -109,14 +161,6 @@ public abstract class SpawnedSlime
     }
 
 
-    public void onCardUse(AbstractCard c) {
-    }
-
-
-    public void onCardDraw(AbstractCard c) {
-    }
-
-
     public void onStartOfTurn() {
 
 
@@ -124,13 +168,14 @@ public abstract class SpawnedSlime
 
     }
 
-    public void atTurnStartPostDraw() {
-
+    /*
+    public void updateAnimation() {
     }
 
+    public void update() {
 
-    public void onVictory() {
     }
+    */
 
     public void applyFocus() {
         super.applyFocus();
@@ -184,11 +229,6 @@ public abstract class SpawnedSlime
     }
 
 
-    public void updateDescription() {
-
-
-    }
-
 
     public void activateEffect() {
 
@@ -212,31 +252,75 @@ public abstract class SpawnedSlime
 
     }
 
-
-    public void render(SpriteBatch sb) {
-
-        sb.setColor(this.c);
-
-        sb.draw(this.img, this.cX - 48.0F + this.bobEffect.y / 4.0F, this.cY - 48.0F + this.bobEffect.y / 4.0F, 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-
-
-        renderText(sb);
-
-        this.hb.render(sb);
-
+    public void useFastAttackAnimation() {
+        this.animationTimer = 0.4F;
+        this.animationTimerStart=this.animationTimer;
+        this.animation = AbstractCreature.CreatureAnimation.ATTACK_FAST;
     }
 
 
     public void updateAnimation() {
-
         super.updateAnimation();
+        if (this.animationTimer != 0.0F) {
+            switch (this.animation) {
+                case ATTACK_FAST:
+                    this.updateFastAttackAnimation();
+                    break;
+            }
+        }
+    }
 
-        this.angle += Gdx.graphics.getDeltaTime() * 45.0F;
 
 
-        this.vfxTimer -= Gdx.graphics.getDeltaTime();
+
+    protected void updateFastAttackAnimation() {
+        this.animationTimer -= Gdx.graphics.getDeltaTime();
+        float targetPos = 50.0F * Settings.scale;
 
 
+        if (this.animationTimer > (this.animationTimerStart / 2)) {
+            this.animX = Interpolation.exp5Out.apply(0.0F, targetPos, ((this.animationTimerStart / 2) - (this.animationTimer - (this.animationTimerStart / 2))) / (this.animationTimerStart / 2));
+            //logger.info("pow2Out " + ((this.animationTimerStart / 2) - (this.animationTimer - (this.animationTimerStart / 2))) / (this.animationTimerStart / 2));
+
+        } else if (this.animationTimer < 0.0F) {
+            this.animationTimer = 0.0F;
+            this.animX = 0.0F;
+        } else {
+            //logger.info("fade " + this.animationTimer /(this.animationTimerStart / 2));
+            this.animX = Interpolation.fade.apply(0.0F, targetPos,(this.animationTimer /(this.animationTimerStart / 2)));
+        }
+
+    }
+
+    public void render(SpriteBatch sb) {
+
+        renderText(sb);
+        if (this.atlas == null) {
+           // logger.info("rendering null");
+            sb.setColor(new Color(1F, 1F, 1F, 2F));
+
+            sb.draw(this.img, this.cX - (float) this.img.getWidth() + this.animX * Settings.scale / 2.0F, this.cY + this.animY, (float) this.img.getWidth() * Settings.scale, (float) this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
+        } else {
+
+           // logger.info("rendering slime model");
+            this.state.update(Gdx.graphics.getDeltaTime());
+            this.state.apply(this.skeleton);
+            this.skeleton.updateWorldTransform();
+            this.skeleton.setPosition(this.cX + this.animX, this.cY + this.animY - 20);
+           //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
+
+            this.skeleton.setColor(new Color(modelColor.r,modelColor.b,modelColor.g,2F));
+             this.skeleton.setFlip(true,false);
+            sb.end();
+            CardCrawlGame.psb.begin();
+            AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
+            CardCrawlGame.psb.end();
+            sb.begin();
+            sb.setBlendFunction(770, 771);
+
+
+        }
+        //this.hb.render(sb);
     }
 }
 

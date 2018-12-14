@@ -58,8 +58,7 @@ public class SlimeAutoSliming extends com.megacrit.cardcrawl.actions.AbstractGam
 
             AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
             if (slime.movesToAttack) {
-                AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentMovementEffect(slime, speedTime), speedTime));
-            }
+                slime.useFastAttackAnimation();            }
 
         }
 

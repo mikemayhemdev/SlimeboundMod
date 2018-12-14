@@ -32,7 +32,7 @@ public class HexSlime
 
 
     public HexSlime() {
-        super(ID, 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
+        super(ID,"images/monsters/theBottom/slimeM/skeleton.atlas","images/monsters/theBottom/slimeM/skeleton.json","idle",1.5F,new Color(119F/255F,119/255F,1F,2F), 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
         this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.color = Color.CHARTREUSE.cpy();
@@ -92,7 +92,7 @@ public class HexSlime
 
             if (this.particleTimer < 0.0F) {
 
-                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY));
+                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY + 5));
 
 
                 this.particleTimer = 0.06F;

@@ -24,7 +24,7 @@ public class TorchHeadSlime
 
     public TorchHeadSlime() {
 
-        super(ID, 9, 0,true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
+        super(ID, "images/monsters/theBottom/slimeAltM/skeleton.atlas","images/monsters/theBottom/slimeAltM/skeleton.json","idle",1.5F,new Color(0.75F,0.75F,0.75F,2F),9, 0,true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("SlimeboundImages/orbs/5.png"), "SlimeboundImages/orbs/Torchhead.png");
 
     }
 
@@ -56,7 +56,7 @@ public class TorchHeadSlime
         this.fireTimer -= Gdx.graphics.getDeltaTime();
         if (this.fireTimer < 0.0F) {
             this.fireTimer = 0.04F;
-            AbstractDungeon.effectList.add(new TorchHeadFireEffect(this.cX, this.cY + 25));
+            AbstractDungeon.effectList.add(new TorchHeadFireEffect(this.cX, this.cY + 15));
 
         }
 

@@ -65,8 +65,7 @@ public class SlimeAutoWeakening extends AbstractGameAction {
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
             if (slime.movesToAttack) {
-                AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentMovementEffect(slime, speedTime), speedTime));
-            }
+                slime.useFastAttackAnimation();            }
         }
 
 
