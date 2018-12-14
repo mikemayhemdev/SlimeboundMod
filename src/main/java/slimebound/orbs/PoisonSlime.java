@@ -19,7 +19,7 @@ public class PoisonSlime
     public static final String ID = "Slimebound:PoisonSlime";
 
     public PoisonSlime() {
-        super(ID, "images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(0.8F,1F,.8F,2F),2, 2,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
+        super(ID, -32,new Color (.5F,1.0F,.5F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(0.6F,.9F,.6F,2F),2, 2,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
     }
 
 

@@ -28,10 +28,14 @@ public class CultistSlime
     public float attachmentYr;
 
     public CultistSlime() {
-        super(ID,"images/monsters/theBottom/slimeM/skeleton.atlas","images/monsters/theBottom/slimeM/skeleton.json","idle",1.5F,new Color(81F/255F,81F/255F,1F,2F), 6,0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("SlimeboundImages/orbs/attackBuff.png"), "SlimeboundImages/orbs/cultist.png");
+        super(ID,-25,new Color (.55F,.55F,1.0F,100F),"images/monsters/theBottom/slimeM/skeleton.atlas","images/monsters/theBottom/slimeM/skeleton.json","idle",1.5F,new Color(81F/255F,81F/255F,1F,2F), 6,0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("SlimeboundImages/orbs/attackBuff.png"), "SlimeboundImages/orbs/cultist.png");
+
+
+    }
+
+    public void postSpawnEffects(){
         AbstractDungeon.effectList.add(new SticksParticle(this));
         AbstractDungeon.effectList.add(new SticksParticleRight(this));
-
     }
 
 

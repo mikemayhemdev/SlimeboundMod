@@ -4,6 +4,7 @@ package slimebound.cards;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -48,25 +49,13 @@ public class SuperSplit extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
 
 
-        Random random = new Random();
-
-        for (int i = 0; i < 4; i++) {
-            Integer chosenRand = random.nextInt(4);
+        AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true,4,true));
 
 
-            if (chosenRand == 0) {
-                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
-            } else if (chosenRand == 1) {
-                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
-            } else if (chosenRand == 2) {
-                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
-            } else {
-                AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
-            }
-        }
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
+
 
     }
 

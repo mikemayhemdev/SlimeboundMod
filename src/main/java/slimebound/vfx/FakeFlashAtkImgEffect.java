@@ -25,20 +25,20 @@ public class FakeFlashAtkImgEffect extends AbstractGameEffect {
     private float sY;
     private float tY;
     private static final float DURATION = 0.6F;
-    private boolean triggered;
+    private boolean mute;
 
-    public FakeFlashAtkImgEffect(float x, float y, Color color, boolean mute) {
-        this.triggered = false;
-        this.duration = 0.6F;
-        this.startingDuration = 0.6F;
+    public FakeFlashAtkImgEffect(float x, float y, Color color, float scale, boolean mute,float duration) {
+        this.duration = duration;
+        this.startingDuration = this.duration;
         this.img = this.loadImage();
+        this.mute = mute;
         if (this.img != null) {
             this.x = x - (float)this.img.packedWidth / 2.0F;
             y -= (float)this.img.packedHeight / 2.0F;
         }
 
         this.color = color;
-        this.scale = Settings.scale;
+        this.scale = scale * Settings.scale;
         if (!mute) {
             CardCrawlGame.sound.play("ATTACK_POISON",-0.2f);
         }

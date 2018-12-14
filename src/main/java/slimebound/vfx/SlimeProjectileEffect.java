@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.PetalEffect;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
 
     public SlimeProjectileEffect(float srcX, float srcY, float destX, float destY, float scale, boolean rain, float duration) {
         if (img == null) {
-            img = ImageMaster.loadImage("SlimeboundImages/vfx/slimeball.png");
+            img = ImageMaster.loadImage("SlimeboundImages/vfx/slimeballWhite.png");
         }
 
         this.sX = srcX + 40;
@@ -106,17 +107,16 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
-        sb.setBlendFunction(770, 1);
-        sb.setColor(new Color(1F, 1.0F, 1.0F, this.color.a / 1.5F));
 
-        for(int i = 2; i < this.previousPos.size(); ++i) {
-            sb.draw(ImageMaster.POWER_UP_2, ((Vector2)this.previousPos.get(i)).x - (float)(img.getWidth() / 2), ((Vector2)this.previousPos.get(i)).y - (float)(img.getHeight() / 2), (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale / (40.0F / (float)i), this.scale / (40.0F / (float)i), this.rotation);
-        }
+        sb.setColor(Color.BLACK);
 
-        sb.setColor(this.color);
-        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
+        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
+
+        sb.setColor(new Color(1F, 0.5F, 1.0F, 100F));
+
+        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
         //sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
-        sb.setBlendFunction(770, 771);
+
     }
 
     public void dispose() {

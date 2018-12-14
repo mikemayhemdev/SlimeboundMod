@@ -19,11 +19,14 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
@@ -33,6 +36,7 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.powers.PotencyPower;
 import slimebound.vfx.*;
+
 
 
 public abstract class SpawnedSlime
@@ -78,24 +82,28 @@ public abstract class SpawnedSlime
     private AnimationStateData stateData;
     private AbstractAnimation animationA;
     public AbstractPlayer p;
-    private float y;
+    public Color projectileColor;
+    private float delayTime;
+    private boolean hasSplashed;
+    private boolean renderBehind;
     private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
     private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
     private String animString = "idle";
 
     public String customDescription;
+    private int yOffset;
 
 
     public SpawnedSlime(String ID, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
-    this(ID,"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",1F,Color.WHITE,passive,initialBoost,movesToAttack,deathColor,OrbFlareColor,intentImage,IMGURL);
+    this(ID,0,Color.WHITE,"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",1F,Color.WHITE,passive,initialBoost,movesToAttack,deathColor,OrbFlareColor,intentImage,IMGURL);
     }
-    public SpawnedSlime(String ID, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
+    public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
 
         this.scale=scale;
         this.modelColor=modelColor;
         this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
+        //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
-
 
 
         json.setScale(Settings.scale / scale);
@@ -107,6 +115,8 @@ public abstract class SpawnedSlime
         AnimationState.TrackEntry e = this.state.setAnimation(0, animString, true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
+        this.delayTime=0.27F;
+        this.yOffset = yOffset;
 
         this.ID = ID;
 
@@ -128,7 +138,7 @@ public abstract class SpawnedSlime
 
         this.channelAnimTimer = 0.5F;
 
-
+        this.projectileColor=projectileColor;
         this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
 
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
@@ -136,20 +146,14 @@ public abstract class SpawnedSlime
 
 
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY,this,1F,deathColor)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY,this,1.4F,projectileColor)));
 
         //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
         this.applyFocus();
 
         updateDescription();
 
-        if (this instanceof HexSlime) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 3), 3));
-
-        }
 
     }
 
@@ -168,10 +172,9 @@ public abstract class SpawnedSlime
 
     }
 
-    /*
-    public void updateAnimation() {
-    }
 
+
+    /*
     public void update() {
 
     }
@@ -258,9 +261,9 @@ public abstract class SpawnedSlime
         this.animation = AbstractCreature.CreatureAnimation.ATTACK_FAST;
     }
 
-
+@Override
     public void updateAnimation() {
-        super.updateAnimation();
+
         if (this.animationTimer != 0.0F) {
             switch (this.animation) {
                 case ATTACK_FAST:
@@ -268,10 +271,21 @@ public abstract class SpawnedSlime
                     break;
             }
         }
+        this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX);
+        this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
+        if (this.channelAnimTimer != 0.0F) {
+            this.channelAnimTimer -= Gdx.graphics.getDeltaTime();
+            if (this.channelAnimTimer < 0.0F) {
+                this.channelAnimTimer = 0.0F;
+            }
+        }
+
+        this.c.a = Interpolation.pow2In.apply(1.0F, 0.01F, this.channelAnimTimer / 0.5F);
+        this.scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, this.channelAnimTimer / 0.5F);
     }
 
 
-
+    public void postSpawnEffects(){}
 
     protected void updateFastAttackAnimation() {
         this.animationTimer -= Gdx.graphics.getDeltaTime();
@@ -294,31 +308,40 @@ public abstract class SpawnedSlime
 
     public void render(SpriteBatch sb) {
 
-        renderText(sb);
-        if (this.atlas == null) {
+
+        if (this.delayTime > 0F) {
+            delayTime = delayTime - Gdx.graphics.getDeltaTime();
+        }
+         else if (this.atlas == null) {
            // logger.info("rendering null");
             sb.setColor(new Color(1F, 1F, 1F, 2F));
 
             sb.draw(this.img, this.cX - (float) this.img.getWidth() + this.animX * Settings.scale / 2.0F, this.cY + this.animY, (float) this.img.getWidth() * Settings.scale, (float) this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
         } else {
+             if (!hasSplashed){
+                 AbstractDungeon.effectsQueue.add(new FakeFlashAtkImgEffect(this.cX,this.cY,projectileColor, 0.75F,true,0.3F));
+                 this.hasSplashed=true;
+                 postSpawnEffects();
+             } else {
 
-           // logger.info("rendering slime model");
-            this.state.update(Gdx.graphics.getDeltaTime());
-            this.state.apply(this.skeleton);
-            this.skeleton.updateWorldTransform();
-            this.skeleton.setPosition(this.cX + this.animX, this.cY + this.animY - 20);
-           //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
+                 // logger.info("rendering slime model");
+                 this.state.update(Gdx.graphics.getDeltaTime());
+                 this.state.apply(this.skeleton);
+                 this.skeleton.updateWorldTransform();
+                 this.skeleton.setPosition(this.cX + this.animX, this.cY + this.animY + this.yOffset);
+                 //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
 
-            this.skeleton.setColor(new Color(modelColor.r,modelColor.b,modelColor.g,2F));
-             this.skeleton.setFlip(true,false);
-            sb.end();
-            CardCrawlGame.psb.begin();
-            AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
-            CardCrawlGame.psb.end();
-            sb.begin();
-            sb.setBlendFunction(770, 771);
+                 this.skeleton.setColor(modelColor);
+                 this.skeleton.setFlip(true, false);
+                 sb.end();
+                 CardCrawlGame.psb.begin();
+                 AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
+                 CardCrawlGame.psb.end();
+                 sb.begin();
+                 sb.setBlendFunction(770, 771);
 
-
+             }
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET + 15, this.cY + NUM_Y_OFFSET, this.c, this.fontScale);
         }
         //this.hb.render(sb);
     }

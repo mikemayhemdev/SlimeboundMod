@@ -74,6 +74,7 @@ public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscr
     public static boolean slimeTalkedCollector = false;
     public static boolean spritealtered = false;
     public static boolean bumpnextlime = false;
+    public static boolean disabledStrikeVFX = false;
     public static SpawnedSlime mostRecentSlime;
 
 

@@ -23,7 +23,7 @@ public class BronzeSlime
 
     public BronzeSlime() {
 
-        super(ID, "images/monsters/theBottom/slimeAltM/skeleton.atlas","images/monsters/theBottom/slimeAltM/skeleton.json","idle",1.5F,new Color(1F,150/255F,0F,2F),6, 0,false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("SlimeboundImages/orbs/attackDefend.png"), "SlimeboundImages/orbs/bronzeslime.png");
+        super(ID, -10,new Color (1.0F,217F/255F,70F/255F,100F),"images/monsters/theBottom/slimeAltM/skeleton.atlas","images/monsters/theBottom/slimeAltM/skeleton.json","idle",1.5F,new Color(1F,150F/255F,0F,2F),6, 0,false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("SlimeboundImages/orbs/attackDefend.png"), "SlimeboundImages/orbs/bronzeslime.png");
     }
 
 

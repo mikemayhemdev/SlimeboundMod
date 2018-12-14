@@ -44,15 +44,18 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
         }
 
         this.sX = srcX;
+        CardCrawlGame.sound.playA("SLIME_SPLIT",0.3f);
+
         this.sY = srcY;
         this.cX = this.sX;
         this.cY = this.sY;
         this.o=o;
         this.scale = scale;
         this.rotation = 0.0F;
-        this.duration = .5F;
-        this.startingDuration = .5F;
+        this.duration = .35F;
+        this.startingDuration = .35F;
         this.color = color;
+
 
 
     }
@@ -60,7 +63,8 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
     public void update() {
 
         this.cX = Interpolation.linear.apply(this.o.cX, this.sX, this.duration / this.startingDuration);
-        this.cY = Interpolation.linear.apply(this.o.cY, this.sY, this.duration / this.startingDuration);
+        this.cY = Interpolation.linear.apply(this.o.cY + 8, this.sY, this.duration / this.startingDuration);
+
 
 
         if (this.o.cX > this.sX) {
@@ -78,12 +82,11 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
-        sb.setBlendFunction(770, 1);
-
+        sb.setColor(Color.BLACK);
+        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
         sb.setColor(this.color);
-        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
+        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
         //sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
-        sb.setBlendFunction(770, 771);
     }
 
     public void dispose() {

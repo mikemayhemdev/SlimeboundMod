@@ -25,7 +25,7 @@ public class DebuffSlime
 
     public DebuffSlime() {
 
-        super(ID, "images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(1.0F,0.9F,0.F,2F),2, 3,true, new Color(.83F, .83F, .39F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"), "SlimeboundImages/orbs/licking.png");
+        super(ID, -32,new Color (1.0F,1.0F,0F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(1.0F,0.9F,0.F,2F),2, 3,true, new Color(.83F, .83F, .39F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("SlimeboundImages/orbs/attackDebuff.png"), "SlimeboundImages/orbs/licking.png");
     }
 
 

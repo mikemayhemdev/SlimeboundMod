@@ -1,6 +1,7 @@
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,26 +12,55 @@ import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
-import slimebound.orbs.HexSlime;
-import slimebound.orbs.SpawnedSlime;
+import slimebound.orbs.*;
+import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.FirmFortitudePower;
+import slimebound.powers.StudyAutomatonPower;
+import slimebound.powers.StudyAutomatonPowerUpgraded;
 import slimebound.vfx.SlimeDripsEffect;
+
+import java.util.Random;
 
 
 public class SlimeSpawnAction extends AbstractGameAction {
     private AbstractOrb orbType;
     private boolean SelfDamage = true;
     private boolean upgraded = false;
+    private boolean random = false;
     private int currentAmount;
     private int upgradedamount;
     private int count;
 
 
-    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int count) {
+    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int count, boolean random) {
 
         this.duration = Settings.ACTION_DUR_FAST;
+        this.random=random;
 
-        this.orbType = newOrbType;
+        if (random) {
+            Random randomSl = new Random();
+            Integer chosenRand = randomSl.nextInt(4) + 1;
+
+            switch (chosenRand) {
+                case 1:
+                    this.orbType = new AttackSlime();
+                    break;
+                case 2:
+                    this.orbType = new DebuffSlime();
+                    break;
+                case 3:
+                    this.orbType = new SlimingSlime();
+                    break;
+                case 4:
+                    this.orbType = new PoisonSlime();
+                    break;
+
+
+            }
+        }else {
+
+            this.orbType = newOrbType;
+        }
 
         this.upgraded = upgraded;
         this.SelfDamage = SelfDamage;
@@ -41,11 +71,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
 
     }
-    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int count, int upgradedamount){
-        this(newOrbType,upgraded,SelfDamage,count);
 
-        this.upgradedamount = upgradedamount;
-    }
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
 
@@ -71,7 +97,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
         if (AbstractDungeon.player.hasPower("Buffer")) maxFortitudes = maxFortitudes + AbstractDungeon.player.getPower("Buffer").amount;
 
         int usedFortitudes = 0;*/
-        for (int i = 0; i < count; i++) {
+
 
             if (SelfDamage) {
 
@@ -91,27 +117,37 @@ public class SlimeSpawnAction extends AbstractGameAction {
                         currentHealth = currentHealth - 3;
                     }
                     */
+                    if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND){
+                        SlimeboundMod.disabledStrikeVFX = true;
+                    }
                     AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.currentAmount, DamageInfo.DamageType.HP_LOSS));
 
-                    AbstractDungeon.player.damageFlash = true;
-                    AbstractDungeon.player.damageFlashFrames = 4;
+                    //AbstractDungeon.player.damageFlash = true;
+                    //AbstractDungeon.player.damageFlashFrames = 4;
                 }
 
 
             }
-            AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
+           // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
 
             AbstractDungeon.player.channelOrb(this.orbType);
 
 
             if (this.upgraded) {
+                SlimeboundMod.bumpnextlime = true;
+
                 AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
             }
-            tickDuration();
+        tickDuration();
 
 
+        this.isDone = true;
+        if (this.isDone && this.count > 1) {
+
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(this.orbType,this.upgraded,this.SelfDamage, this.count-1,this.random));
         }
+
 
 
         this.isDone = true;

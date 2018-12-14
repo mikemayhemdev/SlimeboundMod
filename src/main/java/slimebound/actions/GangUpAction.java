@@ -67,7 +67,7 @@ public class GangUpAction extends AbstractGameAction {
 
 
         }
-        AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
+        //AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
         SlimeboundMod.bumpnextlime = true;
 
 

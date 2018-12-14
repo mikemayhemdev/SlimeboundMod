@@ -1,6 +1,6 @@
 
         package slimebound.patches;
-/*
+
         import basemod.BaseMod;
         import basemod.ReflectionHacks;
 
@@ -41,4 +41,4 @@ public class VictoryPatch {
         }
     }
 }
-*/
+

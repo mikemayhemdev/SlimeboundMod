@@ -61,7 +61,7 @@ public class SlimedPower extends AbstractPower {
     }
 
     public void onInitialApplication() {
-        AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),false)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),1F,false,0.6F)));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX, this.owner.hb.cY, 4), 0.05F));
 
@@ -70,7 +70,7 @@ public class SlimedPower extends AbstractPower {
 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),false)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),1F,false,0.6F)));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX, this.owner.hb.cY, 4), 0.05F));
 
