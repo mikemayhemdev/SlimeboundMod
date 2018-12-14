@@ -94,9 +94,6 @@ public abstract class SpawnedSlime
     private int yOffset;
 
 
-    public SpawnedSlime(String ID, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
-    this(ID,0,Color.WHITE,"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",1F,Color.WHITE,passive,initialBoost,movesToAttack,deathColor,OrbFlareColor,intentImage,IMGURL);
-    }
     public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
 
         this.scale=scale;

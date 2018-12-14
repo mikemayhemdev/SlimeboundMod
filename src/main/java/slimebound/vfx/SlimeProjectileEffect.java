@@ -44,6 +44,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
         if (img == null) {
             img = ImageMaster.loadImage("SlimeboundImages/vfx/slimeballWhite.png");
         }
+        SlimeboundMod.logger.info("Slime normal projectile firing");
 
         this.sX = srcX + 40;
         this.sY = srcY - 40;

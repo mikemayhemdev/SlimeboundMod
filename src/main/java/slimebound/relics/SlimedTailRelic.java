@@ -37,10 +37,10 @@ public class SlimedTailRelic extends CustomRelic {
                     SlimedTailRelic.this.flash();
 
 
-                    AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, SlimedTailRelic.this));
                     AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
                    // AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.SplitPoison(), false, false));
                     AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlimeSacrificePower(AbstractDungeon.player, 1), 1, true));
+                    AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, SlimedTailRelic.this));
 
                     SlimedTailRelic.this.isActive = false;
                     AbstractDungeon.player.hand.applyPowers();
@@ -57,10 +57,9 @@ public class SlimedTailRelic extends CustomRelic {
         if (this.isActive && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             AbstractPlayer p = AbstractDungeon.player;
             SlimedTailRelic.this.flash();
+            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SlimeSacrificePower(AbstractDungeon.player, 1), 1, true));
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(p, this));
-            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-            AbstractDungeon.actionManager.addToTop(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SlimeSacrificePower(AbstractDungeon.player, 2), 2, true));
 
             this.isActive = false;
             AbstractDungeon.player.hand.applyPowers();

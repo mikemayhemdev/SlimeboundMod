@@ -60,6 +60,7 @@ public class zzzDuplicateSlimes extends AbstractSlimeboundCard {
             i++;
         }
         logger.info("Moving to spawn mode.");
+        /*
         for (String s : tempOrbs) {
             if (s != null) {
                 logger.info("Attempting to spawn a " + s);
@@ -88,9 +89,11 @@ public class zzzDuplicateSlimes extends AbstractSlimeboundCard {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.HexSlime(), false, false));
                 }
 
-            }
-        }
 
+            }
+
+        }
+        */
         logger.info("Finished.");
     }
 

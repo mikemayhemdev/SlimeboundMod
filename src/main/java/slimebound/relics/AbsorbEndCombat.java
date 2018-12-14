@@ -53,7 +53,7 @@ public class AbsorbEndCombat extends CustomRelic {
     }
 
     public void atBattleStartPreDraw() {
-        if(AbstractDungeon.player.currentHealth > 3) {
+
             this.flash();
             Random random = new Random();
             Integer chosenRand = random.nextInt(4) + 1;
@@ -72,7 +72,7 @@ public class AbsorbEndCombat extends CustomRelic {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
                     break;
             }
-        }
+
 
     }
 

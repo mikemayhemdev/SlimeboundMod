@@ -80,7 +80,7 @@ public class GangUpAction extends AbstractGameAction {
 
 
         this.isDone = true;
-        if (this.isDone && this.count > 0) {
+        if (this.count > 0) {
             AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.count - 1,this.upgradedamount,false));
         }
 

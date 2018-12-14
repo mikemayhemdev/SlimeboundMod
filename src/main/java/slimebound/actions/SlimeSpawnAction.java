@@ -32,62 +32,27 @@ public class SlimeSpawnAction extends AbstractGameAction {
     private int count;
 
 
-    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int count, boolean random) {
+    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
 
         this.duration = Settings.ACTION_DUR_FAST;
         this.random=random;
 
-        if (random) {
-            Random randomSl = new Random();
-            Integer chosenRand = randomSl.nextInt(4) + 1;
-
-            switch (chosenRand) {
-                case 1:
-                    this.orbType = new AttackSlime();
-                    break;
-                case 2:
-                    this.orbType = new DebuffSlime();
-                    break;
-                case 3:
-                    this.orbType = new SlimingSlime();
-                    break;
-                case 4:
-                    this.orbType = new PoisonSlime();
-                    break;
-
-
-            }
-        }else {
-
-            this.orbType = newOrbType;
+        if (newOrbType!=null) {
+            this.orbType=newOrbType;
+            SpawnedSlime s = (SpawnedSlime) newOrbType;
+            this.upgradedamount = s.upgradedInitialBoost;
         }
 
         this.upgraded = upgraded;
         this.SelfDamage = SelfDamage;
         this.currentAmount = 3;
-        SpawnedSlime s = (SpawnedSlime) newOrbType;
-        this.upgradedamount = s.upgradedInitialBoost;
+
+
         this.count = count;
 
 
     }
 
-
-    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
-
-        this.duration = Settings.ACTION_DUR_FAST;
-
-        this.orbType = newOrbType;
-
-        this.upgraded = upgraded;
-        this.SelfDamage = SelfDamage;
-        this.currentAmount = 3;
-        SpawnedSlime s = (SpawnedSlime) newOrbType;
-        this.upgradedamount = s.upgradedInitialBoost;
-        this.count = 1;
-
-
-    }
 
 
     public void update() {
@@ -130,8 +95,31 @@ public class SlimeSpawnAction extends AbstractGameAction {
             }
            // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
+            SlimeboundMod.logger.info("Channeling slime orb");
+        if (this.random || this.orbType==null) {
+            Random randomSl = new Random();
+            Integer chosenRand = randomSl.nextInt(4) + 1;
+
+            switch (chosenRand) {
+                case 1:
+                    AbstractDungeon.player.channelOrb(new AttackSlime());
+                    break;
+                case 2:
+                    AbstractDungeon.player.channelOrb(new DebuffSlime());
+                    break;
+                case 3:
+                    AbstractDungeon.player.channelOrb(new SlimingSlime());
+                    break;
+                case 4:
+                    AbstractDungeon.player.channelOrb(new PoisonSlime());
+                    break;
+
+
+            }
+        }else {
 
             AbstractDungeon.player.channelOrb(this.orbType);
+        }
 
 
             if (this.upgraded) {
@@ -143,10 +131,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
 
         this.isDone = true;
-        if (this.isDone && this.count > 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(this.orbType,this.upgraded,this.SelfDamage, this.count-1,this.random));
-        }
 
 
 

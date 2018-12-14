@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,8 +10,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 
-public class SearingPower extends AbstractPower {
+
+public class SearingPower extends AbstractPower implements HealthBarRenderPower {
 
     public static final String POWER_ID = "Slimebound:SearingPower";
     public static final String NAME = "Potency";
@@ -56,6 +59,16 @@ public class SearingPower extends AbstractPower {
             flashWithoutSound();
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.LoseHPAction(this.owner, this.source, this.amount, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE));
         }
+    }
+
+    @Override
+    public int getHealthBarAmount() {
+        return this.amount;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.ORANGE;
     }
 }
 

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -32,9 +33,10 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
     private float bounceHeight;
     private static final float DUR = 0.25F;
     private boolean playedSfx = false;
-    private boolean rain = false;
+    private boolean skip = false;
     private float height = 100f;
     private AbstractOrb o;
+
 
     private ArrayList<Vector2> previousPos = new ArrayList();
 
@@ -42,35 +44,47 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
         if (img == null) {
             img = ImageMaster.loadImage("SlimeboundImages/vfx/slimeballWhite.png");
         }
+        if (o==null) {
+            this.duration=0F;
+            this.startingDuration=0F;
+            this.skip= true;
+        } else {
 
-        this.sX = srcX;
-        CardCrawlGame.sound.playA("SLIME_SPLIT",0.3f);
 
-        this.sY = srcY;
-        this.cX = this.sX;
-        this.cY = this.sY;
-        this.o=o;
-        this.scale = scale;
-        this.rotation = 0.0F;
-        this.duration = .35F;
-        this.startingDuration = .35F;
-        this.color = color;
+
+
+
+            SlimeboundMod.logger.info("Slime spawn projectile firing");
+
+            this.sX = srcX;
+            CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
+
+            this.sY = srcY;
+            this.cX = this.sX;
+            this.cY = this.sY;
+            this.o = o;
+            this.scale = scale;
+            this.rotation = 0.0F;
+            this.duration = .35F;
+            this.startingDuration = .35F;
+            this.color = color;
+        }
 
 
 
     }
 
     public void update() {
+        if (!this.skip) {
+            this.cX = Interpolation.linear.apply(this.o.cX, this.sX, this.duration / this.startingDuration);
+            this.cY = Interpolation.linear.apply(this.o.cY + 8, this.sY, this.duration / this.startingDuration);
 
-        this.cX = Interpolation.linear.apply(this.o.cX, this.sX, this.duration / this.startingDuration);
-        this.cY = Interpolation.linear.apply(this.o.cY + 8, this.sY, this.duration / this.startingDuration);
 
-
-
-        if (this.o.cX > this.sX) {
-            this.rotation -= Gdx.graphics.getDeltaTime() * 300.0F;
-        } else {
-            this.rotation += Gdx.graphics.getDeltaTime() * 300.0F;
+            if (this.o.cX > this.sX) {
+                this.rotation -= Gdx.graphics.getDeltaTime() * 300.0F;
+            } else {
+                this.rotation += Gdx.graphics.getDeltaTime() * 300.0F;
+            }
         }
 
         this.duration -= Gdx.graphics.getDeltaTime();
