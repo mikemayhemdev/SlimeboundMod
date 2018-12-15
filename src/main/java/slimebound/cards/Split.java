@@ -59,16 +59,16 @@ public class Split extends AbstractSlimeboundCard {
         Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
         switch (o) {
-            case 0:
+            case 1:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                 break;
-            case 1:
+            case 2:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
                 break;
-            case 2:
+            case 3:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
                 break;
-            case 3:
+            case 4:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
                 break;
         }

@@ -40,6 +40,7 @@ public class LastStand extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 2;
         this.isEthereal = true;
+        this.exhaust = true;
         this.poison = this.magicNumber +4;
 
         tags.add(SlimeboundMod.STUDY_CHAMP);
