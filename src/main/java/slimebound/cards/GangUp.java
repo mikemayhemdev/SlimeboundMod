@@ -4,6 +4,7 @@ package slimebound.cards;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,6 +17,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.GangUpAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.BuffAttackSlimesPower;
 
 import java.util.Random;
 
@@ -55,6 +57,7 @@ public class GangUp extends AbstractSlimeboundCard {
 
                if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));
 
+       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.energyOnUse), this.energyOnUse));
 
             p.energy.use(EnergyPanel.totalCount);
 

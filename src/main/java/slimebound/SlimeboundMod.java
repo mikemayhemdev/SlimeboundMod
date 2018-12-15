@@ -367,16 +367,16 @@ public static String printString(String s){
 
         BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore HP, consuming the effect. Half is removed at end of turn.");
 
-        BaseMod.addKeyword(new String[]{"potency"}, "Increases the effectiveness of your Spawned Slimes.");
+        BaseMod.addKeyword(new String[]{"potency"}, "Increases the damage of ALL of your Spawned Slimes.");
         BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains damage when you gain Strength.");
         BaseMod.addKeyword(new String[]{"attacking"}, "Attacks for 5 each turn.");
         BaseMod.addKeyword(new String[]{"cultist"}, "Attacks for 6 each turn, then increases it's damage by 2.");
         BaseMod.addKeyword(new String[]{"weakening"}, "Attacks for 2 each turn and applies 1 Weaken.");
-        BaseMod.addKeyword(new String[]{"poisoning"}, "Applies 2 Poison each turn.");
-        BaseMod.addKeyword(new String[]{"sliming"}, "Applies 2 Slimed each turn.");
+        BaseMod.addKeyword(new String[]{"poisoning"}, "Attacks for 1 each turn and applies 2 Poison.");
+        BaseMod.addKeyword(new String[]{"sliming"}, "Attacks for 1 each turn and applies 2 Slimed.");
         BaseMod.addKeyword(new String[]{"plated"}, "Increases Block each turn.  Reduced when you take damage.");
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grants Block for next turn.");
-        BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 6 each turn and grants you an equal amount of Block.");
+        BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 6 each turn and grants you 6 Block.");
         BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
         BaseMod.addKeyword(new String[]{"halved"}, "Your Max HP is cut in half this combat, losing HP if you are currently above half, and preventing healing beyond half.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");

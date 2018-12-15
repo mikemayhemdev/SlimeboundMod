@@ -5,13 +5,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
-import slimebound.actions.SlimeAutoAttacking;
-import slimebound.actions.SlimeAutoCultist;
+import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 import slimebound.vfx.SticksParticle;
 import slimebound.vfx.SticksParticleRight;
@@ -46,7 +42,7 @@ public class CultistSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoCultist(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL,this));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,false,false,0,false,0,true));
 
 
     }

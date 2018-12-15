@@ -36,7 +36,7 @@ public class ChargeUp extends AbstractSlimeboundCard {
 
         tags.add(SlimeboundMod.STUDY_GUARDIAN);
         tags.add(SlimeboundMod.STUDY);
-        this.baseBlock = 16;
+        this.baseBlock = 10;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
         this.isEthereal = true;
@@ -56,7 +56,7 @@ public class ChargeUp extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(4);
+            upgradeBlock(3);
             upgradeMagicNumber(1);
         }
     }

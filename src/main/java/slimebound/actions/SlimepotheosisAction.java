@@ -27,17 +27,16 @@ this.upgraded=upgraded;
 /* 20 */     if (this.duration == Settings.ACTION_DUR_MED) {
 /* 21 */       AbstractPlayer p = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 /*    */       
-/* 23 */       int healthloss = upgradeAllCardsInGroup(p.hand, upgraded);
+/* 23 */       upgradeAllCardsInGroup(p.hand, upgraded);
 
 
-        if (healthloss > 0) AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, healthloss));
 
         /* 28 */       this.isDone = true;
 /*    */     }
 /*    */   }
 /*    */   
-/*    */   private int upgradeAllCardsInGroup(CardGroup cardGroup, boolean upgradedV) {
-            int cards = 0;
+/*    */   private void upgradeAllCardsInGroup(CardGroup cardGroup, boolean upgradedV) {
+
 /* 33 */     for (AbstractCard c : cardGroup.group) {
 /* 34 */       if (c.canUpgrade()) {
 /* 35 */         if (cardGroup.type == CardGroup.CardGroupType.HAND) {
@@ -45,10 +44,15 @@ this.upgraded=upgraded;
 /*    */         }
 /* 38 */         c.upgrade();
 /* 39 */         c.applyPowers();
-                cards++;
-                if(!upgradedV) cards++;
+            if (upgradedV) {
+                AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
+            }else{
+                AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 2));
+
+            }
+
 /*    */       }
 /*    */     }
-            return cards;
+
 /*    */   }
 /*    */ }

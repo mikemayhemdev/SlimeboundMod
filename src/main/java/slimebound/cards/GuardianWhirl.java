@@ -55,7 +55,7 @@ public class GuardianWhirl extends AbstractSlimeboundCard {
 
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
+            //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1f));
         }
     }
 

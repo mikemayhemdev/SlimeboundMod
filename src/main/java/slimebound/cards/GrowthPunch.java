@@ -46,8 +46,8 @@ public class GrowthPunch extends AbstractSlimeboundCard {
 
         this.exhaust = true;
 
-            this.baseDamage = 3 + this.misc;
-            this.baseBlock = 3 + this.misc;
+            this.baseDamage = 1 + this.misc;
+            this.baseBlock = 1 + this.misc;
 
 
     }
@@ -67,19 +67,19 @@ public class GrowthPunch extends AbstractSlimeboundCard {
             if (c.uuid.equals(this.uuid)) {
                 c.misc += this.increaseAmount;
                 c.applyPowers();
-                c.baseDamage = 3 + c.misc;
-                c.baseBlock = 3 + c.misc;
+                c.baseDamage = 1 + c.misc;
+                c.baseBlock = 1 + c.misc;
 
                 c.isDamageModified = false;
             }
         }
 
-        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = 3 + c.misc) {
+        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = 1 + c.misc) {
             c = (AbstractCard) var1.next();
             c.misc += this.increaseAmount;
             //c.applyPowers();
-            c.baseDamage = 3 + c.misc;
-            c.baseBlock = 3 + c.misc;
+            c.baseDamage = 1 + c.misc;
+            c.baseBlock = 1 + c.misc;
         }
 
     }
@@ -92,8 +92,8 @@ public class GrowthPunch extends AbstractSlimeboundCard {
     }
 
     public void applyPowers() {
-        this.baseDamage = 3 + this.misc;
-        this.baseBlock = 3 + this.misc;
+        this.baseDamage = 1 + this.misc;
+        this.baseBlock = 1 + this.misc;
         super.applyPowers();
         this.initializeDescription();
     }

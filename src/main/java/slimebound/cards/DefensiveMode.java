@@ -21,7 +21,7 @@ public class DefensiveMode extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/defensivemode.png";
 
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
@@ -38,7 +38,7 @@ public class DefensiveMode extends AbstractSlimeboundCard {
         this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 2;
 
-        this.exhaust = true;
+        //this.exhaust = true;
         this.isEthereal = true;
     }
 

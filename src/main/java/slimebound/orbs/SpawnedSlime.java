@@ -4,6 +4,7 @@ import basemod.animations.AbstractAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
@@ -34,13 +35,16 @@ import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.powers.PotencyPower;
+import slimebound.powers.*;
 import slimebound.vfx.*;
 
 
 
 public abstract class SpawnedSlime
         extends AbstractOrb {
+
+    public float NUM_X_OFFSET = 1.0F * Settings.scale;
+    public float NUM_Y_OFFSET = -35.0F * Settings.scale;
     private float vfxTimer = 1.0F;
     private float vfxIntervalMin = 0.2F;
     private float vfxIntervalMax = 0.7F;
@@ -92,6 +96,10 @@ public abstract class SpawnedSlime
 
     public String customDescription;
     private int yOffset;
+    public int debuffBonusAmount;
+    public int debuffAmount;
+    public Color extraFontColor = null;
+
 
 
     public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
@@ -180,11 +188,19 @@ public abstract class SpawnedSlime
     public void applyFocus() {
         super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
+        int bonus = 0;
+        if (this instanceof AttackSlime && AbstractDungeon.player.hasPower(BuffAttackSlimesPower.POWER_ID)) bonus = AbstractDungeon.player.getPower(BuffAttackSlimesPower.POWER_ID).amount;
+        if (this instanceof DebuffSlime && AbstractDungeon.player.hasPower(BuffWeakenSlimesPower.POWER_ID)) bonus = AbstractDungeon.player.getPower(BuffWeakenSlimesPower.POWER_ID).amount;
+        if (this instanceof PoisonSlime && AbstractDungeon.player.hasPower(BuffPoisonSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffPoisonSlimesPower.POWER_ID).amount;
+        if (this instanceof SlimingSlime && AbstractDungeon.player.hasPower(BuffSlimingSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSlimingSlimesPower.POWER_ID).amount;
+
+
         if (power != null) {
-            this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus;
+
+            this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus + bonus;
 
         } else {
-            this.passiveAmount = this.basePassiveAmount + this.UniqueFocus;
+            this.passiveAmount = this.basePassiveAmount + this.UniqueFocus + bonus;
 
         }
         updateDescription();
@@ -338,9 +354,27 @@ public abstract class SpawnedSlime
                  sb.setBlendFunction(770, 771);
 
              }
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET + 15, this.cY + NUM_Y_OFFSET, this.c, this.fontScale);
-        }
+        renderText(sb);
+
+         }
         //this.hb.render(sb);
+    }
+
+
+    public void renderText(SpriteBatch sb) {
+        if (this.extraFontColor != null) {
+
+
+        int fontOffset = 16;
+        if (this.passiveAmount > 9) fontOffset = fontOffset + 5;
+        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+
+        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
+    }
+    else{
+
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+        }
     }
 }
 

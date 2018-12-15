@@ -41,7 +41,7 @@ public class FormABlockade extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseBlock = 5;
+        this.baseBlock = 3;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust=true;
     }

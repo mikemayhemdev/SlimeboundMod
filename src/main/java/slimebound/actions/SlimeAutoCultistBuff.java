@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import slimebound.orbs.CultistSlime;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.vfx.SlimeIntentEffect;
 import slimebound.vfx.SlimeIntentMovementEffect;
 
@@ -23,9 +24,9 @@ public class SlimeAutoCultistBuff extends AbstractGameAction {
     private int debuffamount;
     private AbstractPower p;
     private AttackEffect AE;
-    private CultistSlime slime;
+    private SpawnedSlime slime;
 
-    public SlimeAutoCultistBuff(Integer damage,CultistSlime o) {
+    public SlimeAutoCultistBuff(Integer damage, SpawnedSlime o) {
 
 
         this.actionType = ActionType.POWER;

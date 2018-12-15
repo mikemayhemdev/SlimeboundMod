@@ -3,14 +3,12 @@ package slimebound.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import slimebound.actions.SlimeAutoAttacking;
-import slimebound.actions.SlimeAutoPoisoning;
+import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
 
@@ -19,19 +17,23 @@ public class PoisonSlime
     public static final String ID = "Slimebound:PoisonSlime";
 
     public PoisonSlime() {
-        super(ID, -32,new Color (.5F,1.0F,.5F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(0.6F,.9F,.6F,2F),2, 2,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
+        super(ID, -32,new Color (.5F,1.0F,.5F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(0.6F,.9F,.6F,2F),1, 2,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
+        this.extraFontColor = Color.FOREST;
+        this.debuffAmount = 2;
+
     }
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];
+
+        this.description = this.descriptions[0] + (this.debuffAmount+ this.debuffBonusAmount) + this.descriptions[1];
     }
 
 
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoPoisoning(AbstractDungeon.player,this.passiveAmount,this));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,true,false,false,2 + this.debuffBonusAmount,false,0,false));
 
     }
 

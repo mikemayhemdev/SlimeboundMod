@@ -14,8 +14,8 @@
   },
   "Slimebound:GangUp": {
     "NAME": "Gang Up",
-    "DESCRIPTION": "Split into an Attacking slime X times. Increase each one's damage by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into an Attacking slime X+1 times. Increase each one's damage by !M!. NL Exhaust."
+    "DESCRIPTION": "Split into an Attacking slime X times. NL Attacking Slimes deal X more damage this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into an Attacking slime X+1 times. NL Attacking Slimes deal X more damage this combat. NL Exhaust."
   },
 "Slimebound:LevelUp": {
     "NAME": "Level Up",
@@ -31,7 +31,7 @@
 "Slimebound:SplitAttack": {
     "NAME": "Split: Attacking",
     "DESCRIPTION": "Split into an Attacking Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Attacking Slime. It deals 3 more damage per turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Attacking Slime. NL Attacking Slimes deal 1 more damage this combat. NL Exhaust."
   },
 "Slimebound:SplitCultist": {
     "NAME": "Split: Cultist",
@@ -41,17 +41,17 @@
 "Slimebound:SplitWeaken": {
     "NAME": "Split: Weakening",
     "DESCRIPTION": "Split into a Weakening Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Weakening Slime. It deals 3 more damage per turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Weakening Slime. NL Weakening Slimes deal 1 more damage this combat. NL Exhaust."
   },
 "Slimebound:SplitPoison": {
     "NAME": "Split: Poisoning",
     "DESCRIPTION": "Split into a Poisoning Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Poisoning Slime. It applies 2 more Poison per turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Poisoning Slime. NL Poisoning Slimes apply 1 more Poison this combat. NL Exhaust."
   },
 "Slimebound:SplitSliming": {
     "NAME": "Split: Sliming",
     "DESCRIPTION": "Split into a Sliming Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Sliming Slime. It applies 2 more Slimed per turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Sliming Slime. NL Sliming Slimes apply 1 more Slimed this combat. NL Exhaust."
   },
 "Slimebound:SlimeSacrifice": {
     "NAME": "Protect the Boss",
@@ -139,7 +139,7 @@
   },
 "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
-    "DESCRIPTION": "Deal !D! damage. Gain Block equal to unblocked damage."
+    "DESCRIPTION": "Gain Block equal to an enemy's Slimed. NL Deal !D! damage."
   },
 "Slimebound:Dissolve": {
     "NAME": "Dissolve",
@@ -409,7 +409,7 @@
   },
 "Slimebound:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
   },
 "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
@@ -463,7 +463,7 @@
     ] },
 "Slimebound:Collect": {
     "NAME": "Collect",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and !M! Potency. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and 1 Potency. NL Gain !B! Block. NL Exhaust."
   },
 "Slimebound:YouAreMine": {
     "NAME": "YOU ARE MINE!",
@@ -484,7 +484,7 @@
   },
 "Slimebound:TimeRipple": {
     "NAME": "Time Ripple",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Apply Slow to ALL enemies. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Apply Slow to ALL enemies. NL Exhaust."
   },
 "Slimebound:HeadSlam": {
     "NAME": "Head Slam",

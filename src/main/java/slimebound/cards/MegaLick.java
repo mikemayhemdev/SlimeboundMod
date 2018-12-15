@@ -43,7 +43,7 @@ public class MegaLick extends AbstractSlimeboundCard {
 
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 3;
         this.poison = 1;
         this.exhaust = true;
 

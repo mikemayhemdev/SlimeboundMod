@@ -14,6 +14,34 @@
 			" HP, consuming all #ySlimed.  Half of the stack is removed at end of turn."
 		]
 	},
+	"Slimebound:BuffAttackSlimesPower": {
+		"NAME": "Upgrade: Attacking",
+		"DESCRIPTIONS": [
+			"Attacking Slimes deal ",
+			" more damage."
+		]
+	},
+	"Slimebound:BuffPoisonSlimesPower": {
+		"NAME": "Upgrade: Poisoning",
+		"DESCRIPTIONS": [
+			"Poisoning Slimes apply ",
+			" more Poison."
+		]
+	},
+	"Slimebound:BuffSlimingSlimesPower": {
+		"NAME": "Upgrade: Sliming",
+		"DESCRIPTIONS": [
+			"Sliming Slimes apply ",
+			" more Slimed."
+		]
+	},
+	"Slimebound:BuffWeakenSlimesPower": {
+		"NAME": "Upgrade: Weakening",
+		"DESCRIPTIONS": [
+			"Weakening Slimes deal ",
+			" more damage."
+		]
+	},
 	"Slimebound:HexSlimePerTurnPower": {
 		"NAME": "Hex Power",
 		"DESCRIPTIONS": [
