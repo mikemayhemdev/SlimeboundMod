@@ -64,7 +64,6 @@ public class ComboTackle extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
@@ -74,6 +73,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
         if (upgraded)
             AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
 
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
     }
 

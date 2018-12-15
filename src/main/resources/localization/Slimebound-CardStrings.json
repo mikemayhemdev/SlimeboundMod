@@ -379,7 +379,7 @@
 "Slimebound:SlimeSmash": {
     "NAME": "Vicious Tackle",
     "DESCRIPTION": "Deal !D! Damage and !SelfDamage! damage to yourself. This gains twice the damage bonus from Slimed.",
-  "UPGRADE_DESCRIPTION": "Deal !D! Damage !SelfDamage! damage to yourself. This gains twice the damage bonus and healing from Slimed."
+  "UPGRADE_DESCRIPTION": "Deal !D! Damage and !SelfDamage! damage to yourself. This gains twice the damage bonus and healing from Slimed."
   },
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",

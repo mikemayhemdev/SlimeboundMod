@@ -4,6 +4,7 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -79,7 +80,7 @@ public class SlimeSmash extends AbstractSlimeboundCard {
             if (m.hasPower(SlimedPower.POWER_ID)) {
 
 
-                AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
+                //AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower(SlimedPower.POWER_ID).amount / 2));
 
             }
@@ -87,6 +88,7 @@ public class SlimeSmash extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 
     }
