@@ -97,25 +97,9 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
             SlimeboundMod.logger.info("Channeling slime orb");
         if (this.random || this.orbType==null) {
-            Random randomSl = new Random();
-            Integer chosenRand = randomSl.nextInt(4) + 1;
 
-            switch (chosenRand) {
-                case 1:
-                    AbstractDungeon.player.channelOrb(new AttackSlime());
-                    break;
-                case 2:
-                    AbstractDungeon.player.channelOrb(new DebuffSlime());
-                    break;
-                case 3:
-                    AbstractDungeon.player.channelOrb(new SlimingSlime());
-                    break;
-                case 4:
-                    AbstractDungeon.player.channelOrb(new PoisonSlime());
-                    break;
+            //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
 
-
-            }
         }else {
 
             AbstractDungeon.player.channelOrb(this.orbType);

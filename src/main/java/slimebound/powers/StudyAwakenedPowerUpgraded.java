@@ -52,9 +52,9 @@ public class StudyAwakenedPowerUpgraded extends AbstractPower {
 
 
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0];
         } else {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
+            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
         }
 
 

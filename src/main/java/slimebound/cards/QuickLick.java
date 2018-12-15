@@ -36,6 +36,7 @@ public class QuickLick extends AbstractSlimeboundCard {
     public QuickLick() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        tags.add(SlimeboundMod.LICK);
 
 
         this.magicNumber = this.baseMagicNumber = 4;

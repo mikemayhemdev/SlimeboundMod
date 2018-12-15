@@ -3,10 +3,12 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
@@ -49,38 +51,19 @@ public class QuickStudy extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(8) + 1;
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
 
 
-        switch (chosenRand) {
-            case 1:
-                AbstractDungeon.actionManager.addToBottom(new RandomHexaghostCardAction(false));
-                break;
-            case 2:
-                AbstractDungeon.actionManager.addToBottom(new RandomChampCardAction(false));
-                break;
-            case 3:
-                AbstractDungeon.actionManager.addToBottom(new RandomCollectorCardAction(false));
-                break;
-            case 4:
-                AbstractDungeon.actionManager.addToBottom(new RandomAutomatonCardAction(false));
-                break;
-            case 5:
-                AbstractDungeon.actionManager.addToBottom(new RandomAwakanedCardAction(false));
-                break;
-            case 6:
-                AbstractDungeon.actionManager.addToBottom(new RandomShapesCardAction(false));
-                break;
-            case 7:
-                AbstractDungeon.actionManager.addToBottom(new RandomGuardianCardAction(false));
-                break;
-            case 8:
-                AbstractDungeon.actionManager.addToBottom(new RandomTimeEaterCardAction(false));
-                break;
+        AbstractCard c;
+        do {
+            c = CardLibrary.getRandomColorSpecificCard(CardColor.COLORLESS, AbstractDungeon.cardRandomRng).makeCopy();
+        } while (!c.hasTag(SlimeboundMod.STUDY));
 
-        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+
+
+
+
     }
 
 

@@ -34,7 +34,8 @@ public class GuardianWhirl extends AbstractSlimeboundCard {
     public GuardianWhirl() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_GUARDIAN);
+        tags.add(SlimeboundMod.STUDY);
 
         this.baseDamage = 3;
         this.isMultiDamage = true;

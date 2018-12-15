@@ -32,7 +32,8 @@ public class DonusPower extends AbstractSlimeboundCard {
 
     public DonusPower() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_SHAPES);
+        tags.add(SlimeboundMod.STUDY);
 
         this.magicNumber = this.baseMagicNumber = 9;
 

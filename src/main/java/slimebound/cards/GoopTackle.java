@@ -44,6 +44,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
     public GoopTackle() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        tags.add(SlimeboundMod.TACKLE);
 
 
         this.baseDamage = this.originalDamage = 8;
@@ -73,38 +74,18 @@ public class GoopTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
 
-        AbstractCard c = null;
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(7) + 1;
+        AbstractCard c;
+        do {
+            c = CardLibrary.getRandomColorSpecificCard(AbstractCardEnum.SLIMEBOUND, AbstractDungeon.cardRandomRng).makeCopy();
+        } while (!c.hasTag(SlimeboundMod.TACKLE));
 
-        switch (chosenRand) {
-            case 1:
-                c = CardLibrary.getCard(GoopTackle.ID).makeCopy();
-                break;
-            case 2:
-                c = CardLibrary.getCard(FlameTackle.ID).makeCopy();
-                break;
-            case 3:
-                c = CardLibrary.getCard(ComboTackle.ID).makeCopy();
-                break;
-            case 4:
-                c = CardLibrary.getCard(HungryTackle.ID).makeCopy();
-                break;
-            case 5:
-                c = CardLibrary.getCard(VenomTackle.ID).makeCopy();
-                break;
-            case 6:
-                c = CardLibrary.getCard(SlimeSmash.ID).makeCopy();
-                break;
-            case 7:
-                c = CardLibrary.getCard(FinishingTackle.ID).makeCopy();
-                break;
-        }
+
 
 
         if (upgraded) {
             c.upgrade();
         }
+
         c.setCostForTurn(0);
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));

@@ -30,7 +30,8 @@ public class SplitCultist extends AbstractSlimeboundCard {
 
     public SplitCultist() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_AWAKENEDONE);
+        tags.add(SlimeboundMod.STUDY);
 
         this.exhaust = true;
         this.isEthereal = true;

@@ -37,6 +37,7 @@ public class HauntingLick extends AbstractSlimeboundCard {
     public HauntingLick() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        tags.add(SlimeboundMod.LICK);
 
 
         this.magicNumber = this.baseMagicNumber = 4;

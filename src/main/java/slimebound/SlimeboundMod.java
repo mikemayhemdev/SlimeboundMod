@@ -8,6 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -76,6 +77,18 @@ public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscr
     public static boolean bumpnextlime = false;
     public static boolean disabledStrikeVFX = false;
     public static SpawnedSlime mostRecentSlime;
+    @SpireEnum public static AbstractCard.CardTags LICK;
+    @SpireEnum public static AbstractCard.CardTags TACKLE;
+    @SpireEnum public static AbstractCard.CardTags STUDY_HEXAGHOST;
+    @SpireEnum public static AbstractCard.CardTags STUDY_AWAKENEDONE;
+    @SpireEnum public static AbstractCard.CardTags STUDY_TIMEEATER;
+    @SpireEnum public static AbstractCard.CardTags STUDY_CHAMP;
+    @SpireEnum public static AbstractCard.CardTags STUDY_COLLECTOR;
+    @SpireEnum public static AbstractCard.CardTags STUDY_SHAPES;
+    @SpireEnum public static AbstractCard.CardTags STUDY_GUARDIAN;
+    @SpireEnum public static AbstractCard.CardTags STUDY_AUTOMATON;
+    @SpireEnum public static AbstractCard.CardTags STUDY;
+
 
 
 
@@ -88,7 +101,6 @@ public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscr
     public SlimeboundMod() {
 
         BaseMod.subscribe(this);
-
 
         BaseMod.addColor(AbstractCardEnum.SLIMEBOUND,
                 SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR,

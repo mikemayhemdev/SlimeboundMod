@@ -41,7 +41,8 @@ public class PolyBeam extends AbstractSlimeboundCard {
     public PolyBeam() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_SHAPES);
+        tags.add(SlimeboundMod.STUDY);
 
         this.baseDamage = 4;
         this.baseMagicNumber = this.magicNumber = 1;

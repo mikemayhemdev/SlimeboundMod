@@ -43,6 +43,7 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
+        tags.add(SlimeboundMod.TACKLE);
 
         this.baseDamage = this.originalDamage = 18;
         this.selfDamage = 5;

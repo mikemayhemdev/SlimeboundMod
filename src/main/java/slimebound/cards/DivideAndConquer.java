@@ -10,10 +10,16 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.DebuffSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -61,36 +67,48 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
 
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(4);
 
+        ArrayList<Integer> orbs = new ArrayList();
+        orbs.add(1);
+        orbs.add(2);
+        orbs.add(3);
+        orbs.add(4);
+        Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
-        if (chosenRand == 0) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
-        } else if (chosenRand == 1) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
-        } else if (chosenRand == 2) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+        switch (o) {
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                break;
+            case 4:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                break;
         }
 
         if (upgraded) {
-            chosenRand = random.nextInt(4);
+            o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
-
-            if (chosenRand == 0) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
-            } else if (chosenRand == 1) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
-            } else if (chosenRand == 2) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
-
-
+            switch (o) {
+                case 0:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                    break;
+                case 1:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                    break;
+                case 2:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                    break;
+                case 3:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                    break;
             }
-        }
+            }
+
 
     }
 

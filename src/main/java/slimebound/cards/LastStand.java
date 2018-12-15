@@ -42,7 +42,8 @@ public class LastStand extends AbstractSlimeboundCard {
         this.isEthereal = true;
         this.poison = this.magicNumber +4;
 
-
+        tags.add(SlimeboundMod.STUDY_CHAMP);
+        tags.add(SlimeboundMod.STUDY);
     }
 /*
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {

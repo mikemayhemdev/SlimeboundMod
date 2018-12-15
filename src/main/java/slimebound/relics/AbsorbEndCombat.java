@@ -12,9 +12,10 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.SpawnedSlime;
+import slimebound.orbs.*;
 import slimebound.powers.PotencyPower;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class AbsorbEndCombat extends CustomRelic {
@@ -55,23 +56,27 @@ public class AbsorbEndCombat extends CustomRelic {
     public void atBattleStartPreDraw() {
 
             this.flash();
-            Random random = new Random();
-            Integer chosenRand = random.nextInt(4) + 1;
+        ArrayList<Integer> orbs = new ArrayList();
+        orbs.add(1);
+        orbs.add(2);
+        orbs.add(3);
+        orbs.add(4);
+        Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
-            switch (chosenRand) {
-                case 1:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, false));
-                    break;
-                case 2:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, false));
-                    break;
-                case 3:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
-                    break;
-                case 4:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
-                    break;
-            }
+        switch (o) {
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                break;
+            case 4:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                break;
+        }
 
 
     }

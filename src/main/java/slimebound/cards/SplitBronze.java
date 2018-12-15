@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 
 public class SplitBronze extends AbstractSlimeboundCard {
@@ -28,7 +29,8 @@ public class SplitBronze extends AbstractSlimeboundCard {
 
     public SplitBronze() {
         super(ID, NAME, slimebound.SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_AUTOMATON);
+        tags.add(SlimeboundMod.STUDY);
 
         this.exhaust = true;
         this.isEthereal = true;

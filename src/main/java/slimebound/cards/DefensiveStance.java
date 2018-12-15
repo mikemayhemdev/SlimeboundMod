@@ -31,7 +31,8 @@ public class DefensiveStance extends AbstractSlimeboundCard {
 
     public DefensiveStance() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_CHAMP);
+        tags.add(SlimeboundMod.STUDY);
 
         this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 3;

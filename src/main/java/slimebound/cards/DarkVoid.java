@@ -38,7 +38,8 @@ public class DarkVoid extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
-
+        tags.add(SlimeboundMod.STUDY_AWAKENEDONE);
+        tags.add(SlimeboundMod.STUDY);
         this.baseDamage = 10;
         this.isMultiDamage = true;
         this.exhaust = true;

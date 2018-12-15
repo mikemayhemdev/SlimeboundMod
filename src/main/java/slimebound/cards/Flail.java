@@ -37,7 +37,8 @@ public class Flail extends AbstractSlimeboundCard {
     public Flail() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_AUTOMATON);
+        tags.add(SlimeboundMod.STUDY);
 
         this.baseDamage = 5;
         this.isMultiDamage = true;

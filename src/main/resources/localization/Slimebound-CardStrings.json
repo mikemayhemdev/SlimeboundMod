@@ -178,7 +178,7 @@
 "Slimebound:Repurpose": {
     "NAME": "Repurpose",
     "DESCRIPTION": "Morph a card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Morph up to 2 cards in your hand and reduce their costs by 1 for the rest of combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Morph up to 2 cards in your hand. NL Exhaust."
   },
 "Slimebound:RollThrough": {
     "NAME": "Roll Through",

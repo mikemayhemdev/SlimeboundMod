@@ -77,7 +77,7 @@ public class GrowthPunch extends AbstractSlimeboundCard {
         for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = 3 + c.misc) {
             c = (AbstractCard) var1.next();
             c.misc += this.increaseAmount;
-            c.applyPowers();
+            //c.applyPowers();
             c.baseDamage = 3 + c.misc;
             c.baseBlock = 3 + c.misc;
         }

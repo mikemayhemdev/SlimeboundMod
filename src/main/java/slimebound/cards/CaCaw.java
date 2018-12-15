@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,6 +34,9 @@ public class CaCaw extends AbstractSlimeboundCard {
 
     public CaCaw() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
+        tags.add(SlimeboundMod.STUDY_AWAKENEDONE);
+        tags.add(SlimeboundMod.STUDY);
+
 
 
         this.baseBlock = 15;

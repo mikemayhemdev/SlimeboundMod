@@ -11,11 +11,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.DebuffSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -50,21 +56,30 @@ public class SuperSplit extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
+        ArrayList<Integer> orbs = new ArrayList();
+        orbs.add(1);
+        orbs.add(2);
+        orbs.add(3);
+        orbs.add(4);
 
-        Random random = new Random();
+
+
         for (int i = 0; i < 4; i++) {
+            Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
-            Integer chosenRand = random.nextInt(4);
-
-
-            if (chosenRand == 0) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
-            } else if (chosenRand == 1) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, true));
-            } else if (chosenRand == 2) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true));
+            switch (o) {
+                case 1:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                    break;
+                case 2:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                    break;
+                case 3:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                    break;
+                case 4:
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                    break;
             }
         }
 

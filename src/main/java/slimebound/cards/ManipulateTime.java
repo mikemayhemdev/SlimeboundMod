@@ -30,7 +30,8 @@ public class ManipulateTime extends AbstractSlimeboundCard {
     public ManipulateTime() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
-
+        tags.add(SlimeboundMod.STUDY_TIMEEATER);
+        tags.add(SlimeboundMod.STUDY);
         this.exhaust = true;
         //this.canPlay = true;
         this.isEthereal = true;

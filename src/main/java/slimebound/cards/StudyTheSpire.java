@@ -11,12 +11,20 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import slimebound.SlimeboundMod;
+import slimebound.actions.SlimeSpawnAction;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.DebuffSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.*;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -48,82 +56,36 @@ public class StudyTheSpire extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
 
 
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(8) + 1;
+        ArrayList<AbstractPower> powers = new ArrayList();
 
-        switch (chosenRand) {
-            case 1:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAutomatonPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAutomatonPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
+        if (upgraded) {
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAwakenedPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyShapesPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyChampPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyCollectorPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyGuardianPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+        } else{
 
-                }
-                break;
-            case 2:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAwakenedPower(p, p, this.magicNumber), this.magicNumber));
-                }  else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyAwakenedPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
-            case 3:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyChampPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyChampPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
-            case 4:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyCollectorPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyCollectorPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
-            case 5:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyGuardianPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyGuardianPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
-            case 6:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyHexaghostPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyHexaghostPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
-            case 7:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyShapesPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyShapesPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
-            case 8:
-                if (!upgraded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyTimeEaterPower(p, p, this.magicNumber), this.magicNumber));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StudyTimeEaterPowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
-                }
-                break;
-
+            powers.add(new StudyAutomatonPower(p, p, this.magicNumber));
+            powers.add(new StudyAwakenedPower(p, p, this.magicNumber));
+            powers.add(new StudyShapesPower(p, p, this.magicNumber));
+            powers.add(new StudyChampPower(p, p, this.magicNumber));
+            powers.add(new StudyCollectorPower(p, p, this.magicNumber));
+            powers.add(new StudyGuardianPower(p, p, this.magicNumber));
+            powers.add(new StudyHexaghostPower(p, p, this.magicNumber));
+            powers.add(new StudyTimeEaterPower(p, p, this.magicNumber));
         }
+
+
+        AbstractPower o = powers.get(AbstractDungeon.cardRng.random(powers.size() - 1));
+
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, o, this.magicNumber));
+
+
 
     }
 

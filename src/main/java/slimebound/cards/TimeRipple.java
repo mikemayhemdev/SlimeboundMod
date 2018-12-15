@@ -37,7 +37,8 @@ public class TimeRipple extends AbstractSlimeboundCard {
     public TimeRipple() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_TIMEEATER);
+        tags.add(SlimeboundMod.STUDY);
 
         this.magicNumber = this.baseMagicNumber = 1;
         this.baseBlock = 10;

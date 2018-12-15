@@ -48,9 +48,11 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
 
         if (m.hasPower(SlimedPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
+            /*
             if (upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
             }
+            */
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
@@ -71,9 +73,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeDamage(3);
 
         }
 

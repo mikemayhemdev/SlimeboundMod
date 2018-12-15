@@ -36,7 +36,8 @@ public class HeadSlam extends AbstractSlimeboundCard {
     public HeadSlam() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.STUDY_TIMEEATER);
+        tags.add(SlimeboundMod.STUDY);
 
         this.baseDamage = 12;
 
