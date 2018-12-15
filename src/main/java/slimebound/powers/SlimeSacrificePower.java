@@ -20,6 +20,7 @@ public class SlimeSacrificePower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
+    private int startingStack;
 
     public SlimeSacrificePower(AbstractCreature owner, int bufferAmt) {
         this.name = NAME;
@@ -55,7 +56,7 @@ public class SlimeSacrificePower extends AbstractPower {
                             s.noEvokeBonus = true;
                             this.flash();
                             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
-                            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
+                            com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
                             AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(o));
                             return AbstractDungeon.player.currentBlock;
 

@@ -34,7 +34,7 @@ public class SolidOuterGoop extends AbstractSlimeboundCard {
 
     public SolidOuterGoop() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
 
 
     }

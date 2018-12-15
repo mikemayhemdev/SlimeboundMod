@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
+import slimebound.powers.TackleDebuffPower;
 
 
 public class VenomTackle extends AbstractSlimeboundCard {
@@ -55,6 +56,11 @@ public class VenomTackle extends AbstractSlimeboundCard {
         int bonus = 0;
         if (player.hasPower(TackleBuffPower.POWER_ID)){
             bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
+        }
+        if (mo != null) {
+            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
+                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
+            }
         }
         return tmp + bonus;
     }

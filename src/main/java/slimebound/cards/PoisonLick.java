@@ -39,7 +39,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
         this.poison = 2;
 
@@ -71,7 +71,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(2);
+           // upgradeMagicNumber(2);
             this.poison = 2;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

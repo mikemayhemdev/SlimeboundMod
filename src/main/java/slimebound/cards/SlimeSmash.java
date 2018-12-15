@@ -16,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
+import slimebound.powers.TackleBuffPower;
+import slimebound.powers.TackleDebuffPower;
 
 
 public class SlimeSmash extends AbstractSlimeboundCard {
@@ -41,7 +43,7 @@ public class SlimeSmash extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 10;
-
+        this.selfDamage = 3;
 
     }
 
@@ -58,9 +60,18 @@ public class SlimeSmash extends AbstractSlimeboundCard {
                 this.isDamageModified = true;
             }
         }
-        return tmp + bonus;
-    }
 
+        if (player.hasPower(TackleBuffPower.POWER_ID)){
+            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
+        }
+        if (mo != null) {
+            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
+                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
+            }
+        }
+        return tmp + bonus;
+
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
@@ -75,6 +86,7 @@ public class SlimeSmash extends AbstractSlimeboundCard {
         }
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
 
     }

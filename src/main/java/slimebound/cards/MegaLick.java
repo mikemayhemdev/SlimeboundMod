@@ -42,7 +42,7 @@ public class MegaLick extends AbstractSlimeboundCard {
 
 
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.poison = 1;
         this.exhaust = true;
 
@@ -88,7 +88,7 @@ public class MegaLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(2);
+            //upgradeMagicNumber(2);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

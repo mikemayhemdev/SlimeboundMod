@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
+import slimebound.powers.TackleDebuffPower;
 
 
 public class ComboTackle extends AbstractSlimeboundCard {
@@ -54,9 +55,13 @@ public class ComboTackle extends AbstractSlimeboundCard {
         if (player.hasPower(TackleBuffPower.POWER_ID)){
             bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
         }
+        if (mo != null) {
+            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
+                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
+            }
+        }
         return tmp + bonus;
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));

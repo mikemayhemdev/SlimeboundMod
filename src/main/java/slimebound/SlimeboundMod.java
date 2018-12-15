@@ -376,6 +376,7 @@ public static String printString(String s){
         BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
         BaseMod.addKeyword(new String[]{"purge"}, "Removed from the game entirely when played (not Exhausted).");
         BaseMod.addKeyword(new String[]{"slow"}, "Receives 10% more damage per card played in a turn.");
+        BaseMod.addKeyword(new String[]{"tackle"}, "High-damage Attacks that also deal a small amount of damage to you.");
 
 
     }

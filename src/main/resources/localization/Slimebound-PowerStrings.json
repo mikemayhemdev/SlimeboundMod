@@ -72,10 +72,17 @@
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
-		"NAME": "Knowledge Pool",
+		"NAME": "Overexert",
 		"DESCRIPTIONS": [
 			"Next turn, Absorb all of your spawned slimes.",
 			" turns from now, Absorb all of your spawned slimes."
+		]
+	},
+	"Slimebound:TackleDebuffPower": {
+		"NAME": "Chomped",
+		"DESCRIPTIONS": [
+			"Receives ",
+			" more damage from cards containing Tackle."
 		]
 	},
 	"Slimebound:LoseThornsPower": {

@@ -3,6 +3,8 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,6 +15,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.AwakenedOnePower;
+import slimebound.powers.TackleDebuffPower;
 
 
 public class Chomp extends AbstractSlimeboundCard {
@@ -39,12 +43,12 @@ public class Chomp extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 6;
+        this.baseDamage = this.originalDamage = 8;
         this.baseBlock = this.originalBlock = 2;
         this.upgradeDamage = 3;
        // this.exhaust = true;
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
 
 
     }
@@ -55,7 +59,8 @@ public class Chomp extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectList.add(new BiteEffect(m.hb.cX, m.hb.cY));
 
-        AbstractDungeon.actionManager.addToBottom(new VampireDamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new TackleDebuffPower(m, p,this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
     }
@@ -75,6 +80,7 @@ public class Chomp extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(upgradeDamage);
+            upgradeMagicNumber(1);
 
 
         }

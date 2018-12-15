@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -20,7 +21,10 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import slimebound.powers.PotencyPower;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 
 public class DissolveAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -30,14 +34,14 @@ public class DissolveAction extends AbstractGameAction {
     private boolean anyNumber;
     private boolean canPickZero;
     private int block;
-    private int blockUnc;
+    private int extraCards;
     public static int numExhausted;
 
     public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, int block, int blockUnc) {
         this(target, source, amount, isRandom, false, false, block, blockUnc);
     }
 
-    public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, boolean anyNumber, boolean canPickZero, int block, int blockUnc) {
+    public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, boolean anyNumber, boolean canPickZero, int block, int extraCards) {
         this.canPickZero = false;
         this.anyNumber = anyNumber;
         this.canPickZero = canPickZero;
@@ -47,11 +51,7 @@ public class DissolveAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
         this.block=block;
-        this.blockUnc=blockUnc;
-    }
-
-    public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, boolean anyNumber, int block, int blockUnc) {
-        this(target, source, amount, isRandom, anyNumber, false, block, blockUnc);
+        this.extraCards=extraCards;
     }
 
     public void update() {
@@ -111,7 +111,43 @@ public class DissolveAction extends AbstractGameAction {
         this.tickDuration();
     }
 
-    public void dissolveEffect(AbstractCard c) {
+    public void dissolveEffect(AbstractCard c2) {
+        ArrayList<AbstractCard> list = new ArrayList();
+        Iterator var1 = srcCommonCardPool.group.iterator();
+
+        AbstractCard c3;
+
+
+        for (int i = 0; i < (c2.cost + this.extraCards); i++) {
+            while(var1.hasNext()) {
+                c3 = (AbstractCard)var1.next();
+                if (c3.cost==0) {
+                    list.add(c3);
+                }
+            }
+
+            var1 = srcUncommonCardPool.group.iterator();
+
+            while(var1.hasNext()) {
+                c3 = (AbstractCard)var1.next();
+                if (c3.cost==0) {
+                    list.add(c3);
+                }
+            }
+
+            var1 = srcRareCardPool.group.iterator();
+
+            while(var1.hasNext()) {
+                c3 = (AbstractCard)var1.next();
+                if (c3.cost==0) {
+                    list.add(c3);
+                }
+            }
+
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(cardRandomRng.random(list.size() - 1))));
+
+        }
+        /*
         if (c.rarity == AbstractCard.CardRarity.UNCOMMON) {
             AbstractDungeon.actionManager.addToBottom(new HealAction(p,p,this.blockUnc));
         }
@@ -119,6 +155,7 @@ public class DissolveAction extends AbstractGameAction {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower( p, 1), 1));
 
         }
+        */
     }
     static {
         uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");

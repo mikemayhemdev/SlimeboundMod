@@ -10,11 +10,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
+import slimebound.powers.TackleDebuffPower;
+
+import java.util.Random;
 
 
 public class GoopTackle extends AbstractSlimeboundCard {
@@ -41,9 +46,9 @@ public class GoopTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 11;
+        this.baseDamage = this.originalDamage = 8;
         this.selfDamage = 3;
-        this.upgradeDamage = 4;
+        this.upgradeDamage = 2;
 
 
     }
@@ -53,17 +58,58 @@ public class GoopTackle extends AbstractSlimeboundCard {
         if (player.hasPower(TackleBuffPower.POWER_ID)){
             bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
         }
+        if (mo != null) {
+            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
+                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
+            }
+        }
         return tmp + bonus;
     }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
-        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
+
+
+        AbstractCard c = null;
+        Random random = new Random();
+        Integer chosenRand = random.nextInt(7) + 1;
+
+        switch (chosenRand) {
+            case 1:
+                c = CardLibrary.getCard(GoopTackle.ID).makeCopy();
+                break;
+            case 2:
+                c = CardLibrary.getCard(FlameTackle.ID).makeCopy();
+                break;
+            case 3:
+                c = CardLibrary.getCard(ComboTackle.ID).makeCopy();
+                break;
+            case 4:
+                c = CardLibrary.getCard(HungryTackle.ID).makeCopy();
+                break;
+            case 5:
+                c = CardLibrary.getCard(VenomTackle.ID).makeCopy();
+                break;
+            case 6:
+                c = CardLibrary.getCard(SlimeSmash.ID).makeCopy();
+                break;
+            case 7:
+                c = CardLibrary.getCard(FinishingTackle.ID).makeCopy();
+                break;
+        }
+
+
+        if (upgraded) {
+            c.upgrade();
+        }
         c.setCostForTurn(0);
+
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+
 
 
     }
@@ -84,7 +130,8 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
             upgradeDamage(upgradeDamage);
 
-            upgradeMagicNumber(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 
