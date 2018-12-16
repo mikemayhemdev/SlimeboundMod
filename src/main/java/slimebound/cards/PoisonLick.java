@@ -43,7 +43,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.LICK);
 
 
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
         this.poison = 2;
 

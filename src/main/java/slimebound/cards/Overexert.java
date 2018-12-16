@@ -49,7 +49,7 @@ public class Overexert extends AbstractSlimeboundCard {
 
 
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p,p,3),3));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p,p,4),4));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p,p,this.magicNumber),this.magicNumber));
 
 

@@ -118,7 +118,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Slimebound", "A rogue minion of the Spire, driven to conquer it.", 55, 55, 4, 99, 5, this,
+        return new CharSelectInfo("The Slimebound", "A rogue minion of the Spire, driven to conquer it.", 60, 60, 4, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }
