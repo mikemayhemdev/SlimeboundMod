@@ -36,7 +36,7 @@
   },
   "Slimebound:StudyCardRelic": {
     "NAME": "Tiny Bowler Hat",
-    "FLAVOR": "Whosoever controls the hat, controls the world.",
+    "FLAVOR": "Whosoever controls the hat, controls the Spire.",
     "DESCRIPTIONS": [
       "At the start of combat, add a Study the Spire card to your hand."
     ]
@@ -52,7 +52,7 @@
     "NAME": "Slime Plushie",
     "FLAVOR": "Too adorable.",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn a Weakening slime and gain 1 Slime slot."
+      "At the start of combat, spawn a Leeching slime and gain 1 Slime slot."
     ]
   }
 }

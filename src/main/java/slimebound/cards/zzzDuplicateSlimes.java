@@ -79,8 +79,8 @@ public class zzzDuplicateSlimes extends AbstractSlimeboundCard {
                 if (s == "SplitBronze") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.BronzeSlime(), false, false));
                 }
-                if (s == "SplitWeaken") {
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
+                if (s == "SplitShield") {
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ShieldSlime(), false, false));
                 }
                 if (s == "SplitCultist") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.CultistSlime(), false, false));

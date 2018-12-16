@@ -2,15 +2,12 @@ package slimebound.cards;
 
 
 
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.FormABlockadeAction;
 import slimebound.actions.SlimeSpawnAction;
@@ -18,7 +15,6 @@ import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class FormABlockade extends AbstractSlimeboundCard {
@@ -59,7 +55,7 @@ public class FormABlockade extends AbstractSlimeboundCard {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
@@ -77,7 +73,7 @@ public class FormABlockade extends AbstractSlimeboundCard {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                     break;
                 case 1:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
                     break;
                 case 2:
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));

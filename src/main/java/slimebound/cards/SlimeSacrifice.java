@@ -50,7 +50,7 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
         if (chosenRand == 0) {
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitAttack(), false, true));
         } else if (chosenRand == 1) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitWeaken(), false, true));
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitShield(), false, true));
         } else if (chosenRand == 2) {
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitPoison(), false, true));
         } else {
@@ -61,7 +61,7 @@ public class SlimeSacrifice extends AbstractSlimeboundCard {
             if (chosenRand == 0) {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitAttack(), false, true));
             } else if (chosenRand == 1) {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitWeaken(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitShield(), false, true));
             } else if (chosenRand == 2) {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SplitPoison(), false, true));
             } else {

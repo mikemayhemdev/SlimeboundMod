@@ -2,21 +2,16 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
-import slimebound.powers.PotencyPower;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class AbsorbEndCombat extends CustomRelic {
     public static final String ID = "Slimebound:AbsorbEndCombat";
@@ -68,7 +63,7 @@ public class AbsorbEndCombat extends CustomRelic {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, false));
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, false));
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, false));

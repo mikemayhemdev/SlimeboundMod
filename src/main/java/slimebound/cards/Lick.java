@@ -2,7 +2,9 @@ package slimebound.cards;
 
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,9 +17,14 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
+import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
+import slimebound.vfx.SlimeProjectileEffect;
 
 import java.util.Random;
+
+import static com.badlogic.gdx.graphics.Color.FOREST;
+import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
 public class Lick extends AbstractSlimeboundCard {
@@ -51,6 +58,7 @@ public class Lick extends AbstractSlimeboundCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY,0.6F,new Color(GREEN)), 0.1F));
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));

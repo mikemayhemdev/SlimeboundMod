@@ -2,25 +2,21 @@ package slimebound.cards;
 
 
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.*;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
-import slimebound.orbs.DebuffSlime;
+import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class Split extends AbstractSlimeboundCard {
@@ -63,7 +59,7 @@ public class Split extends AbstractSlimeboundCard {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));

@@ -56,7 +56,7 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
                 this.color2 = Color.LIGHT_GRAY.cpy();
                 break;
             case LICKING:
-                this.color = Color.YELLOW.cpy();
+                this.color = Color.CYAN.cpy();
                 this.color2 = Color.WHITE.cpy();
                 break;
             case SLIMING:

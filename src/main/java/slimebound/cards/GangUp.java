@@ -44,7 +44,7 @@ public class GangUp extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 1;
 
 
     }
@@ -57,7 +57,8 @@ public class GangUp extends AbstractSlimeboundCard {
 
                if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));
 
-       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.energyOnUse), this.energyOnUse));
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
             p.energy.use(EnergyPanel.totalCount);
 
@@ -81,7 +82,7 @@ public class GangUp extends AbstractSlimeboundCard {
             upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-            //upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
 
         }
     }

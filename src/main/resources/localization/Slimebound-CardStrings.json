@@ -14,8 +14,8 @@
   },
   "Slimebound:GangUp": {
     "NAME": "Gang Up",
-    "DESCRIPTION": "Split into an Attacking slime X times. NL Attacking Slimes deal X more damage this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into an Attacking slime X+1 times. NL Attacking Slimes deal X more damage this combat. NL Exhaust."
+    "DESCRIPTION": "Split into an Attacking slime X times. NL Attacking Slimes deal !M! more damage this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into an Attacking slime X+1 times. NL Attacking Slimes deal !M! more damage this combat. NL Exhaust."
   },
 "Slimebound:LevelUp": {
     "NAME": "Level Up",
@@ -29,19 +29,19 @@
     "UPGRADE_DESCRIPTION": "Split into a Torch-Head Slime twice. NL Exhaust."
   },
 "Slimebound:SplitAttack": {
-    "NAME": "Split: Attacking",
-    "DESCRIPTION": "Split into an Attacking Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Attacking Slime. NL Attacking Slimes deal 1 more damage this combat. NL Exhaust."
+    "NAME": "Split: Bruiser",
+    "DESCRIPTION": "Split into a Bruiser Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser Slime. NL Bruiser Slimes deal 1 more damage this combat. NL Exhaust."
   },
 "Slimebound:SplitCultist": {
     "NAME": "Split: Cultist",
     "DESCRIPTION": "Split into a Cultist Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Cultist Slime twice. NL Exhaust."
   },
-"Slimebound:SplitWeaken": {
-    "NAME": "Split: Weakening",
-    "DESCRIPTION": "Split into a Weakening Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Weakening Slime. NL Weakening Slimes deal 1 more damage this combat. NL Exhaust."
+"Slimebound:SplitShield": {
+    "NAME": "Split: Leeching",
+    "DESCRIPTION": "Split into a Leeching Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching Slime. NL Leeching Slimes grant 1 more Block this combat. NL Exhaust."
   },
 "Slimebound:SplitPoison": {
     "NAME": "Split: Poisoning",
@@ -235,10 +235,10 @@
     "DESCRIPTION": "Add a random Lick card to your hand each turn.",
     "UPGRADE_DESCRIPTION": "Innate. NL Add a random Lick card to your hand each turn."
   },
-"Slimebound:CullTheWeak": {
-    "NAME": "Cull the Weak",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has Weak, trigger your oldest slime's attack, then repeat if it has Poison."
+"Slimebound:PressTheAttack": {
+    "NAME": "Press the Attack",
+    "DESCRIPTION": "Deal !D! damage. If the enemy was Slimed, trigger your oldest slime's attack.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy was Slimed, trigger your oldest slime's attack twice."
   },
 "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
@@ -384,7 +384,7 @@
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
     "DESCRIPTION": "Deal !D! damage. Draw a card if the enemy has Poison.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw a card if the enemy has Poison. Gain [E] if they have Weak."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw a card if the enemy has Poison. Gain [E] if they have Slimed."
   },
 "Slimebound:LeechLife": {
     "NAME": "Leech Life",

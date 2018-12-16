@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 import slimebound.vfx.LeechEffect;
 
 
@@ -56,7 +57,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
         }
         if (upgraded) {
-            if (m.hasPower("Weakened")) {
+            if (m.hasPower(SlimedPower.POWER_ID)) {
                 AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 3, new Color(0F,0.75F,0F,1F)), 0.25F));
 

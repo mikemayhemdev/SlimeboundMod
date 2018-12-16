@@ -55,7 +55,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cY, p.hb.cX, monster.hb.cX, monster.hb.cY,3F,false,0.6F), 0.01F));
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY,3F,false,0.6F), 0.01F));
 
 
                 }

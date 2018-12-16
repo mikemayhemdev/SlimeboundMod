@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.orbs.ShieldSlime;
 
 public class MaxSlimesRelic extends CustomRelic {
     public static final String ID = "Slimebound:MaxSlimesRelic";
@@ -25,7 +26,7 @@ public class MaxSlimesRelic extends CustomRelic {
     public void atBattleStartPreDraw() {
         this.flash();
         com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(1));
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.DebuffSlime(), false, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, false));
     }
 
 

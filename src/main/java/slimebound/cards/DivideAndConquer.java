@@ -10,17 +10,15 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
-import slimebound.orbs.DebuffSlime;
+import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class DivideAndConquer extends AbstractSlimeboundCard {
@@ -64,7 +62,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction(AbstractDungeon.player));
 
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
 
 
@@ -80,7 +78,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
@@ -98,7 +96,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                     break;
                 case 1:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DebuffSlime(), false, true));
+                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
                     break;
                 case 2:
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));

@@ -8,7 +8,7 @@
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "Attack Slime",
+    "NAME": "Bruiser Slime",
     "DESCRIPTION": [
       "Deals ",
       " Damage at the start of your turn."
@@ -28,11 +28,12 @@
       " Damage at the start of your turn, then increases it's damage by 2."
     ]
   },
-  "Slimebound:DebuffSlime": {
-    "NAME": "Weakening Slime",
+  "Slimebound:ShieldSlime": {
+    "NAME": "Leeching Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage and applies 1 Weak at the start of your turn."
+      " Damage at the start of your turn and grants you ",
+      " Block."
     ]
   },
   "Slimebound:PoisonSlime": {

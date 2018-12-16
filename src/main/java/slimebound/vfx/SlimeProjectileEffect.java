@@ -36,11 +36,17 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
     private static final float DUR = 0.6F;
     private boolean playedSfx = false;
     private boolean rain = false;
+    private boolean mute = false;
     private float height = 100f;
 
     private ArrayList<Vector2> previousPos = new ArrayList();
 
     public SlimeProjectileEffect(float srcX, float srcY, float destX, float destY, float scale, boolean rain, float duration) {
+        this(srcX,srcY,destX,destY,scale,rain,duration,false,false);
+    }
+
+
+    public SlimeProjectileEffect(float srcX, float srcY, float destX, float destY, float scale, boolean rain, float duration, boolean mute, boolean bigHeight) {
         if (img == null) {
             img = ImageMaster.loadImage("SlimeboundImages/vfx/slimeballWhite.png");
         }
@@ -54,12 +60,15 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
         this.dY = destY;
         this.scale = scale;
         this.rotation = 0.0F;
+        this.mute=mute;
         this.duration = duration;
         this.color = new Color(1, 1.0F, 1, 0.0F);
 
         this.rain = rain;
 
         if (rain) this.height = MathUtils.random(150F,350F);
+        if (bigHeight) this.height = 400F;
+
 
         if (this.sY > this.dY) {
             this.bounceHeight = height * Settings.scale;
@@ -70,7 +79,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
     }
 
     public void update() {
-        if (!this.playedSfx) {
+        if (!this.playedSfx && !this.mute) {
             this.playedSfx = true;
 
                 CardCrawlGame.sound.playA("MONSTER_SLIME_ATTACK", MathUtils.random(-0.5F, -0.3F));

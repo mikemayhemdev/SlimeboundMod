@@ -42,7 +42,7 @@ public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractG
         }
 
         if (this.target.currentHealth > 0) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(this.owner.hb.cY, this.owner.hb.cX, this.target.hb.cX, this.target.hb.cY,2F,true,0.6F), 0.00F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(this.owner.hb.cX, this.owner.hb.cY, this.target.hb.cX, this.target.hb.cY,2F,true,0.6F), 0.00F));
             //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new SlimedPower(this.target, this.owner, slimed), slimed, true, AttackEffect.POISON));

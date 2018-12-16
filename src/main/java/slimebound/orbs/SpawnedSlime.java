@@ -4,7 +4,6 @@ import basemod.animations.AbstractAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
@@ -21,17 +20,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
-import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -89,6 +84,7 @@ public abstract class SpawnedSlime
     public Color projectileColor;
     private float delayTime;
     private boolean hasSplashed;
+    private boolean madePostDuplicated;
     private boolean renderBehind;
     private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
     private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
@@ -148,6 +144,8 @@ public abstract class SpawnedSlime
 
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
         SlimeboundMod.mostRecentSlime = this;
+        if (AbstractDungeon.player.hasPower(DuplicatedFormPower.POWER_ID))this.madePostDuplicated = true;
+
 
 
 
@@ -190,7 +188,7 @@ public abstract class SpawnedSlime
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         int bonus = 0;
         if (this instanceof AttackSlime && AbstractDungeon.player.hasPower(BuffAttackSlimesPower.POWER_ID)) bonus = AbstractDungeon.player.getPower(BuffAttackSlimesPower.POWER_ID).amount;
-        if (this instanceof DebuffSlime && AbstractDungeon.player.hasPower(BuffWeakenSlimesPower.POWER_ID)) bonus = AbstractDungeon.player.getPower(BuffWeakenSlimesPower.POWER_ID).amount;
+        if (this instanceof ShieldSlime && AbstractDungeon.player.hasPower(BuffShieldSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffShieldSlimesPower.POWER_ID).amount;
         if (this instanceof PoisonSlime && AbstractDungeon.player.hasPower(BuffPoisonSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffPoisonSlimesPower.POWER_ID).amount;
         if (this instanceof SlimingSlime && AbstractDungeon.player.hasPower(BuffSlimingSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSlimingSlimesPower.POWER_ID).amount;
 
@@ -284,8 +282,16 @@ public abstract class SpawnedSlime
                     break;
             }
         }
-        this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX);
-        this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
+        if (this.madePostDuplicated){
+
+            this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX + 70);
+            this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
+        } else
+        {
+            this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX);
+            this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
+        }
+
         if (this.channelAnimTimer != 0.0F) {
             this.channelAnimTimer -= Gdx.graphics.getDeltaTime();
             if (this.channelAnimTimer < 0.0F) {

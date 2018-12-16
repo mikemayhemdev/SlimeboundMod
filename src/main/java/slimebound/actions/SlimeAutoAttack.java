@@ -86,7 +86,7 @@ public class SlimeAutoAttack extends AbstractGameAction {
 
             }
 
-            if (this.block > 0 ) AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 5));
+            if (this.block > 0 ) AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
 
 
             AbstractDungeon.actionManager.addToTop(new DamageAction(mo,

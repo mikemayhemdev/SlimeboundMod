@@ -11,21 +11,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.AttackSlime;
-import slimebound.orbs.DebuffSlime;
-import slimebound.orbs.PoisonSlime;
-import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.*;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class StudyTheSpire extends AbstractSlimeboundCard {

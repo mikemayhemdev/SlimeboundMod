@@ -15,9 +15,9 @@
 		]
 	},
 	"Slimebound:BuffAttackSlimesPower": {
-		"NAME": "Upgrade: Attacking",
+		"NAME": "Upgrade: Bruiser",
 		"DESCRIPTIONS": [
-			"Attacking Slimes deal ",
+			"Bruiser Slimes deal ",
 			" more damage."
 		]
 	},
@@ -35,10 +35,10 @@
 			" more Slimed."
 		]
 	},
-	"Slimebound:BuffWeakenSlimesPower": {
-		"NAME": "Upgrade: Weakening",
+	"Slimebound:BuffShieldSlimesPower": {
+		"NAME": "Upgrade: Leeching",
 		"DESCRIPTIONS": [
-			"Weakening Slimes deal ",
+			"Leeching Slimes deal ",
 			" more damage."
 		]
 	},
