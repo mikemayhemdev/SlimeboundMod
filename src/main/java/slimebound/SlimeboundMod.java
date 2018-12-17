@@ -7,6 +7,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -85,19 +86,28 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
     public static boolean bumpnextlime = false;
     public static boolean disabledStrikeVFX = false;
     public static SpawnedSlime mostRecentSlime;
-    @SpireEnum public static AbstractCard.CardTags LICK;
-    @SpireEnum public static AbstractCard.CardTags TACKLE;
-    @SpireEnum public static AbstractCard.CardTags STUDY_HEXAGHOST;
-    @SpireEnum public static AbstractCard.CardTags STUDY_AWAKENEDONE;
-    @SpireEnum public static AbstractCard.CardTags STUDY_TIMEEATER;
-    @SpireEnum public static AbstractCard.CardTags STUDY_CHAMP;
-    @SpireEnum public static AbstractCard.CardTags STUDY_COLLECTOR;
-    @SpireEnum public static AbstractCard.CardTags STUDY_SHAPES;
-    @SpireEnum public static AbstractCard.CardTags STUDY_GUARDIAN;
-    @SpireEnum public static AbstractCard.CardTags STUDY_AUTOMATON;
-    @SpireEnum public static AbstractCard.CardTags STUDY;
-
-
+    @SpireEnum
+    public static AbstractCard.CardTags LICK;
+    @SpireEnum
+    public static AbstractCard.CardTags TACKLE;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_HEXAGHOST;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_AWAKENEDONE;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_TIMEEATER;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_CHAMP;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_COLLECTOR;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_SHAPES;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_GUARDIAN;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_AUTOMATON;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY;
 
 
     public static final String getResourcePath(String resource) {
@@ -135,21 +145,21 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         slimeTalked = false;
         slimeTalkedAcidL = false;
         slimeTalkedAcidM = false;
-       slimeTalkedAcidS = false;
+        slimeTalkedAcidS = false;
         slimeTalkedSpikeL = false;
-         slimeTalkedSpikeM = false;
-         slimeTalkedSpikeS = false;
+        slimeTalkedSpikeM = false;
+        slimeTalkedSpikeS = false;
         slimeTalkedDark = 0;
         slimeTalkedCollector = false;
-        if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player instanceof SlimeboundCharacter){
-                ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss=false;
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+                ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss = false;
                 SlimeboundMod.logger.info("Reset Hunted event bool.");
             }
         }
     }
 
-    public static int getAcidTongueBonus(AbstractCreature source){
+    public static int getAcidTongueBonus(AbstractCreature source) {
         int bonus = 0;
         if (source != null) {
             if (source.hasPower(AcidTonguePowerUpgraded.POWER_ID)) {
@@ -179,10 +189,11 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         }
     }
 
-public static String printString(String s){
+    public static String printString(String s) {
         logger.info(s);
         return s;
-}
+    }
+
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new AbsorbEndCombat(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new AbsorbEndCombatUpgraded(), AbstractCardEnum.SLIMEBOUND);
@@ -245,7 +256,7 @@ public static String printString(String s){
 
         BaseMod.addCard(new PressTheAttack());
         BaseMod.addCard(new SoulSicken());
-       // BaseMod.addCard(new slimebound.cards.zzzFocusedLick());
+        // BaseMod.addCard(new slimebound.cards.zzzFocusedLick());
         BaseMod.addCard(new HauntingLick());
         BaseMod.addCard(new AcidGelatin());
         BaseMod.addCard(new QuickLick());
@@ -342,7 +353,7 @@ public static String printString(String s){
         UnlockTracker.unlockCard(StrayGoop.ID);
         UnlockTracker.unlockCard(OozeBath.ID);
         UnlockTracker.unlockCard(GangUp.ID);
-      // UnlockTracker.unlockCard(zzzSoTasty.ID);
+        // UnlockTracker.unlockCard(zzzSoTasty.ID);
         UnlockTracker.unlockCard(LivingWall.ID);
         UnlockTracker.unlockCard(FormABlockade.ID);
         UnlockTracker.unlockCard(LeechingTouch.ID);
@@ -362,7 +373,7 @@ public static String printString(String s){
 
         UnlockTracker.unlockCard(PressTheAttack.ID);
         UnlockTracker.unlockCard(SoulSicken.ID);
-       // UnlockTracker.unlockCard(zzzFocusedLick.ID);
+        // UnlockTracker.unlockCard(zzzFocusedLick.ID);
         UnlockTracker.unlockCard(HauntingLick.ID);
         UnlockTracker.unlockCard(AcidGelatin.ID);
         UnlockTracker.unlockCard(QuickLick.ID);
@@ -454,19 +465,27 @@ public static String printString(String s){
     public void receivePostBattle(AbstractRoom r) {
 
         AbstractPlayer p = AbstractDungeon.player;
-        if (spritealtered){
+        if (spritealtered) {
             AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
             // AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
             if (p instanceof SlimeboundCharacter) {
                 SlimeboundCharacter hero = (SlimeboundCharacter) p;
                 hero.setRenderscale(1F);
             }
-                p.hb_x = p.hb_x - (100 * Settings.scale);
-                p.drawX = p.drawX + (100 * Settings.scale);
-                p.hb.cX = p.hb.cX - (100 * Settings.scale);
+            p.hb_x = p.hb_x - (100 * Settings.scale);
+            p.drawX = p.drawX + (100 * Settings.scale);
+            p.hb.cX = p.hb.cX - (100 * Settings.scale);
 
 
             spritealtered = false;
+        }
+        if (p instanceof SlimeboundCharacter) {
+            SlimeboundCharacter hero = (SlimeboundCharacter) p;
+            hero.leftScale = 0.15F;
+
+            ((SlimeboundCharacter) AbstractDungeon.player).xStartOffset = (float)Settings.WIDTH * 0.23F;
+            ((SlimeboundCharacter) AbstractDungeon.player).initializeSlotPositions();
+
         }
     }
 
@@ -512,9 +531,6 @@ public static String printString(String s){
     }
 
 
-
-
-
     public void receiveCardUsed(AbstractCard c) {
         if (AbstractDungeon.player.hasRelic("CultistMask")) {
             CardCrawlGame.sound.playA("VO_CULTIST_1C", MathUtils.random(-0.8F, -0.6F));
@@ -529,7 +545,6 @@ public static String printString(String s){
     }
 
 
-
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         slimeDelay = true;
 
@@ -538,6 +553,7 @@ public static String printString(String s){
 
     public void receiveOnBattleStart(AbstractRoom room) {
         powersPlayedThisCombat = 0;
+
 
     }
 

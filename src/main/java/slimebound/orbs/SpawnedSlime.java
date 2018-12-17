@@ -30,9 +30,12 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.*;
-import slimebound.vfx.*;
-
+import slimebound.vfx.FakeFlashAtkImgEffect;
+import slimebound.vfx.SlimeDeathParticleEffect;
+import slimebound.vfx.SlimeFlareEffect;
+import slimebound.vfx.SlimeSpawnProjectile;
 
 
 public abstract class SpawnedSlime
@@ -100,8 +103,8 @@ public abstract class SpawnedSlime
 
     public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
 
-        this.scale=scale;
-        this.modelColor=modelColor;
+        this.scale = scale;
+        this.modelColor = modelColor;
         this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
         //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
@@ -116,7 +119,7 @@ public abstract class SpawnedSlime
         AnimationState.TrackEntry e = this.state.setAnimation(0, animString, true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
-        this.delayTime=0.27F;
+        this.delayTime = 0.27F;
         this.yOffset = yOffset;
 
         this.ID = ID;
@@ -139,17 +142,15 @@ public abstract class SpawnedSlime
 
         this.channelAnimTimer = 0.5F;
 
-        this.projectileColor=projectileColor;
+        this.projectileColor = projectileColor;
         this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
 
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
         SlimeboundMod.mostRecentSlime = this;
-        if (AbstractDungeon.player.hasPower(DuplicatedFormPower.POWER_ID))this.madePostDuplicated = true;
+        if (AbstractDungeon.player.hasPower(DuplicatedFormPower.POWER_ID)) this.madePostDuplicated = true;
 
 
-
-
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY,this,1.4F,projectileColor)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
 
         //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
         this.applyFocus();
@@ -157,7 +158,18 @@ public abstract class SpawnedSlime
         updateDescription();
 
 
+    }
 
+
+
+    public void setSlot(int slotNum, int maxOrbs) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter)
+        this.tX = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsX[slotNum];
+        this.tY = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
+
+
+
+        this.hb.move(this.tX, this.tY);
     }
 
 
@@ -187,10 +199,14 @@ public abstract class SpawnedSlime
         super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         int bonus = 0;
-        if (this instanceof AttackSlime && AbstractDungeon.player.hasPower(BuffAttackSlimesPower.POWER_ID)) bonus = AbstractDungeon.player.getPower(BuffAttackSlimesPower.POWER_ID).amount;
-        if (this instanceof ShieldSlime && AbstractDungeon.player.hasPower(BuffShieldSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffShieldSlimesPower.POWER_ID).amount;
-        if (this instanceof PoisonSlime && AbstractDungeon.player.hasPower(BuffPoisonSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffPoisonSlimesPower.POWER_ID).amount;
-        if (this instanceof SlimingSlime && AbstractDungeon.player.hasPower(BuffSlimingSlimesPower.POWER_ID)) this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSlimingSlimesPower.POWER_ID).amount;
+        if (this instanceof AttackSlime && AbstractDungeon.player.hasPower(BuffAttackSlimesPower.POWER_ID))
+            bonus = AbstractDungeon.player.getPower(BuffAttackSlimesPower.POWER_ID).amount;
+        if (this instanceof ShieldSlime && AbstractDungeon.player.hasPower(BuffShieldSlimesPower.POWER_ID))
+            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffShieldSlimesPower.POWER_ID).amount;
+        if (this instanceof PoisonSlime && AbstractDungeon.player.hasPower(BuffPoisonSlimesPower.POWER_ID))
+            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffPoisonSlimesPower.POWER_ID).amount;
+        if (this instanceof SlimingSlime && AbstractDungeon.player.hasPower(BuffSlimingSlimesPower.POWER_ID))
+            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSlimingSlimesPower.POWER_ID).amount;
 
 
         if (power != null) {
@@ -214,10 +230,9 @@ public abstract class SpawnedSlime
     }
 
 
-
     public void onEvoke() {
 
-        if (!noEvokeBonus){
+        if (!noEvokeBonus) {
             if (this instanceof HexSlime) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
@@ -226,9 +241,9 @@ public abstract class SpawnedSlime
 
             }
 
-        AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+            AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 
-    }
+        }
         triggerEvokeAnimation();
 
     }
@@ -241,7 +256,6 @@ public abstract class SpawnedSlime
         AbstractDungeon.effectsQueue.add(new SlimeDeathParticleEffect(this.cX, this.cY, this.deathColor));
 
     }
-
 
 
     public void activateEffect() {
@@ -268,11 +282,11 @@ public abstract class SpawnedSlime
 
     public void useFastAttackAnimation() {
         this.animationTimer = 0.4F;
-        this.animationTimerStart=this.animationTimer;
+        this.animationTimerStart = this.animationTimer;
         this.animation = AbstractCreature.CreatureAnimation.ATTACK_FAST;
     }
 
-@Override
+    @Override
     public void updateAnimation() {
 
         if (this.animationTimer != 0.0F) {
@@ -282,12 +296,11 @@ public abstract class SpawnedSlime
                     break;
             }
         }
-        if (this.madePostDuplicated){
+        if (this.madePostDuplicated) {
 
             this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX + 70);
             this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
-        } else
-        {
+        } else {
             this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX);
             this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
         }
@@ -304,7 +317,8 @@ public abstract class SpawnedSlime
     }
 
 
-    public void postSpawnEffects(){}
+    public void postSpawnEffects() {
+    }
 
     protected void updateFastAttackAnimation() {
         this.animationTimer -= Gdx.graphics.getDeltaTime();
@@ -320,7 +334,7 @@ public abstract class SpawnedSlime
             this.animX = 0.0F;
         } else {
             //logger.info("fade " + this.animationTimer /(this.animationTimerStart / 2));
-            this.animX = Interpolation.fade.apply(0.0F, targetPos,(this.animationTimer /(this.animationTimerStart / 2)));
+            this.animX = Interpolation.fade.apply(0.0F, targetPos, (this.animationTimer / (this.animationTimerStart / 2)));
         }
 
     }
@@ -330,39 +344,38 @@ public abstract class SpawnedSlime
 
         if (this.delayTime > 0F) {
             delayTime = delayTime - Gdx.graphics.getDeltaTime();
-        }
-         else if (this.atlas == null) {
-           // logger.info("rendering null");
+        } else if (this.atlas == null) {
+            // logger.info("rendering null");
             sb.setColor(new Color(1F, 1F, 1F, 2F));
 
             sb.draw(this.img, this.cX - (float) this.img.getWidth() + this.animX * Settings.scale / 2.0F, this.cY + this.animY, (float) this.img.getWidth() * Settings.scale, (float) this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
         } else {
-             if (!hasSplashed){
-                 AbstractDungeon.effectsQueue.add(new FakeFlashAtkImgEffect(this.cX,this.cY,projectileColor, 0.75F,true,0.3F));
-                 this.hasSplashed=true;
-                 postSpawnEffects();
-             } else {
+            if (!hasSplashed) {
+                AbstractDungeon.effectsQueue.add(new FakeFlashAtkImgEffect(this.cX, this.cY, projectileColor, 0.75F, true, 0.3F));
+                this.hasSplashed = true;
+                postSpawnEffects();
+            } else {
 
-                 // logger.info("rendering slime model");
-                 this.state.update(Gdx.graphics.getDeltaTime());
-                 this.state.apply(this.skeleton);
-                 this.skeleton.updateWorldTransform();
-                 this.skeleton.setPosition(this.cX + this.animX, this.cY + this.animY + this.yOffset);
-                 //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
+                // logger.info("rendering slime model");
+                this.state.update(Gdx.graphics.getDeltaTime());
+                this.state.apply(this.skeleton);
+                this.skeleton.updateWorldTransform();
+                this.skeleton.setPosition(this.cX + this.animX, this.cY + this.animY + this.yOffset);
+                //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
 
-                 this.skeleton.setColor(modelColor);
-                 this.skeleton.setFlip(true, false);
-                 sb.end();
-                 CardCrawlGame.psb.begin();
-                 AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
-                 CardCrawlGame.psb.end();
-                 sb.begin();
-                 sb.setBlendFunction(770, 771);
+                this.skeleton.setColor(modelColor);
+                this.skeleton.setFlip(true, false);
+                sb.end();
+                CardCrawlGame.psb.begin();
+                AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
+                CardCrawlGame.psb.end();
+                sb.begin();
+                sb.setBlendFunction(770, 771);
 
-             }
-        renderText(sb);
+            }
+            renderText(sb);
 
-         }
+        }
         //this.hb.render(sb);
     }
 
@@ -371,18 +384,17 @@ public abstract class SpawnedSlime
         if (this.extraFontColor != null) {
 
 
-        int fontOffset = 16;
-        if (this.passiveAmount > 9) fontOffset = fontOffset + 5;
-        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            int fontOffset = 16;
+            if (this.passiveAmount > 9) fontOffset = fontOffset + 5;
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
 
-       if (this instanceof SlimingSlime){
-           FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
-       } else {
-           FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
+            if (this instanceof SlimingSlime) {
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
+            } else {
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
 
-       }
-    }
-    else{
+            }
+        } else {
 
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
         }

@@ -14,8 +14,8 @@
   },
   "Slimebound:GangUp": {
     "NAME": "Gang Up",
-    "DESCRIPTION": "Split into an Attacking slime X times. NL Attacking Slimes deal !M! more damage this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into an Attacking slime X+1 times. NL Attacking Slimes deal !M! more damage this combat. NL Exhaust."
+    "DESCRIPTION": "Split into a Bruiser slime X times. NL Bruiser Slimes deal !M! more damage this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser slime X+1 times. NL Bruiser Slimes deal !M! more damage this combat. NL Exhaust."
   },
 "Slimebound:LevelUp": {
     "NAME": "Level Up",

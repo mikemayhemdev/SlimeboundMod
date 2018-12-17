@@ -51,22 +51,44 @@ public class SlimeboundCharacter extends CustomPlayer {
     public float renderscale = 1.0F;
     public float hatX;
     public float hatY;
-    public boolean damageVFXDisabled;
+    public boolean moved = false;
     public boolean foughtSlimeBoss;
+    public float leftScale = 0.15F;
+    public float xStartOffset = (float) Settings.WIDTH * 0.23F;
+    private static float xSpaceBetweenSlots = 90 * Settings.scale;
+    private static float xSpaceBottomAlternatingOffset = 0;
+
+    private static float yStartOffset = AbstractDungeon.floorY + (100 * Settings.scale);
+
+    private static float ySpaceAlternatingOffset = -60 * Settings.scale;
+
+
+    public float[] orbPositionsX = {0,0,0,0,0,0,0,0,0,0};
+
+    public float[] orbPositionsY = {0,0,0,0,0,0,0,0,0,0};
+
 
     public static final String[] orbTextures = {"SlimeboundImages/char/orb/layer1.png", "SlimeboundImages/char/orb/layer2.png", "SlimeboundImages/char/orb/layer3.png", "SlimeboundImages/char/orb/layer4.png", "SlimeboundImages/char/orb/layer5.png", "SlimeboundImages/char/orb/layer6.png", "SlimeboundImages/char/orb/layer1d.png", "SlimeboundImages/char/orb/layer2d.png", "SlimeboundImages/char/orb/layer3d.png", "SlimeboundImages/char/orb/layer4d.png", "SlimeboundImages/char/orb/layer5d.png"};
 
     public void setRenderscale(float renderscale) {
         this.renderscale = renderscale;
         reloadAnimation();
+
+
     }
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
+
+
         this.initializeClass((String) null, "SlimeboundImages/char/shoulder2.png", "SlimeboundImages/char/shoulder.png", "SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
         this.reloadAnimation();
-        this.dialogX = -200;
-        this.dialogY = -200;
+
+
+        this.dialogX = -200 * Settings.scale;
+        this.dialogY = -200 * Settings.scale;
+        initializeSlotPositions();
+
     }
 
     @Override
@@ -89,10 +111,12 @@ public class SlimeboundCharacter extends CustomPlayer {
 
 
     public void reloadAnimation() {
+
         this.loadAnimation("SlimeboundImages/char/skeleton.atlas", "SlimeboundImages/char/skeleton.json", renderscale);
         TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
+
     }
 
 
@@ -116,6 +140,31 @@ public class SlimeboundCharacter extends CustomPlayer {
         retVal.add(AbsorbEndCombat.ID);
         UnlockTracker.markRelicAsSeen(AbsorbEndCombat.ID);
         return retVal;
+    }
+
+
+    public void initializeSlotPositions() {
+        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 1);
+        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1) + xSpaceBottomAlternatingOffset;
+        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
+        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 2) + xSpaceBottomAlternatingOffset;
+        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 3);
+        orbPositionsX[5] = xStartOffset + (xSpaceBetweenSlots * 3) + xSpaceBottomAlternatingOffset;
+        orbPositionsX[6] = xStartOffset + (xSpaceBetweenSlots * 4);
+        orbPositionsX[7] = xStartOffset + (xSpaceBetweenSlots * 4) + xSpaceBottomAlternatingOffset;
+        orbPositionsX[8] = xStartOffset + (xSpaceBetweenSlots * 5);
+        orbPositionsX[9] = xStartOffset + (xSpaceBetweenSlots * 5) + xSpaceBottomAlternatingOffset;
+
+        orbPositionsY[0] = yStartOffset;
+        orbPositionsY[1] = yStartOffset + -100 * Settings.scale;
+        orbPositionsY[2] = yStartOffset + ySpaceAlternatingOffset;
+        orbPositionsY[3] = yStartOffset + -100 * Settings.scale + ySpaceAlternatingOffset;
+        orbPositionsY[4] = yStartOffset;
+        orbPositionsY[5] = yStartOffset + -100 * Settings.scale;
+        orbPositionsY[6] = yStartOffset + ySpaceAlternatingOffset;
+        orbPositionsY[7] = yStartOffset + -100 * Settings.scale + ySpaceAlternatingOffset;
+        orbPositionsY[8] = yStartOffset;
+        orbPositionsY[9] = yStartOffset + -100 * Settings.scale;
     }
 
     public CharSelectInfo getLoadout() {
@@ -196,11 +245,33 @@ public class SlimeboundCharacter extends CustomPlayer {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
+        if (!this.moved) this.movePosition((float)Settings.WIDTH * this.leftScale, AbstractDungeon.floorY); this.moved = true;
+
+
         this.hatX = this.skeleton.findBone("eyeback1").getX();
         this.hatY = this.skeleton.findBone("eyeback1").getY();
 
     }
 
+
+    public void renderPowerIcons(SpriteBatch sb, float x, float y) {
+        float offset = 30.0F * Settings.scale;
+
+        Iterator var5;
+        AbstractPower p;
+        for(var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
+            p = (AbstractPower)var5.next();
+            p.renderIcons(sb, x + offset, y + 200.0F * Settings.scale, Color.WHITE);
+        }
+
+        offset = 0.0F * Settings.scale;
+
+        for(var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
+            p = (AbstractPower)var5.next();
+            p.renderAmount(sb, x + offset + 32.0F * Settings.scale, y + 182.0F * Settings.scale, Color.WHITE);
+        }
+
+    }
 
 }
 

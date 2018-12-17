@@ -21,7 +21,7 @@
         import javassist.expr.MethodCall;
 
         import java.util.ArrayList;
-
+/*
 public class VictoryPatch {
     @SpirePatch(clz = Cutscene.class, method = SpirePatch.CONSTRUCTOR)
     public static class addHeartPanels {
@@ -41,4 +41,5 @@ public class VictoryPatch {
         }
     }
 }
+*/
 
