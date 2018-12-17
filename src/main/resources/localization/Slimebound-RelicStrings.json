@@ -45,7 +45,7 @@
     "NAME": "My Own Minion",
     "FLAVOR": "He followed me home. Can I keep it?",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn an Attacking slime."
+      "At the start of combat, spawn a Bruiser slime."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
