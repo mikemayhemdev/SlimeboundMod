@@ -5,5 +5,29 @@
       "Apply #b",
       " Slimed."
     ]
+  },
+
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Slimy Elixir",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " additional Slimed whenever an effect applies it this combat."
+    ]
+  },
+
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Bottled Minion",
+    "DESCRIPTIONS": [
+      "Spawn ",
+      " random Slime minion."
+    ]
+  },
+
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Ooze-Infused Drink",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " random 0-cost cards to your hand."
+    ]
   }
 }

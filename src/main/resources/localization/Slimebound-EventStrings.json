@@ -1,0 +1,14 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "The Boss Approaches",
+    "DESCRIPTIONS": [
+      "A booming voice echoes the spire... NL NL #r~BETRAYER!!!~ NL NL The hulking slime quickly catches up to you, blocking your path forward. It appears it isn't happy with one of it's own minions going rogue, and has abandoned the Exordium to hunt you down and absorb you.",
+      "Can it really be this easy?",
+      "Everything makes sense now. NL The lack of memories, the ascent, the #yAncient #yOne. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+    ],
+    "OPTIONS": [
+      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
+      "[Flee in Terror] #rCursed #r- #rShame."
+    ]
+  }
+}

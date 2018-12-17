@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -25,13 +26,13 @@ public class SlimingSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + (this.debuffAmount+ this.debuffBonusAmount) + this.descriptions[1];
+        this.description = this.descriptions[0] + (this.debuffAmount+ this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)) + this.descriptions[1];
     }
 
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,true,false,2 + this.debuffBonusAmount,false,0,false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,true,false,2 + this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player),false,0,false));
 
          }
 

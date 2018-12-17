@@ -46,9 +46,8 @@ public class HauntingLick extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.LICK);
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
-        this.exhaust = true;
-
+        this.slimed = this.baseSlimed = 4;
+        upgradeSlimed(0);
 
     }
 
@@ -59,7 +58,7 @@ public class HauntingLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
         if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
 

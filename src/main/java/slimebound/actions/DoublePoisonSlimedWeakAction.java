@@ -3,6 +3,7 @@ package slimebound.actions;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import slimebound.SlimeboundMod;
 import slimebound.powers.SlimedPower;
 
 
@@ -26,8 +27,8 @@ public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions
             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.target, this.source, new SlimedPower(this.target, this.source,
 
 
-                    this.target.getPower(SlimedPower.POWER_ID).amount),
-                    this.target.getPower(SlimedPower.POWER_ID).amount));
+                    this.target.getPower(SlimedPower.POWER_ID).amount + SlimeboundMod.getAcidTongueBonus(this.source)),
+                    this.target.getPower(SlimedPower.POWER_ID).amount + SlimeboundMod.getAcidTongueBonus(this.source)));
         }
         if (upgraded) {
             if ((this.duration == this.startingDuration) &&

@@ -42,7 +42,9 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.slimed = this.baseSlimed = 4;
+        upgradeSlimed(0);
+
 
 
     }
@@ -52,7 +54,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY,2F,false,0.6F), 0.3F));
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
 
 
     }
@@ -71,7 +73,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(2);
+            upgradeSlimed(2);
 
         }
 

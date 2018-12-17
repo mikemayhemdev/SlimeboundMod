@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import slimebound.SlimeboundMod;
 import slimebound.powers.SlimedPower;
 
 
@@ -19,7 +20,7 @@ public class SlimedPotion extends CustomPotion {
 
 
     public SlimedPotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.BOTTLE, PotionColor.POISON);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.BOTTLE, PotionColor.WEAK);
         this.potency = getPotency();
         this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.isThrown = true;
@@ -37,7 +38,7 @@ public class SlimedPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 10;
+        return 10 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
     }
 }
 

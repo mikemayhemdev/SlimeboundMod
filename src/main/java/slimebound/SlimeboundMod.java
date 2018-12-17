@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,20 +32,26 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.cards.*;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.events.Hunted;
 import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
+import slimebound.helpers.SlimedVariable;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.orbs.TorchHeadSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.potions.SlimedPotion;
+import slimebound.potions.SlimyTonguePotion;
+import slimebound.potions.SpawnSlimePotion;
+import slimebound.potions.ThreeZeroPotion;
+import slimebound.powers.AcidTonguePowerUpgraded;
 import slimebound.relics.*;
 
 import java.nio.charset.StandardCharsets;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber, basemod.interfaces.PostPowerApplySubscriber, basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber, basemod.interfaces.PostPowerApplySubscriber, basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
@@ -121,6 +129,36 @@ public class SlimeboundMod implements PostBattleSubscriber, PostInitializeSubscr
 
     }
 
+
+    public void receivePostDungeonInitialize() {
+
+        slimeTalked = false;
+        slimeTalkedAcidL = false;
+        slimeTalkedAcidM = false;
+       slimeTalkedAcidS = false;
+        slimeTalkedSpikeL = false;
+         slimeTalkedSpikeM = false;
+         slimeTalkedSpikeS = false;
+        slimeTalkedDark = 0;
+        slimeTalkedCollector = false;
+        if (AbstractDungeon.player != null){
+            if (AbstractDungeon.player instanceof SlimeboundCharacter){
+                ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss=false;
+                SlimeboundMod.logger.info("Reset Hunted event bool.");
+            }
+        }
+    }
+
+    public static int getAcidTongueBonus(AbstractCreature source){
+        int bonus = 0;
+        if (source != null) {
+            if (source.hasPower(AcidTonguePowerUpgraded.POWER_ID)) {
+                bonus = source.getPower(AcidTonguePowerUpgraded.POWER_ID).amount;
+            }
+        }
+        return bonus;
+    }
+
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
 
         if (power.ID == "Strength") {
@@ -160,6 +198,7 @@ public static String printString(String s){
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SelfDamageVariable());
         BaseMod.addDynamicVariable(new PoisonVariable());
+        BaseMod.addDynamicVariable(new SlimedVariable());
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
@@ -407,6 +446,8 @@ public static String printString(String s){
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
         String orbStrings = Gdx.files.internal("localization/Slimebound-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
+        String eventStrings = Gdx.files.internal("localization/Slimebound-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
         logger.info("done editing strings");
     }
 
@@ -460,8 +501,16 @@ public static String printString(String s){
 
         logger.info("Done loading badge Image and mod options");
 
-        BaseMod.addPotion(SlimedPotion.class, Color.GREEN, Color.GREEN, Color.GREEN, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID);
+        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID);
+        BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
+
+        BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
+        BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
+
     }
+
 
 
 

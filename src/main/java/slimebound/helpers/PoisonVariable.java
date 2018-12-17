@@ -9,7 +9,7 @@ public class PoisonVariable extends DynamicVariable
     @Override
     public String key()
     {
-        return "SlimePoison";
+        return "Slimebound:SlimePoison";
     }
 
     @Override

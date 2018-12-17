@@ -42,7 +42,8 @@ public class QuickLick extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.LICK);
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.slimed = this.baseSlimed = 4;
+        upgradeSlimed(0);
         this.exhaust = true;
 
 
@@ -68,7 +69,7 @@ public class QuickLick extends AbstractSlimeboundCard {
         }
         */
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
         if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));

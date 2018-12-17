@@ -9,7 +9,7 @@ public class SelfDamageVariable extends DynamicVariable
     @Override
     public String key()
     {
-        return "SelfDamage";
+        return "Slimebound:SelfDamage";
     }
 
     @Override

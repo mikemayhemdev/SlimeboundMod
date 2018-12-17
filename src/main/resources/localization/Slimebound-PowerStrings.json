@@ -191,9 +191,9 @@
 	"Slimebound:RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
-			"Return ",
-			" 0-cost Exhausted card to your hand each turn.",
-			" 0-cost Exhausted cards to your hand each turn."
+			"Play ",
+			" random 0-cost Exhausted card each turn.",
+			" random 0-cost Exhausted cards each turn."
 		]
 	},
 	"Slimebound:RecyclingPowerUpgraded": {
@@ -211,10 +211,10 @@
 		]
 	},
 	"Slimebound:AcidTonguePowerUpgraded": {
-		"NAME": "Acid Tongue+",
+		"NAME": "Slimy Tongue",
 		"DESCRIPTIONS": [
-			"Apply ",
-			" Poison whenever you apply Weaken."
+			"Effects that apply Slimed apply ",
+			" more."
 		]
 	},
 	"Slimebound:SelfDamageSlimedPower": {

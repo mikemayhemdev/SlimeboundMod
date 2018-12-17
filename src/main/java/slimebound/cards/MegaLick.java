@@ -48,7 +48,8 @@ public class MegaLick extends AbstractSlimeboundCard {
 
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.slimed = this.baseSlimed = 4;
+        upgradeSlimed(0);
         this.poison = 1;
         this.exhaust = true;
 
@@ -69,7 +70,7 @@ public class MegaLick extends AbstractSlimeboundCard {
                     AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(monster.hb.cX, monster.hb.cY, 3));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
 
 
 

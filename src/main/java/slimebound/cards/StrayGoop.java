@@ -32,13 +32,14 @@ public class StrayGoop extends AbstractSlimeboundCard {
 
     public StrayGoop() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.slimed = this.baseSlimed = 2;
+        upgradeSlimed(0);
 
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfDamageSlimedPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfDamageSlimedPower(p, p, this.slimed), this.slimed));
     }
 
     public AbstractCard makeCopy() {
@@ -48,7 +49,7 @@ public class StrayGoop extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+            upgradeSlimed(1);
 
 
         }

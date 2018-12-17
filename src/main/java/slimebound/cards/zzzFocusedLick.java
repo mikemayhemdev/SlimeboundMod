@@ -51,19 +51,19 @@ public class zzzFocusedLick extends AbstractSlimeboundCard {
         int slimedAmount;
         if (m.hasPower("Weakened")) {
             slimedAmount = m.getPower("Weakened").amount;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, slimedAmount), slimedAmount, true, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, slimedAmount ), slimedAmount , true, AbstractGameAction.AttackEffect.NONE));
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(m, p, "Weakened"));
 
         }
 
         if (m.hasPower("Poison")) {
             slimedAmount = m.getPower("Poison").amount;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, slimedAmount), slimedAmount, true, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, slimedAmount ), slimedAmount , true, AbstractGameAction.AttackEffect.NONE));
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(m, p, "Poison"));
 
         }
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber ), this.magicNumber , true, AbstractGameAction.AttackEffect.NONE));
 
 
     }

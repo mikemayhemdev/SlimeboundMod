@@ -42,7 +42,8 @@ public class LivingWall extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.slimed = this.baseSlimed = 4;
+        upgradeSlimed(0);
         //this.baseBlock = 2;
 
         this.baseBlock = 10;
@@ -76,7 +77,7 @@ public class LivingWall extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(p.hb.cX + 310 * Settings.scale, p.hb.cY + 130 * Settings.scale, 4),0.0f));
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimedThornsPower(p, p,this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimedThornsPower(p, p,this.slimed), this.slimed));
 
     }
 
@@ -94,7 +95,7 @@ public class LivingWall extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(2);
+            upgradeSlimed(2);
             upgradeBlock(2);
 
             //upgradeBlock(1);

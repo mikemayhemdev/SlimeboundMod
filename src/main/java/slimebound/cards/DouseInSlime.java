@@ -47,7 +47,8 @@ public class DouseInSlime extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.magicNumber = this.baseMagicNumber = 16;
+        this.slimed = this.baseSlimed = 16;
+        upgradeSlimed(0);
 
 
     }
@@ -57,7 +58,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY - 30,5F,false,.8F,false,true), 0.6F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FakeFlashAtkImgEffect(m.hb.cX, m.hb.cY, Color.PURPLE,2F,false,.4F)));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
 
 
@@ -77,7 +78,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(6);
+            upgradeSlimed(6);
 
         }
 

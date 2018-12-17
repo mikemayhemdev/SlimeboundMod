@@ -2,6 +2,7 @@ package slimebound.cards;
 
 import basemod.abstracts.CustomCard;
 
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import slimebound.SlimeboundMod;
 
 
@@ -18,5 +19,16 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     public int poison;
     public boolean upgradePoison;
     public boolean isPoisonModified;
+
+    public int slimed;
+    public int baseSlimed;
+    public boolean isSlimedModified;
+    public boolean upgradeSlimed;
+
+    public void upgradeSlimed(int amount) {
+        this.baseSlimed += amount;
+        this.slimed = this.baseSlimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+        if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
+    }
 
 }
