@@ -56,7 +56,7 @@ public class PreparedRelic extends CustomRelic {
     }
 
 
-    public void onRest() {
+    public void onEnterRestRoom() {
         this.flash();
         this.counter = -2;
         this.pulse = true;

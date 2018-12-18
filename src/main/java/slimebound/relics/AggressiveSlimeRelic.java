@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.characters.SlimeboundCharacter;
 
 public class AggressiveSlimeRelic extends CustomRelic {
     public static final String ID = "Slimebound:AggressiveSlimeRelic";
@@ -14,7 +15,7 @@ public class AggressiveSlimeRelic extends CustomRelic {
 
     public AggressiveSlimeRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.COMMON, LandingSound.MAGICAL);
+                RelicTier.COMMON, LandingSound.FLAT);
     }
 
     @Override
@@ -26,6 +27,9 @@ public class AggressiveSlimeRelic extends CustomRelic {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, false));
 
+    }
+    public boolean canSpawn() {
+        return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
 
 

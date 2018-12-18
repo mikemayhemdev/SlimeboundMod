@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.ShieldSlime;
 
 public class MaxSlimesRelic extends CustomRelic {
@@ -15,7 +16,7 @@ public class MaxSlimesRelic extends CustomRelic {
 
     public MaxSlimesRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.UNCOMMON, LandingSound.MAGICAL);
+                RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     @Override
@@ -29,6 +30,9 @@ public class MaxSlimesRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, false));
     }
 
+    public boolean canSpawn() {
+        return AbstractDungeon.player instanceof SlimeboundCharacter;
+    }
 
     @Override
     public AbstractRelic makeCopy() {

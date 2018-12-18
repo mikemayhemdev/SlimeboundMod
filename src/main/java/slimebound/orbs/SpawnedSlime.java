@@ -384,8 +384,8 @@ public abstract class SpawnedSlime
         if (this.extraFontColor != null) {
 
 
-            int fontOffset = 16;
-            if (this.passiveAmount > 9) fontOffset = fontOffset + 5;
+            float fontOffset = 26 * Settings.scale;
+            if (this.passiveAmount > 9) fontOffset = fontOffset + (6 * Settings.scale);
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
 
             if (this instanceof SlimingSlime) {

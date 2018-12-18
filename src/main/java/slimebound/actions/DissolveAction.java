@@ -116,6 +116,7 @@ public class DissolveAction extends AbstractGameAction {
         Iterator var1 = srcCommonCardPool.group.iterator();
 
         AbstractCard c3;
+        if (c2.cost < 0) c2.cost =0;
 
 
         for (int i = 0; i < (c2.cost + this.extraCards); i++) {

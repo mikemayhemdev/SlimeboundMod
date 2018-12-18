@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import slimebound.actions.SlimeSpawnAction;
+import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.SlimeSacrificePower;
 
 public class SlimedTailRelic extends CustomRelic {
@@ -21,7 +22,7 @@ public class SlimedTailRelic extends CustomRelic {
 
     public SlimedTailRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.RARE, LandingSound.MAGICAL);
+                RelicTier.RARE, LandingSound.SOLID);
     }
 
     @Override
@@ -71,6 +72,9 @@ public class SlimedTailRelic extends CustomRelic {
     public void onVictory() {
 
         this.isActive = true;
+    }
+    public boolean canSpawn() {
+        return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
 
 

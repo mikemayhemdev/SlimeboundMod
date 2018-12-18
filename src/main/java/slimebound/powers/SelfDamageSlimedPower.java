@@ -53,7 +53,7 @@ public class SelfDamageSlimedPower extends AbstractPower {
     public void updateDescription() {
 
 
-        this.description = (DESCRIPTIONS[0] + this.amount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 
 
     }

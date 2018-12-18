@@ -66,6 +66,11 @@ public class PlayExhausted0CostAction extends AbstractGameAction {
 
                 }
             }
+            if (card == null){
+
+                this.isDone = true;
+                return;
+            }
 
                //AbstractDungeon.player.exhaustPile.removeCard(card);
 

@@ -2,7 +2,7 @@
 	"Slimebound:PotencyPower": {
 		"NAME": "Potency",
 		"DESCRIPTIONS": [
-			"Increase the effectiveness of your spawned #ySlimes by ",
+			"Increase the damage of your spawned #ySlimes by ",
 			"."
 		]
 	},
