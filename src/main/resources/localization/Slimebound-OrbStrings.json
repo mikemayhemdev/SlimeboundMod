@@ -3,7 +3,7 @@
     "NAME": "Bronze Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn and grants you ",
+      " damage at the start of your turn and grants you ",
       " Block."
     ]
   },
@@ -11,42 +11,44 @@
     "NAME": "Bruiser Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn."
+      " damage at the start of your turn."
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn.  Torch Heads gain damage when you gain Strength."
+      " damage at the start of your turn.  Torch Heads gain damage when you gain Strength."
     ]
   },
   "Slimebound:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn, then increases it's damage by 2."
+      " damage at the start of your turn, then increases it's damage by 2."
     ]
   },
   "Slimebound:ShieldSlime": {
     "NAME": "Leeching Slime",
     "DESCRIPTION": [
       "Deals ",
-      " Damage at the start of your turn and grants you ",
+      " damage at the start of your turn and grants you ",
       " Block."
     ]
   },
   "Slimebound:PoisonSlime": {
     "NAME": "Poisoning Slime",
     "DESCRIPTION": [
-      "Applies ",
+      "Deals ",
+      " damage and applies ",
       " Poison at the start of your turn."
     ]
   },
   "Slimebound:SlimingSlime": {
     "NAME": "Sliming Slime",
     "DESCRIPTION": [
-      "Applies ",
+      "Deals ",
+      " damage and applies ",
       " Slimed at the start of your turn."
     ]
   },

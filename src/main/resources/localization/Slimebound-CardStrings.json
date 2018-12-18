@@ -58,6 +58,12 @@
     "DESCRIPTION": "Prevent the next time you would damaged by an Attack, losing your oldest Slime instead. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an Attack, losing your oldest Slime instead. NL Exhaust."
   },
+  "Slimebound:SamplingLick": {
+    "NAME": "Sampling Lick",
+    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed NL Gain !B! Block. NL Draw a card. NL Exhaust."
+
+  },
 "Slimebound:DuplicateSlimes": {
     "NAME": "Replication",
     "DESCRIPTION": "Duplicate all of your spawned Slimes. NL Exhaust."
@@ -172,8 +178,8 @@
   },
 "Slimebound:Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "At the start of your turn, play a random 0-cost card from your Exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, play a random 0-cost card from your Exhaust pile."
+    "DESCRIPTION": "At the start of your turn, add a random Exhausted 0-cost card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a random Exhausted 0-cost card to your hand."
   },
 "Slimebound:Repurpose": {
     "NAME": "Repurpose",
@@ -232,8 +238,8 @@
   },
 "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "Add a random Lick card to your hand each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add a random Lick card to your hand each turn."
+    "DESCRIPTION": "The first card containing Lick you play each turn adds a random Lick card to your hand.",
+    "UPGRADE_DESCRIPTION": "The first card containing Lick you play each turn adds 2 random Lick cards to your hand."
   },
 "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",

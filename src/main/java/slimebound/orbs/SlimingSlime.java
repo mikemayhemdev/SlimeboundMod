@@ -26,7 +26,7 @@ public class SlimingSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + (this.debuffAmount+ this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)) + this.descriptions[1];
+        this.description = this.descriptions[0] + + this.passiveAmount + this.descriptions[1] + (this.debuffAmount+ this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)) + this.descriptions[2];
     }
 
 

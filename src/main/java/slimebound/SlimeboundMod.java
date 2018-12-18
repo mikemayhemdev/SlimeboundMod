@@ -7,7 +7,6 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -250,7 +249,7 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         BaseMod.addCard(new slimebound.cards.Dissolve());
         BaseMod.addCard(new slimebound.cards.DuplicatedForm());
         BaseMod.addCard(new slimebound.cards.LeechingTouch());
-        BaseMod.addCard(new Regenerate());
+        BaseMod.addCard(new SamplingLick());
         BaseMod.addCard(new FormOfPuddle());
         BaseMod.addCard(new slimebound.cards.Lick());
         BaseMod.addCard(new slimebound.cards.MegaLick());
@@ -363,7 +362,7 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         UnlockTracker.unlockCard(Dissolve.ID);
         UnlockTracker.unlockCard(RollThrough.ID);
         UnlockTracker.unlockCard(CorrosiveSpit.ID);
-        UnlockTracker.unlockCard(Regenerate.ID);
+        UnlockTracker.unlockCard(SamplingLick.ID);
         UnlockTracker.unlockCard(Recycling.ID);
         UnlockTracker.unlockCard(GrowthPunch.ID);
         UnlockTracker.unlockCard(Recollect.ID);
@@ -416,11 +415,11 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
 
         BaseMod.addKeyword(new String[]{"split"}, "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
 
-        BaseMod.addKeyword(new String[]{"slimed"}, "Increase the next attack's damage and cause it to restore HP, consuming the effect. Half is removed at end of turn.");
+        BaseMod.addKeyword(new String[]{"slimed"}, "The next attack deals increased damage, consuming the Slimed effect, and healing you for half the amount consumed. Half of Slimed is removed at end of turn.");
 
         BaseMod.addKeyword(new String[]{"potency"}, "Increases the damage of ALL of your Spawned Slimes.");
         BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains damage when you gain Strength.");
-        BaseMod.addKeyword(new String[]{"bruiser"}, "Attacks for 5 each turn.");
+        BaseMod.addKeyword(new String[]{"bruiser"}, "Attacks for 4 each turn.");
         BaseMod.addKeyword(new String[]{"cultist"}, "Attacks for 6 each turn, then increases it's damage by 2.");
         BaseMod.addKeyword(new String[]{"leeching"}, "Attacks for 2 and grants you 2 Block each turn.");
         BaseMod.addKeyword(new String[]{"poisoning"}, "Attacks for 1 and applies 2 Poison each turn .");
@@ -523,7 +522,7 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
 
         BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID);
         BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID);
+        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
         BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
 
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);

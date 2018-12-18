@@ -163,9 +163,10 @@ public abstract class SpawnedSlime
 
 
     public void setSlot(int slotNum, int maxOrbs) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter)
-        this.tX = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsX[slotNum];
-        this.tY = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
+        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            this.tX = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsX[slotNum];
+            this.tY = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
+        }
 
 
 

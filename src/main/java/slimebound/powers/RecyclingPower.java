@@ -64,11 +64,9 @@ public class RecyclingPower extends AbstractPower {
     public void atStartOfTurn() {
 
         flash();
-        for (int i = 0; i < this.amount; i++) {
 
-            AbstractDungeon.actionManager.addToBottom(new PlayExhausted0CostAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRng)));
+            AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(this.amount));
 
-        }
     }
 
 

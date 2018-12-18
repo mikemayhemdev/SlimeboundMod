@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.RandomLickCardAction;
+import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 
 
 public class GluttonyPower extends AbstractPower {
@@ -20,6 +22,7 @@ public class GluttonyPower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
+    private int timesTriggeredThisTurn;
 
 
     public GluttonyPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -51,23 +54,31 @@ public class GluttonyPower extends AbstractPower {
     public void updateDescription() {
 
 
-        if (this.amount == 1) {
+
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
-        }
+
 
 
     }
-
+    public void onAfterCardPlayed(AbstractCard usedCard) {
+        super.onAfterCardPlayed(usedCard);
+        if (usedCard.hasTag(SlimeboundMod.LICK)){
+            if(timesTriggeredThisTurn == 0){
+                if (AbstractDungeon.player.orbs.get(0) != null);{
+                    flash();
+                    for (int i = 0; i < this.amount; i++) {
+                        AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
+                    }
+                    timesTriggeredThisTurn++;
+                }
+            }
+        }
+    }
 
     public void atStartOfTurn() {
 
-        flash();
+        timesTriggeredThisTurn=0;
 
-        for (int i = 0; i < this.amount; i++) {
-            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
-        }
 
     }
 

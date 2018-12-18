@@ -161,9 +161,8 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "Gluttony",
 		"DESCRIPTIONS": [
-			"Add ",
-			" random Lick card to your hand each turn.",
-			" random Lick cards to your hand each turn."
+			"The first Lick card played each turn adds ",
+			" random Lick card to your hand."
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -191,9 +190,9 @@
 	"Slimebound:RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
-			"Play ",
-			" random 0-cost Exhausted card each turn.",
-			" random 0-cost Exhausted cards each turn."
+			"Add ",
+			" random 0-cost Exhausted card to your hand each turn.",
+			" random 0-cost Exhausted cards to your hand each turn."
 		]
 	},
 	"Slimebound:RecyclingPowerUpgraded": {
