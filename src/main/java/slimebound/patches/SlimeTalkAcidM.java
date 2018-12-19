@@ -5,11 +5,12 @@ import com.megacrit.cardcrawl.actions.animations.ShoutAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_M;
+import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_S;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.exordium.AcidSlime_M",method="takeTurn")
+@SpirePatch(clz= AcidSlime_M.class,method="takeTurn")
 public class SlimeTalkAcidM {
 
     public static void Prefix(AcidSlime_M sb) {

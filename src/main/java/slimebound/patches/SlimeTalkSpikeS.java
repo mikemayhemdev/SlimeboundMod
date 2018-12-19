@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_S;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_S",method="takeTurn")
+@SpirePatch(clz=SpikeSlime_S.class,method="takeTurn")
 public class SlimeTalkSpikeS {
 
     public static void Prefix(SpikeSlime_S sb) {

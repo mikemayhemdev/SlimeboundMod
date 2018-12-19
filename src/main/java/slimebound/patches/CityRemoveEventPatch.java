@@ -10,7 +10,7 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.events.Hunted;
 import slimebound.relics.StudyCardRelic;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.dungeons.AbstractDungeon",method="initializeCardPools")
+@SpirePatch(clz=AbstractDungeon.class,method="initializeCardPools")
 public class CityRemoveEventPatch {
 
     public static void Prefix(AbstractDungeon dungeon_instance) {

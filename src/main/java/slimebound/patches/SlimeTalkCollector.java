@@ -9,7 +9,7 @@ import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.relics.StudyCardRelic;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.city.TheCollector",method="takeTurn")
+@SpirePatch(clz=TheCollector.class,method="takeTurn")
 public class SlimeTalkCollector {
 
     public static void Prefix(TheCollector sb) {

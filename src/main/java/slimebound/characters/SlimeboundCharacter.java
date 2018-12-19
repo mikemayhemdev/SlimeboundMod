@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
+import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -251,7 +252,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     }
 
-
+    @SpireOverride
     public void renderPowerIcons(SpriteBatch sb, float x, float y) {
         float offset = 10.0F * Settings.scale;
         int powersIterated = 0;

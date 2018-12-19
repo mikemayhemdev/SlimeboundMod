@@ -6,10 +6,11 @@ import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_M;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_S;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_M",method="takeTurn")
+@SpirePatch(clz= SpikeSlime_M.class,method="takeTurn")
 public class SlimeTalkSpikeM {
 
     public static void Prefix(SpikeSlime_M sb) {

@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.beyond.Darkling",method="takeTurn")
+@SpirePatch(clz=Darkling.class,method="takeTurn")
 public class SlimeTalkDark {
 
     public static void Prefix(Darkling sb) {

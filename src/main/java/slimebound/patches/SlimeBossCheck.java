@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.exordium.SlimeBoss",method="usePreBattleAction")
+@SpirePatch(clz=SlimeBoss.class,method="usePreBattleAction")
 public class SlimeBossCheck {
 
     public static void Prefix(SlimeBoss sb) {

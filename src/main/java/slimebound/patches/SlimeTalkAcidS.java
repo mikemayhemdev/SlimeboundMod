@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.monsters.exordium.AcidSlime_S",method="takeTurn")
+@SpirePatch(clz=AcidSlime_S.class,method="takeTurn")
 public class SlimeTalkAcidS {
 
     public static void Prefix(AcidSlime_S sb) {
