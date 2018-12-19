@@ -64,7 +64,7 @@ public class CombatDrawPositionPatch {
                 }
                 if (monsters.length == 2) {
                     if (monsters[0].id == SpireShield.ID && monsters[1].id == SpireSpear.ID) {
-                         SlimeboundMod.logger.info("Cultist cluster Patch hit Spire elites found");
+                         //SlimeboundMod.logger.info("Cultist cluster Patch hit Spire elites found");
 
                         //monsters[1].hb_x -= -100 * Settings.scale;
                         monsters[1].drawX -= -150 * Settings.scale;

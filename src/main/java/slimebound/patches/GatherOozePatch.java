@@ -20,7 +20,7 @@ public class GatherOozePatch {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
     public static void Prefix(GoopPuddle meObj, final int buttonPressed) {
-        logger.info("Patch hit");
+       // logger.info("Patch hit");
         if (!(AbstractDungeon.player instanceof SlimeboundCharacter)) return;
 
         try {

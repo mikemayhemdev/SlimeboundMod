@@ -25,7 +25,7 @@ public class CityRemoveEventPatch {
         }
 
         dungeon_instance.eventList.remove(Hunted.ID);
-        SlimeboundMod.logger.info("Removed Hunted event from pool.");
+        //SlimeboundMod.logger.info("Removed Hunted event from pool.");
 
     }
 }
