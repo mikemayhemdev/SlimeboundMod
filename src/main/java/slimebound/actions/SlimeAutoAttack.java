@@ -1,11 +1,13 @@
 package slimebound.actions;
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -103,7 +106,11 @@ public class SlimeAutoAttack extends AbstractGameAction {
                 slime.useFastAttackAnimation();
 
             }
-           if (this.beamVFX) AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX, slime.cY, mo.hb.cX, mo.hb.cY)));
+           if (this.beamVFX){
+               AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+               AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
+               AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX, slime.cY, mo.hb.cX, mo.hb.cY)));
+           }
 
             //logger.info("Targetng " + mo.name);
 

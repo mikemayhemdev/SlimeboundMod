@@ -14,6 +14,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.cards.AbstractSlimeboundCard;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.SlimingSlime;
 import slimebound.orbs.SpawnedSlime;
 
 
@@ -53,37 +55,7 @@ public class AcidTonguePowerUpgraded extends AbstractPower {
 
     }
 
-    public void onInitialApplication() {
-
-
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if (c instanceof AbstractSlimeboundCard) {
-                ((AbstractSlimeboundCard) c).upgradeSlimed(0);
-            }
-        }for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-            if (c instanceof AbstractSlimeboundCard) {
-                ((AbstractSlimeboundCard) c).upgradeSlimed(0);
-            }
-        }for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof AbstractSlimeboundCard) {
-                ((AbstractSlimeboundCard) c).upgradeSlimed(0);
-            }
-        }for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof AbstractSlimeboundCard) {
-                ((AbstractSlimeboundCard) c).upgradeSlimed(0);
-            }
-        }
-
-
-    if (this.owner.hasPower(SlimedThornsPower.POWER_ID)){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SlimedThornsPower(this.owner, this.owner,this.amount), this.amount));
-
-    }
-    }
-
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-
+    public void updateSlimedEffects(){
 
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c instanceof AbstractSlimeboundCard) {
@@ -105,13 +77,26 @@ public class AcidTonguePowerUpgraded extends AbstractPower {
 
 
         if (this.owner.hasPower(SlimedThornsPower.POWER_ID)){
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SlimedThornsPower(this.owner, this.owner,stackAmount), stackAmount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SlimedThornsPower(this.owner, this.owner,this.amount), this.amount));
 
         }
-        if (this.owner.hasPower(SelfDamageSlimedPower.POWER_ID)){
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SelfDamageSlimedPower(this.owner, this.owner,stackAmount), stackAmount));
 
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof SlimingSlime) {
+                ((SlimingSlime) o).updateSlimedNumber();
+
+            }
         }
+    }
+
+    public void onInitialApplication() {
+        updateSlimedEffects();
+
+    }
+
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        updateSlimedEffects();
     }
     public void updateDescription() {
 

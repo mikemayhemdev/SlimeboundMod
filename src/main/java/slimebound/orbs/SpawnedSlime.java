@@ -58,6 +58,7 @@ public abstract class SpawnedSlime
     public int UniqueFocus;
     public float animX;
     public float animY;
+    public int slimeBonus;
     public boolean movesToAttack;
     public int upgradedInitialBoost;
     public String originalRelic = "";
@@ -98,6 +99,7 @@ public abstract class SpawnedSlime
     public int debuffBonusAmount;
     public int debuffAmount;
     public Color extraFontColor = null;
+    public boolean topSpawnVFX = false;
 
 
 
@@ -150,7 +152,6 @@ public abstract class SpawnedSlime
         if (AbstractDungeon.player.hasPower(DuplicatedFormPower.POWER_ID)) this.madePostDuplicated = true;
 
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
 
         //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
         this.applyFocus();
@@ -160,7 +161,14 @@ public abstract class SpawnedSlime
 
     }
 
+public void spawnVFX(){
+        if (this.topSpawnVFX){
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
 
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
+        }
+}
 
     public void setSlot(int slotNum, int maxOrbs) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
@@ -388,13 +396,10 @@ public abstract class SpawnedSlime
             float fontOffset = 26 * Settings.scale;
             if (this.passiveAmount > 9) fontOffset = fontOffset + (6 * Settings.scale);
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
-            int bonus = 0;
 
-            if (this instanceof SlimingSlime) {
-              bonus = SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
-            }
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + bonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
+
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
 
         } else {
 

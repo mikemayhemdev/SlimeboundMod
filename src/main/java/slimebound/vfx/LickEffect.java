@@ -51,7 +51,7 @@ public class LickEffect extends AbstractGameEffect {
         this.cX = this.tX;
         this.cY = this.tY;
         this.dY = this.tY + 110 * Settings.scale;
-        this.scale = 1F;
+        this.scale = 1.3F;
         this.rotation = 0.0F;
         this.duration = duration;
         this.startingDuration = duration;
@@ -70,10 +70,10 @@ public class LickEffect extends AbstractGameEffect {
 
         }
         if (this.duration > (this.startingDuration * 0.7F)) {
-            this.alpha = Interpolation.linear.apply(0.7F, 0F, (this.duration - (this.startingDuration * 0.7F)) / (this.startingDuration - (this.startingDuration * 0.7F)));
+            this.alpha = Interpolation.linear.apply(0.75F, 0F, (this.duration - (this.startingDuration * 0.7F)) / (this.startingDuration - (this.startingDuration * 0.7F)));
         }
         if (this.duration < (this.startingDuration * 0.3F)) {
-            this.alpha = Interpolation.linear.apply(0F, 0.7F, (this.duration) / (this.startingDuration * 0.3F));
+            this.alpha = Interpolation.linear.apply(0F, 0.75F, (this.duration) / (this.startingDuration * 0.3F));
         }
         //SlimeboundMod.logger.info("alpha " + this.alpha);
 

@@ -42,6 +42,7 @@ public class HexSlime
         this.color = Color.CHARTREUSE.cpy();
         this.color.a = 0.0F;
         this.activated = true;
+        spawnVFX();
 
     }
 

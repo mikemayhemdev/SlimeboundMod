@@ -65,12 +65,12 @@ public class MegaLick extends AbstractSlimeboundCard {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(monster.hb.cX, monster.hb.cY,0.6F,new Color(GREEN)), 0.1F));
 
                     AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(monster.hb.cX, monster.hb.cY, 3));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(monster.hb.cX, monster.hb.cY,0.6F,new Color(GREEN)), 0.1F));
 
 
 

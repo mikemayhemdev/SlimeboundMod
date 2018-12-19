@@ -17,10 +17,14 @@ public class PoisonSlime
     public static final String ID = "Slimebound:PoisonSlime";
 
     public PoisonSlime() {
+        this(false);
+    }
+    public PoisonSlime(boolean topLevelVFX) {
         super(ID, -32,new Color (.5F,1.0F,.5F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(0.6F,.9F,.6F,2F),1, 2,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
         this.extraFontColor = Color.FOREST;
         this.debuffAmount = 2;
-
+        this.topSpawnVFX = topLevelVFX;
+        spawnVFX();
     }
 
 

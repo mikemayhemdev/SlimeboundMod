@@ -254,18 +254,18 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     @SpireOverride
     public void renderPowerIcons(SpriteBatch sb, float x, float y) {
-        float offset = 10.0F * Settings.scale;
+        float offset = 10.0F ;
         int powersIterated = 0;
         float YOffset = 0;
         Iterator var5;
         AbstractPower p;
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
+        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
             p = (AbstractPower) var5.next();
-            p.renderIcons(sb, x + offset, (y - 48.0F + YOffset) * Settings.scale, Color.WHITE);
+            p.renderIcons(sb, x + (offset* Settings.scale), y + ((-48.0F + YOffset) * Settings.scale), Color.WHITE);
             powersIterated++;
             if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F * Settings.scale;
-                offset = -38.0F * Settings.scale;
+                YOffset += -42F;
+                offset = -38.0F;
             }
         }
 
@@ -273,13 +273,13 @@ public class SlimeboundCharacter extends CustomPlayer {
         powersIterated = 0;
         YOffset = 0.0F;
 
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
+        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
             p = (AbstractPower) var5.next();
-            p.renderAmount(sb, x + offset + 32.0F * Settings.scale, (y - 66.0F + YOffset) * Settings.scale, Color.WHITE);
+            p.renderAmount(sb, x + ((offset + 32.0F) * Settings.scale), y + ((-66.0F + YOffset) * Settings.scale), Color.WHITE);
             powersIterated++;
             if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F * Settings.scale;
-                offset = -48.0F * Settings.scale;
+                YOffset += -42F;
+                offset = -48.0F;
             }
         }
     }

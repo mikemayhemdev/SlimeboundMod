@@ -40,6 +40,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
         if (newOrbType!=null) {
             this.orbType=newOrbType;
             SpawnedSlime s = (SpawnedSlime) newOrbType;
+
             this.upgradedamount = s.upgradedInitialBoost;
         }
 
