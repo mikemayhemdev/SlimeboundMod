@@ -388,13 +388,14 @@ public abstract class SpawnedSlime
             float fontOffset = 26 * Settings.scale;
             if (this.passiveAmount > 9) fontOffset = fontOffset + (6 * Settings.scale);
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            int bonus = 0;
 
             if (this instanceof SlimingSlime) {
-                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
-            } else {
-                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
-
+              bonus = SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
             }
+
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + bonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
+
         } else {
 
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);

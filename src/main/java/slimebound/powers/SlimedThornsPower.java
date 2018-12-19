@@ -78,7 +78,7 @@ public class SlimedThornsPower extends AbstractPower {
 
     public int onAttacked(DamageInfo info, int damageAmount) {
 
-            if (info.type == DamageInfo.DamageType.NORMAL) {
+            if (info.type == DamageInfo.DamageType.NORMAL && info.owner != AbstractDungeon.player) {
                 flash();
 
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new SlimedPower(info.owner, this.owner, this.amount), this.amount , true, AbstractGameAction.AttackEffect.NONE));

@@ -55,8 +55,8 @@
   },
 "Slimebound:SlimeSacrifice": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would damaged by an Attack, losing your oldest Slime instead. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an Attack, losing your oldest Slime instead. NL Exhaust."
+    "DESCRIPTION": "Prevent the next time you would damaged by an enemy ttack, losing your oldest Slime instead. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",

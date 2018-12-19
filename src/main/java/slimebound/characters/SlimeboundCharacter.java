@@ -17,10 +17,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -40,6 +37,7 @@ import slimebound.cards.Strike_Slimebound;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.relics.AbsorbEndCombat;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -255,23 +253,37 @@ public class SlimeboundCharacter extends CustomPlayer {
 
 
     public void renderPowerIcons(SpriteBatch sb, float x, float y) {
-        float offset = 30.0F * Settings.scale;
-
+        float offset = 10.0F * Settings.scale;
+        int powersIterated = 0;
+        float YOffset = 0;
         Iterator var5;
         AbstractPower p;
-        for(var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
-            p = (AbstractPower)var5.next();
-            p.renderIcons(sb, x + offset, y + 200.0F * Settings.scale, Color.WHITE);
+        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
+            p = (AbstractPower) var5.next();
+            p.renderIcons(sb, x + offset, (y - 48.0F + YOffset) * Settings.scale, Color.WHITE);
+            powersIterated++;
+            if (powersIterated == 9 || powersIterated == 18) {
+                YOffset += -42F * Settings.scale;
+                offset = -38.0F * Settings.scale;
+            }
         }
 
-        offset = 0.0F * Settings.scale;
+        offset = 0.0F;
+        powersIterated = 0;
+        YOffset = 0.0F;
 
-        for(var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
-            p = (AbstractPower)var5.next();
-            p.renderAmount(sb, x + offset + 32.0F * Settings.scale, y + 182.0F * Settings.scale, Color.WHITE);
+        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F * Settings.scale) {
+            p = (AbstractPower) var5.next();
+            p.renderAmount(sb, x + offset + 32.0F * Settings.scale, (y - 66.0F + YOffset) * Settings.scale, Color.WHITE);
+            powersIterated++;
+            if (powersIterated == 9 || powersIterated == 18) {
+                YOffset += -42F * Settings.scale;
+                offset = -48.0F * Settings.scale;
+            }
         }
-
     }
+
+
 
 }
 

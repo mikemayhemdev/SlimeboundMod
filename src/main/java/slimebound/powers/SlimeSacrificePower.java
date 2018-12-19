@@ -46,13 +46,14 @@ public class SlimeSacrificePower extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
 
         if (info.type == DamageInfo.DamageType.NORMAL) {
+            if (info.owner != AbstractDungeon.player){
             if (damageAmount > AbstractDungeon.player.currentBlock) {
                 if (!AbstractDungeon.player.orbs.isEmpty()) {
                     for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
                         if (o instanceof SpawnedSlime) {
 
-                            SpawnedSlime s = (SpawnedSlime)o;
+                            SpawnedSlime s = (SpawnedSlime) o;
                             s.noEvokeBonus = true;
                             this.flash();
                             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
@@ -63,6 +64,7 @@ public class SlimeSacrificePower extends AbstractPower {
                         }
                     }
                 }
+            }
             }
         }
         return damageAmount;

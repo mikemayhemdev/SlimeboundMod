@@ -51,11 +51,11 @@
 		]
 	},
 	"Slimebound:SlimeSacrifice": {
-		"NAME": "Slime Sacrifice",
+		"NAME": "Protect the Boss",
 		"DESCRIPTIONS": [
-			"Prevent the next time you would be damaged by an Attack at the cost of your oldest Slime.",
+			"Prevent the next time you would be damaged by an enemy Attack at the cost of your oldest Slime.",
 			"Prevent the next #b",
-			" times you would damaged by an Attack at the cost of your oldest Slime."
+			" times you would damaged by an enemy Attack at the cost of your oldest Slime."
 		]
 	},
 	"Slimebound:SplitForLessPower": {
