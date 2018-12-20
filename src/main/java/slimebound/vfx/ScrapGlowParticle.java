@@ -40,6 +40,10 @@ public class ScrapGlowParticle extends AbstractGameEffect {
         this.renderBehind = false;
     }
 
+    public void finish(){
+        this.isDone = true;
+
+    }
     public void update() {
 
         if (reverse){

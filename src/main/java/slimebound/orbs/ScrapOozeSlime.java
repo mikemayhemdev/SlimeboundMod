@@ -52,8 +52,8 @@ public class ScrapOozeSlime
     @Override
     public void onEvoke() {
         super.onEvoke();
-        this.scrapVFX.dispose();
-        this.scrapGlowVFX.dispose();
+        this.scrapVFX.finish();
+        this.scrapGlowVFX.finish();
     }
 
     public void activateEffectUnique() {

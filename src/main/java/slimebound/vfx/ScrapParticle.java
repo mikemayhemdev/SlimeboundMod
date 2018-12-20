@@ -28,13 +28,16 @@ public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
 
 
     }
+    public void finish(){
+        this.isDone = true;
+
+    }
 
     public void update() {
 
 
     }
     public void dispose() {
-
 
     }
 
