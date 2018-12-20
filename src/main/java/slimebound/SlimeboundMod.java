@@ -71,6 +71,7 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
     private static final String CHAR_PORTRAIT = "charSelect/portrait.png";
     public static int powersPlayedThisCombat;
     public static boolean slimeDelay;
+    public static boolean scrapping;
     public static SlimeboundCharacter slimeboundCharacter;
     public static boolean slimeTalked = false;
     public static boolean slimeTalkedAcidL = false;
@@ -170,22 +171,21 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
 
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
 
-        if (power.ID == "Strength") {
 
             if (target == AbstractDungeon.player) {
 
                 for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
                     if (o.ID == TorchHeadSlime.ID) {
-                        logger.info("Sending power amount" + power.amount);
-                        ((TorchHeadSlime) o).applyUniqueFocus(power.amount);
+                        logger.info("Sending power amount" + 1);
+                        ((TorchHeadSlime) o).applyUniqueFocus(1);
                     }
                 }
 
 
             }
             ;
-        }
+
     }
 
     public static String printString(String s) {
@@ -203,6 +203,8 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         BaseMod.addRelicToCustomPool(new SlimedTailRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new StudyCardRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SlimedSkullRelic(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new ScrapOozeRelic(), AbstractCardEnum.SLIMEBOUND);
+
     }
 
 
@@ -418,27 +420,28 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         BaseMod.addKeyword(new String[]{"slimed"}, "The next attack deals increased damage, consuming the Slimed effect, and healing you for half the amount consumed. Half of Slimed is removed at end of turn.");
 
         BaseMod.addKeyword(new String[]{"potency"}, "Increases the damage of ALL of your Spawned Slimes.");
-        BaseMod.addKeyword(new String[]{"torch-head"}, "Attacks for 9 each turn, and gains damage when you gain Strength.");
-        BaseMod.addKeyword(new String[]{"bruiser"}, "Attacks for 4 each turn.");
-        BaseMod.addKeyword(new String[]{"cultist"}, "Attacks for 6 each turn, then increases it's damage by 2.");
-        BaseMod.addKeyword(new String[]{"leeching"}, "Attacks for 2 and grants you 2 Block each turn.");
-        BaseMod.addKeyword(new String[]{"poisoning"}, "Attacks for 1 and applies 2 Poison each turn .");
-        BaseMod.addKeyword(new String[]{"sliming"}, "Attacks for 1 and applies 2 Slimed each turn .");
-        BaseMod.addKeyword(new String[]{"plated"}, "Increases Block each turn. Reduced when you take damage.");
+        BaseMod.addKeyword("Torch Head Slime",new String[]{"torch head slime","torch_head_slime"}, "Attacks for 9 each turn, and gains 1 damage when you play a Power.");
+        BaseMod.addKeyword("Bruiser Slime",new String[]{"bruiser slime","bruiser_slime","bruiser slimes","bruiser_slimes"}, "Attacks for 4 each turn.");
+        BaseMod.addKeyword("Cultist Slime",new String[]{"cultist slime","cultist_slime"}, "Attacks for 6 each turn, then increases it's damage by 2.");
+        BaseMod.addKeyword("Leeching Slime",new String[]{"leeching slime","leeching_slime","leeching slimes","leeching_slimes"}, "Attacks for 2 and grants you 2 Block each turn.");
+        BaseMod.addKeyword("Acid Slime",new String[]{"acid slime","acid_slime","acid slimes","acid_slimes"}, "Attacks for 1 and applies 2 Poison each turn.");
+        BaseMod.addKeyword("Licking Slime",new String[]{"licking slime","licking_slime","licking slimes","licking_slimes"}, "Attacks for 1 and applies 2 Slimed each turn.");
+        BaseMod.addKeyword("Plated Armor", new String[]{"plated armor","plated_armor"}, "Increases Block each turn. Reduced when you take damage.");
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grants Block for next turn.");
-        BaseMod.addKeyword(new String[]{"bronze"}, "Attacks for 6  and grants you 6 Block each turn.");
-        BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
+        BaseMod.addKeyword("Bronze Slime",new String[]{"bronze slime","bronze_slime"}, "Attacks for 6  and grants you 6 Block each turn.");
+        //BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
         BaseMod.addKeyword(new String[]{"halved"}, "Your Max HP is cut in half this combat, losing HP if you are currently above half, and preventing healing beyond half.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
-        BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
-        BaseMod.addKeyword(new String[]{"ghostflame"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency.");
-        BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
+        //BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
+        BaseMod.addKeyword("Ghostflame Slime",new String[]{"ghostflame slime","ghostflame_slime"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency.");
+        //BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
         BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type. It costs 1 less.");
-        BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
-        BaseMod.addKeyword(new String[]{"purge"}, "Removed from the game entirely when played (not Exhausted).");
+        //BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
+        //BaseMod.addKeyword(new String[]{"purge"}, "Removed from the game entirely when played (not Exhausted).");
         BaseMod.addKeyword(new String[]{"slow"}, "Receives 10% more damage per card played in a turn.");
         BaseMod.addKeyword(new String[]{"tackle"}, "High-damage Attacks that also deal a small amount of damage to you.");
+        BaseMod.addKeyword("Spire Boss", new String[]{"spire boss","spire_boss"}, "Powerful cards with Ethereal and Exhaust, costing between 0 and 2 energy, inspired by the bosses of the Spire.");
 
 
     }

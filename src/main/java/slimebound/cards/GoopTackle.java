@@ -90,7 +90,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 
     }

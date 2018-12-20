@@ -2,7 +2,9 @@ package slimebound.cards;
 
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
@@ -43,12 +45,12 @@ public class Chomp extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 8;
+        this.baseDamage = this.originalDamage = 4;
         this.baseBlock = this.originalBlock = 2;
-        this.upgradeDamage = 3;
+        this.upgradeDamage = 2;
        // this.exhaust = true;
 
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
 
 
     }
@@ -57,9 +59,13 @@ public class Chomp extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.effectList.add(new BiteEffect(m.hb.cX, m.hb.cY));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY, Color.GREEN),0.2F));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY, Color.GREEN)));
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new TackleDebuffPower(m, p,this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
@@ -80,7 +86,7 @@ public class Chomp extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(upgradeDamage);
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
 
         }

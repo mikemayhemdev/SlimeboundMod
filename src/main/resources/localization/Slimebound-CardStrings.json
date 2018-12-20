@@ -9,13 +9,13 @@
   },
 "Slimebound:SplitBronze": {
     "NAME": "Split: Bronze",
-    "DESCRIPTION": "Split into a Bronze Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bronze Slime twice. NL Exhaust."
+    "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime twice. NL Exhaust."
   },
   "Slimebound:GangUp": {
     "NAME": "Gang Up",
-    "DESCRIPTION": "Split into a Bruiser slime X times. NL Bruiser Slimes deal !M! more damage this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser slime X+1 times. NL Bruiser Slimes deal !M! more damage this combat. NL Exhaust."
+    "DESCRIPTION": "Split into a Bruiser_Slime X times. NL Bruiser_Slimes deal !M! more damage this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime X+1 times. NL Bruiser_Slimes deal !M! more damage this combat. NL Exhaust."
   },
 "Slimebound:LevelUp": {
     "NAME": "Level Up",
@@ -24,34 +24,34 @@
 
   },
 "Slimebound:SplitTorchHead": {
-    "NAME": "Split: Torch-Head",
-    "DESCRIPTION": "Split into a Torch-Head Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Torch-Head Slime twice. NL Exhaust."
+    "NAME": "Split: Torch Head",
+    "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime twice. NL Exhaust."
   },
 "Slimebound:SplitAttack": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Split into a Bruiser Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser Slime. NL Bruiser Slimes deal 1 more damage this combat. NL Exhaust."
+    "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime. NL Bruiser_Slimes deal 1 more damage this combat. NL Exhaust."
   },
 "Slimebound:SplitCultist": {
     "NAME": "Split: Cultist",
-    "DESCRIPTION": "Split into a Cultist Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Cultist Slime twice. NL Exhaust."
+    "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime twice. NL Exhaust."
   },
 "Slimebound:SplitShield": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "Split into a Leeching Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching Slime. NL Leeching Slimes grant 1 more Block this combat. NL Exhaust."
+    "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime. NL Leeching_Slimes grant 1 more Block this combat. NL Exhaust."
   },
 "Slimebound:SplitPoison": {
-    "NAME": "Split: Poisoning",
-    "DESCRIPTION": "Split into a Poisoning Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Poisoning Slime. NL Poisoning Slimes apply 1 more Poison this combat. NL Exhaust."
+    "NAME": "Split: Acid",
+    "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Acid_Slime. NL Acid_Slimes apply 1 more Poison this combat. NL Exhaust."
   },
 "Slimebound:SplitSliming": {
-    "NAME": "Split: Sliming",
-    "DESCRIPTION": "Split into a Sliming Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Sliming Slime. NL Sliming Slimes apply 1 more Slimed this combat. NL Exhaust."
+    "NAME": "Split: Licking",
+    "DESCRIPTION": "Split into a Licking_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Licking_Slime. NL Licking_Slimes apply 1 more Slimed this combat. NL Exhaust."
   },
 "Slimebound:SlimeSacrifice": {
     "NAME": "Protect the Boss",
@@ -128,7 +128,7 @@
   },
 "Slimebound:SpikyOuterGoop": {
     "NAME": "Spiky Outer Goop",
-    "DESCRIPTION": "Gain !M! Thorns and !M! Plated Armor."
+    "DESCRIPTION": "Gain !M! Thorns and !M! Plated_Armor."
   },
 "Slimebound:SolidOuterGoop": {
     "NAME": "Self-Forming Goo",
@@ -188,7 +188,7 @@
   },
 "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage. NL Increase the damage of the next card containing \"Tackle\" by !M!."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Enemies receive !M! more damage from cards containing \"Tackle\" this combat."
   },
 "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
@@ -279,8 +279,8 @@
     "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect twice."
 },
   "Slimebound:FirmFortitude": {
-    "NAME": "Firm Fortitude",
-    "DESCRIPTION": "Prevent the next !M! times you would lose HP on your turn. NL Exhaust."
+    "NAME": "Feel Our Pain",
+    "DESCRIPTION": "The next !M! times you would lose HP on your turn, an enemy takes that much damage instead. NL Exhaust."
   },
 "Slimebound:AccelerateToxins": {
     "NAME": "Accelerate Toxins",
@@ -289,7 +289,7 @@
   },
 "Slimebound:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Add a random powerful Boss card to your hand. NL Lose !M! HP. NL Exhaust."
+    "DESCRIPTION": "Add a random Spire_Boss card to your hand. NL Lose !M! HP. NL Exhaust."
   },
 "Slimebound:WasteNot": {
     "NAME": "Waste Not",
@@ -346,7 +346,7 @@
   },
 "Slimebound:Chomp": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Cards containing containing \"Tackle\" deal !M! additional damage to the enemy this combat."
+    "DESCRIPTION": "Deal !D! damage twice. NL The enemy receives !M! additional damage from cards containing \"Tackle\" this combat."
   },
 "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
@@ -354,7 +354,7 @@
   },
 "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Gain !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Cards containing \"Tackle\" deal !M! more damage this combat."
   },
 "Slimebound:VenomTackle": {
     "NAME": "Venom Tackle",
@@ -375,7 +375,7 @@
   },
 "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this kills a non-minion enemy, raise your Max HP by !M!. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL For each non-minion enemy killed, raise your Max HP by !M!. NL Exhaust."
   },
 "Slimebound:StrayGoop": {
     "NAME": "Stray Goop",
@@ -427,8 +427,8 @@
   },
 "Slimebound:SplitGhostflame": {
     "NAME": "Split: Ghostflame",
-    "DESCRIPTION": "Ethereal. NL Gain Slime Slots until you have 6. NL Split into a Ghostflame Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain Slime Slots until you have 6. NL Split into two Ghostflame Slimes. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain Slime Slots until you have 6. NL Split into a Ghostflame_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain Slime Slots until you have 6. NL Split into two Ghostflame_Slimes. NL Exhaust."
   },
 "Slimebound:PrepareDivider": {
     "NAME": "Prepare: Divide",
@@ -454,7 +454,7 @@
   },
 "Slimebound:DefensiveStance": {
     "NAME": "Defensive Stance",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! Block at the end of each turn. NL Ethereal."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! Block at the end of each turn."
   },
 "Slimebound:FaceSlap": {
     "NAME": "Face Slap",
@@ -527,8 +527,8 @@
   },
 "Slimebound:StudyTheSpire": {
     "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random powerful Boss card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random powerful Upgraded Boss card to your hand at the start of your next !M! turns."
+    "DESCRIPTION": "Add a random Spire_Boss card to your hand at the start of your next !M! turns.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Spire_Boss card to your hand at the start of your next !M! turns."
   },
 "Slimebound:StudyAwakened": {
     "NAME": "Study Awakened",

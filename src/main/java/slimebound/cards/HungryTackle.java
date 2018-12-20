@@ -73,7 +73,7 @@ public class HungryTackle extends AbstractSlimeboundCard {
       //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
     }
 

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
+import slimebound.orbs.ScrapOozeSlime;
 import slimebound.orbs.SpawnedSlime;
 
 
@@ -51,7 +52,7 @@ public class SlimeSacrificePower extends AbstractPower {
                 if (!AbstractDungeon.player.orbs.isEmpty()) {
                     for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                        if (o instanceof SpawnedSlime) {
+                        if (o instanceof SpawnedSlime ) {
 
                             SpawnedSlime s = (SpawnedSlime) o;
                             s.noEvokeBonus = true;

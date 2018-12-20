@@ -74,7 +74,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
         if (upgraded)
             AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
 
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
     }
 

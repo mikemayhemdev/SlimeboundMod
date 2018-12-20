@@ -1,7 +1,10 @@
 package slimebound.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -37,7 +40,6 @@ public class FirmFortitudePower extends AbstractPower {
         this.type = POWER_TYPE;
 
         this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         updateDescription();
 
@@ -56,10 +58,14 @@ public class FirmFortitudePower extends AbstractPower {
     }
 
     public int onLoseHp(int damageAmount) {
+
+
         if (damageAmount > 0 && this.isActive) {
             flash();
+            AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
             AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+
             return 0;
         }
 

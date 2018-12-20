@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.ScrapOozeSlime;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
@@ -63,7 +64,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o instanceof SpawnedSlime) {
+                if (o instanceof SpawnedSlime ) {
 
 
                     numEaten = numEaten + 1;

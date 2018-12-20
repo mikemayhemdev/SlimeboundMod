@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.*;
 import slimebound.vfx.FakeFlashAtkImgEffect;
@@ -249,11 +250,15 @@ public void spawnVFX(){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
 
             }
+            if (this instanceof ScrapOozeSlime){
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ScrapOozeSlime(), false, false));
 
-            AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
-
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+            }
         }
         triggerEvokeAnimation();
+
 
     }
 

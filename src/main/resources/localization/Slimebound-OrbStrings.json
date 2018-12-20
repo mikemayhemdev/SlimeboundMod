@@ -14,11 +14,18 @@
       " damage at the start of your turn."
     ]
   },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn. Instantly respawns if absorbed instead of restoring HP."
+    ]
+  },
   "Slimebound:TorchHeadSlime": {
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn.  Torch Heads gain damage when you gain Strength."
+      " damage at the start of your turn. Gains 1 damage whenever you play a Power."
     ]
   },
   "Slimebound:CultistSlime": {
@@ -37,7 +44,7 @@
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "Poisoning Slime",
+    "NAME": "Acid Slime",
     "DESCRIPTION": [
       "Deals ",
       " damage and applies ",
@@ -45,7 +52,7 @@
     ]
   },
   "Slimebound:SlimingSlime": {
-    "NAME": "Sliming Slime",
+    "NAME": "Licking Slime",
     "DESCRIPTION": [
       "Deals ",
       " damage and applies ",

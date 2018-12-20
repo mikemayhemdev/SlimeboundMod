@@ -50,8 +50,8 @@ public class FlameTackle extends AbstractSlimeboundCard {
         this.selfDamage = 4;
         this.upgradeDamage = 3;
 
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 3;
+        //this.exhaust = true;
 
 
     }
@@ -64,8 +64,8 @@ public class FlameTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleBuffPower(p,p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 
     }

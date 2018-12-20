@@ -15,7 +15,7 @@ public class AggressiveSlimeRelic extends CustomRelic {
 
     public AggressiveSlimeRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.COMMON, LandingSound.FLAT);
+                RelicTier.SPECIAL, LandingSound.FLAT);
     }
 
     @Override

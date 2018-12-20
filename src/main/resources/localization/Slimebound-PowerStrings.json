@@ -107,7 +107,7 @@
 		]
 	},
 	"Slimebound:TackleDebuffPower": {
-		"NAME": "Chomped",
+		"NAME": "Battered",
 		"DESCRIPTIONS": [
 			"Receives ",
 			" more damage from cards containing Tackle."
@@ -224,9 +224,9 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "Follow Through",
+		"NAME": "Flame Tackle",
 		"DESCRIPTIONS": [
-			"Your next card containing Tackle deals ",
+			"Cards containing Tackle deal ",
 			" more damage."
 		]
 	},
@@ -249,9 +249,9 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "Firm Fortitude",
 		"DESCRIPTIONS": [
-			"Prevent the next time you would lose HP on your turn.",
-			"Prevent the next ",
-			" times you would lose HP on your turn."
+			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+			"The next ",
+			" times you would lose HP on your turn, an enemy takes that much damage instead."
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {

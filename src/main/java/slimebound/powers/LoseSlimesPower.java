@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.ScrapOozeSlime;
 import slimebound.orbs.SpawnedSlime;
 
 
@@ -95,7 +96,7 @@ public class LoseSlimesPower extends AbstractPower {
                 if (!AbstractDungeon.player.orbs.isEmpty()) {
                     for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                        if (o instanceof SpawnedSlime) {
+                        if (o instanceof SpawnedSlime ) {
 
 
                             AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
