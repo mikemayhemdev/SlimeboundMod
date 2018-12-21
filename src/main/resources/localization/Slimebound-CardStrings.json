@@ -55,7 +55,7 @@
   },
 "Slimebound:SlimeSacrifice": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would damaged by an enemy ttack, losing your oldest Slime instead. NL Exhaust.",
+    "DESCRIPTION": "Prevent the next time you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust."
   },
   "Slimebound:SamplingLick": {
@@ -214,7 +214,7 @@
 "Slimebound:HauntingLick": {
     "NAME": "Haunting Lick",
     "DESCRIPTION": "Apply 1 Vulnerable and !Slimebound:Slimed! Slimed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable and !M! Slimed. NL Draw a card. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable and !Slimebound:Slimed! Slimed. NL Draw a card. NL Exhaust."
   },
 "Slimebound:PoisonLick": {
     "NAME": "Poison Lick",
@@ -232,9 +232,9 @@
     "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with Slimed. NL Apply !M! Slimed."
   },
 "Slimebound:QuickLick": {
-    "NAME": "Quick Lick",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Draw 2 cards. NL Exhaust."
+    "NAME": "Rejuvenating Lick",
+    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Heal !M! HP. NL Draw a card. NL Exhaust."
   },
 "Slimebound:Gluttony": {
     "NAME": "Gluttony",

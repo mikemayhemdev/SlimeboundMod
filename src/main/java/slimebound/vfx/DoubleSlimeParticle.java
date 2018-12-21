@@ -76,6 +76,10 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
 
 
     }
+    public void finish(){
+        this.isDone = true;
+
+    }
 
 
     public void render(SpriteBatch sb) {

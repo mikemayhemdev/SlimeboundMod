@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,6 +32,7 @@ public class DuplicatedFormPower extends AbstractPower {
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
     private int cardsDoubledThisTurn = 0;
+    private DoubleSlimeParticle VFX;
 
 
     public DuplicatedFormPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -87,7 +89,8 @@ public class DuplicatedFormPower extends AbstractPower {
         }
 
         AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
+        VFX = new DoubleSlimeParticle(AbstractDungeon.player);
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(VFX));
         if (p instanceof SlimeboundCharacter) {
             SlimeboundCharacter hero = (SlimeboundCharacter) p;
             hero.setRenderscale(1.5F);
@@ -129,6 +132,13 @@ public class DuplicatedFormPower extends AbstractPower {
             AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
         }
     }
+    public void onDeath() {
+        VFX.finish();
+    }
+
+    public void onVictory() {
+        VFX.finish();
+        }
 }
 
 
