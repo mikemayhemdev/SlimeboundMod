@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import slimebound.SlimeboundMod;
+import slimebound.vfx.GreenBeamEffect;
 
 
 public class HyperBeamSlimedbound extends AbstractSlimeboundCard {
@@ -51,7 +52,7 @@ public class HyperBeamSlimedbound extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.hb.cX, p.hb.cY, false), 0.1F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new GreenBeamEffect(p.hb.cX, p.hb.cY, false), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -40,6 +41,10 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
+        if (p instanceof SlimeboundCharacter){
+            ((SlimeboundCharacter)p).puddleForm();
+        }
+
     }
 
     public AbstractCard makeCopy() {

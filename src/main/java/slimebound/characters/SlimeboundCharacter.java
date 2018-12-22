@@ -9,9 +9,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -19,18 +17,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.LizardTail;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.screens.DeathScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.BlockedWordEffect;
-import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
-import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import slimebound.cards.CorrosiveSpit;
 import slimebound.cards.Defend_Slimebound;
 import slimebound.cards.Split;
@@ -38,7 +28,6 @@ import slimebound.cards.Strike_Slimebound;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.relics.AbsorbEndCombat;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -56,10 +45,17 @@ public class SlimeboundCharacter extends CustomPlayer {
     public float xStartOffset = (float) Settings.WIDTH * 0.23F;
     private static float xSpaceBetweenSlots = 90 * Settings.scale;
     private static float xSpaceBottomAlternatingOffset = 0;
+    public boolean puddleForm;
 
     private static float yStartOffset = AbstractDungeon.floorY + (100 * Settings.scale);
 
     private static float ySpaceAlternatingOffset = -60 * Settings.scale;
+
+    private String atlasURL = "SlimeboundImages/char/skeleton.atlas";
+    private String jsonURL = "SlimeboundImages/char/skeleton.json";
+    private String jsonURLPuddle = "SlimeboundImages/char/skeletonPuddle.json";
+
+    private String currentJson = jsonURL;
 
 
     public float[] orbPositionsX = {0,0,0,0,0,0,0,0,0,0};
@@ -69,11 +65,34 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public static final String[] orbTextures = {"SlimeboundImages/char/orb/layer1.png", "SlimeboundImages/char/orb/layer2.png", "SlimeboundImages/char/orb/layer3.png", "SlimeboundImages/char/orb/layer4.png", "SlimeboundImages/char/orb/layer5.png", "SlimeboundImages/char/orb/layer6.png", "SlimeboundImages/char/orb/layer1d.png", "SlimeboundImages/char/orb/layer2d.png", "SlimeboundImages/char/orb/layer3d.png", "SlimeboundImages/char/orb/layer4d.png", "SlimeboundImages/char/orb/layer5d.png"};
 
+    public void puddleForm(){
+        this.currentJson = jsonURLPuddle;
+        reloadAnimation();
+        this.puddleForm = true;
+
+    }
+
+    public void removePuddleForm(){
+        if (this.puddleForm) {
+            this.currentJson = jsonURL;
+            reloadAnimation();
+            this.puddleForm = false;
+        }
+    }
+
     public void setRenderscale(float renderscale) {
         this.renderscale = renderscale;
         reloadAnimation();
 
 
+    }
+
+    @Override
+    public void onVictory() {
+        super.onVictory();
+        if (this.puddleForm){
+            removePuddleForm();
+        }
     }
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
@@ -110,8 +129,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
 
     public void reloadAnimation() {
-
-        this.loadAnimation("SlimeboundImages/char/skeleton.atlas", "SlimeboundImages/char/skeleton.json", renderscale);
+        this.loadAnimation(atlasURL, this.currentJson, renderscale);
         TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
@@ -238,7 +256,13 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     @Override
     public void applyStartOfTurnCards() {
+        //Failsafe, should be removed through victory or intangible being removed, but just in case of weird buff nullify effects I don't know about...
         super.applyStartOfTurnCards();
+        if (this.puddleForm && !this.hasPower(IntangiblePlayerPower.POWER_ID)){
+
+                removePuddleForm();
+
+        }
     }
 
     @Override
