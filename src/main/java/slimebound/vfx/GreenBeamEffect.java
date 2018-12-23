@@ -61,7 +61,7 @@ public class GreenBeamEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);
-        sb.setColor(new Color(0.5F, 0.7F, 1.0F, this.color.a));
+        sb.setColor(new Color(0.4F, .85F, .4F, this.color.a));
         if (!this.flipHorizontal) {
             sb.draw(img, this.x, this.y - (float)(img.packedHeight / 2), 0.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * 2.0F + MathUtils.random(-0.05F, 0.05F), this.scale * 1.5F + MathUtils.random(-0.1F, 0.1F), MathUtils.random(-4.0F, 4.0F));
             sb.draw(img, this.x, this.y - (float)(img.packedHeight / 2), 0.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * 2.0F + MathUtils.random(-0.05F, 0.05F), this.scale * 1.5F + MathUtils.random(-0.1F, 0.1F), MathUtils.random(-4.0F, 4.0F));

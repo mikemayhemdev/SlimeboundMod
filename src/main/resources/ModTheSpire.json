@@ -3,7 +3,7 @@
   "name": "Slimebound Mod",
   "author_list": ["Michael Mayhem"],
   "description": "Adds a new playable enemy character: The Slimebound.\n NL NL If you like the mod and want to support me, check out my multiplayer party game, Sumo, in Early Access on Steam! - https://store.steampowered.com/app/858960/Sumo/ \n\n NL NL The Slimebound adds over 100 cards (not all in its card pool), 8 new character-specific Relics, 4 new Potions, and has few secrets to discover.  The character attempts to stay within the bounds of vanilla STS character design while still pushing new mechanics.\n\n NL NL Extra thanks to the creators of Mod the Spire and the Discord modding community. \n NL NL Credit: kiooeht - Nothing would be possible without MTS and kiooeht supporting it.  And thanks for the hat.    JohnnyDevo - Mystic mod reference and help.   Reina - Lots of helpful tidbits and advice.    JohnnyBazooka89 - Forcing me to keep cleaner code.    Skyson - Rapid aggressive testing.    HypoSoc - Glutton mod for early mod reference and a couple art hijackings from it.    Tempus - Disciple code ref and power art",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "sts_version": "12-06-2018",
   "mts_version": "3.6.3",
   "dependencies": ["basemod", "stslib"],

@@ -107,8 +107,7 @@ public class SlimeAutoAttack extends AbstractGameAction {
 
             }
            if (this.beamVFX){
-               AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-               AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
+               CardCrawlGame.sound.playA("ATTACK_MAGIC_BEAM_SHORT", -.2f);
                AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX, slime.cY, mo.hb.cX, mo.hb.cY)));
            }
 
