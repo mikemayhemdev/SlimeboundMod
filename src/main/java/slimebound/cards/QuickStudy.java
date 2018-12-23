@@ -61,7 +61,14 @@ public class QuickStudy extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
+        if (upgraded){
+            do {
+                c = CardLibrary.getRandomColorSpecificCard(CardColor.COLORLESS, AbstractDungeon.cardRandomRng).makeCopy();
+            } while (!c.hasTag(SlimeboundMod.STUDY));
 
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+
+        }
 
 
     }
@@ -82,7 +89,10 @@ public class QuickStudy extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(-2);
+            //upgradeMagicNumber(-2);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

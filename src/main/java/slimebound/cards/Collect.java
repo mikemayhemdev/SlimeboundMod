@@ -26,7 +26,7 @@ public class Collect extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -35,11 +35,11 @@ public class Collect extends AbstractSlimeboundCard {
 
         tags.add(SlimeboundMod.STUDY_COLLECTOR);
         tags.add(SlimeboundMod.STUDY);
-        this.baseBlock = 9;
+        this.baseBlock = 5;
         this.magicNumber = this.baseMagicNumber = 1;
 
         this.exhaust = true;
-        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -55,8 +55,8 @@ public class Collect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
-            upgradeMagicNumber(1);
+            upgradeBlock(3);
+            //upgradeMagicNumber(1);
         }
     }
 

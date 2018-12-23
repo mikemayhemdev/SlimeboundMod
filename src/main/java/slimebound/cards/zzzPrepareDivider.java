@@ -42,7 +42,7 @@ public class zzzPrepareDivider extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
-        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

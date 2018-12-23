@@ -32,16 +32,16 @@ public class LastStand extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     private static int upgradedamount = 1;
 
     public LastStand() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.isEthereal = true;
+        this.magicNumber = this.baseMagicNumber = 1;
+
         this.exhaust = true;
-        this.poison = this.magicNumber +4;
+        this.poison = this.magicNumber +2;
 
         tags.add(SlimeboundMod.STUDY_CHAMP);
         tags.add(SlimeboundMod.STUDY);
@@ -65,7 +65,7 @@ public class LastStand extends AbstractSlimeboundCard {
 
 
 
-        this.poison = this.magicNumber +4;
+        if (upgraded) this.poison = this.magicNumber +3; else {this.poison = this.magicNumber +2;}
         AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.15F));
@@ -92,7 +92,7 @@ public class LastStand extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.poison = 4;
 
 
         }

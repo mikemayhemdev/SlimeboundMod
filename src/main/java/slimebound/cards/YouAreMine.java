@@ -29,7 +29,7 @@ public class YouAreMine extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -40,10 +40,10 @@ public class YouAreMine extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_COLLECTOR);
         tags.add(SlimeboundMod.STUDY);
 
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
 
         this.exhaust = true;
-        this.isEthereal = true;
+
 
     }
 

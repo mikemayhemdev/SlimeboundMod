@@ -29,7 +29,7 @@ public class Flail extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -40,12 +40,12 @@ public class Flail extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_AUTOMATON);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseDamage = 5;
+        this.baseDamage = 3;
         this.isMultiDamage = true;
 
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
-        this.isEthereal = true;
+
 
 
     }
@@ -82,7 +82,7 @@ public class Flail extends AbstractSlimeboundCard {
 
             upgradeName();
             upgradeDamage(2);
-            upgradeMagicNumber(1);
+            //upgradeMagicNumber(1);
 
 
         }

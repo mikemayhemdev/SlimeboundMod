@@ -28,7 +28,7 @@ public class HeadSlam extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -39,10 +39,10 @@ public class HeadSlam extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_TIMEEATER);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseDamage = 12;
+        this.baseDamage = 6;
 
         this.exhaust = true;
-        this.isEthereal = true;
+
 
     }
 

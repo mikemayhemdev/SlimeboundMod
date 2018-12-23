@@ -34,7 +34,7 @@ public class SplitGhostflame extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY);
 
         this.exhaust = true;
-        this.isEthereal = true;
+
         this.magicNumber = this.baseMagicNumber = 6;
 
     }

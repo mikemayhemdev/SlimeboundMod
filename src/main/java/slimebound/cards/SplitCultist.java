@@ -34,7 +34,7 @@ public class SplitCultist extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY);
 
         this.exhaust = true;
-        this.isEthereal = true;
+
 
     }
 

@@ -26,7 +26,7 @@ public class DonusPower extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -38,12 +38,12 @@ public class DonusPower extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 9;
 
         this.exhaust = true;
-        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
+      if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
         c.modifyCostForTurn(this.magicNumber * -1);
@@ -59,7 +59,9 @@ public class DonusPower extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

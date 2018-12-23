@@ -33,6 +33,7 @@ public class RandomStudyCardAction extends AbstractGameAction {
         if (upgradeCard) {
             c.upgrade();
         }
+        c.modifyCostForCombat(-9);
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
         this.isDone = true;

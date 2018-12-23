@@ -108,7 +108,7 @@ public class SlimeAutoAttack extends AbstractGameAction {
             }
            if (this.beamVFX){
                CardCrawlGame.sound.playA("ATTACK_MAGIC_BEAM_SHORT", -.2f);
-               AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX, slime.cY, mo.hb.cX, mo.hb.cY)));
+               AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(slime.cX + 3 * Settings.scale, slime.cY + 22 * Settings.scale, mo.hb.cX, mo.hb.cY)));
            }
 
             //logger.info("Targetng " + mo.name);

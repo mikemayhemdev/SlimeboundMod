@@ -25,7 +25,7 @@ public class DefensiveStance extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -34,10 +34,10 @@ public class DefensiveStance extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_CHAMP);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseBlock = 8;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.baseBlock = 4;
+        this.magicNumber = this.baseMagicNumber = 2;
 
-        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -52,8 +52,8 @@ public class DefensiveStance extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
-            upgradeMagicNumber(1);
+            upgradeBlock(3);
+           // upgradeMagicNumber(1);
         }
     }
 

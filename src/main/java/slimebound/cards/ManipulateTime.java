@@ -34,7 +34,7 @@ public class ManipulateTime extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY);
         this.exhaust = true;
         //this.canPlay = true;
-        this.isEthereal = true;
+
     }
 
 

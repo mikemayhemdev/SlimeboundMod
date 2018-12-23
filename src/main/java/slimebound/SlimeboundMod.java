@@ -441,7 +441,7 @@ public class SlimeboundMod implements PostDungeonInitializeSubscriber, PostBattl
         //BaseMod.addKeyword(new String[]{"purge"}, "Removed from the game entirely when played (not Exhausted).");
         BaseMod.addKeyword(new String[]{"slow"}, "Receives 10% more damage per card played in a turn.");
         BaseMod.addKeyword(new String[]{"tackle"}, "High-damage Attacks that also deal a small amount of damage to you.");
-        BaseMod.addKeyword("Spire Boss", new String[]{"spire boss","spire_boss"}, "Powerful cards with Ethereal and Exhaust, costing between 0 and 2 energy, inspired by the bosses of the Spire.");
+        BaseMod.addKeyword("Spire Boss", new String[]{"spire boss","spire_boss"}, "Powerful 0-cost cards, inspired by the bosses of the Spire.");
 
 
     }

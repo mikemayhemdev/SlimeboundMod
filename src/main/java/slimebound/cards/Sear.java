@@ -29,7 +29,7 @@ public class Sear extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -40,11 +40,11 @@ public class Sear extends AbstractSlimeboundCard {
 
         tags.add(SlimeboundMod.STUDY_HEXAGHOST);
         tags.add(SlimeboundMod.STUDY);
-        this.baseDamage = 11;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.baseDamage = 6;
+        this.magicNumber = this.baseMagicNumber = 2;
 
         this.exhaust = true;
-        this.isEthereal = true;
+
 
     }
 
@@ -71,7 +71,7 @@ public class Sear extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+            //upgradeMagicNumber(1);
             upgradeDamage(3);
 
         }

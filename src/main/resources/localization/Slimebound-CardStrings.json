@@ -289,7 +289,8 @@
   },
 "Slimebound:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Add a random Spire_Boss card to your hand. NL Lose !M! HP. NL Exhaust."
+  "DESCRIPTION": "Add a random Spire_Boss card to your hand. NL Lose !M! HP. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Add 2 random Spire_Boss cards to your hand. NL Lose !M! HP. NL Exhaust."
   },
 "Slimebound:WasteNot": {
     "NAME": "Waste Not",
@@ -406,15 +407,15 @@
   },
 "Slimebound:ChargeUp": {
     "NAME": "Charge Up",
-    "DESCRIPTION": "Ethereal. NL On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
+    "DESCRIPTION": "On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
   },
 "Slimebound:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 4 times. NL Exhaust."
   },
 "Slimebound:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
+    "DESCRIPTION": "Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
   },
 "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
@@ -423,12 +424,12 @@
   },
 "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Skip your next turn. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Skip your next turn. NL Exhaust."
   },
 "Slimebound:SplitGhostflame": {
     "NAME": "Split: Ghostflame",
-    "DESCRIPTION": "Ethereal. NL Gain Slime Slots until you have 6. NL Split into a Ghostflame_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain Slime Slots until you have 6. NL Split into two Ghostflame_Slimes. NL Exhaust."
+    "DESCRIPTION": "Gain Slime Slots until you have 6. NL Split into a Ghostflame_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain Slime Slots until you have 6. NL Split into two Ghostflame_Slimes. NL Exhaust."
   },
 "Slimebound:PrepareDivider": {
     "NAME": "Prepare: Divide",
@@ -436,8 +437,8 @@
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
   },
 "Slimebound:Divider": {
-    "NAME": "Divide",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust."
+    "NAME": "Hexaburn",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
 "Slimebound:PrepareBeam": {
     "NAME": "Prepare: Beam",
@@ -445,34 +446,34 @@
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust."
   },
 "Slimebound:HyperBeamSlimedbound": {
-    "NAME": "Hyper Beam",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL Exhaust."
+    "NAME": "Slime Beam",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust."
   },
 "Slimebound:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
   },
 "Slimebound:DefensiveStance": {
     "NAME": "Defensive Stance",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! Block at the end of each turn."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Block at the end of each turn."
   },
 "Slimebound:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Ethereal. NL Remove all of the enemy's Block. NL Deal !D! damage. Apply !M! Vulnerable. NL Exhaust."
+    "DESCRIPTION": "Remove all of the enemy's Block. NL Deal !D! damage. Apply !M! Vulnerable. NL Exhaust."
   },
 "Slimebound:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Ethereal. NL Remove all Debuffs. NL Gain !M! Strength, or !Slimebound:SlimePoison! Strength if you are below half HP. NL Exhaust.",
+    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength, or !Slimebound:SlimePoison! Strength if you are below half HP. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ] },
 "Slimebound:Collect": {
     "NAME": "Collect",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and 1 Potency. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Strength and 1 Potency. NL Gain !B! Block. NL Exhaust."
   },
 "Slimebound:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Ethereal. NL Apply !M! Weak and Vulnerable to ALL enemies and remove all of their Block. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies and remove all of their Block. NL Exhaust."
   },
 "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
@@ -481,44 +482,47 @@
   },
 "Slimebound:CaCaw": {
     "NAME": "CA-CAW!",
-    "DESCRIPTION": "Gain !M! Strength each turn. NL Ethereal."
+    "DESCRIPTION": "Gain !M! Strength at the start of each turn..",
+  "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Strength at the start of each turn.."
   },
 "Slimebound:DarkVoid": {
     "NAME": "Dark Void",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
   },
 "Slimebound:TimeRipple": {
     "NAME": "Time Ripple",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Apply Slow to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Apply Slow to ALL enemies. NL Exhaust."
   },
 "Slimebound:HeadSlam": {
     "NAME": "Head Slam",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. Stun the enemy if they are not a Boss. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Stun the enemy if they are not a Boss. NL Exhaust."
   },
 "Slimebound:ManipulateTime": {
     "NAME": "Manipulate Time",
-    "DESCRIPTION": "Ethereal. NL Trigger all effects that happen at the start of your turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Trigger all effects that happen at the start of your turn, then trigger them again. NL Exhaust.",
+    "DESCRIPTION": "Trigger all effects that happen at the start of your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Trigger all effects that happen at the start of your turn, then trigger them again. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Too... Late..."
     ]
   },
 "Slimebound:DonusPower": {
     "NAME": "Donu's Power",
-    "DESCRIPTION": "Ethereal. NL Gain 1 Strength and 1 Artifact. Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
-  },
+    "DESCRIPTION": "Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
+},
 "Slimebound:DecasProtection": {
     "NAME": "Deca's Protection",
-    "DESCRIPTION": "Ethereal. NL Gain 1 Dexterity and 1 Artifact. Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
   },
 "Slimebound:PolyBeam": {
     "NAME": "Poly Beam",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
   "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
 "Slimebound:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage, plus an additional !M! damage every turn this combat. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage, plus an additional !M! damage every turn this combat. NL Exhaust."
   },
 "Slimebound:StudyAutomaton": {
     "NAME": "Study Automaton",

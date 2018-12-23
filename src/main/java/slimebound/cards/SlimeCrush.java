@@ -44,7 +44,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
 
         this.baseDamage = 40;
         this.exhaust = true;
-        this.isEthereal = true;
+
 
 
     }

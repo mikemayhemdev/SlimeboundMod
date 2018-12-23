@@ -27,7 +27,7 @@ public class ChargeUp extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -36,10 +36,10 @@ public class ChargeUp extends AbstractSlimeboundCard {
 
         tags.add(SlimeboundMod.STUDY_GUARDIAN);
         tags.add(SlimeboundMod.STUDY);
-        this.baseBlock = 10;
+        this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
-        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -57,7 +57,7 @@ public class ChargeUp extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(3);
-            upgradeMagicNumber(1);
+           // upgradeMagicNumber(1);
         }
     }
 

@@ -27,7 +27,7 @@ public class HyperBeamSlimedbound extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -38,11 +38,11 @@ public class HyperBeamSlimedbound extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_AUTOMATON);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseDamage = 24;
+        this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 1;
         this.isMultiDamage = true;
         this.exhaust = true;
-        this.isEthereal = true;
+
 
 
     }
@@ -72,7 +72,7 @@ public class HyperBeamSlimedbound extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(8);
+            upgradeDamage(3);
 
 
         }

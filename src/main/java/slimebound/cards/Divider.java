@@ -26,7 +26,7 @@ public class Divider extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 0;
 
 
     public Divider() {
@@ -34,10 +34,10 @@ public class Divider extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = 3;
+        this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 6;
         this.exhaust = true;
-        this.isEthereal = true;
+
 
 
     }

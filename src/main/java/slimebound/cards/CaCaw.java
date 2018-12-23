@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import slimebound.SlimeboundMod;
 import slimebound.powers.SlimeRitualPower;
@@ -28,7 +29,7 @@ public class CaCaw extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -39,11 +40,10 @@ public class CaCaw extends AbstractSlimeboundCard {
 
 
 
-        this.baseBlock = 15;
         this.magicNumber = this.baseMagicNumber = 1;
 
 
-        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,6 +51,7 @@ public class CaCaw extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "Caw... Caw...", true));
 
+        if (upgraded)         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SlimeRitualPower(p, this.magicNumber), this.magicNumber));
     }
@@ -62,7 +63,10 @@ public class CaCaw extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            //upgradeMagicNumber(1);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

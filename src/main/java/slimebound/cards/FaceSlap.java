@@ -27,7 +27,7 @@ public class FaceSlap extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -38,11 +38,11 @@ public class FaceSlap extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_CHAMP);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseDamage = 14;
+        this.baseDamage = 7;
         this.magicNumber = this.baseMagicNumber = 2;
 
         this.exhaust = true;
-        this.isEthereal = true;
+
 
     }
 
@@ -68,7 +68,7 @@ public class FaceSlap extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
+           // upgradeMagicNumber(1);
             upgradeDamage(3);
 
         }

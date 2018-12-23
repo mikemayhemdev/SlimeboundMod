@@ -26,7 +26,7 @@ public class GuardianWhirl extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -37,10 +37,10 @@ public class GuardianWhirl extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_GUARDIAN);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseDamage = 3;
+        this.baseDamage = 1;
         this.isMultiDamage = true;
         this.exhaust = true;
-        this.isEthereal = true;
+
 
 
     }
