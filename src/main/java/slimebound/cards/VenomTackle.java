@@ -30,7 +30,7 @@ public class VenomTackle extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static int baseSelfDamage;
     public static int originalDamage;
     public static int originalBlock;
@@ -43,11 +43,11 @@ public class VenomTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
 
-        this.baseDamage = this.originalDamage = 9;
-        this.selfDamage = 4;
+        this.baseDamage = this.originalDamage = 7;
+        this.selfDamage = 3;
         this.upgradeDamage = 2;
 
-        this.magicNumber = this.baseMagicNumber = 6;
+        this.magicNumber = this.baseMagicNumber = 4;
 
 
     }
