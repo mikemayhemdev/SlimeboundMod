@@ -144,18 +144,17 @@
 		]
 	},
 	"Slimebound:DuplicatedFormNoHealPower": {
-		"NAME": "Permanently Halved",
+		"NAME": "Halved",
 		"DESCRIPTIONS": [
-			"You cannot heal beyond 50% of your Maximum HP."
+			"Your Max HP has been reduced by ",
+			" this combat."
 		]
 	},
 	"Slimebound:DuplicatedFormEnergyPower": {
 		"NAME": "Tag-Team",
 		"DESCRIPTIONS": [
 			"Gain ",
-			" [E] and draw ",
-			" card each turn.",
-			" cards each turn."
+			" [E] each turn."
 		]
 	},
 	"Slimebound:GluttonyPower": {

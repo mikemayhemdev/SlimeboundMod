@@ -52,17 +52,15 @@ public class DuplicatedFormEnergyPower extends AbstractPower {
     public void updateDescription() {
 
 
-        if (this.amount <= 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3];
-        }
+
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+
 
 
     }
 
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.amount));
+        //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.amount));
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
     }
 

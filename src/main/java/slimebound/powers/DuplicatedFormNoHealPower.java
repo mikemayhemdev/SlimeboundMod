@@ -29,7 +29,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
-    private int cardsDoubledThisTurn = 0;
+    private int maxHpTempLoss = 0;
 
 
     public DuplicatedFormNoHealPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -61,12 +61,12 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     public void updateDescription() {
 
 
-        this.description = (DESCRIPTIONS[0]);
+        this.description = (DESCRIPTIONS[0] + this.maxHpTempLoss + DESCRIPTIONS[1]);
 
 
     }
 
-
+/*
     public int onHeal(int healAmount) {
         if ((AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)) {
             flash();
@@ -86,17 +86,43 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
         }
         return healAmount;
     }
+    */
 
     public void onInitialApplication() {
         AbstractPlayer p = AbstractDungeon.player;
 
-        if (p.currentHealth > (p.maxHealth/2)){
-            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,AbstractDungeon.player,p.currentHealth-(p.maxHealth/2)));
+        //if (p.currentHealth > (p.maxHealth/2)){
+        //  AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,AbstractDungeon.player,p.currentHealth-(p.maxHealth/2)));
+        this.maxHpTempLoss += p.maxHealth / 2;
+        AbstractDungeon.player.decreaseMaxHealth(p.maxHealth / 2);
+        updateDescription();
 
 
-        }
     }
 
+    public void stackPower(int stackAmount) {
+        AbstractPlayer p = AbstractDungeon.player;
+
+        this.maxHpTempLoss += p.maxHealth / 2;
+        AbstractDungeon.player.decreaseMaxHealth(p.maxHealth / 2);
+        updateDescription();
+    }
+
+    public void onRemove() {
+        restoreMaxHP();
+    }
+
+    public void restoreMaxHP(){
+
+
+        AbstractDungeon.player.increaseMaxHp(this.maxHpTempLoss, false);
+
+        this.maxHpTempLoss =0;
+    }
+
+    public void onVictory(){
+        restoreMaxHP();
+    }
 }
 
 

@@ -34,17 +34,19 @@ public class AbsorbEndCombat extends CustomRelic {
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractPlayer p = AbstractDungeon.player;
         int slimeCount = 0;
-        if (p.orbs.get(0) != null) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+        if (p.orbs.size() > 0) {
+            if (p.orbs.get(0) != null) {
+                for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o instanceof SpawnedSlime) {
-                    slimeCount++;
+                    if (o instanceof SpawnedSlime) {
+                        slimeCount++;
+                    }
+
+
                 }
-
+                p.heal(slimeCount * 3);
 
             }
-            p.heal(slimeCount * 3);
-
         }
     }
 
