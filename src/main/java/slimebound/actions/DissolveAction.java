@@ -12,17 +12,21 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import slimebound.SlimeboundMod;
 import slimebound.powers.PotencyPower;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Map;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 
@@ -112,40 +116,33 @@ public class DissolveAction extends AbstractGameAction {
     }
 
     public void dissolveEffect(AbstractCard c2) {
-        ArrayList<AbstractCard> list = new ArrayList();
-        Iterator var1 = srcCommonCardPool.group.iterator();
 
-        AbstractCard c3;
         if (c2.cost < 0) c2.cost =0;
+        if (c2.cost + this.extraCards == 0) {
+            return;
+        }
+
+        ArrayList<String> tmp = new ArrayList();
+        Iterator var3 = CardLibrary.cards.entrySet().iterator();
+
+        while(var3.hasNext()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+            if (c.getValue().cost == 0 && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL && c.getValue().rarity != AbstractCard.CardRarity.CURSE && c.getValue().color == AbstractDungeon.player.getCardColor()) {
+                tmp.add(c.getKey());
+            }
+        }
+
+
 
 
         for (int i = 0; i < (c2.cost + this.extraCards); i++) {
-            while(var1.hasNext()) {
-                c3 = (AbstractCard)var1.next();
-                if (c3.cost==0) {
-                    list.add(c3);
-                }
+            AbstractCard cZero;
+            if (tmp.size() > 0){
+             cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+            } else {
+                cZero = new Madness();
             }
-
-            var1 = srcUncommonCardPool.group.iterator();
-
-            while(var1.hasNext()) {
-                c3 = (AbstractCard)var1.next();
-                if (c3.cost==0) {
-                    list.add(c3);
-                }
-            }
-
-            var1 = srcRareCardPool.group.iterator();
-
-            while(var1.hasNext()) {
-                c3 = (AbstractCard)var1.next();
-                if (c3.cost==0) {
-                    list.add(c3);
-                }
-            }
-
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(cardRandomRng.random(list.size() - 1))));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cZero));
 
         }
         /*

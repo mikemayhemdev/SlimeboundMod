@@ -11,6 +11,9 @@ import slimebound.cards.Collect;
 import slimebound.cards.SplitTorchHead;
 import slimebound.cards.YouAreMine;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
 
 
@@ -26,19 +29,23 @@ public class RandomCollectorCardAction extends AbstractGameAction {
 
     public void update() {
 
-        AbstractCard c;
-        do {
-            c = CardLibrary.getRandomColorSpecificCard(AbstractCard.CardColor.COLORLESS, AbstractDungeon.cardRandomRng).makeCopy();
-        } while (!c.hasTag(SlimeboundMod.STUDY_COLLECTOR));
+        ArrayList<String> tmp = new ArrayList();
+        Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-
-
-
-        if (upgradeCard) {
-            c.upgrade();
+        while(var3.hasNext()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+            if (c.getValue().hasTag(SlimeboundMod.STUDY_COLLECTOR)) {
+                tmp.add(c.getKey());
+            }
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
+
+        AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+        if (this.upgradeCard) {
+            cStudy.upgrade();
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cStudy));
         this.isDone = true;
     }
 

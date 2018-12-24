@@ -15,7 +15,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.*;
 import slimebound.patches.AbstractCardEnum;
 
-import java.util.Random;
+import java.util.*;
 
 
 public class QuickStudy extends AbstractSlimeboundCard {
@@ -35,7 +35,6 @@ public class QuickStudy extends AbstractSlimeboundCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
-
     public QuickStudy() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
@@ -53,20 +52,21 @@ public class QuickStudy extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
 
+        ArrayList<String> tmp = new ArrayList();
+        Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-        AbstractCard c;
-        do {
-            c = CardLibrary.getRandomColorSpecificCard(CardColor.COLORLESS, AbstractDungeon.cardRandomRng).makeCopy();
-        } while (!c.hasTag(SlimeboundMod.STUDY));
+        while(var3.hasNext()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+            if (c.getValue().hasTag(SlimeboundMod.STUDY)) {
+                tmp.add(c.getKey());
+            }
+        }
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)))));
 
         if (upgraded){
-            do {
-                c = CardLibrary.getRandomColorSpecificCard(CardColor.COLORLESS, AbstractDungeon.cardRandomRng).makeCopy();
-            } while (!c.hasTag(SlimeboundMod.STUDY));
-
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)))));
 
         }
 
@@ -97,5 +97,6 @@ public class QuickStudy extends AbstractSlimeboundCard {
 
         }
     }
-}
+    }
+
 

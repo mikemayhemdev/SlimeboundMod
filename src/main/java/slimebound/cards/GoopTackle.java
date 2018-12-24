@@ -19,6 +19,9 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
 
 
@@ -73,22 +76,25 @@ public class GoopTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
+        ArrayList<String> tmp = new ArrayList();
+        Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-        AbstractCard c;
-        do {
-            c = CardLibrary.getRandomColorSpecificCard(AbstractCardEnum.SLIMEBOUND, AbstractDungeon.cardRandomRng).makeCopy();
-        } while (!c.hasTag(SlimeboundMod.TACKLE));
-
-
-
-
-        if (upgraded) {
-            c.upgrade();
+        while(var3.hasNext()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+            if (c.getValue().hasTag(SlimeboundMod.TACKLE)) {
+                tmp.add(c.getKey());
+            }
         }
 
-        c.setCostForTurn(0);
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+        AbstractCard cTackle = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+        if (upgraded) {
+            cTackle.upgrade();
+        }
+
+        cTackle.setCostForTurn(0);
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cTackle));
 
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
