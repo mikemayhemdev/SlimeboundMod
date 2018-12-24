@@ -3,6 +3,8 @@ The Slimebound mod primarily features a new character, the Slimebound, to Slay t
 
 # **Features**
 
+- Theme-forward design.  The Slimebound has hidden secrets and interactions with slime-related things in the Spire, and has cards for every slime enemy attack in the game (Corrosive Spit, Flame Tackle, Goop Spray, etc.)
+
 - Full suite of 75 cards, plus 24 additional cards outside of it's card pool that can be generated through one of it's subthemes, the 'Spire Boss' mechanic.
 
 - A tuned and balanced character, who can perform well with strong draft synergy, but can falter just as easily as vanilla characters.
