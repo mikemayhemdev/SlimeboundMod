@@ -46,7 +46,7 @@ public class GrowthPunch extends AbstractSlimeboundCard {
 
         this.exhaust = true;
 
-            this.baseDamage = 1 + this.misc;
+            this.baseDamage = 6 + this.misc;
             this.baseBlock = 1 + this.misc;
 
 
@@ -56,7 +56,7 @@ public class GrowthPunch extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         this.increaseAmount = this.magicNumber;
 
         Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
@@ -67,18 +67,18 @@ public class GrowthPunch extends AbstractSlimeboundCard {
             if (c.uuid.equals(this.uuid)) {
                 c.misc += this.increaseAmount;
                 c.applyPowers();
-                c.baseDamage = 1 + c.misc;
+                c.baseDamage = 6 + c.misc;
                 c.baseBlock = 1 + c.misc;
 
                 c.isDamageModified = false;
             }
         }
 
-        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = 1 + c.misc) {
+        for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = 6 + c.misc) {
             c = (AbstractCard) var1.next();
             c.misc += this.increaseAmount;
             //c.applyPowers();
-            c.baseDamage = 1 + c.misc;
+            c.baseDamage = 6 + c.misc;
             c.baseBlock = 1 + c.misc;
         }
 
@@ -92,7 +92,7 @@ public class GrowthPunch extends AbstractSlimeboundCard {
     }
 
     public void applyPowers() {
-        this.baseDamage = 1 + this.misc;
+        this.baseDamage = 6 + this.misc;
         this.baseBlock = 1 + this.misc;
         super.applyPowers();
         this.initializeDescription();
@@ -103,8 +103,10 @@ public class GrowthPunch extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
-            upgradeMagicNumber(1);
+            //upgradeMagicNumber(1);
 
         }
 

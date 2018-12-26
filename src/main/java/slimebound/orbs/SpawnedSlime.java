@@ -170,11 +170,12 @@ public void spawnVFX(){
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
         }
 }
-
+ @Override
     public void setSlot(int slotNum, int maxOrbs) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
             this.tX = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsX[slotNum];
             this.tY = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
+
         }
 
 
@@ -310,14 +311,10 @@ public void spawnVFX(){
                     break;
             }
         }
-        if (this.madePostDuplicated) {
 
-            this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX + 70);
-            this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
-        } else {
-            this.cX = MathHelper.orbLerpSnap(this.cX, AbstractDungeon.player.animX + this.tX);
-            this.cY = MathHelper.orbLerpSnap(this.cY, AbstractDungeon.player.animY + this.tY);
-        }
+            this.cX = MathHelper.orbLerpSnap(this.cX, this.tX);
+            this.cY = MathHelper.orbLerpSnap(this.cY, this.tY);
+
 
         if (this.channelAnimTimer != 0.0F) {
             this.channelAnimTimer -= Gdx.graphics.getDeltaTime();
