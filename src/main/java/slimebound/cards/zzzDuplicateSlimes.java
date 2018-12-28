@@ -67,19 +67,19 @@ public class zzzDuplicateSlimes extends AbstractSlimeboundCard {
                 if (s == "SplitTorchHead") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, false));
                 }
-                if (s == "SplitAttack") {
+                if (s == "SplitBruiser") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, false));
                 }
-                if (s == "SplitPoison") {
+                if (s == "SplitAcid") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, false));
                 }
-                if (s == "SplitSliming") {
+                if (s == "SplitLicking") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, false));
                 }
                 if (s == "SplitBronze") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.BronzeSlime(), false, false));
                 }
-                if (s == "SplitShield") {
+                if (s == "SplitLeeching") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ShieldSlime(), false, false));
                 }
                 if (s == "SplitCultist") {

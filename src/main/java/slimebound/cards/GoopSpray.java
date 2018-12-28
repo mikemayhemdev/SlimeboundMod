@@ -40,7 +40,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 3;
-        this.slimed = this.baseSlimed = 6;
+        this.slimed = this.baseSlimed = 8;
         upgradeSlimed(0);
 
 

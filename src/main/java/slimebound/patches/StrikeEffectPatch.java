@@ -27,7 +27,7 @@ import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
-/*
+
 
 public class StrikeEffectPatch {
     @SpirePatch(clz = StrikeEffect.class, method = SpirePatch.CONSTRUCTOR,
@@ -56,4 +56,3 @@ public class StrikeEffectPatch {
 }
 
 
-*/

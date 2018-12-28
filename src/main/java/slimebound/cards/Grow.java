@@ -4,6 +4,7 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,7 +32,6 @@ public class Grow extends AbstractSlimeboundCard {
 
     private static final int COST = 2;
 
-    private static boolean justUsed = false;
 
     public Grow() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
@@ -48,19 +48,12 @@ public class Grow extends AbstractSlimeboundCard {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
-            if (upgraded) justUsed = true;
+            if (upgraded) AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, this.magicNumber));
+
 
 
     }
 
-
-
-    public void onMoveToDiscard() {
-        if (this.justUsed){
-            this.modifyCostForCombat(-1);
-            this.justUsed = false;
-        }
-    }
 
     public AbstractCard makeCopy() {
         return new Grow();

@@ -28,7 +28,7 @@
     "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime twice. NL Exhaust."
   },
-"Slimebound:SplitAttack": {
+"Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
     "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime. NL Bruiser_Slimes deal 1 more damage this combat. NL Exhaust."
@@ -38,22 +38,22 @@
     "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime twice. NL Exhaust."
   },
-"Slimebound:SplitShield": {
+"Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
     "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime. NL Leeching_Slimes grant 1 more Block this combat. NL Exhaust."
   },
-"Slimebound:SplitPoison": {
+"Slimebound:SplitAcid": {
     "NAME": "Split: Acid",
     "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Acid_Slime. NL Acid_Slimes apply 1 more Poison this combat. NL Exhaust."
   },
-"Slimebound:SplitSliming": {
+"Slimebound:SplitLicking": {
     "NAME": "Split: Licking",
     "DESCRIPTION": "Split into a Licking_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Licking_Slime. NL Licking_Slimes apply 1 more Slimed this combat. NL Exhaust."
   },
-"Slimebound:SlimeSacrifice": {
+"Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
     "DESCRIPTION": "Prevent the next time you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust."
@@ -130,7 +130,7 @@
     "NAME": "Spiky Outer Goop",
     "DESCRIPTION": "Gain !M! Thorns and !M! Plated_Armor."
   },
-"Slimebound:SolidOuterGoop": {
+"Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
     "DESCRIPTION": "Whenever you lose HP, gain !M! Block at the start of your next turn."
   },
@@ -178,6 +178,11 @@
   "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. NL Increase these effects permanently by !M!. NL Exhaust."
 
 },
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "Consult Playbook",
+    "DESCRIPTION": "Fill your hand with random Tackle cards. They cost 1 less this combat. NL Exhaust."
+
+  },
 "Slimebound:Recycling": {
     "NAME": "Recycling",
     "DESCRIPTION": "At the start of your turn, add a random Exhausted 0-cost card to your hand.",
@@ -233,7 +238,7 @@
     "DESCRIPTION": "Remove all Weak and Poison, replacing them with Slimed. NL Apply !M! Slimed.",
     "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with Slimed. NL Apply !M! Slimed."
   },
-"Slimebound:QuickLick": {
+"Slimebound:RejuvenatingLick": {
     "NAME": "Rejuvenating Lick",
     "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Heal !M! HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Heal !M! HP. NL Draw a card. NL Exhaust."
@@ -384,7 +389,7 @@
     "NAME": "Stray Goop",
     "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed to a random enemy whenever you lose HP on your turn."
   },
-"Slimebound:SlimeSmash": {
+"Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
     "DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus from Slimed.",
   "UPGRADE_DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus and healing from Slimed."
@@ -438,7 +443,7 @@
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
   },
-"Slimebound:Divider": {
+"Slimebound:Hexaburn": {
     "NAME": "Hexaburn",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
@@ -447,7 +452,7 @@
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust."
   },
-"Slimebound:HyperBeamSlimedbound": {
+"Slimebound:SlimeBeam": {
     "NAME": "Slime Beam",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust."
   },
