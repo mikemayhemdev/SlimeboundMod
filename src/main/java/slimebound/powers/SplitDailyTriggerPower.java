@@ -99,13 +99,13 @@ public class SplitDailyTriggerPower extends AbstractPower {
             //AbstractDungeon.getMonsters().monsters.remove(m);
 
             if (m.currentHealth < 20) {
-                AbstractMonster mini1 = new AcidSlime_S(saveX - 55F, saveY + MathUtils.random(-4.0F, 4.0F), 0);
+                AbstractMonster mini1 = new AcidSlime_S(saveX - 55F,  MathUtils.random(-4.0F, 4.0F), 0);
                 mini1.maxHealth = m.currentHealth;
                 mini1.currentHealth = m.currentHealth;
                 mini1.usePreBattleAction();
                 mini1.useUniversalPreBattleAction();
 
-                AbstractMonster mini2 = new SpikeSlime_S(saveX + 55F, saveY + MathUtils.random(-4.0F, 4.0F), 0);
+                AbstractMonster mini2 = new SpikeSlime_S(saveX + 55F, MathUtils.random(-4.0F, 4.0F), 0);
                 mini2.maxHealth = m.currentHealth;
                 mini2.currentHealth = m.currentHealth;
                 mini2.usePreBattleAction();
@@ -115,21 +115,21 @@ public class SplitDailyTriggerPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini2, false));
 
             } else if (m.currentHealth < 40) {
-                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new AcidSlime_M(saveX - 134.0F, saveY + MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
-                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new SpikeSlime_M(saveX + 134.0F, saveY + MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
+                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new AcidSlime_M(saveX - 134.0F, MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
+                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new SpikeSlime_M(saveX + 134.0F, MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
             } else if (m.currentHealth < 80) {
-                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new AcidSlime_L(saveX - 134.0F, saveY + MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
-                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new SpikeSlime_L(saveX + 134.0F, saveY + MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
+                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new AcidSlime_L(saveX - 134.0F,  MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
+                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new SpikeSlime_L(saveX + 134.0F, MathUtils.random(-4.0F, 4.0F), 0, m.currentHealth), false));
             } else {
                 AbstractMonster boss1 = new SlimeBoss();
-                boss1.hb_x = saveX + 134.0F;
-                boss1.drawX = saveX + 134.0F;
+               // boss1.hb_x = saveX + 134.0F;
+                boss1.drawX = m.drawX + 134.0F;
                 boss1.maxHealth = m.currentHealth;
                 boss1.currentHealth = m.currentHealth;
 
                 AbstractMonster boss2 = new SlimeBoss();
-                boss2.hb_x = saveX - 134.0F;
-                boss2.drawX = saveX - 134.0F;
+                //boss2.hb_x = saveX - 134.0F;
+                boss2.drawX = m.drawX - 134.0F;
                 boss2.maxHealth = m.currentHealth;
                 boss2.currentHealth = m.currentHealth;
 
