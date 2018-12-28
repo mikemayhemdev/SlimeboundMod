@@ -14,6 +14,19 @@
 			" HP, consuming all #ySlimed.  Half of the stack is removed at end of turn."
 		]
 	},
+	"Slimebound:SplitDailyTriggerPower": {
+		"NAME": "Slime Split",
+		"DESCRIPTIONS": [
+			"When its HP is at or below #b50%, will split into #b2 Slime enemies with ",
+			"'s current HP."
+		]
+	},
+	"Slimebound:SplitDailyPower": {
+		"NAME": "Splitting",
+		"DESCRIPTIONS": [
+			"This enemy is splitting this turn."
+		]
+	},
 	"Slimebound:BuffAttackSlimesPower": {
 		"NAME": "Upgrade: Bruiser",
 		"DESCRIPTIONS": [

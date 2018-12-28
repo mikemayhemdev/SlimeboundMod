@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.cards.HyperBeamSlimedbound;
+import slimebound.cards.SlimeBeam;
 
 
 public class NextTurnGainHyperBeam extends AbstractPower {
@@ -68,7 +68,7 @@ public class NextTurnGainHyperBeam extends AbstractPower {
 
         flash();
         AbstractCard c;
-        c = CardLibrary.getCard(HyperBeamSlimedbound.ID).makeCopy();
+        c = CardLibrary.getCard(SlimeBeam.ID).makeCopy();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, NextTurnGainHyperBeam.POWER_ID));
