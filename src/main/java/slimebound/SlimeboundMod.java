@@ -18,12 +18,16 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_L;
+import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -37,6 +41,7 @@ import slimebound.cards.*;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.dailymods.AllSplit;
 import slimebound.events.Hunted;
+import slimebound.events.WorldOfGoopSlimebound;
 import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
@@ -216,6 +221,7 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         BaseMod.addRelicToCustomPool(new StudyCardRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SlimedSkullRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new ScrapOozeRelic(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
 
     }
 
@@ -548,6 +554,8 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
 
+        BaseMod.addEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, Exordium.ID);
+
     }
 
 
@@ -562,7 +570,7 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         }
 
 
-            this.printEnemies();
+           // this.printEnemies();
 
 
 
@@ -571,7 +579,7 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         slimeDelay = true;
-            this.printEnemies();
+         //   this.printEnemies();
 
         return true;
     }
@@ -584,10 +592,11 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
     public void receiveOnBattleStart(AbstractRoom room) {
         powersPlayedThisCombat = 0;
         if (ModHelper.isModEnabled(AllSplit.ID))
-            logger.info("Daily Mod detecthed");
+            //logger.info("Daily Mod detecthed");
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters){
-                logger.info("Daily Mod adding buff to " + m.name);
-                this.printEnemies();
+                if (m.id != AcidSlime_L.ID && m.id != SpikeSlime_L.ID && m.id != SlimeBoss.ID)
+                //logger.info("Daily Mod adding buff to " + m.name);
+                //this.printEnemies();
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new SplitDailyTriggerPower(m, 1),1));
 
         }

@@ -17,9 +17,10 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import slimebound.relics.AggressiveSlimeRelic;
+import slimebound.relics.GreedOozeRelic;
 
 public class WorldOfGoopSlimebound extends AbstractImageEvent {
-    public static final String ID = "World of Goop";
+    public static final String ID = "Slimebound:WorldofGoop";
     private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
@@ -47,8 +48,8 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
             this.goldLoss = AbstractDungeon.player.gold;
         }
 
-        this.imageEventText.updateDialogOption(0, "[Gather Gold] #gGain #g75 #gGold.");
-        this.imageEventText.updateDialogOption(1, "[Recruit] Gain #gGreed #gOoze.");
+        this.imageEventText.updateDialogOption(0, OPTIONS[0]);
+        this.imageEventText.updateDialogOption(1, OPTIONS[1]);
     }
 
     public void onEnterRoom() {
@@ -65,16 +66,17 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
                         this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[2]);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                         AbstractDungeon.player.gainGold(this.gold);
-                        imageEventText.updateBodyText("You exit the invigorating slime bath, fishing out the #ygold, leaving the creature with a sad look upon its amorphous face.");
+                        imageEventText.updateBodyText(GOLD_DIALOG);
                         this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
                         return;
                     case 1:
-                        imageEventText.updateBodyText("You succeed in negotiating a deal with the creature to provide it with more shiny metal if it will aid you in your quest. NL You and your new-found #gfriend exit the slime bath together.");
+                        imageEventText.updateBodyText(LEAVE_DIALOG);
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption("Leave");
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(AggressiveSlimeRelic.ID).makeCopy());
+                        this.imageEventText.setDialogOption(OPTIONS[2]);
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(GreedOozeRelic.ID).makeCopy());
 
                         this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
                         return;
@@ -88,7 +90,7 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
     }
 
     static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("World of Goop");
+        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:WorldofGoop");
         NAME = eventStrings.NAME;
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;

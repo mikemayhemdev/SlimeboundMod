@@ -21,6 +21,13 @@
       " damage at the start of your turn. Instantly respawns if absorbed instead of restoring HP."
     ]
   },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "Greed Ooze",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn. Instantly respawns if absorbed instead of restoring HP."
+    ]
+  },
   "Slimebound:TorchHeadSlime": {
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
