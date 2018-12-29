@@ -254,6 +254,9 @@ public void spawnVFX(){
             if (this instanceof ScrapOozeSlime){
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ScrapOozeSlime(), false, false));
 
+            } else if (this instanceof GreedOozeSlime){
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
+
             } else {
                 AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
             }

@@ -36,6 +36,14 @@
       " damage per turn. NL At Rest sites, you can donate a card to the Scrap Ooze, increasing it's damage by 2."
     ]
   },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "Greed Ooze",
+    "FLAVOR": "A friend found in the Spire who hoards gold.",
+    "DESCRIPTIONS": [
+      "At the start of combat, spawn the Greed Ooze. NL If Greed Ooze is absorbed, it is instantly respawned instead of restoring HP. NL Greed Ooze deals ",
+      " damage per turn. NL At Rest sites, Greed Ooze will take 75 of your gold, increasing it's damage by 2."
+    ]
+  },
   "Slimebound:PreparedRelic": {
     "NAME": "Slimy Tea Set",
     "FLAVOR": "Definitely not the key to a refreshing night's rest.",
