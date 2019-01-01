@@ -69,7 +69,7 @@
   "Slimebound:HexSlime": {
     "NAME": "Ghostflame Slime",
     "DESCRIPTION": [
-      "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency."
+      "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
     ]
   }
 }

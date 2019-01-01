@@ -33,7 +33,7 @@ public class ScrapBonfireOption extends AbstractCampfireOption
         //this.description = "Remove a card from your deck. Increase the Scrap Ooze's damage by 2.";
         this.usable = active;
         if (active) {
-            this.description = "Remove a card from your deck. Increase the Scrap Ooze's damage by 2.";
+            this.description = "Remove a card from your deck and modify Scrap Ooze's damage.";
             this.img = ImageMaster.loadImage("SlimeboundImages/ui/scrapcampfire.png");
 
         } else {
@@ -47,17 +47,7 @@ public class ScrapBonfireOption extends AbstractCampfireOption
         if (this.usable) {
             SlimeboundMod.scrapping = true;
             AbstractDungeon.effectList.add(new CampfireTokeEffect());
-            if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID)) {
-                //SlimeboundMod.logger.info(AbstractDungeon.player.name);
 
-                //SlimeboundMod.logger.info(AbstractDungeon.player.getRelic(ScrapOozeRelic.ID).name);
-                ScrapOozeRelic scrapOoze = ((ScrapOozeRelic) AbstractDungeon.player.getRelic(ScrapOozeRelic.ID));
-               //String msg = this.idleMessages.get(MathUtils.random(0, this.idleMessages.size() - 1));
-
-
-               // AbstractDungeon.effectList.add(new ShopSpeechBubble(scrapOoze.currentX - (100F * Settings.scale), scrapOoze.currentY - (300F * Settings.scale), 2F, "Give shiny!", true));
-
-            }
 
         }
     }

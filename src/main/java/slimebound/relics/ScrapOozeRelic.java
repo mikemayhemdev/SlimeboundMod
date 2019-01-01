@@ -39,8 +39,8 @@ public class ScrapOozeRelic extends CustomRelic {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
 
-    public void incrementScrapNum(){
-        this.counter+=2;
+    public void incrementScrapNum(int amount){
+        this.counter+=amount;
 
         this.tips.remove(0);
         this.description = this.getUpdatedDescription();

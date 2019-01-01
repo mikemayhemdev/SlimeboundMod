@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.actions.SlimeAutoAttack;
@@ -46,7 +47,7 @@ public class ScrapOozeSlime
         this.scrapGlowVFX = new ScrapGlowParticle(this, Color.YELLOW);
         this.scrapVFX = new ScrapParticle(this);
         AbstractDungeon.effectList.add(this.scrapVFX);
-        AbstractDungeon.effectList.add(this.scrapGlowVFX);
+       // AbstractDungeon.effectList.add(this.scrapGlowVFX);
     }
 
     @Override
@@ -68,9 +69,6 @@ public class ScrapOozeSlime
         super.render(sb);
         this.attachmentX = this.skeleton.findBone("eyeshadow").getX();
         this.attachmentY = this.skeleton.findBone("eyeshadow").getY();
-
-        this.attachmentGlowX = this.skeleton.findBone("eyeshadow").getX();
-        this.attachmentGlowY = this.skeleton.findBone("eyeshadow").getY();
 
     }
     public AbstractOrb makeCopy() {

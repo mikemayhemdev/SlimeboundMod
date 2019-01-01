@@ -17,7 +17,7 @@ public class SticksParticleRight extends com.megacrit.cardcrawl.vfx.AbstractGame
     private Texture img;
     public CultistSlime p;
     private static int xOffset = 0;
-    private static int yOffset = -35;
+    private static int yOffset = -28;
 
     public SticksParticleRight(CultistSlime p) {
         this.duration = 0.05F;

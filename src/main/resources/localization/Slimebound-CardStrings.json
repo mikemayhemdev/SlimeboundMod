@@ -489,8 +489,8 @@
   },
 "Slimebound:CaCaw": {
     "NAME": "CA-CAW!",
-    "DESCRIPTION": "Gain !M! Strength at the start of each turn..",
-  "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Strength at the start of each turn.."
+    "DESCRIPTION": "Gain !M! Strength at the start of each turn.",
+  "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Strength at the start of each turn."
   },
 "Slimebound:DarkVoid": {
     "NAME": "Dark Void",

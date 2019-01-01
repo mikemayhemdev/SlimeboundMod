@@ -30,7 +30,7 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/playbook.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 2;
@@ -58,7 +58,7 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
 
 
         if (space > 0) {
-            for (int i = 0; i < space; i++) {
+            for (int i = 0; i <= space; i++) {
                 while (var3.hasNext()) {
                     Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
                     if (c.getValue().hasTag(SlimeboundMod.TACKLE)) {

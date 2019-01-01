@@ -9,16 +9,17 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import slimebound.orbs.GreedOozeSlime;
 import slimebound.orbs.ScrapOozeSlime;
 
+import java.util.Set;
+
 
 public class GoldCoinsParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private static final float DURATION = 0.75F;
-    private static final float START_SCALE = 1.2F * Settings.scale;
+
     private float scale = 1.2F;
     private static int W;
     private Texture img;
     public GreedOozeSlime p;
-    private static int xOffset = 15;
-    private static int yOffset = -20;
+    private static float xOffset = 15F * Settings.scale;
+    private static float yOffset = -37F * Settings.scale;
 
     public GoldCoinsParticle(GreedOozeSlime p) {
         this.duration = 0.05F;
@@ -51,7 +52,8 @@ public class GoldCoinsParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEf
 
         sb.setColor(new Color(.8F, .8F, .8F, 2F));
 
-        sb.draw(this.img, this.p.attachmentX + this.p.animX + this.p.cX - W / 2.0F + ((xOffset) * Settings.scale), this.p.attachmentY + p.animY + this.p.cY - W / 2.0F + ((yOffset) * Settings.scale), W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
+        sb.draw(this.img, this.p.attachmentX + p.animX + this.p.cX - W / 2.0F + xOffset, this.p.attachmentY + this.p.animY + this.p.cY - W / 2.0F + yOffset, W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
+
 
 
     }

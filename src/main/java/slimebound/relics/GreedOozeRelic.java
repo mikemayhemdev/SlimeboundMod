@@ -12,8 +12,8 @@ import slimebound.characters.SlimeboundCharacter;
 
 public class GreedOozeRelic extends CustomRelic {
     public static final String ID = "Slimebound:GreedOozeRelic";
-    public static final String IMG_PATH = "relics/scrapOoze.png";
-    public static final String OUTLINE_IMG_PATH = "relics/scrapOozeOutline.png";
+    public static final String IMG_PATH = "relics/greedOoze.png";
+    public static final String OUTLINE_IMG_PATH = "relics/greedOozeOutline.png";
     private static final int HP_PER_CARD = 1;
     public int scrapAmount = 0;
 

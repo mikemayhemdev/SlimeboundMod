@@ -28,12 +28,19 @@
       "At the start of combat, spawn a Licking Slime and gain #b1 Potency."
     ]
   },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "Slime the Spire",
+    "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
+    "DESCRIPTIONS": [
+      "#bCustom #bRun #bModifier NL All enemies form into two Slime enemies at 50% HP."
+    ]
+  },
   "Slimebound:ScrapOozeRelic": {
     "NAME": "Scrap Ooze",
     "FLAVOR": "A friend found in the Spire who enjoys treasure and leftover loot.",
     "DESCRIPTIONS": [
       "At the start of combat, spawn the Scrap Ooze. NL If Scrap Ooze is absorbed, it is instantly respawned instead of restoring HP. NL Scrap Ooze deals ",
-      " damage per turn. NL At Rest sites, you can donate a card to the Scrap Ooze, increasing it's damage by 2."
+      " damage per turn. NL At Rest sites, you can donate a card to the Scrap Ooze, increasing it's damage based on the card's rarity: NL +1 Damage for Common. NL +2 Damage for Uncommon. NL +3 Damage for Rare. NL -2 Damage for Curse."
     ]
   },
   "Slimebound:GreedOozeRelic": {

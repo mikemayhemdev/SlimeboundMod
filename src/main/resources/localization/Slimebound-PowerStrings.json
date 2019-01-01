@@ -35,14 +35,14 @@
 		]
 	},
 	"Slimebound:BuffPoisonSlimesPower": {
-		"NAME": "Upgrade: Poisoning",
+		"NAME": "Upgrade: Acid",
 		"DESCRIPTIONS": [
 			"Poisoning Slimes apply ",
 			" more Poison."
 		]
 	},
 	"Slimebound:BuffSlimingSlimesPower": {
-		"NAME": "Upgrade: Sliming",
+		"NAME": "Upgrade: Licking",
 		"DESCRIPTIONS": [
 			"Sliming Slimes apply ",
 			" more Slimed."
@@ -63,7 +63,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:SlimeSacrifice": {
+	"Slimebound:ProtectTheBoss": {
 		"NAME": "Protect the Boss",
 		"DESCRIPTIONS": [
 			"Prevent the next time you would be damaged by an enemy Attack at the cost of your oldest Slime.",

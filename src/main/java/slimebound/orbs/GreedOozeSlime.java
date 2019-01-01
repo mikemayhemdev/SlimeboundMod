@@ -30,7 +30,7 @@ public class GreedOozeSlime
 
     public GreedOozeSlime() {
 
-        super(ID, -17,new Color (1F,1F,0F/255F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(1F,1F,30F/255F,2F), 0, 3, true, new Color(1F,1F,30F/255F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("SlimeboundImages/orbs/4.png"), "SlimeboundImages/orbs/aggressive.png");
+        super(ID, -36,new Color (1F,1F,0F/255F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(1F,1F,30F/255F,2F), 0, 3, true, new Color(1F,1F,30F/255F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("SlimeboundImages/orbs/4.png"), "SlimeboundImages/orbs/aggressive.png");
         spawnVFX();
         if (AbstractDungeon.player.hasRelic(GreedOozeRelic.ID)){
             applyUniqueFocus(AbstractDungeon.player.getRelic(GreedOozeRelic.ID).counter);
@@ -64,8 +64,10 @@ public class GreedOozeSlime
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        this.attachmentX = this.skeleton.findBone("eyeback").getX();
-        this.attachmentY = this.skeleton.findBone("eyeback").getY();
+        this.attachmentX = (this.skeleton.findBone("eyeback").getX()) * Settings.scale;
+        this.attachmentY = (this.skeleton.findBone("eyeback").getY()) * Settings.scale;
+
+
 
         updateShiny();
     }

@@ -27,8 +27,8 @@ public class GreedGlowParticle extends AbstractGameEffect {
     private float targetScale;
     private GreedOozeSlime o;
     private AtlasRegion img;
-    private static int xOffset = -18;
-    private static int yOffset = -90;
+    private static float xOffset = -30F * Settings.scale;
+    private static float yOffset = -100F * Settings.scale;
 
     public GreedGlowParticle(GreedOozeSlime o) {
         this.o = o;
@@ -36,8 +36,8 @@ public class GreedGlowParticle extends AbstractGameEffect {
         this.effectDuration = MathUtils.random(1.0F, 3.0F);
         this.duration = this.effectDuration;
         this.startingDuration = this.effectDuration;
-        this.x = this.o.attachmentX + this.o.animX + this.o.cX + ((xOffset) * Settings.scale) + (MathUtils.random(-40.0F, 40.0F) * Settings.scale);
-        this.y = this.o.attachmentY + o.animY + this.o.cY + ((yOffset) * Settings.scale) + (MathUtils.random(20.0F, -20.0F) * Settings.scale);
+        this.x = this.o.attachmentX + this.o.animX + this.o.cX + this.xOffset + (MathUtils.random(-40.0F, 40.0F) * Settings.scale);
+        this.y = this.o.attachmentY + this.o.animY + this.o.cY + this.yOffset + (MathUtils.random(20.0F, -20.0F) * Settings.scale);
         this.vY = MathUtils.random(10.0F, 40.0F) * Settings.scale;
         this.alpha = MathUtils.random(0.5F, .7F);
         this.color = new Color(1.0F, 1.0F, MathUtils.random(0.6F, 0.9F), this.alpha);
