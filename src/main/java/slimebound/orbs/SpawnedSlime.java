@@ -70,11 +70,11 @@ public abstract class SpawnedSlime
     private Color modelColor;
     public static String orbID = "";
     public boolean noEvokeBonus;
-    private float scale = 1F;
+    public float scale = 1F;
     private static int W;
     private Texture img;
-    private float x;
-    private float px;
+    public float x;
+    public float y;
     public static SkeletonMeshRenderer sr;
     private AbstractCreature.CreatureAnimation animation;
     private float animationTimer;
@@ -96,7 +96,7 @@ public abstract class SpawnedSlime
     private String animString = "idle";
 
     public String customDescription;
-    private int yOffset;
+    private float yOffset;
     public int debuffBonusAmount;
     public int debuffAmount;
     public Color extraFontColor = null;
@@ -123,7 +123,7 @@ public abstract class SpawnedSlime
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
         this.delayTime = 0.27F;
-        this.yOffset = yOffset;
+        this.yOffset = yOffset * Settings.scale;
 
         this.ID = ID;
 
@@ -248,7 +248,7 @@ public void spawnVFX(){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -2), -2));
 
             }
             if (this instanceof ScrapOozeSlime){
@@ -374,7 +374,9 @@ public void spawnVFX(){
                 this.state.update(Gdx.graphics.getDeltaTime());
                 this.state.apply(this.skeleton);
                 this.skeleton.updateWorldTransform();
-                this.skeleton.setPosition(this.cX + this.animX, this.cY + this.animY + this.yOffset);
+                this.x = this.cX + this.animX;
+                this.y = this.cY + this.animY + this.yOffset;
+                this.skeleton.setPosition(this.x, this.y);
                 //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
 
                 this.skeleton.setColor(modelColor);
@@ -404,7 +406,7 @@ public void spawnVFX(){
 
 
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET, this.extraFontColor, this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET + 1F, this.extraFontColor, this.fontScale);
 
         } else {
 

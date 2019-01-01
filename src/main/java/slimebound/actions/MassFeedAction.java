@@ -1,45 +1,84 @@
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class MassFeedAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
+public class MassFeedAction
+        extends AbstractGameAction
+{
+    public int[] damage;
     private int increaseHpAmount;
-    private DamageInfo info;
-    private static final float DURATION = 0.1F;
 
-    public MassFeedAction(AbstractCreature target, DamageInfo info, int maxHPAmount) {
-        this.info = info;
-        setValues(target, info);
-        this.increaseHpAmount = maxHPAmount;
+    public MassFeedAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type,
+                       AbstractGameAction.AttackEffect effect, int increaseHpAmount)
+    {
+        setValues(null, source, amount[0]);
+        this.damage = amount;
         this.actionType = AbstractGameAction.ActionType.DAMAGE;
-        this.duration = 0.1F;
+        this.damageType = type;
+        this.attackEffect = effect;
+        this.increaseHpAmount = increaseHpAmount;
     }
 
-    public void update() {
-        if ((this.duration == 0.1F) &&
-                (this.target != null)) {
-            AbstractDungeon.effectList.add(new BiteEffect(this.target.hb.cX, this.target.hb.cY));
+    public void update()
+    {
+        boolean playedMusic;
+        if (this.duration == 0.5F)
+        {
+            playedMusic = false;
+            int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
+            for (int i = 0; i < temp; i++) {
+                if ((!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying) &&
+                        (AbstractDungeon.getCurrRoom().monsters.monsters.get(i).currentHealth > 0) &&
+                        (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isEscaping)) {
+                    AbstractDungeon.effectList.add(new BiteEffect(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX, AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY));
 
-            this.target.damage(this.info);
+                    if (playedMusic)
+                    {
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(
 
-            if (((((AbstractMonster) this.target).isDying) || (this.target.currentHealth <= 0)) && (!this.target.halfDead) &&
-                    (!this.target.hasPower("Minion"))) {
-                AbstractDungeon.player.increaseMaxHp(this.increaseHpAmount, false);
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX,
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect, true));
+                    }
+                    else
+                    {
+                        playedMusic = true;
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(
 
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX,
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect));
+                    }
+                }
             }
-
+        }
+        tickDuration();
+        if (this.isDone)
+        {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                p.onDamageAllEnemies(this.damage);
+            }
+            for (int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++)
+            {
+                AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+                if ((!target.isDying) && (target.currentHealth > 0) && (!target.isEscaping)) {
+                    target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
+                    if (((target.isDying) || (target.currentHealth <= 0))
+                            && (!target.halfDead) && (!target.hasPower("Minion"))){
+                        AbstractDungeon.player.increaseMaxHp(this.increaseHpAmount, false);
+                    }
+                }
+            }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }
+            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
         }
-
-
-        tickDuration();
     }
 }
-

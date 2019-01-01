@@ -24,16 +24,17 @@ public class ScrapGlowParticle extends AbstractGameEffect {
     private boolean activated = false;
 
     public ScrapOozeSlime p;
-    private static int xOffset = -5;
-    private static int yOffset = -28;
+    private static float xOffset = -25 * Settings.scale;
+    private static float yOffset = -28 * Settings.scale;
     private boolean reverse;
+    private int W;
+
     public ScrapGlowParticle(ScrapOozeSlime p, Color color) {
         this.img = ImageMaster.GLOW_SPARK_2;
         this.scale = 0.006F;
         this.startingDuration = 0.5F;
-
+        this.W = img.packedWidth;
         this.duration = this.startingDuration;
-        this.renderBehind = MathUtils.randomBoolean(0.2F);
         this.color = color;
         this.activated = true;
         this.p = p;
@@ -47,9 +48,9 @@ public class ScrapGlowParticle extends AbstractGameEffect {
     public void update() {
 
         if (reverse){
-            this.scale = Interpolation.linear.apply(.15F, .2F, this.duration / (this.startingDuration / 2.0F));
+            this.scale = Interpolation.linear.apply(.15F, .2F, this.duration -.5F);
         } else{
-            this.scale = Interpolation.linear.apply(.2F, .15F, this.duration / (this.startingDuration / 2.0F));
+            this.scale = Interpolation.linear.apply(.15F, .2F, .5F - this.duration);
 
         }
         this.duration -= Gdx.graphics.getDeltaTime();
@@ -62,9 +63,9 @@ public class ScrapGlowParticle extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(Color.BLACK);
-        sb.draw(this.img, this.p.attachmentGlowX + this.p.animX + this.p.cX + ((xOffset) * Settings.scale), this.p.attachmentGlowY + p.animY + this.p.cY + ((yOffset) * Settings.scale), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
+        sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
         sb.setColor(this.color);
-        sb.draw(this.img, this.p.attachmentGlowX + this.p.animX + this.p.cX + ((xOffset) * Settings.scale), this.p.attachmentGlowY + p.animY + this.p.cY + ((yOffset) * Settings.scale), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
+        sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
     }
 
 

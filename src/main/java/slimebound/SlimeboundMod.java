@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_L;
@@ -167,7 +168,14 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
                 ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss = false;
                 SlimeboundMod.logger.info("Reset Hunted event bool.");
             }
+            if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(AllSplit.ID)) {
+                //logger.info("Daily Mod detecthed");
+                RelicLibrary.getRelic(DailySplitModRelic.ID).makeCopy().instantObtain();
+
+
+            }
         }
+
     }
 
     public static int getAcidTongueBonus(AbstractCreature source) {
@@ -222,6 +230,7 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         BaseMod.addRelicToCustomPool(new SlimedSkullRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new ScrapOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new DailySplitModRelic(), AbstractCardEnum.SLIMEBOUND);
 
     }
 
@@ -455,7 +464,7 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
         //BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
-        BaseMod.addKeyword("Ghostflame Slime",new String[]{"ghostflame slime","ghostflame_slime"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 3 Potency.");
+        BaseMod.addKeyword("Ghostflame Slime",new String[]{"ghostflame slime","ghostflame_slime"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency.");
         //BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
         BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type. It costs 1 less.");
         //BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
@@ -560,10 +569,6 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
 
 
     public void receiveCardUsed(AbstractCard c) {
-        if (AbstractDungeon.player.hasRelic("CultistMask")) {
-            CardCrawlGame.sound.playA("VO_CULTIST_1C", MathUtils.random(-0.8F, -0.6F));
-            AbstractDungeon.effectList.add(new SpeechBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, "Caw...", true));
-        }
 
         if (c.type == AbstractCard.CardType.POWER) {
             ++powersPlayedThisCombat;
@@ -591,15 +596,8 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
 
     public void receiveOnBattleStart(AbstractRoom room) {
         powersPlayedThisCombat = 0;
-        if (ModHelper.isModEnabled(AllSplit.ID))
-            //logger.info("Daily Mod detecthed");
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters){
-                if (m.id != AcidSlime_L.ID && m.id != SpikeSlime_L.ID && m.id != SlimeBoss.ID)
-                //logger.info("Daily Mod adding buff to " + m.name);
-                //this.printEnemies();
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new SplitDailyTriggerPower(m, 1),1));
 
-        }
+
 
 
     }

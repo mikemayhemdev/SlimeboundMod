@@ -19,7 +19,7 @@ public class SlimedThornsPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:SlimedThornsPower";
     public static final String NAME = "UsefulSlime";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static final String IMG = "powers/SlimedS.png";
+    public static final String IMG = "powers/LivingWallS.png";
     public boolean doubleUp = false;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static String[] DESCRIPTIONS;

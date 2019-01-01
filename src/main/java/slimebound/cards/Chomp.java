@@ -28,7 +28,7 @@ public class Chomp extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/chomp.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
@@ -86,7 +86,7 @@ public class Chomp extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(upgradeDamage);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
 
 
         }

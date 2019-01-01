@@ -69,7 +69,7 @@ public class HexSlime
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 3), 3));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 2), 2));
 
         }
     }
@@ -92,7 +92,7 @@ public class HexSlime
 
             if (this.particleTimer < 0.0F) {
 
-                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY));
+                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY + 15F * Settings.scale));
 
 
                 this.particleTimer = 0.06F;
@@ -107,7 +107,7 @@ public class HexSlime
 
             if (this.particleTimer < 0.0F) {
 
-                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY + 5));
+                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY + 20F * Settings.scale));
 
 
                 this.particleTimer = 0.06F;

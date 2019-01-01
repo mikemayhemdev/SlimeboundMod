@@ -2,6 +2,8 @@ package slimebound.cards;
 
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.unique.FeedAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,6 +41,7 @@ public class MassFeed extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 3;
 
         this.exhaust = true;
+        this.isMultiDamage=true;
 
     }
 
@@ -46,19 +49,7 @@ public class MassFeed extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-
-
-                    AbstractDungeon.actionManager.addToBottom(new MassFeedAction(monster, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), this.magicNumber));
-
-
-                }
-
-            }
-        }
+                    AbstractDungeon.actionManager.addToBottom(new MassFeedAction(p,this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE, this.magicNumber));
 
 
     }

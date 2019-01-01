@@ -19,7 +19,7 @@ public class SlimingSlime
 
     public SlimingSlime() {
         super(ID,-17, new Color (1.0F,.5F,1.0F,100F),"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",.85F,new Color(224F/255F,113F/255F,224F/255F,2F),1, 2,true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("SlimeboundImages/orbs/debuff2.png"), "SlimeboundImages/orbs/sliming.png");
-        this.extraFontColor = Color.PURPLE;
+        this.extraFontColor = new Color (.7F,.3F,.7F,1F);
         this.debuffAmount=2;
 
         spawnVFX();
@@ -29,7 +29,7 @@ public class SlimingSlime
     @Override
     public void postSpawnEffects() {
         super.postSpawnEffects();
-        //updateSlimedNumber();
+        updateSlimedNumber();
     }
 
     public void updateDescription() {
@@ -37,6 +37,7 @@ public class SlimingSlime
     }
 
     public void updateSlimedNumber(){
+
         this.slimeBonus = SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
     }
 
