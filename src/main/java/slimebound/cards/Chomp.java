@@ -46,8 +46,7 @@ public class Chomp extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 4;
-        this.baseBlock = this.originalBlock = 2;
-        this.upgradeDamage = 2;
+        this.upgradeDamage = 1;
        // this.exhaust = true;
 
         this.magicNumber = this.baseMagicNumber = 4;
