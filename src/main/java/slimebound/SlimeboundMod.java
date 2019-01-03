@@ -547,12 +547,15 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         Texture badgeTexture = new Texture(getResourcePath("badge.png"));
 
         // Create the Mod Menu
+ /*
         ModPanel settingsPanel = new ModPanel();
+
         settingsPanel.addUIElement(new ModLabel("Slimebound Mod doesn't have any settings!", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
         }));
-        BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
 
+        BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
+*/
         logger.info("Done loading badge Image and mod options");
 
         BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID);

@@ -3,7 +3,7 @@
 
     <groupId>slimebound</groupId>
     <artifactId>slimebound</artifactId>
-    <version>v1.0.1</version>
+    <version>v1.0.2</version>
     <packaging>jar</packaging>
 
     <name>Slimebound Mod</name>
@@ -61,9 +61,10 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target\SlimeboundMod.jar" tofile="C:\Users\zanam\Documents\IdeaProjects\STSSlimeMod\SlimeboundMod.jar"/>
+                                <copy file="target\SlimeboundMod.jar" tofile="C:\Users\zanam\Documents\IdeaProjects\STSSlimeMod\pack\content\SlimeboundMod.jar"/>
 
                                 <copy file="target\SlimeboundMod.jar" tofile="D:\SteamLibrary\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar"/>
+
                             </target>
                         </configuration>
                         <goals>
