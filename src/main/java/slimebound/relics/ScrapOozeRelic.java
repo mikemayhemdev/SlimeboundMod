@@ -2,6 +2,7 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -25,9 +26,15 @@ public class ScrapOozeRelic extends CustomRelic {
 
     }
 
+    public void updateDescription(AbstractPlayer.PlayerClass c) {
+        this.description = this.getUpdatedDescription();
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
+    }
 
     public String getUpdatedDescription() {
-        return (this.DESCRIPTIONS[0] + this.counter + this.DESCRIPTIONS[1]);
+        return (this.DESCRIPTIONS[0]);
     }
 
     public void atBattleStartPreDraw() {
@@ -40,12 +47,14 @@ public class ScrapOozeRelic extends CustomRelic {
     }
 
     public void incrementScrapNum(int amount){
-        this.counter+=amount;
+        if (amount != 0) {
+            this.counter += amount;
 
-        this.tips.remove(0);
-        this.description = this.getUpdatedDescription();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.flash();
+            this.tips.clear();
+            this.description = this.getUpdatedDescription();
+            this.tips.add(new PowerTip(this.name, this.description));
+            this.flash();
+        }
     }
 
 

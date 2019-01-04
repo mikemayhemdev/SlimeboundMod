@@ -188,8 +188,8 @@
 	"Slimebound:PoisonThornsPower": {
 		"NAME": "Acid Gelatin",
 		"DESCRIPTIONS": [
-			"Apply ",
-			" Poison to attackers."
+			"When attacked, applies ",
+			" Poison to attacker."
 		]
 	},
 	"Slimebound:SlimeRitualPower": {
@@ -202,7 +202,7 @@
 	"Slimebound:RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
-			"Add ",
+			"Return ",
 			" random 0-cost Exhausted card to your hand each turn.",
 			" random 0-cost Exhausted cards to your hand each turn."
 		]

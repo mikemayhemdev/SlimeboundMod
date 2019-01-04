@@ -1,2 +1,22 @@
-Jan 03, 2019 6:19:30 AM com.megacrit.moduploader.Main main
+Jan 04, 2019 9:03:08 AM com.megacrit.moduploader.Main main
 FINE: programStr=D:/SteamLibrary/steamapps/common/SlayTheSpire/mod-uploader.jar
+Jan 04, 2019 9:03:09 AM com.megacrit.moduploader.Uploader writeSteamAppIDFile
+FINE: The file 'steam_appid.txt' exists. Not creating it...
+Jan 04, 2019 9:03:10 AM com.megacrit.moduploader.Uploader connectToSteam
+INFO: ACCOUNT ID: 66263554
+Jan 04, 2019 9:03:10 AM com.megacrit.moduploader.Uploader updateItemInfo
+INFO: Submitting workshop item update
+Jan 04, 2019 9:03:13 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+INFO: UploadingContent .
+Jan 04, 2019 9:03:14 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+INFO: UploadingContent . .
+Jan 04, 2019 9:03:15 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+INFO: UploadingContent . . .
+Jan 04, 2019 9:03:16 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+INFO: UploadingContent . . . .
+Jan 04, 2019 9:03:18 AM com.megacrit.moduploader.Uploader handleLicenseAgreement
+FINE: needsToAcceptWLA=false
+Jan 04, 2019 9:03:18 AM com.megacrit.moduploader.Uploader$Callback onSubmitItemUpdate
+FINE: Successfully updated workshop item
+Jan 04, 2019 9:03:18 AM com.megacrit.moduploader.Uploader openWorkshopItemInSteamBrowser
+FINE: Opening url=steam://url/CommunityFilePage/1610056683 in browser...

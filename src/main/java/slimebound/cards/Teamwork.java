@@ -2,7 +2,10 @@ package slimebound.cards;
 
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -35,18 +38,20 @@ public class Teamwork extends AbstractSlimeboundCard {
     public Teamwork() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 2;
+        this.baseDamage = 5;
+        this.magicNumber = this.baseMagicNumber = 3;
        // this.tags.add(CardTags.STRIKE);
         //this.isMultiDamage = true;
-        this.exhaust = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse));
 
     }
 
@@ -66,10 +71,9 @@ public class Teamwork extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeDamage(1);
-            this.exhaust=false;
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            this.upgradeDamage(2);
+            this.upgradeMagicNumber(1);
+
         }
     }
 

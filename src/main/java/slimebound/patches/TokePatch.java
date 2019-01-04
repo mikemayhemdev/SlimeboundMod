@@ -27,13 +27,13 @@ public class TokePatch {
             ScrapOozeRelic scrapOoze = ((ScrapOozeRelic) AbstractDungeon.player.getRelic(ScrapOozeRelic.ID));
 
             if (card.rarity == RARE){
-                amount = 3;
-            }
-            if (card.rarity == UNCOMMON){
                 amount = 2;
             }
-            if (card.rarity == COMMON || card.rarity == BASIC){
+            if (card.rarity == UNCOMMON){
                 amount = 1;
+            }
+            if (card.rarity == COMMON || card.rarity == BASIC){
+                amount = 0;
             }
             if (card.rarity == CURSE){
                 amount = -2;

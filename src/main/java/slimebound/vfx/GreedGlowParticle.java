@@ -44,6 +44,7 @@ public class GreedGlowParticle extends AbstractGameEffect {
         this.scale = 0.01F;
         this.targetScale = MathUtils.random(0.3F, .7F);
         this.rotation = MathUtils.random(-3.0F, 3.0F);
+        //this.renderBehind = true;
     }
 
     public void update() {

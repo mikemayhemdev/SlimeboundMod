@@ -44,6 +44,7 @@ public class ScrapOozeSlime
     }
 
     public void postSpawnEffects(){
+
         this.scrapGlowVFX = new ScrapGlowParticle(this, Color.YELLOW);
         this.scrapVFX = new ScrapParticle(this);
         AbstractDungeon.effectList.add(this.scrapVFX);
@@ -63,6 +64,8 @@ public class ScrapOozeSlime
         AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL,this,false,false,false,0,false,0,false));
 
     }
+
+
 
     @Override
     public void render(SpriteBatch sb) {
