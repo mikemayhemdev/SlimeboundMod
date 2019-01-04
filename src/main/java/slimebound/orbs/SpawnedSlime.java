@@ -163,12 +163,15 @@ public abstract class SpawnedSlime
     }
 
 public void spawnVFX(){
-        if (this.topSpawnVFX){
+    if (AbstractDungeon.player.maxOrbs > 0) {
+
+        if (this.topSpawnVFX) {
             AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
 
         } else {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
         }
+    }
 }
  @Override
     public void setSlot(int slotNum, int maxOrbs) {

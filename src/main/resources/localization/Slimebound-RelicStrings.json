@@ -37,18 +37,16 @@
   },
   "Slimebound:ScrapOozeRelic": {
     "NAME": "Scrap Ooze",
-    "FLAVOR": "A friend found in the Spire who enjoys treasure and leftover loot.",
+    "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn the Scrap Ooze. NL If Scrap Ooze is absorbed, it is instantly respawned instead of restoring HP. NL Scrap Ooze deals ",
-      " damage per turn. NL At Rest sites, you can donate a card to the Scrap Ooze, increasing it's damage based on the card's rarity: NL +1 Damage for Common. NL +2 Damage for Uncommon. NL +3 Damage for Rare. NL -2 Damage for Curse."
+      "At the start of combat, spawn Scrap Ooze. NL At Rest sites, you can donate a card to the Scrap Ooze, granting +1 damage for #gUncommons, +2 damage for #yRares, -2 damage for #rCurses."
     ]
   },
   "Slimebound:GreedOozeRelic": {
     "NAME": "Greed Ooze",
     "FLAVOR": "A friend found in the Spire who hoards gold.",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn the Greed Ooze. NL If Greed Ooze is absorbed, it is instantly respawned instead of restoring HP. NL Greed Ooze deals ",
-      " damage per turn. NL At Rest sites, Greed Ooze will take 75 of your gold, increasing it's damage by 2."
+      "At the start of combat, spawn Greed Ooze. NL At Rest sites, Greed Ooze will take 50 of your gold, increasing it's damage by 1."
     ]
   },
   "Slimebound:PreparedRelic": {

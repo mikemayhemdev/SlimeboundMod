@@ -26,6 +26,7 @@ public class GreedOozeSlime
 
     private GoldCoinsParticle goldcoinsVFX;
     private float shinyTimer;
+   public Boolean stopShiny = false;
 
 
     public GreedOozeSlime() {
@@ -69,18 +70,21 @@ public class GreedOozeSlime
 
 
 
-        updateShiny();
+        if (!this.stopShiny) updateShiny();
     }
 
     private void updateShiny() {
+
             this.shinyTimer -= Gdx.graphics.getDeltaTime();
             if (this.shinyTimer < 0.0F && !Settings.DISABLE_EFFECTS) {
                 this.shinyTimer = 0.2F;
-                AbstractDungeon.topLevelEffects.add(new GreedGlowParticle(this));
+
+                    AbstractDungeon.topLevelEffects.add(new GreedGlowParticle(this));
+
             }
 
-
     }
+
     public AbstractOrb makeCopy() {
         return new GreedOozeSlime();
     }

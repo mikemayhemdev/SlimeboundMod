@@ -21,6 +21,9 @@ public class CityRemoveEventPatch {
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 dungeon_instance.eventList.remove(GoopPuddle.ID);
                 dungeon_instance.eventList.add(WorldOfGoopSlimebound.ID);
+            } else {
+                dungeon_instance.eventList.remove(WorldOfGoopSlimebound.ID);
+
             }
 
         if (dungeon_instance instanceof TheCity || dungeon_instance instanceof TheBeyond)

@@ -110,7 +110,7 @@
   },
 "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Trigger your !M! oldest Slime's attacks X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times."
   },
 "Slimebound:SlimeBarrage": {
@@ -185,8 +185,8 @@
   },
 "Slimebound:Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "At the start of your turn, add a random Exhausted 0-cost card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a random Exhausted 0-cost card to your hand."
+    "DESCRIPTION": "At the start of your turn, return a random Exhausted 0-cost card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, return a random Exhausted 0-cost card to your hand."
   },
 "Slimebound:Repurpose": {
     "NAME": "Repurpose",
@@ -264,7 +264,7 @@
   },
 "Slimebound:AcidGelatin": {
     "NAME": "Acid Gelatin",
-    "DESCRIPTION": "Apply !M! Poison to attackers."
+    "DESCRIPTION": "Whenever you are attacked, apply !M! Poison to the attacker."
   },
 "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",

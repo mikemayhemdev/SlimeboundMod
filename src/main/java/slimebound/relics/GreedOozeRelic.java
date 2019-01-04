@@ -5,10 +5,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.orbs.GreedOozeSlime;
 
 public class GreedOozeRelic extends CustomRelic {
     public static final String ID = "Slimebound:GreedOozeRelic";
@@ -29,7 +31,7 @@ public class GreedOozeRelic extends CustomRelic {
 
 
     public String getUpdatedDescription() {
-        return (this.DESCRIPTIONS[0] + this.counter + this.DESCRIPTIONS[1]);
+        return (this.DESCRIPTIONS[0]);
     }
 
     public void atBattleStartPreDraw() {
@@ -41,16 +43,29 @@ public class GreedOozeRelic extends CustomRelic {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
 
+
+    public void onVictory() {
+        AbstractPlayer p = AbstractDungeon.player;
+        for (AbstractOrb o : p.orbs) {
+            if (o instanceof GreedOozeSlime){
+                ((GreedOozeSlime)o).stopShiny = true;
+            }
+        }
+    }
+
+
+
+
     public void onEnterRestRoom() {
         AbstractPlayer p = AbstractDungeon.player;
 
-        if (AbstractDungeon.player.gold >= 75){
-            this.counter+=2;
-            this.tips.remove(0);
+        if (AbstractDungeon.player.gold >= 50){
+            this.counter+=1;
+            this.tips.clear();
             this.description = this.getUpdatedDescription();
             this.tips.add(new PowerTip(this.name, this.description));
             this.flash();
-            p.loseGold(75);
+            p.loseGold(50);
             for (int i = 0; i < 20; i++) {
                 AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, this.hb.cX, this.hb.cY, false));
 

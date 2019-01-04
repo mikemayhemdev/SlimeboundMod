@@ -57,7 +57,9 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
 
     public void update() {
-        int currentHealth = AbstractDungeon.player.currentHealth;
+        if (AbstractDungeon.player.maxOrbs > 0) {
+
+            int currentHealth = AbstractDungeon.player.currentHealth;
         /*int maxFortitudes = 0;
         if (AbstractDungeon.player.hasPower("FirmFortitudePower")) maxFortitudes = AbstractDungeon.player.getPower("FirmFortitudePower").amount;
         if (AbstractDungeon.player.hasPower("Buffer")) maxFortitudes = maxFortitudes + AbstractDungeon.player.getPower("Buffer").amount;
@@ -83,7 +85,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
                         currentHealth = currentHealth - 3;
                     }
                     */
-                    if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND){
+                    if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND) {
                         SlimeboundMod.disabledStrikeVFX = true;
                     }
                     AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.currentAmount, DamageInfo.DamageType.HP_LOSS));
@@ -94,17 +96,17 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
 
             }
-           // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
+            // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
             SlimeboundMod.logger.info("Channeling slime orb");
-        if (this.random || this.orbType==null) {
+            if (this.random || this.orbType == null) {
 
-            //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
+                //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
 
-        }else {
+            } else {
 
-            AbstractDungeon.player.channelOrb(this.orbType);
-        }
+                AbstractDungeon.player.channelOrb(this.orbType);
+            }
 
 
             if (this.upgraded) {
@@ -112,17 +114,18 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
                 AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
             }
-        tickDuration();
+            tickDuration();
 
 
+            this.isDone = true;
+
+
+
+
+        }
         this.isDone = true;
-
-
-
-
-        this.isDone = true;
-
     }
+
 }
 
 
