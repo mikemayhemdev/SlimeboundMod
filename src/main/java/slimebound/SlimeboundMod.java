@@ -1,6 +1,10 @@
 package slimebound;
 
 import basemod.BaseMod;
+import basemod.ModButton;
+import basemod.ModLabel;
+import basemod.ModPanel;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -24,6 +28,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import org.apache.logging.log4j.LogManager;
@@ -52,7 +57,7 @@ import java.util.List;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
@@ -166,6 +171,30 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         }
 
     }
+
+    @Override
+    public void receiveSetUnlocks() {
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(
+                RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
+        ), SlimeboundEnum.SLIMEBOUND, 1);
+
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(
+                Dissolve.ID, Repurpose.ID, MassRepurpose.ID
+        ), SlimeboundEnum.SLIMEBOUND, 2);
+
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                AggressiveSlimeRelic.ID, PotencyRelic.ID, MaxSlimesRelic.ID
+        ), SlimeboundEnum.SLIMEBOUND, 3);
+
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(
+                HungryTackle.ID, Recollect.ID, Recycling.ID
+        ), SlimeboundEnum.SLIMEBOUND, 4);
+
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                PreparedRelic.ID, SlimedTailRelic.ID, SlimedSkullRelic.ID
+        ), SlimeboundEnum.SLIMEBOUND, 5);
+    }
+
 
     public static int getAcidTongueBonus(AbstractCreature source) {
         int bonus = 0;
@@ -321,6 +350,15 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         BaseMod.addCard(new GrowthPunch());
         BaseMod.addCard(new slimebound.cards.Recycling());
         BaseMod.addCard(new slimebound.cards.Recollect());
+
+
+
+
+
+
+    }
+
+    public void unlockEverything(){
         UnlockTracker.unlockCard(Strike_Slimebound.ID);
         UnlockTracker.unlockCard(Defend_Slimebound.ID);
         UnlockTracker.unlockCard(SplitBronze.ID);
@@ -407,6 +445,8 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         UnlockTracker.unlockCard(DisruptingSlam.ID);
         UnlockTracker.unlockCard(PrepareCrush.ID);
         UnlockTracker.unlockCard(Repurpose.ID);
+
+        UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
 
 
     }
@@ -523,15 +563,19 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         Texture badgeTexture = new Texture(getResourcePath("badge.png"));
 
         // Create the Mod Menu
- /*
+
         ModPanel settingsPanel = new ModPanel();
 
-        settingsPanel.addUIElement(new ModLabel("Slimebound Mod doesn't have any settings!", 400.0f, 700.0f,
+        settingsPanel.addUIElement(new ModLabel("Press this button to skip progress (unlock all cards/relics)", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
         }));
 
+        settingsPanel.addUIElement(new ModButton( 400.0f, 800.0f,
+                settingsPanel, (me) -> {unlockEverything();
+        }));
+
         BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
-*/
+
         logger.info("Done loading badge Image and mod options");
 
         BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID);
