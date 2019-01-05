@@ -1,75 +1,75 @@
 {
   "Slimebound:BronzeSlime": {
-    "NAME": "��ͭʷ��ķ",
+    "NAME": "青铜史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺���ʹ���� ",
-      " ���ס�"
+      "每回合开始时造成 ",
+      " 伤害并给予你 ",
+      " 点格挡。"
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "�ö�ʷ��ķ",
+    "NAME": "好斗史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺�"
+      "每回合开始时造成 ",
+      " 点伤害"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
-    "NAME": "����ʷ��ķ",
+    "NAME": "碎片史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺���������ʱ���ظ�����ֵ���������ٷ�ֳ��"
+      "每回合开始时造成 ",
+      " 点伤害。被吸收时不回复生命值而是立刻重生。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
-    "NAME": "̰��ʷ��ķ",
+    "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺���������ʱ���ظ�����ֵ���������ٷ�ֳ��"
+      "每回合开始时造成 ",
+      " 点伤害。被吸收时不回复生命值而是立刻重生。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
-    "NAME": "���ʷ��ķ",
+    "NAME": "火炬史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺���ÿ������һ�������ƣ���ɵ��˺�+1��"
+      "每回合开始时造成 ",
+      " 点伤害。每打出1张能力牌，造成的伤害+1。"
     ]
   },
   "Slimebound:CultistSlime": {
-    "NAME": "��ͽʷ��ķ",
+    "NAME": "教徒史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺���Ȼ����ɵ��˺�+2��"
+      "每回合开始时造成 ",
+      " 点伤害并提高下次造成的伤害2点。"
     ]
   },
   "Slimebound:ShieldSlime": {
-    "NAME": "��Ѫʷ��ķ",
+    "NAME": "吸血史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺���ʹ���� ",
-      " ���ס�"
+      "每回合开始时造成 ",
+      " 点伤害并给予你 ",
+      " 点格挡。"
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "����ʷ��ķ",
+    "NAME": "酸性史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺������� ",
-      " ���ж���"
+      "每回合开始时造成 ",
+      " 点伤害并给予 ",
+      " 层中毒。"
     ]
   },
   "Slimebound:SlimingSlime": {
-    "NAME": "����ʷ��ķ",
+    "NAME": "污泥史莱姆",
     "DESCRIPTION": [
-      "ÿ�غϿ�ʼʱ��� ",
-      " �˺������� ",
-      " ���Һ��"
+      "每回合开始时造成 ",
+      " 点伤害并给予 ",
+      " 层黏液。"
     ]
   },
   "Slimebound:HexSlime": {
-    "NAME": "����ʷ��ķ",
+    "NAME": "鬼火史莱姆",
     "DESCRIPTION": [
-      "�����𹥻�������Ҳ������Ч���ṩ1��������1�����ݺ�2�㼤����"
+      "不发起攻击，潜力对其无效。提供1点力量、1点敏捷和2点潜力。"
     ]
   }
 }
