@@ -48,15 +48,15 @@
     "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Acid_Slime. NL Acid_Slimes apply 1 more Poison this combat. NL Exhaust."
   },
-"Slimebound:SplitLicking": {
-    "NAME": "Split: Licking",
-    "DESCRIPTION": "Split into a Licking_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Licking_Slime. NL Licking_Slimes apply 1 more Slimed this combat. NL Exhaust."
+"Slimebound:SplitMire": {
+    "NAME": "Split: Mire",
+    "DESCRIPTION": "Split into a Mire_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime. NL Mire_Slimes apply 1 more Slimed this combat. NL Exhaust."
   },
 "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an enemy Attack, losing your oldest Slime instead. NL Exhaust."
+    "DESCRIPTION": "Prevent the next time you would damaged by an enemy Attack, losing your oldest Slime instead.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would damaged by an enemy Attack, losing your oldest Slime instead."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
@@ -70,7 +70,7 @@
   },
 "Slimebound:Replication": {
     "NAME": "Replication",
-    "DESCRIPTION": "Choose a card. Add a copy of that card to your hand. NL Exhaust."
+    "DESCRIPTION": "Choose a card in your hand. Add a copy of that card to your hand. NL Exhaust."
   },
 "Slimebound:AbsorbAll": {
     "NAME": "Absorption",
@@ -103,7 +103,7 @@
   "Slimebound:SlimeTap": {
       "NAME": "Slime Tap",
       "DESCRIPTION": "Absorb your oldest Slime. Gain [E] [E] and draw 2 cards. NL Exhaust.",
-      "UPGRADE_DESCRIPTION": "Absorb up to 2 of your oldest Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
+      "UPGRADE_DESCRIPTION": "Absorb your 2 oldest Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
       "EXTENDED_DESCRIPTION": [
         "Need... slimes..."
       ]
@@ -180,7 +180,7 @@
 },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Fill your hand with random Tackle cards. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Add 4 random Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
 
   },
 "Slimebound:Recycling": {
@@ -287,7 +287,7 @@
 },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
-    "DESCRIPTION": "The next !M! times you would lose HP on your turn, an enemy takes that much damage instead. NL Exhaust."
+    "DESCRIPTION": "The next !M! times you would lose HP on YOUR turn, an enemy takes that much damage instead."
   },
 "Slimebound:AccelerateToxins": {
     "NAME": "Accelerate Toxins",
@@ -392,7 +392,7 @@
 "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
     "DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus from Slimed.",
-  "UPGRADE_DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus and healing from Slimed."
+  "UPGRADE_DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus AND healing from Slimed."
   },
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",

@@ -10,8 +10,8 @@
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " additional Slimed whenever an effect applies it this combat."
+      "Whenever an effect applies Slimed, apply #b",
+      " more."
     ]
   },
 

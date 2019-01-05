@@ -16,7 +16,7 @@ import slimebound.powers.BuffSlimingSlimesPower;
 
 
 public class SplitLicking extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:SplitLicking";
+    public static final String ID = "Slimebound:SplitMire";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

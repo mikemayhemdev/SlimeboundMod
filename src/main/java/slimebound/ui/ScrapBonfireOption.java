@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.ui.campfire.RestOption;
@@ -21,6 +23,11 @@ import slimebound.relics.ScrapOozeRelic;
 
 public class ScrapBonfireOption extends AbstractCampfireOption
 {
+    private static final RelicStrings relicStrings;
+
+
+    public static final String[] DESCRIPTIONS;
+
 
     //private ArrayList<String> idleMessages;
     public ScrapBonfireOption(boolean active) {
@@ -33,11 +40,11 @@ public class ScrapBonfireOption extends AbstractCampfireOption
         //this.description = "Remove a card from your deck. Increase the Scrap Ooze's damage by 2.";
         this.usable = active;
         if (active) {
-            this.description = "Remove a card from your deck and modify Scrap Ooze's damage.";
+            this.description = DESCRIPTIONS[1];
             this.img = ImageMaster.loadImage("SlimeboundImages/ui/scrapcampfire.png");
 
         } else {
-            this.description = "Nothing to give to the Scrap Ooze.";
+            this.description = DESCRIPTIONS[2];
             this.img = ImageMaster.loadImage("SlimeboundImages/ui/scrapcampfiredisabled.png");
         }
     }
@@ -51,5 +58,9 @@ public class ScrapBonfireOption extends AbstractCampfireOption
 
         }
     }
+    static {
+        relicStrings = CardCrawlGame.languagePack.getRelicStrings("Slimebound:ScrapOozeRelic");
+        DESCRIPTIONS = relicStrings.DESCRIPTIONS;
 
+    }
 }

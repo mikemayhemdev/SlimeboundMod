@@ -21,7 +21,7 @@ public class ProtectTheBoss extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/slimesacrifice.png";
 
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
@@ -34,7 +34,7 @@ public class ProtectTheBoss extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.exhaust = true;
+        //this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
 
     }

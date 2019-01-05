@@ -1,15 +1,11 @@
 package slimebound;
 
 import basemod.BaseMod;
-import basemod.ModLabel;
-import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,20 +18,14 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_L;
-import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
-import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
-import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.cards.*;
@@ -55,7 +45,6 @@ import slimebound.potions.SlimyTonguePotion;
 import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
-import slimebound.powers.SplitDailyTriggerPower;
 import slimebound.relics.*;
 
 import java.nio.charset.StandardCharsets;
@@ -63,7 +52,7 @@ import java.util.List;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber, basemod.interfaces.PostPowerApplySubscriber, basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
@@ -194,24 +183,6 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         }
     }
 
-    public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-
-
-            if (target == AbstractDungeon.player) {
-
-                for (AbstractOrb o : AbstractDungeon.player.orbs) {
-
-                    if (o.ID == TorchHeadSlime.ID) {
-                        logger.info("Sending power amount" + 1);
-                        ((TorchHeadSlime) o).applyUniqueFocus(1);
-                    }
-                }
-
-
-            }
-            ;
-
-    }
 
     public static String printString(String s) {
         logger.info(s);
@@ -455,7 +426,7 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
         BaseMod.addKeyword("Cultist Slime",new String[]{"cultist slime","cultist_slime"}, "Attacks for 6 each turn, then increases it's damage by 2.");
         BaseMod.addKeyword("Leeching Slime",new String[]{"leeching slime","leeching_slime","leeching slimes","leeching_slimes"}, "Attacks for 2 and grants you 2 Block each turn.");
         BaseMod.addKeyword("Acid Slime",new String[]{"acid slime","acid_slime","acid slimes","acid_slimes"}, "Attacks for 1 and applies 2 Poison each turn.");
-        BaseMod.addKeyword("Licking Slime",new String[]{"licking slime","licking_slime","licking slimes","licking_slimes"}, "Attacks for 1 and applies 2 Slimed each turn.");
+        BaseMod.addKeyword("Mire Slime",new String[]{"mire slime","mire_slime","mire slimes","mire_slimes"}, "Attacks for 1 and applies 2 Slimed each turn.");
         BaseMod.addKeyword("Plated Armor", new String[]{"plated armor","plated_armor"}, "Increases Block each turn. Reduced when you take damage.");
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grants Block for next turn.");
         BaseMod.addKeyword("Bronze Slime",new String[]{"bronze slime","bronze_slime"}, "Attacks for 6  and grants you 6 Block each turn.");
@@ -477,22 +448,27 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
     }
 
     public void receiveEditStrings() {
+
+        String language = "eng";
+
+        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+
         logger.info("begin editing strings");
-        String relicStrings = Gdx.files.internal("localization/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String relicStrings = Gdx.files.internal("localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        String cardStrings = Gdx.files.internal("localization/Slimebound-CardStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String cardStrings = Gdx.files.internal("localization/" + language + "/Slimebound-CardStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-        String powerStrings = Gdx.files.internal("localization/Slimebound-PowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String powerStrings = Gdx.files.internal("localization/" + language + "/Slimebound-PowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String monsterStrings = Gdx.files.internal("localization/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String monsterStrings = Gdx.files.internal("localization/" + language + "/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
-        String potionStrings = Gdx.files.internal("localization/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String potionStrings = Gdx.files.internal("localization/" + language + "/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-        String orbStrings = Gdx.files.internal("localization/Slimebound-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String orbStrings = Gdx.files.internal("localization/" + language + "/Slimebound-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-        String eventStrings = Gdx.files.internal("localization/Slimebound-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String eventStrings = Gdx.files.internal("localization/" + language + "/Slimebound-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-        String modStrings = Gdx.files.internal("localization/Slimebound-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String modStrings = Gdx.files.internal("localization/" + language + "/Slimebound-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RunModStrings.class, modStrings);
         logger.info("done editing strings");
     }
@@ -575,6 +551,13 @@ public class SlimeboundMod implements AddCustomModeModsSubscriber, PostDungeonIn
 
         if (c.type == AbstractCard.CardType.POWER) {
             ++powersPlayedThisCombat;
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+
+                if (o.ID == TorchHeadSlime.ID) {
+                    logger.info("Sending power amount" + 1);
+                    ((TorchHeadSlime) o).applyUniqueFocus(1);
+                }
+            }
         }
 
 

@@ -1,0 +1,81 @@
+{
+  "Slimebound:BronzeSlime": {
+    "NAME": "青铜史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害并使你获得 ",
+      " 护甲。"
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "好斗史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害"
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "遗弃史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害。被吸收时不回复生命值而是立刻再分殖。"
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "贪婪史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害。被吸收时不回复生命值而是立刻再分殖。"
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "火炬史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害。每当你打出一张能力牌，造成的伤害+1。"
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "教徒史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害，然后造成的伤害+2。"
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "吸血史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害并使你获得 ",
+      " 护甲。"
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "酸性史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害并给予 ",
+      " 层中毒。"
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "舔舐史莱姆",
+    "DESCRIPTION": [
+      "每回合开始时造成 ",
+      " 伤害并给予 ",
+      " 层黏液。"
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "鬼火史莱姆",
+    "DESCRIPTION": [
+      "不发起攻击，激励也对其无效。提供1点力量、1点敏捷和2点激励。"
+    ]
+  }
+}
+
+
+
+
+
+

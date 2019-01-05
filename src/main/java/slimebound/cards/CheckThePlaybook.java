@@ -52,10 +52,28 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int space = BaseMod.MAX_HAND_SIZE - p.hand.size();
+
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
+        for (int i = 0; i < 4; i++) {
+            while (var3.hasNext()) {
+                Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+                if (c.getValue().hasTag(SlimeboundMod.TACKLE)) {
+                    tmp.add(c.getKey());
+
+                }
+            }
+
+            AbstractCard cTackle = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+            cTackle = cTackle.makeCopy();
+            cTackle.modifyCostForCombat(-1);
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cTackle));
+
+        }
+        /* FILL version
+
+          int space = BaseMod.MAX_HAND_SIZE - p.hand.size();
 
         if (space > 0) {
             for (int i = 0; i <= space; i++) {
@@ -74,6 +92,7 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
 
             }
         }
+        */
 
     }
 

@@ -39,9 +39,10 @@ public class Teamwork extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
        // this.tags.add(CardTags.STRIKE);
         //this.isMultiDamage = true;
+
 
     }
 
