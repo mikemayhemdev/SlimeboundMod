@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -46,6 +48,11 @@ public class SlimeboundCharacter extends CustomPlayer {
     private static float xSpaceBetweenSlots = 90 * Settings.scale;
     private static float xSpaceBottomAlternatingOffset = 0 * Settings.scale;
     public boolean puddleForm;
+
+    private static final CharacterStrings charStrings;
+    public static final String NAME;
+    public static final String DESCRIPTION;
+
 
     private static float yStartOffset = AbstractDungeon.floorY + (100 * Settings.scale);
 
@@ -186,13 +193,13 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Slimebound", "A rogue minion of the Spire, driven to conquer it.", 60, 60, 4, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 4, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }
 
     public String getTitle(PlayerClass playerClass) {
-        return "The Slimebound";
+        return NAME;
     }
 
     public AbstractCard.CardColor getCardColor() {
@@ -309,7 +316,12 @@ public class SlimeboundCharacter extends CustomPlayer {
         }
     }
 
+    static {
+        charStrings = CardCrawlGame.languagePack.getCharacterString("Slimebound");
+        NAME = charStrings.NAMES[0];
+        DESCRIPTION = charStrings.TEXT[0];
 
+    }
 
 }
 
