@@ -318,12 +318,12 @@
   },
 "Slimebound:HungryTackle": {
     "NAME": "饥饿冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 将消耗区的一张0耗能牌返回手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 将消耗区的两张0耗能牌返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 将消耗区的一张0耗能牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 将消耗区的两张0耗能牌返回手牌。"
   },
 "Slimebound:FinishingTackle": {
     "NAME": "最终冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 如果杀死敌人，获得 !B! 格挡。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 如果杀死敌人，获得 !B! 格挡。"
   },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "粘液爆破",
@@ -339,13 +339,13 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 本场战斗中 升级 1张随机手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 本场战斗中 升级 2张随机手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 本场战斗中 升级 1张随机手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 本场战斗中 升级 2张随机手牌。"
   },
 "Slimebound:GoopTackle": {
     "NAME": "黏液冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 随机将1张 冲撞 牌加入你的手牌。它的耗能变为0。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 随机将1张 升级 过的 冲撞 牌加入你的手牌。它的耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 随机将1张 冲撞 牌加入你的手牌。它的耗能变为0。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 随机将1张 升级 过的 冲撞 牌加入你的手牌。它的耗能变为0。"
 
 },
 "Slimebound:CorrosiveSpit": {
@@ -362,11 +362,11 @@
   },
 "Slimebound:FlameTackle": {
     "NAME": "烈焰冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 本场战斗中敌人受到的来自 冲撞 牌的伤害增加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 本场战斗中敌人受到的来自 冲撞 牌的伤害增加 !M! 。"
   },
 "Slimebound:VenomTackle": {
     "NAME": "毒液冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 给予 !M! 层 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 给予 !M! 层 格挡 。"
   },
 "Slimebound:UsefulSlime": {
     "NAME": "实用黏液",
@@ -391,8 +391,8 @@
   },
 "Slimebound:ViciousTackle": {
     "NAME": "狂暴冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 粘液产生的额外伤害翻倍。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfDamage!   点伤害。 NL 粘液产生的额外伤害和回复翻倍。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 粘液产生的额外伤害翻倍。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成   !SlimeboundSelfharm!   点伤害。 NL 粘液产生的额外伤害和回复翻倍。"
   },
 "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
