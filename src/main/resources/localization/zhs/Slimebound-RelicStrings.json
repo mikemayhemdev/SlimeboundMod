@@ -1,88 +1,90 @@
 {
   "Slimebound:AbsorbEndCombat": {
-    "NAME": "�Һ֮��",
-    "FLAVOR": "�����˷�һ���Һ��",
+    "NAME": "黏液之心",
+    "FLAVOR": "绝不浪费一滴黏液！",
     "DESCRIPTIONS": [
-      "��ս����ʼʱ��ֳһ�����ʷ��ķ�� NL ս������ʱ��ÿ��ʷ��ķΪ��ظ� #b3 ������ֵ��"
+      "在战斗开始时分裂出1只随机史莱姆。 NL 战斗结束时，每只史莱姆回复 #b3 点生命。"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
-    "NAME": "�Һ����",
-    "FLAVOR": "�˷�һ��Ҳû��ϵ��",
+    "NAME": "黏液腐心",
+    "FLAVOR": "...其实浪费一点也没关系啦。",
     "DESCRIPTIONS": [
-      "��� #g�Һ֮�� �� ÿ���غϿ�ʼʱ��� [E] �� NL ս������ʱ��ÿ��ʷ��ķΪ��ظ� #b3 ������ֵ��"
+      "替代 #g黏液之心 。 每个回合开始时获得 [E] 。 NL 战斗结束时，每只史莱姆回复 #b3 点生命。"
     ]
   },
   "Slimebound:SlimedTailRelic": {
-    "NAME": "��ʶ�β",
-    "FLAVOR": "���Һ������һ����β��ս��ʱ�����Ի���ˡ�",
+    "NAME": "黏质断尾",
+    "FLAVOR": "一条完全由黏液包裹的断尾，战斗时可以迷惑敌人。",
     "DESCRIPTIONS": [
-      "���������ֵ����50%ʱ����ֳһ������ʷ��ķ��Ȼ������һ�γ��ܵ��˺������Ƴ���������ѳ�������ִ��档��ÿ��ս�������Чһ�Σ�",
-      "��������ڱ���ս�����Ѿ�ʹ�ù������´�ս�����ܼ���ʹ�á�"
+      "当你的生命值低于50%时，分裂出一只酸性史莱姆。你下一次承受的伤害将以移除你最早分裂出的史莱姆代替（每场战斗最多生效一次）。",
+      "这个遗物在本场战斗中已被使用，下次战斗才能继续使用。"
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "��ʯ",
-    "FLAVOR": "��˵���ܸ�����������������",
+    "NAME": "黏黏石",
+    "FLAVOR": "据说它能根据你的情绪获得力量",
     "DESCRIPTIONS": [
-      "��ÿ��ս����ʼʱ����ֳһ������ʷ��ķ����� #b1 ���ԡ�"
+      "在战斗开始时，分裂出一只舔舐史莱姆并获得 #b1 点潜力。"
     ]
   },
   "Slimebound:DailySplitRelic": {
-    "NAME": "𤻯����",
-    "FLAVOR": "��Զ�ڷ����С�Ϊɶ���Ǹ������Ϊ�Ҳ�֪����ô���Զ���mod�ӵ�����mod��UI�",
+    "NAME": "史莱姆尖塔",
+    "FLAVOR": "永远分裂！为啥这是个遗物？因为我不知道怎么把自定义mod加到已激活mod的UI里！",
     "DESCRIPTIONS": [
-      "#b�Զ���ģʽ NL ���е���������ֵ����50%ʱ���ѳ�����ʷ��ķ���ˡ�"
+      "#b自定义模式 NL 所有敌人在生命值低于50%时分裂成两个史莱姆敌人。"
     ]
   },
   "Slimebound:ScrapOozeRelic": {
-    "NAME": "�����Һ",
+    "NAME": "遗弃黏液",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "��ս����ʼʱ����ֳһ������ʷ��ķ�� NL ����Ϣ�������������һ�� #g������ ʹ����ɵĵ��˺�+1��������һ�� #yϡ���� ʹ����ɵ��˺�+2��������һ�� #r������ ʹ����ɵ��˺�-2."
+      "战斗开始时，分裂出1只碎片史莱姆。 NL 在休息处，你可以献上一张 #g罕见牌 使它造成的的伤害+1，或献上一张 #y稀有牌 使它造成的伤害+2，或献上一张 #r诅咒牌 使它造成的伤害-2.",
+      "从牌堆中移除一张卡，改变碎片史莱姆的伤害。",
+      "没有可以给碎片史莱姆的东西了。"
     ]
   },
   "Slimebound:GreedOozeRelic": {
-    "NAME": "̰���Һ",
-    "FLAVOR": "�������ҵ��Ķڽ��ӵ����ѡ�",
+    "NAME": "贪婪黏液",
+    "FLAVOR": "尖塔里找到的囤金子的朋友。",
     "DESCRIPTIONS": [
-      "ÿ��ս����ʼʱ����ֳһ��̰��ʷ��ķ�� NL ����Ϣ����̰��ճҺ����ʳ50��Ҳ�ʹ����ɵ��˺�+1��"
+      "战斗开始时，生成1只贪婪史莱姆。 NL 在休息处，贪婪粘液会吞食50金币并使它造成的伤害+1。"
     ]
   },
   "Slimebound:PreparedRelic": {
-    "NAME": "�����װ",
-    "FLAVOR": "������ҹ���ĺò;ߡ�",
+    "NAME": "黏茶具套装",
+    "FLAVOR": "显然不是夜宵的好餐具。",
     "DESCRIPTIONS": [
-      "������Ϣ������������һ��ս������һ��׼���õ��ƿ�ʼ��һ���غϣ��������ı�Ϊ0��"
+      "在休息处后的下1场战斗开始时，将1张 #g伺机待发 加入手牌，它的耗能变为0。"
     ]
   },
   "Slimebound:StudyCardRelic": {
-    "NAME": "ССԲ��ñ",
-    "FLAVOR": "˭�ƿ����ⶥ��ñ��˭���ƿ�������������",
+    "NAME": "袖珍圆顶礼帽",
+    "FLAVOR": "谁掌控了这顶礼帽，谁就掌控了这座尖塔！",
     "DESCRIPTIONS": [
-      "ÿ��ս����ʼʱ����һ������Ϊ0���о���������������ơ�"
+      "战斗开始时，将1张消耗为0的 #g研究尖塔 加入你的手牌。"
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
-    "NAME": "�Һ����",
-    "FLAVOR": "���������һؼҵģ�����������",
+    "NAME": "黏液居民",
+    "FLAVOR": "是它跟着我回家的。我能收养它吗？",
     "DESCRIPTIONS": [
-      "ÿ��ս����ʼʱ����ֳһ���ö�ʷ��ķ��"
+      "战斗开始时，生成1只好斗史莱姆。"
     ]
   },
   "Slimebound:SlimedSkullRelic": {
-    "NAME": "�ͷ��",
-    "FLAVOR": "һ���ǳ����ĵ�����ͷ�ǣ���ˮһ��ճ������Ļҳ����۹�����������𤡣",
+    "NAME": "黏头骨",
+    "FLAVOR": "一个非常恶心的异蛇头骨，灰尘和污垢像胶一样粘在上面，又脏又黏。",
     "DESCRIPTIONS": [
-      "ÿ���������� #y�Һ ��������� #b",
-      " �� #y�Һ."
+      "每当你给予敌人 #y黏液 ，额外给予 #b",
+      " 层 #y黏液."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "ʷ��ķ��ż",
-    "FLAVOR": "̫�ɰ��ˡ�",
+    "NAME": "史莱姆玩偶",
+    "FLAVOR": "太可爱了。",
     "DESCRIPTIONS": [
-      "ÿ��ս����ʼʱ����ֳһ����Ѫʷ��ķ�����һ��ʷ��ķ��λ��"
+      "战斗开始时，生成1只吸血史莱姆并获得1个史莱姆槽位。"
     ]
   }
 }
