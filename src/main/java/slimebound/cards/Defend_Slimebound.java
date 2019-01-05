@@ -5,15 +5,19 @@ package slimebound.cards;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.patches.AbstractCardEnum;
 
 public class Defend_Slimebound extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Defend_Slimebound";
-    public static final String NAME = "Defend";
-    public static final String DESCRIPTION = "Gain !B! Block.";
+    public static final String NAME;
+    public static final String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/defendSlime.png";
 
+    private static final CardStrings cardStrings;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.BASIC;
     private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;
@@ -43,6 +47,13 @@ public class Defend_Slimebound extends AbstractSlimeboundCard {
             upgradeName();
             upgradeBlock(3);
         }
+    }
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

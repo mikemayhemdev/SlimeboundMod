@@ -79,6 +79,11 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     public static boolean slimeDelay;
     public static boolean scrapping;
     public static SlimeboundCharacter slimeboundCharacter;
+
+    private ModLabel modOptionsLabel;
+    private ModButton modOptionsButton;
+    private ModPanel settingsPanel;
+
     public static boolean slimeTalked = false;
     public static boolean slimeTalkedAcidL = false;
     public static boolean slimeTalkedAcidM = false;
@@ -446,7 +451,18 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(PrepareCrush.ID);
         UnlockTracker.unlockCard(Repurpose.ID);
 
-        UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
+        UnlockTracker.lockedRelics.remove(SlimedTailRelic.ID);
+        UnlockTracker.lockedRelics.remove(SlimedSkullRelic.ID);
+        UnlockTracker.lockedRelics.remove(AggressiveSlimeRelic.ID);
+        UnlockTracker.lockedRelics.remove(PotencyRelic.ID);
+        UnlockTracker.lockedRelics.remove(MaxSlimesRelic.ID);
+        UnlockTracker.lockedRelics.remove(PreparedRelic.ID);
+
+        //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
+
+        modOptionsLabel.text = "Now restart your client and all will be unlocked.";
+
+
 
 
     }
@@ -564,15 +580,17 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         // Create the Mod Menu
 
-        ModPanel settingsPanel = new ModPanel();
+        settingsPanel = new ModPanel();
 
-        settingsPanel.addUIElement(new ModLabel("Press this button to skip progress (unlock all cards/relics)", 400.0f, 700.0f,
+        modOptionsLabel = new ModLabel("Press this button to skip progress (unlock all cards/relics)", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
-        }));
+        });
+                settingsPanel.addUIElement(modOptionsLabel);
 
-        settingsPanel.addUIElement(new ModButton( 400.0f, 800.0f,
-                settingsPanel, (me) -> {unlockEverything();
-        }));
+            modOptionsButton = new ModButton( 400.0f, 400.0f,
+                    settingsPanel, (me) -> {unlockEverything();
+            });
+        settingsPanel.addUIElement(modOptionsButton);
 
         BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
 

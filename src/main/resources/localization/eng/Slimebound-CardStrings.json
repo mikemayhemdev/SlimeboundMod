@@ -60,8 +60,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed NL Gain !B! Block. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Slimed NL Gain !B! Block. NL Draw a card. NL Exhaust."
 
   },
 "Slimebound:DuplicateSlimes": {
@@ -215,23 +215,23 @@
   },
 "Slimebound:Lick": {
     "NAME": "Lick",
-    "DESCRIPTION": "Apply !Slimebound:SlimePoison! Weak and !Slimebound:Slimed! Slimed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:SlimePoison! Weak and !Slimebound:Slimed! Slimed. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed. NL Draw a card. NL Exhaust."
   },
 "Slimebound:HauntingLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply 1 Vulnerable and !Slimebound:Slimed! Slimed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable and !Slimebound:Slimed! Slimed. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply 1 Vulnerable and !SlimeboundSlimed! Slimed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable and !SlimeboundSlimed! Slimed. NL Draw a card. NL Exhaust."
   },
 "Slimebound:PoisonLick": {
     "NAME": "Poison Lick",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed and !Slimebound:SlimePoison! Poison. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed and !Slimebound:SlimePoison! Poison. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed and !SlimeboundSlimePoison! Poison. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Slimed and !SlimeboundSlimePoison! Poison. NL Draw a card. NL Exhaust."
   },
 "Slimebound:MegaLick": {
     "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !Slimebound:SlimePoison! Weak and !Slimebound:Slimed! Slimed to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:SlimePoison! Weak and !Slimebound:Slimed! Slimed to ALL enemies. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed to ALL enemies. NL Draw a card. NL Exhaust."
   },
 "Slimebound:FocusedLick": {
     "NAME": "Focused Lick",
@@ -240,8 +240,8 @@
   },
 "Slimebound:RejuvenatingLick": {
     "NAME": "Rejuvenating Lick",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Heal !M! HP. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Slimed. NL Heal !M! HP. NL Draw a card. NL Exhaust."
   },
 "Slimebound:Gluttony": {
     "NAME": "Gluttony",
@@ -318,20 +318,20 @@
   },
 "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
   },
 "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL If this kills an enemy, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL If this kills an enemy, gain !B! Block."
   },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "Slimesplosion",
-    "DESCRIPTION": "Apply !M! Slimed and !Slimebound:SlimePoison! Poison to ALL enemies X times. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Slimed and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL Exhaust."
   },
 "Slimebound:LivingWall": {
     "NAME": "Living Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !Slimebound:Slimed! Slimed to attackers this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! Slimed to attackers this turn."
   },
 "Slimebound:Slimepotheosis": {
     "NAME": "Slimepotheosis",
@@ -339,18 +339,18 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Upgrade a random card in your hand for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Upgrade 2 random cards in your hand for the rest of combat."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Upgrade a random card in your hand for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Upgrade 2 random cards in your hand for the rest of combat."
   },
 "Slimebound:GoopTackle": {
     "NAME": "Goop Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Add a random Tackle card to your hand. It costs 0 this turn.",
-  "UPGRADE_DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Add a random Upgraded Tackle card to your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Add a random Tackle card to your hand. It costs 0 this turn.",
+  "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Add a random Upgraded Tackle card to your hand. It costs 0 this turn."
 
 },
 "Slimebound:CorrosiveSpit": {
     "NAME": "Corrosive Spit",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed."
   },
 "Slimebound:Chomp": {
     "NAME": "Chomp",
@@ -358,15 +358,15 @@
   },
 "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed. NL Slimed will not decay on the enemy this turn."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed. NL Slimed will not decay on the enemy this turn."
   },
 "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Cards containing \"Tackle\" deal !M! more damage this combat."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Cards containing \"Tackle\" deal !M! more damage this combat."
   },
 "Slimebound:VenomTackle": {
     "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !Slimebound:SelfDamage! damage to yourself. NL Apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfDamage! damage to yourself. NL Apply !M! Poison."
   },
 "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
@@ -374,12 +374,12 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !Slimebound:Slimed! Slimed to a random enemy !M! times."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Slimed to a random enemy !M! times."
   },
 "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed and !M! Poison to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed and !M! Poison to ALL enemies. NL Exhaust."
   },
 "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
@@ -387,12 +387,12 @@
   },
 "Slimebound:StrayGoop": {
     "NAME": "Stray Goop",
-    "DESCRIPTION": "Apply !Slimebound:Slimed! Slimed to a random enemy whenever you lose HP on your turn."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Slimed to a random enemy whenever you lose HP on your turn."
   },
 "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus from Slimed.",
-  "UPGRADE_DESCRIPTION": "Deal !D! Damage and !Slimebound:SelfDamage! damage to yourself. This gains twice the damage bonus AND healing from Slimed."
+    "DESCRIPTION": "Deal !D! Damage and !SlimeboundSelfDamage! damage to yourself. This gains twice the damage bonus from Slimed.",
+  "UPGRADE_DESCRIPTION": "Deal !D! Damage and !SlimeboundSelfDamage! damage to yourself. This gains twice the damage bonus AND healing from Slimed."
   },
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
@@ -470,7 +470,7 @@
   },
 "Slimebound:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength, or !Slimebound:SlimePoison! Strength if you are below half HP. NL Exhaust.",
+    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength, or !SlimeboundSlimePoison! Strength if you are below half HP. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ] },

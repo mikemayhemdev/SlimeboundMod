@@ -9,7 +9,7 @@ public class SlimedVariable extends DynamicVariable
     @Override
     public String key()
     {
-        return "Slimebound:Slimed";
+        return "SlimeboundSlimed";
     }
 
     @Override
