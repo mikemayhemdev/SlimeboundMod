@@ -1,450 +1,450 @@
 {
 	"Slimebound:PotencyPower": {
-		"NAME": "����",
+		"NAME": "潜力",
 		"DESCRIPTIONS": [
-			"���ֳ���� #yʷ��ķ ��ɵ��˺����� ",
-			" ��"
+			"你分裂出的 #y史莱姆 造成的伤害增加 ",
+			" 。"
 		]
 	},
 	"Slimebound:SlimedPower": {
-		"NAME": "�Һ",
+		"NAME": "黏液",
 		"DESCRIPTIONS": [
-			"�Ըõ��˵���һ�ι�����ɶ��� ",
-			" ���˺���Ϊ��ظ� ",
-			" ������ֵ���������� #y�Һ��ÿ���غϽ���ʱ����һ��Ĳ�����"
+			"对该敌人的下一次攻击造成额外 ",
+			" 点伤害并为你回复 ",
+			" 点生命值。消耗所有 #y黏液。每个回合结束时减少一半的层数。"
 		]
 	},
 	"Slimebound:SplitDailyTriggerPower": {
-		"NAME": "ʷ��ķ����",
+		"NAME": "史莱姆分裂",
 		"DESCRIPTIONS": [
-			"����ֵ����50%ʱ�������Ϊ #b2 ��ʷ��ķ�� ",
-			"���е�ǰ������ֵ��"
+			"生命值低于50%时将会分裂为 #b2 个史莱姆， ",
+			"具有当前的生命值。"
 		]
 	},
 	"Slimebound:SplitDailyPower": {
-		"NAME": "Ҫ������",
+		"NAME": "要分裂啦",
 		"DESCRIPTIONS": [
-			"������˱��غϽ�Ҫ���ѡ�"
+			"这个敌人本回合将要分裂。"
 		]
 	},
 	"Slimebound:BuffAttackSlimesPower": {
-		"NAME": "�������ö�",
+		"NAME": "升级：好斗",
 		"DESCRIPTIONS": [
-			"�ö�ʷ��ķ��ɵ��˺����� ",
-			" �㡣"
+			"好斗史莱姆造成的伤害增加 ",
+			" 点。"
 		]
 	},
 	"Slimebound:BuffPoisonSlimesPower": {
-		"NAME": "����������",
+		"NAME": "升级：酸性",
 		"DESCRIPTIONS": [
-			"����ʷ��ķ������ж����� ",
-			" �㡣"
+			"酸性史莱姆给予的中毒增加 ",
+			" 层。"
 		]
 	},
 	"Slimebound:BuffSlimingSlimesPower": {
-		"NAME": "����������",
+		"NAME": "升级：舔舐",
 		"DESCRIPTIONS": [
-			"����ʷ��ķ������Һ���� ",
-			" �㡣"
+			"污泥史莱姆给予的黏液增加 ",
+			" 层。"
 		]
 	},
 	"Slimebound:BuffShieldSlimesPower": {
-		"NAME": "��������Ѫ",
+		"NAME": "升级：吸血",
 		"DESCRIPTIONS": [
-			"��Ѫʷ��ķ��ɵ��˺����� ",
-			" �㡣"
+			"吸血史莱姆造成的伤害增加 ",
+			" 点。"
 		]
 	},
 	"Slimebound:HexSlimePerTurnPower": {
-		"NAME": "����֮��",
+		"NAME": "鬼火之力",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ��ֳһ������ʷ��ķ��",
-			"�ڽ������� ",
-			" ���غϿ�ʼʱ��ֳһ������ʷ��ķ��"
+			"在下个回合开始时分裂出1只鬼火史莱姆。",
+			"在接下来第 ",
+			" 个回合开始时分裂出1只鬼火史莱姆。"
 		]
 	},
 	"Slimebound:ProtectTheBoss": {
-		"NAME": "�������",
+		"NAME": "保护老大",
 		"DESCRIPTIONS": [
-			"���������ֳ��ʷ��ķ���赲����һ���ܵ����˺���",
-			"���������ֳ��ʷ��ķ���赲���� #b",
-			" ���ܵ����˺���"
+			"牺牲最早分裂出的史莱姆来阻挡你下1次受到的伤害。",
+			"牺牲最早分裂出的史莱姆来阻挡你下 #b",
+			" 次受到的伤害。"
 		]
 	},
 	"Slimebound:SplitForLessPower": {
-		"NAME": "��������",
+		"NAME": "活性污泥",
 		"DESCRIPTIONS": [
-			"��ֳ��Ҫ������ֵ���� ",
-			" �㡣ÿ�غϽ� ",
-			" ����������Ƽ���������ơ�",
-			" ����������Ƽ���������ơ�"
+			"分裂出需要的生命值减少 ",
+			" 点。每回合将 ",
+			" 张随机分裂牌加入你的手牌。",
+			" 张随机分裂牌加入你的手牌。"
 		]
 	},
 	"Slimebound:ComboAttackPower": {
-		"NAME": "����ʿ��",
+		"NAME": "身先士卒",
 		"DESCRIPTIONS": [
-			"ÿ�غϴ���ĵ�һ�Ź����ƻ�ʹ�������ֳ����ʷ��ķ���𹥻���",
-			"ÿ�غϴ����ǰ ",
-			" �Ź����ƻ�ʹ�������ֳ����ʷ��ķ���𹥻���"
+			"每回合打出的第1张攻击牌会使你最早分裂出的史莱姆发起攻击。",
+			"每回合打出的前 ",
+			" 张攻击牌会使你最早分裂出的史莱姆发起攻击。"
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
-		"NAME": "׼������",
+		"NAME": "伺机待发",
 		"DESCRIPTIONS": [
-			"�ڱ��غϱ���",
-			" ���ơ�",
-			" ���ơ�"
+			"在本回合保留",
+			" 张牌。",
+			" 张牌。"
 		]
 	},
 	"Slimebound:EnergizedSlimeboundPower": {
-		"NAME": "���Ի�",
+		"NAME": "活性化",
 		"DESCRIPTIONS": [
-			"�¸��غϻ�� #b",
-			" ����� [E]��",
-			" ����� [E]��",
+			"下个回合获得 #b",
+			" 点额外的 [E]。",
+			" 点额外的 [E]。",
 			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
 		]
 	},
 	"Slimebound:SelfFormingGooPower": {
-		"NAME": "�Գ����Һ",
+		"NAME": "自成型黏液",
 		"DESCRIPTIONS": [
-			"ÿ����ʧȥ����ֵ����� ",
-			" �㻤�ס�"
+			"每当你失去生命值，获得 ",
+			" 点格挡。"
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
-		"NAME": "������",
+		"NAME": "超负荷",
 		"DESCRIPTIONS": [
-			"���¸��غϣ�Ϸ�����ֳ������ʷ��ķ��",
-			" �غϺ�Ϸ�����ֳ������ʷ��ķ��"
+			"在下个回合，吸收你分裂出的所有史莱姆。",
+			" 回合后，吸收你分裂出的所有史莱姆。"
 		]
 	},
 	"Slimebound:TackleDebuffPower": {
-		"NAME": "����",
+		"NAME": "束缚",
 		"DESCRIPTIONS": [
-			"��ײ�ƶԸù��������� ",
-			" ���˺���"
+			"冲撞  牌对该怪物额外造成 ",
+			" 点伤害。"
 		]
 	},
 	"Slimebound:LoseThornsPower": {
-		"NAME": "�ջؼ��",
+		"NAME": "收回尖刺",
 		"DESCRIPTIONS": [
-			"������¸��غ�ʧȥ ",
-			" �㾣����"
+			"下个回合开始时失去 ",
+			" 层荆棘。"
 		]
 	},
 	"Slimebound:SlimedThornsPower": {
-		"NAME": "����ǽ��",
+		"NAME": "活体墙壁",
 		"DESCRIPTIONS": [
-			"Ϊ���غϹ�����ĵ��˸��� ",
-			" ���Һ"
+			"给予本回合攻击你的敌人 ",
+			" 层黏液"
 		]
 	},
 	"Slimebound:PreventSlimeDecayPower": {
-		"NAME": "�����Һ",
+		"NAME": "浸入黏液",
 		"DESCRIPTIONS": [
-			"���غ��Һ����������١�",
-			"�������� ",
-			" ���غϣ��Һ����������١�"
+			"本回合黏液层数不会减少。",
+			"接下来的 ",
+			" 个回合，黏液层数不会减少。"
 		]
 	},
 	"Slimebound:DuplicatedFormPower": {
-		"NAME": "��ֳ��̬",
+		"NAME": "增殖形态",
 		"DESCRIPTIONS": [
-			"ÿ�غ���ʹ�õĵ�һ��Ŀ��Ϊ���˵��ƽ�������Ρ�",
-			"ÿ�غ���ʹ�õ�ǰ #b",
-			" ��Ŀ��Ϊ���˵��ƽ�������Ρ�"
+			"每回合你使用的第1张目标为敌人的牌将打出2次。",
+			"每回合你使用的前 #b",
+			" 张目标为敌人的牌将打出2次。"
 		]
 	},
 	"Slimebound:DuplicatedFormNoHealPower": {
-		"NAME": "����",
+		"NAME": "减半",
 		"DESCRIPTIONS": [
-			"����ս��������������ֵ���� ",
-			" ��"
+			"本场战斗中你的最大生命值减少 ",
+			" 点"
 		]
 	},
 	"Slimebound:DuplicatedFormEnergyPower": {
-		"NAME": "�",
+		"NAME": "搭档",
 		"DESCRIPTIONS": [
-			"ÿ�غϻ�� ",
-			" [E] ��"
+			"每回合获得 ",
+			" [E] 。"
 		]
 	},
 	"Slimebound:GluttonyPower": {
-		"NAME": "��ʳ",
+		"NAME": "暴食",
 		"DESCRIPTIONS": [
-			"ÿ���غ����һ��ʹ��������ʱ���� ",
-			" ���������������������ơ�"
+			"每个回合你第1次使用舔舐牌时，将 ",
+			" 张随机舔舐牌加入你的手牌。"
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
-		"NAME": "��ʳ+",
+		"NAME": "暴食+",
 		"DESCRIPTIONS": [
-			"ÿ�غϽ� ",
-			" ���������������������ơ�",
-			" ���������������������ơ�"
+			"每回合将 ",
+			" 张随机舔舐牌加入你的手牌。",
+			" 张随机舔舐牌加入你的手牌。"
 		]
 	},
 	"Slimebound:PoisonThornsPower": {
-		"NAME": "���Խ���",
+		"NAME": "酸性胶团",
 		"DESCRIPTIONS": [
-			"ÿ�����ܵ����������蹥���� ",
-			" ���ж���"
+			"每当你受到攻击，给予攻击者 ",
+			" 层中毒。"
 		]
 	},
 	"Slimebound:SlimeRitualPower": {
-		"NAME": "��ʽ",
+		"NAME": "仪式",
 		"DESCRIPTIONS": [
-			"ÿ���غϿ�ʼʱ����� ",
-			" ��������"
+			"每个回合开始时，获得 ",
+			" 点力量。"
 		]
 	},
 	"Slimebound:RecyclingPower": {
-		"NAME": "����",
+		"NAME": "回收",
 		"DESCRIPTIONS": [
-			"����ĻغϿ�ʼʱ���������ƶ��е� ",
-			" �ź���Ϊ0������Ʒ���������ơ�",
-			" �ź���Ϊ0������Ʒ���������ơ�"
+			"在你的回合开始时，随机将已被消耗的 ",
+			" 张0费牌加入你的手牌。",
+			" 张0费牌加入你的手牌。"
 		]
 	},
 	"Slimebound:RecyclingPowerUpgraded": {
-		"NAME": "����+",
+		"NAME": "回收+",
 		"DESCRIPTIONS": [
-			"ÿ��������һ�ź���Ϊ0���ƣ��ظ� ",
-			" ������ֵ����1���ơ�"
+			"每当你消耗一张耗能为0的牌，回复 ",
+			" 点生命值并抽1张牌。"
 		]
 	},
 	"Slimebound:AcidTonguePower": {
-		"NAME": "������ͷ",
+		"NAME": "酸性舌头",
 		"DESCRIPTIONS": [
-			"�����Һ��ͬʱ������ ",
-			" ���ж���"
+			"给予黏液的同时，给予 ",
+			" 层中毒。"
 		]
 	},
 	"Slimebound:AcidTonguePowerUpgraded": {
-		"NAME": "�Һ��ͷ",
+		"NAME": "黏液舌头",
 		"DESCRIPTIONS": [
-			"�����Һ��Ч��������� ",
-			" ���Һ��"
+			"给予黏液的效果额外给予 ",
+			" 层黏液。"
 		]
 	},
 	"Slimebound:SelfDamageSlimedPower": {
-		"NAME": "�Һ�Ľ�",
+		"NAME": "黏液四溅",
 		"DESCRIPTIONS": [
-			"ÿ��������Ļغ�ʧȥ����ֵ��Ϊһ��������˸���",
-			" ���Һ��"
+			"每当你在你的回合失去生命值，给予随机1个敌人",
+			" 层黏液。"
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "�����ײ",
+		"NAME": "烈焰冲撞",
 		"DESCRIPTIONS": [
-			"��ײ����ɵ��˺����� ",
-			" �㡣"
+			"冲撞  牌造成的伤害增加 ",
+			" 点。"
 		]
 	},
 	"Slimebound:PolyBeamAgainPower": {
-		"NAME": "�л�����",
+		"NAME": "切换光束",
 		"DESCRIPTIONS": [
-			"�»غϿ�ʼʱ��������ع����� ",
-			"�� ",
-			"�غϺ�ĻغϿ�ʼʱ��������ع�����"
+			"下回合开始时，打出多重光束。 ",
+			"在接下来的 ",
+			"回合开始时，打出多重光束。"
 		]
 	},
 	"Slimebound:PolyBeamAgainPowerUpgraded": {
-		"NAME": "�л�����+",
+		"NAME": "切换光束+",
 		"DESCRIPTIONS": [
-			"�»غϿ�ʼʱ��������ع���+�� ",
-			"�� ",
-			" �غϺ�ĻغϿ�ʼʱ��������ع���+��"
+			"下回合开始时，打出多重光束+。 ",
+			"在接下来的 ",
+			" 回合开始时，打出多重光束+。"
 		]
 	},
 	"Slimebound:FirmFortitudePower": {
-		"NAME": "����",
+		"NAME": "刚烈",
 		"DESCRIPTIONS": [
-			"�´��㽫���Լ��Ļغ��ܵ��˺�ʱ��һ��������˴�����ܡ�",
-			"�� ",
-			" ���㽫���Լ��Ļغ��ܵ��˺�ʱ��һ��������˴�����ܡ�"
+			"下次你将在自己的回合失去生命时，1个随机敌人代你承受。",
+			"下 ",
+			" 次你将在自己的回合失去生命时，1个随机敌人代你承受。"
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
-		"NAME": "����",
+		"NAME": "蓄力",
 		"DESCRIPTIONS": [
-			"������¸��غϣ���� ",
-			" ��������"
+			"在你的下个回合，获得 ",
+			" 点力量。"
 		]
 	},
 	"Slimebound:NextTurnGainSlimeCrush": {
-		"NAME": "׼��ײ��",
+		"NAME": "准备撞击",
 		"DESCRIPTIONS": [
-			"������¸��غϣ���һ��ʷ��ķײ���������ơ�",
-			"������¸��غϣ��� ",
-			" ��ʷ��ķײ���������ơ�"
+			"在你的下个回合，将1张史莱姆撞击加入手牌。",
+			"在你的下个回合，将 ",
+			" 张史莱姆撞击加入手牌。"
 		]
 	},
 	"Slimebound:StunnedPower": {
-		"NAME": "��ƣ����",
+		"NAME": "精疲力尽",
 		"DESCRIPTIONS": [
-			"��������¸��غϡ�",
-			"������������� ",
-			" ���غϡ�"
+			"跳过你的下个回合。",
+			"跳过你接下来的 ",
+			" 个回合。"
 		]
 	},
 	"Slimebound:SearingPower": {
-		"NAME": "����",
+		"NAME": "烧伤",
 		"DESCRIPTIONS": [
-			"ÿ�غ��ܵ� ",
-			" ���˺���"
+			"每回合受到 ",
+			" 点伤害。"
 		]
 	},
 	"Slimebound:NextTurnGainHyperBeam": {
-		"NAME": "׼������",
+		"NAME": "准备射爆",
 		"DESCRIPTIONS": [
-			"������¸��غϣ���һ�ų��ܹ����������ơ�",
-			"������¸��غϣ��� ",
-			" �ų��ܹ����������ơ�"
+			"在你的下个回合，将1张 #g超能光束 加入手牌。",
+			"在你的下个回合，将 ",
+			" 张超能光束加入手牌。"
 		]
 	},
 	"Slimebound:NextTurnGainDivider": {
-		"NAME": "׼������",
+		"NAME": "准备分裂",
 		"DESCRIPTIONS": [
-			"������¸��غϣ���һ�ŷ��Ѽ������ơ�",
-			"������¸��غϣ��� ",
-			" �ŷ��Ѽ������ơ�"
+			"在你的下个回合，将1张 #g分裂 加入手牌。",
+			"在你的下个回合，将 ",
+			" 张分裂加入手牌。"
 		]
 	},
 	"Slimebound:StudyAutomatonPower": {
-		"NAME": "ѧϰ��е��ż",
+		"NAME": "学习铜制机械人偶",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ�Ż�е��ż�ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ�Ż�е��ż�ơ�"
+			"在下个回合开始时获得1张机械人偶牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张机械人偶牌。"
 		]
 	},
 	"Slimebound:StudyAutomatonPowerUpgraded": {
-		"NAME": "ѧϰ��е��ż+",
+		"NAME": "学习铜制机械人偶+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ��������Ļ�е��ż�ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ��������Ļ�е��ż�ơ�"
+			"在下个回合开始时获得1张升级后的机械人偶牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的机械人偶牌。"
 		]
 	},
 	"Slimebound:StudyAwakenedPower": {
-		"NAME": "ѧϰ������",
+		"NAME": "学习觉醒者",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ�ž������ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ�ž������ơ�"
+			"在下个回合开始时获得1张觉醒者牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张觉醒者牌。"
 		]
 	},
 	"Slimebound:StudyAwakenedPowerUpgraded": {
-		"NAME": "ѧϰ������+",
+		"NAME": "学习觉醒者+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ��������ľ������ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ��������ľ������ơ�"
+			"在下个回合开始时获得1张升级后的觉醒者牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的觉醒者牌。"
 		]
 	},
 	"Slimebound:AwakenedOnePower": {
-		"NAME": "�ڰ���ʽ",
+		"NAME": "黑暗仪式",
 		"DESCRIPTIONS": [
-			"���������˱��غ�û�й�������� ",
-			" ��������"
+			"如果这个敌人本回合没有攻击，获得 ",
+			" 点力量。"
 		]
 	},
 	"Slimebound:StudyChampPower": {
-		"NAME": "ѧϰ��һ��ʿ",
+		"NAME": "学习第一勇士",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ�ŵ�һ��ʿ�ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ�ŵ�һ��ʿ�ơ�"
+			"在下个回合开始时获得1张第一勇士牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张第一勇士牌。"
 		]
 	},
 	"Slimebound:StudyChampPowerUpgraded": {
-		"NAME": "ѧϰ��һ��ʿ+",
+		"NAME": "学习第一勇士+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ��������ĵ�һ��ʿ�ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ��������ĵ�һ��ʿ�ơ�"
+			"在下个回合开始时获得1张升级后的第一勇士牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的第一勇士牌。"
 		]
 	},
 	"Slimebound:StudyCollectorPower": {
-		"NAME": "ѧϰ�ղؼ�",
+		"NAME": "学习收藏家",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ���ղؼ��ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ���ղؼ��ơ�"
+			"在下个回合开始时获得1张收藏家牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张收藏家牌。"
 		]
 	},
 	"Slimebound:StudyCollectorPowerUpgraded": {
-		"NAME": "ѧϰ�ղؼ�+",
+		"NAME": "学习收藏家+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ����������ղؼ��ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ����������ղؼ��ơ�"
+			"在下个回合开始时获得1张升级后的收藏家牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的收藏家牌。"
 		]
 	},
 	"Slimebound:StudyGuardianPower": {
-		"NAME": "ѧϰ�ػ���",
+		"NAME": "学习守护者",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ���ػ����ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ���ػ����ơ�"
+			"在下个回合开始时获得1张守护者牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张守护者牌。"
 		]
 	},
 	"Slimebound:StudyGuardianPowerUpgraded": {
-		"NAME": "ѧϰ�ػ���+",
+		"NAME": "学习守护者+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ����������ػ����ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ����������ػ����ơ�"
+			"在下个回合开始时获得1张升级后的守护者牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的守护者牌。"
 		]
 	},
 	"Slimebound:StudyHexaghostPower": {
-		"NAME": "ѧϰ��������",
+		"NAME": "学习六火亡魂",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ�����������ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ�����������ơ�"
+			"在下个回合开始时获得1张六火亡魂牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张六火亡魂牌。"
 		]
 	},
 	"Slimebound:StudyHexaghostPowerUpgraded": {
-		"NAME": "ѧϰ��������+",
+		"NAME": "学习六火亡魂+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ������������������ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ������������������ơ�"
+			"在下个回合开始时获得1张升级后的六火亡魂牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的六火亡魂牌。"
 		]
 	},
 	"Slimebound:StudyShapesPower": {
-		"NAME": "ѧϰ��״",
+		"NAME": "学习甜圈八体",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ����Ȧ�Ͱ����ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ����Ȧ�Ͱ����ơ�"
+			"在下个回合开始时获得1张甜圈和八体牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张甜圈和八体牌。"
 		]
 	},
 	"Slimebound:StudyShapesPowerUpgraded": {
-		"NAME": "ѧϰ��״+",
+		"NAME": "学习甜圈八体+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ�����������Ȧ�Ͱ����ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ�����������Ȧ�Ͱ����ơ�"
+			"在下个回合开始时获得1张升级后的甜圈和八体牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的甜圈和八体牌。"
 		]
 	},
 	"Slimebound:StudyTimeEaterPower": {
-		"NAME": "ѧϰʱ��������",
+		"NAME": "学习时间吞噬者",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ��ʱ���������ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ��ʱ���������ơ�"
+			"在下个回合开始时获得1张时间吞噬者牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张时间吞噬者牌。"
 		]
 	},
 	"Slimebound:StudyTimeEaterPowerUpgraded": {
-		"NAME": "ѧϰʱ��������+",
+		"NAME": "学习时间吞噬者+",
 		"DESCRIPTIONS": [
-			"���¸��غϿ�ʼʱ���һ���������ʱ���������ơ�",
-			"�ڽ������� ",
-			" �غϿ�ʼʱ���һ���������ʱ���������ơ�"
+			"在下个回合开始时获得1张升级后的时间吞噬者牌。",
+			"在接下来的 ",
+			" 回合开始时获得1张升级后的时间吞噬者牌。"
 		]
 	}
 }
