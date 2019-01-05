@@ -1,33 +1,33 @@
 {
   "Slimebound:SlimedPotion": {
-    "NAME": "��װճҺ",
+    "NAME": "罐装粘液",
     "DESCRIPTIONS": [
-      "���� #b",
-      " ���Һ��"
+      "给予 #b",
+      " 层黏液。"
     ]
   },
 
   "Slimebound:SlimyTonguePotion": {
-    "NAME": "�Һ����",
+    "NAME": "黏液精华",
     "DESCRIPTIONS": [
-      "����ս���У�ÿ�θ����Һʱ��������� #b",
-      " ���Һ��"
+      "本场战斗中，每次给予黏液时，额外给予 #b",
+      " 层黏液。"
     ]
   },
 
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "ƿװ����",
+    "NAME": "瓶装从者",
     "DESCRIPTIONS": [
-      "��ֳ ",
-      " �����ʷ��ķ��"
+      "分裂出 ",
+      " 只随机史莱姆。"
     ]
   },
 
   "Slimebound:ThreeZeroPotion": {
-    "NAME": "��������",
+    "NAME": "稠化饮料",
     "DESCRIPTIONS": [
-      "Add #b",
-      " random 0-cost cards to your hand."
+      "在你的手牌中加入 #b",
+      " 张随机0费牌。"
     ]
   }
 }
