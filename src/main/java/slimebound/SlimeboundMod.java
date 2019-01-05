@@ -507,7 +507,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         String language = "eng";
 
-        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+       if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
 
         logger.info("begin editing strings");
         String relicStrings = Gdx.files.internal("localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
