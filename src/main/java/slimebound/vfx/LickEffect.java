@@ -57,6 +57,7 @@ public class LickEffect extends AbstractGameEffect {
         this.startingDuration = duration;
         this.tongueColor=tongueColor;
         this.color = tongueColor;
+        this.renderBehind = false;
 
     }
 

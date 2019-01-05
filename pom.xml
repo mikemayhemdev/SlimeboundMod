@@ -3,7 +3,7 @@
 
     <groupId>slimebound</groupId>
     <artifactId>slimebound</artifactId>
-    <version>v1.0.5</version>
+    <version>v1.0.9</version>
     <packaging>jar</packaging>
 
     <name>Slimebound Mod</name>

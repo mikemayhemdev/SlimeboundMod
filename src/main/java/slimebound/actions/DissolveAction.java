@@ -134,8 +134,13 @@ public class DissolveAction extends AbstractGameAction {
 
 
 
+        if (c2.isCostModifiedForTurn){
+            this.extraCards += c2.costForTurn;
+        } else{
+            this.extraCards += c2.cost;
+        }
 
-        for (int i = 0; i < (c2.cost + this.extraCards); i++) {
+        for (int i = 0; i < (this.extraCards); i++) {
             AbstractCard cZero;
             if (tmp.size() > 0){
              cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));

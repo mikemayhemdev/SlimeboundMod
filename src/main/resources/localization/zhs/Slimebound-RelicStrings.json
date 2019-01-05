@@ -1,0 +1,88 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "黏液之心",
+    "FLAVOR": "绝不浪费一滴黏液！",
+    "DESCRIPTIONS": [
+      "在战斗开始时分殖一个随机史莱姆。 NL 战斗结束时，每个史莱姆为你回复 #b3 点生命值。"
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "黏液腐心",
+    "FLAVOR": "浪费一点也没关系。",
+    "DESCRIPTIONS": [
+      "替代 #g黏液之心 。 每个回合开始时获得 [E] 。 NL 战斗结束时，每个史莱姆为你回复 #b3 点生命值。"
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "黏质断尾",
+    "FLAVOR": "由黏液包裹的一条断尾，战斗时可以迷惑敌人。",
+    "DESCRIPTIONS": [
+      "当你的生命值低于50%时，分殖一个酸性史莱姆，然后你下一次承受的伤害将以移除你最早分裂出的软泥怪代替。（每场战斗最多生效一次）",
+      "这个遗物在本场战斗中已经使用过啦，下次战斗才能继续使用。"
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "黏黏石",
+    "FLAVOR": "据说它能根据你的情绪获得力量",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，分殖一个舔舐史莱姆并获得 #b1 活性。"
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "黏化尖塔",
+    "FLAVOR": "永远在分裂中。为啥这是个遗物？因为我不知道怎么把自定义mod加到激活mod的UI里！",
+    "DESCRIPTIONS": [
+      "#b自定义模式 NL 所有敌人在生命值低于50%时分裂成两个史莱姆敌人。"
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "遗弃黏液",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在战斗开始时，分殖一个遗弃史莱姆。 NL 在休息处，你可以献上一张 #g罕见牌 使它造成的的伤害+1，或献上一张 #y稀有牌 使它造成的伤害+2，或献上一张 #r诅咒牌 使它造成的伤害-2."
+    ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "贪婪黏液",
+    "FLAVOR": "尖塔里找到的囤金子的朋友。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，分殖一个贪婪史莱姆。 NL 在休息处，贪婪粘液会吞食50金币并使它造成的伤害+1。"
+    ]
+  },
+  "Slimebound:PreparedRelic": {
+    "NAME": "黏茶具套装",
+    "FLAVOR": "绝不是夜宵的好餐具。",
+    "DESCRIPTIONS": [
+      "你在休息处后遭遇的下一场战斗将以一张准备好的牌开始第一个回合，它的消耗变为0。"
+    ]
+  },
+  "Slimebound:StudyCardRelic": {
+    "NAME": "小小圆礼帽",
+    "FLAVOR": "谁掌控了这顶礼帽，谁就掌控了这座尖塔！",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，将一张消耗为0的研究尖塔加入你的手牌。"
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "黏液居民",
+    "FLAVOR": "是它跟着我回家的，我能养它吗？",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，分殖一个好斗史莱姆。"
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "黏头骨",
+    "FLAVOR": "一个非常恶心的异蛇头骨，胶水一样粘在上面的灰尘和污垢让它又脏又黏。",
+    "DESCRIPTIONS": [
+      "每当你给予敌人 #y黏液 ，额外给予 #b",
+      " 层 #y黏液."
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "史莱姆玩偶",
+    "FLAVOR": "太可爱了。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，分殖一个吸血史莱姆并获得一个史莱姆槽位。"
+    ]
+  }
+}
