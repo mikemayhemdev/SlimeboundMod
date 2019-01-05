@@ -1,22 +1,22 @@
-Jan 05, 2019 6:10:35 AM com.megacrit.moduploader.Main main
+Jan 05, 2019 7:54:31 AM com.megacrit.moduploader.Main main
 FINE: programStr=D:/SteamLibrary/steamapps/common/SlayTheSpire/mod-uploader.jar
-Jan 05, 2019 6:10:35 AM com.megacrit.moduploader.Uploader writeSteamAppIDFile
+Jan 05, 2019 7:54:31 AM com.megacrit.moduploader.Uploader writeSteamAppIDFile
 FINE: The file 'steam_appid.txt' exists. Not creating it...
-Jan 05, 2019 6:10:35 AM com.megacrit.moduploader.Uploader connectToSteam
+Jan 05, 2019 7:54:32 AM com.megacrit.moduploader.Uploader connectToSteam
 INFO: ACCOUNT ID: 66263554
-Jan 05, 2019 6:10:36 AM com.megacrit.moduploader.Uploader updateItemInfo
+Jan 05, 2019 7:54:32 AM com.megacrit.moduploader.Uploader updateItemInfo
 INFO: Submitting workshop item update
-Jan 05, 2019 6:10:39 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+Jan 05, 2019 7:54:35 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
 INFO: UploadingContent .
-Jan 05, 2019 6:10:40 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+Jan 05, 2019 7:54:36 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
 INFO: UploadingContent . .
-Jan 05, 2019 6:10:41 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+Jan 05, 2019 7:54:37 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
 INFO: UploadingContent . . .
-Jan 05, 2019 6:10:42 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
+Jan 05, 2019 7:54:38 AM com.megacrit.moduploader.Uploader lambda$updateItemInfo$0
 INFO: UploadingContent . . . .
-Jan 05, 2019 6:10:43 AM com.megacrit.moduploader.Uploader handleLicenseAgreement
+Jan 05, 2019 7:54:40 AM com.megacrit.moduploader.Uploader handleLicenseAgreement
 FINE: needsToAcceptWLA=false
-Jan 05, 2019 6:10:43 AM com.megacrit.moduploader.Uploader$Callback onSubmitItemUpdate
+Jan 05, 2019 7:54:40 AM com.megacrit.moduploader.Uploader$Callback onSubmitItemUpdate
 FINE: Successfully updated workshop item
-Jan 05, 2019 6:10:43 AM com.megacrit.moduploader.Uploader openWorkshopItemInSteamBrowser
+Jan 05, 2019 7:54:40 AM com.megacrit.moduploader.Uploader openWorkshopItemInSteamBrowser
 FINE: Opening url=steam://url/CommunityFilePage/1610056683 in browser...
