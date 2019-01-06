@@ -9,6 +9,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -120,12 +121,22 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     @SpireEnum
     public static AbstractCard.CardTags STUDY;
 
+    public static final boolean hasHubris;
+
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+
+
+    static {
+        hasHubris = Loader.isModLoaded("Hubris");
+        if (hasHubris) {
+            logger.info("Detected Hubris");
+        }
+    }
 
     public static final String getResourcePath(String resource) {
         return "SlimeboundImages/" + resource;
     }
 
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
     public SlimeboundMod() {
 
@@ -149,6 +160,9 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), SlimeboundEnum.SLIMEBOUND);
 
     }
+
+
+
 
 
     public void receivePostDungeonInitialize() {
@@ -507,7 +521,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         String language = "eng";
 
-       if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+       //if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
 
         logger.info("begin editing strings");
         String relicStrings = Gdx.files.internal("localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));

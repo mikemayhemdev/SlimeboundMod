@@ -57,6 +57,9 @@ public class FirmFortitudePower extends AbstractPower {
         this.isActive = true;
     }
 
+
+
+
     public int onLoseHp(int damageAmount) {
 
 

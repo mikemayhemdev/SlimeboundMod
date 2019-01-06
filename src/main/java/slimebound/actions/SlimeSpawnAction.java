@@ -1,5 +1,8 @@
 package slimebound.actions;
 
+import basemod.ReflectionHacks;
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -60,6 +63,10 @@ public class SlimeSpawnAction extends AbstractGameAction {
         if (AbstractDungeon.player.maxOrbs > 0) {
 
             int currentHealth = AbstractDungeon.player.currentHealth;
+
+
+            //currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
+
         /*int maxFortitudes = 0;
         if (AbstractDungeon.player.hasPower("FirmFortitudePower")) maxFortitudes = AbstractDungeon.player.getPower("FirmFortitudePower").amount;
         if (AbstractDungeon.player.hasPower("Buffer")) maxFortitudes = maxFortitudes + AbstractDungeon.player.getPower("Buffer").amount;

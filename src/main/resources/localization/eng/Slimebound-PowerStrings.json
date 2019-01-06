@@ -228,7 +228,7 @@
 			" more."
 		]
 	},
-	"SlimeboundSelfDamageSlimedPower": {
+	"Slimebound:SelfDamageSlimedPower": {
 		"NAME": "Stray Goop",
 		"DESCRIPTIONS": [
 			"Apply ",

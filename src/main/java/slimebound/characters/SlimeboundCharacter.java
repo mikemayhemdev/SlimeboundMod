@@ -238,15 +238,15 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public String getLocalizedCharacterName() {
-        return "The Slimebound";
+        return NAME;
     }
 
     public AbstractPlayer newInstance() {
-        return new SlimeboundCharacter("The Slimebound", SlimeboundEnum.SLIMEBOUND);
+        return new SlimeboundCharacter(NAME, SlimeboundEnum.SLIMEBOUND);
     }
 
     public String getSpireHeartText() {
-        return "Must... absorb... the Heart...";
+        return charStrings.TEXT[0] ;
     }
 
     public Color getSlashAttackColor() {
