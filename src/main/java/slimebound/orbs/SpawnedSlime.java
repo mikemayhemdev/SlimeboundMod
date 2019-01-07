@@ -173,18 +173,6 @@ public void spawnVFX(){
         }
     }
 }
- @Override
-    public void setSlot(int slotNum, int maxOrbs) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-            this.tX = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsX[slotNum];
-            this.tY = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
-
-        }
-
-
-
-        this.hb.move(this.tX, this.tY);
-    }
 
 
     public void onEndOfTurn() {
