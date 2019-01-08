@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -482,9 +483,10 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     }
 
 
+
+/*
     public void receiveEditKeywords() {
 
-        BaseMod.addKeyword(new String[]{"absorb"}, "Recombine with a spawned Slime, healing 3 HP.");
 
         BaseMod.addKeyword(new String[]{"split"}, "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
 
@@ -500,28 +502,40 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addKeyword("Plated Armor", new String[]{"plated armor","plated_armor"}, "Increases Block each turn. Reduced when you take damage.");
         BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grants Block for next turn.");
         BaseMod.addKeyword("Bronze Slime",new String[]{"bronze slime","bronze_slime"}, "Attacks for 6  and grants you 6 Block each turn.");
-        //BaseMod.addKeyword(new String[]{"tag-team"}, "Gain 1 Energy and draw 1 card per turn.");
         BaseMod.addKeyword(new String[]{"halved"}, "Your Max HP is cut in half this combat, losing HP if you are currently above half, and preventing healing beyond half.");
         BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
 
-        //BaseMod.addKeyword(new String[]{"useful"}, "1-cost card that grants 2 energy.");
         BaseMod.addKeyword("Ghostflame Slime",new String[]{"ghostflame slime","ghostflame_slime"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency.");
-        //BaseMod.addKeyword(new String[]{"burn"}, "Deals damage each turn.  Does not decay.");
         BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type. It costs 1 less.");
-        //BaseMod.addKeyword(new String[]{"regen"}, "Heal HP equal to Regen amount at end of turn, then reduce Regen by 1.");
-        //BaseMod.addKeyword(new String[]{"purge"}, "Removed from the game entirely when played (not Exhausted).");
         BaseMod.addKeyword(new String[]{"slow"}, "Receives 10% more damage per card played in a turn.");
         BaseMod.addKeyword(new String[]{"tackle"}, "High-damage Attacks that also deal a small amount of damage to you.");
         BaseMod.addKeyword("Spire Boss", new String[]{"spire boss","spire_boss"}, "Powerful 0-cost cards, inspired by the bosses of the Spire.");
 
 
     }
+*/
+    public void receiveEditKeywords() {
+        final Gson gson = new Gson();
+        String language = "eng";
+
+        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+
+        logger.info("begin editing strings");
+        final String json = Gdx.files.internal("localization/" + language + "/Slimebound-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+
+        final com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = (com.evacipated.cardcrawl.mod.stslib.Keyword[])gson.fromJson(json, (Class) com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+        if (keywords != null) {
+            for (final com.evacipated.cardcrawl.mod.stslib.Keyword keyword : keywords) {
+                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
 
     public void receiveEditStrings() {
 
         String language = "eng";
 
-       //if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+       if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
 
         logger.info("begin editing strings");
         String relicStrings = Gdx.files.internal("localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));

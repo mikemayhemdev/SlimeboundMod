@@ -444,7 +444,7 @@
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
   },
 "Slimebound:Hexaburn": {
-    "NAME": "Hexaburn",
+    "NAME": "Inferno",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
 "Slimebound:PrepareBeam": {
