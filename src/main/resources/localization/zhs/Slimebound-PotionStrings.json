@@ -1,9 +1,9 @@
 {
   "Slimebound:SlimedPotion": {
-    "NAME": "罐装粘液",
+    "NAME": "罐装黏液",
     "DESCRIPTIONS": [
       "给予 #b",
-      " 层黏液。"
+      " 层 黏液 。"
     ]
   },
 
@@ -16,9 +16,9 @@
   },
 
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "瓶装从者",
+    "NAME": "瓶装爪牙",
     "DESCRIPTIONS": [
-      "分裂出 ",
+      " 分裂 出 ",
       " 只随机史莱姆。"
     ]
   },

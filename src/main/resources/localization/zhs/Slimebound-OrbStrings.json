@@ -2,7 +2,7 @@
   "Slimebound:BronzeSlime": {
     "NAME": "青铜史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 伤害并给予你 ",
       " 点格挡。"
     ]
@@ -10,50 +10,50 @@
   "Slimebound:AttackSlime": {
     "NAME": "好斗史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 点伤害"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
-    "NAME": "碎片史莱姆",
+    "NAME": "破烂史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
-      " 点伤害。被吸收时不回复生命值而是立刻重生。"
+      "回合开始时造成 ",
+      " 点伤害。被吸收时不回复生命而是立刻重生。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
-      " 点伤害。被吸收时不回复生命值而是立刻重生。"
+      "回合开始时造成 ",
+      " 点伤害。被吸收时不回复生命而是立刻重生。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
-    "NAME": "火炬史莱姆",
+    "NAME": "火炬头史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 点伤害。每打出1张能力牌，造成的伤害+1。"
     ]
   },
   "Slimebound:CultistSlime": {
-    "NAME": "教徒史莱姆",
+    "NAME": "邪教徒史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 点伤害并提高下次造成的伤害2点。"
     ]
   },
   "Slimebound:ShieldSlime": {
-    "NAME": "吸血史莱姆",
+    "NAME": "水蛭史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 点伤害并给予你 ",
       " 点格挡。"
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "酸性史莱姆",
+    "NAME": "酸液史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 点伤害并给予 ",
       " 层中毒。"
     ]
@@ -61,7 +61,7 @@
   "Slimebound:SlimingSlime": {
     "NAME": "污泥史莱姆",
     "DESCRIPTION": [
-      "每回合开始时造成 ",
+      "回合开始时造成 ",
       " 点伤害并给予 ",
       " 层黏液。"
     ]

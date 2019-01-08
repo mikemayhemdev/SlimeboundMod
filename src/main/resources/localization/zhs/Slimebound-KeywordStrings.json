@@ -1,87 +1,87 @@
 [
      {
       "NAMES": [
-        "absorb"
+        "吸收"
       ],
-      "PROPERNAME": "Absorb",
-      "DESCRIPTION": "Recombine with a spawned Slime, healing 3 HP."
+      "PROPERNAME": "吸收",
+      "DESCRIPTION": "融合一只生成的史莱姆，恢复 3 点生命。"
     },
     {
       "NAMES": [
-        "split"
+        "分裂"
       ],
-      "PROPERNAME": "Split",
-      "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP."
+      "PROPERNAME": "分裂",
+      "DESCRIPTION": "失去 3 点生命，生成一只史莱姆仆从，在回合开始时发动攻击。如果没有空间， 吸收 最先召唤的史莱姆，恢复 3 点生命。"
     },
     {
       "NAMES": [
-        "slimed"
+        "黏液"
       ],
-      "PROPERNAME": "Slimed",
-      "DESCRIPTION": "The next attack deals increased damage, consuming the Slimed effect, and healing you for half the amount consumed. Half of Slimed is removed at end of turn."
+      "PROPERNAME": "黏液",
+      "DESCRIPTION": "下次攻击造成额外伤害，移除黏液效果，并恢复其层数一半的生命。回合结束时失去一半层数。"
     },
      {
       "NAMES": [
-        "potency"
+        "潜力"
       ],
-      "PROPERNAME": "Potency",
-      "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+      "PROPERNAME": "潜力",
+      "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
     },
      {
       "NAMES": [
-        "torch head slime",
+        "火炬头史莱姆",
         "torch_head_slime"
       ],
-      "PROPERNAME": "Torch Head Slime",
-      "DESCRIPTION": "Attacks for 9 each turn, and gains 1 damage when you play a Power."
+      "PROPERNAME": "火炬头史莱姆",
+      "DESCRIPTION": "发动攻击时造成 9 点伤害，每当你打出 1 张能力牌，提高 1 点伤害。"
     },
      {
       "NAMES": [
-        "bruiser slime",
+        "好斗史莱姆",
         "bruiser_slime",
         "bruiser slimes",
         "bruiser_slimes"
       ],
-      "PROPERNAME": "Bruiser Slime",
-      "DESCRIPTION": "Attacks for 4 each turn."
+      "PROPERNAME": "好斗史莱姆",
+      "DESCRIPTION": "发动攻击时造成 4 点伤害。"
     },
      {
       "NAMES": [
-        "cultist slime",
+        "邪教徒史莱姆",
         "cultist_slime"
       ],
-      "PROPERNAME": "Cultist Slime",
-      "DESCRIPTION": "Attacks for 6 each turn, then increases it's damage by 2."
+      "PROPERNAME": "邪教徒史莱姆",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，提升自身伤害 2 点。"
     },
      {
       "NAMES": [
-        "leeching slime",
+        "水蛭史莱姆",
         "leeching_slime",
         "leeching slimes",
         "leeching_slimes"
       ],
-      "PROPERNAME": "Leeching Slime",
-      "DESCRIPTION": "Attacks for 2 and grants you 2 Block each turn."
+      "PROPERNAME": "水蛭史莱姆",
+      "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予你 2 点格挡。"
     },
      {
       "NAMES": [
-        "acid slime",
+        "酸液史莱姆",
         "acid_slime",
         "acid slimes",
         "acid_slimes"
       ],
-      "PROPERNAME": "Acid Slime",
-      "DESCRIPTION": "Attacks for 1 and applies 2 Poison each turn."
+      "PROPERNAME": "酸液史莱姆",
+      "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 中毒。"
     },
      {
       "NAMES": [
-        "mire slime",
+        "污泥史莱姆",
         "mire_slime",
         "mire slimes",
         "mire_slimes"
       ],
-      "PROPERNAME": "Mire Slime",
-      "DESCRIPTION": "Attacks for 1 and applies 2 Slimed each turn."
+      "PROPERNAME": "污泥史莱姆",
+      "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 黏液。"
     },
      {
       "NAMES": [
@@ -93,26 +93,26 @@
     },
      {
       "NAMES": [
-        "bronze slime",
+        "青铜史莱姆",
         "bronze_slime"
       ],
       "PROPERNAME": "Bronze Slime",
-      "DESCRIPTION": "Attacks for 6  and grants you 6 Block each turn."
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，并给予你 6 点格挡。"
     },
     {
       "NAMES": [
-        "lick"
+        "舔舐"
       ],
-      "PROPERNAME": "Lick",
-      "DESCRIPTION": "0-cost cards that apply a variety of debuffs."
+      "PROPERNAME": "舔舐",
+      "DESCRIPTION": "以舔字结尾的一系列0费卡牌，给予敌人多种负面状态。"
     },
      {
       "NAMES": [
-        "ghostflame slime",
+        "鬼火史莱姆",
         "ghostflame_slime"
       ],
-      "PROPERNAME": "Ghostflame Slime",
-      "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
+      "PROPERNAME": "鬼火史莱姆",
+      "DESCRIPTION": "提供 1 点力量，1 点敏捷，2 点 潜力 。不会攻击，不受潜力影响。"
     },
     {
       "NAMES": [
@@ -130,18 +130,18 @@
     },
      {
       "NAMES": [
-        "tackle"
+        "冲撞"
       ],
-      "PROPERNAME": "Tackle",
-      "DESCRIPTION": "High-damage Attacks that also deal a small amount of damage to you."
+      "PROPERNAME": "冲撞",
+      "DESCRIPTION": "以冲撞结尾的一系列的高伤害，且会对自己造成伤害的牌。"
     },
      {
       "NAMES": [
-        "spire boss",
+        "尖塔首领",
         "spire_boss"
       ],
-      "PROPERNAME": "Spire Boss",
-      "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
+      "PROPERNAME": "尖塔首领",
+      "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西"
     }
 
 ]
