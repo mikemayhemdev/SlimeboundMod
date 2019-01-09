@@ -37,7 +37,7 @@ public class GuardianWhirl extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY_GUARDIAN);
         tags.add(SlimeboundMod.STUDY);
 
-        this.baseDamage = 1;
+        this.baseDamage = 2;
         this.isMultiDamage = true;
         this.exhaust = true;
 
@@ -50,7 +50,7 @@ public class GuardianWhirl extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_WHIRLWIND"));
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
 
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));

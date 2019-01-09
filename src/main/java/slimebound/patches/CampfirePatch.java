@@ -4,10 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.*;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BottledFlame;
-import com.megacrit.cardcrawl.relics.BottledLightning;
-import com.megacrit.cardcrawl.relics.BottledTornado;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.ui.campfire.DigOption;
@@ -41,6 +38,9 @@ public class CampfirePatch {
         if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID)) {
             campfireButtons.add(new ScrapBonfireOption(!AbstractDungeon.player.masterDeck.getPurgeableCards().isEmpty()));
 
+            if (AbstractDungeon.player.hasRelic(PeacePipe.ID)){
+                AbstractDungeon.player.relics.remove(AbstractDungeon.player.getRelic(PeacePipe.ID));
+            }
 
         }
     }

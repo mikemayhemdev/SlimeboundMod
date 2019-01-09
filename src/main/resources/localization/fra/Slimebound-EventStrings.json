@@ -1,0 +1,54 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "Le Boss s'approche",
+    "DESCRIPTIONS": [
+      "Une forte voix rÃ©sonne dans la Tour... NL NL #r~TRAITRE!!!~ NL NL L'immense slime tente de vous attraper, vous bloquant le passage. Il vous insulte de traître, et veut désormais vous hanter jusqu'à la fin des temps pour vous punir. Il semble terriblement énervé.",
+      "Est-ce que sera aussi simple?",
+      "Tout fait sens maintenant. NL Les trous de mémoire, l'ascension, l' #yAncient #yOne. NL NL Cela a toujours été ainsi. NL Et ce sera toujours ainsi. NL Tout sera de nouveau oublié bientôt..."
+    ],
+    "OPTIONS": [
+      "[Affronter] #rCombattre #rSlime #rBoss. Reward: #gPetit #gchapeau #gEtriqué.",
+      "[Fuir comme un lâche] #rCursed #r- #rShame."
+    ]
+  },
+  "Slimebound:WorldofGoop": {
+    "NAME": "Monde baveux",
+    "DESCRIPTIONS": [
+      "Vous tombez dans une flaque. NL @C'EST@ @FAIT@ @DE@ #g@BAVE@ #g@SLIME!!@ NL Calmly, Calmement, vous prenez une grande inspiration pour vous calmer. NL NL Vous en sortez tout docuement, quand vous remarquez un amas de #ygold appartenant à d'autres aventuriers, jonchant sur une créature qui semble intéréssé par tout ce métal.",
+      "Vous quittez la flaque de bave, repêchant tout le #ygold, laissant la créature avec une tête dépitée en voyant tout l'or s'envoler.",
+      "Vous négociez avec la créature et lui proposez de lui donner encore plus de métal si elle vient vous aider dans votre aventure. NL Vous et votre nouvel #gami quittez cette flaque de bave emsemble."
+    ],
+    "OPTIONS": [
+      "[Attraper l'or] #gGagnez #g75 #gOr.",
+      "[Recruter] #gEnrôler #yGreed #yOoze.",
+      "[Partir]"
+    ]
+  },
+  "Slimebound:SlimeTalk": {
+    "NAME": "Conversations",
+    "DESCRIPTIONS": [
+      "~SERVITEUR...~ NL #r~TRAITRE!!!~",
+      "~Qu'est-ce~ ~qu'il~ ~fait~ ~lui...~",
+      "~Il ne doit ~ ~pas~ ~partir...~",
+      "~Prevenez~ ~le~ ~Boss...~",
+      "Ce chapeau... NL #r~I~ #r~je dois~ #r~le~ #r~prendre!~",
+      "~Qu'est-ce~ ~qu'il...~",
+      "~...fait~ ~lui...~",
+      "~...à~ ~monter~ ~en Haut...~",
+      "~On~ ~doit~ ~l'arrêter~ ~maintenant...~",
+      "~c'est~ ~très~ ~étrange...~",
+      "~Il~ ~est~ ~comme nous...~"
+    ]
+  },
+  "Slimebound:ScrapOozePatch": {
+    "NAME": "Scrap Ooze Amical",
+    "DESCRIPTIONS": [
+      "Chaque slime s'étant éloigné du Boss est un potentiel ami.  Si vous lui offrez quelques babioles, le Scrap Ooze rejoindra votre aventure."
+    ],
+    "OPTIONS": [
+      "[Recruter] Enrôler le #gScrap #gOoze. #rBloqué si vous restez à l'intérieur.",
+      "[Recruter] Bloqué.",
+      "[Partir]"
+    ]
+  }
+}

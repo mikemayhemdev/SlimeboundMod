@@ -39,7 +39,7 @@ public class StudyTheSpire extends AbstractSlimeboundCard {
 
     public StudyTheSpire() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 3;
 
 
     }
@@ -51,17 +51,7 @@ public class StudyTheSpire extends AbstractSlimeboundCard {
 
         ArrayList<AbstractPower> powers = new ArrayList();
 
-        if (upgraded) {
-            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyAwakenedPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyShapesPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyChampPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyCollectorPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyGuardianPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
-            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
-        } else{
-
+        
             powers.add(new StudyAutomatonPower(p, p, this.magicNumber));
             powers.add(new StudyAwakenedPower(p, p, this.magicNumber));
             powers.add(new StudyShapesPower(p, p, this.magicNumber));
@@ -70,7 +60,7 @@ public class StudyTheSpire extends AbstractSlimeboundCard {
             powers.add(new StudyGuardianPower(p, p, this.magicNumber));
             powers.add(new StudyHexaghostPower(p, p, this.magicNumber));
             powers.add(new StudyTimeEaterPower(p, p, this.magicNumber));
-        }
+
 
 
         AbstractPower o = powers.get(AbstractDungeon.cardRng.random(powers.size() - 1));
@@ -90,8 +80,7 @@ public class StudyTheSpire extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
            // upgradeBaseCost(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
 
 
         }

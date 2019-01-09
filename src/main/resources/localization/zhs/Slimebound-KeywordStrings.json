@@ -33,7 +33,7 @@
         "torch_head_slime"
       ],
       "PROPERNAME": "火炬头史莱姆",
-      "DESCRIPTION": "发动攻击时造成 9 点伤害，每当你打出 1 张能力牌，提高 1 点伤害。"
+      "DESCRIPTION": "发动攻击时造成 6 点伤害， 潜力 对其影响翻倍。"
     },
      {
       "NAMES": [
@@ -51,7 +51,7 @@
         "cultist_slime"
       ],
       "PROPERNAME": "邪教徒史莱姆",
-      "DESCRIPTION": "发动攻击时造成 6 点伤害，提升自身伤害 2 点。"
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，提升自身伤害 1 点。"
     },
      {
       "NAMES": [
@@ -71,7 +71,7 @@
         "acid_slimes"
       ],
       "PROPERNAME": "酸液史莱姆",
-      "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 中毒。"
+      "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予敌人 1 层 中毒。"
     },
      {
       "NAMES": [
@@ -141,7 +141,14 @@
         "spire_boss"
       ],
       "PROPERNAME": "尖塔首领",
-      "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西"
+      "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
+    },
+     {
+      "NAMES": [
+        "查找策略"
+      ],
+      "PROPERNAME": "查找策略",
+      "DESCRIPTION": "随机将4张 冲撞 牌加入你的手牌。本场战斗中它们的耗能减少1。消耗"
     }
 
 ]

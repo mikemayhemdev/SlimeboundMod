@@ -38,6 +38,7 @@ import org.apache.logging.log4j.Logger;
 import slimebound.cards.*;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.dailymods.AllSplit;
+import slimebound.events.ArtOfSlimeWar;
 import slimebound.events.Hunted;
 import slimebound.events.WorldOfGoopSlimebound;
 import slimebound.helpers.PoisonVariable;
@@ -52,6 +53,7 @@ import slimebound.potions.SlimyTonguePotion;
 import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
+import slimebound.powers.GluttonyPower;
 import slimebound.relics.*;
 
 import java.nio.charset.StandardCharsets;
@@ -59,7 +61,7 @@ import java.util.List;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, OnCardUseSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
@@ -226,6 +228,16 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         return bonus;
     }
 
+    public static int getGluttonyBonus(AbstractCreature source) {
+        int bonus = 0;
+        if (source != null) {
+            if (source.hasPower(GluttonyPower.POWER_ID)) {
+                bonus = source.getPower(GluttonyPower.POWER_ID).amount;
+            }
+        }
+        return bonus;
+    }
+
     public void printEnemies(){
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             logger.info(monster.name + " HP " + monster.currentHealth);
@@ -349,6 +361,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new slimebound.cards.Flail());
         BaseMod.addCard(new slimebound.cards.DefensiveStance());
         BaseMod.addCard(new slimebound.cards.FaceSlap());
+        BaseMod.addCard(new slimebound.cards.Tackle());
         BaseMod.addCard(new slimebound.cards.LastStand());
         BaseMod.addCard(new slimebound.cards.Collect());
         BaseMod.addCard(new slimebound.cards.YouAreMine());
@@ -370,6 +383,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new GrowthPunch());
         BaseMod.addCard(new slimebound.cards.Recycling());
         BaseMod.addCard(new slimebound.cards.Recollect());
+        BaseMod.addCard(new slimebound.cards.Icky());
 
 
 
@@ -379,6 +393,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     }
 
     public void unlockEverything(){
+
         UnlockTracker.unlockCard(Strike_Slimebound.ID);
         UnlockTracker.unlockCard(Defend_Slimebound.ID);
         UnlockTracker.unlockCard(SplitBronze.ID);
@@ -519,6 +534,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         String language = "eng";
 
         if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+        if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
+
 
         logger.info("begin editing strings");
         final String json = Gdx.files.internal("localization/" + language + "/Slimebound-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
@@ -536,6 +553,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         String language = "eng";
 
        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+        if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
+
 
         logger.info("begin editing strings");
         String relicStrings = Gdx.files.internal("localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
@@ -633,12 +652,15 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
+        BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);
+        BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
+
 
         BaseMod.addEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, Exordium.ID);
 
     }
 
-
+/*
     public void receiveCardUsed(AbstractCard c) {
 
         if (c.type == AbstractCard.CardType.POWER) {
@@ -655,9 +677,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
            // this.printEnemies();
 
-
-
     }
+    */
 
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {

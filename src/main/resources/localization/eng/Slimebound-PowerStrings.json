@@ -173,8 +173,8 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "Gluttony",
 		"DESCRIPTIONS": [
-			"The first Lick card played each turn adds ",
-			" random Lick card to your hand."
+			"Lick cards apply ",
+			" more Slimed."
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {

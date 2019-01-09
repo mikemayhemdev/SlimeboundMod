@@ -1,16 +1,20 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.RandomLickCardAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
+import slimebound.cards.AbstractSlimeboundCard;
+import slimebound.orbs.SlimingSlime;
 
 
 public class GluttonyPower extends AbstractPower {
@@ -50,6 +54,38 @@ public class GluttonyPower extends AbstractPower {
 
     }
 
+    public void updateSlimedEffects(){
+
+
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+        if (c.hasTag(SlimeboundMod.LICK)) {
+            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+        }
+    }for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+            if (c.hasTag(SlimeboundMod.LICK)) {
+            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+        }
+    }for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c.hasTag(SlimeboundMod.LICK)) {
+            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+        }
+    }for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.hasTag(SlimeboundMod.LICK)) {
+            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+        }
+    }
+
+}
+
+    public void onInitialApplication() {
+        updateSlimedEffects();
+
+    }
+
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        updateSlimedEffects();
+    }
 
     public void updateDescription() {
 
@@ -60,6 +96,8 @@ public class GluttonyPower extends AbstractPower {
 
 
     }
+
+    /*
     public void onAfterCardPlayed(AbstractCard usedCard) {
         super.onAfterCardPlayed(usedCard);
         if (usedCard.hasTag(SlimeboundMod.LICK)){
@@ -75,13 +113,14 @@ public class GluttonyPower extends AbstractPower {
         }
     }
 
+
     public void atStartOfTurn() {
 
         timesTriggeredThisTurn=0;
 
 
     }
-
+*/
 
 }
 

@@ -127,7 +127,7 @@ public class DissolveAction extends AbstractGameAction {
 
         while(var3.hasNext()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
-            if (c.getValue().cost == 0 && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL && c.getValue().rarity != AbstractCard.CardRarity.CURSE && c.getValue().color == AbstractDungeon.player.getCardColor()) {
+            if (c.getValue().hasTag(SlimeboundMod.LICK)) {
                 tmp.add(c.getKey());
             }
         }

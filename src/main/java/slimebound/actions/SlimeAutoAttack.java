@@ -85,7 +85,7 @@ public class SlimeAutoAttack extends AbstractGameAction {
         if (mo != null) {
             if (this.CultistBuff) {
                 CardCrawlGame.sound.playA("VO_CULTIST_1A", .3f);
-                AbstractDungeon.actionManager.addToTop(new SlimeAutoCultistBuff(2,this.slime));
+                AbstractDungeon.actionManager.addToTop(new SlimeAutoCultistBuff(1,this.slime));
 
             }
 

@@ -32,7 +32,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static int baseSelfDamage;
     public static int originalDamage;
     public static int originalBlock;
@@ -47,8 +47,8 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 12;
-        this.upgradeDamage = 3;
+        this.baseDamage = this.originalDamage = 7;
+        this.upgradeDamage = 2;
         this.magicNumber = this.baseMagicNumber = 1;
 
 
@@ -66,46 +66,20 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
 
 
 
-        ArrayList<Integer> orbs = new ArrayList();
-        orbs.add(1);
-        orbs.add(2);
-        orbs.add(3);
-        orbs.add(4);
-        Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
+        if (!upgraded) {
+        Boolean o = AbstractDungeon.cardRng.randomBoolean();
+        if(o) {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
 
-        switch (o) {
-            case 1:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
-                break;
-            case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
-                break;
-            case 3:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
-                break;
-            case 4:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
-                break;
         }
 
-        if (upgraded) {
-            o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+        }
 
-            switch (o) {
-                case 1:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
-                    break;
-                case 2:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
-                    break;
-                case 3:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
-                    break;
-                case 4:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
-                    break;
-            }
-            }
 
 
     }

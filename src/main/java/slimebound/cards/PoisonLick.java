@@ -45,6 +45,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
         this.slimed = this.baseSlimed = 4;
         upgradeSlimed(0);
+        upgradeLickSlimed(0);
         this.exhaust = true;
         this.poison = 2;
 
@@ -60,7 +61,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.poison), this.poison, true, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY,0.6F,new Color(Color.FOREST)), 0.1F));
 
-        if (upgraded)  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+       // if (upgraded)  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
     }
 
@@ -78,10 +79,8 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-           // upgradeMagicNumber(2);
-            this.poison = 2;
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+           upgradeSlimed(2);
+            this.poison = 3;
 
         }
 

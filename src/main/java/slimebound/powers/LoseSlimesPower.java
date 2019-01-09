@@ -80,7 +80,7 @@ public class LoseSlimesPower extends AbstractPower {
 
            this.naturalclear = true;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, LoseSlimesPower.POWER_ID));
-
+            killSlimes();
         } else {
 
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, LoseSlimesPower.POWER_ID, 1));
@@ -90,8 +90,7 @@ public class LoseSlimesPower extends AbstractPower {
     }
 
 
-    public void onRemove() {
-        if (naturalclear) {
+    public void killSlimes() {
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 if (!AbstractDungeon.player.orbs.isEmpty()) {
                     for (AbstractOrb o : AbstractDungeon.player.orbs) {
@@ -109,7 +108,7 @@ public class LoseSlimesPower extends AbstractPower {
         }
 
 
-    }
+
 }
 
 

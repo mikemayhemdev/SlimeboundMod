@@ -38,7 +38,7 @@ public class SoulSicken extends AbstractSlimeboundCard {
 
 
         //this.baseDamage = 2;
-        this.exhaust = true;
+        //this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 3;
 
 
@@ -78,9 +78,7 @@ public class SoulSicken extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-            this.exhaust = false;
+            upgradeMagicNumber(2);
 
         }
 

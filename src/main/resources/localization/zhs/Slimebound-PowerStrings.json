@@ -173,8 +173,8 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "暴食",
 		"DESCRIPTIONS": [
-			"每个回合你第1次使用 舔舐 牌时，将 ",
-			" 张随机 舔舐 牌加入你的手牌。"
+			"舔舐 牌额外提供 ",
+			" 层 黏液。"
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -196,7 +196,7 @@
 		"NAME": "仪式",
 		"DESCRIPTIONS": [
 			"回合开始时，获得 ",
-			" 点力量。"
+			" 点 力量 。"
 		]
 	},
 	"Slimebound:RecyclingPower": {
@@ -270,7 +270,7 @@
 		"NAME": "蓄力",
 		"DESCRIPTIONS": [
 			"在你的下个回合，获得 ",
-			" 点力量。"
+			" 点 力量 。"
 		]
 	},
 	"Slimebound:NextTurnGainSlimeCrush": {
@@ -290,7 +290,7 @@
 		]
 	},
 	"Slimebound:SearingPower": {
-		"NAME": "烧伤",
+		"NAME": "灼伤",
 		"DESCRIPTIONS": [
 			"每回合受到 ",
 			" 点伤害。"
@@ -348,7 +348,7 @@
 		"NAME": "黑暗仪式",
 		"DESCRIPTIONS": [
 			"如果这个敌人本回合没有攻击，你获得 ",
-			" 点力量。"
+			" 点 力量 。"
 		]
 	},
 	"Slimebound:StudyChampPower": {

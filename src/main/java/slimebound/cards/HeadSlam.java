@@ -49,10 +49,12 @@ public class HeadSlam extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.BossCrystalImpactEffect(m.hb.cX, m.hb.cY), 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         if (m.type != AbstractMonster.EnemyType.BOSS) {
             AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m,p,1));
+
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         }
 

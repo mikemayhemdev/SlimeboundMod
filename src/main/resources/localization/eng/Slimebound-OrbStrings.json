@@ -32,14 +32,14 @@
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn. Gains 1 damage whenever you play a Power."
+      " damage at the start of your turn. Gains twice the normal benefit from Potency."
     ]
   },
   "Slimebound:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn, then increases it's damage by 2."
+      " damage at the start of your turn, then increases its damage by 1."
     ]
   },
   "Slimebound:ShieldSlime": {

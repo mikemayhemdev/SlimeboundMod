@@ -32,7 +32,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 5;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -42,9 +42,9 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = 40;
+        this.baseDamage = 60;
         this.exhaust = true;
-
+        this.isEthereal = true;
 
 
     }
@@ -58,7 +58,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
+        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
 
 
     }

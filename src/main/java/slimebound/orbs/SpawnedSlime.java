@@ -209,6 +209,8 @@ public void spawnVFX(){
             this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffPoisonSlimesPower.POWER_ID).amount;
         if (this instanceof SlimingSlime && AbstractDungeon.player.hasPower(BuffSlimingSlimesPower.POWER_ID))
             this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSlimingSlimesPower.POWER_ID).amount;
+        if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(PotencyPower.POWER_ID))
+            bonus = AbstractDungeon.player.getPower(PotencyPower.POWER_ID).amount;
 
 
         if (power != null) {

@@ -6,11 +6,15 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
+import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.events.Hunted;
 import slimebound.events.WorldOfGoopSlimebound;
+import slimebound.orbs.GreedOozeSlime;
+import slimebound.relics.GreedOozeRelic;
+import slimebound.relics.ScrapOozeRelic;
 import slimebound.relics.StudyCardRelic;
 
 @SpirePatch(clz=AbstractDungeon.class,method="initializeCardPools")
@@ -34,6 +38,14 @@ public class CityRemoveEventPatch {
                         return;
             }
 
+        }
+
+        if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID)){
+            dungeon_instance.eventList.remove(ScrapOoze.ID);
+        }
+        if (AbstractDungeon.player.hasRelic(GreedOozeRelic.ID)){
+            dungeon_instance.eventList.remove(WorldOfGoopSlimebound.ID);
+            dungeon_instance.eventList.remove(GoopPuddle.ID);
         }
 
 

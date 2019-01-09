@@ -47,6 +47,7 @@ public class SamplingLick extends AbstractSlimeboundCard {
         this.slimed = this.baseSlimed = 4;
         this.baseBlock = 3;
         upgradeSlimed(0);
+        upgradeLickSlimed(0);
         this.exhaust = true;
 
 
@@ -60,7 +61,7 @@ public class SamplingLick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY,0.6F,new Color(Color.GOLDENROD)), 0.1F));
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,p,this.block));
-        if (upgraded)  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+       // if (upgraded)  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
     }
 
@@ -71,9 +72,8 @@ public class SamplingLick extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeSlimed(2);
+            upgradeBlock(2);
         }
     }
 

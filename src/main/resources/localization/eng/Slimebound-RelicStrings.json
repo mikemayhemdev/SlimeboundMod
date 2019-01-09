@@ -48,7 +48,7 @@
     "NAME": "Greed Ooze",
     "FLAVOR": "A friend found in the Spire who hoards gold.",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn Greed Ooze. NL At Rest sites, Greed Ooze will take 50 of your gold, increasing it's damage by 1."
+      "At the start of combat, spawn Greed Ooze. NL At Rest sites, Greed Ooze will take 50 of your gold, increasing its damage by 1."
     ]
   },
   "Slimebound:PreparedRelic": {

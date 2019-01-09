@@ -41,7 +41,7 @@ public class SlimeAutoCultistBuff extends AbstractGameAction {
     public void update() {
 
 
-        slime.applyUniqueFocus(2);
+        slime.applyUniqueFocus(this.damage);
 
         this.isDone = true;
     }

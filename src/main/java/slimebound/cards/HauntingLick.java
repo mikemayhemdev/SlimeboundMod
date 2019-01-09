@@ -47,8 +47,9 @@ public class HauntingLick extends AbstractSlimeboundCard {
 
         this.exhaust=true;
         this.slimed = this.baseSlimed = 4;
+        this.magicNumber = this.baseMagicNumber = 1;
         upgradeSlimed(0);
-
+        upgradeLickSlimed(0);
     }
 
 
@@ -56,11 +57,11 @@ public class HauntingLick extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY,0.6F,new Color(ROYAL)), 0.1F));
 
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        //if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
 
     }
@@ -79,9 +80,9 @@ public class HauntingLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-          //  upgradeMagicNumber(2);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
+            upgradeSlimed(2);
+
 
         }
 

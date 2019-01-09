@@ -31,4 +31,10 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
     }
 
+    public void upgradeLickSlimed(int amount) {
+        this.baseSlimed += amount;
+        this.slimed = this.baseSlimed + SlimeboundMod.getGluttonyBonus(AbstractDungeon.player);
+        if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
+    }
+
 }

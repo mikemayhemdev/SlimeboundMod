@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -34,7 +35,7 @@ public class Hexaburn extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = 1;
+        this.baseDamage = 0;
         this.magicNumber = this.baseMagicNumber = 6;
         this.exhaust = true;
 
@@ -42,14 +43,22 @@ public class Hexaburn extends AbstractSlimeboundCard {
 
     }
 
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        int bonus = 0;
+        if (upgraded){
+         bonus = player.currentHealth / 6;
+        } else {
+            bonus = player.currentHealth / 10;
+        }
+        return tmp + bonus;
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ScreenOnFireEffect(), .6F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ScreenOnFireEffect(), .2F));
 
-        AbstractDungeon.actionManager.addToBottom(new DividerAction(
-
-                AbstractDungeon.getMonsters().getRandomMonster(true), new com.megacrit.cardcrawl.cards.DamageInfo(p, this.baseDamage, DamageInfo.DamageType.NORMAL), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 
 
     }
@@ -67,7 +76,9 @@ public class Hexaburn extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(1);
+            //upgradeDamage(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

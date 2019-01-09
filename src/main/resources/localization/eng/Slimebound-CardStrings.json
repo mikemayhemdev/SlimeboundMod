@@ -87,13 +87,13 @@
   },
 "Slimebound:SuperSplit": {
     "NAME": "Super Split",
-    "DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime four times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime four times. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime three times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime three times. NL Exhaust."
   },
 "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Deal !D! damage. Split into a random slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Split into a random slime twice. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser AND Acid slime. NL Exhaust."
   },
 "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -102,7 +102,7 @@
   },
   "Slimebound:SlimeTap": {
       "NAME": "Slime Tap",
-      "DESCRIPTION": "Absorb your oldest Slime. Gain [E] [E] and draw 2 cards. NL Exhaust.",
+      "DESCRIPTION": "Absorb your oldest Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
       "UPGRADE_DESCRIPTION": "Absorb your 2 oldest Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
       "EXTENDED_DESCRIPTION": [
         "Need... slimes..."
@@ -140,8 +140,8 @@
   },
 "Slimebound:FormABlockade": {
     "NAME": "Form A Blockade",
-    "DESCRIPTION": "Split into a random slime. NL Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "Split into a random slime twice. NL Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Gain !B! Block, plus !M! Block for each of your spawned Slimes. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Gain !B! Block, plus !M! Block for each of your spawned Slimes. NL Exhaust."
   },
 "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
@@ -149,8 +149,8 @@
   },
 "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Exhaust a card in your hand. Add a number of random 0-cost cards to your hand equal to it's cost. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "Exhaust a card in your hand. Add a number of random 0-cost cards to your hand equal to it's cost plus 1. NL Exhaust."
+    "DESCRIPTION": "Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
@@ -215,13 +215,13 @@
   },
 "Slimebound:Lick": {
     "NAME": "Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Slimed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Slimed. NL Draw a card. NL Exhaust."
   },
 "Slimebound:HauntingLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply 1 Vulnerable and !SlimeboundSlimed! Slimed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable and !SlimeboundSlimed! Slimed. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! Slimed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! Slimed. NL Draw a card. NL Exhaust."
   },
 "Slimebound:PoisonLick": {
     "NAME": "Poison Lick",
@@ -230,8 +230,8 @@
   },
 "Slimebound:MegaLick": {
     "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimePoison! Weak and !SlimeboundSlimed! Slimed to ALL enemies. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Slimed to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Slimed to ALL enemies. NL Draw a card. NL Exhaust."
   },
 "Slimebound:FocusedLick": {
     "NAME": "Focused Lick",
@@ -245,7 +245,7 @@
   },
 "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "The first card containing Lick you play each turn adds a random Lick card to your hand.",
+    "DESCRIPTION": "Lick cards apply !M! additional Slimed.",
     "UPGRADE_DESCRIPTION": "The first card containing Lick you play each turn adds 2 random Lick cards to your hand."
   },
 "Slimebound:PressTheAttack": {
@@ -259,7 +259,7 @@
   },
 "Slimebound:SoulSicken": {
     "NAME": "Soul Sicken",
-    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Slimed to Poison. NL Exhaust.",
+    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Slimed to Poison.",
   "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Slimed to Poison."
   },
 "Slimebound:AcidGelatin": {
@@ -342,6 +342,10 @@
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Upgrade a random card in your hand for the rest of combat.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Upgrade 2 random cards in your hand for the rest of combat."
   },
+  "Slimebound:Tackle": {
+    "NAME": "Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
+  },
 "Slimebound:GoopTackle": {
     "NAME": "Goop Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Tackle card to your hand. It costs 0 this turn.",
@@ -418,7 +422,7 @@
   },
 "Slimebound:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies 4 times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times. NL Exhaust."
   },
 "Slimebound:DefensiveMode": {
     "NAME": "Defensive Mode",
@@ -431,12 +435,16 @@
   },
 "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
-    "DESCRIPTION": "Deal !D! damage. NL Skip your next turn. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
 "Slimebound:SplitGhostflame": {
     "NAME": "Split: Ghostflame",
     "DESCRIPTION": "Gain Slime Slots until you have 6. NL Split into a Ghostflame_Slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain Slime Slots until you have 6. NL Split into two Ghostflame_Slimes. NL Exhaust."
+  },
+  "Slimebound:Icky": {
+    "NAME": "Icky",
+    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed to your hand."
   },
 "Slimebound:PrepareDivider": {
     "NAME": "Prepare: Divide",
@@ -444,9 +452,11 @@
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
   },
 "Slimebound:Hexaburn": {
-    "NAME": "Inferno",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
-  },
+    "NAME": "Hexaburn",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/10th of your current HP. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
+
+},
 "Slimebound:PrepareBeam": {
     "NAME": "Prepare: Beam",
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust.",
@@ -502,7 +512,7 @@
   },
 "Slimebound:HeadSlam": {
     "NAME": "Head Slam",
-    "DESCRIPTION": "Deal !D! damage. Stun the enemy if they are not a Boss. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage if the enemy is a Boss. If not, Stun them. NL Exhaust."
   },
 "Slimebound:ManipulateTime": {
     "NAME": "Manipulate Time",

@@ -47,10 +47,11 @@ public class MegaLick extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.LICK);
 
 
+        this.magicNumber = this.baseMagicNumber = 1;
 
         this.slimed = this.baseSlimed = 4;
         upgradeSlimed(0);
-        this.poison = 1;
+        upgradeLickSlimed(0);
         this.exhaust = true;
 
 
@@ -67,7 +68,7 @@ public class MegaLick extends AbstractSlimeboundCard {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(monster.hb.cX, monster.hb.cY, 3));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.poison, false), this.poison, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(monster.hb.cX, monster.hb.cY,0.6F,new Color(GREEN)), 0.1F));
@@ -76,7 +77,7 @@ public class MegaLick extends AbstractSlimeboundCard {
 
                 }
             }
-            if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+            //if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         }
 
@@ -97,9 +98,8 @@ public class MegaLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            //upgradeMagicNumber(2);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
+            upgradeSlimed(2);
 
         }
 

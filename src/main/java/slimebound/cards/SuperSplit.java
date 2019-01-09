@@ -61,7 +61,7 @@ public class SuperSplit extends AbstractSlimeboundCard {
 
 
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
             switch (o) {
