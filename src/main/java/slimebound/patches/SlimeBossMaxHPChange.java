@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
@@ -19,8 +20,10 @@ public class SlimeBossMaxHPChange {
     @SpirePostfixPatch
     public static void Postfix(SlimeBoss sb) {
         if (SlimeboundMod.huntedTriggered) {
+           // SlimeboundMod.logger.info("Hunted event triggeredd in: " + CardCrawlGame.dungeon.toString());
             SlimeboundMod.huntedTriggered = false;
             if (CardCrawlGame.dungeon instanceof TheCity) {
+             //   SlimeboundMod.logger.info("Slime Boss from Hunted in City");
                 if (AbstractDungeon.ascensionLevel >= 9) {
 
                     sb.currentHealth = 200;
@@ -49,7 +52,8 @@ public class SlimeBossMaxHPChange {
 
                     sb.maxHealth = sb.currentHealth;
                 }
-            } else if (CardCrawlGame.dungeon instanceof Exordium) {
+            } else if (CardCrawlGame.dungeon instanceof TheBeyond) {
+              //  SlimeboundMod.logger.info("Slime Boss from Hunted in Beyond");
 
                 if (AbstractDungeon.ascensionLevel >= 9) {
 
