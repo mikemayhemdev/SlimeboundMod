@@ -66,9 +66,9 @@
 	"Slimebound:ProtectTheBoss": {
 		"NAME": "保护老大",
 		"DESCRIPTIONS": [
-			"牺牲最早 分裂 出的史莱姆来阻挡你下1次受到的伤害。",
-			"牺牲最早 分裂 出的史莱姆来阻挡你下 #b",
-			" 次受到的伤害。"
+			"阻挡你下1次受到的攻击伤害， 吸收 最早 分裂 出的史莱姆。",
+			"阻挡你下 #b",
+			" 次受到的攻击伤害， 吸收 最早 分裂 出的史莱姆。"
 		]
 	},
 	"Slimebound:SplitForLessPower": {
@@ -157,9 +157,9 @@
 		]
 	},
 	"Slimebound:DuplicatedFormNoHealPower": {
-		"NAME": "半分",
+		"NAME": "分裂",
 		"DESCRIPTIONS": [
-			"本场战斗中你的最大生命减少 ",
+			"最大生命临时减少了 ",
 			" 点"
 		]
 	},
@@ -174,7 +174,7 @@
 		"NAME": "暴食",
 		"DESCRIPTIONS": [
 			"舔舐 牌额外提供 ",
-			" 层 黏液。"
+			" 层 黏液 。"
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -259,7 +259,7 @@
 		]
 	},
 	"Slimebound:FirmFortitudePower": {
-		"NAME": "刚烈",
+		"NAME": "感同身受",
 		"DESCRIPTIONS": [
 			"下次你将在自己的回合失去生命时，1个随机敌人代你承受。",
 			"下 ",

@@ -7,11 +7,11 @@
 		]
 	},
 	"Slimebound:SlimedPower": {
-		"NAME": "Slimed",
+		"NAME": "Goop",
 		"DESCRIPTIONS": [
 			"The next Attack against this enemy deals ",
 			" more damage and heals ",
-			" HP, consuming all #ySlimed.  Half of the stack is removed at end of turn."
+			" HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
 		]
 	},
 	"Slimebound:SplitDailyTriggerPower": {
@@ -45,7 +45,7 @@
 		"NAME": "Upgrade: Mire",
 		"DESCRIPTIONS": [
 			"Sliming Slimes apply ",
-			" more Slimed."
+			" more Goop."
 		]
 	},
 	"Slimebound:BuffShieldSlimesPower": {
@@ -66,9 +66,9 @@
 	"Slimebound:ProtectTheBoss": {
 		"NAME": "Protect the Boss",
 		"DESCRIPTIONS": [
-			"Prevent the next time you would be damaged by an enemy Attack at the cost of your oldest Slime.",
+			"Prevent the next time you would be damaged by an enemy Attack, Absorb your oldest slime instead.",
 			"Prevent the next #b",
-			" times you would damaged by an enemy Attack at the cost of your oldest Slime."
+			" times you would damaged by an enemy Attack, Absorbing your oldest slime instead."
 		]
 	},
 	"Slimebound:SplitForLessPower": {
@@ -137,14 +137,14 @@
 		"NAME": "Living Wall",
 		"DESCRIPTIONS": [
 			"Apply ",
-			" Slimed to attackers this turn."
+			" Goop to attackers this turn."
 		]
 	},
 	"Slimebound:PreventSlimeDecayPower": {
 		"NAME": "Doused in Slime",
 		"DESCRIPTIONS": [
-			"Slimed will not decay this turn.",
-			"Slimed will not decay for the next ",
+			"Goop will not decay this turn.",
+			"Goop will not decay for the next ",
 			" turns."
 		]
 	},
@@ -157,10 +157,10 @@
 		]
 	},
 	"Slimebound:DuplicatedFormNoHealPower": {
-		"NAME": "Halved",
+		"NAME": "Split",
 		"DESCRIPTIONS": [
-			"Your Max HP has been reduced by ",
-			" this combat."
+			"Max HP is temporarily reduced by ",
+			"."
 		]
 	},
 	"Slimebound:DuplicatedFormEnergyPower": {
@@ -174,7 +174,7 @@
 		"NAME": "Gluttony",
 		"DESCRIPTIONS": [
 			"Lick cards apply ",
-			" more Slimed."
+			" more Goop."
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -202,9 +202,9 @@
 	"Slimebound:RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
-			"Return ",
-			" random 0-cost Exhausted card to your hand each turn.",
-			" random 0-cost Exhausted cards to your hand each turn."
+			"Return a random 0-cost Exhausted card to your hand at the start of next turn.",
+			"Return a random 0-cost Exhausted card to your hand at the start of your next ",
+			" turns."
 		]
 	},
 	"Slimebound:RecyclingPowerUpgraded": {
@@ -218,13 +218,13 @@
 		"NAME": "Acid Tongue",
 		"DESCRIPTIONS": [
 			"Apply ",
-			" Poison whenever you apply Slimed."
+			" Poison whenever you apply Goop."
 		]
 	},
 	"Slimebound:AcidTonguePowerUpgraded": {
 		"NAME": "Slimy Tongue",
 		"DESCRIPTIONS": [
-			"Effects that apply Slimed apply ",
+			"Effects that apply Goop apply ",
 			" more."
 		]
 	},
@@ -232,7 +232,7 @@
 		"NAME": "Stray Goop",
 		"DESCRIPTIONS": [
 			"Apply ",
-			" Slimed to a random enemy whenever you lose HP on your turn."
+			" Goop to a random enemy whenever you lose HP."
 		]
 	},
 	"Slimebound:TackleBuffPower": {
@@ -259,7 +259,7 @@
 		]
 	},
 	"Slimebound:FirmFortitudePower": {
-		"NAME": "Firm Fortitude",
+		"NAME": "Feel Our Pain",
 		"DESCRIPTIONS": [
 			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
 			"The next ",

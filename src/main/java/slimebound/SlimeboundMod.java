@@ -44,8 +44,7 @@ import slimebound.events.WorldOfGoopSlimebound;
 import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
-import slimebound.orbs.SpawnedSlime;
-import slimebound.orbs.TorchHeadSlime;
+import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.potions.SlimedPotion;
@@ -57,6 +56,7 @@ import slimebound.powers.GluttonyPower;
 import slimebound.relics.*;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -81,6 +81,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     private static final String CHAR_PORTRAIT = "charSelect/portrait.png";
     public static int powersPlayedThisCombat;
     public static boolean slimeDelay;
+    public static boolean huntedTriggered;
     public static boolean scrapping;
     public static SlimeboundCharacter slimeboundCharacter;
 
@@ -182,7 +183,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         if (AbstractDungeon.player != null) {
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss = false;
-                SlimeboundMod.logger.info("Reset Hunted event bool.");
+                //SlimeboundMod.logger.info("Reset Hunted event bool.");
             }
             if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(AllSplit.ID)) {
                 //logger.info("Daily Mod detecthed");
@@ -535,6 +536,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
+        if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
+
 
 
         logger.info("begin editing strings");
@@ -554,6 +557,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
+        if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
 
 
         logger.info("begin editing strings");
@@ -602,6 +606,29 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
             ((SlimeboundCharacter) AbstractDungeon.player).xStartOffset = (float)Settings.WIDTH * 0.23F;
             ((SlimeboundCharacter) AbstractDungeon.player).initializeSlotPositions();
 
+        }
+
+        ArrayList<AbstractOrb> slimes = new ArrayList<>();
+
+        for (AbstractOrb o : AbstractDungeon.player.orbs){
+            if (o instanceof CultistSlime){
+                ((CultistSlime) o).cleanUpVFX();
+            }
+            if (o instanceof GreedOozeSlime){
+                ((GreedOozeSlime) o).cleanUpVFX();
+            }
+            if (o instanceof ScrapOozeSlime){
+                ((ScrapOozeSlime) o).cleanUpVFX();
+            }
+            if (o instanceof SpawnedSlime){
+                slimes.add(o);
+            }
+        }
+        for (int i = 0; i < slimes.size(); i++) {
+            SpawnedSlime s = (SpawnedSlime)slimes.get(i);
+            s.noEvokeBonus = true;
+            s.triggerEvokeAnimation();
+            s.noRender = true;
         }
     }
 

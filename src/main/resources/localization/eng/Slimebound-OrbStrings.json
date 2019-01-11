@@ -18,14 +18,14 @@
     "NAME": "Scrap Ooze",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn. Instantly respawns if absorbed instead of restoring HP."
+      " damage at the start of your turn. NL Instantly respawns if Absorbed. NL Does not reduce Max HP."
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "Greed Ooze",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn. Instantly respawns if absorbed instead of restoring HP."
+      " damage at the start of your turn. NL Instantly respawns if Absorbed. NL Does not reduce Max HP."
     ]
   },
   "Slimebound:TorchHeadSlime": {
@@ -63,7 +63,7 @@
     "DESCRIPTION": [
       "Deals ",
       " damage and applies ",
-      " Slimed at the start of your turn."
+      " Goop at the start of your turn."
     ]
   },
   "Slimebound:HexSlime": {

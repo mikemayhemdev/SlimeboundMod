@@ -29,26 +29,6 @@ public class AbsorbEndCombat extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void onVictory() {
-        this.flash();
-        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractPlayer p = AbstractDungeon.player;
-        int slimeCount = 0;
-        if (p.orbs.size() > 0) {
-            if (p.orbs.get(0) != null) {
-                for (AbstractOrb o : AbstractDungeon.player.orbs) {
-
-                    if (o instanceof SpawnedSlime) {
-                        slimeCount++;
-                    }
-
-
-                }
-                p.heal(slimeCount * 3);
-
-            }
-        }
-    }
 
     public void atBattleStartPreDraw() {
         //Cheaty hack for testing max orbslots
@@ -64,16 +44,16 @@ public class AbsorbEndCombat extends CustomRelic {
 
         switch (o) {
             case 1:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
                 break;
             case 3:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
                 break;
             case 4:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
                 break;
         }
 

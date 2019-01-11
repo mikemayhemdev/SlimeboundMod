@@ -42,7 +42,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = 60;
+        this.baseDamage = 50;
         this.exhaust = true;
         this.isEthereal = true;
 

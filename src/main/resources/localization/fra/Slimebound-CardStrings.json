@@ -17,10 +17,6 @@
     "DESCRIPTION": "Invoquez un Bruiser_Slime X times. NL Bruiser_Slimes inflige !M! de dégât supplémentaire ce combat. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Invoquez un Bruiser_Slime X+1 fois. NL Bruiser_Slimes inflige !M! de dégât supplémentaire ce combat. NL Exhaust."
   },
-  "Slimebound:Icky": {
-    "NAME": "Dégoûtant",
-    "DESCRIPTION": "Injouable. NL Lorsque vous le piochez, ajoutez un Slimed aléatoire à votre main."
-  },
 "Slimebound:LevelUp": {
     "NAME": "Gain de niveau",
     "DESCRIPTION": "Gagnez !M! Puissance.",
@@ -38,14 +34,14 @@
     "UPGRADE_DESCRIPTION": "Invoquez un Bruiser_Slime. NL Bruiser_Slimes inflige un dégât supplémentaire ce combat. NL Epuisement."
   },
 "Slimebound:SplitCultist": {
-    "NAME": "Invoquez: Cultist",
-    "DESCRIPTION": "Invoquez un Cultist_Slime. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Invoquez un Cultist_Slime deux fois. NL Epuisement."
+    "NAME": "Invoquez: Bodybuilder",
+    "DESCRIPTION": "Invoquez un Slime_Bodybuilder. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Slime_Bodybuilder deux fois. NL Epuisement."
   },
 "Slimebound:SplitLeeching": {
-    "NAME": "Invoquez: Leeching",
-    "DESCRIPTION": "Invoquez un Leeching_Slime. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Invoquez un Leeching_Slime. NL Leeching_Slimes donne 1 de défense supplémentaire ce combat. NL Epuisement."
+    "NAME": "Invoquez: Protecteur",
+    "DESCRIPTION": "Invoquez un Slime-Protecteur. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Slime_Protecteur. NL Leeching_Slimes donne 1 de défense supplémentaire ce combat. NL Epuisement."
   },
 "Slimebound:SplitAcid": {
     "NAME": "Invoquez: Acid",
@@ -53,9 +49,9 @@
     "UPGRADE_DESCRIPTION": "Invoquez un Acid_Slime. NL Acid_Slimes applique 1 de poison supplémentaire ce combat. NL Epuisement."
   },
 "Slimebound:SplitMire": {
-    "NAME": "Invoquez: Mire",
-    "DESCRIPTION": "Invoquez un Mire_Slime. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Invoquez un Mire_Slime. NL Mire_Slimes applique 1 Slimed supplémentaire ce combat. NL Epuisement."
+    "NAME": "Invoquez: Cachon",
+    "DESCRIPTION": "Invoquez un Slime_cachon. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Slime_cachon. NL Mire_Slimes applique 1 Slimed supplémentaire ce combat. NL Epuisement."
   },
 "Slimebound:ProtectTheBoss": {
     "NAME": "Protéger le Boss",
@@ -122,7 +118,7 @@
     "DESCRIPTION": "Ingligez !D! de dégât. Tous vos slimes attaquent."
   },
 "Slimebound:MaxSlimes": {
-    "NAME": "Faits de la place",
+    "NAME": "Fait de la place",
     "DESCRIPTION": "Gagnez !M! emplacements de slime.",
     "UPGRADE_DESCRIPTION": "Gagnez !M! emplacements de slime."
   },
@@ -272,7 +268,7 @@
   },
 "Slimebound:TongueLash": {
     "NAME": "LangueFouet",
-    "DESCRIPTION": "Infligez !D! de dégâts. Inflige !M! de dégât en plus pour chacune de vos cartes contenant Lick \"Lick\"."
+    "DESCRIPTION": "Infligez !D! de dégâts. Inflige !M! de dégât en plus pour chacune de vos cartes contenant \"Lick\"."
   },
 "Slimebound:ItLooksTasty": {
     "NAME": "Appétisant",
@@ -390,7 +386,7 @@
     "DESCRIPTION": "Infligez !D! de dégât à TOUS les ennemis. NL Pour chaque ennemi non-sbire, Augmente vos PV max de !M!. NL Epuisement."
   },
 "Slimebound:StrayGoop": {
-    "NAME": "Stray Goop",
+    "NAME": "Bave partagée",
     "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire à chaque fois que vous perdez des PV dans VOTRE tour."
   },
 "Slimebound:ViciousTackle": {
@@ -434,8 +430,8 @@
     "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] [E] [E] et !M! Force, et ajoutez SLIME FOU à votre main. NL Epuisement."
   },
 "Slimebound:SlimeCrush": {
-  "NAME": "SLIME FOU!!!",
-  "DESCRIPTION": "Infligez !D! de dégât. NL. NL Ethérée."
+    "NAME": "SLIME FOU!!!",
+    "DESCRIPTION": "Infligez !D! de dégât. NL. NL Ethérée."
   },
 "Slimebound:SplitGhostflame": {
     "NAME": "Invoquez: FantômeBrûlant",
@@ -451,14 +447,10 @@
     "NAME": "Hexagomme",
     "DESCRIPTION": "Infligez !D! de dégât à un ennemi aléatoire !M! fois. NL Epuisement."
   },
-  "Slimebound:Tackle": {
-    "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
-  },
 "Slimebound:PrepareBeam": {
     "NAME": "Preparation: Beam",
     "DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement."
+    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement.",
   },
 "Slimebound:SlimeBeam": {
     "NAME": "Slime Beam",
@@ -523,12 +515,12 @@
 "Slimebound:DonusPower": {
     "NAME": "Power de Donu",
     "DESCRIPTION": "Gagnez 1 Force. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
-  "UPGRADE_DESCRIPTION": "Gagnez 1 Force et 1 Artefact. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement."
+  "UPGRADE_DESCRIPTION": "Gagnez 1 Force et 1 Artefact. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
 },
 "Slimebound:DecasProtection": {
     "NAME": "Protection de Deca",
     "DESCRIPTION": "Gagnez 1 Dextérité. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
-  "UPGRADE_DESCRIPTION": "Gagnez 1 Dextérité et 1 Artefact. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement."
+  "UPGRADE_DESCRIPTION": "Gagnez 1 Dextérité et 1 Artefact. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
   },
 "Slimebound:PolyBeam": {
     "NAME": "Haricot Polyvalent",

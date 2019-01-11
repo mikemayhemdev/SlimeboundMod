@@ -18,14 +18,14 @@
     "NAME": "破烂史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 ",
-      " 点伤害。被吸收时不回复生命而是立刻重生。"
+      " 点伤害。 NL 被 吸收 时立刻重生。不减少生命上限。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 ",
-      " 点伤害。被吸收时不回复生命而是立刻重生。"
+      " 点伤害。 NL 被 吸收 时立刻重生。不减少生命上限。"
     ]
   },
   "Slimebound:TorchHeadSlime": {

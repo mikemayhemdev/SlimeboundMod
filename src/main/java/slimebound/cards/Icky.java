@@ -28,27 +28,21 @@ public class Icky extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/usefulslime.png";
+    public static final String IMG_PATH = "cards/icky.png";
 
     private static final CardType TYPE = CardType.CURSE;
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 0;
+    private static final int COST = -2;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
     public Icky() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
-        tags.add(SlimeboundMod.STUDY_AWAKENEDONE);
-        tags.add(SlimeboundMod.STUDY);
-
-
 
         this.magicNumber = this.baseMagicNumber = 1;
-
-
 
     }
 
@@ -62,7 +56,7 @@ public class Icky extends AbstractSlimeboundCard {
 
     public void triggerWhenDrawn() {
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), 1));
     }
 
 

@@ -52,7 +52,12 @@ public class GreedOozeSlime
     @Override
     public void onEvoke() {
         super.onEvoke();
+        cleanUpVFX();
+    }
+
+    public void cleanUpVFX(){
         this.goldcoinsVFX.finish();
+
     }
 
     public void activateEffectUnique() {

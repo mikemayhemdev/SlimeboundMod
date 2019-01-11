@@ -2,25 +2,25 @@
   "Slimebound:Hunted": {
     "NAME": "Le Boss s'approche",
     "DESCRIPTIONS": [
-      "Une forte voix rÃ©sonne dans la Tour... NL NL #r~TRAITRE!!!~ NL NL L'immense slime tente de vous attraper, vous bloquant le passage. Il vous insulte de traître, et veut désormais vous hanter jusqu'à la fin des temps pour vous punir. Il semble terriblement énervé.",
+      "Une forte voix rÃ©sonne dans la Tour... NL NL #r~TRAITRE!!!~ NL NL L'immense slime tente de vous attraper, vous bloquant le passage. Il vous insulte de traï¿½tre, et veut dï¿½sormais vous hanter jusqu'ï¿½ la fin des temps pour vous punir. Il semble terriblement ï¿½nervï¿½.",
       "Est-ce que sera aussi simple?",
-      "Tout fait sens maintenant. NL Les trous de mémoire, l'ascension, l' #yAncient #yOne. NL NL Cela a toujours été ainsi. NL Et ce sera toujours ainsi. NL Tout sera de nouveau oublié bientôt..."
+      "Tout fait sens maintenant. NL Les trous de mï¿½moire, l'ascension, l' #yAncient #yOne. NL NL Cela a toujours ï¿½tï¿½ ainsi. NL Et ce sera toujours ainsi. NL Tout sera de nouveau oubliï¿½ bientï¿½t..."
     ],
     "OPTIONS": [
-      "[Affronter] #rCombattre #rSlime #rBoss. Reward: #gPetit #gchapeau #gEtriqué.",
-      "[Fuir comme un lâche] #rCursed #r- #rShame."
+      "[Affronter] #rCombattre #rSlime #rBoss. Reward: #gPetit #gchapeau #gEtriquï¿½.",
+      "[Fuir comme un lï¿½che] #rCursed #r- #rShame."
     ]
   },
   "Slimebound:WorldofGoop": {
     "NAME": "Monde baveux",
     "DESCRIPTIONS": [
-      "Vous tombez dans une flaque. NL @C'EST@ @FAIT@ @DE@ #g@BAVE@ #g@SLIME!!@ NL Calmly, Calmement, vous prenez une grande inspiration pour vous calmer. NL NL Vous en sortez tout docuement, quand vous remarquez un amas de #ygold appartenant à d'autres aventuriers, jonchant sur une créature qui semble intéréssé par tout ce métal.",
-      "Vous quittez la flaque de bave, repêchant tout le #ygold, laissant la créature avec une tête dépitée en voyant tout l'or s'envoler.",
-      "Vous négociez avec la créature et lui proposez de lui donner encore plus de métal si elle vient vous aider dans votre aventure. NL Vous et votre nouvel #gami quittez cette flaque de bave emsemble."
+      "Vous tombez dans une flaque. NL @C'EST@ @FAIT@ @DE@ #g@BAVE@ #g@SLIME!!@ NL Calmly, Calmement, vous prenez une grande inspiration pour vous calmer. NL NL Vous en sortez tout docuement, quand vous remarquez un amas de #ygold appartenant ï¿½ d'autres aventuriers, jonchant sur une crï¿½ature qui semble intï¿½rï¿½ssï¿½ par tout ce mï¿½tal.",
+      "Vous quittez la flaque de bave, repï¿½chant tout le #ygold, laissant la crï¿½ature avec une tï¿½te dï¿½pitï¿½e en voyant tout l'or s'envoler.",
+      "Vous nï¿½gociez avec la crï¿½ature et lui proposez de lui donner encore plus de mï¿½tal si elle vient vous aider dans votre aventure. NL Vous et votre nouvel #gami quittez cette flaque de bave emsemble."
     ],
     "OPTIONS": [
       "[Attraper l'or] #gGagnez #g75 #gOr.",
-      "[Recruter] #gEnrôler #yGreed #yOoze.",
+      "[Recruter] #gEnrï¿½ler #yGreed #yOoze.",
       "[Partir]"
     ]
   },
@@ -34,21 +34,43 @@
       "Ce chapeau... NL #r~I~ #r~je dois~ #r~le~ #r~prendre!~",
       "~Qu'est-ce~ ~qu'il...~",
       "~...fait~ ~lui...~",
-      "~...à~ ~monter~ ~en Haut...~",
-      "~On~ ~doit~ ~l'arrêter~ ~maintenant...~",
-      "~c'est~ ~très~ ~étrange...~",
+      "~...ï¿½~ ~monter~ ~en Haut...~",
+      "~On~ ~doit~ ~l'arrï¿½ter~ ~maintenant...~",
+      "~c'est~ ~trï¿½s~ ~ï¿½trange...~",
       "~Il~ ~est~ ~comme nous...~"
     ]
   },
   "Slimebound:ScrapOozePatch": {
     "NAME": "Scrap Ooze Amical",
     "DESCRIPTIONS": [
-      "Chaque slime s'étant éloigné du Boss est un potentiel ami.  Si vous lui offrez quelques babioles, le Scrap Ooze rejoindra votre aventure."
+      "Chaque slime s'ï¿½tant ï¿½loignï¿½ du Boss est un potentiel ami.  Si vous lui offrez quelques babioles, le Scrap Ooze rejoindra votre aventure."
     ],
     "OPTIONS": [
-      "[Recruter] Enrôler le #gScrap #gOoze. #rBloqué si vous restez à l'intérieur.",
-      "[Recruter] Bloqué.",
+      "[Recruter] Enrï¿½ler le #gScrap #gOoze. #rBloquï¿½ si vous restez ï¿½ l'intï¿½rieur.",
+      "[Recruter] Bloquï¿½.",
       "[Partir]"
+    ]
+  },
+  "Slimebound:ArtOfSlimeWar": {
+    "NAME": "L'art de la guerre selon les Slimes",
+    "DESCRIPTIONS": [
+      "Vous rencontrez un piï¿½destal trï¿½s sale qui contient ï¿½ son sommet un #gbouquin #gscintillant. Il semble que ce bouquin renferme des techniques spï¿½ciales dï¿½diï¿½es au #gSlime #gBoss et ses serviteurs.",
+      "Quand vous attrapez le bouquin, vous entendez plusieurs piï¿½ges s'activer. Vous ne serez pas capable de tous y ï¿½chapper.",
+      "Vous prenez le bouquin et parvenez ï¿½ vous extirper de quelques piï¿½ges, mais tombez finalement dans une immense flaque de bave Slime.",
+      "En prenant le bouquin, vous vous en ï¿½tes sorti, au coï¿½t d'une sï¿½rieuse blessure ï¿½ la jambe.",
+      "Dï¿½s que vous prenez le bouquin, vous sentez votre ï¿½me vous quitter. Cela a plutï¿½t intï¿½rï¿½t ï¿½ valoir le coup.",
+      "Vous dï¿½cidez de laisser le bouquin ici et de continuer votre route.",
+      "Vous n'arrivez pas ï¿½ concevoir que des Slimes peuvent ï¿½tre redoutables - Il semble que leur seul technique est de se jeter comme des imbï¿½ciles sur l'ennemi. Enfin bon, si ï¿½a marche pour eux alors..."
+    ],
+    "OPTIONS": [
+      "[Lire] #gRetire #gToutesLes Frappes. #gRecevez #g5 Tacles.",
+      "[Prendre] #gObtenez #gLivrede #gConsultation. #rActionnez #run #rpiï¿½ge.",
+      "[Partir]",
+      "[Profaner] #rDevenez #rMaudit #r- #rDï¿½goï¿½tant.",
+      "[Soyez patient] #rPrenez #r",
+      " #rde Dï¿½gï¿½t.",
+      "[Attraper et courir] #rPerdez #r",
+      " #rMax #rPV."
     ]
   }
 }

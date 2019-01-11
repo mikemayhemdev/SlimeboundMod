@@ -58,22 +58,33 @@ public class GluttonyPower extends AbstractPower {
 
 
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (c instanceof AbstractSlimeboundCard){
         if (c.hasTag(SlimeboundMod.LICK)) {
             ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
         }
-    }for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-            if (c.hasTag(SlimeboundMod.LICK)) {
-            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
-        }
-    }for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c.hasTag(SlimeboundMod.LICK)) {
-            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
-        }
-    }for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.hasTag(SlimeboundMod.LICK)) {
-            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
-        }
+            }
     }
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+            if (c instanceof AbstractSlimeboundCard){
+            if (c.hasTag(SlimeboundMod.LICK)) {
+            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+        }
+            }
+    }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+                if (c instanceof AbstractSlimeboundCard){
+            if (c.hasTag(SlimeboundMod.LICK)) {
+            ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+        }
+                }
+    }
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c instanceof AbstractSlimeboundCard) {
+                if (c.hasTag(SlimeboundMod.LICK)) {
+                    ((AbstractSlimeboundCard) c).upgradeLickSlimed(0);
+                }
+            }
+        }
 
 }
 

@@ -3,14 +3,14 @@
     "NAME": "Jar of Slime",
     "DESCRIPTIONS": [
       "Apply #b",
-      " Slimed."
+      " Goop."
     ]
   },
 
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
-      "Whenever an effect applies Slimed, apply #b",
+      "Whenever an effect applies Goop, apply #b",
       " more."
     ]
   },

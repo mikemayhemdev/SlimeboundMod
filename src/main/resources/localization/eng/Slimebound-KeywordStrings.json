@@ -1,24 +1,27 @@
 [
      {
       "NAMES": [
-        "absorb"
+        "absorb",
+        "absorbing",
+        "absorbed"
       ],
       "PROPERNAME": "Absorb",
-      "DESCRIPTION": "Recombine with a spawned Slime, healing 3 HP."
+      "DESCRIPTION": "Recombine with a spawned Slime, returning the Max HP it took upon Splitting."
     },
     {
       "NAMES": [
         "split"
       ],
       "PROPERNAME": "Split",
-      "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP."
+      "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn. While the Slime is alive, your Max HP is reduced by 3."
     },
     {
       "NAMES": [
-        "slimed"
+        "goop",
+        "gooped"
       ],
-      "PROPERNAME": "Slimed",
-      "DESCRIPTION": "The next attack deals increased damage, consuming the Slimed effect, and healing you for half the amount consumed. Half of Slimed is removed at end of turn."
+      "PROPERNAME": "Goop",
+      "DESCRIPTION": "The next attack deals increased damage, consuming the Goop effect, and healing you for half the amount consumed. Half of Goop is removed at end of turn."
     },
      {
       "NAMES": [
@@ -85,7 +88,7 @@
         "mire"
       ],
       "PROPERNAME": "Mire Slime",
-      "DESCRIPTION": "Attacks for 1 and applies 2 Slimed each turn."
+      "DESCRIPTION": "Attacks for 1 and applies 2 Goop each turn."
     },
      {
       "NAMES": [
@@ -108,7 +111,7 @@
         "lick"
       ],
       "PROPERNAME": "Lick",
-      "DESCRIPTION": "0-cost cards that apply Slimed a variety of secondary effects."
+      "DESCRIPTION": "0-cost cards that apply Goop a variety of secondary effects."
     },
      {
       "NAMES": [

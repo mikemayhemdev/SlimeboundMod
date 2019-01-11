@@ -111,8 +111,8 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.reloadAnimation();
 
 
-        this.dialogX = -200 * Settings.scale;
-        this.dialogY = -200 * Settings.scale;
+       // this.dialogX = -200 * Settings.scale;
+        this.dialogY += -100 * Settings.scale;
         initializeSlotPositions();
 
     }
@@ -193,7 +193,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 4, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION, 75, 75, 4, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }
@@ -246,7 +246,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public String getSpireHeartText() {
-        return charStrings.TEXT[0] ;
+        return charStrings.TEXT[1] ;
     }
 
     public Color getSlashAttackColor() {

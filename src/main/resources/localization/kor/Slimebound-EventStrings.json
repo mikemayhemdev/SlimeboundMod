@@ -1,0 +1,76 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "The Boss Approaches",
+    "DESCRIPTIONS": [
+      "첨탑에 소리가 쩌렁쩌렁 울립니다... NL NL #r~배신자!!!~ NL NL 거대한 슬라임이 재빨리 당신을 따라와 당신의 앞을 막습니다. 자신의 부하가 구역을 이탈한게 마음에 들지 않는 듯합니다, 그래서 태초 지역을 벗어나 당신을 잡으러 왔습니다.",
+      "그렇게 쉬울줄 알았어?",
+      "이제 모든게 아귀가 맞는다. NL The lack of memories, the ascent, the #yAncient #yOne. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+    ],
+    "OPTIONS": [
+      "[맞선다] #r슬라임 #r보스와 #r싸운다. Reward: #g작은 #g중절모.",
+      "[공포에 질려 도망간다] #r저주 #r- #r수치."
+    ]
+  },
+  "Slimebound:WorldofGoop": {
+    "NAME": "World of Goop",
+    "DESCRIPTIONS": [
+      "당신은 웅덩이에 빠졌습니다. NL 웅덩이는 #g@끈적이@ 로 되어있습니다!! NL 조용히, 끈적이 목욕을 하며 당신은 잠깐의 여유를 만끽합니다. NL NL 나와보니 불운한 모험가들이 떨어트린 #y골드 옆에 반짝이는 것을 좋아하는듯한 생명체가 있습니다.",
+      "기운찬 끈적이 목욕을 끝내고, #y골드를 끌어모은 다음, 흐물거리는 슬픈 표정을 짓는 생명체를 뒤로 하고 떠납니다.",
+      "그 생명체와 협상끝에 반짝이는것을 더 제공하는대신 당신의 여정에 합류하도록 결정했습니다. NL 당신과 새로운 #g친구 는 끈적이 목욕을 끝냅니다."
+    ],
+    "OPTIONS": [
+      "[돈을 모은다] #g골드를 #g75 #g얻습니다.",
+      "[등용] #g욕심쟁이 #y수액을 #y얻습니다.",
+      "[떠난다]"
+    ]
+  },
+  "Slimebound:SlimeTalk": {
+    "NAME": "TalkStrings",
+    "DESCRIPTIONS": [
+      "~쫄다구...~ NL #r~배신자!!!~",
+      "~뭘~ ~하려~ ~하는~ ~거야...~",
+      "~넌~ ~떠날수~ ~없어...~",
+      "~두목~ ~에게~ ~말해야...~",
+      "그 모자... NL #r~내~ #r~가~ #r~가져야~ #r~겠어!~",
+      "~뭐~ ~하려...~",
+      "~...는~ ~거야...~",
+      "~...저~ ~편~ ~에서...~",
+      "~우린~ ~널~ ~꼭~ ~막아야해...~",
+      "~이건~ ~너무~ ~강해...~",
+      "~우리~ ~랑~ ~같아...~"
+    ]
+  },
+  "Slimebound:ScrapOozePatch": {
+    "NAME": "Scrap Ooze Alternate",
+    "DESCRIPTIONS": [
+      "다른 길을 걷는 모든 슬라임은 당신의 친구입니다.  새로운 날붙이와 보물을 받고, 날붙이 수액이 당신의 여정에 합류했습니다."
+    ],
+    "OPTIONS": [
+      "[등용] #g날붙이 #g수액 을 얻습니다. 안을 조사하면 #rLocked if you Reach Inside.",
+      "[등용] 잠김.",
+      "[떠난다]"
+    ]
+  },
+  "Slimebound:ArtOfSlimeWar": {
+    "NAME": "The Art of Slime War",
+    "DESCRIPTIONS": [
+      "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
+      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
+      "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
+      "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
+      "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
+      "You decide to leave the book where it is and continue on.",
+      "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
+    ],
+    "OPTIONS": [
+      "[Read] #gRemove #gall Strikes. #gReceive #g5 Tackles.",
+      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
+      "[Leave]",
+      "[Dive] #rBecome #rCursed #r- #rIcky.",
+      "[Be Patient] #rTake #r",
+      " #rDamage.",
+      "[Grab and Run] #rLose #r",
+      " #rMax #rHP."
+    ]
+  }
+}

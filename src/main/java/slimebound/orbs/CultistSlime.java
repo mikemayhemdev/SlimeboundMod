@@ -58,6 +58,10 @@ public class CultistSlime
     @Override
     public void onEvoke() {
         super.onEvoke();
+        cleanUpVFX();
+    }
+
+    public void cleanUpVFX(){
         this.sticksLeftVFX.finish();
         this.sticksRightVFX.finish();
     }

@@ -4,9 +4,11 @@ package slimebound.cards;
 
 import basemod.helpers.BaseModCardTags;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -52,19 +54,25 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
     }
 
-/*
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
-        if (currentPct > 0.5) {
 
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean canUse = super.canUse(p, m);
+        int currentHealth = AbstractDungeon.player.currentHealth;
+
+        if (TempHPField.tempHp.get(AbstractDungeon.player) != null)
+            currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
+
+        if (!canUse) {
+            return false;
+        } else if (currentHealth < 11) {
             this.cantUseMessage = EXTENDED_DESCRIPTION[0];
             return false;
         } else {
-            return true;
+            return canUse;
         }
 
     }
-    */
+
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -73,13 +81,23 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
 
 
+
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
+        AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, 10, DamageInfo.DamageType.HP_LOSS));
+
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p, 1), 1));
+        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p,  p.maxHealth / 2),  p.maxHealth / 2));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, 1), 1));
+        int MaxHPActuallyLost = 10;
+        if (AbstractDungeon.player.maxHealth <= 10) {
+            MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
+        }
+
+        if (MaxHPActuallyLost > 0)
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DuplicatedFormNoHealPower(AbstractDungeon.player, AbstractDungeon.player, MaxHPActuallyLost), MaxHPActuallyLost));
 
     }
 

@@ -12,6 +12,7 @@ import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -33,10 +34,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.*;
-import slimebound.vfx.FakeFlashAtkImgEffect;
-import slimebound.vfx.SlimeDeathParticleEffect;
-import slimebound.vfx.SlimeFlareEffect;
-import slimebound.vfx.SlimeSpawnProjectile;
+import slimebound.vfx.*;
 
 
 public abstract class SpawnedSlime
@@ -86,11 +84,11 @@ public abstract class SpawnedSlime
     private AnimationStateData stateData;
     private AbstractAnimation animationA;
     public AbstractPlayer p;
-    public Color projectileColor;
+    private Color projectileColor;
     private float delayTime;
     private boolean hasSplashed;
-    private boolean madePostDuplicated;
-    private boolean renderBehind;
+    private boolean deathVFXplayed;
+    public boolean noRender;
     private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
     private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
     private String animString = "idle";
@@ -150,7 +148,6 @@ public abstract class SpawnedSlime
 
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
         SlimeboundMod.mostRecentSlime = this;
-        if (AbstractDungeon.player.hasPower(DuplicatedFormPower.POWER_ID)) this.madePostDuplicated = true;
 
 
 
@@ -235,7 +232,6 @@ public void spawnVFX(){
 
 
     public void onEvoke() {
-
         if (!noEvokeBonus) {
             if (this instanceof HexSlime) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
@@ -251,7 +247,7 @@ public void spawnVFX(){
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
 
             } else {
-                AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DuplicatedFormNoHealPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
             }
         }
         triggerEvokeAnimation();
@@ -262,9 +258,15 @@ public void spawnVFX(){
 
     public void triggerEvokeAnimation() {
 
-        CardCrawlGame.sound.play("DUNGEON_TRANSITION", 0.1F);
+        if (!this.deathVFXplayed) {
+            CardCrawlGame.sound.play("DUNGEON_TRANSITION", 0.1F);
 
-        AbstractDungeon.effectsQueue.add(new SlimeDeathParticleEffect(this.cX, this.cY, this.deathColor));
+            AbstractDungeon.effectsQueue.add(new SlimeSpawnProjectileDeath(this.hb.cX, this.hb.cY, null, AbstractDungeon.player, 1.4F, this.projectileColor));
+
+            AbstractDungeon.effectsQueue.add(new SlimeDeathParticleEffect(this.cX, this.cY, this.deathColor));
+
+            this.deathVFXplayed = true;
+        }
 
     }
 
@@ -348,44 +350,45 @@ public void spawnVFX(){
 
     public void render(SpriteBatch sb) {
 
+        if (!noRender) {
+            if (this.delayTime > 0F) {
+                delayTime = delayTime - Gdx.graphics.getDeltaTime();
+            } else if (this.atlas == null) {
+                // logger.info("rendering null");
+                sb.setColor(new Color(1F, 1F, 1F, 2F));
 
-        if (this.delayTime > 0F) {
-            delayTime = delayTime - Gdx.graphics.getDeltaTime();
-        } else if (this.atlas == null) {
-            // logger.info("rendering null");
-            sb.setColor(new Color(1F, 1F, 1F, 2F));
-
-            sb.draw(this.img, this.cX - (float) this.img.getWidth() + this.animX * Settings.scale / 2.0F, this.cY + this.animY, (float) this.img.getWidth() * Settings.scale, (float) this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
-        } else {
-            if (!hasSplashed) {
-                AbstractDungeon.effectsQueue.add(new FakeFlashAtkImgEffect(this.cX, this.cY, projectileColor, 0.75F, true, 0.3F));
-                this.hasSplashed = true;
-                postSpawnEffects();
+                sb.draw(this.img, this.cX - (float) this.img.getWidth() + this.animX * Settings.scale / 2.0F, this.cY + this.animY, (float) this.img.getWidth() * Settings.scale, (float) this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
             } else {
+                if (!hasSplashed) {
+                    AbstractDungeon.effectsQueue.add(new FakeFlashAtkImgEffect(this.cX, this.cY, projectileColor, 0.75F, true, 0.3F));
+                    this.hasSplashed = true;
+                    postSpawnEffects();
+                } else {
 
-                // logger.info("rendering slime model");
-                this.state.update(Gdx.graphics.getDeltaTime());
-                this.state.apply(this.skeleton);
-                this.skeleton.updateWorldTransform();
-                this.x = this.cX + this.animX;
-                this.y = this.cY + this.animY + this.yOffset;
-                this.skeleton.setPosition(this.x, this.y);
-                //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
+                    // logger.info("rendering slime model");
+                    this.state.update(Gdx.graphics.getDeltaTime());
+                    this.state.apply(this.skeleton);
+                    this.skeleton.updateWorldTransform();
+                    this.x = this.cX + this.animX;
+                    this.y = this.cY + this.animY + this.yOffset;
+                    this.skeleton.setPosition(this.x, this.y);
+                    //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
 
-                this.skeleton.setColor(modelColor);
-                this.skeleton.setFlip(true, false);
-                sb.end();
-                CardCrawlGame.psb.begin();
-                AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
-                CardCrawlGame.psb.end();
-                sb.begin();
-                sb.setBlendFunction(770, 771);
+                    this.skeleton.setColor(modelColor);
+                    this.skeleton.setFlip(true, false);
+                    sb.end();
+                    CardCrawlGame.psb.begin();
+                    AbstractMonster.sr.draw(CardCrawlGame.psb, this.skeleton);
+                    CardCrawlGame.psb.end();
+                    sb.begin();
+                    sb.setBlendFunction(770, 771);
+
+                }
+                renderText(sb);
 
             }
-            renderText(sb);
-
+            //this.hb.render(sb);
         }
-        //this.hb.render(sb);
     }
 
 

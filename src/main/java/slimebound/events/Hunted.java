@@ -27,6 +27,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import slimebound.SlimeboundMod;
 import slimebound.relics.StudyCardRelic;
 
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class Hunted extends MindBloom {
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
         this.imageEventText.setDialogOption(OPTIONS[1], CardLibrary.getCopy("Shame"));
+        SlimeboundMod.huntedTriggered = true;
          CardCrawlGame.sound.play("VO_SLIMEBOSS_1A");
 
     }
@@ -84,9 +86,11 @@ public class Hunted extends MindBloom {
                         AbstractCard card = new Shame();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
                         this.imageEventText.clearRemainingOptions();
+                        SlimeboundMod.huntedTriggered = false;
                         this.openMap();
                         break;
                     default:
+                        SlimeboundMod.huntedTriggered = false;
                         this.imageEventText.clearRemainingOptions();
                         this.openMap();
 

@@ -54,6 +54,10 @@ public class ScrapOozeSlime
     @Override
     public void onEvoke() {
         super.onEvoke();
+        cleanUpVFX();
+    }
+    public void cleanUpVFX() {
+
         this.scrapVFX.finish();
         this.scrapGlowVFX.finish();
     }

@@ -35,8 +35,8 @@ public class TongueLash extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 3;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.baseDamage = 5;
+        this.magicNumber = this.baseMagicNumber = 1;
 
 
     }
@@ -96,7 +96,7 @@ public class TongueLash extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(1);
+           //upgradeDamage(1);
             upgradeMagicNumber(1);
 
         }
