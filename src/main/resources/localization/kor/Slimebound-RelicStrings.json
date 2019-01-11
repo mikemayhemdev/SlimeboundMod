@@ -29,10 +29,10 @@
     ]
   },
   "Slimebound:DailySplitRelic": {
-    "NAME": "Slime the Spire",
+    "NAME": "첨탑을 점액투성이로",
     "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
     "DESCRIPTIONS": [
-      "#bCustom #bRun #bModifier NL All enemies form into two Slime enemies at 50% HP."
+      "#bCustom #bRun #bModifier NL 모든 적이 두 슬라임 으로 분열합니다."
     ]
   },
   "Slimebound:ScrapOozeRelic": {

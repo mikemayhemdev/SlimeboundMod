@@ -17,8 +17,8 @@
 	"Slimebound:SplitDailyTriggerPower": {
 		"NAME": "슬라임 분열",
 		"DESCRIPTIONS": [
-			"체력이 #b50%, 이하가되면 현재 체력의 ",
-			" 를 가진 #b두 슬라임 으로 분열합니다."
+			"체력이 #b50%, 이하가되면 #b두 ",
+			" 로 분열합니다."
 		]
 	},
 	"Slimebound:SplitDailyPower": {

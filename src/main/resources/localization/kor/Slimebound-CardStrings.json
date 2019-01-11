@@ -417,7 +417,7 @@
     "DESCRIPTION": "모든 적에게 !D! 피해를 줍니다. 공격할 의도가 없는 적에게는 피해를 두번 줍니다."
   },
 "Slimebound:ChargeUp": {
-    "NAME": "Charge Up",
+    "NAME": "기 모으기",
     "DESCRIPTION": "다음턴에 방어도 !B! 와 힘 !M! 을 얻습니다. NL 소멸."
   },
 "Slimebound:GuardianWhirl": {
