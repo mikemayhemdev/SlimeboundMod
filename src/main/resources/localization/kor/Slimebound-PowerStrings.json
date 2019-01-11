@@ -157,10 +157,10 @@
 		]
 	},
 	"Slimebound:DuplicatedFormNoHealPower": {
-		"NAME": "Halved",
+		"NAME": "분열됨",
 		"DESCRIPTIONS": [
-			"Your Max HP has been reduced by ",
-			" this combat."
+			"이번 전투에서 최대 체력이 ",
+			" 줄어 듭니다."
 		]
 	},
 	"Slimebound:DuplicatedFormEnergyPower": {
