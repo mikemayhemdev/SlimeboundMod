@@ -179,14 +179,14 @@
 
 },
   "Slimebound:CheckThePlaybook": {
-    "NAME": "대본 확인",
+    "NAME": "전술교본 참조",
     "DESCRIPTION": "무작위 태클 카드를 4장 얻습니다. 이번 전투에서 그 카드의 비용이 1 감소합니다. NL 소멸."
 
   },
 "Slimebound:Recycling": {
     "NAME": "재활용",
-    "DESCRIPTION": "내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다."
+    "DESCRIPTION": "다음 !M! 턴동안 내 턴이 시작될때, NL 비용이 0인 소멸된 카드 1 장을 다시 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 다음 !M! 턴동안 내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다."
   },
 "Slimebound:Repurpose": {
     "NAME": "재설계",
@@ -443,8 +443,8 @@
     "UPGRADE_DESCRIPTION": "슬라임 슬롯을 6개 까지 늘립니다. NL 유령불꽃_슬라임 두마리로 분열 합니다. NL 소멸."
   },
  "Slimebound:Icky": {
-    "NAME": "Icky",
-    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed to your hand."
+    "NAME": "질척거림",
+    "DESCRIPTION": "사용불가. NL 뽑으면, 점액투성이를 손에 넣습니다."
   },
 "Slimebound:PrepareDivider": {
     "NAME": "준비: 분리",

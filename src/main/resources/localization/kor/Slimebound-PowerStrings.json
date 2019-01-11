@@ -15,16 +15,16 @@
 		]
 	},
 	"Slimebound:SplitDailyTriggerPower": {
-		"NAME": "Slime Split",
+		"NAME": "슬라임 분열",
 		"DESCRIPTIONS": [
-			"When its HP is at or below #b50%, will split into #b2 Slime enemies with ",
-			"'s current HP."
+			"체력이 #b50%, 이하가되면 현재 체력의 ",
+			" 를 가진 #b두 슬라임 으로 분열합니다."
 		]
 	},
 	"Slimebound:SplitDailyPower": {
-		"NAME": "Splitting",
+		"NAME": "분열중",
 		"DESCRIPTIONS": [
-			"This enemy is splitting this turn."
+			"이 적은 분열중입니다."
 		]
 	},
 	"Slimebound:BuffAttackSlimesPower": {
@@ -202,9 +202,9 @@
 	"Slimebound:RecyclingPower": {
 		"NAME": "재활용",
 		"DESCRIPTIONS": [
-			"매턴 비용이 0인 소멸된 카드를 ",
-			" 장 손에 얻습니다.",
-			" 장 손에 얻습니다."
+			"다음턴의 시작에 무작위 비용이 0인 소멸된 카드를 얻습니다.",
+			"다음 ",
+			" 턴 동안, 턴의 시작에 무작위 비용이 0인 소멸된 카드를 얻습니다."
 		]
 	},
 	"Slimebound:RecyclingPowerUpgraded": {
