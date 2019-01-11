@@ -202,9 +202,9 @@
 	"Slimebound:RecyclingPower": {
 		"NAME": "回收",
 		"DESCRIPTIONS": [
-			"在你的回合开始时，随机将已被消耗的 ",
-			" 张0费牌加入你的手牌。",
-			" 张0费牌加入你的手牌。"
+			"在下 1 回合开始时，随机将已被消耗的 0 费牌加入手牌。",
+			"在接下来的 ",
+			" 回合，每回合开始时，随机将已被消耗的 0 费牌加入手牌。"
 		]
 	},
 	"Slimebound:RecyclingPowerUpgraded": {
