@@ -179,14 +179,14 @@
 
 },
   "Slimebound:CheckThePlaybook": {
-    "NAME": "대본 확인",
+    "NAME": "전술교본 참조",
     "DESCRIPTION": "무작위 태클 카드를 4장 얻습니다. 이번 전투에서 그 카드의 비용이 1 감소합니다. NL 소멸."
 
   },
 "Slimebound:Recycling": {
     "NAME": "재활용",
-    "DESCRIPTION": "내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다."
+    "DESCRIPTION": "다음 !M! 턴동안 내 턴이 시작될때, NL 비용이 0인 소멸된 카드 1 장을 다시 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 다음 !M! 턴동안 내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다."
   },
 "Slimebound:Repurpose": {
     "NAME": "재설계",
@@ -203,7 +203,7 @@
   },
 "Slimebound:SoTasty": {
     "NAME": "너무 맛있어!",
-    "DESCRIPTION": "무작위 적에게 !D! 피해를 X 번 줍니다. 무작위 Lick 카드를 X 개 손으로 가져옵니다. NL 소멸."
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 X 번 줍니다. 무작위 핥기 카드를 X 개 손으로 가져옵니다. NL 소멸."
   },
 "Slimebound:Regenerate": {
     "NAME": "재생",
@@ -417,7 +417,7 @@
     "DESCRIPTION": "모든 적에게 !D! 피해를 줍니다. 공격할 의도가 없는 적에게는 피해를 두번 줍니다."
   },
 "Slimebound:ChargeUp": {
-    "NAME": "Charge Up",
+    "NAME": "기 모으기",
     "DESCRIPTION": "다음턴에 방어도 !B! 와 힘 !M! 을 얻습니다. NL 소멸."
   },
 "Slimebound:GuardianWhirl": {
@@ -443,8 +443,8 @@
     "UPGRADE_DESCRIPTION": "슬라임 슬롯을 6개 까지 늘립니다. NL 유령불꽃_슬라임 두마리로 분열 합니다. NL 소멸."
   },
  "Slimebound:Icky": {
-    "NAME": "Icky",
-    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed to your hand."
+    "NAME": "질척거림",
+    "DESCRIPTION": "사용불가. NL 뽑으면, 점액투성이를 손에 넣습니다."
   },
 "Slimebound:PrepareDivider": {
     "NAME": "준비: 분리",
@@ -474,7 +474,7 @@
   },
 "Slimebound:FaceSlap": {
     "NAME": "따귀",
-    "DESCRIPTION": "Remove all of the enemy's Block. NL 피해를 !D! 줍니다. 취약 을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "적의 모든 방어도를 없앱니다. NL 피해를 !D! 줍니다. 취약 을 !M! 부여합니다. NL 소멸."
   },
 "Slimebound:LastStand": {
     "NAME": "최후의 저항",
@@ -506,7 +506,7 @@
   },
 "Slimebound:TimeRipple": {
     "NAME": "시간 파동",
-    "DESCRIPTION": "Gain !B! Block. NL Apply Slow to ALL enemies. NL 소멸."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 모든 적에게 감속 을 부여합니다. NL 소멸."
   },
 "Slimebound:HeadSlam": {
     "NAME": "Head Slam",

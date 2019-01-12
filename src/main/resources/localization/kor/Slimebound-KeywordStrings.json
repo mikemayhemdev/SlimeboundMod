@@ -145,10 +145,11 @@
     },
      {
       "NAMES": [
+		"감속",
         "slow"
       ],
-      "PROPERNAME": "Slow",
-      "DESCRIPTION": "Receives 10% more damage per card played in a turn."
+      "PROPERNAME": "감속",
+      "DESCRIPTION": "이번턴에 사용한 카드 한 장당 10% 추가 피해를 받습니다."
     },
      {
       "NAMES": [
