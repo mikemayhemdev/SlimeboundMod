@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
@@ -53,6 +54,10 @@ public class GangUp extends AbstractSlimeboundCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;}
         if (upgraded) this.energyOnUse++;
+        if (p.hasRelic(ChemicalX.ID)) {
+            this.energyOnUse += 2;
+            p.getRelic(ChemicalX.ID).flash();
+        }
 
 
                if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));

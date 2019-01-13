@@ -1,15 +1,15 @@
 package slimebound;
 
-import basemod.BaseMod;
-import basemod.ModButton;
-import basemod.ModLabel;
-import basemod.ModPanel;
+import basemod.*;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.hubris.vfx.combat.ShowRollResult;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -24,10 +24,12 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
@@ -58,6 +60,7 @@ import slimebound.relics.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
@@ -85,9 +88,19 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     public static boolean scrapping;
     public static SlimeboundCharacter slimeboundCharacter;
 
+
     private ModLabel modOptionsLabel;
+    private ModLabel modPotionsLabel;
+    private ModLabel modEventsLabel;
+    private ModLabel modRelicsLabel;
     private ModButton modOptionsButton;
     private ModPanel settingsPanel;
+
+    private CustomUnlockBundle unlocks0;
+    private CustomUnlockBundle unlocks1;
+    private CustomUnlockBundle unlocks2;
+    private CustomUnlockBundle unlocks3;
+    private CustomUnlockBundle unlocks4;
 
     public static boolean slimeTalked = false;
     public static boolean slimeTalkedAcidL = false;
@@ -127,7 +140,21 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     public static final boolean hasHubris;
 
+    public static Properties slimeboundDefault = new Properties();
+    public static boolean contentSharing_relics = true;
+    public static boolean contentSharing_potions = true;
+    public static boolean contentSharing_events = true;
+    public static boolean unlockEverything = false;
+
+    public static final String PROP_RELIC_SHARING = "contentSharing_relics";
+    public static final String PROP_POTION_SHARING = "contentSharing_potions";
+    public static final String PROP_EVENT_SHARING = "contentSharing_events";
+    public static final String PROP_UNLOCK_ALL = "unlockEverything";
+
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+
+    public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
+
 
 
     static {
@@ -144,6 +171,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     public SlimeboundMod() {
 
+
+
         BaseMod.subscribe(this);
 
         BaseMod.addColor(AbstractCardEnum.SLIMEBOUND,
@@ -152,6 +181,13 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
                 getResourcePath(POWER_CARD), getResourcePath(ENERGY_ORB),
                 getResourcePath(ATTACK_CARD_PORTRAIT), getResourcePath(SKILL_CARD_PORTRAIT),
                 getResourcePath(POWER_CARD_PORTRAIT), getResourcePath(ENERGY_ORB_PORTRAIT), getResourcePath(CARD_ENERGY_ORB));
+
+        slimeboundDefault.setProperty(PROP_EVENT_SHARING, "FALSE");
+        slimeboundDefault.setProperty(PROP_RELIC_SHARING, "FALSE");
+        slimeboundDefault.setProperty(PROP_POTION_SHARING, "FALSE");
+        slimeboundDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+
+        loadConfigData();
     }
 
     public static void initialize() {
@@ -197,25 +233,51 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     @Override
     public void receiveSetUnlocks() {
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(
-                RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
-        ), SlimeboundEnum.SLIMEBOUND, 1);
+        if (!unlockEverything) {
 
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(
-                Dissolve.ID, Repurpose.ID, MassRepurpose.ID
-        ), SlimeboundEnum.SLIMEBOUND, 2);
+            BaseMod.addUnlockBundle(unlocks0, SlimeboundEnum.SLIMEBOUND, 0);
 
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                AggressiveSlimeRelic.ID, PotencyRelic.ID, MaxSlimesRelic.ID
-        ), SlimeboundEnum.SLIMEBOUND, 3);
+            BaseMod.addUnlockBundle(unlocks1, SlimeboundEnum.SLIMEBOUND, 1);
 
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(
-                HungryTackle.ID, Recollect.ID, Recycling.ID
-        ), SlimeboundEnum.SLIMEBOUND, 4);
+            BaseMod.addUnlockBundle(unlocks2, SlimeboundEnum.SLIMEBOUND, 2);
 
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                PreparedRelic.ID, SlimedTailRelic.ID, SlimedSkullRelic.ID
-        ), SlimeboundEnum.SLIMEBOUND, 5);
+            BaseMod.addUnlockBundle(unlocks3, SlimeboundEnum.SLIMEBOUND, 3);
+
+            BaseMod.addUnlockBundle(unlocks4, SlimeboundEnum.SLIMEBOUND, 4);
+
+
+            UnlockTracker.addCard(RollThrough.ID);
+            UnlockTracker.addCard(Chomp.ID);
+            UnlockTracker.addCard(CheckThePlaybook.ID);
+
+
+            UnlockTracker.addCard(Dissolve.ID);
+            UnlockTracker.addCard(Repurpose.ID);
+            UnlockTracker.addCard(MassRepurpose.ID);
+
+
+            UnlockTracker.addCard(HungryTackle.ID);
+            UnlockTracker.addCard(Recollect.ID);
+            UnlockTracker.addCard(Recycling.ID);
+
+            UnlockTracker.addRelic(AggressiveSlimeRelic.ID);
+            UnlockTracker.addRelic(PotencyRelic.ID);
+            UnlockTracker.addRelic(MaxSlimesRelic.ID);
+
+            UnlockTracker.addRelic(PreparedRelic.ID);
+            UnlockTracker.addRelic(SlimedTailRelic.ID);
+            UnlockTracker.addRelic(SlimedSkullRelic.ID);
+        }
+
+    }
+
+    public void clearUnlockBundles(){
+        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND,0);
+        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND,1);
+        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND,2);
+        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND,3);
+        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND,4);
+        receiveSetUnlocks();
     }
 
 
@@ -257,7 +319,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addRelicToCustomPool(new AggressiveSlimeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new MaxSlimesRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new PotencyRelic(), AbstractCardEnum.SLIMEBOUND);
-        BaseMod.addRelicToCustomPool(new PreparedRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SlimedTailRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new StudyCardRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SlimedSkullRelic(), AbstractCardEnum.SLIMEBOUND);
@@ -265,6 +326,28 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new DailySplitModRelic(), AbstractCardEnum.SLIMEBOUND);
 
+        shareableRelics.add(new PreparedRelic());
+
+        if (unlocks2 == null){
+        unlocks2 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                AggressiveSlimeRelic.ID, PotencyRelic.ID, MaxSlimesRelic.ID
+        );
+
+        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                PreparedRelic.ID, SlimedTailRelic.ID, SlimedSkullRelic.ID
+        );}
+
+        addSharedRelics();
+
+    }
+
+    public void addSharedRelics(){
+        if (contentSharing_relics){
+            BaseMod.addRelic(shareableRelics.get(0), RelicType.SHARED);
+
+        } else {
+            BaseMod.addRelicToCustomPool(shareableRelics.get(0), AbstractCardEnum.SLIMEBOUND);
+        }
     }
 
 
@@ -389,6 +472,20 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
 
 
+        unlocks0 = new CustomUnlockBundle(
+                RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
+        );
+
+        unlocks1 = new CustomUnlockBundle(
+                Dissolve.ID, Repurpose.ID, MassRepurpose.ID
+        );
+
+        unlocks3 = new CustomUnlockBundle(
+                HungryTackle.ID, Recollect.ID, Recycling.ID
+        );
+
+
+
 
 
     }
@@ -399,6 +496,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(Defend_Slimebound.ID);
         UnlockTracker.unlockCard(SplitBronze.ID);
         UnlockTracker.unlockCard(LevelUp.ID);
+        UnlockTracker.unlockCard(Tackle.ID);
+        UnlockTracker.unlockCard(Icky.ID);
         UnlockTracker.unlockCard(SplitTorchHead.ID);
         UnlockTracker.unlockCard(SplitBruiser.ID);
         UnlockTracker.unlockCard(SplitCultist.ID);
@@ -482,17 +581,10 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(PrepareCrush.ID);
         UnlockTracker.unlockCard(Repurpose.ID);
 
-        UnlockTracker.lockedRelics.remove(SlimedTailRelic.ID);
-        UnlockTracker.lockedRelics.remove(SlimedSkullRelic.ID);
-        UnlockTracker.lockedRelics.remove(AggressiveSlimeRelic.ID);
-        UnlockTracker.lockedRelics.remove(PotencyRelic.ID);
-        UnlockTracker.lockedRelics.remove(MaxSlimesRelic.ID);
-        UnlockTracker.lockedRelics.remove(PreparedRelic.ID);
 
         //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
 
-        modOptionsLabel.text = "Now restart your client and all will be unlocked.";
-
+        clearUnlockBundles();
 
 
 
@@ -530,6 +622,54 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     }
 */
+public static void clearData() {
+    saveData();
+}
+
+public static void saveData() {
+    try {
+        SpireConfig config = new SpireConfig("SlimeboundMod", "SlimeboundSaveData", slimeboundDefault);
+        config.setBool(PROP_EVENT_SHARING, contentSharing_events);
+        config.setBool(PROP_RELIC_SHARING, contentSharing_relics);
+        config.setBool(PROP_POTION_SHARING, contentSharing_potions);
+        config.setBool(PROP_UNLOCK_ALL, unlockEverything);
+
+        config.save();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+    public void adjustRelics(){
+        // remove all shareable relics wherever they are, then re-add them.
+        // assuming right now that there are no overheated expansion relics shared by other characters.
+        for (AbstractRelic relic : shareableRelics){
+            BaseMod.removeRelic(relic);
+            BaseMod.removeRelicFromCustomPool(relic,AbstractCardEnum.SLIMEBOUND);
+        }
+
+        addSharedRelics();
+
+
+    }
+
+
+    public static void loadConfigData() {
+        try {
+            logger.info("SlimeboundMod | Loading Config Preferences...");
+            SpireConfig config = new SpireConfig("SlimeboundMod", "SlimeboundSaveData", slimeboundDefault);
+            config.load();
+            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
+            contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
+            contentSharing_potions = config.getBool(PROP_POTION_SHARING);
+            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            clearData();
+        }
+    }
+
     public void receiveEditKeywords() {
         final Gson gson = new Gson();
         String language = "eng";
@@ -537,6 +677,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
         if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
+        if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
 
 
 
@@ -558,6 +699,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
         if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
+        if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
+
 
 
         logger.info("begin editing strings");
@@ -579,6 +722,9 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.loadCustomStrings(RunModStrings.class, modStrings);
         String charStrings = Gdx.files.internal("localization/" + language + "/Slimebound-CharacterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
+        String UIStrings = Gdx.files.internal("localization/" + language + "/Slimebound-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(UIStrings.class, UIStrings);
+
         logger.info("done editing strings");
     }
 
@@ -649,6 +795,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
 
     public void receivePostInitialize() {
+        UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
 
         logger.info("Load Badge Image and mod options");
         // Load the Mod Badge
@@ -658,32 +805,83 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         settingsPanel = new ModPanel();
 
-        modOptionsLabel = new ModLabel("Press this button to skip progress (unlock all cards/relics)", 400.0f, 700.0f,
-                settingsPanel, (me) -> {
+        ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
+                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_relics, settingsPanel, (label) -> {}, (button) -> {
+            contentSharing_relics = button.enabled;
+            adjustRelics();
+            saveData();
         });
-                settingsPanel.addUIElement(modOptionsLabel);
 
-            modOptionsButton = new ModButton( 400.0f, 400.0f,
-                    settingsPanel, (me) -> {unlockEverything();
-            });
-        settingsPanel.addUIElement(modOptionsButton);
+        ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
+                350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_events, settingsPanel, (label) -> {}, (button) -> {
+            contentSharing_events = button.enabled;
+            saveData();
+        });
+
+        ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
+                350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_potions, settingsPanel, (label) -> {}, (button) -> {
+            contentSharing_potions = button.enabled;
+            refreshPotions();
+            saveData();
+        });
+
+        ModLabeledToggleButton unlockEverythingBtn = new ModLabeledToggleButton(configStrings.TEXT[3],
+                350.0f, 450.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                unlockEverything, settingsPanel, (label) -> {}, (button) -> {
+            unlockEverything = button.enabled;
+            unlockEverything();
+            saveData();
+        });
+
+
+
+        settingsPanel.addUIElement(unlockEverythingBtn);
+        settingsPanel.addUIElement(contentSharingBtnEvents);
+        settingsPanel.addUIElement(contentSharingBtnPotions);
+        settingsPanel.addUIElement(contentSharingBtnRelics);
+
 
         BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
 
         logger.info("Done loading badge Image and mod options");
 
-        BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID);
-        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
+        addPotions();
+
+        //Dungeon patch contains the content sharing event logic
 
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
         BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);
-        BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
+        //BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
 
 
         BaseMod.addEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, Exordium.ID);
+
+    }
+
+    public void refreshPotions(){
+        BaseMod.removePotion(ThreeZeroPotion.POTION_ID);
+        BaseMod.removePotion(SlimedPotion.POTION_ID);
+        BaseMod.removePotion(SpawnSlimePotion.POTION_ID);
+        BaseMod.removePotion(SlimyTonguePotion.POTION_ID);
+
+        addPotions();
+    }
+
+    public void addPotions(){
+        if (contentSharing_potions){
+            BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
+            BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID);
+        } else {
+            BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+            BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+
+        }
+        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
 
     }
 

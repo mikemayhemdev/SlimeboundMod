@@ -12,6 +12,10 @@
     "DESCRIPTION": "Invoquez un Bronze_Slime. NL Epuisement.",
     "UPGRADE_DESCRIPTION": "Invoquer un Bronze_Slime deux fois. NL Epuisement."
   },
+  "Slimebound:Icky": {
+    "NAME": "Dégoûtant",
+    "DESCRIPTION": "Injouable. NL Lorsque vous le piochez, ajoutez un Slimed aléatoire à votre main."
+  },
   "Slimebound:GangUp": {
     "NAME": "Appel au gang",
     "DESCRIPTION": "Invoquez un Bruiser_Slime X times. NL Bruiser_Slimes inflige !M! de dégât supplémentaire ce combat. NL Exhaust.",
@@ -325,6 +329,10 @@
     "NAME": "Tacle Assassin",
     "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Si cela tue un ennemi, gagnez !B! d'Armure."
   },
+  "Slimebound:Tackle": {
+    "NAME": "Tacle",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même."
+  },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "Slimesplosion",
     "DESCRIPTION": "Appliquez !M! Slimed et !SlimeboundSlimePoison! Poison A TOUS les ennemis X fois. NL Epuisement."
@@ -450,7 +458,7 @@
 "Slimebound:PrepareBeam": {
     "NAME": "Preparation: Beam",
     "DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement."
   },
 "Slimebound:SlimeBeam": {
     "NAME": "Slime Beam",
@@ -515,12 +523,12 @@
 "Slimebound:DonusPower": {
     "NAME": "Power de Donu",
     "DESCRIPTION": "Gagnez 1 Force. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
-  "UPGRADE_DESCRIPTION": "Gagnez 1 Force et 1 Artefact. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Gagnez 1 Force et 1 Artefact. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement."
 },
 "Slimebound:DecasProtection": {
     "NAME": "Protection de Deca",
     "DESCRIPTION": "Gagnez 1 Dextérité. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
-  "UPGRADE_DESCRIPTION": "Gagnez 1 Dextérité et 1 Artefact. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Gagnez 1 Dextérité et 1 Artefact. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement."
   },
 "Slimebound:PolyBeam": {
     "NAME": "Haricot Polyvalent",

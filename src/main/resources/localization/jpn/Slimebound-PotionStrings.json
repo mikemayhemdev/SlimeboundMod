@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "スライムの瓶",
+    "DESCRIPTIONS": [
+      "粘液#bを",
+      " 与える。"
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "スライミーエリクサー",
+    "DESCRIPTIONS": [
+      "粘液が適用される度、更に粘液#b",
+      "が追加"
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "ボトル入りミニオン",
+    "DESCRIPTIONS": [
+      "ランダムなスライムを",
+      "産み出す"
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "ウーズ入りドリンク",
+    "DESCRIPTIONS": [
+      "#b枚の",
+      " ランダムなコスト0のカードを手札に加える。"
+    ]
+  }
+}

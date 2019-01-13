@@ -13,6 +13,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.PlayExhausted0CostAction;
 import slimebound.actions.RandomLickCardAction;
 import slimebound.actions.ReturnRandom0Cost;
+import slimebound.cards.Recycling;
 
 
 public class RecyclingPower extends AbstractPower {
@@ -68,11 +69,11 @@ public class RecyclingPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(1));
         if (this.amount <= 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudyAwakenedPower.POWER_ID));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, RecyclingPower.POWER_ID));
 
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudyAwakenedPower.POWER_ID, 1));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, RecyclingPower.POWER_ID, 1));
 
         }
     }

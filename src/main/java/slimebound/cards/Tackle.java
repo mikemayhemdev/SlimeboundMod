@@ -43,9 +43,9 @@ public class Tackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = this.originalDamage = 9;
+        this.baseDamage = this.originalDamage = 10;
         this.selfDamage = 3;
-        this.upgradeDamage = 2;
+        this.upgradeDamage = 3;
 
         this.magicNumber = this.baseMagicNumber = 1;
 

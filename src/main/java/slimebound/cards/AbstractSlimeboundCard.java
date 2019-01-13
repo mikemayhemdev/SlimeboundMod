@@ -3,6 +3,7 @@ package slimebound.cards;
 import basemod.abstracts.CustomCard;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import slimebound.SlimeboundMod;
 
 
@@ -36,5 +37,14 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         this.slimed = this.baseSlimed + SlimeboundMod.getGluttonyBonus(AbstractDungeon.player);
         if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
     }
+
+
+
+    public void unlock() {
+        SlimeboundMod.logger.info("Unlocked.");
+        this.isLocked = false;
+
+    }
+
 
 }

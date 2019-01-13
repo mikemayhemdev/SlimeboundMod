@@ -1,0 +1,75 @@
+{
+  "Slimebound:BronzeSlime": {
+    "NAME": "ブロンズスライム",
+    "DESCRIPTION": [
+      "ターン開始時に",
+      " ダメージを与えて",
+      "あなたにブロックを与える。"
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "ブルーザースライム",
+    "DESCRIPTION": [
+      "ターン開始時",
+      "ダメージを与える。"
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "スクラップウーズ",
+    "DESCRIPTION": [
+      "ターン開始時にダメージを与える。",
+      "吸収された場合、HPを回復する代わりに即座に再出現する。"
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "グリードウーズ",
+    "DESCRIPTION": [
+      "ターン開始時ダメージを与える。",
+      "吸収された場合、HPを回復する代わりに即座に再出現する。"
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "トーチヘッドスライム",
+    "DESCRIPTION": [
+      "ターン開始時にダメージを与える。",
+      "パワーをプレイする度1のダメージを受ける。"
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "カルティストスライム",
+    "DESCRIPTION": [
+      "ターン開始時にダメージを与える。",
+      "その後ダメージが2増加する。"
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "リーチングスライム",
+    "DESCRIPTION": [
+      "ターン開始時にダメージを与えて",
+      "あなたにブロックを与える。",
+      " "
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "アシッドスライム",
+    "DESCRIPTION": [
+      "ターン開始時に",
+      " ダメージと毒を与える。",
+      " "
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "リッキングスライム",
+    "DESCRIPTION": [
+      "ターン開始時に",
+      " ダメージと粘液を与える。",
+      ""
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "ゴーストフレイムスライム",
+    "DESCRIPTION": [
+      "攻撃せず、効力に影響されない。筋力1と敏捷性1と効力2を与える。"
+    ]
+  }
+}
