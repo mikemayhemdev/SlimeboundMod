@@ -13,7 +13,7 @@
     "UPGRADE_DESCRIPTION": "分裂 1隻 青銅史萊姆 2次。 NL 消耗"
   },
   "Slimebound:GangUp": {
-    "NAME": "結夥",
+    "NAME": "倚多為勝",
     "DESCRIPTION": "分裂 1隻 好鬥史萊姆 X 次。 NL 本場戰鬥中 好鬥史萊姆 造成的傷害增加 !M! 。 NL 消耗",
     "UPGRADE_DESCRIPTION": "分裂 1隻 好鬥史萊姆 X+1 次。 NL 本場戰鬥中 好鬥史萊姆 造成的傷害增加 !M! 。 NL 消耗"
   },
@@ -69,7 +69,7 @@
     "DESCRIPTION": "複製所有你生成的史萊姆。 NL 消耗"
   },
 "Slimebound:Replication": {
-    "NAME": "複製",
+    "NAME": "增殖",
     "DESCRIPTION": "複製1張手牌，並加入到手牌。 NL 消耗"
   },
 "Slimebound:AbsorbAll": {
@@ -127,7 +127,7 @@
     "DESCRIPTION": "打出抽牌堆頂部的牌，將其 消耗 。每個生成的史萊姆使這個效果重複1次。 NL 消耗"
   },
 "Slimebound:SpikyOuterGoop": {
-    "NAME": "帶刺芽孢",
+    "NAME": "帶刺膠團",
     "DESCRIPTION": "獲得 !M! 點 荊棘 和 !M! 層 多層護甲"
   },
 "Slimebound:SelfFormingGoo": {
@@ -148,7 +148,7 @@
     "DESCRIPTION": "獲得等同於一名敵人 黏液 層數的 格擋 。 NL 造成 !D! 點傷害"
   },
 "Slimebound:Dissolve": {
-    "NAME": "裂解",
+    "NAME": "溶解",
     "DESCRIPTION": "消耗 1張手牌，將等同其耗能的隨機 舔舐 牌加入手牌。 NL 消耗",
     "UPGRADE_DESCRIPTION": "消耗 1張手牌，將等同其耗能+1的隨機 舔舐 牌加入手牌。 NL 消耗"
 },
@@ -189,7 +189,7 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 在你的回合開始時，將1張隨機已 消耗 的0耗能牌放入手牌"
   },
 "Slimebound:Repurpose": {
-    "NAME": "改變重途",
+    "NAME": "改變用途",
     "DESCRIPTION": "變形 1張手牌。 NL 消耗",
     "UPGRADE_DESCRIPTION": "變形 至多2張手牌。 NL 消耗"
   },
@@ -258,12 +258,12 @@
     "DESCRIPTION": "若敵人具有 脆弱 ，移除其所有 格擋 和1層 脆弱 。 NL 造成 !D! 點傷害"
   },
 "Slimebound:SoulSicken": {
-    "NAME": "靈魂衝擊",
+    "NAME": "病入膏肓",
     "DESCRIPTION": "給予 !M! 層 中毒 。 NL 將其一半層數的 黏液 變為 中毒",
-  "UPGRADE_DESCRIPTION": "給予 !M! 層 中毒 。 NL 將其一半層數的 黏液 變為 中毒"
+    "UPGRADE_DESCRIPTION": "給予 !M! 層 中毒 。 NL 將其一半層數的 黏液 變為 中毒"
   },
 "Slimebound:AcidGelatin": {
-    "NAME": "酸性膠團",
+    "NAME": "強酸膠團",
     "DESCRIPTION": "每當你受到攻擊，給予攻擊者 !M! 層 中毒"
   },
 "Slimebound:TongueLash": {
@@ -276,12 +276,12 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。若敵人有 黏液 狀態，增加2張隨機 舔舐 牌到手牌"
   },
 "Slimebound:AcidTongue": {
-    "NAME": "酸性舌頭",
+    "NAME": "強酸舌頭",
     "DESCRIPTION": "每當給予 黏液 時，額外給予 !M! 層 中毒",
     "UPGRADE_DESCRIPTION": "每當給予 黏液 時，額外給予1層 黏液 ， !M! 層 中毒"
   },
 "Slimebound:TendrilStrike": {
-    "NAME": "隱毒打擊",
+    "NAME": "猛毒打擊",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 觸發敵人的 中毒 效果",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 觸發敵人的 中毒 效果2次"
 },
@@ -316,10 +316,6 @@
     "DESCRIPTION": "失去1個史萊姆槽位，獲得 !M! 點 力量 和 !M! 點 敏捷",
     "UPGRADE_DESCRIPTION": "失去1個史萊姆槽位，獲得 !M! 點 力量 和 !M! 點 敏捷 。 NL 這張牌的耗能減少1"
   },
-"Slimebound:Tackle": {
-    "NAME": "衝撞",
-    "DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害"
-  },
 "Slimebound:HungryTackle": {
     "NAME": "飢餓衝撞",
     "DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 將1張隨機已 消耗 的0耗能牌放入手牌",
@@ -346,6 +342,10 @@
     "DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 本場戰鬥中 升級 1張隨機手牌",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 本場戰鬥中 升級 2張隨機手牌"
   },
+"Slimebound:Tackle": {
+    "NAME": "衝撞",
+    "DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害"
+  },
 "Slimebound:GoopTackle": {
     "NAME": "起手衝撞",
     "DESCRIPTION": "造成 !D! 點傷害，對自己造成  !SlimeboundSelfharm! 點傷害。 NL 增加1張隨機 衝撞 牌到手牌，其耗能變為0",
@@ -357,7 +357,7 @@
     "DESCRIPTION": "給予 !SlimeboundSlimed! 層 黏液"
   },
 "Slimebound:Chomp": {
-    "NAME": "唔呣嗯呣",
+    "NAME": "大口咀嚼",
     "DESCRIPTION": "造成 !D! 點傷害2次。 NL 本場戰鬥中敵人受到的來自 衝撞 牌的傷害增加 !M!"
   },
 "Slimebound:DouseInSlime": {
