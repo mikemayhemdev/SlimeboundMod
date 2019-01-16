@@ -1,52 +1,57 @@
-package slimebound.actions;
-
+/*    */ package slimebound.actions;
+/*    */ 
+/*    */
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import slimebound.SlimeboundMod;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.Random;
 
+/*    */
 
-public class RandomAutomatonCardAction extends AbstractGameAction {
-    public boolean upgradeCard;
-
-    public RandomAutomatonCardAction(boolean upgraded) {
+/*    */
+/*    */ public class RandomAutomatonCardAction extends AbstractGameAction {
+        public boolean upgradeCard;
+    /*    */
+    public RandomAutomatonCardAction(boolean upgraded)
+    /*     */ {
         this.upgradeCard = upgraded;
-
-
+        /*  25 */
+        /*     */
     }
 
+    /*    */
+    /*    */
+    /*    */
+    public void update()
+    /*    */ {
+        /* 19 */
+        AbstractCard c = null;
+        Random random = new Random();
+        Integer chosenRand = random.nextInt(3) + 1;
 
-    public void update() {
-
-        ArrayList<String> tmp = new ArrayList();
-        Iterator var3 = CardLibrary.cards.entrySet().iterator();
-
-        while(var3.hasNext()) {
-            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
-            if (c.getValue().hasTag(SlimeboundMod.STUDY_AUTOMATON)) {
-                tmp.add(c.getKey());
-            }
+        switch(chosenRand){
+            case 1: c = CardLibrary.getCard("BronzeSlime").makeCopy(); break;
+            case 2: c = CardLibrary.getCard("SlimeHyperBeam").makeCopy(); break;
+            case 3: c = CardLibrary.getCard("Flail").makeCopy(); break;
         }
 
 
-        AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
-        if (this.upgradeCard) {
-            cStudy.upgrade();
+
+            if(upgradeCard){c.upgrade();}
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+
+            this.isDone = true;  /*    */
         }
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cStudy));
-
-        this.isDone = true;
+        /*    */
     }
 
-}
 
 
-
+/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\actions\RandomBasicSlimeCardAction.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */

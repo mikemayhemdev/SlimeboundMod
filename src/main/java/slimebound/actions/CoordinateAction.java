@@ -1,89 +1,97 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
-package slimebound.actions;
-
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+/*    */ package slimebound.actions;
+/*    */ 
+/*    */ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+/*    */ import com.megacrit.cardcrawl.actions.GameActionManager;
+/*    */ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
+/*    */ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+/*    */ import com.megacrit.cardcrawl.characters.AbstractPlayer;
+/*    */ import com.megacrit.cardcrawl.core.EnergyManager;
+/*    */ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+/*    */ import com.megacrit.cardcrawl.monsters.AbstractMonster;
+/*    */ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import slimebound.orbs.SpawnedSlime;
+/*    */ 
+/*    */ public class CoordinateAction extends com.megacrit.cardcrawl.actions.AbstractGameAction
+/*    */ {
+/* 15 */   private boolean freeToPlayOnce = false;
+/*    */   private int damage;
+/*    */   private AbstractPlayer p;
+/*    */   private AbstractMonster m;
+/*    */   private DamageInfo.DamageType damageTypeForTurn;
+/* 20 */   private int energyOnUse = -1;
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public CoordinateAction(AbstractPlayer p, AbstractMonster m, int damage, DamageInfo.DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse)
+/*    */   {
+/* 29 */     this.p = p;
+/* 30 */     this.m = m;
+/* 31 */     this.damage = damage;
+/* 32 */     this.freeToPlayOnce = freeToPlayOnce;
+/* 33 */     this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
+/* 34 */     this.actionType = ActionType.DAMAGE;
+/* 35 */     this.damageTypeForTurn = damageTypeForTurn;
+/* 36 */     this.energyOnUse = energyOnUse;
+/*    */   }
+/*    */   
+/*    */   public void update()
+/*    */   {
+/* 41 */     int effect = EnergyPanel.totalCount;
+/* 42 */     if (this.energyOnUse != -1) {
+/* 43 */       effect = this.energyOnUse;
+/*    */     }
+/*    */     
+/* 46 */     if (this.p.hasRelic("Chemical X")) {
+/* 47 */       effect += 2;
+/* 48 */       this.p.getRelic("Chemical X").flash();
+/*    */     }
+/*    */     
+/* 51 */     if (effect > 0) {
+/* 52 */       for (int i = 0; i < effect; i++) {
+/* 53 */         AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.DamageAction(this.m, new DamageInfo(this.p, this.damage, this.damageTypeForTurn), com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+/*    */
+                }
 
-import java.util.ArrayList;
-
-public class CoordinateAction extends AbstractGameAction {
-    private boolean freeToPlayOnce = false;
-    private int damage;
-    private AbstractPlayer p;
-    private AbstractMonster m;
-    private DamageType damageTypeForTurn;
-    private int energyOnUse = -1;
-    private int slimesToTrigger = 0;
-
-    public CoordinateAction(AbstractPlayer p, AbstractMonster m, int slimesToTrigger, boolean freeToPlayOnce, int energyOnUse) {
-        this.p = p;
-        this.m = m;
-        this.freeToPlayOnce = freeToPlayOnce;
-        this.duration = Settings.ACTION_DUR_XFAST;
-        this.actionType = ActionType.SPECIAL;
-        this.slimesToTrigger = slimesToTrigger;
-        this.energyOnUse = energyOnUse;
-    }
-
-    public void update() {
-        int effect = EnergyPanel.totalCount;
-        if (this.energyOnUse != -1) {
-            effect = this.energyOnUse;
-        }
-
-        if (this.p.hasRelic("Chemical X")) {
-            effect += 2;
-            this.p.getRelic("Chemical X").flash();
-        }
-
-        if (effect > 0) {
-
-
-            if (!this.freeToPlayOnce) {
-                this.p.energy.use(EnergyPanel.totalCount);
-            }
-        }
-
-       ArrayList<AbstractOrb> oldestOrb = new ArrayList <>();
+        AbstractOrb oldestOrb = null;
         for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb.add(o);
-                if (oldestOrb.size() == this.slimesToTrigger) break;
+            if (o.ID == "TorchHeadSlime" ||
+                    o.ID == "AttackSlime" ||
+                    o.ID == "PoisonSlime" ||
+                    o.ID == "SlimingSlime" ||
+                    o.ID == "BronzeSlime" ||
+                    o.ID == "DebuffSlime" ||
+                    o.ID == "CultistSlime" ||
+                    o.ID == "HexSlime") {
+                oldestOrb = o;
+                break;
             }
 
         }
-        for(int i = 0; i < effect; ++i) {
+        if (oldestOrb != null){
+                for (int i = 0; i < effect; i++) {
+                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+                    //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
 
-        if (oldestOrb.size() > 0) {
-            for (AbstractOrb o : oldestOrb) {
-                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(o));
+                }
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F * effect));
 
-
-            }
-        }
-         //   com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F * effect));
-
-
-            //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(oldestOrb));
-        }
-
-        this.isDone = true;
-    }
-}
+        //KNOWN ISSUE - this will actually evoke a defect Orb if one is gained somehow.  Not sure how to evoke a specific orb.
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.EvokeOrbAction(1));
+        }/*    */
+        /*    */
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/* 60 */       if (!this.freeToPlayOnce) {
+/* 61 */         this.p.energy.use(EnergyPanel.totalCount);
+/*    */       }
+/*    */     }
+/* 64 */     this.isDone = true;
+/*    */   }
+/*    */ }

@@ -1,7 +1,7 @@
-package slimebound.cards;
+/*    */ package slimebound.cards;
+/*    */
 
-
-
+import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
@@ -19,68 +19,78 @@ import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.StunnedPower;
+/*    */
 
-
-public class SlimeCrush extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:SlimeCrush";
-    public static final String NAME;
-    public static final String DESCRIPTION;
+/*    */
+/*    */ public class SlimeCrush extends CustomCard
+/*    */ {
+    /*    */   public static final String ID = "SlimeCrush";
+    /*    */   public static final String NAME;
+    /*    */   public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/slimecrush.png";
-    private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.SPECIAL;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    /*    */   public static final String IMG_PATH = "cards/slimecrush.png";
+    /* 19 */   private static final CardType TYPE = CardType.ATTACK;
+    /* 20 */   private static final CardRarity RARITY = CardRarity.SPECIAL;
+    /* 21 */   private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 5;
-    private static final int POWER = 6;
-    private static final int UPGRADE_BONUS = 3;
+    /*    */   private static final int COST = 2;
+    /*    */   private static final int POWER = 6;
+    /*    */   private static final int UPGRADE_BONUS = 3;
 
-
-    public SlimeCrush() {
-
-        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
-
-        this.baseDamage = 50;
-        this.exhaust = true;
-        this.isEthereal = true;
-
-
+    /*    */
+    public SlimeCrush()
+    /*    */ {
+        /* 29 */
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        /*    */
+        /* 31 */
+        this.baseDamage = 60;
+        /* 33 */
+        /*    */
     }
 
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void use(AbstractPlayer p, AbstractMonster m)
+    /*    */ {
+        /* 38 */
         AbstractDungeon.actionManager.addToBottom(new AnimateJumpAction(p));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(0.1F, 1.0F, 0.1F, 0.0F))));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
 
-        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
 
-
+        /*    */
     }
 
 
-    public AbstractCard makeCopy() {
 
+    /*    */
+    /*    */
+    /*    */
+    public AbstractCard makeCopy()
+    /*    */ {
+        /* 44 */
         return new SlimeCrush();
-
+        /*    */
     }
 
-
-    public void upgrade() {
-
-        if (!this.upgraded) {
-
+    /*    */
+    /*    */
+    public void upgrade()
+    /*    */ {
+        /* 49 */
+        if (!this.upgraded)
+            /*    */ {
+            /* 51 */
             upgradeName();
-
-            upgradeDamage(10);
-
+            /* 52 */
+            upgradeDamage(20);
+            /*    */
         }
-
+        /*    */
     }
 
     static {
@@ -88,8 +98,12 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
+        /*    */
     }
 }
 
 
+/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\cards\Strike_Slimebound.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */

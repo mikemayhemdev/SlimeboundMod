@@ -1,145 +1,125 @@
-package slimebound.powers;
+/*    */ package slimebound.powers;
+/*    */
+/*    */
 
+/*    */
 
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.orbs.SpawnedSlime;
-import slimebound.vfx.DoubleSlimeParticle;
 
+/*    */
+/*    */
+        /*    */
+        /*    */
 
-public class DuplicatedFormPower extends AbstractPower {
-    public static final String POWER_ID = "Slimebound:DuplicatedFormPower";
-    public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static final String IMG = "powers/DuplicatedEchoS.png";
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+/*    */
+/*    */ public class DuplicatedFormPower extends AbstractPower
+/*    */ {
+    /*    */   public static final String POWER_ID = "DuplicatedFormPower";
+    /*    */   public static final String NAME = "Potency";
+                public static PowerType POWER_TYPE = PowerType.BUFF;
+    /*    */   public static final String IMG = "powers/DuplicatedEchoS.png";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName()); // lets us log output
 
-    public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-    private int cardsDoubledThisTurn = 0;
-    private DoubleSlimeParticle VFX;
+    /* 14 */   public static String[] DESCRIPTIONS;
+    /*    */   private AbstractCreature source;
+    /* 18 */   private int cardsDoubledThisTurn = 0;
 
-
-    public DuplicatedFormPower(AbstractCreature owner, AbstractCreature source, int amount) {
-
+    /*    */
+    /*    */
+    /*    */
+    public DuplicatedFormPower(AbstractCreature owner, AbstractCreature source, int amount)
+    /*    */ {
+        /* 23 */
         this.name = NAME;
-
+        /* 24 */
         this.ID = POWER_ID;
 
-
+        /* 25 */
         this.owner = owner;
-
+        /* 26 */
         this.source = source;
-
-
+        /*    */
+        /* 28 */
         this.img = new com.badlogic.gdx.graphics.Texture(SlimeboundMod.getResourcePath(IMG));
-
+        /* 29 */
         this.type = POWER_TYPE;
-
+        /* 30 */
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        /*  84 */
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-
+        /* 31 */
         updateDescription();
-
+        /*    */
     }
 
     public void atStartOfTurn() {
         this.cardsDoubledThisTurn = 0;
     }
 
-
-    public void updateDescription() {
-
-
+    /*    */
+    /*    */
+    public void updateDescription()
+    /*    */ {
+        /* 36 */
+        /* 37 */
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
-        } else {
-            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
-        }
-
-
-    }
-
-    public void onInitialApplication() {
-        SlimeboundMod.spritealtered=true;
-        AbstractPlayer p = AbstractDungeon.player;
-
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof SpawnedSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applyFocus();
-            }
-        }
-
-        AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
-        VFX = new DoubleSlimeParticle(AbstractDungeon.player);
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(VFX));
-        if (p instanceof SlimeboundCharacter) {
-            SlimeboundCharacter hero = (SlimeboundCharacter) p;
-            hero.setRenderscale(1.5F);
-        }
-            p.hb_x = p.hb_x + (100 * Settings.scale);
-            p.drawX = p.drawX - (100 * Settings.scale);
-            p.hb.cX = p.hb.cX + (100 * Settings.scale);
-
-
-
+            /* 33 */       this.description = DESCRIPTIONS[0];
+            /*    */     } else {
+            /* 35 */       this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+            /*    */     }
+        /*    */
+        /*    */
     }
 
 
-
-
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0) && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY) && this.cardsDoubledThisTurn < this.amount) {
-            this.cardsDoubledThisTurn += 1;
-            flash();
-            AbstractMonster m = null;
-
-            if (action.target != null) {
-                m = (AbstractMonster) action.target;
-            }
-
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-            tmp.target_y = (Settings.HEIGHT / 2.0F);
-            tmp.freeToPlayOnce = true;
-
-            if (m != null) {
-                tmp.calculateCardDamage(m);
-            }
-
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
-        }
-    }
-    public void onDeath() {
-        VFX.finish();
-    }
-
-    public void onVictory() {
-        VFX.finish();
-        }
+    public void onUseCard(AbstractCard card, UseCardAction action)
+        /*    */   {
+        /* 46 */     if ((!card.purgeOnUse) && (this.amount > 0) && (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - this.cardsDoubledThisTurn <= this.amount))
+            /*    */     {
+            /* 48 */       this.cardsDoubledThisTurn += 1;
+            /* 49 */       flash();
+            /* 50 */       AbstractMonster m = null;
+            /*    */
+            /* 52 */       if (action.target != null) {
+                /* 53 */         m = (AbstractMonster)action.target;
+                /*    */       }
+            /*    */
+            /* 56 */       AbstractCard tmp = card.makeSameInstanceOf();
+            /* 57 */       AbstractDungeon.player.limbo.addToBottom(tmp);
+            /* 58 */       tmp.current_x = card.current_x;
+            /* 59 */       tmp.current_y = card.current_y;
+            /* 60 */       tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+            /* 61 */       tmp.target_y = (Settings.HEIGHT / 2.0F);
+            /* 62 */       tmp.freeToPlayOnce = true;
+            /*    */
+            /* 64 */       if (m != null) {
+                /* 65 */         tmp.calculateCardDamage(m);
+                /*    */       }
+            /*    */
+            /* 68 */       tmp.purgeOnUse = true;
+            /* 69 */       AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
+            /*    */     }
+        /*    */   }
 }
+/*    */
 
 
-
+/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\powers\SearingPower.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */

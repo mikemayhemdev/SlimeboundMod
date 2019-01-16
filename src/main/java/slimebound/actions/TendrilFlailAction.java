@@ -1,63 +1,60 @@
-package slimebound.actions;
+/*    */ package slimebound.actions;
+/*    */ 
+/*    */
 
-
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+/*    */ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.SlimeboundMod;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+/*    */ import com.megacrit.cardcrawl.core.AbstractCreature;
+/*    */ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import slimebound.powers.SlimedPower;
-import slimebound.vfx.SlimeProjectileEffect;
 
-
-public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
-
-    private static final float DURATION = 0.01F;
-    private AbstractCreature owner;
-    private static final float POST_ATTACK_WAIT_DUR = 0.2F;
-    private int numTimes;
-    private int slimed;
-
-    public TendrilFlailAction(AbstractCreature player, AbstractCreature target, int numTimes, int slimed) {
-
-        this.owner = player;
-        this.target = target;
-        this.actionType = ActionType.POWER;
-        this.attackEffect = AttackEffect.POISON;
-        this.duration = 0.01F;
-        this.slimed = slimed;
-        this.numTimes = numTimes;
-    }
-
-    public void update() {
-        if (this.target == null) {
-            this.isDone = true;
-            return;
-        }
-
-        if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-            AbstractDungeon.actionManager.clearPostCombatActions();
-            this.isDone = true;
-            return;
-        }
-
-        if (this.target.currentHealth > 0) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(this.owner.hb.cX, this.owner.hb.cY, this.target.hb.cX, this.target.hb.cY,2F,true,0.6F), 0.00F));
-            //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new SlimedPower(this.target, this.owner, slimed ), slimed , true, AttackEffect.POISON));
-
-            if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
-                this.numTimes -= 1;
-                AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(this.owner,
-                        AbstractDungeon.getMonsters().getRandomMonster(true), this.numTimes, this.slimed));
-            }
-
-            //AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.2F));
-        }
-
-        this.isDone = true;
-    }
-}
+/*    */
+/*    */ public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractGameAction
+/*    */ {
+/*    */   private DamageInfo info;
+/*    */   private static final float DURATION = 0.01F;
+/*    */   private static final float POST_ATTACK_WAIT_DUR = 0.2F;
+/*    */   private int numTimes;
+/*    */   
+/*    */   public TendrilFlailAction(AbstractCreature target, DamageInfo info, int numTimes)
+/*    */   {
+/* 17 */     this.info = info;
+/* 18 */     this.target = target;
+/* 19 */     this.actionType = ActionType.POWER;
+/* 20 */     this.attackEffect = AttackEffect.POISON;
+/* 21 */     this.duration = 0.01F;
+/* 22 */     this.numTimes = numTimes;
+/*    */   }
+/*    */   
+/*    */   public void update()
+/*    */   {
+/* 27 */     if (this.target == null) {
+/* 28 */       this.isDone = true;
+/* 29 */       return;
+/*    */     }
+/*    */     
+/* 32 */     if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+/* 33 */       AbstractDungeon.actionManager.clearPostCombatActions();
+/* 34 */       this.isDone = true;
+/* 35 */       return;
+/*    */     }
+/*    */     
+/* 38 */     if (this.target.currentHealth > 0) {
+/* 39 */      //this.info.applyPowers(this.info.owner, this.target);
+/* 43 */      // this.target.damage(this.info);
+/*    */       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.info.owner, new SlimedPower(this.target, this.info.owner, 2), 2, true, AttackEffect.POISON));
+/*    */ 
+/* 46 */       if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
+/* 47 */         this.numTimes -= 1;
+/* 48 */         AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(
+/* 49 */           AbstractDungeon.getMonsters().getRandomMonster(true), this.info, this.numTimes));
+/*    */       }
+/*    */       
+/* 52 */       AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.2F));
+/*    */     }
+/*    */     
+/* 55 */     this.isDone = true;
+/*    */   }
+/*    */ }
 

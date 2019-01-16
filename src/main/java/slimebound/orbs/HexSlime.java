@@ -1,126 +1,147 @@
-package slimebound.orbs;
+/*    */ package slimebound.orbs;
+/*    */ 
 
+/*    */
+
+/*    */
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import slimebound.actions.CheckForSixHexAction;
-import slimebound.powers.PotencyPower;
+import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeFlareEffect;
 
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
 
-public class HexSlime
-        extends SpawnedSlime {
-    public static final String ID = "Slimebound:HexSlime";
+/*    */
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public class HexSlime
+/*    */   extends SpawnedSlime{
 
+        private BobEffect effect = new BobEffect(2.0F);
+        /*    */   private float activateTimer;
+        /* 25 */   public boolean activated = false; public boolean hidden = false; public boolean playedSfx = false;
+        /*    */   private Color color;
+        /*    */   private float x;
+        /* 28 */   private float y; private float particleTimer = 0.0F;
+        /*    */   private static final float PARTICLE_INTERVAL = 0.06F;
 
-    private BobEffect effect = new BobEffect(2.0F);
-    private float activateTimer;
-    public boolean activated = false;
-    public boolean hidden = false;
-    public boolean playedSfx = false;
-    private Color color;
-    private float x;
-    private float y;
-    private float particleTimer = 0.0F;
-    private static final float PARTICLE_INTERVAL = 0.06F;
+/*    */
+/*    */   public HexSlime()
+/*    */   {
+/* 25 */     super("HexSlime", 1, false, new Color(.36F,.55F,.85F,1),SlimeFlareEffect.OrbFlareColor.HEX,new Texture("SlimeboundImages/orbs/sleep.png"),"SlimeboundImages/orbs/hex.png");
+                this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
+    /* 33 */     this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
+    /* 35 */     this.color = Color.CHARTREUSE.cpy();
+    /* 36 */     this.color.a = 0.0F;
+    this.activated = true;
+    this.activated = true;
+            }
+/*    */
+/*    */
+/*    */    public void updateDescription()
 
-
-    public HexSlime() {
-        super(ID,-25,new Color (.65F,.65F,1.0F,100F),"images/monsters/theBottom/slimeM/skeleton.atlas","images/monsters/theBottom/slimeM/skeleton.json","idle",1.5F,new Color(119F/255F,119/255F,1F,2F), 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("SlimeboundImages/orbs/sleep.png"), "SlimeboundImages/orbs/hex.png");
-        this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
-        this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
-        this.color = Color.CHARTREUSE.cpy();
-        this.color.a = 0.0F;
-        this.activated = true;
-        spawnVFX();
-
-    }
-
-
-    public void updateDescription() {
-
-        this.description = this.descriptions[0];
-    }
+/*     */ {
+    this.description = this.descriptions[0] + 1 + this.descriptions[1];}
 
     @Override
     public void applyFocus() {
 
     }
 
+    public void activateEffectUnique()
+        /*    */   {
+        /* 38 */
 
 
-    public void activateEffectUnique() {
+        AbstractDungeon.actionManager.addToBottom(new CheckForSixHexAction(AbstractDungeon.player));
+        /*    */     }
 
-
-    }
-
-    public void postSpawnEffects() {
-        if (this instanceof HexSlime) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
-
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 2), 2));
-
-        }
-    }
-
-    public void update() {
-        super.update();
-
+    public void update()
+        /*    */ {
+        /* 66 */
         this.activateTimer -= Gdx.graphics.getDeltaTime();
-
+        /* 67 */
         if (this.activateTimer < 0.0F) {
-
-
+            /* 68 */
+            /* 77 */
             this.color.a = MathHelper.fadeLerpSnap(this.color.a, 1.0F);
-
+            /* 78 */
             this.effect.update();
-
+            /* 79 */
             this.effect.update();
-
+            /* 80 */
             this.particleTimer -= Gdx.graphics.getDeltaTime();
-
+            /* 81 */
             if (this.particleTimer < 0.0F) {
-
-                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY + 15F * Settings.scale));
-
-
+                /* 82 */
+                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY));
+                /*    */
+                /* 84 */
                 this.particleTimer = 0.06F;
-
+                /*    */
             }
-
-        } else {
-
+            /*    */
+        }
+        /*    */
+        else {
+            /* 88 */
             this.effect.update();
-
+            /* 89 */
             this.particleTimer -= Gdx.graphics.getDeltaTime();
-
+            /* 90 */
             if (this.particleTimer < 0.0F) {
-
-                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY + 20F * Settings.scale));
-
-
+                /* 91 */
+                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect(this.cX, this.cY));
+                /*    */
+                /* 93 */
                 this.particleTimer = 0.06F;
-
+                /*    */
             }
-
+            /*    */
         }
     }
+            /*    */
+
+            /*    */
+        /*    */
+    /*    */
+/*    */
+/*    */
+/*    */
+
+/*    */
+/*    */   
+/*    */   public AbstractOrb makeCopy() {
+/* 54 */     return new HexSlime();
+/*    */   }
+/*    */ }
 
 
-    public AbstractOrb makeCopy() {
-        return new HexSlime();
-    }
-}
-
-
+/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\TheDisciple.jar!\chronomuncher\orbs\BronzeSlime.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */
