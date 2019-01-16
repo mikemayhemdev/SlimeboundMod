@@ -1,18 +1,18 @@
 {
   "Slimebound:Hunted": {
-    "NAME": "The Boss Approaches",
+    "NAME": "대장 출현",
     "DESCRIPTIONS": [
       "첨탑에 소리가 쩌렁쩌렁 울립니다... NL NL #r~배신자!!!~ NL NL 거대한 슬라임이 재빨리 당신을 따라와 당신의 앞을 막습니다. 자신의 부하가 구역을 이탈한게 마음에 들지 않는 듯합니다, 그래서 태초 지역을 벗어나 당신을 잡으러 왔습니다.",
       "그렇게 쉬울줄 알았어?",
-      "이제 모든게 아귀가 맞는다. NL The lack of memories, the ascent, the #yAncient #yOne. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+      "이제 모든게 아귀가 맞는다. NL 기억의 말소, 등반, #y고대의 #y존재. NL NL 언제나 그래왔고, NL 언제나 그럴 것이다. NL 모든 것은 다시 잊혀질 것이다. 곧..."
     ],
     "OPTIONS": [
-      "[맞선다] #r슬라임 #r보스와 #r싸운다. Reward: #g작은 #g중절모.",
+      "[맞선다] #r슬라임 #r보스와 #r싸운다. 보상: #g작은 #g중절모.",
       "[공포에 질려 도망간다] #r저주 #r- #r수치."
     ]
   },
   "Slimebound:WorldofGoop": {
-    "NAME": "World of Goop",
+    "NAME": "끈적이 세계",
     "DESCRIPTIONS": [
       "당신은 웅덩이에 빠졌습니다. NL 웅덩이는 #g@끈적이@ 로 되어있습니다!! NL 조용히, 끈적이 목욕을 하며 당신은 잠깐의 여유를 만끽합니다. NL NL 나와보니 불운한 모험가들이 떨어트린 #y골드 옆에 반짝이는 것을 좋아하는듯한 생명체가 있습니다.",
       "기운찬 끈적이 목욕을 끝내고, #y골드를 끌어모은 다음, 흐물거리는 슬픈 표정을 짓는 생명체를 뒤로 하고 떠납니다.",
@@ -46,31 +46,31 @@
       "다른 길을 걷는 모든 슬라임은 당신의 친구입니다.  새로운 날붙이와 보물을 받고, 날붙이 수액이 당신의 여정에 합류했습니다."
     ],
     "OPTIONS": [
-      "[등용] #g날붙이 #g수액 을 얻습니다. 안을 조사하면 #rLocked if you Reach Inside.",
-      "[등용] 잠김.",
+      "[등용] #g날붙이 #g수액 을 얻습니다. 안을 조사하면 #r잠깁니다 .",
+      "[등용] #r잠김.",
       "[떠난다]"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
-    "NAME": "The Art of Slime War",
+    "NAME": "슬라임 병법",
     "DESCRIPTIONS": [
-      "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
-      "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
-      "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
-      "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
-      "You decide to leave the book where it is and continue on.",
-      "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
+      "당신은 우연히 빛나는 책이 놓여진 역겨운 받침대를 발견했습니다. 이 책에는 #g대장 #g슬라임 과 그 하수인들이 사용하던 복잡하고 정교한 병법이 적혀져 있는 것 같습니다.",
+      "책에 닿자, 몇 몇 함정이 발동되는 소리가 들립니다. 함정을 다 피하기는 힘들어 보입니다.",
+      "당신은 책을 훔치고 함정을 피하려 했습니다. 하지만 끔찍한 끈적이 웅덩이로 빠져버렸습니다.",
+      "책을 잡자 바닥의 가시 함정이 드러났습니다. 당신은 아슬아슬하게 도망쳤습니다. 다행히 크게 다치지는 않았습니다.",
+      "책이 받침대에서 떨어지자, 당신은 정기가 빠져나가는 기분이 듭니다. 그만한 가치가 있기를 비는수 밖에 없습니다.",
+      "당신은 책을 내버려 두고 가던 길을 가기로 했습니다.",
+      "당신은 슬라임 하수인들이 위협이 되는 이유를 전혀 알 수 없었습니다. - 하수인들이 사용하던 유일한 전략은 그들의 몸을 적들에게 맹렬히 부딪히는 것 밖에 없습니다. 뭐.. 그게 먹혔나 봅니다.."
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g5 Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
-      "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky.",
-      "[Be Patient] #rTake #r",
-      " #rDamage.",
-      "[Grab and Run] #rLose #r",
-      " #rMax #rHP."
+      "[읽는다] #g모든 타격을 #g지웁니다. #g태클 #g5 장을 얻습니다.",
+      "[가진다] #g전술교본 #g참조 를 #g얻습니다. #r함정 을 #r발동시킵니다.",
+      "[떠난다]",
+      "[뛰어든다] #r저주를 #r얻습니다 #r- #r질척거림.",
+      "[기다린다] #r",
+      " #r피해를 #r입습니다.",
+      "[움켜쥐고 도망간다] #r최대 #r체력 #r",
+      " #r를 #r잃습니다."
     ]
   }
 }
