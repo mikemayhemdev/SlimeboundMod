@@ -74,7 +74,7 @@
   },
   "Slimebound:SlimedSkullRelic": {
     "NAME": "점액질 해골",
-    "FLAVOR": "A snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
+    "FLAVOR": "상태가 많이 안좋은 스네코 해골입니다. 더럽고 끈적이는 진흙이 많이 붙어있습니다.",
     "DESCRIPTIONS": [
       "점액을 부여할때 추가로 #b",
       " 점액을 부여합니다."
