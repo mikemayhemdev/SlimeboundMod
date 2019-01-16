@@ -1,55 +1,84 @@
-/*    */ package slimebound.actions;
-/*    */ 
-/*    */ import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-/*    */ import com.megacrit.cardcrawl.actions.GameActionManager;
-/*    */ import com.megacrit.cardcrawl.cards.DamageInfo;
-/*    */ import com.megacrit.cardcrawl.core.AbstractCreature;
-/*    */ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-/*    */ import com.megacrit.cardcrawl.helpers.Hitbox;
-/*    */ import com.megacrit.cardcrawl.monsters.AbstractMonster;
-/*    */ import com.megacrit.cardcrawl.monsters.MonsterGroup;
-/*    */ import com.megacrit.cardcrawl.rooms.AbstractRoom;
-/*    */ import com.megacrit.cardcrawl.unlock.UnlockTracker;
-/*    */ import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+package slimebound.actions;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-/*    */ 
-/*    */ public class MassFeedAction extends com.megacrit.cardcrawl.actions.AbstractGameAction
-/*    */ {
-/*    */   private int increaseHpAmount;
-/*    */   private DamageInfo info;
-/*    */   private static final float DURATION = 0.1F;
-/*    */   
-/*    */   public MassFeedAction(AbstractCreature target, DamageInfo info, int maxHPAmount)
-/*    */   {
-/* 23 */     this.info = info;
-/* 24 */     setValues(target, info);
-/* 25 */     this.increaseHpAmount = maxHPAmount;
-/* 26 */     this.actionType = AbstractGameAction.ActionType.DAMAGE;
-/* 27 */     this.duration = 0.1F;
-/*    */   }
-/*    */   
-/*    */   public void update()
-/*    */   {
-/* 32 */     if ((this.duration == 0.1F) && 
-/* 33 */       (this.target != null)) {
-/* 34 */       AbstractDungeon.effectList.add(new BiteEffect(this.target.hb.cX, this.target.hb.cY));
-/*    */       
-/* 36 */       this.target.damage(this.info);
-/*    */       
-/* 38 */       if (((((AbstractMonster)this.target).isDying) || (this.target.currentHealth <= 0)) && (!this.target.halfDead) && 
-/* 39 */         (!this.target.hasPower("Minion"))) {
-/* 40 */         AbstractDungeon.player.increaseMaxHp(this.increaseHpAmount, false);
 
-/*    */       }
-/*    */       
-/* 48 */       if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-/* 49 */         AbstractDungeon.actionManager.clearPostCombatActions();
-/*    */       }
-/*    */     }
-/*    */     
-/*    */ 
-/* 54 */     tickDuration();
-/*    */   }
-/*    */ }
+public class MassFeedAction
+        extends AbstractGameAction
+{
+    public int[] damage;
+    private int increaseHpAmount;
 
+    public MassFeedAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type,
+                       AbstractGameAction.AttackEffect effect, int increaseHpAmount)
+    {
+        setValues(null, source, amount[0]);
+        this.damage = amount;
+        this.actionType = AbstractGameAction.ActionType.DAMAGE;
+        this.damageType = type;
+        this.attackEffect = effect;
+        this.increaseHpAmount = increaseHpAmount;
+    }
+
+    public void update()
+    {
+        boolean playedMusic;
+        if (this.duration == 0.5F)
+        {
+            playedMusic = false;
+            int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
+            for (int i = 0; i < temp; i++) {
+                if ((!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying) &&
+                        (AbstractDungeon.getCurrRoom().monsters.monsters.get(i).currentHealth > 0) &&
+                        (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isEscaping)) {
+                    AbstractDungeon.effectList.add(new BiteEffect(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX, AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY));
+
+                    if (playedMusic)
+                    {
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(
+
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX,
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect, true));
+                    }
+                    else
+                    {
+                        playedMusic = true;
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(
+
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX,
+                                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect));
+                    }
+                }
+            }
+        }
+        tickDuration();
+        if (this.isDone)
+        {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                p.onDamageAllEnemies(this.damage);
+            }
+            for (int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++)
+            {
+                AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+                if ((!target.isDying) && (target.currentHealth > 0) && (!target.isEscaping)) {
+                    target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
+                    if (((target.isDying) || (target.currentHealth <= 0))
+                            && (!target.halfDead) && (!target.hasPower("Minion"))){
+                        AbstractDungeon.player.increaseMaxHp(this.increaseHpAmount, false);
+                    }
+                }
+            }
+            if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+                AbstractDungeon.actionManager.clearPostCombatActions();
+            }
+            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
+        }
+    }
+}

@@ -1,76 +1,50 @@
-/*    */ package slimebound.orbs;
-/*    */ 
+package slimebound.orbs;
 
-/*    */
-
-/*    */
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
 
-/*    */
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ public class PoisonSlime
-/*    */   extends SpawnedSlime
-/*    */ {
-/*    */   public PoisonSlime()
-/*    */   {
-/* 25 */     super("PoisonSlime", 2,true, new Color(.58F,.81F,.35F,1), SlimeFlareEffect.OrbFlareColor.POISON,new Texture("SlimeboundImages/orbs/debuff1.png"),"SlimeboundImages/orbs/poisonous.png");
-            }
-/*    */
-/*    */
-/*    */    public void updateDescription()
+public class PoisonSlime
+        extends SpawnedSlime {
+    public static final String ID = "Slimebound:PoisonSlime";
 
-/*     */ {
-    this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];}
+    public PoisonSlime() {
+        this(false);
+    }
+    public PoisonSlime(boolean topLevelVFX) {
+        super(ID, -36,new Color (.5F,1.0F,.5F,100F),"images/monsters/theBottom/slimeS/skeleton.atlas","images/monsters/theBottom/slimeS/skeleton.json","idle",.85F,new Color(0.6F,.9F,.6F,2F),2, 1,true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("SlimeboundImages/orbs/debuff1.png"), "SlimeboundImages/orbs/poisonous.png");
+        this.extraFontColor = Color.FOREST;
+        this.debuffAmount = 1;
+        this.topSpawnVFX = topLevelVFX;
+        spawnVFX();
+    }
 
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */   public void activateEffectUnique()
-/*    */   {
-/* 38 */
+    public void updateDescription() {
 
-/*    */    AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new PoisonPower(mo, AbstractDungeon.player, this.passiveAmount), this.passiveAmount, true, AbstractGameAction.AttackEffect.POISON));
-/*    */     }
-/*    */
-/*    */   
-/*    */   public AbstractOrb makeCopy() {
-/* 54 */     return new PoisonSlime();
-/*    */   }
-/*    */ }
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount+ this.debuffBonusAmount) + this.descriptions[2];
+    }
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\TheDisciple.jar!\chronomuncher\orbs\BronzeSlime.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */
+    public void activateEffectUnique() {
+
+
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,true,false,false,1 + this.debuffBonusAmount,false,0,false));
+
+    }
+
+
+    public AbstractOrb makeCopy() {
+        return new PoisonSlime();
+    }
+}
+
+

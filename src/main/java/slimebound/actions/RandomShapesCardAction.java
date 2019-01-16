@@ -1,58 +1,55 @@
-/*    */ package slimebound.actions;
-/*    */ 
-/*    */
+package slimebound.actions;
+
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.SlimeboundMod;
+import slimebound.cards.DecasProtection;
+import slimebound.cards.DonusPower;
+import slimebound.cards.PolyBeam;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
 
-/*    */
 
-/*    */
-/*    */ public class RandomShapesCardAction extends AbstractGameAction {
-        public boolean upgradeCard;
-    /*    */
-    public RandomShapesCardAction(boolean upgraded)
-    /*     */ {
+public class RandomShapesCardAction extends AbstractGameAction {
+    public boolean upgradeCard;
+
+    public RandomShapesCardAction(boolean upgraded) {
         this.upgradeCard = upgraded;
-        /*  25 */
-        /*     */
-    }
-
-    /*    */
-    /*    */
-    /*    */
-    public void update()
-    /*    */ {
-        /* 19 */
-        AbstractCard c = null;
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(3) + 1;
-
-        switch(chosenRand){
-            case 1: c = CardLibrary.getCard("CircleOfPower").makeCopy(); break;
-            case 2: c = CardLibrary.getCard("SquareOfProtection").makeCopy(); break;
-            case 3: c = CardLibrary.getCard("PolyBeam").makeCopy(); break;
-        }
 
 
-
-
-            if(upgradeCard){c.upgrade();}
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
-
-            this.isDone = true;  /*    */
-        }
-        /*    */
     }
 
 
+    public void update() {
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\actions\RandomBasicSlimeCardAction.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */
+        ArrayList<String> tmp = new ArrayList();
+        Iterator var3 = CardLibrary.cards.entrySet().iterator();
+
+        while(var3.hasNext()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+            if (c.getValue().hasTag(SlimeboundMod.STUDY_SHAPES)) {
+                tmp.add(c.getKey());
+            }
+        }
+
+
+        AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+        if (this.upgradeCard) {
+            cStudy.upgrade();
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cStudy));
+        this.isDone = true;
+    }
+
+}
+
+
+

@@ -1,57 +1,56 @@
-/*    */ package slimebound.actions;
-/*    */ 
-/*    */
+package slimebound.actions;
+
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import slimebound.SlimeboundMod;
+import slimebound.cards.CaCaw;
+import slimebound.cards.DarkVoid;
+import slimebound.cards.SplitCultist;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
 
-/*    */
 
-/*    */
-/*    */ public class RandomAwakanedCardAction extends AbstractGameAction {
-        public boolean upgradeCard;
-    /*    */
-    public RandomAwakanedCardAction(boolean upgraded)
-    /*     */ {
+public class RandomAwakanedCardAction extends AbstractGameAction {
+    public boolean upgradeCard;
+
+    public RandomAwakanedCardAction(boolean upgraded) {
         this.upgradeCard = upgraded;
-        /*  25 */
-        /*     */
-    }
-
-    /*    */
-    /*    */
-    /*    */
-    public void update()
-    /*    */ {
-        /* 19 */
-        AbstractCard c = null;
-        Random random = new Random();
-        Integer chosenRand = random.nextInt(3) + 1;
-
-        switch(chosenRand){
-            case 1: c = CardLibrary.getCard("SlimeRitual").makeCopy(); break;
-            case 2: c = CardLibrary.getCard("CultistSlime").makeCopy(); break;
-            case 3: c = CardLibrary.getCard("DarkVoid").makeCopy(); break;
-        }
 
 
-
-            if(upgradeCard){c.upgrade();}
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
-
-            this.isDone = true;  /*    */
-        }
-        /*    */
     }
 
 
+    public void update() {
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\actions\RandomBasicSlimeCardAction.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */
+        ArrayList<String> tmp = new ArrayList();
+        Iterator var3 = CardLibrary.cards.entrySet().iterator();
+
+        while(var3.hasNext()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+            if (c.getValue().hasTag(SlimeboundMod.STUDY_AWAKENEDONE)) {
+                tmp.add(c.getKey());
+            }
+        }
+
+
+        AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+        if (this.upgradeCard) {
+            cStudy.upgrade();
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cStudy));
+
+        this.isDone = true;
+    }
+
+}
+
+
+

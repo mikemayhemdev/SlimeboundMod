@@ -1,111 +1,151 @@
-/*    */ package slimebound.powers;
-/*    */
-/*    */
+package slimebound.powers;
 
-/*    */
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
+import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
+import slimebound.orbs.SpawnedSlime;
+import slimebound.vfx.DoubleSlimeParticle;
 
-/*    */
-/*    */
-        /*    */
-        /*    */
 
-/*    */
-/*    */ public class DuplicatedFormNoHealPower extends AbstractPower
-/*    */ {
-    /*    */   public static final String POWER_ID = "DuplicatedFormNoHealPower";
-    /*    */   public static final String NAME = "Potency";
-                public static PowerType POWER_TYPE = PowerType.DEBUFF;
-    /*    */   public static final String IMG = "powers/HalvedS.png";
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName()); // lets us log output
+public class DuplicatedFormNoHealPower extends AbstractPower {
+    public static final String POWER_ID = "Slimebound:DuplicatedFormNoHealPower";
+    public static final String NAME = "Potency";
+    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static final String IMG = "powers/HalvedS.png";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
-    /* 14 */   public static String[] DESCRIPTIONS;
-    /*    */   private AbstractCreature source;
-    /* 18 */   private int cardsDoubledThisTurn = 0;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
+    private int maxHpTempLoss = 0;
 
-    /*    */
-    /*    */
-    /*    */
-    public DuplicatedFormNoHealPower(AbstractCreature owner, AbstractCreature source, int amount)
-    /*    */ {
-        /* 23 */
+
+    public DuplicatedFormNoHealPower(AbstractCreature owner, AbstractCreature source, int amount) {
+
         this.name = NAME;
-        /* 24 */
+
         this.ID = POWER_ID;
 
-        /* 25 */
+
         this.owner = owner;
-        /* 26 */
+
         this.source = source;
-        /*    */
-        /* 28 */
+
+
         this.img = new com.badlogic.gdx.graphics.Texture(SlimeboundMod.getResourcePath(IMG));
-        /* 29 */
+
         this.type = POWER_TYPE;
-        /* 30 */
+
         this.amount = amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-        /*  84 */
+        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-        /* 31 */
+
         updateDescription();
-        /*    */
+
+    }
+
+    public int onHeal(int healAmount) {
+        if ((AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)) {
+            //flash();
+            int currentHealth = this.owner.currentHealth;
+            int maxHealth = this.owner.maxHealth - this.amount;
+            double currentPct = currentHealth * 1.001 / maxHealth * 1.001;
+            logger.info("Current health: " + currentHealth);
+            logger.info("Max health: " + maxHealth);
+            logger.info("Current percentage: " + currentPct);
+             if (currentHealth + healAmount > maxHealth) {
+                return (maxHealth) - currentHealth;
+            } else {
+                return healAmount;
+            }
+        }
+        return healAmount;
     }
 
 
-    /*    */
-    /*    */
-    public void updateDescription()
-    /*    */ {
-        /* 36 */
-        /* 37 */
-        this.description = (DESCRIPTIONS[0]);
-        /*    */
-        /*    */
+    public void updateDescription() {
+
+
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+
+
     }
 
 
 
-    public int onHeal(int healAmount)
-        /*    */   {
-        /* 23 */     if ((AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)) {
-            /* 24 */       flash();
-                        int currentHealth = this.owner.currentHealth;
-                        int maxHealth = this.owner.maxHealth;
-                        double currentPct = currentHealth * 1.001 / maxHealth * 1.001;
-                        logger.info("Current health: " + currentHealth);
-                         logger.info("Max health: " + maxHealth);
-                        logger.info("Current percentage: " + currentPct);
-                            if(currentPct >= 0.5){
-            /* 25 */       return MathUtils.round(healAmount * 0F);
-                            }
-                            else if(currentHealth + healAmount > maxHealth / 2) {
-                            return (maxHealth / 2) - currentHealth;
-                            }
-                            else {return healAmount;}
-            /*    */     }
-        /* 27 */     return healAmount;
-        /*    */   }
+    public void onInitialApplication() {
+        AbstractPlayer p = AbstractDungeon.player;
 
+        //if (p.currentHealth > (p.maxHealth/2)){
+        //  AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,AbstractDungeon.player,p.currentHealth-(p.maxHealth/2)));
+
+        updateCurrentHealth();
+
+    }
+
+    public void updateCurrentHealth(){
+        if (this.owner.currentHealth > this.owner.maxHealth - this.amount){
+
+            this.owner.currentHealth = this.owner.maxHealth - this.amount;
+
+            //int currentAmount = this.owner.currentHealth - (this.owner.maxHealth - this.amount);
+            //AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, currentAmount, DamageInfo.DamageType.HP_LOSS));
+
+        }
+    }
+
+    public void stackPower(int stackAmount) {
+        //SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
+
+            this.fontScale = 8.0F;
+            this.amount += stackAmount;
+        if (stackAmount < 0){
+            this.owner.heal(stackAmount * -1);
+        }
+             updateCurrentHealth();
+        if (this.amount == 0){
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, DuplicatedFormNoHealPower.POWER_ID));
+
+        }
+
+
+
+    }
+
+
+    public void onRemove() {
+        restoreMaxHP();
+    }
+
+    public void restoreMaxHP(){
+
+
+        this.owner.heal(this.maxHpTempLoss);
+    }
+
+    public void onVictory(){
+        this.maxHpTempLoss = this.amount;
+        this.amount = 0;
+        restoreMaxHP();
+    }
 }
-/*    */
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar!\slimboundmod\powers\SearingPower.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */
+

@@ -1,77 +1,56 @@
-/*    */ package slimebound.orbs;
-/*    */ 
+package slimebound.orbs;
 
-/*    */
-
-/*    */
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import slimebound.powers.SlimedPower;
+import slimebound.SlimeboundMod;
+import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
 
-/*    */
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ public class SlimingSlime
-/*    */   extends SpawnedSlime
-/*    */ {
-/*    */   public SlimingSlime()
-/*    */   {
-/* 25 */     super("SlimingSlime", 3, true, new Color(.6F,.47F,.59F,1),SlimeFlareEffect.OrbFlareColor.SLIMING,new Texture("SlimeboundImages/orbs/debuff2.png"),"SlimeboundImages/orbs/sliming.png");
-            }
-/*    */
-/*    */
-/*    */    public void updateDescription()
+public class SlimingSlime
+        extends SpawnedSlime {
+    public static final String ID = "Slimebound:SlimingSlime";
 
-/*     */ {
-    this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];}
+    public SlimingSlime() {
+        super(ID,-17, new Color (1.0F,.5F,1.0F,100F),"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",.85F,new Color(224F/255F,113F/255F,224F/255F,2F),1, 2,true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("SlimeboundImages/orbs/debuff2.png"), "SlimeboundImages/orbs/sliming.png");
+        this.extraFontColor = new Color (.7F,.3F,.7F,1F);
+        this.debuffAmount=2;
 
+        spawnVFX();
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */   public void activateEffectUnique()
-/*    */   {
+    }
+
+    @Override
+    public void postSpawnEffects() {
+        super.postSpawnEffects();
+        updateSlimedNumber();
+    }
+
+    public void updateDescription() {
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount+ this.debuffBonusAmount) + this.descriptions[2];
+    }
+
+    public void updateSlimedNumber(){
+
+        this.slimeBonus = SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+    }
+
+    public void activateEffectUnique() {
+
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,true,false,2 + this.debuffBonusAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player),false,0,false));
+
+         }
 
 
-/*    */
-                AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(true);
-                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new SlimedPower(mo, AbstractDungeon.player, this.passiveAmount), this.passiveAmount, true, AbstractGameAction.AttackEffect.POISON));
-    /*    */     }
-/*    */
-/*    */   
-/*    */   public AbstractOrb makeCopy() {
-/* 54 */     return new SlimingSlime();
-/*    */   }
-/*    */ }
+    public AbstractOrb makeCopy() {
+        return new SlimingSlime();
+    }
+}
 
 
-/* Location:              C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\TheDisciple.jar!\chronomuncher\orbs\BronzeSlime.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

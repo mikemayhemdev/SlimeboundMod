@@ -1,0 +1,154 @@
+[
+     {
+      "NAMES": [
+        "吸收"
+      ],
+      "PROPERNAME": "吸收",
+      "DESCRIPTION": "融合一只生成的史莱姆，恢复 分裂 时减少的生命上限。"
+    },
+    {
+      "NAMES": [
+        "分裂"
+      ],
+      "PROPERNAME": "分裂",
+      "DESCRIPTION": "失去 3 点生命，生成一只史莱姆仆从，在回合开始时发动攻击。当它存活时，你的生命上限减少3点。"
+    },
+    {
+      "NAMES": [
+        "黏液"
+      ],
+      "PROPERNAME": "黏液",
+      "DESCRIPTION": "下次攻击造成额外伤害，移除黏液效果，并恢复其层数一半的生命。回合结束时失去一半层数。"
+    },
+     {
+      "NAMES": [
+        "潜力"
+      ],
+      "PROPERNAME": "潜力",
+      "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
+    },
+     {
+      "NAMES": [
+        "火炬头史莱姆",
+        "torch_head_slime"
+      ],
+      "PROPERNAME": "火炬头史莱姆",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害， 潜力 对其影响翻倍。"
+    },
+     {
+      "NAMES": [
+        "好斗史莱姆",
+        "bruiser_slime",
+        "bruiser slimes",
+        "bruiser_slimes"
+      ],
+      "PROPERNAME": "好斗史莱姆",
+      "DESCRIPTION": "发动攻击时造成 4 点伤害。"
+    },
+     {
+      "NAMES": [
+        "邪教徒史莱姆",
+        "cultist_slime"
+      ],
+      "PROPERNAME": "邪教徒史莱姆",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，提升自身伤害 1 点。"
+    },
+     {
+      "NAMES": [
+        "水蛭史莱姆",
+        "leeching_slime",
+        "leeching slimes",
+        "leeching_slimes"
+      ],
+      "PROPERNAME": "水蛭史莱姆",
+      "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予你 2 点格挡。"
+    },
+     {
+      "NAMES": [
+        "酸液史莱姆",
+        "acid_slime",
+        "acid slimes",
+        "acid_slimes"
+      ],
+      "PROPERNAME": "酸液史莱姆",
+      "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予敌人 1 层 中毒。"
+    },
+     {
+      "NAMES": [
+        "污泥史莱姆",
+        "mire_slime",
+        "mire slimes",
+        "mire_slimes"
+      ],
+      "PROPERNAME": "污泥史莱姆",
+      "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 黏液。"
+    },
+     {
+      "NAMES": [
+        "plated armor",
+        "plated_armor"
+      ],
+      "PROPERNAME": "Plated Armor",
+      "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
+    },
+     {
+      "NAMES": [
+        "青铜史莱姆",
+        "bronze_slime"
+      ],
+      "PROPERNAME": "Bronze Slime",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，并给予你 6 点格挡。"
+    },
+    {
+      "NAMES": [
+        "舔舐"
+      ],
+      "PROPERNAME": "舔舐",
+      "DESCRIPTION": "以舔字结尾的一系列0费卡牌，给予敌人多种负面状态。"
+    },
+     {
+      "NAMES": [
+        "鬼火史莱姆",
+        "ghostflame_slime"
+      ],
+      "PROPERNAME": "鬼火史莱姆",
+      "DESCRIPTION": "提供 1 点力量，1 点敏捷，2 点 潜力 。不会攻击，不受潜力影响。"
+    },
+    {
+      "NAMES": [
+        "morph"
+      ],
+      "PROPERNAME": "Morph",
+      "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs 1 less."
+    },
+     {
+      "NAMES": [
+        "slow"
+      ],
+      "PROPERNAME": "Slow",
+      "DESCRIPTION": "Receives 10% more damage per card played in a turn."
+    },
+     {
+      "NAMES": [
+        "冲撞"
+      ],
+      "PROPERNAME": "冲撞",
+      "DESCRIPTION": "以冲撞结尾的一系列的高伤害，且会对自己造成伤害的牌。"
+    },
+     {
+      "NAMES": [
+        "尖塔首领",
+        "spire_boss"
+      ],
+      "PROPERNAME": "尖塔首领",
+      "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
+    },
+     {
+      "NAMES": [
+        "查找策略"
+      ],
+      "PROPERNAME": "查找策略",
+      "DESCRIPTION": "随机将4张 冲撞 牌加入你的手牌。本场战斗中它们的耗能减少1。消耗"
+    }
+
+]

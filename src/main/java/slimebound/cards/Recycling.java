@@ -1,7 +1,7 @@
-/*    */ package slimebound.cards;
-/*    */
+package slimebound.cards;
 
-import basemod.abstracts.CustomCard;
+
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,59 +11,57 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.GluttonyPower;
-import slimebound.powers.GluttonyPowerUpgraded;
 import slimebound.powers.RecyclingPower;
+import slimebound.powers.RecyclingPowerUpgraded;
 
-/*    */
-/*    */ public class Recycling extends CustomCard
-        /*    */ {
-    /*    */   public static final String ID = "Recycling";
-    /*    */
-                private static final CardStrings cardStrings;
-                public static final String NAME;
-                public static final String DESCRIPTION;
+
+public class Recycling extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:Recycling";
+
+    private static final CardStrings cardStrings;
+    public static final String NAME;
+    public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    /*    */   public static final String IMG_PATH = "cards/gluttony.png";
-    /* 17 */   private static final CardType TYPE = CardType.POWER;
-    /* 18 */   private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    /* 19 */   private static final CardTarget TARGET = CardTarget.SELF;
-    /*    */
-    /*    */   private static final int COST = 1;
+    public static final String IMG_PATH = "cards/recycling.png";
+    private static final CardType TYPE = CardType.POWER;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
-    /*    */   private static int upgradedamount = 1;
-    /*    */
-    /*    */   public Recycling()
-    /*    */   {
-        /* 27 */     super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-                    this.magicNumber = this.baseMagicNumber = 1;
+    private static final int COST = 1;
 
+    private static int upgradedamount = 1;
 
-        /*    */   }
-    /*    */
-    /*    */   public void use(AbstractPlayer p, AbstractMonster m)
-    /*    */ {
+    public Recycling() {
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        this.magicNumber = this.baseMagicNumber = 5;
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
-            /* 35 */
 
     }
-    /*    */
-    /*    */   public AbstractCard makeCopy()
-    /*    */   {
-        /* 40 */     return new Recycling();
-        /*    */   }
-    /*    */
-    /*    */   public void upgrade()
-    /*    */   {
-        /* 45 */     if (!this.upgraded)
-            /*    */     {
-            /* 47 */       upgradeName();
-            upgradeMagicNumber(1);
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-            /*    */     }
-        /*    */   }
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
+
+    }
+
+    public AbstractCard makeCopy() {
+        return new Recycling();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
+            this.isInnate=true;
+            //upgradeMagicNumber(1);
+
+
+        }
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -71,5 +69,5 @@ import slimebound.powers.RecyclingPower;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
-    /*    */ }
+}
 
