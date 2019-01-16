@@ -680,6 +680,7 @@ public static void saveData() {
         String language = "eng";
 
         if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+        if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
         if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
         if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
@@ -723,7 +724,8 @@ public static void saveData() {
 
         String language = "eng";
 
-       if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
+        if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
         if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
         if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
