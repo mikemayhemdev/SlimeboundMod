@@ -282,8 +282,8 @@
   },
 "Slimebound:TendrilStrike": {
     "NAME": "隐毒打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果2次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果2次。 NL 消耗"
 },
   "Slimebound:FirmFortitude": {
     "NAME": "感同身受",
@@ -400,7 +400,7 @@
   },
 "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
-    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 中毒 状态，抽一张牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽一张牌，获得 [E] 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。如果敌人有 中毒 状态，抽一张牌。如果敌人具有 黏液 ，获得 [E] 。"
   },
 "Slimebound:LeechLife": {
