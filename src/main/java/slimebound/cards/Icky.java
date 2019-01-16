@@ -32,7 +32,7 @@ public class Icky extends AbstractSlimeboundCard {
 
     private static final CardType TYPE = CardType.CURSE;
     private static final CardRarity RARITY = CardRarity.CURSE;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
 
     private static final int COST = -2;
@@ -65,13 +65,6 @@ public class Icky extends AbstractSlimeboundCard {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            //upgradeMagicNumber(1);
-
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-        }
     }
 
     static {

@@ -41,7 +41,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-
+        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 12;
         this.selfDamage = 5;

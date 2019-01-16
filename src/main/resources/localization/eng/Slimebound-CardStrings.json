@@ -282,8 +282,8 @@
   },
 "Slimebound:TendrilStrike": {
     "NAME": "Toxin Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If the enemy has Poison, trigger the Poison's end of turn effect twice."
+    "DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to its Poison, then reduce its Poison by 1. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to twice its Poison, then reduce its Poison by 2. NL Exhaust"
 },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
@@ -400,7 +400,7 @@
   },
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Draw a card if the enemy has Poison.",
+    "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has Goop.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw a card if the enemy has Poison. Gain [E] if they have Goop."
   },
 "Slimebound:LeechLife": {

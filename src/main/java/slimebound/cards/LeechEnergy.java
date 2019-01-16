@@ -32,7 +32,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -40,9 +40,9 @@ public class LeechEnergy extends AbstractSlimeboundCard {
     public LeechEnergy() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
-
-        this.baseDamage = 3;
+        this.baseDamage = 5;
 
 
     }
@@ -51,17 +51,12 @@ public class LeechEnergy extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (m.hasPower("Poison")) {
+        if (m.hasPower(SlimedPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, 3, new Color(0.5F,0.75F,0.5F,1F)), 0.25F));
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
 
-        }
-        if (upgraded) {
-            if (m.hasPower(SlimedPower.POWER_ID)) {
-                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 3, new Color(0F,0.75F,0F,1F)), 0.25F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, 5, new Color(0.5F,0.75F,0.5F,1F)), 0.25F));
 
-            }
         }
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
@@ -82,9 +77,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeDamage(2);
 
         }
 

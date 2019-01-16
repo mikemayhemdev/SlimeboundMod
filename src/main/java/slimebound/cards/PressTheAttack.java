@@ -37,7 +37,7 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     public PressTheAttack() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 8;
 

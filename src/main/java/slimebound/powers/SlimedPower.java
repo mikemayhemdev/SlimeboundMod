@@ -64,7 +64,7 @@ public class SlimedPower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new VFXAction( new FakeFlashAtkImgEffect(this.owner.hb.cX,this.owner.hb.cY,new Color(Color.PURPLE),1F,false,0.6F)));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeDripsEffectPurple(this.owner.hb.cX, this.owner.hb.cY, 4), 0.05F));
-
+        SlimeboundMod.triggerGoopCardVFX();
     }
 
 
@@ -85,7 +85,7 @@ public class SlimedPower extends AbstractPower {
             if (this.amount <= 1) {
 
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, SlimedPower.POWER_ID));
-
+                SlimeboundMod.checkForEndGoopCardVFX();
             } else {
 
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, SlimedPower.POWER_ID, this.amount / 2));
@@ -115,7 +115,7 @@ public class SlimedPower extends AbstractPower {
             if (info.type == DamageInfo.DamageType.NORMAL) {
                 this.triggered = true;
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, this.amount / 2));
-
+                SlimeboundMod.checkForEndGoopCardVFX();
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, SlimedPower.POWER_ID));
             }
 
@@ -124,7 +124,11 @@ public class SlimedPower extends AbstractPower {
         return super.onAttacked(info, damageAmount);
     }
 
-
+    @Override
+    public void onRemove() {
+        super.onRemove();
+        SlimeboundMod.checkForEndGoopCardVFX();
+    }
 }
 
 

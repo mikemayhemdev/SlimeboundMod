@@ -35,7 +35,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
     public ItLooksTasty() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
+        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 8;
 

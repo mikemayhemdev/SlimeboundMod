@@ -1,10 +1,21 @@
 package slimebound.cards;
 
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import slimebound.SlimeboundMod;
+import slimebound.vfx.GoopCardFlash;
+import sun.reflect.Reflection;
 
 
 public abstract class AbstractSlimeboundCard extends CustomCard {
@@ -26,6 +37,9 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     public boolean isSlimedModified;
     public boolean upgradeSlimed;
 
+    public boolean goopflashVfx;
+
+
     public void upgradeSlimed(int amount) {
         this.baseSlimed += amount;
         this.slimed = this.baseSlimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
@@ -45,6 +59,10 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         this.isLocked = false;
 
     }
+
+
+
+
 
 
 }

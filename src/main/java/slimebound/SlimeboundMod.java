@@ -2,6 +2,7 @@ package slimebound;
 
 import basemod.*;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.helpers.BaseModCardTags;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -15,6 +16,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -118,6 +120,9 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     @SpireEnum
     public static AbstractCard.CardTags LICK;
     @SpireEnum
+    public static AbstractCard.CardTags GOOPEXPLOIT;
+
+    @SpireEnum
     public static AbstractCard.CardTags TACKLE;
     @SpireEnum
     public static AbstractCard.CardTags STUDY_HEXAGHOST;
@@ -154,7 +159,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
-
+    public static boolean goopGlow = false;
 
 
     static {
@@ -692,6 +697,28 @@ public static void saveData() {
         }
     }
 
+    public static void triggerGoopCardVFX(){
+        goopGlow = true;
+    }
+
+    public static void checkForEndGoopCardVFX() {
+        boolean noGoop = true;
+
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if ((!monster.isDead) && (!monster.isDying)) {
+                if (monster.hasPower(Slimed.ID)) {
+                    noGoop = false;
+                }
+            }
+        }
+
+        if (noGoop) {
+            goopGlow = false;
+        }
+
+        }
+
+
     public void receiveEditStrings() {
 
         String language = "eng";
@@ -729,6 +756,8 @@ public static void saveData() {
     }
 
     public void receivePostBattle(AbstractRoom r) {
+
+        goopGlow = false;
 
         AbstractPlayer p = AbstractDungeon.player;
         if (spritealtered) {

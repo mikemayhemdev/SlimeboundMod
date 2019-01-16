@@ -41,7 +41,7 @@ public class QuickStudy extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 5;
 
 
     }
@@ -65,10 +65,12 @@ public class QuickStudy extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)))));
 
+        /*
         if (upgraded){
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)))));
 
         }
+        */
 
 
     }
@@ -89,10 +91,7 @@ public class QuickStudy extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            //upgradeMagicNumber(-2);
-
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(-3);
 
 
         }

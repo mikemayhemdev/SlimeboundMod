@@ -42,7 +42,6 @@ public class CityRemoveEventPatch {
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 SlimeboundCharacter sc = (SlimeboundCharacter) AbstractDungeon.player;
                 if (sc.foughtSlimeBoss || sc.hasRelic(StudyCardRelic.ID)) {
-                } else {
                     dungeon_instance.eventList.remove(Hunted.ID);
                 }
             } else {
