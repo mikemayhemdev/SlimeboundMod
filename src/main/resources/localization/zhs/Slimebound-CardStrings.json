@@ -282,8 +282,8 @@
   },
 "Slimebound:TendrilStrike": {
     "NAME": "隐毒打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果2次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果2次。 NL 消耗"
 },
   "Slimebound:FirmFortitude": {
     "NAME": "感同身受",
