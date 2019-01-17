@@ -116,10 +116,10 @@
     },
     {
       "NAMES": [
-        "morph"
+        "重铸"
       ],
-      "PROPERNAME": "Morph",
-      "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs 1 less."
+      "PROPERNAME": "重铸",
+      "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，它的耗能减少 1 点。"
     },
      {
       "NAMES": [
