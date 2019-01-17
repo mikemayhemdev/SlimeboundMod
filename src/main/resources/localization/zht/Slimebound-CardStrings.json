@@ -282,8 +282,8 @@
   },
 "Slimebound:TendrilStrike": {
     "NAME": "猛毒打擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 觸發敵人的 中毒 效果",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 觸發敵人的 中毒 效果2次"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 失去 中毒 層數的生命， 中毒 層數減少1。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 失去 中毒 層數2倍的生命， 中毒 層數減少2。 NL 消耗"
 },
   "Slimebound:FirmFortitude": {
     "NAME": "感同身受",
@@ -400,7 +400,7 @@
   },
 "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
-    "DESCRIPTION": "造成 !D! 點傷害。若敵人有 中毒 狀態，抽1張牌",
+    "DESCRIPTION": "造成 !D! 點傷害。若敵人有 黏液 狀態，抽1張牌並獲得 [E]",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。若敵人有 中毒 狀態，抽1張牌。若敵人有 黏液 狀態，獲得 [E]"
   },
 "Slimebound:LeechLife": {
