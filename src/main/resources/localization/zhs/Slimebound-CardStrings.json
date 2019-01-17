@@ -190,8 +190,8 @@
   },
 "Slimebound:Repurpose": {
     "NAME": "重新考虑",
-    "DESCRIPTION": "消耗 1张手牌，每 消耗 1张牌在手中加入一张随机卡牌。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "消耗 至多2张手牌，每 消耗 1张牌在手中加入一张随机卡牌。 NL 消耗"
+    "DESCRIPTION": "重铸 1张手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "重铸 至多2张手牌。 NL 消耗"
   },
 "Slimebound:RollThrough": {
     "NAME": "翻滚碾压",
@@ -199,7 +199,7 @@
   },
 "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
-    "DESCRIPTION": "消耗 所有手牌，每张 消耗 的牌在手中加入一张随机卡牌。 NL 消耗"
+    "DESCRIPTION": "重铸 所有手牌。 NL 消耗"
   },
 "Slimebound:SoTasty": {
     "NAME": "真香！",
