@@ -30,24 +30,6 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void onVictory() {
-        this.flash();
-        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractPlayer p = AbstractDungeon.player;
-        int slimeCount = 0;
-        if (p.orbs.get(0) != null) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-
-                if (o instanceof SpawnedSlime) {
-                    slimeCount++;
-                }
-
-
-            }
-            p.heal(slimeCount * 3);
-        }
-    }
-
     public void atBattleStartPreDraw() {
         //Cheaty hack for testing max orbslots
         //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(6));
