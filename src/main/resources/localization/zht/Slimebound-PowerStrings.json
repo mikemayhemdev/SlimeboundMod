@@ -1,4 +1,4 @@
-﻿{
+{
 	"Slimebound:PotencyPower": {
 		"NAME": "潛力",
 		"DESCRIPTIONS": [
@@ -448,15 +448,15 @@
 		]
 	},
 	"Slimebound:GreedRespawnPower": {
-		"NAME": "Greed Recovering",
+		"NAME": "尋回：貪婪黏液",
 		"DESCRIPTIONS": [
-			"Greed Ooze will respawn at the end of your turn."
+			"貪婪史萊姆 將在回合結束時重生"
 		]
 	},
 	"Slimebound:ScrapRespawnPower": {
-		"NAME": "Scrap Recovering",
+		"NAME": "尋回：破爛黏液",
 		"DESCRIPTIONS": [
-			"Scrap Ooze will respawn at the end of your turn."
+			"破爛史萊姆 將在回合結束時重生"
 		]
 	},
 	"Slimebound:BuffSecondarySlimeEffectsPower": {
