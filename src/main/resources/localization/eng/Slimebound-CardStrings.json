@@ -154,8 +154,8 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
-    "UPGRADE_DESCRIPTION": "Lose 10 HP and 10 Max HP this combat. NL Gain [E] each turn. NL The first 2 cards you play each turn that targets enemies are played twice.",
-  "DESCRIPTION": "Lose 10 HP and 10 Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first 2 cards you play each turn that targets enemies are played twice.",
+  "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
   "EXTENDED_DESCRIPTION": [
       "Need... Health..."
     ]

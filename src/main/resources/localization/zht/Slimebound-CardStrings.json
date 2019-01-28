@@ -154,8 +154,8 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "增殖形態",
-    "DESCRIPTION": "本場戰鬥中失去10點生命和10點最大生命。 NL 每回合獲得 [E] 。 NL 每回合你打出的第1張目標為敵人的牌將打出2次",
-    "UPGRADE_DESCRIPTION": "本場戰鬥中失去10點生命和10點最大生命。 NL 每回合獲得 [E] 。 NL 每回合你打出的前2張目標為敵人的牌將打出2次",
+    "DESCRIPTION": "本場戰鬥中失去 !M! 點生命和 !M! 點最大生命。 NL 每回合獲得 [E] 。 NL 每回合你打出的第1張目標為敵人的牌將打出2次",
+    "UPGRADE_DESCRIPTION": "本場戰鬥中失去 !M! 點生命和 !M! 點最大生命。 NL 每回合獲得 [E] 。 NL 每回合你打出的前2張目標為敵人的牌將打出2次",
     "EXTENDED_DESCRIPTION": [
         "需要... 生命..."
       ]

@@ -154,8 +154,8 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "형상 복제",
-    "UPGRADE_DESCRIPTION": "체력 10과 최대 체력 10을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음과 두번째 적에게 사용하는 카드가 두번 사용됩니다.",
-  "DESCRIPTION": "체력 10과 최대 체력 10을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음과 두번째 적에게 사용하는 카드가 두번 사용됩니다.",
+  "DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
   "EXTENDED_DESCRIPTION": [
       "너무.. 건강헤..."
     ]
