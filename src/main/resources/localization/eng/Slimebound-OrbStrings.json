@@ -18,14 +18,14 @@
     "NAME": "Scrap Ooze",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn. NL Instantly respawns if Absorbed. NL Does not reduce Max HP."
+      " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "Greed Ooze",
     "DESCRIPTION": [
       "Deals ",
-      " damage at the start of your turn. NL Instantly respawns if Absorbed. NL Does not reduce Max HP."
+      " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
     ]
   },
   "Slimebound:TorchHeadSlime": {

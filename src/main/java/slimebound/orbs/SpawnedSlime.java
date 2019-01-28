@@ -242,10 +242,10 @@ public void spawnVFX(){
 
             }
             if (this instanceof ScrapOozeSlime){
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ScrapOozeSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
             } else if (this instanceof GreedOozeSlime){
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
             } else {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DuplicatedFormNoHealPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));

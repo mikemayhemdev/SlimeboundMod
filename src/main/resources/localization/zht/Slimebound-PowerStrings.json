@@ -446,5 +446,17 @@
 			"接下來 ",
 			" 回合開始時，獲得1張 已升級 時間吞噬者 牌"
 		]
+	},
+	"Slimebound:GreedRespawnPower": {
+		"NAME": "Greed Recovering",
+		"DESCRIPTIONS": [
+			"Greed Ooze will respawn at the end of your turn."
+		]
+	},
+	"Slimebound:ScrapRespawnPower": {
+		"NAME": "Scrap Recovering",
+		"DESCRIPTIONS": [
+			"Scrap Ooze will respawn at the end of your turn."
+		]
 	}
 }

@@ -443,5 +443,17 @@
       "次のターンの開始時にランダムなアップグレードされたタイムイーターのカードを手札に",
       "加える"
     ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "Greed Recovering",
+    "DESCRIPTIONS": [
+      "Greed Ooze will respawn at the end of your turn."
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "Scrap Recovering",
+    "DESCRIPTIONS": [
+      "Scrap Ooze will respawn at the end of your turn."
+    ]
   }
 }

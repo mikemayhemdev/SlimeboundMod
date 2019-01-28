@@ -446,5 +446,17 @@
 			"Gain a random Upgraded Time Eater card at the start of your next ",
 			" turns."
 		]
+	},
+	"Slimebound:GreedRespawnPower": {
+		"NAME": "Greed Recovering",
+		"DESCRIPTIONS": [
+			"Greed Ooze will respawn at the end of your turn."
+		]
+	},
+	"Slimebound:ScrapRespawnPower": {
+		"NAME": "Scrap Recovering",
+		"DESCRIPTIONS": [
+			"Scrap Ooze will respawn at the end of your turn."
+		]
 	}
 }

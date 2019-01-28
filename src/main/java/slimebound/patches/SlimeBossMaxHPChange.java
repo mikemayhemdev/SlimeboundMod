@@ -1,6 +1,7 @@
 package slimebound.patches;
 
 import basemod.ReflectionHacks;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,8 +12,10 @@ import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
+import theAct.dungeons.Jungle;
 
 @SpirePatch(clz=SlimeBoss.class,method = SpirePatch.CONSTRUCTOR)
 public class SlimeBossMaxHPChange {
@@ -22,7 +25,13 @@ public class SlimeBossMaxHPChange {
         if (SlimeboundMod.huntedTriggered) {
            // SlimeboundMod.logger.info("Hunted event triggeredd in: " + CardCrawlGame.dungeon.toString());
             SlimeboundMod.huntedTriggered = false;
-            if (CardCrawlGame.dungeon instanceof TheCity) {
+            boolean jungleOn = false;
+            if (Loader.isModLoaded("TheJungle")){
+                if (CardCrawlGame.dungeon instanceof Jungle) {
+                    jungleOn = true;
+                }
+            }
+            if (CardCrawlGame.dungeon instanceof TheCity || jungleOn) {
              //   SlimeboundMod.logger.info("Slime Boss from Hunted in City");
                 if (AbstractDungeon.ascensionLevel >= 9) {
 

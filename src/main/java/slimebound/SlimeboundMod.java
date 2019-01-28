@@ -58,6 +58,7 @@ import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
 import slimebound.powers.GluttonyPower;
 import slimebound.relics.*;
+import theAct.dungeons.Jungle;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -91,11 +92,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
     public static SlimeboundCharacter slimeboundCharacter;
 
 
-    private ModLabel modOptionsLabel;
-    private ModLabel modPotionsLabel;
-    private ModLabel modEventsLabel;
-    private ModLabel modRelicsLabel;
-    private ModButton modOptionsButton;
     private ModPanel settingsPanel;
 
     private CustomUnlockBundle unlocks0;
@@ -595,38 +591,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     }
 
-
-
-/*
-    public void receiveEditKeywords() {
-
-
-        BaseMod.addKeyword(new String[]{"split"}, "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP.");
-
-        BaseMod.addKeyword(new String[]{"slimed"}, "The next attack deals increased damage, consuming the Slimed effect, and healing you for half the amount consumed. Half of Slimed is removed at end of turn.");
-
-        BaseMod.addKeyword(new String[]{"potency"}, "Increases the damage of ALL of your Spawned Slimes.");
-        BaseMod.addKeyword("Torch Head Slime",new String[]{"torch head slime","torch_head_slime"}, "Attacks for 9 each turn, and gains 1 damage when you play a Power.");
-        BaseMod.addKeyword("Bruiser Slime",new String[]{"bruiser slime","bruiser_slime","bruiser slimes","bruiser_slimes"}, "Attacks for 4 each turn.");
-        BaseMod.addKeyword("Cultist Slime",new String[]{"cultist slime","cultist_slime"}, "Attacks for 6 each turn, then increases it's damage by 2.");
-        BaseMod.addKeyword("Leeching Slime",new String[]{"leeching slime","leeching_slime","leeching slimes","leeching_slimes"}, "Attacks for 2 and grants you 2 Block each turn.");
-        BaseMod.addKeyword("Acid Slime",new String[]{"acid slime","acid_slime","acid slimes","acid_slimes"}, "Attacks for 1 and applies 2 Poison each turn.");
-        BaseMod.addKeyword("Mire Slime",new String[]{"mire slime","mire_slime","mire slimes","mire_slimes"}, "Attacks for 1 and applies 2 Slimed each turn.");
-        BaseMod.addKeyword("Plated Armor", new String[]{"plated armor","plated_armor"}, "Increases Block each turn. Reduced when you take damage.");
-        BaseMod.addKeyword(new String[]{"self-forming"}, "Taking damage from enemy attacks grants Block for next turn.");
-        BaseMod.addKeyword("Bronze Slime",new String[]{"bronze slime","bronze_slime"}, "Attacks for 6  and grants you 6 Block each turn.");
-        BaseMod.addKeyword(new String[]{"halved"}, "Your Max HP is cut in half this combat, losing HP if you are currently above half, and preventing healing beyond half.");
-        BaseMod.addKeyword(new String[]{"lick"}, "0-cost cards that apply a variety of debuffs.");
-
-        BaseMod.addKeyword("Ghostflame Slime",new String[]{"ghostflame slime","ghostflame_slime"}, "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency.");
-        BaseMod.addKeyword(new String[]{"morph"}, "Replace with a random new card of your class, regardless of type. It costs 1 less.");
-        BaseMod.addKeyword(new String[]{"slow"}, "Receives 10% more damage per card played in a turn.");
-        BaseMod.addKeyword(new String[]{"tackle"}, "High-damage Attacks that also deal a small amount of damage to you.");
-        BaseMod.addKeyword("Spire Boss", new String[]{"spire boss","spire_boss"}, "Powerful 0-cost cards, inspired by the bosses of the Spire.");
-
-
-    }
-*/
 public static void clearData() {
     saveData();
 }
@@ -932,6 +896,12 @@ public static void saveData() {
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
         BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);
+
+        if (Loader.isModLoaded("TheJungle")){
+            BaseMod.addEvent(Hunted.ID, Hunted.class, Jungle.ID);
+            BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Jungle.ID);
+        }
+
         //BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
 
 
