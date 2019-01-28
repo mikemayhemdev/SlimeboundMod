@@ -445,15 +445,15 @@
     ]
   },
   "Slimebound:GreedRespawnPower": {
-    "NAME": "Greed Recovering",
+    "NAME": "グリード再生",
     "DESCRIPTIONS": [
-      "Greed Ooze will respawn at the end of your turn."
+      "ターン終了時、グリードウーズ再出現する"
     ]
   },
   "Slimebound:ScrapRespawnPower": {
-    "NAME": "Scrap Recovering",
+    "NAME": "スクラップ再生",
     "DESCRIPTIONS": [
-      "Scrap Ooze will respawn at the end of your turn."
+      "ターン終了時、スクラップウーズ再出現する"
     ]
   }
 }
