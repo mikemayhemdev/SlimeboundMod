@@ -677,14 +677,34 @@ public static void saveData() {
 
     public void receiveEditKeywords() {
         final Gson gson = new Gson();
-        String language = "eng";
-
+        String language;
+        switch (Settings.language) {
+            case KOR:
+                language = "kor";
+                break;
+            case ZHS:
+                language = "zhs";
+                break;
+            case ZHT:
+                language = "zht";
+                break;
+            case FRA:
+                language = "fra";
+                break;
+            case JPN:
+                language = "jpn";
+                break;
+            default:
+                language = "eng";
+        }
+        
+/*
         if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
         if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
         if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
         if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
-
+*/
 
 
         logger.info("begin editing strings");
@@ -722,14 +742,33 @@ public static void saveData() {
 
     public void receiveEditStrings() {
 
-        String language = "eng";
-
+        String language;
+        switch (Settings.language) {
+            case KOR:
+                language = "kor";
+                break;
+            case ZHS:
+                language = "zhs";
+                break;
+            case ZHT:
+                language = "zht";
+                break;
+            case FRA:
+                language = "fra";
+                break;
+            case JPN:
+                language = "jpn";
+                break;
+            default:
+                language = "eng";
+        }
+/*
         if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
         if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
         if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
         if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
         if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
-
+*/
 
 
         logger.info("begin editing strings");
