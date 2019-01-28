@@ -120,7 +120,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
             this.owner.heal(stackAmount * -1);
         }
              updateCurrentHealth();
-        if (this.amount == 0){
+        if (this.amount <= 0){
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, DuplicatedFormNoHealPower.POWER_ID));
 
         }

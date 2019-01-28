@@ -39,7 +39,7 @@ public class StrikeEffectPatch {
     public static class removeStrikeVFX {
         public static SpireReturn<Void> Prefix(StrikeEffect obj, AbstractCreature target, float x, float y, int number) {
             //SlimeboundMod.logger.info("Patch hit.");
-            if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && SlimeboundMod.disabledStrikeVFX) {
+            if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && SlimeboundMod.disabledStrikeVFX && AbstractDungeon.player == target) {
 
                 //SlimeboundMod.logger.info("Patch hit player is Slimebound.");
                 AbstractDungeon.effectsQueue.add(new DamageNumberEffect(target, x, y, number));

@@ -12,6 +12,7 @@ import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -248,7 +249,8 @@ public void spawnVFX(){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
             } else {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DuplicatedFormNoHealPower(AbstractDungeon.player, AbstractDungeon.player, -3), -3));
+                if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID))
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 3));
             }
         }
         triggerEvokeAnimation();
