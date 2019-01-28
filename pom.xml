@@ -3,7 +3,7 @@
 
     <groupId>slimebound</groupId>
     <artifactId>slimebound</artifactId>
-    <version>v1.4.4</version>
+    <version>v1.4.6</version>
     <packaging>jar</packaging>
 
     <name>Slimebound Mod</name>
@@ -45,6 +45,13 @@
             <scope>system</scope>
             <systemPath>${basedir}/../lib/Hubris.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>TheJungle</groupId>
+            <artifactId>TheJungle</artifactId>
+            <version>1.1.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/TheJungle.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -68,7 +75,6 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target\SlimeboundMod.jar" tofile="C:\Users\zanam\Documents\IdeaProjects\pack\content\SlimeboundMod.jar"/>
 
                                 <copy file="target\SlimeboundMod.jar" tofile="D:\SteamLibrary\steamapps\common\SlayTheSpire\mods\SlimeboundMod.jar"/>
 

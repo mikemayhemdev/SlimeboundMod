@@ -48,7 +48,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
     public DuplicatedForm() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 15;
         tags.add(BaseModCardTags.FORM);
 
 
@@ -84,15 +84,15 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
-        AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, 10, DamageInfo.DamageType.HP_LOSS));
+        AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.HP_LOSS));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, 1), 1));
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p,  p.maxHealth / 2),  p.maxHealth / 2));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, 1), 1));
-        int MaxHPActuallyLost = 10;
-        if (AbstractDungeon.player.maxHealth <= 10) {
+        int MaxHPActuallyLost = this.magicNumber;
+        if (AbstractDungeon.player.maxHealth <= this.magicNumber) {
             MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
         }
 
@@ -108,10 +108,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(-5);
 
 
         }

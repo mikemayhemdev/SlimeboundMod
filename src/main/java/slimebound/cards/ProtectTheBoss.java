@@ -26,7 +26,7 @@ public class ProtectTheBoss extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
@@ -86,9 +86,7 @@ public class ProtectTheBoss extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
            // this.exhaust = false;
-            upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeBaseCost(0);
 
 
         }

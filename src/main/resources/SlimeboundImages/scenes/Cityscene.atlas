@@ -1,43 +1,4 @@
 
-scene.jpg
-size: 2048,1024
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-bg
-  rotate: false
-  xy: 2, 2
-  size: 1920, 1016
-  orig: 1920, 1016
-  offset: 0, 0
-  index: -1
-
-scene2.jpg
-size: 2048,2048
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-campfire
-  rotate: false
-  xy: 2, 2
-  size: 1920, 1136
-  orig: 1920, 1136
-  offset: 0, 0
-  index: -1
-
-scene3.jpg
-size: 2048,2048
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-event
-  rotate: false
-  xy: 2, 2
-  size: 1920, 1136
-  orig: 1920, 1136
-  offset: 0, 0
-  index: -1
-
 scene.png
 size: 2048,2048
 format: RGBA8888
@@ -110,40 +71,6 @@ mod/mg2
   size: 1920, 914
   orig: 1920, 1136
   offset: 0, 166
-  index: -1
-
-scene4.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-mod/bg2
-  rotate: false
-  xy: 2, 2
-  size: 1280, 513
-  orig: 1920, 1136
-  offset: 580, 441
-  index: -1
-mod/bgGlow
-  rotate: false
-  xy: 2, 1050
-  size: 1861, 652
-  orig: 1920, 1080
-  offset: 59, 285
-  index: -1
-mod/bgGlowv2
-  rotate: false
-  xy: 2, 1050
-  size: 1861, 652
-  orig: 1920, 1080
-  offset: 59, 285
-  index: -1
-mod/bgGlowBlur
-  rotate: false
-  xy: 2, 517
-  size: 1769, 531
-  orig: 1920, 1080
-  offset: 42, 424
   index: -1
 
 scene5.png
