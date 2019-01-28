@@ -261,7 +261,7 @@ public void spawnVFX(){
 
         if (!this.deathVFXplayed) {
             if (!this.noEvokeSound) {
-                CardCrawlGame.sound.play("DUNGEON_TRANSITION", 0.1F);
+                CardCrawlGame.sound.playA("SLIME_SPLIT", 0.2f);
                 SlimeboundMod.logger.info("playing death sound");
             }
 

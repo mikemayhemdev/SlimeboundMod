@@ -66,7 +66,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
             //SlimeboundMod.logger.info("Slime spawn projectile firing");
 
             this.sX = srcX;
-            if (!this.mute) CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
+           // if (!this.mute) CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
 
             this.sY = srcY;
             this.cX = this.sX;
