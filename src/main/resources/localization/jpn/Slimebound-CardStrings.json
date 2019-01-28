@@ -444,7 +444,7 @@
   },
   "Slimebound:Icky": {
     "NAME": "粘液な所持",
-    "DESCRIPTION": "不能被打出。 NL 当抽到这张牌时，在手牌中加入1张 黏液（状态） 。"
+    "DESCRIPTION": "使用不可。 NL 描くとき、手札に 粘液 を加える。"
   },
   "Slimebound:PrepareDivider": {
     "NAME": "準備: Divide",
