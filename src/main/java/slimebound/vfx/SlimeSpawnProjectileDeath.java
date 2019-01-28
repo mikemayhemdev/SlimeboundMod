@@ -38,17 +38,18 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
     private Color projectileColor;
     private Color projectileColorDeath;
     private AbstractOrb o;
+    private boolean mute;
     private AbstractPlayer p;
 
 
     private ArrayList<Vector2> previousPos = new ArrayList();
 
-    public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, float scale, Color color) {
-    this(srcX,srcY,o,null,scale,color);
+    public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, float scale, Color color, boolean mute) {
+    this(srcX,srcY,o,null,scale,color,mute);
     }
 
 
-    public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, AbstractPlayer p, float scale, Color color) {
+    public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, AbstractPlayer p, float scale, Color color, boolean mute) {
         if (img == null) {
             img = ImageMaster.loadImage("SlimeboundImages/vfx/slimeballWhite.png");
         }
@@ -57,7 +58,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
             this.startingDuration=0F;
             this.skip= true;
         } else {
-
+        this.mute = mute;
 
 
 
@@ -65,7 +66,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
             //SlimeboundMod.logger.info("Slime spawn projectile firing");
 
             this.sX = srcX;
-            CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
+            if (!this.mute) CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
 
             this.sY = srcY;
             this.cX = this.sX;

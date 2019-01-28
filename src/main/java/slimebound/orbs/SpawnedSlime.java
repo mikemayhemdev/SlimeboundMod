@@ -55,6 +55,7 @@ public abstract class SpawnedSlime
     public boolean showPassive = true;
     public boolean activatedThisTurn = false;
     public int UniqueFocus;
+    public boolean noEvokeSound = false;
     public float animX;
     public float animY;
     public int slimeBonus;
@@ -259,9 +260,12 @@ public void spawnVFX(){
     public void triggerEvokeAnimation() {
 
         if (!this.deathVFXplayed) {
-            CardCrawlGame.sound.play("DUNGEON_TRANSITION", 0.1F);
+            if (!this.noEvokeSound) {
+                CardCrawlGame.sound.play("DUNGEON_TRANSITION", 0.1F);
+                SlimeboundMod.logger.info("playing death sound");
+            }
 
-            AbstractDungeon.effectsQueue.add(new SlimeSpawnProjectileDeath(this.hb.cX, this.hb.cY, null, AbstractDungeon.player, 1.4F, this.projectileColor));
+            AbstractDungeon.effectsQueue.add(new SlimeSpawnProjectileDeath(this.hb.cX, this.hb.cY, null, AbstractDungeon.player, 1.4F, this.projectileColor, !this.noEvokeSound));
 
             AbstractDungeon.effectsQueue.add(new SlimeDeathParticleEffect(this.cX, this.cY, this.deathColor));
 

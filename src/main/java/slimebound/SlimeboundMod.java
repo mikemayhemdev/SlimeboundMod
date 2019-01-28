@@ -801,10 +801,17 @@ public static void saveData() {
                 slimes.add(o);
             }
         }
+        boolean soundPlayed = false;
         for (int i = 0; i < slimes.size(); i++) {
             SpawnedSlime s = (SpawnedSlime)slimes.get(i);
             s.noEvokeBonus = true;
+            if (soundPlayed){
+                s.noEvokeSound = true;
+            } else {
+                soundPlayed = true;
+            }
             s.triggerEvokeAnimation();
+
             s.noRender = true;
         }
     }
