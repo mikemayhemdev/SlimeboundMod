@@ -589,9 +589,9 @@
     "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 과 산성_슬라임 으로 분열 합니다. NL 소멸."
   },
   "Slimebound:DivideAndConquer": {
-    "NAME": "Divide & Conquer",
-    "DESCRIPTION": "분햘, 정복 카드를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "강화된 분햘, 정복 카드를 얻습니다. NL 소멸."
+    "NAME": "분할 & 정복",
+    "DESCRIPTION": "분할, 정복 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 분할, 정복 카드를 얻습니다. NL 소멸."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "섬김 & 보호",
