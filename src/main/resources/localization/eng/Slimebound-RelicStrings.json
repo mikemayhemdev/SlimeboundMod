@@ -86,5 +86,12 @@
     "DESCRIPTIONS": [
       "At the start of combat, Split into a Leeching slime and gain 1 Slime slot."
     ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Protective Gear",
+    "FLAVOR": "The best defense is a good offense.",
+    "DESCRIPTIONS": [
+      "Reduce the damage you take from Tackle cards by 1."
+    ]
   }
 }

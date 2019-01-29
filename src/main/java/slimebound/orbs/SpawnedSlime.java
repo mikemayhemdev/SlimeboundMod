@@ -225,9 +225,15 @@ public void spawnVFX(){
 
     public void applyUniqueFocus(int StrAmount) {
 
-        logger.info("Torch head getting buffed by " + StrAmount);
         this.UniqueFocus = this.UniqueFocus + StrAmount;
         this.passiveAmount = this.passiveAmount + StrAmount;
+        updateDescription();
+        //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
+    }
+
+    public void applySecondaryBonus(int StrAmount) {
+
+        this.debuffBonusAmount += StrAmount;
         updateDescription();
         //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
     }

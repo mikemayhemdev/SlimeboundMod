@@ -41,16 +41,14 @@ public class SplitGhostflame extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int slotGain = 0;
-        slotGain = 6 - p.maxOrbs;
+        slotGain = this.magicNumber - p.maxOrbs;
         if (slotGain > 0) {
             CardCrawlGame.sound.play("GHOST_ORB_IGNITE_1", 0.3F);
             com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(slotGain));
         }
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.HexSlime(), false, true));
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.HexSlime(), false, true));
-        }
+
 
     }
 
@@ -69,9 +67,7 @@ public class SplitGhostflame extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-
+            upgradeMagicNumber(1);
 
         }
     }

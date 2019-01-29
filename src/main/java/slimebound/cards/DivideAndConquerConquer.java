@@ -1,29 +1,29 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.SlimeSpawnAction;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleDebuffPower;
 
 
-public class Tackle extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:Tackle";
+public class DivideAndConquerConquer extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:DivideAndConquerConquer";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/eventtackle.png";
+    public static final String IMG_PATH = "cards/conquer.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -35,53 +35,61 @@ public class Tackle extends AbstractSlimeboundCard {
     public static int originalBlock;
     public static int upgradeDamage;
     public static int upgradeSelfDamage;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
 
 
-    public Tackle() {
+    public DivideAndConquerConquer() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = this.originalDamage = 10;
-        this.baseSelfDamage = this.selfDamage = 3;
-
-        this.upgradeDamage = 3;
-
+        this.baseDamage = this.originalDamage = 8;
         this.magicNumber = this.baseMagicNumber = 1;
 
-        this.upgradeSelfDamage();
+
+        this.exhaust = true;
+
     }
+
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)){
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
-        }
-        if (mo != null) {
-            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
+        for (AbstractOrb o : player.orbs)
+            if (o instanceof SpawnedSlime){
+                bonus++;
             }
-        }
+        bonus += this.magicNumber;
+            if (bonus < player.maxOrbs){
+                int emptySlots = player.maxOrbs - player.orbs.size();
+                int amountToCheck = 1;
+                if (this.upgraded){
+                    amountToCheck = 2;
+                }
+                for (int i = 0; i < amountToCheck; i++) {
+                    if (emptySlots >= i + 1) bonus++;
+                }
+            }
         return tmp + bonus;
     }
-
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new DamageInfo(p, this.selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction(AbstractDungeon.player));
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
 
 
-        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+
+
+
 
     }
 
 
     public AbstractCard makeCopy() {
 
-        return new Tackle();
+        return new DivideAndConquerConquer();
 
     }
 
@@ -91,10 +99,7 @@ public class Tackle extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-
-            upgradeDamage(upgradeDamage);
-
-
+            upgradeMagicNumber(1);
         }
 
     }

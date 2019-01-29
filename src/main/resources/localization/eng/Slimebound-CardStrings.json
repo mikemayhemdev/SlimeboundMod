@@ -7,51 +7,16 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-"Slimebound:SplitBronze": {
-    "NAME": "Split: Bronze",
-    "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime twice. NL Exhaust."
-  },
   "Slimebound:GangUp": {
     "NAME": "Gang Up",
-    "DESCRIPTION": "Split into a Bruiser_Slime X times. NL Bruiser_Slimes deal !M! more damage this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime X+1 times. NL Bruiser_Slimes deal !M! more damage this combat. NL Exhaust."
+    "DESCRIPTION": "Gain X Slime slots. NL Split into a Bruiser_Slime X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL Split into a Bruiser_Slime X+1 times. NL Exhaust."
   },
 "Slimebound:LevelUp": {
     "NAME": "Level Up",
     "DESCRIPTION": "Gain !M! Potency.",
     "UPGRADE_DESCRIPTION": "Gain !M! Potency and 1 Slime slot."
 
-  },
-"Slimebound:SplitTorchHead": {
-    "NAME": "Split: Torch Head",
-    "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime twice. NL Exhaust."
-  },
-"Slimebound:SplitBruiser": {
-    "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime. NL Bruiser_Slimes deal 1 more damage this combat. NL Exhaust."
-  },
-"Slimebound:SplitCultist": {
-    "NAME": "Split: Cultist",
-    "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime twice. NL Exhaust."
-  },
-"Slimebound:SplitLeeching": {
-    "NAME": "Split: Leeching",
-    "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime. NL Leeching_Slimes grant 1 more Block this combat. NL Exhaust."
-  },
-"Slimebound:SplitAcid": {
-    "NAME": "Split: Acid",
-    "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Acid_Slime. NL Acid_Slimes apply 1 more Poison this combat. NL Exhaust."
-  },
-"Slimebound:SplitMire": {
-    "NAME": "Split: Mire",
-    "DESCRIPTION": "Split into a Mire_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime. NL Mire_Slimes apply 1 more Goop this combat. NL Exhaust."
   },
 "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
@@ -89,11 +54,6 @@
     "NAME": "Super Split",
     "DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime three times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime three times. NL Exhaust."
-  },
-"Slimebound:DivideAndConquer": {
-    "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser or Acid slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser AND Acid slime. NL Exhaust."
   },
 "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -137,11 +97,6 @@
 "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
     "DESCRIPTION": "Gain !B! Block and !M! Thorns. NL Lose !M! Thorns at the start of your next turn."
-  },
-"Slimebound:FormABlockade": {
-    "NAME": "Form A Blockade",
-    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Gain !B! Block, plus !M! Block for each of your spawned Slimes. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Gain !B! Block, plus !M! Block for each of your spawned Slimes. NL Exhaust."
   },
 "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
@@ -437,11 +392,6 @@
     "NAME": "SLIME CRUSH!!!",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
-"Slimebound:SplitGhostflame": {
-    "NAME": "Split: Ghostflame",
-    "DESCRIPTION": "Gain Slime Slots until you have 6. NL Split into a Ghostflame_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain Slime Slots until you have 6. NL Split into two Ghostflame_Slimes. NL Exhaust."
-  },
   "Slimebound:Icky": {
     "NAME": "Icky",
     "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed Status to your hand."
@@ -517,7 +467,7 @@
 "Slimebound:ManipulateTime": {
     "NAME": "Manipulate Time",
     "DESCRIPTION": "Trigger all effects that happen at the start of your turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Trigger all effects that happen at the start of your turn, then trigger them again. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Trigger all effects that happen at the start of your turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Too... Late..."
     ]
@@ -585,5 +535,72 @@
     "NAME": "Study Time Eater",
     "DESCRIPTION": "Add a random Time Eater card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Time Eater card to your hand at the start of each turn."
+  },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "Conquer",
+    "DESCRIPTION": "Deal !D! damage, plus !M! damage for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide to your hand. NL Add a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide to your hand. NL Add an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Server to your hand. NL Add a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve to your hand. NL Add an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "Protect",
+    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each of your spawned Slimes. NL Exhaust."
+  },
+  "Slimebound:SplitBronze": {
+    "NAME": "Split: Bronze",
+    "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime, who deals !M! more damage and grants !M! more Block this combat. NL Exhaust."
+  },
+  "Slimebound:SplitTorchHead": {
+    "NAME": "Split: Torch Head",
+    "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime, who deals !M! more damage this combat. NL Exhaust."
+  },
+  "Slimebound:SplitBruiser": {
+    "NAME": "Split: Bruiser",
+    "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime, who deals !M! more damage this combat. NL Exhaust."
+  },
+  "Slimebound:SplitCultist": {
+    "NAME": "Split: Cultist",
+    "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime, who deals !M! more damage this combat. NL Exhaust."
+  },
+  "Slimebound:SplitLeeching": {
+    "NAME": "Split: Leeching",
+    "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime, who grants !M! more Block this combat. NL Exhaust."
+  },
+  "Slimebound:SplitAcid": {
+    "NAME": "Split: Acid",
+    "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Acid_Slime, who applies !M! more Poison this combat. NL Exhaust."
+  },
+  "Slimebound:SplitMire": {
+    "NAME": "Split: Mire",
+    "DESCRIPTION": "Split into a Mire_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime, who applies !M! additional Goop this combat. NL Exhaust."
+  },
+  "Slimebound:SplitGhostflame": {
+    "NAME": "Split: Ghostflame",
+    "DESCRIPTION": "Gain Slime Slots until you have !M!. NL Split into a Ghostflame_Slime. NL Exhaust."
   }
 }

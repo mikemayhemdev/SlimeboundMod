@@ -86,5 +86,12 @@
     "DESCRIPTIONS": [
       "전투 시작시 거머리 슬라임을 생성하고 슬라임 슬롯을 하나 얻습니다.."
     ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Protective Gear",
+    "FLAVOR": "The best defense is a good offense.",
+    "DESCRIPTIONS": [
+      "Reduce the damage you take from Tackle cards by 1."
+    ]
   }
 }

@@ -59,11 +59,12 @@ public class GangUp extends AbstractSlimeboundCard {
             p.getRelic(ChemicalX.ID).flash();
         }
 
+        if (energyOnUse > 0) com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.energyOnUse));
 
-               if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));
+         if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));
 
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.magicNumber), this.magicNumber));
+            //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
             p.energy.use(EnergyPanel.totalCount);
 

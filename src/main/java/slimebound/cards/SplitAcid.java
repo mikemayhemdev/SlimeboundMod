@@ -23,7 +23,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/splittoxic.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
@@ -39,8 +39,9 @@ public class SplitAcid extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffPoisonSlimesPower(p, p, 1), 1));
+        int bonus = 0;
+        if (upgraded) bonus = 2;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, bonus));
 
     }
 

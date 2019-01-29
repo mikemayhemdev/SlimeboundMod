@@ -41,8 +41,9 @@ public class SplitBruiser extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, 1), 1));
+        int bonus = 0;
+        if (upgraded) bonus = 2;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true,2,0));
 
     }
 

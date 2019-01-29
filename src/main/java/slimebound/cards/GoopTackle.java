@@ -52,8 +52,11 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 10;
-        this.selfDamage = 5;
+        this.baseSelfDamage = this.selfDamage = 5;
+
         this.upgradeDamage = 2;
+
+        this.upgradeSelfDamage();
 
 
     }

@@ -584,5 +584,25 @@
     "NAME": "タイムイーターの研究",
     "DESCRIPTION": " !M! ターンの間、ターン開始時にランダムなタイムイーターカードを1枚手札に加える。",
     "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたタイムイーターカードを1枚手札に加える。"
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide to your hand. NL Add a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide to your hand. NL Add an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Server to your hand. NL Add a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve to your hand. NL Add an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
   }
 }

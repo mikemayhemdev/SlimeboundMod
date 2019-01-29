@@ -31,11 +31,9 @@ public class ComboTackle extends AbstractSlimeboundCard {
 
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static int baseSelfDamage;
     public static int originalDamage;
     public static int originalBlock;
     public static int upgradeDamage;
-    public static int upgradeSelfDamage;
 
 
     public ComboTackle() {
@@ -45,11 +43,12 @@ public class ComboTackle extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 10;
-        this.selfDamage = 3;
+        this.baseSelfDamage = this.selfDamage = 3;
         this.upgradeDamage = 2;
 
         this.magicNumber = this.baseMagicNumber = 1;
 
+        this.upgradeSelfDamage();
 
     }
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

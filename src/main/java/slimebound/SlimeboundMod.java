@@ -2,13 +2,11 @@ package slimebound;
 
 import basemod.*;
 import basemod.abstracts.CustomUnlockBundle;
-import basemod.helpers.BaseModCardTags;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.mod.hubris.vfx.combat.ShowRollResult;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -302,6 +300,17 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         return bonus;
     }
 
+    public static int getTackleSelfDamageBonus(AbstractPlayer source) {
+        int bonus = 0;
+        if (source != null) {
+            if (source.hasRelic(SelfDamagePreventRelic.ID)) {
+                bonus -= 1;
+            }
+        }
+        return bonus;
+    }
+
+
     public void printEnemies(){
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             logger.info(monster.name + " HP " + monster.currentHealth);
@@ -357,6 +366,14 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addDynamicVariable(new PoisonVariable());
         BaseMod.addDynamicVariable(new SlimedVariable());
 
+        BaseMod.addCard(new DivideAndConquerDivide());
+        BaseMod.addCard(new DivideAndConquerConquer());
+        BaseMod.addCard(new DivideAndConquer());
+
+        BaseMod.addCard(new ServeAndProtectProtect());
+        BaseMod.addCard(new ServeAndProtectServe());
+        BaseMod.addCard(new ServeAndProtect());
+
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
         BaseMod.addCard(new SplitBronze());
@@ -373,7 +390,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new Overexert());
         BaseMod.addCard(new Split());
         BaseMod.addCard(new SuperSplit());
-        BaseMod.addCard(new DivideAndConquer());
         BaseMod.addCard(new LeadByExample());
         BaseMod.addCard(new slimebound.cards.SlimeTap());
         BaseMod.addCard(new Teamwork());
@@ -381,7 +397,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new SlimeBrawl());
         //BaseMod.addCard(new slimebound.cards.zzzMaxSlimes());
         BaseMod.addCard(new SlimeSpikes());
-        BaseMod.addCard(new FormABlockade());
+
         BaseMod.addCard(new SpikyOuterGoop());
         BaseMod.addCard(new MassRepurpose());
         BaseMod.addCard(new DouseInSlime());
@@ -510,7 +526,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(Overexert.ID);
         UnlockTracker.unlockCard(Split.ID);
         UnlockTracker.unlockCard(SuperSplit.ID);
-        UnlockTracker.unlockCard(DivideAndConquer.ID);
         UnlockTracker.unlockCard(LeadByExample.ID);
         UnlockTracker.unlockCard(SlimeTap.ID);
         UnlockTracker.unlockCard(RainOfGoop.ID);
@@ -530,7 +545,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(GangUp.ID);
         // UnlockTracker.unlockCard(zzzSoTasty.ID);
         UnlockTracker.unlockCard(LivingWall.ID);
-        UnlockTracker.unlockCard(FormABlockade.ID);
+
         UnlockTracker.unlockCard(LeechingTouch.ID);
         UnlockTracker.unlockCard(DuplicatedForm.ID);
         UnlockTracker.unlockCard(FirmFortitude.ID);
@@ -581,6 +596,14 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(DisruptingSlam.ID);
         UnlockTracker.unlockCard(PrepareCrush.ID);
         UnlockTracker.unlockCard(Repurpose.ID);
+
+        UnlockTracker.unlockCard(ServeAndProtectProtect.ID);
+        UnlockTracker.unlockCard(ServeAndProtect.ID);
+        UnlockTracker.unlockCard(ServeAndProtectServe.ID);
+        UnlockTracker.unlockCard(DivideAndConquerDivide.ID);
+
+        UnlockTracker.unlockCard(DivideAndConquerConquer.ID);
+        UnlockTracker.unlockCard(DivideAndConquer.ID);
 
 
         //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);

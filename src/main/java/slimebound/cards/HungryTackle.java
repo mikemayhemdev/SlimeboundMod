@@ -45,11 +45,13 @@ public class HungryTackle extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 9;
-        this.selfDamage = 3;
+        this.baseSelfDamage = this.selfDamage = 3;
+
         this.upgradeDamage = 3;
 
         this.magicNumber = this.baseMagicNumber = 1;
 
+        this.upgradeSelfDamage();
 
     }
 

@@ -46,10 +46,10 @@ public class SplitTorchHead extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, true));
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, true));
-        }
+        int bonus = 0;
+        if (upgraded) bonus = 2;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, true,bonus,0));
+
     }
 
     public AbstractCard makeCopy() {

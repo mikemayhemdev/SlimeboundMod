@@ -21,7 +21,7 @@
         "gooped"
       ],
       "PROPERNAME": "Goop",
-      "DESCRIPTION": "The next attack deals increased damage, consuming the Goop effect, and healing you for half the amount consumed. Half of Goop is removed at end of turn."
+      "DESCRIPTION": "The next attack deals 1 more damage per Goop, consuming the Goop effect, and healing 2 HP. Half of Goop is removed at end of turn."
     },
      {
       "NAMES": [

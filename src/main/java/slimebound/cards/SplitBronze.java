@@ -38,10 +38,11 @@ public class SplitBronze extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.BronzeSlime(), false, true));
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.BronzeSlime(), false, true));
-        }
+
+        int bonus = 0;
+        if (upgraded) bonus = 1;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.BronzeSlime(), false, true,bonus,bonus));
+
     }
 
     static {

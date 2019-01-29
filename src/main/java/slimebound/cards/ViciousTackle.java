@@ -44,7 +44,9 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 12;
-        this.selfDamage = 5;
+        this.baseSelfDamage = this.selfDamage = 5;
+
+        this.upgradeSelfDamage();
 
     }
 
@@ -81,7 +83,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
 
                 //AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, m.getPower(SlimedPower.POWER_ID).amount / 2));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p,  2));
 
             }
         }

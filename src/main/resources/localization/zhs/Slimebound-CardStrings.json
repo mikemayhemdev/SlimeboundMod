@@ -584,5 +584,25 @@
     "NAME": "学习时间吞噬者",
     "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张时间吞噬者牌。",
     "UPGRADE_DESCRIPTION": "每回合开始时获得1张 升级 后的时间吞噬者牌。"
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide to your hand. NL Add a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide to your hand. NL Add an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Server to your hand. NL Add a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve to your hand. NL Add an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
   }
 }

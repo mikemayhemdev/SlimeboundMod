@@ -583,5 +583,25 @@
     "NAME": "Etudier Time Eater",
     "DESCRIPTION": "Ajoutez une carte Time Eater aléatoire à votre main au début de votre prochain !M! tour.",
     "UPGRADE_DESCRIPTION": "Ajoutez une carte Time Eater aléatoire améliorée dans votre main au début de chaque tour."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide to your hand. NL Add a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide to your hand. NL Add an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Server to your hand. NL Add a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve to your hand. NL Add an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
   }
 }

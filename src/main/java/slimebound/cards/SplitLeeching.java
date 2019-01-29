@@ -37,11 +37,14 @@ public class SplitLeeching extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
+        int bonus = 0;
+        if (upgraded) bonus = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffShieldSlimesPower(p, p, 1), 1));
+        int bonus = 0;
+        if (upgraded) bonus = 2;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true,0,bonus));
 
     }
 
