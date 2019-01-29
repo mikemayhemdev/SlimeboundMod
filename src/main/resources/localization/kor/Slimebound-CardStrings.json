@@ -127,7 +127,7 @@
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "자가형성 점액",
-    "DESCRIPTION": "체력을 잃을때 마다, 다음턴에 방어도 를 !M! 얻습니다."
+    "DESCRIPTION": "체력을 잃을때 마다, 무작위 적에게 점액 을 !SlimeboundSlimed! 부여하고 다음턴에 방어도 를 !M! 얻습니다."
   },
 "Slimebound:SlimeSpikes": {
     "NAME": "슬라임 가시",
