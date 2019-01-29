@@ -1,7 +1,9 @@
 [
      {
       "NAMES": [
-        "吸收"
+        "吸收",
+        "absorbing",
+        "absorbed"
       ],
       "PROPERNAME": "吸收",
       "DESCRIPTION": "融合一只生成的史莱姆，恢复 分裂 时减少的生命上限。"
@@ -15,10 +17,11 @@
     },
     {
       "NAMES": [
-        "黏液"
+        "黏液",
+        "gooped"
       ],
       "PROPERNAME": "黏液",
-      "DESCRIPTION": "下次攻击造成额外伤害，移除黏液效果，并恢复其层数一半的生命。回合结束时失去一半层数。"
+      "DESCRIPTION": "每层黏液为下次攻击提供 1 点额外伤害。攻击时移除黏液效果，并恢复 2 点生命。回合结束时失去一半层数。"
     },
      {
       "NAMES": [
@@ -40,7 +43,8 @@
         "好斗史莱姆",
         "bruiser_slime",
         "bruiser slimes",
-        "bruiser_slimes"
+        "bruiser_slimes",
+        "bruiser"
       ],
       "PROPERNAME": "好斗史莱姆",
       "DESCRIPTION": "发动攻击时造成 4 点伤害。"
@@ -58,7 +62,8 @@
         "水蛭史莱姆",
         "leeching_slime",
         "leeching slimes",
-        "leeching_slimes"
+        "leeching_slimes",
+        "leeching"
       ],
       "PROPERNAME": "水蛭史莱姆",
       "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予你 2 点格挡。"
@@ -68,7 +73,8 @@
         "酸液史莱姆",
         "acid_slime",
         "acid slimes",
-        "acid_slimes"
+        "acid_slimes",
+        "acid"
       ],
       "PROPERNAME": "酸液史莱姆",
       "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予敌人 1 层 中毒。"
@@ -78,7 +84,8 @@
         "污泥史莱姆",
         "mire_slime",
         "mire slimes",
-        "mire_slimes"
+        "mire_slimes",
+        "mire"
       ],
       "PROPERNAME": "污泥史莱姆",
       "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 黏液。"
@@ -143,40 +150,32 @@
       "PROPERNAME": "尖塔首领",
       "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
     },
-     {
+    {
       "NAMES": [
-        "查找策略"
+        "分而治之：分裂"
       ],
-      "PROPERNAME": "查找策略",
-      "DESCRIPTION": "随机将4张 冲撞 牌加入你的手牌。本场战斗中它们的耗能减少1。消耗"
+      "PROPERNAME": "分而治之：分裂",
+      "DESCRIPTION": "1费技能牌。 NL 分裂 出 好斗史莱姆 或（和） 酸液史莱姆 。 NL 消耗"
     },
-  {
-    "NAMES": [
-      "divide"
-    ],
-    "PROPERNAME": "Divide",
-    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
-  },
-  {
-    "NAMES": [
-      "conquer"
-    ],
-    "PROPERNAME": "Conquer",
-    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
-  },
-  {
-    "NAMES": [
-      "serve"
-    ],
-    "PROPERNAME": "Serve",
-    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
-  },
-  {
-    "NAMES": [
-      "protect"
-    ],
-    "PROPERNAME": "Protect",
-    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
-  }
-
-]
+    {
+      "NAMES": [
+        "分而治之：统治"
+      ],
+      "PROPERNAME": "分而治之：统治",
+      "DESCRIPTION": "1费攻击牌。 NL 造成 8 点伤害， 每只生成的史莱姆额外提供 1（2） 点伤害。 NL 消耗"
+    },
+    {
+      "NAMES": [
+        "召唤保护：召唤"
+      ],
+      "PROPERNAME": "召唤保护：召唤",
+      "DESCRIPTION": "1费技能牌。 NL 分裂 出 水蛭史莱姆 或（和） 污泥史莱姆。 NL 消耗"
+    },
+    {
+      "NAMES": [
+        "召唤保护：保护"
+      ],
+      "PROPERNAME": "召唤保护：保护",
+      "DESCRIPTION": "1费技能牌. NL 获得 7 点 格挡 ， 每只生成的史莱姆额外提供 1（2） 点 格挡 。 NL 消耗"
+    }
+  ]

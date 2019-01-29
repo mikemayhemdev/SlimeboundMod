@@ -88,10 +88,10 @@
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
-    "NAME": "Protective Gear",
-    "FLAVOR": "The best defense is a good offense.",
+    "NAME": "保护齿轮",
+    "FLAVOR": "进攻是最好的防守！",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from Tackle cards by 1."
+      "自身受到来自 冲撞 牌的伤害降低 1 点。"
     ]
   }
 }
