@@ -87,13 +87,8 @@
   },
   "Slimebound:SuperSplit": {
     "NAME": "超分裂",
-    "DESCRIPTION": "スライムスロット !M! を得る。 NL 4回ランダムなスライム に分裂する。 NL 廃棄",
+    "DESCRIPTION": "スライムスロット X を得る。 NL X 回ランダムなスライム に分裂する。 NL 廃棄",
     "UPGRADE_DESCRIPTION": "スライムスロット !M! を得る。 NL 4回ランダムなスライム に分裂する。L 廃棄"
-  },
-  "Slimebound:DivideAndConquer": {
-    "NAME": "分割統治",
-    "DESCRIPTION": " !D! のダメージを与える。ランダムなスライムに分裂する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! のダメージを与える。2回ランダムなスライム に分裂する。 NL 廃棄"
   },
   "Slimebound:LeadByExample": {
     "NAME": "手本を示す",
@@ -585,6 +580,10 @@
     "DESCRIPTION": " !M! ターンの間、ターン開始時にランダムなタイムイーターカードを1枚手札に加える。",
     "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたタイムイーターカードを1枚手札に加える。"
   },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "Conquer",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+  },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
     "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
@@ -592,17 +591,26 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide to your hand. NL Add a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide to your hand. NL Add an Upgraded Conquer to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Server to your hand. NL Add a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve to your hand. NL Add an Upgraded Protect to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
     "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "Protect",
+    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Minion Master",
+    "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
   }
 }

@@ -56,18 +56,7 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
         int bonus = 0;
         for (AbstractOrb o : player.orbs)
             if (o instanceof SpawnedSlime){
-                bonus++;
-            }
-        bonus += this.magicNumber;
-            if (bonus < player.maxOrbs){
-                int emptySlots = player.maxOrbs - player.orbs.size();
-                int amountToCheck = 1;
-                if (this.upgraded){
-                    amountToCheck = 2;
-                }
-                for (int i = 0; i < amountToCheck; i++) {
-                    if (emptySlots >= i + 1) bonus++;
-                }
+                bonus += this.magicNumber;
             }
         return tmp + bonus;
     }
@@ -77,7 +66,7 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction(AbstractDungeon.player));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
 
 

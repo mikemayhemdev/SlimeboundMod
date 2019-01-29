@@ -455,5 +455,12 @@
     "DESCRIPTIONS": [
       "ターン終了時、スクラップウーズ再出現する"
     ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "Minion Master",
+    "DESCRIPTIONS": [
+      "When your slimes apply Goop, Poison, or Block, they apply ",
+      " more."
+    ]
   }
 }

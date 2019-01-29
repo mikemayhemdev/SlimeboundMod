@@ -458,5 +458,12 @@
 		"DESCRIPTIONS": [
 			"Scrap Ooze will respawn at the end of your turn."
 		]
+	},
+	"Slimebound:BuffSecondarySlimeEffectsPower": {
+		"NAME": "Minion Master",
+		"DESCRIPTIONS": [
+			"When your slimes apply Goop, Poison, or Block, they apply ",
+			" more."
+		]
 	}
 }

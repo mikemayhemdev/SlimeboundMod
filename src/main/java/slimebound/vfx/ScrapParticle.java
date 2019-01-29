@@ -38,6 +38,7 @@ public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
 
     }
     public void dispose() {
+        this.img.dispose();
 
     }
 

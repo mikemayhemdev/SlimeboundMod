@@ -52,9 +52,9 @@
   },
 "Slimebound:SuperSplit": {
     "NAME": "Super Split",
-    "DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime three times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL Split into a random slime three times. NL Exhaust."
-  },
+    "DESCRIPTION": "Gain X Slime slots. NL Split into a random slime X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL Split into a random slime X+1 times. NL Exhaust."
+},
 "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
     "DESCRIPTION": "The first Attack you play each turn also causes your oldest slime to Attack.",
@@ -538,7 +538,7 @@
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "Conquer",
-    "DESCRIPTION": "Deal !D! damage, plus !M! damage for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
@@ -547,13 +547,13 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide to your hand. NL Add a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide to your hand. NL Add an Upgraded Conquer to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Server to your hand. NL Add a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve to your hand. NL Add an Upgraded Protect to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
@@ -562,7 +562,7 @@
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each of your spawned Slimes. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
   },
   "Slimebound:SplitBronze": {
     "NAME": "Split: Bronze",
@@ -602,5 +602,10 @@
   "Slimebound:SplitGhostflame": {
     "NAME": "Split: Ghostflame",
     "DESCRIPTION": "Gain Slime Slots until you have !M!. NL Split into a Ghostflame_Slime. NL Exhaust."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Minion Master",
+    "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
   }
 }

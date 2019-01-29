@@ -28,7 +28,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/splittingstrike.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 0;
@@ -54,7 +54,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         if (upgraded) c.upgrade();
 
         AbstractCard c2 = new DivideAndConquerDivide();
-        if (upgraded) c.upgrade();
+        if (upgraded) c2.upgrade();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c2));

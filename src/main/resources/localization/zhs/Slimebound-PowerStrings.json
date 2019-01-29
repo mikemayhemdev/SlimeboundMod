@@ -458,5 +458,12 @@
 		"DESCRIPTIONS": [
 			"破烂史莱姆将在回合结束时重生。"
 		]
+	},
+	"Slimebound:BuffSecondarySlimeEffectsPower": {
+		"NAME": "Minion Master",
+		"DESCRIPTIONS": [
+			"When your slimes apply Goop, Poison, or Block, they apply ",
+			" more."
+		]
 	}
 }

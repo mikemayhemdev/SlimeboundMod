@@ -34,7 +34,7 @@ public class SlimeIntentEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
         }
     }
     public void dispose() {
-
+        this.img.dispose();
 
     }
     public void render(SpriteBatch sb) {

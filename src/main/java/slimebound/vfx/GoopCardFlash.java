@@ -117,5 +117,6 @@ public class GoopCardFlash extends AbstractGameEffect {
     }
 
     public void dispose() {
+        this.img.dispose();
     }
 }

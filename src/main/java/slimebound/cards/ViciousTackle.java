@@ -43,10 +43,10 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
         tags.add(SlimeboundMod.GOOPEXPLOIT);
 
-        this.baseDamage = 12;
-        this.baseSelfDamage = this.selfDamage = 5;
+        this.baseDamage = 14;
+        this.baseSelfDamage = this.selfDamage = 3;
 
-        this.upgradeSelfDamage();
+        this.upgradeSelfDamage(this.baseSelfDamage);
 
     }
 
@@ -109,7 +109,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
+            upgradeDamage(4);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

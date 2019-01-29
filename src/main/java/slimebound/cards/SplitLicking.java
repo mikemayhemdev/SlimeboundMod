@@ -34,13 +34,13 @@ public class SplitLicking extends AbstractSlimeboundCard {
     public SplitLicking() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int bonus = 0;
-        if (upgraded) bonus = 2;
+        if (upgraded) bonus = this.magicNumber;
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true,0,bonus));
 
     }

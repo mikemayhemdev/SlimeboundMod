@@ -40,6 +40,7 @@ public class GoldCoinsParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEf
 
     }
     public void dispose() {
+        this.img.dispose();
 
     }
 

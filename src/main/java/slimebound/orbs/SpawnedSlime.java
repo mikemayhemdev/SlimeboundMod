@@ -11,9 +11,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,8 +30,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.*;
 import slimebound.vfx.*;
 
@@ -200,14 +196,8 @@ public void spawnVFX(){
         super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         int bonus = 0;
-        if (this instanceof AttackSlime && AbstractDungeon.player.hasPower(BuffAttackSlimesPower.POWER_ID))
-            bonus = AbstractDungeon.player.getPower(BuffAttackSlimesPower.POWER_ID).amount;
-        if (this instanceof ShieldSlime && AbstractDungeon.player.hasPower(BuffShieldSlimesPower.POWER_ID))
-            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffShieldSlimesPower.POWER_ID).amount;
-        if (this instanceof PoisonSlime && AbstractDungeon.player.hasPower(BuffPoisonSlimesPower.POWER_ID))
-            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffPoisonSlimesPower.POWER_ID).amount;
-        if (this instanceof SlimingSlime && AbstractDungeon.player.hasPower(BuffSlimingSlimesPower.POWER_ID))
-            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSlimingSlimesPower.POWER_ID).amount;
+        if ((this instanceof ShieldSlime || this instanceof PoisonSlime || this instanceof BronzeSlime || this instanceof SlimingSlime) && AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID))
+            this.debuffBonusAmount = AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount;
         if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(PotencyPower.POWER_ID))
             bonus = AbstractDungeon.player.getPower(PotencyPower.POWER_ID).amount;
 

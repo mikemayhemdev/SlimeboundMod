@@ -30,7 +30,7 @@ public class SlimeIntentParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
         this.renderBehind = true;
     }
     public void dispose() {
-
+        this.img.dispose();
 
     }
     public void update() {

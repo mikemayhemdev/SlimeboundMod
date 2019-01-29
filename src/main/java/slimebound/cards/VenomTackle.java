@@ -44,13 +44,13 @@ public class VenomTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
 
-        this.baseDamage = this.originalDamage = 8;
+        this.baseDamage = this.originalDamage = 10;
         this.baseSelfDamage = this.selfDamage = 3;
         this.upgradeDamage = 2;
 
         this.magicNumber = this.baseMagicNumber = 4;
 
-        this.upgradeSelfDamage();
+        this.upgradeSelfDamage(this.baseSelfDamage);
 
     }
 

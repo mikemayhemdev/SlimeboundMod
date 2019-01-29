@@ -55,9 +55,10 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
     }
 
-    public void upgradeSelfDamage() {
-        this.selfDamage = this.baseSelfDamage + SlimeboundMod.getTackleSelfDamageBonus(AbstractDungeon.player);
-        if (this.selfDamage < this.baseSelfDamage) {
+    public void upgradeSelfDamage(int originalAmount) {
+        this.selfDamage = originalAmount + SlimeboundMod.getTackleSelfDamageBonus(AbstractDungeon.player);
+        if (this.selfDamage < 0) this.selfDamage = 0;
+        if (this.selfDamage < originalAmount) {
                 this.isSelfDamageModified = true;
         } else {
             this.isSelfDamageModified = false;

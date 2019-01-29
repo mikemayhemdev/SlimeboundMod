@@ -54,8 +54,6 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
         }
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new FormABlockadeAction(this.magicNumber));
     }
 
     public AbstractCard makeCopy() {

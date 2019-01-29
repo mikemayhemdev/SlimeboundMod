@@ -34,14 +34,14 @@ public class SplitCultist extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY);
 
         this.exhaust = true;
-
+        this.magicNumber = this.baseMagicNumber = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int bonus = 0;
-        if (upgraded) bonus = 2;
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.CultistSlime(), false, true,2,0));
+        if (upgraded) bonus = this.magicNumber;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.CultistSlime(), false, true,bonus,0));
 
     }
 

@@ -304,7 +304,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         int bonus = 0;
         if (source != null) {
             if (source.hasRelic(SelfDamagePreventRelic.ID)) {
-                bonus -= 1;
+                bonus = -1;
             }
         }
         return bonus;
@@ -335,6 +335,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addRelicToCustomPool(new ScrapOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new DailySplitModRelic(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new SelfDamagePreventRelic(), AbstractCardEnum.SLIMEBOUND);
+
 
         shareableRelics.add(new PreparedRelic());
 
@@ -406,7 +408,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new OozeBath());
         //BaseMod.addCard(new zzzSoTasty());
         BaseMod.addCard(new LivingWall());
-        BaseMod.addCard(new GangUp());
+        BaseMod.addCard(new MinionMaster());
         BaseMod.addCard(new SelfFormingGoo());
         BaseMod.addCard(new slimebound.cards.Dissolve());
         BaseMod.addCard(new slimebound.cards.DuplicatedForm());
@@ -489,6 +491,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
 
 
+
         unlocks0 = new CustomUnlockBundle(
                 RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
         );
@@ -542,7 +545,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(Chomp.ID);
         UnlockTracker.unlockCard(StrayGoop.ID);
         UnlockTracker.unlockCard(OozeBath.ID);
-        UnlockTracker.unlockCard(GangUp.ID);
+        UnlockTracker.unlockCard(MinionMaster.ID);
         // UnlockTracker.unlockCard(zzzSoTasty.ID);
         UnlockTracker.unlockCard(LivingWall.ID);
 

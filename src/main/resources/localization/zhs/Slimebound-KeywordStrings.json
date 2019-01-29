@@ -149,6 +149,34 @@
       ],
       "PROPERNAME": "查找策略",
       "DESCRIPTION": "随机将4张 冲撞 牌加入你的手牌。本场战斗中它们的耗能减少1。消耗"
-    }
+    },
+  {
+    "NAMES": [
+      "divide"
+    ],
+    "PROPERNAME": "Divide",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "conquer"
+    ],
+    "PROPERNAME": "Conquer",
+    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+  },
+  {
+    "NAMES": [
+      "serve"
+    ],
+    "PROPERNAME": "Serve",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "protect"
+    ],
+    "PROPERNAME": "Protect",
+    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
+  }
 
 ]

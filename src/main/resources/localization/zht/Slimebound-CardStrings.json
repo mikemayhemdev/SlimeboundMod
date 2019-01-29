@@ -87,13 +87,8 @@
   },
 "Slimebound:SuperSplit": {
     "NAME": "超級分裂",
-    "DESCRIPTION": "獲得 !M! 個史萊姆槽位。 NL 分裂 1隻隨機史萊姆3次。 NL 消耗",
+    "DESCRIPTION": "獲得 X 個史萊姆槽位。 NL 分裂 1隻隨機史萊姆 X 次。 NL 消耗",
     "UPGRADE_DESCRIPTION": "獲得 !M! 個史萊姆槽位。 NL 分裂 1隻隨機史萊姆3次。 NL 消耗"
-  },
-"Slimebound:DivideAndConquer": {
-    "NAME": "分而治之",
-    "DESCRIPTION": "造成 !D! 點傷害。 分裂 1隻 好鬥史萊姆 或 酸液史萊姆 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 分裂 1隻 好鬥史萊姆 和 酸液史萊姆 。 NL 消耗"
   },
 "Slimebound:LeadByExample": {
     "NAME": "身先士卒",
@@ -584,5 +579,38 @@
     "NAME": "學習時間吞噬者",
     "DESCRIPTION": "接下來 !M! 回合開始時，獲得1張 時間吞噬者 牌",
     "UPGRADE_DESCRIPTION": "每回合開始時，獲得1張 已升級 時間吞噬者 牌"
+  },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "Conquer",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "Protect",
+    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Minion Master",
+    "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
   }
 }

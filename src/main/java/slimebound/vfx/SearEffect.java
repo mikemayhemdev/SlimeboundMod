@@ -50,12 +50,8 @@ import com.megacrit.cardcrawl.vfx.combat.LightFlareParticleEffect;
 
     public void dispose() {
 
+
     }
 
-    /*    */ }
+ }
 
-
-/* Location:              C:\Users\Computer\IdeaProjects\lib\desktop-1.0.jar!\com\megacrit\cardcrawl\vfx\combat\SearEffect.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */

@@ -28,7 +28,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/formablockade.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 0;
@@ -51,7 +51,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
         if (upgraded) c.upgrade();
 
         AbstractCard c2 = new ServeAndProtectServe();
-        if (upgraded) c.upgrade();
+        if (upgraded) c2.upgrade();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c2));

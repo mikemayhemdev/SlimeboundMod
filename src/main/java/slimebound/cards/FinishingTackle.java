@@ -46,12 +46,13 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
         tags.add(SlimeboundMod.TACKLE);
 
-        this.baseDamage = this.originalDamage = 18;
-        this.selfDamage = 5;
-        this.upgradeDamage = 6;
+        this.baseDamage = this.originalDamage = 20;
+        this.baseSelfDamage = this.selfDamage = 3;
+        this.upgradeDamage = 5;
 
         this.baseBlock = 10;
 
+        this.upgradeSelfDamage(this.baseSelfDamage);
 
     }
 

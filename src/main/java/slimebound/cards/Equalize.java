@@ -42,8 +42,8 @@ public class Equalize extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-            this.baseDamage = 7;
-            this.magicNumber = this.baseMagicNumber = 7;
+            this.baseDamage = 8;
+            this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
 
     }
@@ -93,8 +93,8 @@ public class Equalize extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(3);
-            upgradeMagicNumber(3);
+            upgradeDamage(4);
+            upgradeMagicNumber(2);
 
 
         }

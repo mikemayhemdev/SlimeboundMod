@@ -80,5 +80,6 @@ public class GreenBeam extends AbstractGameEffect {
     }
 
     public void dispose() {
+
     }
 }
