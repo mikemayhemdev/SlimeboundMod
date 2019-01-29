@@ -62,9 +62,7 @@ public class SelfDamageSlimedPower extends AbstractPower {
         if ((AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT) &&
                 (damageAmount > 0)) {
             flash();
-            AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(this.owner,
-                    AbstractDungeon.getMonsters().getRandomMonster(true), 1, this.amount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
-        }
+             }
 
         return damageAmount;
     }

@@ -373,7 +373,7 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "끈적이 비",
-    "DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다. NL 소멸.",
+    "DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다.",
     "UPGRADE_DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다."
   },
 "Slimebound:GoopSpray": {
@@ -611,5 +611,9 @@
     "NAME": "Minion Master",
     "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
     "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "The Best Defense",
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 less damage to you."
   }
 }

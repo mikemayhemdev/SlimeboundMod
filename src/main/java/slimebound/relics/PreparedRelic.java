@@ -4,12 +4,14 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.AddPreparedAction;
 
 public class PreparedRelic extends CustomRelic {
     public static final String ID = "Slimebound:PreparedRelic";
     public static final String IMG_PATH = "relics/slimedteaSet.png";
+    public static final String IMG_PATH_LARGE = "relics/slimedteaSetLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimedteaSetOutline.png";
     private static final int HP_PER_CARD = 1;
     private boolean firstTurn = true;
@@ -17,6 +19,8 @@ public class PreparedRelic extends CustomRelic {
     public PreparedRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
+
     }
 
     @Override

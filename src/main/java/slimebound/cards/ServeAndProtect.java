@@ -47,10 +47,10 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractCard c = new ServeAndProtectProtect();
+        AbstractCard c = new ServeAndProtectServe();
         if (upgraded) c.upgrade();
 
-        AbstractCard c2 = new ServeAndProtectServe();
+        AbstractCard c2 = new ServeAndProtectProtect();
         if (upgraded) c2.upgrade();
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));

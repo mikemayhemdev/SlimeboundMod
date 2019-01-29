@@ -108,8 +108,11 @@
 	"Slimebound:SelfFormingGooPower": {
 		"NAME": "Self-Forming Goo",
 		"DESCRIPTIONS": [
-			"Gain ",
-			" Block whenever you lose HP."
+			"Whenever you lose HP, at the start of your next turn, gain ",
+			" Block and apply ",
+			" Goop to a random enemy.",
+			" Goop to a random enemy ",
+			" times."
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
@@ -236,10 +239,10 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "Flame Tackle",
+		"NAME": "Offensive Tackle",
 		"DESCRIPTIONS": [
 			"Cards containing Tackle deal ",
-			" more damage."
+			" more damage to enemies."
 		]
 	},
 	"Slimebound:PolyBeamAgainPower": {
@@ -464,6 +467,23 @@
 		"DESCRIPTIONS": [
 			"When your slimes apply Goop, Poison, or Block, they apply ",
 			" more."
+		]
+	},
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "Defensive Tackle",
+		"DESCRIPTIONS": [
+			"Cards containing Tackle deal ",
+			" less damage to you."
+		]
+	},
+	"Slimebound:NextTurnBlockAndGoopPower": {
+		"NAME": "Reactive Goop",
+		"DESCRIPTIONS": [
+			"At the start of your next turn, gain ",
+			" Block and apply ",
+			" Goop to a random enemy.",
+			" Goop to a random enemy ",
+			" times."
 		]
 	}
 }

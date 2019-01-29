@@ -1,29 +1,36 @@
 package slimebound.powers;
 
 
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TendrilFlailAction;
+import slimebound.cards.Hexaburn;
 
 
-public class SelfFormingGooPower extends AbstractPower {
-    public static final String POWER_ID = "Slimebound:SelfFormingGooPower";
+public class NextTurnBlockAndGoopPower extends AbstractPower {
+    public static final String POWER_ID = "Slimebound:NextTurnBlockAndGoopPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static final String IMG = "powers/Malleable.png";
+    public static final String IMG = "powers/PrepareCardS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
 
-    public SelfFormingGooPower(AbstractCreature owner, AbstractCreature source, int amount) {
+    public NextTurnBlockAndGoopPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -35,7 +42,7 @@ public class SelfFormingGooPower extends AbstractPower {
         this.source = source;
 
 
-        this.img = new com.badlogic.gdx.graphics.Texture(SlimeboundMod.getResourcePath(IMG));
+        this.loadRegion("defenseNext");
 
         this.type = POWER_TYPE;
 
@@ -71,15 +78,17 @@ public class SelfFormingGooPower extends AbstractPower {
 
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if ((AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT) &&
-                (damageAmount > 0)) {
-            flash();
-            AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnBlockAndGoopPower(this.owner, this.owner, this.amount), this.amount));
-        }
+    public void atStartOfTurn() {
+        this.flash();
+        AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.owner.hb.cX, this.owner.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
+        AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(this.owner,
+                AbstractDungeon.getMonsters().getRandomMonster(true), this.amount, 1 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
 
-        return damageAmount;
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
+
+
 }
 
 
