@@ -129,6 +129,14 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
     }
 
+    @Override
+    public void reducePower(int stackAmount) {
+        super.reducePower(stackAmount);
+        this.fontScale = 8.0F;
+        if (stackAmount > 0){
+            this.owner.heal(stackAmount);
+        }
+    }
 
     public void onRemove() {
         restoreMaxHP();
