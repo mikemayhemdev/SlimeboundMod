@@ -55,6 +55,7 @@ import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
 import slimebound.powers.GluttonyPower;
+import slimebound.powers.TackleSelfDamagePreventPower;
 import slimebound.relics.*;
 import theAct.dungeons.Jungle;
 
@@ -304,8 +305,12 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         int bonus = 0;
         if (source != null) {
             if (source.hasRelic(SelfDamagePreventRelic.ID)) {
-                bonus = -1;
+                bonus += -1;
             }
+            if (source.hasPower(TackleSelfDamagePreventPower.POWER_ID)) {
+                bonus -= source.getPower(TackleSelfDamagePreventPower.POWER_ID).amount;
+            }
+
         }
         return bonus;
     }
@@ -404,7 +409,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new MassRepurpose());
         BaseMod.addCard(new DouseInSlime());
         BaseMod.addCard(new Chomp());
-        BaseMod.addCard(new StrayGoop());
+        BaseMod.addCard(new BestDefense());
         BaseMod.addCard(new OozeBath());
         //BaseMod.addCard(new zzzSoTasty());
         BaseMod.addCard(new LivingWall());
@@ -543,7 +548,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(MassRepurpose.ID);
         UnlockTracker.unlockCard(DouseInSlime.ID);
         UnlockTracker.unlockCard(Chomp.ID);
-        UnlockTracker.unlockCard(StrayGoop.ID);
+        UnlockTracker.unlockCard(BestDefense.ID);
         UnlockTracker.unlockCard(OozeBath.ID);
         UnlockTracker.unlockCard(MinionMaster.ID);
         // UnlockTracker.unlockCard(zzzSoTasty.ID);

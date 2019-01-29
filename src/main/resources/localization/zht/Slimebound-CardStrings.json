@@ -612,5 +612,9 @@
     "NAME": "Minion Master",
     "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
     "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "The Best Defense",
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 less damage to you."
   }
 }

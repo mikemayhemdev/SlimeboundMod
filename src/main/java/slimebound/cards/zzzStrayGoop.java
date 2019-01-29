@@ -14,8 +14,8 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SelfDamageSlimedPower;
 
 
-public class StrayGoop extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:StrayGoop";
+public class zzzStrayGoop extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:zzzStrayGoop";
 
     private static final CardStrings cardStrings;
     public static final String NAME;
@@ -28,9 +28,8 @@ public class StrayGoop extends AbstractSlimeboundCard {
 
     private static final int COST = 1;
 
-    private static int upgradedamount = 1;
 
-    public StrayGoop() {
+    public zzzStrayGoop() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.slimed = this.baseSlimed = 2;
         upgradeSlimed(0);
@@ -43,7 +42,7 @@ public class StrayGoop extends AbstractSlimeboundCard {
     }
 
     public AbstractCard makeCopy() {
-        return new StrayGoop();
+        return new zzzStrayGoop();
     }
 
     public void upgrade() {

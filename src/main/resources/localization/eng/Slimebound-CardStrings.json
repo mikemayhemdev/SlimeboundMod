@@ -92,7 +92,7 @@
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you lose HP, gain !M! Block at the start of your next turn."
+    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! Goop to a random enemy and gain !M! Block at the start of your next turn."
   },
 "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
@@ -343,10 +343,6 @@
 "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL For each non-minion enemy killed, raise your Max HP by !M!. NL Exhaust."
-  },
-"Slimebound:StrayGoop": {
-    "NAME": "Stray Goop",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy whenever you lose HP."
   },
 "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
@@ -607,5 +603,9 @@
     "NAME": "Minion Master",
     "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
     "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "The Best Defense",
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 less damage to you."
   }
 }
