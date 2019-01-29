@@ -373,7 +373,7 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
-    "DESCRIPTION": "隨機給予1名敵人 !SlimeboundSlimed! 層 黏液 !M! 次。 NL 消耗",
+    "DESCRIPTION": "隨機給予1名敵人 !SlimeboundSlimed! 層 黏液 !M! 次。",
     "UPGRADE_DESCRIPTION": "隨機給予1名敵人 !SlimeboundSlimed! 層 黏液 !M! 次"
   },
 "Slimebound:GoopSpray": {

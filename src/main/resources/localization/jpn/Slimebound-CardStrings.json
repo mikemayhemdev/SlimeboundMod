@@ -373,7 +373,7 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "グープの雨",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! をランダムな敵に !M! 回与える。 NL 廃棄。",
+    "DESCRIPTION": "粘液 !SlimeboundSlimed! をランダムな敵に !M! 回与える。",
     "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! をランダムな敵に !M! 回与える。"
   },
   "Slimebound:GoopSpray": {

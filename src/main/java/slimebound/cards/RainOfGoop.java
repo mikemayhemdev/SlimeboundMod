@@ -36,7 +36,6 @@ public class RainOfGoop extends AbstractSlimeboundCard {
         this.slimed = this.baseSlimed = 2;
         upgradeSlimed(0);
         this.magicNumber = this.baseMagicNumber = 4;
-        this.exhaust=true;
 
 
     }
@@ -63,8 +62,7 @@ public class RainOfGoop extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-
-            this.exhaust=false;
+            this.upgradeMagicNumber(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

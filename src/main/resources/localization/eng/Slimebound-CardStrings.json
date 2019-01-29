@@ -333,7 +333,7 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times. NL Exhaust.",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times.",
     "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times."
   },
 "Slimebound:GoopSpray": {

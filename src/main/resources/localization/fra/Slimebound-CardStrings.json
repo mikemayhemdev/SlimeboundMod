@@ -377,7 +377,7 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "Pluie de dents",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois. NL Epuisement.",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois.",
     "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois."
   },
 "Slimebound:GoopSpray": {
