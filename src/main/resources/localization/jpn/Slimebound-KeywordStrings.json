@@ -1,182 +1,183 @@
 [
      {
       "NAMES": [
-        "absorb",
+        "吸収",
         "absorbing",
         "absorbed"
       ],
-      "PROPERNAME": "Absorb",
-      "DESCRIPTION": "Recombine with a spawned Slime, returning the Max HP it took upon Splitting."
+      "PROPERNAME": "吸収",
+      "DESCRIPTION": "生み出したスライムとともに用いることを推奨。分裂により失われたHPを最大にまで戻す。"
     },
     {
       "NAMES": [
-        "split"
+        "分裂"
       ],
-      "PROPERNAME": "Split",
-      "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn. While the Slime is alive, your Max HP is reduced by 3."
+      "PROPERNAME": "分裂",
+      "DESCRIPTION": "HPを3失いスライムを生み出す。ターン開始時にスライムは攻撃する。 スライムが生きていいるときは最大HPが3減少する。"
     },
     {
       "NAMES": [
-        "goop",
+        "粘液",
         "gooped"
       ],
-      "PROPERNAME": "Goop",
-      "DESCRIPTION": "The next attack deals increased damage, consuming the Goop effect, and healing you for half the amount consumed. Half of Goop is removed at end of turn."
+      "PROPERNAME": "粘液",
+      "DESCRIPTION": "次の攻撃のとき、粘液の分だけダメージが増加し、粘液を消費し、HPを2回復する。 粘液の半分はターン終了時に取り除かれる。"
     },
      {
       "NAMES": [
-        "potency"
+        "効力"
       ],
-      "PROPERNAME": "Potency",
-      "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+      "PROPERNAME": "効力",
+      "DESCRIPTION": "すべての生み出したスライムのダメージを増加する。"
     },
      {
       "NAMES": [
-        "torch head slime",
+        "トーチヘッドスライム",
         "torch_head_slime"
       ],
-      "PROPERNAME": "Torch Head Slime",
-      "DESCRIPTION": "Attacks for 6 each turn. Gains twice the normal benefit from Potency."
+      "PROPERNAME": "トーチヘッドスライム",
+      "DESCRIPTION": "ターン毎、6の攻撃する。 効力 の効果を2回得る。"
     },
      {
       "NAMES": [
-        "bruiser slime",
+        "ブルーザースライム",
         "bruiser_slime",
         "bruiser slimes",
         "bruiser_slimes",
         "bruiser"
       ],
-      "PROPERNAME": "Bruiser Slime",
-      "DESCRIPTION": "Attacks for 4 each turn."
+      "PROPERNAME": "ブルーザースライム",
+      "DESCRIPTION": "毎ターン、4の攻撃する。"
     },
      {
       "NAMES": [
-        "cultist slime",
+        "カルティストスライム",
         "cultist_slime"
       ],
-      "PROPERNAME": "Cultist Slime",
-      "DESCRIPTION": "Attacks for 6 each turn, then increases it's damage by 1."
+      "PROPERNAME": "カルティストスライム",
+      "DESCRIPTION": "毎ターン、6の攻撃する。 ダメージを1増やす。"
     },
      {
       "NAMES": [
-        "leeching slime",
+        "リーチングスライム",
         "leeching_slime",
         "leeching slimes",
         "leeching_slimes",
         "leeching"
       ],
-      "PROPERNAME": "Leeching Slime",
-      "DESCRIPTION": "Attacks for 2 and grants you 2 Block each turn."
+      "PROPERNAME": "リーチングスライム",
+      "DESCRIPTION": "毎ターン、2攻撃と2 ブロック を得る。"
     },
      {
       "NAMES": [
-        "acid slime",
+        "アシッドスライム",
         "acid_slime",
         "acid slimes",
         "acid_slimes",
         "acid"
       ],
-      "PROPERNAME": "Acid Slime",
-      "DESCRIPTION": "Attacks for 2 and applies 1 Poison each turn."
+      "PROPERNAME": "アシッドスライム",
+      "DESCRIPTION": "毎ターン、2の攻撃と 毒 1を与える。"
     },
      {
       "NAMES": [
-        "mire slime",
+        "マイヤースライム",
         "mire_slime",
         "mire slimes",
         "mire_slimes",
         "mire"
       ],
-      "PROPERNAME": "Mire Slime",
-      "DESCRIPTION": "Attacks for 1 and applies 2 Goop each turn."
+      "PROPERNAME": "マイヤースライム",
+      "DESCRIPTION": "毎ターン、1の攻撃と 粘液 2を与える。"
     },
      {
       "NAMES": [
-        "plated armor",
-        "plated_armor"
-      ],
-      "PROPERNAME": "Plated Armor",
-      "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
-    },
-     {
-      "NAMES": [
-        "bronze slime",
-        "bronze_slime"
-      ],
-      "PROPERNAME": "Bronze Slime",
-      "DESCRIPTION": "Attacks for 6 and grants you 6 Block each turn."
-    },
-    {
-      "NAMES": [
-        "lick"
-      ],
-      "PROPERNAME": "Lick",
-      "DESCRIPTION": "0-cost cards that apply Goop a variety of secondary effects."
-    },
-     {
-      "NAMES": [
-        "ghostflame slime",
-        "ghostflame_slime"
-      ],
-      "PROPERNAME": "Ghostflame Slime",
-      "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
-    },
-    {
-      "NAMES": [
-        "morph"
-      ],
-      "PROPERNAME": "Morph",
-      "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs 1 less."
-    },
-     {
-      "NAMES": [
-        "slow"
-      ],
-      "PROPERNAME": "Slow",
-      "DESCRIPTION": "Receives 10% more damage per card played in a turn."
-    },
-     {
-      "NAMES": [
-        "tackle"
-      ],
-      "PROPERNAME": "Tackle",
-      "DESCRIPTION": "High-damage Attacks that also deal a small amount of damage to you."
-    },
-     {
-      "NAMES": [
-        "spire boss",
+        "プレートアーマー",
         "spire_boss"
       ],
-      "PROPERNAME": "Spire Boss",
-      "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
+      "PROPERNAME": "プレートアーマー",
+      "DESCRIPTION": "毎ターンブロックが上昇する。 ダメージを受けると減少する。"
+    },
+     {
+      "NAMES": [
+        "ブロンズスライム",
+        "bronze_slime"
+      ],
+      "PROPERNAME": "ブロンズスライム",
+      "DESCRIPTION": "毎ターン、6の攻撃と6 ブロック を得る。"
+    },
+    {
+      "NAMES": [
+        "リック"
+      ],
+      "PROPERNAME": "リック",
+      "DESCRIPTION": "粘液を与える0コストカード。 様々な追加効果がある。"
+    },
+     {
+      "NAMES": [
+        "ゴーストフレイムスライム",
+        "ghostflame_slime"
+      ],
+      "PROPERNAME": "ゴーストフレイムスライム",
+      "DESCRIPTION": "攻撃しないし、効力にも影響されない。 1 筋力 1、機敏性 1、効力 2を得る。"
+      
+    },
+    {
+      "NAMES": [
+        "変化"
+      ],
+      "PROPERNAME": "変化",
+      "DESCRIPTION": "コストが1少ない、あなたのクラスのランダムなカードに交換する。"
+    },
+     {
+      "NAMES": [
+        "スロー"
+      ],
+      "PROPERNAME": "スロー",
+      "DESCRIPTION": "このターンカードをプレイする度に敵の受けるダメージが10%増加する。"
+    },
+     {
+      "NAMES": [
+        "タックル"
+      ],
+      "PROPERNAME": "タックル",
+      "DESCRIPTION": "高ダメージのタックルだが、自分も少しダメージを受ける。"
+    },
+     {
+      "NAMES": [
+        "スパイアボス",
+        "スパイアボス"
+      ],
+      "PROPERNAME": "スパイアボス",
+      "DESCRIPTION": "強力な0コストカード。 スパイアのボスにインスピレーションを受けた。"
     },
   {
     "NAMES": [
-      "divide"
+      "分割"
     ],
-    "PROPERNAME": "Divide",
-    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
+    "PROPERNAME": "分割",
+    "DESCRIPTION": "1コストスキル。 NL ブルーザースライムかアシッドスライムに分裂する。(アップグレードしたら両方に分裂する。) NL 廃棄 。"
+  },
+  
+  {
+    "NAMES": [
+      "征服"
+    ],
+    "PROPERNAME": "征服",
+    "DESCRIPTION": "1コストアタック。 NL 8ダメージを与える。生み出したスライム1体当たり、1 (アップグレードしたら2)のダメージを追加で与える。 NL 廃棄 。"
   },
   {
     "NAMES": [
-      "conquer"
+      "サーブ"
     ],
-    "PROPERNAME": "Conquer",
-    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+    "PROPERNAME": "サーブ",
+    "DESCRIPTION": "1コストスキル。 NL リーチングリーチングかマイヤースライムに分裂する。 (アップグレードしたら両方に分裂する。) NL 廃棄 。"
   },
   {
     "NAMES": [
-      "serve"
+      "プロテクト"
     ],
-    "PROPERNAME": "Serve",
-    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
-  },
-  {
-    "NAMES": [
-      "protect"
-    ],
-    "PROPERNAME": "Protect",
-    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
-  }
-
+    "PROPERNAME": "プロテクト",
+    "DESCRIPTION": "1コストスキル。 NL 7ブロックを得る。 生み出したスライム1体当たり、1 (アップグレードしたら2)のブロックを追加で得る。 NL 廃棄 。"
+}
 ]

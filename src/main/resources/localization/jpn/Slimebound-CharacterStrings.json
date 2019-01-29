@@ -1,15 +1,15 @@
 {
 	"Slimebound": {
 		"NAMES": [
-			"The Slimebound"
+			"スライムバウンド"
 		],
 		"TEXT": [
-			"A rogue minion of the Spire, driven to conquer it.",
-			"Must... absorb... the Heart..."
+			"Spireの乱暴者、征服に向かう。",
+			"心臓を... 吸収... しなければならない..."
 		],
 		"KEYWORDS": [
-			"A rogue minion of the Spire, driven to conquer it.",
-			"Must... absorb... the Heart..."
+			"Spireの乱暴者、征服に向かう。",
+			"心臓を... 吸収... しなければならない..."
 		]
 	}
 }
