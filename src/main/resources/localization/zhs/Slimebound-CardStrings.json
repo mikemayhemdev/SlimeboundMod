@@ -92,7 +92,7 @@
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "自成型黏液",
-    "DESCRIPTION": "每当你失去生命时，在下个回合获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当你失去生命时，在下个回合，给予随机敌人 !SlimeboundSlimed! 层 黏液 ，获得 !M! 点 格挡 。"
   },
 "Slimebound:SlimeSpikes": {
     "NAME": "黏性尖刺",
@@ -333,7 +333,7 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
-    "DESCRIPTION": "随机给予1个敌人 !SlimeboundSlimed! 层黏液 !M! 次。 NL 消耗",
+    "DESCRIPTION": "随机给予1个敌人 !SlimeboundSlimed! 层黏液 !M! 次。",
     "UPGRADE_DESCRIPTION": "随机给予1个敌人 !SlimeboundSlimed! 层黏液 !M! 次。"
   },
 "Slimebound:GoopSpray": {
@@ -343,10 +343,6 @@
 "Slimebound:MassFeed": {
     "NAME": "同质化",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每杀死一个非爪牙的怪物，你的最大生命增加 !M!。 NL 消耗"
-  },
-"Slimebound:StrayGoop": {
-    "NAME": "喷射黏液",
-    "DESCRIPTION": "每当你在自己的回合失去生命时，给予一个随机敌人 !SlimeboundSlimed! 层 黏液 。"
   },
 "Slimebound:ViciousTackle": {
     "NAME": "狂暴冲撞",
@@ -607,5 +603,9 @@
     "NAME": "从者大师",
     "DESCRIPTION": "每当 生成 的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。",
     "UPGRADE_DESCRIPTION": "获得 1 点 潜力 。每当 生成 的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。"
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "最佳防御",
+    "DESCRIPTION": "冲撞 牌对敌人额外造成 !M! 点伤害，对自己造成的伤害减少 1 点。"
   }
 }

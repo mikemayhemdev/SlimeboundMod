@@ -109,7 +109,10 @@
 		"NAME": "自成型黏液",
 		"DESCRIPTIONS": [
 			"每当你失去生命时，获得 ",
-			" 点格挡。"
+			" 点格挡，并给予一个随机敌人 ",
+			" 层黏液。",
+			" 层黏液 ",
+			" 次。"
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
@@ -236,7 +239,7 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "烈焰冲撞",
+		"NAME": "进攻型冲撞",
 		"DESCRIPTIONS": [
 			"冲撞 牌造成的伤害增加 ",
 			" 点。"
@@ -464,6 +467,23 @@
 		"DESCRIPTIONS": [
 			"每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 ",
 			" 层。"
+		]
+	},
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "防御型冲撞",
+		"DESCRIPTIONS": [
+			"冲撞 牌对自身造成的伤害减少 ",
+			" 点。"
+		]
+	},
+	"Slimebound:NextTurnBlockAndGoopPower": {
+		"NAME": "活性黏液",
+		"DESCRIPTIONS": [
+			"回合开始时， 获得 ",
+			" 点格挡，并给予一个随机敌人 ",
+			" 层 黏液 。",
+			" 层 黏液 ",
+			" 次。"
 		]
 	}
 }
