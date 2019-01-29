@@ -88,10 +88,10 @@
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
-    "NAME": "Protective Gear",
-    "FLAVOR": "The best defense is a good offense.",
+    "NAME": "보호 장비",
+    "FLAVOR": "공격이 최선의 방어죠.",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from Tackle cards by 1."
+      "태클 카드를 사용할때 받는 피해가 1 줄어듭니다."
     ]
   }
 }
