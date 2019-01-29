@@ -460,10 +460,10 @@
 		]
 	},
 	"Slimebound:BuffSecondarySlimeEffectsPower": {
-		"NAME": "Minion Master",
+		"NAME": "从者大师",
 		"DESCRIPTIONS": [
-			"When your slimes apply Goop, Poison, or Block, they apply ",
-			" more."
+			"每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 ",
+			" 层。"
 		]
 	}
 }

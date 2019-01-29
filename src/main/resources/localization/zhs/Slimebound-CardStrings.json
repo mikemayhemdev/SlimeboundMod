@@ -537,75 +537,75 @@
     "UPGRADE_DESCRIPTION": "每回合开始时获得1张 升级 后的时间吞噬者牌。"
   },
   "Slimebound:DivideAndConquerConquer": {
-    "NAME": "Conquer",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+    "NAME": "分而治之：治",
+    "DESCRIPTION": "造成 !D! 点伤害。 每只 分裂 出的史莱姆额外提供 !M! 点伤害。 NL 消耗"
   },
   "Slimebound:DivideAndConquerDivide": {
-    "NAME": "Divide",
-    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+    "NAME": "分而治之：分",
+    "DESCRIPTION": "分裂 出1只 好斗史莱姆 或 酸液史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出 好斗史莱姆 和 酸液史莱姆 。 NL 消耗"
   },
   "Slimebound:DivideAndConquer": {
-    "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+    "NAME": "分而治之",
+    "DESCRIPTION": "将 分而治之：分 和 分而治之：治 加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "将 升级过的 分而治之：分 和 分而治之：治 加入手牌。 NL 消耗"
   },
   "Slimebound:ServeAndProtect": {
-    "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+    "NAME": "召唤保护",
+    "DESCRIPTION": "将 召唤保护：召唤 和 召唤保护：保护 加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "将 升级过的 召唤保护：召唤 和 召唤保护：保护 加入手牌。 NL 消耗"
   },
   "Slimebound:ServeAndProtectServe": {
-    "NAME": "Serve",
-    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
+    "NAME": "召唤保护：召唤",
+    "DESCRIPTION": "分裂 出1只 水蛭史莱姆 或 污泥史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出 水蛭史莱姆 和 污泥史莱姆 。 NL 消耗"
   },
   "Slimebound:ServeAndProtectProtect": {
-    "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
+    "NAME": "召唤保护：保护",
+    "DESCRIPTION": "获得 !B! 点 格挡 ， 每只 分裂 出的史莱姆额外提供 !M! 点 格挡 。 NL 消耗"
   },
   "Slimebound:SplitBronze": {
-    "NAME": "Split: Bronze",
-    "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime, who deals !M! more damage and grants !M! more Block this combat. NL Exhaust."
+    "NAME": "分裂：青铜",	
+    "DESCRIPTION": " 分裂 出1只 青铜史莱姆 。 NL 消耗",	
+    "UPGRADE_DESCRIPTION": "分裂 出1只 青铜史莱姆 。这只史莱姆额外造成 !M! 点伤害， 提供 !M! 点 格挡 。 NL 消耗"
   },
-  "Slimebound:SplitTorchHead": {
-    "NAME": "Split: Torch Head",
-    "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime, who deals !M! more damage this combat. NL Exhaust."
+  "Slimebound:SplitTorchHead": {	
+    "NAME": "分裂：火炬头",	
+    "DESCRIPTION": "分裂 出1只 火炬头史莱姆 。 NL 消耗",	
+    "UPGRADE_DESCRIPTION": "分裂 出1只 火炬头史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
   },
   "Slimebound:SplitBruiser": {
-    "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime, who deals !M! more damage this combat. NL Exhaust."
+    "NAME": "分裂：好斗",	
+    "DESCRIPTION": "分裂 出1只 好斗史莱姆 。 NL 消耗",	
+    "UPGRADE_DESCRIPTION": "分裂 出1只 好斗史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
   },
   "Slimebound:SplitCultist": {
-    "NAME": "Split: Cultist",
-    "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime, who deals !M! more damage this combat. NL Exhaust."
+    "NAME": "分裂：邪教徒",
+    "DESCRIPTION": "分裂 出1只 邪教徒史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 邪教徒史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
   },
-  "Slimebound:SplitLeeching": {
-    "NAME": "Split: Leeching",
-    "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime, who grants !M! more Block this combat. NL Exhaust."
+  "Slimebound:SplitLeeching": {	
+    "NAME": "分裂：水蛭",	
+    "DESCRIPTION": "分裂 出1只 水蛭史莱姆 。 NL 消耗",	
+    "UPGRADE_DESCRIPTION": "分裂 出1只 水蛭史莱姆 。 NL 这只史莱姆额外给予 !M! 点 格挡 。 NL 消耗"
   },
-  "Slimebound:SplitAcid": {
-    "NAME": "Split: Acid",
-    "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Acid_Slime, who applies !M! more Poison this combat. NL Exhaust."
+  "Slimebound:SplitAcid": {	
+    "NAME": "分裂：酸液",	
+    "DESCRIPTION": "分裂 出1只 酸液史莱姆 。 NL 消耗",	
+    "UPGRADE_DESCRIPTION": "分裂 出1只 酸液史莱姆 。 NL 这只史莱姆额外给予 !M! 层 中毒 。 NL 消耗"
   },
   "Slimebound:SplitMire": {
-    "NAME": "Split: Mire",
-    "DESCRIPTION": "Split into a Mire_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime, who applies !M! additional Goop this combat. NL Exhaust."
+    "NAME": "分裂：污泥",	
+    "DESCRIPTION": "分裂 出1只 污泥史莱姆 。 NL 消耗",	
+    "UPGRADE_DESCRIPTION": "分裂 出1只 污泥史莱姆 。 NL 这只史莱姆额外给予 !M! 层 黏液 。 NL 消耗"
   },
   "Slimebound:SplitGhostflame": {
-    "NAME": "Split: Ghostflame",
-    "DESCRIPTION": "Gain Slime Slots until you have !M!. NL Split into a Ghostflame_Slime. NL Exhaust."
+    "NAME": "分裂：鬼火",
+    "DESCRIPTION": "获得史莱姆槽位直到达到 !M! 个。 NL 分裂 出1只 鬼火史莱姆 。 NL 消耗"
   },
   "Slimebound:MinionMaster": {
-    "NAME": "Minion Master",
-    "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+    "NAME": "从者大师",
+    "DESCRIPTION": "每当 生成 的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 潜力 。每当 生成 的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。"
   }
 }
