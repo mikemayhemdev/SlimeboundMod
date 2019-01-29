@@ -21,6 +21,7 @@ import slimebound.vfx.SlimeSpawnProjectile;
 public class SlimedTailRelic extends CustomRelic {
     public static final String ID = "Slimebound:SlimedTailRelic";
     public static final String IMG_PATH = "relics/slimedTail.png";
+    public static final String IMG_PATH_LARGE = "relics/slimedTailLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimedTailOutline.png";
     private static final int HP_PER_CARD = 1;
     private boolean isActive = false;
@@ -28,6 +29,8 @@ public class SlimedTailRelic extends CustomRelic {
     public SlimedTailRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.RARE, LandingSound.SOLID);
+        this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
+
     }
 
     @Override
