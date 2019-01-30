@@ -460,27 +460,27 @@
 		]
 	},
 	"Slimebound:BuffSecondarySlimeEffectsPower": {
-		"NAME": "Minion Master",
+		"NAME": "졸개 마스터",
 		"DESCRIPTIONS": [
-			"When your slimes apply Goop, Poison, or Block, they apply ",
-			" more."
+			"슬라임이 점액, 독, 방어도를 부여할때 ",
+			" 더 부여합니다."
 		]
 	},
 	"Slimebound:TackleSelfDamagePreventPower": {
-		"NAME": "Defensive Tackle",
+		"NAME": "방어적 태클",
 		"DESCRIPTIONS": [
-			"Cards containing Tackle deal ",
-			" less damage to you."
+			"태클 카드를 사용할때 피해를 ",
+			" 덜 받습니다."
 		]
 	},
 	"Slimebound:NextTurnBlockAndGoopPower": {
-		"NAME": "Reactive Goop",
+		"NAME": "반응성 점액",
 		"DESCRIPTIONS": [
-			"At the start of your next turn, gain ",
-			" Block and apply ",
-			" Goop to a random enemy.",
-			" Goop to a random enemy ",
-			" times."
+			"내 턴이 시작할때 방어도를 ",
+			" 얻고 무작위 적에게 점액을 ",
+			" 부여합니다.",
+			" 부여합니다.",
+			" 번 부여합니다."
 		]
 	}
 }
