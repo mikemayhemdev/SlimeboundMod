@@ -56,14 +56,14 @@ public class SelfFormingGooPower extends AbstractPower {
                     DESCRIPTIONS[0] +
                             this.amount +
                             DESCRIPTIONS[1] +
-                            (1 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
+                            (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[2]);
         } else {
             this.description = (
                     DESCRIPTIONS[0] +
                             this.amount +
                             DESCRIPTIONS[1] +
-                            (1 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
+                            (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[3] +
                             this.amount +
                             DESCRIPTIONS[4]);

@@ -63,14 +63,14 @@ public class NextTurnBlockAndGoopPower extends AbstractPower {
                     DESCRIPTIONS[0] +
                             this.amount +
                             DESCRIPTIONS[1] +
-                            (1 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
+                            (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[2]);
         } else {
             this.description = (
                     DESCRIPTIONS[0] +
                             this.amount +
                             DESCRIPTIONS[1] +
-                            (1 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
+                            (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[3] +
                             this.amount +
                             DESCRIPTIONS[4]);
@@ -83,7 +83,7 @@ public class NextTurnBlockAndGoopPower extends AbstractPower {
         AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.owner.hb.cX, this.owner.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
         AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(this.owner,
-                AbstractDungeon.getMonsters().getRandomMonster(true), this.amount, 1 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
+                AbstractDungeon.getMonsters().getRandomMonster(true), this.amount, 2 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
 
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
