@@ -1,4 +1,4 @@
-﻿{
+{
 	"Slimebound:PotencyPower": {
 		"NAME": "潛力",
 		"DESCRIPTIONS": [
@@ -66,9 +66,9 @@
 	"Slimebound:ProtectTheBoss": {
 		"NAME": "保護老大",
 		"DESCRIPTIONS": [
-			"阻擋你下1次受到來自敵人的生命值損傷， 吸收 最早 分裂 的史萊姆",
+			"阻擋你下1次受到來自敵人的生命值損傷，受傷時 吸收 你最早的史萊姆",
 			"阻擋你下 #b",
-			" 次受到來自敵人的生命值損傷， 吸收 最早 分裂 的史萊姆"
+			" 次受到來自敵人的生命值損傷，受傷時 吸收 你最早的史萊姆"
 		]
 	},
 	"Slimebound:SplitForLessPower": {
@@ -108,21 +108,23 @@
 	"Slimebound:SelfFormingGooPower": {
 		"NAME": "自成型黏液",
 		"DESCRIPTIONS": [
-			"每當你失去生命時，獲得 ",
-			" 點 格擋"
-		]
+			"每當你失去生命，在你的下回合開始時，獲得 ",
+			" 點 格擋 ，並給予隨機敵人 ",
+			" 層 黏液",
+			" 層 黏液 ",
+			" 次"
 	},
 	"Slimebound:LoseSlimesPower": {
 		"NAME": "超負荷",
 		"DESCRIPTIONS": [
-			"在下個回合，吸收所有你生成的史萊姆",
+			"在下回合，吸收所有你生成的史萊姆",
 			" 回合後，吸收所有你生成的史萊姆"
 		]
 	},
 	"Slimebound:TackleDebuffPower": {
-		"NAME": "束縛",
+		"NAME": "遍體鱗傷",
 		"DESCRIPTIONS": [
-			"受 衝撞 牌攻擊時，受到額外 ",
+			"衝撞 牌對該敵人額外造成 ",
 			" 點傷害"
 		]
 	},
@@ -236,7 +238,7 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "烈焰衝撞",
+		"NAME": "進攻型衝撞",
 		"DESCRIPTIONS": [
 			"衝撞 牌造成的傷害增加 ",
 			" 點"
@@ -448,39 +450,39 @@
 		]
 	},
 	"Slimebound:GreedRespawnPower": {
-		"NAME": "Greed Recovering",
+		"NAME": "尋回：貪婪黏液",
 		"DESCRIPTIONS": [
-			"Greed Ooze will respawn at the end of your turn."
+			"貪婪史萊姆 將在回合結束時重生"
 		]
 	},
 	"Slimebound:ScrapRespawnPower": {
-		"NAME": "Scrap Recovering",
+		"NAME": "尋回：破爛黏液",
 		"DESCRIPTIONS": [
-			"Scrap Ooze will respawn at the end of your turn."
+			"破爛史萊姆 將在回合結束時重生"
 		]
 	},
 	"Slimebound:BuffSecondarySlimeEffectsPower": {
-		"NAME": "Minion Master",
+		"NAME": "爪牙大師",
 		"DESCRIPTIONS": [
-			"When your slimes apply Goop, Poison, or Block, they apply ",
-			" more."
+			"每當你的史萊姆給予 黏液 、 中毒 或 格擋 時，額外給予 ",
+			" 層"
 		]
 	},
 	"Slimebound:TackleSelfDamagePreventPower": {
-		"NAME": "Defensive Tackle",
+		"NAME": "防禦型衝撞",
 		"DESCRIPTIONS": [
-			"Cards containing Tackle deal ",
-			" less damage to you."
+			"衝撞 牌對自身造成的傷害減少 ",
+			" 點"
 		]
 	},
 	"Slimebound:NextTurnBlockAndGoopPower": {
-		"NAME": "Reactive Goop",
+		"NAME": "活性黏液",
 		"DESCRIPTIONS": [
-			"At the start of your next turn, gain ",
-			" Block and apply ",
-			" Goop to a random enemy.",
-			" Goop to a random enemy ",
-			" times."
+			"你的下回合開始時， 獲得 ",
+			" 點 格擋 ，並給予隨機敵人 ",
+			" 層 黏液",
+			" 層 黏液 ",
+			" 次"
 		]
 	}
 }
