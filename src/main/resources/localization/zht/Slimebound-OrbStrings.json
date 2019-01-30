@@ -1,4 +1,4 @@
-﻿{
+{
   "Slimebound:BronzeSlime": {
     "NAME": "青銅史萊姆",
     "DESCRIPTION": [
@@ -18,14 +18,14 @@
     "NAME": "破爛史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
-      " 點傷害。 NL 被 吸收 時立刻重生。不減少最大生命"
+      " 點傷害。 NL 被 吸收 後在回合結束時重生。不減少最大生命"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "貪婪史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
-      " 點傷害。 NL 被 吸收 時立刻重生。不減少最大生命"
+      " 點傷害。 NL 被 吸收 後在回合結束時重生。不減少最大生命"
     ]
   },
   "Slimebound:TorchHeadSlime": {
@@ -73,9 +73,3 @@
     ]
   }
 }
-
-
-
-
-
-
