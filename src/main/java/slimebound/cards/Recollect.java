@@ -71,7 +71,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
+            upgradeBlock(3);
             //upgradeMagicNumber(1);
            // this.rawDescription = UPGRADED_DESCRIPTION;
             //this.initializeDescription();
