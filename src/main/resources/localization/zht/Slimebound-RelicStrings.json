@@ -1,4 +1,4 @@
-﻿{
+{
   "Slimebound:AbsorbEndCombat": {
     "NAME": "黏液之心",
     "FLAVOR": "你不是孤軍作戰！",
@@ -17,7 +17,7 @@
     "NAME": "黏質尾巴",
     "FLAVOR": "一條由黏液組成的假尾巴，戰鬥時可以迷惑敵人。",
     "DESCRIPTIONS": [
-      "當你的生命值低於50%時， 分裂 1隻 酸液史萊姆 。你下一次承受的傷害將以移除你最早 分裂 的史萊姆代替（每場戰鬥一次）",
+      "當你的生命值低於50%時， 分裂 1隻 酸液史萊姆 ，你下次承受的傷害將以移除你最早的史萊姆代替（每場戰鬥一次）",
       "這個遺物在本場戰鬥中已被使用，下場戰鬥才能再次使用"
     ]
   },
@@ -88,10 +88,10 @@
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
-    "NAME": "Protective Gear",
-    "FLAVOR": "The best defense is a good offense.",
+    "NAME": "保護裝備",
+    "FLAVOR": "進攻是最好的防守。",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from Tackle cards by 1."
+      "自身受到來自 衝撞 牌的傷害降低 1 點"
     ]
   }
 }
