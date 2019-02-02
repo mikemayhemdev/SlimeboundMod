@@ -2,13 +2,11 @@ package slimebound;
 
 import basemod.*;
 import basemod.abstracts.CustomUnlockBundle;
-import basemod.helpers.BaseModCardTags;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.mod.hubris.vfx.combat.ShowRollResult;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -57,6 +55,7 @@ import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
 import slimebound.powers.GluttonyPower;
+import slimebound.powers.TackleSelfDamagePreventPower;
 import slimebound.relics.*;
 import theAct.dungeons.Jungle;
 
@@ -302,6 +301,21 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         return bonus;
     }
 
+    public static int getTackleSelfDamageBonus(AbstractPlayer source) {
+        int bonus = 0;
+        if (source != null) {
+            if (source.hasRelic(SelfDamagePreventRelic.ID)) {
+                bonus += -1;
+            }
+            if (source.hasPower(TackleSelfDamagePreventPower.POWER_ID)) {
+                bonus += source.getPower(TackleSelfDamagePreventPower.POWER_ID).amount;
+            }
+
+        }
+        return bonus;
+    }
+
+
     public void printEnemies(){
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             logger.info(monster.name + " HP " + monster.currentHealth);
@@ -326,6 +340,8 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addRelicToCustomPool(new ScrapOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new DailySplitModRelic(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new SelfDamagePreventRelic(), AbstractCardEnum.SLIMEBOUND);
+
 
         shareableRelics.add(new PreparedRelic());
 
@@ -357,6 +373,14 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addDynamicVariable(new PoisonVariable());
         BaseMod.addDynamicVariable(new SlimedVariable());
 
+        BaseMod.addCard(new DivideAndConquerDivide());
+        BaseMod.addCard(new DivideAndConquerConquer());
+        BaseMod.addCard(new DivideAndConquer());
+
+        BaseMod.addCard(new ServeAndProtectProtect());
+        BaseMod.addCard(new ServeAndProtectServe());
+        BaseMod.addCard(new ServeAndProtect());
+
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
         BaseMod.addCard(new SplitBronze());
@@ -373,7 +397,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new Overexert());
         BaseMod.addCard(new Split());
         BaseMod.addCard(new SuperSplit());
-        BaseMod.addCard(new DivideAndConquer());
         BaseMod.addCard(new LeadByExample());
         BaseMod.addCard(new slimebound.cards.SlimeTap());
         BaseMod.addCard(new Teamwork());
@@ -381,16 +404,16 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new SlimeBrawl());
         //BaseMod.addCard(new slimebound.cards.zzzMaxSlimes());
         BaseMod.addCard(new SlimeSpikes());
-        BaseMod.addCard(new FormABlockade());
-        BaseMod.addCard(new SpikyOuterGoop());
+
+        BaseMod.addCard(new GoopArmor());
         BaseMod.addCard(new MassRepurpose());
         BaseMod.addCard(new DouseInSlime());
         BaseMod.addCard(new Chomp());
-        BaseMod.addCard(new StrayGoop());
+        BaseMod.addCard(new BestDefense());
         BaseMod.addCard(new OozeBath());
         //BaseMod.addCard(new zzzSoTasty());
         BaseMod.addCard(new LivingWall());
-        BaseMod.addCard(new GangUp());
+        BaseMod.addCard(new MinionMaster());
         BaseMod.addCard(new SelfFormingGoo());
         BaseMod.addCard(new slimebound.cards.Dissolve());
         BaseMod.addCard(new slimebound.cards.DuplicatedForm());
@@ -455,7 +478,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         //BaseMod.addCard(new zzzSlimepotheosis());
         BaseMod.addCard(new slimebound.cards.FinishingTackle());
         BaseMod.addCard(new QuickStudy());
-        BaseMod.addCard(new FirmFortitude());
+        BaseMod.addCard(new FeelOurPain());
         BaseMod.addCard(new Replication());
         BaseMod.addCard(new CheckThePlaybook());
         BaseMod.addCard(new TimeRipple());
@@ -469,6 +492,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         BaseMod.addCard(new slimebound.cards.Recycling());
         BaseMod.addCard(new slimebound.cards.Recollect());
         BaseMod.addCard(new slimebound.cards.Icky());
+
 
 
 
@@ -510,7 +534,6 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(Overexert.ID);
         UnlockTracker.unlockCard(Split.ID);
         UnlockTracker.unlockCard(SuperSplit.ID);
-        UnlockTracker.unlockCard(DivideAndConquer.ID);
         UnlockTracker.unlockCard(LeadByExample.ID);
         UnlockTracker.unlockCard(SlimeTap.ID);
         UnlockTracker.unlockCard(RainOfGoop.ID);
@@ -521,19 +544,19 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(StudyTheSpire.ID);
         UnlockTracker.unlockCard(SelfFormingGoo.ID);
         UnlockTracker.unlockCard(SlimeSpikes.ID);
-        UnlockTracker.unlockCard(SpikyOuterGoop.ID);
+        UnlockTracker.unlockCard(GoopArmor.ID);
         UnlockTracker.unlockCard(MassRepurpose.ID);
         UnlockTracker.unlockCard(DouseInSlime.ID);
         UnlockTracker.unlockCard(Chomp.ID);
-        UnlockTracker.unlockCard(StrayGoop.ID);
+        UnlockTracker.unlockCard(BestDefense.ID);
         UnlockTracker.unlockCard(OozeBath.ID);
-        UnlockTracker.unlockCard(GangUp.ID);
+        UnlockTracker.unlockCard(MinionMaster.ID);
         // UnlockTracker.unlockCard(zzzSoTasty.ID);
         UnlockTracker.unlockCard(LivingWall.ID);
-        UnlockTracker.unlockCard(FormABlockade.ID);
+
         UnlockTracker.unlockCard(LeechingTouch.ID);
         UnlockTracker.unlockCard(DuplicatedForm.ID);
-        UnlockTracker.unlockCard(FirmFortitude.ID);
+        UnlockTracker.unlockCard(FeelOurPain.ID);
         UnlockTracker.unlockCard(Dissolve.ID);
         UnlockTracker.unlockCard(RollThrough.ID);
         UnlockTracker.unlockCard(CorrosiveSpit.ID);
@@ -581,6 +604,14 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(DisruptingSlam.ID);
         UnlockTracker.unlockCard(PrepareCrush.ID);
         UnlockTracker.unlockCard(Repurpose.ID);
+
+        UnlockTracker.unlockCard(ServeAndProtectProtect.ID);
+        UnlockTracker.unlockCard(ServeAndProtect.ID);
+        UnlockTracker.unlockCard(ServeAndProtectServe.ID);
+        UnlockTracker.unlockCard(DivideAndConquerDivide.ID);
+
+        UnlockTracker.unlockCard(DivideAndConquerConquer.ID);
+        UnlockTracker.unlockCard(DivideAndConquer.ID);
 
 
         //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);

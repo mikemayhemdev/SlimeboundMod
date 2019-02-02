@@ -73,5 +73,6 @@ public class LeechEffectParticle extends AbstractGameEffect {
     }
 
     public void dispose() {
+
     }
 }

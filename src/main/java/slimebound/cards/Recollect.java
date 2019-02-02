@@ -25,7 +25,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/absorball.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 1;
@@ -71,7 +71,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
+            upgradeBlock(3);
             //upgradeMagicNumber(1);
            // this.rawDescription = UPGRADED_DESCRIPTION;
             //this.initializeDescription();

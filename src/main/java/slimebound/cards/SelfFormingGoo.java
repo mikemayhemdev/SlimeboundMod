@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SelfDamageSlimedPower;
 import slimebound.powers.SelfFormingGooPower;
 
 
@@ -21,23 +22,22 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/hardened.png";
+    public static final String IMG_PATH = "cards/straygoop.png";
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 0;
-
-    private static int upgradedamount = 1;
+    private static final int COST = 1;
 
     public SelfFormingGoo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 1;
-
-
+        this.slimed = this.baseSlimed = 2;
+        upgradeSlimed(0);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPower(p, p, this.magicNumber), this.magicNumber));
 
     }
@@ -49,7 +49,7 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeBaseCost(0);
 
 
         }

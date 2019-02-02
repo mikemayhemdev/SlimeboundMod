@@ -85,7 +85,11 @@
 		"DESCRIPTIONS": [
 			"每回合打出的第1张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
 			"每回合打出的前 ",
-			" 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。"
+			" 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
@@ -109,7 +113,10 @@
 		"NAME": "自成型黏液",
 		"DESCRIPTIONS": [
 			"每当你失去生命时，获得 ",
-			" 点格挡。"
+			" 点格挡，并给予一个随机敌人 ",
+			" 层黏液。",
+			" 层黏液 ",
+			" 次。"
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
@@ -173,8 +180,14 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "暴食",
 		"DESCRIPTIONS": [
-			"舔舐 牌额外提供 ",
-			" 层 黏液 。"
+			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			"The first .",
+			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
+
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -236,7 +249,7 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "烈焰冲撞",
+		"NAME": "进攻型冲撞",
 		"DESCRIPTIONS": [
 			"冲撞 牌造成的伤害增加 ",
 			" 点。"
@@ -261,9 +274,13 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "感同身受",
 		"DESCRIPTIONS": [
-			"下次你将在自己的回合失去生命时，1个随机敌人代你承受。",
-			"下 ",
-			" 次你将在自己的回合失去生命时，1个随机敌人代你承受。"
+			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+			"The next ",
+			" times you would lose HP on your turn, an enemy takes that much damage instead.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -457,6 +474,37 @@
 		"NAME": "寻回：破烂黏液",
 		"DESCRIPTIONS": [
 			"破烂史莱姆将在回合结束时重生。"
+		]
+	},
+	"Slimebound:BuffSecondarySlimeEffectsPower": {
+		"NAME": "从者大师",
+		"DESCRIPTIONS": [
+			"每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 ",
+			" 层。"
+		]
+	},
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "防御型冲撞",
+		"DESCRIPTIONS": [
+			"冲撞 牌对自身造成的伤害减少 ",
+			" 点。"
+		]
+	},
+	"Slimebound:NextTurnBlockAndGoopPower": {
+		"NAME": "活性黏液",
+		"DESCRIPTIONS": [
+			"回合开始时， 获得 ",
+			" 点格挡，并给予一个随机敌人 ",
+			" 层 黏液 。",
+			" 层 黏液 ",
+			" 次。"
+		]
+	},
+	"Slimebound:GoopArmorPower": {
+		"NAME": "Goop Armor",
+		"DESCRIPTIONS": [
+			"Whenever you consume Goop, gain ",
+			" Block."
 		]
 	}
 }

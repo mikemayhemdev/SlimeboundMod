@@ -35,14 +35,15 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public SplitBruiser() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, 1), 1));
+        int bonus = 0;
+        if (upgraded) bonus = this.magicNumber;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true,bonus,0));
 
     }
 

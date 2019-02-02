@@ -86,5 +86,12 @@
     "DESCRIPTIONS": [
       "Au début du combat, fait apparaître un  Leeching slime et Gagnez 1 emplacement de Slime."
     ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Protective Gear",
+    "FLAVOR": "The best defense is a good offense.",
+    "DESCRIPTIONS": [
+      "Reduce the damage you take from Tackle cards by 1."
+    ]
   }
 }

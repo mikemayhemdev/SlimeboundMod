@@ -37,6 +37,18 @@ public class SlimeSpawnAction extends AbstractGameAction {
     private int upgradedamount;
     private int count;
 
+    private int bonusUniqueFocus;
+    private int bonusSecondary;
+
+    public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int bonusUniqueFocus, int bonusSecondary) {
+
+        this(newOrbType,upgraded,SelfDamage);
+
+        this.bonusUniqueFocus = bonusUniqueFocus;
+        this.bonusSecondary = bonusSecondary;
+
+    }
+
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
 
@@ -124,6 +136,13 @@ public class SlimeSpawnAction extends AbstractGameAction {
                     //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
 
                 } else {
+
+                    if (this.bonusUniqueFocus > 0){
+                        ((SpawnedSlime)this.orbType).applyUniqueFocus(bonusUniqueFocus);
+                    }
+                    if (this.bonusSecondary > 0){
+                        ((SpawnedSlime)this.orbType).applySecondaryBonus(bonusSecondary);
+                    }
 
                     AbstractDungeon.player.channelOrb(this.orbType);
                 }

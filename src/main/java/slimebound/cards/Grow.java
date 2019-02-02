@@ -45,7 +45,7 @@ public class Grow extends AbstractSlimeboundCard {
         if (p.maxOrbs > 0) {
             AbstractDungeon.actionManager.addToBottom(new DecreaseMaxOrbAction(1));
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
             if (upgraded) AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, this.magicNumber));
@@ -62,8 +62,7 @@ public class Grow extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeBaseCost(1);
 
 
         }

@@ -34,6 +34,7 @@ public class ManipulateTime extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.STUDY);
         this.exhaust = true;
         //this.canPlay = true;
+        this.baseBlock = 3;
 
     }
 
@@ -49,7 +50,8 @@ public class ManipulateTime extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new TriggerStartOfTurnEffectsAction(p));
         if (upgraded){
 
-            AbstractDungeon.actionManager.addToBottom(new TriggerStartOfTurnEffectsAction(p));
+           // AbstractDungeon.actionManager.addToBottom(new TriggerStartOfTurnEffectsAction(p));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
 
         }
 

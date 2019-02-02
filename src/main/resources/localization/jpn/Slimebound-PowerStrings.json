@@ -2,162 +2,172 @@
   "Slimebound:PotencyPower": {
     "NAME": "効力",
     "DESCRIPTIONS": [
-      "あなたが生み出した#yスライムのダメージを増加させる。"
+      "生み出した #yスライム のダメージを",
+	  "増加させる。"
     ]
   },
   "Slimebound:SlimedPower": {
     "NAME": "粘液",
     "DESCRIPTIONS": [
       "この敵に対する次の攻撃は",
-      "より多くのダメージを与えてHPを回復し、全ての#y粘液を使用します。",
-      "スタックはターン終了時に半分になります。"
+      " 多くのダメージを与えて",
+      "全ての #y粘液 を消費しHPを回復する。ターン終了時に半分になる。"
     ]
   },
   "Slimebound:SplitDailyTriggerPower": {
     "NAME": "スライム分裂",
     "DESCRIPTIONS": [
-      "HPが#b50%以下になると現在のHPを持つ",
-      "#b2体のスライムに分裂する。"
+      "HPが #b50% 以下になると、",
+      "の現在のHPを持つ #b2 体のスライムに分裂する。"
     ]
   },
   "Slimebound:SplitDailyPower": {
     "NAME": "分裂",
     "DESCRIPTIONS": [
-      "この敵はこのターン分裂しています。"
+      "この敵はこのターン分裂している。"
     ]
   },
   "Slimebound:BuffAttackSlimesPower": {
     "NAME": "アップグレード:ブルーザー",
     "DESCRIPTIONS": [
       "ブルーザースライムは",
-      "より多くのダメージを与える。"
+      " 多くのダメージを与える。"
     ]
   },
   "Slimebound:BuffPoisonSlimesPower": {
     "NAME": "アップグレード:アシッド",
     "DESCRIPTIONS": [
       "ポイズンスライムは",
-      " より多くの毒を与える。"
+      " 多くの #y毒 を与える。"
     ]
   },
   "Slimebound:BuffSlimingSlimesPower": {
     "NAME": "アップグレード:リッキングスライム",
     "DESCRIPTIONS": [
       "スリミングスライムは",
-      " より多くの粘液を与える。"
+      " 多くの粘液を与える。"
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
     "NAME": "アップグレード:リーチング",
     "DESCRIPTIONS": [
       "リーチングスライムは",
-      "より多くのダメージを与える。"
+      " 多くのダメージを与える。"
     ]
   },
   "Slimebound:HexSlimePerTurnPower": {
     "NAME": "ヘックスパワー",
     "DESCRIPTIONS": [
       "次のターンにゴーストフレイムスライムを生み出す。",
-      "次のターンにゴーストフレイムスライムを生み出す。"
+      "ゴーストフレイムスライムを",
+	  " ターン後に生み出す。"
     ]
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "ボスを守れ",
     "DESCRIPTIONS": [
-      "一番古いスライムを犠牲にして次のダメージを防ぎます。",
-      "次の#b回のHPを失う攻撃を",
-      "一番古いスライムを犠牲にして防ぎます。"
+      "一番古いスライムを犠牲にして次の敵の攻撃を防ぐ。",
+      "次の #b",
+      " 回、敵の攻撃を一番古いスライムを犠牲にして防ぐ。"
     ]
   },
   "Slimebound:SplitForLessPower": {
     "NAME": "効率的ベトベト",
     "DESCRIPTIONS": [
-      "分裂コストのHPはより",
-      "少なくなります。",
-      "各ターン、ランダムな分裂カードを手札に加える。",
-      "各ターン、ランダムな分裂カードを手札に加える。"
+      "分裂コストのHPは",
+      " 少なくなる。各ターン、",
+      " 枚のランダムな分裂カードを手札に加える。",
+      " 枚のランダムな、ランダムな分裂カードを手札に加える。"
     ]
   },
   "Slimebound:ComboAttackPower": {
     "NAME": "手本を示す",
     "DESCRIPTIONS": [
       "毎ターン最初に攻撃すると一番古いスライムも攻撃する。",
-      "毎ターン",
-      "最初に攻撃すると一番古いスライムも攻撃する。"
+      "毎ターン、初めの",
+      " 回の攻撃のとき、一番古いスライムも攻撃する。",
+      " NL This effect can be triggered ",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
     ]
   },
   "Slimebound:RetainCardsOneTurnPower": {
     "NAME": "カードの準備",
     "DESCRIPTIONS": [
       "保留",
-      "カードをこのターン保留する。",
-      "カードをこのターン保留する。"
+      "1枚のカードをこのターン保留する。",
+      " 枚のカードをこのターン保留する。"
     ]
   },
   "Slimebound:EnergizedSlimeboundPower": {
     "NAME": "通電",
     "DESCRIPTIONS": [
       "次のターン#b",
-      "追加の[E]を得る。",
-      "追加の[E]を得る。",
+      "追加の [E] を得る。",
+      "追加の [E] を得る。",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "Slimebound:SelfFormingGooPower": {
     "NAME": "自己形成グー",
     "DESCRIPTIONS": [
-      "HPを失う度、",
-      "ブロックを得る。"
-    ]
+			"HPを失うとき、次のターン開始時に、",
+			" ブロックを得て、粘液",
+			" をランダムな敵に与える。",
+			" をランダムな敵に",
+			" 回与える。"
+		]
   },
   "Slimebound:LoseSlimesPower": {
     "NAME": "やり過ぎ",
     "DESCRIPTIONS": [
-      "次のターンあなたが生み出したスライムを全て吸収する。",
-      "このターンあなたが生み出したスライムを全て吸収する。"
+      "次のターン、あなたが生み出したスライムを全て吸収する。",
+      " ターン後、あなたが生み出したスライムを全て吸収する。"
     ]
   },
   "Slimebound:TackleDebuffPower": {
     "NAME": "ボロボロ",
     "DESCRIPTIONS": [
-      "タックルを",
-      " 含むカードからより多くのダメージを受ける。"
+      "「タックル」を含むカードから",
+      " 多くのダメージを受ける。"
     ]
   },
   "Slimebound:LoseThornsPower": {
-    "NAME": "牽引スパイク",
+    "NAME": "格納式スパイク",
     "DESCRIPTIONS": [
       "次のターン",
       "トゲを失う。"
     ]
   },
   "Slimebound:SlimedThornsPower": {
-    "NAME": "生きている壁",
+    "NAME": "生ける壁",
     "DESCRIPTIONS": [
-      "攻撃してきた敵に",
-      "粘液を与えます。"
+      "攻撃してきた敵に粘液",
+      " を与える。"
     ]
   },
   "Slimebound:PreventSlimeDecayPower": {
     "NAME": "スライム入り",
     "DESCRIPTIONS": [
       "粘液はこのターン減衰しない。",
-      "粘液は次のターン減衰しない。"
+      "次の",
+      " ターン粘液は減衰しない。"
     ]
   },
   "Slimebound:DuplicatedFormPower": {
     "NAME": "複製フォーム",
     "DESCRIPTIONS": [
       "各ターン、最初の敵を対象としてプレイされたカードは2回プレイされる。",
-      "各ターン、#b枚の",
-      "敵を対象としてプレイされたカードは2回プレイされる。"
+      "各ターン、#b",
+      " 枚の敵を対象としてプレイされたカードは2回プレイされる。"
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
     "NAME": "半減",
     "DESCRIPTIONS": [
       "最大HPがこの戦闘中",
-      "減少しています。"
+      " 減少する。"
     ]
   },
   "Slimebound:DuplicatedFormEnergyPower": {
@@ -170,8 +180,14 @@
   "Slimebound:GluttonyPower": {
     "NAME": "大食い",
     "DESCRIPTIONS": [
-      "各ターンの最初にプレイしたリックカードは、",
-      "ランダムなリックカードを手札に加えます。"
+      "The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+      "The first .",
+      " times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+      " NL This effect can be triggered ",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+
     ]
   },
   "Slimebound:GluttonyPowerUpgraded": {
@@ -185,89 +201,93 @@
   "Slimebound:PoisonThornsPower": {
     "NAME": "酸性ゼラチン",
     "DESCRIPTIONS": [
-      "攻撃してきた敵に",
-      "毒を付与する。"
+      "攻撃してきた敵に #y毒",
+      "を付与する。"
     ]
   },
   "Slimebound:SlimeRitualPower": {
     "NAME": "儀式",
     "DESCRIPTIONS": [
-      "各ターンの開始時に",
-      "筋力を得る。"
+      "各ターンの開始時に筋力",
+      " を得る。"
     ]
   },
   "Slimebound:RecyclingPower": {
     "NAME": "リサイクル",
     "DESCRIPTIONS": [
-      "各ターン",
-      "廃棄されたランダムなコスト0のカードを手札に戻す。",
-      "廃棄されたランダムなコスト0のカードを手札に戻す。"
+      "次のターン、廃棄されたランダムなコスト0のカードを手札に戻す。",
+      "次の",
+	  " ターン、廃棄されたランダムなコスト0のカードを手札に戻す。"
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
     "NAME": "リサイクル+",
     "DESCRIPTIONS": [
-      "HPを回復し ",
-      "コスト0のカードを廃棄したときカードを1枚引く。"
+      "HPを",
+      " 回復し、コスト0のカードを廃棄したときカードを1枚引く。"
     ]
   },
   "Slimebound:AcidTonguePower": {
     "NAME": "酸の舌",
     "DESCRIPTIONS": [
-      "粘液を付与する度、",
-      "毒を付与する。"
+      "粘液を付与する度、 #y毒",
+      "を付与する。"
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
     "NAME": "ベトベトの舌",
     "DESCRIPTIONS": [
-      "粘液を付与するとき、",
-      "更に粘液を付与する。"
+      "粘液を付与するとき、追加で粘液",
+      " を付与する。"
     ]
   },
   "Slimebound:SelfDamageSlimedPower": {
     "NAME": "ストレイグープ",
     "DESCRIPTIONS": [
-      "自分のターンにHPを失った場合、",
-      " ランダムな敵に粘液を付与する。"
+      "HPを失った場合、ランダムな敵に粘液",
+      " を付与する。"
     ]
   },
   "Slimebound:TackleBuffPower": {
-    "NAME": "フレイムタックル",
+    "NAME": "Offensive Tackle",
     "DESCRIPTIONS": [
-      "タックルカードは",
-      "更にダメージを与える。"
+      "「タックル」を含むカードは",
+      " 多くのダメージを与える。"
     ]
   },
   "Slimebound:PolyBeamAgainPower": {
-    "NAME": "Alternating Beam",
+    "NAME": "交流ビーム",
     "DESCRIPTIONS": [
-      "ポリービームを次のターンの開始時にプレイする。",
-      "ポリービームを次のターンの開始時にプレイする。",
-      ""
+      "次のターンの開始時に、ポリービームをプレイする。",
+      "次の",
+      " ターン開始時に、ポリービームをプレイする。"
     ]
   },
   "Slimebound:PolyBeamAgainPowerUpgraded": {
-    "NAME": "Alternating Beam+",
+    "NAME": "交流ビーム+",
     "DESCRIPTIONS": [
-      "ポリービーム+を次のターンの開始時にプレイする。",
-      "ポリービーム+を次のターンの開始時にプレイする。",
-      ""
+      "次のターンの開始時に、ポリービーム+をプレイする。",
+      "次の",
+      " ターン開始時に、ポリービーム+をプレイする。"
     ]
   },
   "Slimebound:FirmFortitudePower": {
-    "NAME": "しっかりした才能",
+    "NAME": "痛みを感じろ",
     "DESCRIPTIONS": [
-      "次に自分のターンにHPを失うとき代わりに敵がその分多くのダメージを受ける。",
-      "次に",
-      "自分のターンにHPを失うとき代わりに敵がその分多くのダメージを受ける。"
+      "The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+      "The next ",
+      " times you would lose HP on your turn, an enemy takes that much damage instead.",
+      " NL This effect can be triggered ",
+      " more times this turn.",
+      " more time this turn.",
+      " This effect cannot be triggered again this turn."
     ]
   },
   "Slimebound:NextTurnGainStrengthPower": {
     "NAME": "チャージアップ",
     "DESCRIPTIONS": [
-      "次のターン、",
-      "筋力を得る。"
+      "次のターン、筋力",
+      " を得る。"
     ]
   },
   "Slimebound:NextTurnGainSlimeCrush": {
@@ -275,185 +295,216 @@
     "DESCRIPTIONS": [
       "次のターン「スライムクラッシュ」を手札に加える。",
       "次のターン",
-      "「スライムクラッシュ」を手札に加える。"
+      " 枚の「スライムクラッシュ」を手札に加える。"
     ]
   },
   "Slimebound:StunnedPower": {
     "NAME": "すっかり疲れた",
     "DESCRIPTIONS": [
-      "次のターンをスキップする。",
+      "次の自分のターンをスキップする。",
       "次の自分のターンを",
-      "スキップする。"
+      " 回スキップする。"
     ]
   },
   "Slimebound:SearingPower": {
     "NAME": "火傷",
     "DESCRIPTIONS": [
       "各ターン",
-      "ダメージを与える。"
+      " ダメージを受ける。"
     ]
   },
   "Slimebound:NextTurnGainHyperBeam": {
     "NAME": "ビームの準備",
     "DESCRIPTIONS": [
-      "次のターン「ハイパービーム」を手札に加える。",
+      "次のターン、「ハイパービーム」を手札に加える。",
       "次のターン",
-      "「ハイパービーム」のコピーを手札に加える。"
+      " 枚の「ハイパービーム」を手札に加える。"
     ]
   },
   "Slimebound:NextTurnGainDivider": {
     "NAME": "分割の準備",
     "DESCRIPTIONS": [
-      "次のターン「分割」を手札に加える。",
-      "次のターン",
-      "「分割」のコピーを手札に加える。"
+      "次のターン、「分割」を手札に加える。",
+      "次のターン、",
+      " 枚の「分割」を手札に加える。"
     ]
   },
   "Slimebound:StudyAutomatonPower": {
     "NAME": "オートマトンの研究",
     "DESCRIPTIONS": [
-      "ターン開始時、ランダムなオートマトンカードを手札に加える。",
-      "次のターンの開始時に、ランダムなオートマトンカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムな「オートマトンカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「オートマトンカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyAutomatonPowerUpgraded": {
     "NAME": "オートマトンの研究+",
     "DESCRIPTIONS": [
-      "ターン開始時にアップグレードされたランダムなオートマトンカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたオートマトンカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムなアップグレードされた「オートマトンカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされた「オートマトンカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyAwakenedPower": {
     "NAME": "目覚めし者の研究",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムな目覚めし者のカードを手札に加える。",
-      "次のターンの開始時にランダムな目覚めし者のカードを",
-      "手札に加える。"
+      "次のターンの開始時、ランダムな「目覚めし者のカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「目覚めし者のカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyAwakenedPowerUpgraded": {
     "NAME": "目覚めし者の研究+",
     "DESCRIPTIONS": [
-      "ターン開始時にランダムなアップグレードされた目覚めし者のカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされた目覚めし者の",
-      "カードを手札に加える。"
+      "次のターン開始時、ランダムなアップグレードされた「目覚めし者のカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされた「目覚めし者のカード」を手札に加える。"
     ]
   },
   "Slimebound:AwakenedOnePower": {
     "NAME": "ダークリチュアル",
     "DESCRIPTIONS": [
-      "この敵が",
-      "敵のターンに攻撃しないとき筋力を得る。"
+      "敵が攻撃しないとき、筋力",
+      " を得る。"
     ]
   },
   "Slimebound:StudyChampPower": {
     "NAME": "チャンプの研究",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなチャンプのカードを手札に加える。",
-      "次のターンの開始時にランダムなチャンプのカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムな「チャンプのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「チャンプのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyChampPowerUpgraded": {
     "NAME": "チャンプの研究+",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなアップグレードされたチャンプのカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたチャンプのカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムなアップグレードされた「チャンプのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされた「チャンプのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyCollectorPower": {
     "NAME": "コレクターの研究",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなコレクターのカードを手札に加える。",
-      "次のターンの開始時にランダムなコレクターのカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムな「コレクターのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「コレクターのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyCollectorPowerUpgraded": {
     "NAME": "コレクターの研究+",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなアップグレードされたコレクターのカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたコレクターの",
-      "カードを手札に加える。"
+      "次のターン開始時、ランダムなアップグレードされた「コレクターのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされた「コレクターのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyGuardianPower": {
     "NAME": "ガーディアンの研究",
     "DESCRIPTIONS": [
-      "ターン開始時にランダムなガーディアンのカードを手札に加える。",
-      "次のターンの開始時にランダムなガーディアンのカードを手札に",
-      "加える。"
+      "次のターン開始時、ランダムな「ガーディアンのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「ガーディアンのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyGuardianPowerUpgraded": {
     "NAME": "ガーディアンの研究+",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなアップグレードされたガーディアンのカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたガーディアンのカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムなアップグレードされた「ガーディアンのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされた「ガーディアンのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyHexaghostPower": {
     "NAME": "ヘックスゴーストの研究",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなヘックスゴーストのカードを手札に加える。",
-      "次のターンの開始時にランダムなヘックスゴーストのカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムな「ヘックスゴーストのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「ヘックスゴーストのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyHexaghostPowerUpgraded": {
     "NAME": "ヘックスゴーストの研究+",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなアップグレードされたヘックスゴーストのカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたヘックスゴーストのカードを",
-      "手札に加える。"
+      "次のターン開始時、ランダムなアップグレードされたヘックスゴーストのカードを手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされたヘックスゴーストのカードを手札に加える。"
     ]
   },
   "Slimebound:StudyShapesPower": {
     "NAME": "デカ＆ドヌーの研究",
     "DESCRIPTIONS": [
-      "ターン開始時にランダムなデカ＆ドヌーのカードを手札に加える。",
-      "次のターンの開始時にランダムなデカ＆ドヌーのカードを手札に",
-      "加える。"
+      "次のターン開始時にランダムな「デカ＆ドヌーのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「デカ＆ドヌーのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyShapesPowerUpgraded": {
     "NAME": "デカ＆ドヌーの研究+",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなアップグレードされたデカ＆ドヌーのカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたデカ＆ドヌーのカードを手札に",
-      "加える。"
+      "次のターン開始時、ランダムなアップグレードされた「デカ＆ドヌーのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムなアップグレードされた「デカ＆ドヌーのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyTimeEaterPower": {
     "NAME": "タイムイーターの研究",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなタイムイーターのカードを手札に加える。",
-      "次のターンの開始時にランダムなタイムイーターのカードを手札に",
-      "加える。"
+      "次のターン開始時、ランダムな「タイムイーターのカード」を手札に加える。",
+      "次の",
+      " ターン開始時、ランダムな「タイムイーターのカード」を手札に加える。"
     ]
   },
   "Slimebound:StudyTimeEaterPowerUpgraded": {
     "NAME": "タイムイーターの研究+",
     "DESCRIPTIONS": [
-      "ターンの開始時にランダムなアップグレードされたタイムイーターのカードを手札に加える。",
-      "次のターンの開始時にランダムなアップグレードされたタイムイーターのカードを手札に",
-      "加える"
+      "次のターン開始時にランダムなアップグレードされた「タイムイーターのカード」を手札に加える。",
+      "次の",
+      " ターン開始時にランダムなアップグレードされた「タイムイーターのカード」を手札に加える"
     ]
   },
-  "Slimebound:GreedRespawnPower": {
-    "NAME": "グリード再生",
+ 	"Slimebound:GreedRespawnPower": {
+		"NAME": "グリード・リカバー",
+		"DESCRIPTIONS": [
+			"グリードウーズがターン終了時にリスポーンする。"
+		]
+	},
+	"Slimebound:ScrapRespawnPower": {
+		"NAME": "スクラップ・リカバー",
+		"DESCRIPTIONS": [
+			"スクラップウーズがターン終了時にリスポーンする。"
+		]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "ミニオンマスター",
     "DESCRIPTIONS": [
-      "ターン終了時、グリードウーズ再出現する"
+      "あなたのスライムが粘液、毒、ブロックを与えるとき、",
+      " つ追加で与える。"
     ]
   },
-  "Slimebound:ScrapRespawnPower": {
-    "NAME": "スクラップ再生",
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "ディフェンシブタックル",
+		"DESCRIPTIONS": [
+			"「タックル」を含むカードから受けるダメージを",
+			" 減らす。"
+		]
+	},
+	"Slimebound:NextTurnBlockAndGoopPower": {
+		"NAME": "リアクティブ粘液",
+		"DESCRIPTIONS": [
+			"次のターン開始時、",
+			" ブロックを得て、粘液",
+			" をランダムな敵に与える。",
+			" をランダムな敵に ",
+			" 回与える。"
+		]
+	},
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Goop Armor",
     "DESCRIPTIONS": [
-      "ターン終了時、スクラップウーズ再出現する"
+      "Whenever you consume Goop, gain ",
+      " Block."
     ]
   }
 }

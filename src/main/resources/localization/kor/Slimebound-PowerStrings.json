@@ -85,7 +85,11 @@
 		"DESCRIPTIONS": [
 			"매턴 처음에 공격할때마다 가장 오래된 슬라임도 공격합니다.",
 			"매턴 처음 공격",
-			" 회동안 공격할때마다 가장 오래된 슬라임도 공격합니다."
+			" 회동안 공격할때마다 가장 오래된 슬라임도 공격합니다.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
@@ -173,8 +177,14 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "폭식",
 		"DESCRIPTIONS": [
-			"핥기 카드가 ",
-			" 점액 을 추가로 부여합니다."
+			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			"The first .",
+			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
+
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -261,9 +271,13 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "꾿꾿히 견딤",
 		"DESCRIPTIONS": [
-			"다음번 내턴에 체력을 잃을때. 적이 대신 체력을 잃습니다",
-			"다음 ",
-			" 번 동안 내턴에 체력을 잃을때. 적이 대신 체력을 잃습니다."
+			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+			"The next ",
+			" times you would lose HP on your turn, an enemy takes that much damage instead.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -457,6 +471,37 @@
 		"NAME": "날붙이 수액 회복중",
 		"DESCRIPTIONS": [
 			"날붙이 수액이 턴이 끝날때 재생성됩니다."
+		]
+	},
+	"Slimebound:BuffSecondarySlimeEffectsPower": {
+		"NAME": "졸개 마스터",
+		"DESCRIPTIONS": [
+			"슬라임이 점액, 독, 방어도를 부여할때 ",
+			" 더 부여합니다."
+		]
+	},
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "방어적 태클",
+		"DESCRIPTIONS": [
+			"태클 카드를 사용할때 피해를 ",
+			" 덜 받습니다."
+		]
+	},
+	"Slimebound:NextTurnBlockAndGoopPower": {
+		"NAME": "반응성 점액",
+		"DESCRIPTIONS": [
+			"내 턴이 시작할때 방어도를 ",
+			" 얻고 무작위 적에게 점액을 ",
+			" 부여합니다.",
+			" 부여합니다.",
+			" 번 부여합니다."
+		]
+	},
+	"Slimebound:GoopArmorPower": {
+		"NAME": "Goop Armor",
+		"DESCRIPTIONS": [
+			"Whenever you consume Goop, gain ",
+			" Block."
 		]
 	}
 }

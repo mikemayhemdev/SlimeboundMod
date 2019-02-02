@@ -48,12 +48,12 @@ public class FlameTackle extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 15;
-        this.selfDamage = 5;
+        this.baseSelfDamage = this.selfDamage = 3;
         this.upgradeDamage = 3;
 
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         //this.exhaust = true;
-
+        this.upgradeSelfDamage(this.baseSelfDamage);
 
     }
 

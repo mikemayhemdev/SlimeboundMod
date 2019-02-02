@@ -32,11 +32,7 @@ public class ShieldSlime
 
     public void activateEffectUnique() {
 
-
-
-
         AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,false,false,0,false,this.debuffAmount + this.debuffBonusAmount,false));
-
 
     }
 

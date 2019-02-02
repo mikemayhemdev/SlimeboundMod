@@ -35,7 +35,7 @@ public class SlimeSpikes extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseBlock = 6;
+        this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 3;
     }
 

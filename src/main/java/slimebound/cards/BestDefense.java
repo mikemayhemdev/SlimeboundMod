@@ -12,44 +12,46 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SelfDamageSlimedPower;
+import slimebound.powers.TackleBuffPower;
+import slimebound.powers.TackleDebuffPower;
+import slimebound.powers.TackleSelfDamagePreventPower;
 
 
-public class StrayGoop extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:StrayGoop";
+public class BestDefense extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:BestDefense";
 
     private static final CardStrings cardStrings;
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/straygoop.png";
+    public static final String IMG_PATH = "cards/hardened.png";
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 1;
 
-    private static int upgradedamount = 1;
 
-    public StrayGoop() {
+    public BestDefense() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.slimed = this.baseSlimed = 2;
-        upgradeSlimed(0);
-
+        this.magicNumber = this.baseMagicNumber = 3;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfDamageSlimedPower(p, p, this.slimed), this.slimed));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleBuffPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleSelfDamagePreventPower(p, p, 1), 1));
+
     }
 
     public AbstractCard makeCopy() {
-        return new StrayGoop();
+        return new BestDefense();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeSlimed(1);
+            upgradeMagicNumber(2);
 
 
         }

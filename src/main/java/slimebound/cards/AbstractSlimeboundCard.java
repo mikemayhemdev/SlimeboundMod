@@ -25,9 +25,11 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
                 color, rarity, target);
     }
 
+    public int baseSelfDamage;
     public int selfDamage;
     public boolean upgradeSelfDamage;
     public boolean isSelfDamageModified;
+
     public int poison;
     public boolean upgradePoison;
     public boolean isPoisonModified;
@@ -36,6 +38,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     public int baseSlimed;
     public boolean isSlimedModified;
     public boolean upgradeSlimed;
+
 
     public boolean goopflashVfx;
 
@@ -50,6 +53,16 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         this.baseSlimed += amount;
         this.slimed = this.baseSlimed + SlimeboundMod.getGluttonyBonus(AbstractDungeon.player);
         if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
+    }
+
+    public void upgradeSelfDamage(int originalAmount) {
+        this.selfDamage = originalAmount + SlimeboundMod.getTackleSelfDamageBonus(AbstractDungeon.player);
+        if (this.selfDamage < 0) this.selfDamage = 0;
+        if (this.selfDamage < originalAmount) {
+                this.isSelfDamageModified = true;
+        } else {
+            this.isSelfDamageModified = false;
+        }
     }
 
 

@@ -2,7 +2,6 @@ package slimebound.cards;
 
 
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.BuffPoisonSlimesPower;
 
 
 public class SplitAcid extends AbstractSlimeboundCard {
@@ -23,7 +21,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/splittoxic.png";
 
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
@@ -36,11 +34,13 @@ public class SplitAcid extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffPoisonSlimesPower(p, p, 1), 1));
+        int bonus = 0;
+        if (upgraded) bonus = this.magicNumber;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, bonus));
 
     }
 

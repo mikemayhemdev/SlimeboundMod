@@ -86,5 +86,12 @@
     "DESCRIPTIONS": [
       "战斗开始时， 分裂 出1只 水蛭史莱姆 并获得1个史莱姆槽位。"
     ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "保护齿轮",
+    "FLAVOR": "进攻是最好的防守！",
+    "DESCRIPTIONS": [
+      "自身受到来自 冲撞 牌的伤害降低 1 点。"
+    ]
   }
 }

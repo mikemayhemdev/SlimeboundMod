@@ -2,9 +2,6 @@ package slimebound.cards;
 
 
 
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,18 +10,13 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.GangUpAction;
-import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.BuffAttackSlimesPower;
-
-import java.util.Random;
 
 
-public class GangUp extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:GangUp";
+public class zzzGangUp extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:zzzGangUp";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -40,7 +32,7 @@ public class GangUp extends AbstractSlimeboundCard {
     private static final int UPGRADE_BONUS = 3;
     public static boolean UpgradeCard;
 
-    public GangUp() {
+    public zzzGangUp() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
@@ -59,11 +51,12 @@ public class GangUp extends AbstractSlimeboundCard {
             p.getRelic(ChemicalX.ID).flash();
         }
 
+        if (energyOnUse > 0) com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.energyOnUse));
 
-               if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));
+         if (energyOnUse > 0) AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.energyOnUse -1,this.magicNumber,true));
 
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.magicNumber), this.magicNumber));
+            //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffAttackSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
             p.energy.use(EnergyPanel.totalCount);
 
@@ -79,7 +72,7 @@ public class GangUp extends AbstractSlimeboundCard {
     }
 
     public AbstractCard makeCopy() {
-        return new GangUp();
+        return new zzzGangUp();
     }
 
     public void upgrade() {

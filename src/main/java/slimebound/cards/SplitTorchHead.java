@@ -32,7 +32,7 @@ public class SplitTorchHead extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         tags.add(SlimeboundMod.STUDY_COLLECTOR);
         tags.add(SlimeboundMod.STUDY);
-
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
 
 
@@ -46,10 +46,10 @@ public class SplitTorchHead extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, true));
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, true));
-        }
+        int bonus = 0;
+        if (upgraded) bonus = this.magicNumber;
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.TorchHeadSlime(), false, true,bonus,0));
+
     }
 
     public AbstractCard makeCopy() {

@@ -21,7 +21,7 @@
         "slimed"
       ],
       "PROPERNAME": "점액",
-      "DESCRIPTION": "다음 공격 이 추가 피해를 입히고 점액 효과를 소모합니다, 그리고 소모한 점액의 절반을 회복합니다. 점액의 절반은 턴이 끝날때 없어집니다."
+      "DESCRIPTION": "다음 공격 이 추가 피해를 입히고 점액 효과를 소모합니다, 점액을 소모할때 체력 을 2 회복합니다. 점액의 절반은 턴이 끝날때 없어집니다."
     },
      {
       "NAMES": [
@@ -168,6 +168,34 @@
       ],
       "PROPERNAME": "첨탑 보스",
       "DESCRIPTION": "첨탑의 보스들에게서 영감을 얻은 강력한 0 코스트 카드들입니다."
-    }
+    },
+  {
+    "NAMES": [
+      "divide"
+    ],
+    "PROPERNAME": "Divide",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "conquer"
+    ],
+    "PROPERNAME": "Conquer",
+    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+  },
+  {
+    "NAMES": [
+      "serve"
+    ],
+    "PROPERNAME": "Serve",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "protect"
+    ],
+    "PROPERNAME": "Protect",
+    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
+  }
 
 ]

@@ -42,7 +42,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.slimed = this.baseSlimed = 4;
+        this.slimed = this.baseSlimed = 6;
         upgradeSlimed(0);
 
 
@@ -73,7 +73,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(2);
+            upgradeSlimed(3);
 
         }
 

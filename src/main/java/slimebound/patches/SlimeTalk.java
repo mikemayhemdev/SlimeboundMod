@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.relics.StudyCardRelic;
 
 @SpirePatch(clz=SlimeBoss.class,method="takeTurn")
 public class SlimeTalk {
@@ -18,7 +19,12 @@ public class SlimeTalk {
 
     public static void Prefix(SlimeBoss sb) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalked == false) {
-            AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[0], 1.0F, 2.0F));
+            if (AbstractDungeon.player.hasRelic(StudyCardRelic.ID)){
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[11], 1.0F, 2.0F));
+
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[0], 1.0F, 2.0F));
+            }
             SlimeboundMod.slimeTalked = true;
         }
     }

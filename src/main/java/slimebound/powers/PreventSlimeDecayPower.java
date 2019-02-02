@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -61,25 +62,14 @@ public class PreventSlimeDecayPower extends AbstractPower {
 
     }
 
-
-    public void atStartOfTurn() {
-
-        flash();
-
-        if (this.amount <= 1) {
-
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, PreventSlimeDecayPower.POWER_ID));
-
-        } else {
-
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, PreventSlimeDecayPower.POWER_ID, 1));
+    @Override
+    public void reducePower(int reduceAmount) {
+        super.reducePower(reduceAmount);
+        if (this.amount <= 0){
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
 
         }
-
-
     }
-
-
 }
 
 

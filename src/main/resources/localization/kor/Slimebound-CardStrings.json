@@ -10,7 +10,7 @@
 "Slimebound:SplitBronze": {
     "NAME": "분열: 청동",
     "DESCRIPTION": "청동_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "청동_슬라임 으로 두번 분열합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "청동_슬라임 으로 분열 합니다. 이 슬라임은 !M! 방어도를 더 부여하고 피해량이 !M! 증가합니다. NL 소멸."
   },
   "Slimebound:GangUp": {
     "NAME": "다구리",
@@ -26,32 +26,32 @@
 "Slimebound:SplitTorchHead": {
     "NAME": "분열: 붗꽃",
     "DESCRIPTION": "불꽃_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "불꽃_슬라임 으로 두번 분열 합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "불꽃_슬라임 으로 분열 합니다. NL 이 슬라임은 피해를 !M! 더 줍니다. NL 소멸."
   },
 "Slimebound:SplitBruiser": {
     "NAME": "분열: 싸움꾼",
     "DESCRIPTION": "싸움꾼_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 으로 분열 합니다. NL 이번 전투에서 싸움꾼_슬라임 의 피해량이 1 늘어납니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 으로 분열 합니다. NL 이 슬라임은 피해를 !M! 더 줍니다. NL 소멸."
   },
 "Slimebound:SplitCultist": {
     "NAME": "분열: 광신자",
     "DESCRIPTION": "광신자_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "광신자_슬라임 으로 두번 분열 합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "광신자_슬라임 으로 분열 합니다. NL 이 슬라임은 피해를 !M! 더 줍니다. NL 소멸."
   },
 "Slimebound:SplitLeeching": {
     "NAME": "분열: 거머리",
     "DESCRIPTION": "거머리_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "거머리_슬라임 으로 분열 합니다. NL 거머리_슬라임 이 이번 전투에서 1 방어도 를 더 제공합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "거머리_슬라임 으로 분열 합니다. NL 이 슬라임은 방어도 를 !M! 더 부여합니다. NL 소멸."
   },
 "Slimebound:SplitAcid": {
     "NAME": "분열: 산성",
     "DESCRIPTION": "산성_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "산성_슬라임 으로 분열 합니다. NL 산성_슬라임 이 이번 전투에서 1 중독 을 더 부여합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "산성_슬라임 으로 분열 합니다. NL 이 슬라임은 중독 을 !M! 더 부여합니다. NL 소멸."
   },
 "Slimebound:SplitMire": {
     "NAME": "분열: 진흙탕",
     "DESCRIPTION": "진흙탕_슬라임 으로 분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "진흙탕_슬라임 으로 분열합니다. NL 진흙탕_슬라임 이 이번 전투에서 1 점액 을 더 부여합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "진흙탕_슬라임 으로 분열합니다. NL 이 슬라임은 점액 을 !M! 더 부여합니다. NL 소멸."
   },
 "Slimebound:ProtectTheBoss": {
     "NAME": "두목을 지켜라",
@@ -87,13 +87,8 @@
   },
 "Slimebound:SuperSplit": {
     "NAME": "초 분열",
-    "DESCRIPTION": "슬라임 슬롯을 !M! 개 얻습니다. NL 무작위 슬라임 으로 네번 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 !M! 개 얻습니다. NL 무작위 슬라임 으로 네번 분열 합니다. NL 소멸."
-  },
-"Slimebound:DivideAndConquer": {
-    "NAME": "분할 & 정복",
-    "DESCRIPTION": "피해를 !D! 줍니다. 싸움꾼_슬라임 이나 산성_슬라임 으로 분열 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 싸움꾼_슬라임 과 산성_슬라임 으로 분열 합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 슬롯을 X 개 얻습니다. NL 무작위 슬라임 으로 X 번 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 X+1 개 얻습니다. NL 무작위 슬라임 으로 X+1 번 분열 합니다. NL 소멸."
   },
 "Slimebound:LeadByExample": {
     "NAME": "시범을 보여주지",
@@ -132,7 +127,7 @@
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "자가형성 점액",
-    "DESCRIPTION": "체력을 잃을때 마다, 다음턴에 방어도 를 !M! 얻습니다."
+    "DESCRIPTION": "체력을 잃을때 마다, 무작위 적에게 점액 을 !SlimeboundSlimed! 부여하고 다음턴에 방어도 를 !M! 얻습니다."
   },
 "Slimebound:SlimeSpikes": {
     "NAME": "슬라임 가시",
@@ -378,7 +373,7 @@
   },
 "Slimebound:RainOfGoop": {
     "NAME": "끈적이 비",
-    "DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다. NL 소멸.",
+    "DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다.",
     "UPGRADE_DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다."
   },
 "Slimebound:GoopSpray": {
@@ -510,7 +505,7 @@
   },
 "Slimebound:HeadSlam": {
     "NAME": "Head Slam",
-    "DESCRIPTION": "피해를 !D! 줍니다. Stun the enemy if they are not a Boss. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. 대상이 보스가 아니면 기절 시킵니다. NL 소멸."
   },
 "Slimebound:ManipulateTime": {
     "NAME": "시간 조작",
@@ -583,5 +578,42 @@
     "NAME": "시간포식자 연구",
     "DESCRIPTION": "다음 !M! 턴 동안 무작위 시간 포식자 카드를 1 장 얻습니다.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Time Eater card to your hand at the start of each turn."
+  },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "정복",
+    "DESCRIPTION": "피해를 !D! 줍니다. 생성된 슬라임 갯수당 !M! 피해를 추가로 줍니다. NL 소멸."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "분할",
+    "DESCRIPTION": "싸움꾼_슬라임 또는 산성_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 과 산성_슬라임 으로 분열 합니다. NL 소멸."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "분할 & 정복",
+    "DESCRIPTION": "분할, 정복 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 분할, 정복 카드를 얻습니다. NL 소멸."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "섬김 & 보호",
+    "DESCRIPTION": "섬김, 정복 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 섬김, 정복 카드를 얻습니다. NL 소멸."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "섬김",
+    "DESCRIPTION": "거머리_슬라임 또는 진흙탕_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "거머리_슬라임 과 진흙탕_슬라임 으로 분열 합니다. NL 소멸."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "보호",
+    "DESCRIPTION": "방어도를 !B! 얻습니다, 생성된 슬라임 갯수당 !M! 방어도를 추가로 얻습니다. NL 소멸."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "졸개 마스터",
+    "DESCRIPTION": "생성된 슬라임이 점액, 중독, 방어도 를 부여할때 1 더 부여합니다.",
+    "UPGRADE_DESCRIPTION": "잠재력 을 1 얻습니다. NL 생성된 슬라임이 점액, 중독, 방어도 를 부여할때 1 더 부여합니다."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "최고의 방어",
+    "DESCRIPTION": "태클 카드가 적에게 !M! 피해를 추가로 주고, 나에게 주는 피해는 1 감소합니다."
   }
 }

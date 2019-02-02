@@ -125,8 +125,6 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
         }
 
-
-
     }
 
     @Override

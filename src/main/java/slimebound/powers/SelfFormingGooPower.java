@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.TendrilFlailAction;
 
 
 public class SelfFormingGooPower extends AbstractPower {
@@ -50,9 +51,23 @@ public class SelfFormingGooPower extends AbstractPower {
 
     public void updateDescription() {
 
-
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-
+        if (this.amount == 1){
+            this.description = (
+                    DESCRIPTIONS[0] +
+                            this.amount +
+                            DESCRIPTIONS[1] +
+                            (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
+                            DESCRIPTIONS[2]);
+        } else {
+            this.description = (
+                    DESCRIPTIONS[0] +
+                            this.amount +
+                            DESCRIPTIONS[1] +
+                            (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
+                            DESCRIPTIONS[3] +
+                            this.amount +
+                            DESCRIPTIONS[4]);
+        }
 
     }
 
@@ -60,7 +75,7 @@ public class SelfFormingGooPower extends AbstractPower {
         if ((AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT) &&
                 (damageAmount > 0)) {
             flash();
-            AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new com.megacrit.cardcrawl.powers.NextTurnBlockPower(AbstractDungeon.player, this.amount, this.name), this.amount));
+            AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnBlockAndGoopPower(this.owner, this.owner, this.amount), this.amount));
         }
 
         return damageAmount;

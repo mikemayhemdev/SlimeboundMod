@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.ChemicalX;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
@@ -34,7 +36,7 @@ public class SuperSplit extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 2;
+    private static final int COST = -1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static boolean UpgradeCard;
@@ -42,26 +44,31 @@ public class SuperSplit extends AbstractSlimeboundCard {
     public SuperSplit() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 2;
-
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
         ArrayList<Integer> orbs = new ArrayList();
         orbs.add(1);
         orbs.add(2);
         orbs.add(3);
         orbs.add(4);
 
+        if (this.energyOnUse < EnergyPanel.totalCount) {
+            this.energyOnUse = EnergyPanel.totalCount;}
+        if (upgraded) this.energyOnUse++;
+        if (p.hasRelic(ChemicalX.ID)) {
+            this.energyOnUse += 2;
+            p.getRelic(ChemicalX.ID).flash();
+        }
+
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.energyOnUse));
 
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < this.energyOnUse; i++) {
             Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
             switch (o) {
@@ -80,7 +87,7 @@ public class SuperSplit extends AbstractSlimeboundCard {
             }
         }
 
-
+        p.energy.use(EnergyPanel.totalCount);
 
 
     }
@@ -99,8 +106,8 @@ public class SuperSplit extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }
