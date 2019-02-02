@@ -104,7 +104,7 @@
         "bronze_slime"
       ],
       "PROPERNAME": "Bronze Slime",
-      "DESCRIPTION": "Attacks for 6 and grants you 6 Block each turn."
+      "DESCRIPTION": "Attacks for 6 and grants you 4 Block each turn."
     },
     {
       "NAMES": [
@@ -162,7 +162,7 @@
       "conquer"
     ],
     "PROPERNAME": "Conquer",
-    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+    "DESCRIPTION": "1-cost Attack. NL Deal 10 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
   },
   {
     "NAMES": [
@@ -176,6 +176,6 @@
       "protect"
     ],
     "PROPERNAME": "Protect",
-    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
+    "DESCRIPTION": "1-cost Skill. NL Gain 8 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
   }
 ]

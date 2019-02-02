@@ -63,7 +63,8 @@ public class BuffSecondarySlimeEffectsPower extends AbstractPower {
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
                 SpawnedSlime s = (SpawnedSlime) o;
-                s.applyFocus();
+                s.applySecondaryBonus(this.amount);
+
             }
         }
     }
@@ -75,10 +76,33 @@ public class BuffSecondarySlimeEffectsPower extends AbstractPower {
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
                 SpawnedSlime s = (SpawnedSlime) o;
-                s.applyFocus();
+                s.applySecondaryBonus(stackAmount);
             }
         }
 
+    }
+
+    public void reducePower(int stackAmount) {
+        super.reducePower(stackAmount);
+
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
+                SpawnedSlime s = (SpawnedSlime) o;
+                s.applySecondaryBonus(-1 * stackAmount);
+            }
+        }
+    }
+
+    @Override
+    public void onRemove() {
+        super.onRemove();
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
+                SpawnedSlime s = (SpawnedSlime) o;
+                s.applySecondaryBonus(-1 * this.amount);
+
+            }
+        }
     }
 }
 

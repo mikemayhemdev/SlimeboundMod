@@ -308,7 +308,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
                 bonus += -1;
             }
             if (source.hasPower(TackleSelfDamagePreventPower.POWER_ID)) {
-                bonus -= source.getPower(TackleSelfDamagePreventPower.POWER_ID).amount;
+                bonus += source.getPower(TackleSelfDamagePreventPower.POWER_ID).amount;
             }
 
         }
@@ -405,7 +405,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         //BaseMod.addCard(new slimebound.cards.zzzMaxSlimes());
         BaseMod.addCard(new SlimeSpikes());
 
-        BaseMod.addCard(new SpikyOuterGoop());
+        BaseMod.addCard(new GoopArmor());
         BaseMod.addCard(new MassRepurpose());
         BaseMod.addCard(new DouseInSlime());
         BaseMod.addCard(new Chomp());
@@ -478,7 +478,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         //BaseMod.addCard(new zzzSlimepotheosis());
         BaseMod.addCard(new slimebound.cards.FinishingTackle());
         BaseMod.addCard(new QuickStudy());
-        BaseMod.addCard(new FirmFortitude());
+        BaseMod.addCard(new FeelOurPain());
         BaseMod.addCard(new Replication());
         BaseMod.addCard(new CheckThePlaybook());
         BaseMod.addCard(new TimeRipple());
@@ -544,7 +544,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
         UnlockTracker.unlockCard(StudyTheSpire.ID);
         UnlockTracker.unlockCard(SelfFormingGoo.ID);
         UnlockTracker.unlockCard(SlimeSpikes.ID);
-        UnlockTracker.unlockCard(SpikyOuterGoop.ID);
+        UnlockTracker.unlockCard(GoopArmor.ID);
         UnlockTracker.unlockCard(MassRepurpose.ID);
         UnlockTracker.unlockCard(DouseInSlime.ID);
         UnlockTracker.unlockCard(Chomp.ID);
@@ -556,7 +556,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
         UnlockTracker.unlockCard(LeechingTouch.ID);
         UnlockTracker.unlockCard(DuplicatedForm.ID);
-        UnlockTracker.unlockCard(FirmFortitude.ID);
+        UnlockTracker.unlockCard(FeelOurPain.ID);
         UnlockTracker.unlockCard(Dissolve.ID);
         UnlockTracker.unlockCard(RollThrough.ID);
         UnlockTracker.unlockCard(CorrosiveSpit.ID);

@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
@@ -43,12 +44,13 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
+        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
-        this.baseDamage = this.originalDamage = 10;
+        this.baseDamage = this.originalDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
         this.upgradeDamage = 2;
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 5;
 
         this.upgradeSelfDamage(this.baseSelfDamage);
 
@@ -73,8 +75,9 @@ public class VenomTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
-
+        if (m.hasPower(SlimedPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+        }
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
     }

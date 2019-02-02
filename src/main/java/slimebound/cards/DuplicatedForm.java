@@ -90,9 +90,14 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, 1), 1));
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p,  p.maxHealth / 2),  p.maxHealth / 2));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, 1), 1));
-        int MaxHPActuallyLost = this.magicNumber;
-        if (AbstractDungeon.player.maxHealth <= this.magicNumber) {
+
+        int stack = 1;
+        if (upgraded) stack++;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
+
+
+        int MaxHPActuallyLost = 15;
+        if (AbstractDungeon.player.maxHealth <= 15) {
             MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
         }
 
@@ -108,7 +113,9 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(-5);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

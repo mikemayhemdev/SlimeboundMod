@@ -36,7 +36,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 3;
+    private static final int COST = 2;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
@@ -47,7 +47,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.slimed = this.baseSlimed = 20;
+        this.slimed = this.baseSlimed = 12;
         upgradeSlimed(0);
 
 
@@ -78,7 +78,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(10);
+            upgradeSlimed(4);
 
         }
 

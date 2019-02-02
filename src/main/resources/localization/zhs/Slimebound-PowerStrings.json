@@ -85,7 +85,11 @@
 		"DESCRIPTIONS": [
 			"每回合打出的第1张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
 			"每回合打出的前 ",
-			" 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。"
+			" 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
@@ -176,8 +180,14 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "暴食",
 		"DESCRIPTIONS": [
-			"舔舐 牌额外提供 ",
-			" 层 黏液 。"
+			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			"The first .",
+			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
+
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -264,9 +274,13 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "感同身受",
 		"DESCRIPTIONS": [
-			"下次你将在自己的回合失去生命时，1个随机敌人代你承受。",
-			"下 ",
-			" 次你将在自己的回合失去生命时，1个随机敌人代你承受。"
+			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+			"The next ",
+			" times you would lose HP on your turn, an enemy takes that much damage instead.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -484,6 +498,13 @@
 			" 层 黏液 。",
 			" 层 黏液 ",
 			" 次。"
+		]
+	},
+	"Slimebound:GoopArmorPower": {
+		"NAME": "Goop Armor",
+		"DESCRIPTIONS": [
+			"Whenever you consume Goop, gain ",
+			" Block."
 		]
 	}
 }

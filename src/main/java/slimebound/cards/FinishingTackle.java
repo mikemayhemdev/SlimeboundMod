@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,6 +18,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.FinishingTackleAction;
 import slimebound.actions.ReturnRandom0Cost;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
@@ -45,10 +47,11 @@ public class FinishingTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         tags.add(SlimeboundMod.TACKLE);
+        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
-        this.baseDamage = this.originalDamage = 20;
+        this.baseDamage = this.originalDamage = 16;
         this.baseSelfDamage = this.selfDamage = 3;
-        this.upgradeDamage = 5;
+        this.upgradeDamage = 4;
 
         this.baseBlock = 10;
 
@@ -59,12 +62,13 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
-        AbstractDungeon.actionManager.addToBottom(new FinishingTackleAction(p,m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn),this.block));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-      //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
-        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+        if (m.hasPower(SlimedPower.POWER_ID)){
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+
+        }
 
     }
 

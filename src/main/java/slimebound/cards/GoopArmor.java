@@ -9,14 +9,15 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SelfFormingGooPower;
+import slimebound.powers.GoopArmorPower;
 
 
-public class SpikyOuterGoop extends AbstractSlimeboundCard {
+public class GoopArmor extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:SpikyOuterGoop";
 
     private static final CardStrings cardStrings;
@@ -31,27 +32,26 @@ public class SpikyOuterGoop extends AbstractSlimeboundCard {
 
     private static int upgradedamount = 2;
 
-    public SpikyOuterGoop() {
+    public GoopArmor() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
 
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber ), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GoopArmorPower(p, p, this.magicNumber ), this.magicNumber));
 
     }
 
     public AbstractCard makeCopy() {
-        return new SpikyOuterGoop();
+        return new GoopArmor();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
 
 
         }

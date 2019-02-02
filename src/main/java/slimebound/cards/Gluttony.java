@@ -32,7 +32,7 @@ public class Gluttony extends AbstractSlimeboundCard {
 
     public Gluttony() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+
 
 
     }
@@ -40,7 +40,7 @@ public class Gluttony extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GluttonyPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GluttonyPower(p, p, 1), 1));
 
 
     }
@@ -52,8 +52,10 @@ public class Gluttony extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.isInnate = true;
 
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
     }

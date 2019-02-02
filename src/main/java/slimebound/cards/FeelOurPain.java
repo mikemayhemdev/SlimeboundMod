@@ -9,13 +9,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RegenPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.FirmFortitudePower;
 
 
-public class FirmFortitude extends AbstractSlimeboundCard {
+public class FeelOurPain extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:FirmFortitude";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -24,39 +23,41 @@ public class FirmFortitude extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/firmfortitude.png";
 
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
-    public FirmFortitude() {
+    public FeelOurPain() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
         //this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FirmFortitudePower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FirmFortitudePower(p, 1),1));
 
 
     }
 
     public AbstractCard makeCopy() {
-        return new FirmFortitude();
+        return new FeelOurPain();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.isInnate = true;
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

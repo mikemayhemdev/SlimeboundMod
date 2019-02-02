@@ -85,7 +85,11 @@
     "DESCRIPTIONS": [
       "毎ターン最初に攻撃すると一番古いスライムも攻撃する。",
       "毎ターン、初めの",
-      " 回の攻撃のとき、一番古いスライムも攻撃する。"
+      " 回の攻撃のとき、一番古いスライムも攻撃する。",
+      " NL This effect can be triggered ",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
     ]
   },
   "Slimebound:RetainCardsOneTurnPower": {
@@ -176,8 +180,14 @@
   "Slimebound:GluttonyPower": {
     "NAME": "大食い",
     "DESCRIPTIONS": [
-      "リックカードは",
-      " 多くの粘液を与える。"
+      "The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+      "The first .",
+      " times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+      " NL This effect can be triggered ",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+
     ]
   },
   "Slimebound:GluttonyPowerUpgraded": {
@@ -264,9 +274,13 @@
   "Slimebound:FirmFortitudePower": {
     "NAME": "痛みを感じろ",
     "DESCRIPTIONS": [
-      "次に自分のターンにHPを失うとき、代わりに敵がその分多くのダメージを受ける。",
-      "次の",
-      " 回、自分のターンにHPを失うとき、代わりに敵がその分多くのダメージを受ける。"
+      "The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+      "The next ",
+      " times you would lose HP on your turn, an enemy takes that much damage instead.",
+      " NL This effect can be triggered ",
+      " more times this turn.",
+      " more time this turn.",
+      " This effect cannot be triggered again this turn."
     ]
   },
   "Slimebound:NextTurnGainStrengthPower": {
@@ -485,5 +499,12 @@
 			" をランダムな敵に ",
 			" 回与える。"
 		]
-	}
+	},
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Goop Armor",
+    "DESCRIPTIONS": [
+      "Whenever you consume Goop, gain ",
+      " Block."
+    ]
+  }
 }

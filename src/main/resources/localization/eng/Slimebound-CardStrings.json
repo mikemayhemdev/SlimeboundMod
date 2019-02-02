@@ -57,8 +57,8 @@
 },
 "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
-    "DESCRIPTION": "The first Attack you play each turn also causes your oldest slime to Attack.",
-    "UPGRADE_DESCRIPTION": "The first !M! Attacks you play each turn also cause your oldest slime to Attack."
+    "DESCRIPTION": "The first card you play each turn that targets enemies also causes your oldest slime to Attack.",
+    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also cause your oldest slime to Attack."
   },
   "Slimebound:SlimeTap": {
       "NAME": "Slime Tap",
@@ -87,8 +87,8 @@
     "DESCRIPTION": "Play and Exhaust the top card of your draw pile. Repeat for each of your spawned Slimes. NL Exhaust."
   },
 "Slimebound:SpikyOuterGoop": {
-    "NAME": "Spiky Outer Goop",
-    "DESCRIPTION": "Gain !M! Thorns and !M! Plated_Armor."
+    "NAME": "Goop Armor",
+    "DESCRIPTION": "Gain !M! Block whenever you Attack an enemy who has Goop."
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
@@ -109,7 +109,7 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first 2 cards you play each turn that targets enemies are played twice.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
   "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
   "EXTENDED_DESCRIPTION": [
       "Need... Health..."
@@ -200,13 +200,13 @@
   },
 "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "Lick cards apply !M! additional Goop.",
-    "UPGRADE_DESCRIPTION": "The first card containing Lick you play each turn adds 2 random Lick cards to your hand."
+    "DESCRIPTION": "The first time you consume Goop each turn, add a random Lick card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you consume Goop each turn, add a random Lick card to your hand."
   },
 "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. If the enemy was Gooped, trigger your oldest slime's attack.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy was Gooped, trigger your oldest slime's attack twice."
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Goop, trigger your oldest slime's attack.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has Goop, trigger your oldest slime's attack twice."
   },
 "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
@@ -242,7 +242,9 @@
 },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
-    "DESCRIPTION": "The next !M! times you would lose HP on YOUR turn, an enemy takes that much damage instead."
+    "DESCRIPTION": "The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
+
   },
 "Slimebound:AccelerateToxins": {
     "NAME": "Accelerate Toxins",
@@ -263,13 +265,12 @@
   },
 "Slimebound:Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
   },
 "Slimebound:Grow": {
     "NAME": "Grow",
-    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity. NL Reduce this card's cost by 1."
+    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and 1 Dexterity."
   },
 "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
@@ -278,7 +279,7 @@
   },
 "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL If this kills an enemy, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. If the enemy has Goop, gain !B! Block."
   },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "Slimesplosion",
@@ -317,7 +318,7 @@
   },
 "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Goop will not decay on the enemy this turn."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL The next time an Attack is used on this enemy, Goop benefits will apply without consuming Goop."
   },
 "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
@@ -325,7 +326,7 @@
   },
 "Slimebound:VenomTackle": {
     "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. Apply !M! Poison if the enemy has Goop."
   },
 "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
@@ -605,7 +606,7 @@
     "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
   },
   "Slimebound:BestDefense": {
-    "NAME": "The Best Defense",
-    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 less damage to you."
+    "NAME": "Recklessness",
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 more damage to you."
   }
 }

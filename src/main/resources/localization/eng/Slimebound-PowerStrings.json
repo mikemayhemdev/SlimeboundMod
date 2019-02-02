@@ -85,7 +85,11 @@
 		"DESCRIPTIONS": [
 			"The first Attack you play each turn causes your oldest slime to also attack.",
 			"The first ",
-			" Attacks you play each turn causes your oldest slime to also attack."
+			" Attacks you play each turn causes your oldest slime to also attack.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
@@ -146,9 +150,9 @@
 	"Slimebound:PreventSlimeDecayPower": {
 		"NAME": "Doused in Slime",
 		"DESCRIPTIONS": [
-			"Goop will not decay this turn.",
-			"Goop will not decay for the next ",
-			" turns."
+			"The next time an Attack is used on this enemy, Goop benefits will apply without consuming Goop.",
+			"The next ",
+			" times an Attack is used on this enemy, Goop benefits will apply without consuming Goop."
 		]
 	},
 	"Slimebound:DuplicatedFormPower": {
@@ -176,8 +180,14 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "Gluttony",
 		"DESCRIPTIONS": [
-			"Lick cards apply ",
-			" more Goop."
+			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			"The first .",
+			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
+
 		]
 	},
 	"Slimebound:GluttonyPowerUpgraded": {
@@ -266,7 +276,12 @@
 		"DESCRIPTIONS": [
 			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
 			"The next ",
-			" times you would lose HP on your turn, an enemy takes that much damage instead."
+			" times you would lose HP on your turn, an enemy takes that much damage instead.",
+			" NL This effect can be triggered ",
+			" more times this turn.",
+			" more time this turn.",
+			" NL This effect cannot be triggered again this turn."
+
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -470,10 +485,10 @@
 		]
 	},
 	"Slimebound:TackleSelfDamagePreventPower": {
-		"NAME": "Defensive Tackle",
+		"NAME": "Reckless",
 		"DESCRIPTIONS": [
 			"Cards containing Tackle deal ",
-			" less damage to you."
+			" more damage to you."
 		]
 	},
 	"Slimebound:NextTurnBlockAndGoopPower": {
@@ -484,6 +499,13 @@
 			" Goop to a random enemy.",
 			" Goop to a random enemy ",
 			" times."
+		]
+	},
+	"Slimebound:GoopArmorPower": {
+		"NAME": "Goop Armor",
+		"DESCRIPTIONS": [
+			"Whenever you Attack an enemy who has Goop, gain ",
+			" Block."
 		]
 	}
 }
