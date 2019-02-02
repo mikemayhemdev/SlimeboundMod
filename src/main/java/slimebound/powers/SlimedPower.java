@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,7 +30,6 @@ public class SlimedPower extends AbstractPower {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
-    public boolean triggered = false;
 
 
     public SlimedPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -86,19 +86,11 @@ public class SlimedPower extends AbstractPower {
 
     public void atStartOfTurn() {
 
-        if (!this.owner.hasPower(PreventSlimeDecayPower.POWER_ID)) {
-            if (this.amount <= 1) {
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, SlimedPower.POWER_ID, this.amount / 2));
 
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, SlimedPower.POWER_ID));
-                SlimeboundMod.checkForEndGoopCardVFX();
-            } else {
-
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, SlimedPower.POWER_ID, this.amount / 2));
-
-            }
         }
 
-    }
+
 
 
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
@@ -116,9 +108,7 @@ public class SlimedPower extends AbstractPower {
 
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (!this.triggered) {
             if (info.type == DamageInfo.DamageType.NORMAL) {
-                this.triggered = true;
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 2));
                 if (this.source.hasPower(GoopArmorPower.POWER_ID)){
                     AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, this.source.getPower(GoopArmorPower.POWER_ID).amount));
@@ -130,7 +120,7 @@ public class SlimedPower extends AbstractPower {
                    // AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, this.amount / 2));
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this.owner.getPower(PreventSlimeDecayPower.POWER_ID), 1));
                 } else {
-                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, SlimedPower.POWER_ID));
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 }
 
                 if (this.source.hasPower(GluttonyPower.POWER_ID)){
@@ -138,10 +128,6 @@ public class SlimedPower extends AbstractPower {
                     }
                 }
 
-
-
-
-        }
         return super.onAttacked(info, damageAmount);
     }
 

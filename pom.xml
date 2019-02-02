@@ -3,11 +3,7 @@
 
     <groupId>slimebound</groupId>
     <artifactId>slimebound</artifactId>
-<<<<<<< HEAD
-    <version>v1.4.11</version>
-=======
     <version>v2.1.0</version>
->>>>>>> BigUpdate
     <packaging>jar</packaging>
 
     <name>Slimebound Mod</name>
