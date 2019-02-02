@@ -83,13 +83,13 @@
 	"Slimebound:ComboAttackPower": {
 		"NAME": "시범을 보여주지",
 		"DESCRIPTIONS": [
-			"매턴 처음에 공격할때마다 가장 오래된 슬라임도 공격합니다.",
-			"매턴 처음 공격",
-			" 회동안 공격할때마다 가장 오래된 슬라임도 공격합니다.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" NL This effect cannot be triggered again this turn."
+			"매턴 처음으로 적을 대상으로 카드를 사용하면 가장 오래된 슬라임도 공격합니다.",
+			"매턴 처음 ",
+			" 회동안 적을 대상으로 카드를 사용하면 가장 오래된 슬라임도 공격합니다.",
+			" NL 이 효과가 이번턴에 ",
+			" 번 발동 가능합니다.",
+			" 번 발동 가능합니다.",
+			" NL 이번턴에 더이상 발동하지 않습니다."
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
@@ -147,9 +147,9 @@
 	"Slimebound:PreventSlimeDecayPower": {
 		"NAME": "점액에 처박힘",
 		"DESCRIPTIONS": [
-			"점액이 이번턴에 반감되지 않습니다.",
+			"다음에 공격받아도 점액이 소모되지 않습니다.",
 			"다음 ",
-			" 턴 동안 점액이 반감되지 않습니다."
+			" 번 공격받아도 점액이 소모되지 않습니다."
 		]
 	},
 	"Slimebound:DuplicatedFormPower": {
@@ -177,13 +177,13 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "폭식",
 		"DESCRIPTIONS": [
-			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-			"The first .",
-			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" NL This effect cannot be triggered again this turn."
+			"매턴 처음으로 점액이 적용된 상대를 공격하면 무작위 핥기 카드를 얻습니다.",
+			"매턴 처음 ",
+			" 번 점액이 적용된 상대를 공격하면 무작위 핥기 카드를 얻습니다.",
+			" NL 이 효과가 이번턴에 ",
+			" 번 발동 가능합니다.",
+			" 번 발동 가능합니다.",
+			" NL 이번턴에 더이상 발동하지 않습니다."
 
 		]
 	},
@@ -484,7 +484,7 @@
 		"NAME": "방어적 태클",
 		"DESCRIPTIONS": [
 			"태클 카드를 사용할때 피해를 ",
-			" 덜 받습니다."
+			" 더 받습니다."
 		]
 	},
 	"Slimebound:NextTurnBlockAndGoopPower": {
@@ -500,8 +500,8 @@
 	"Slimebound:GoopArmorPower": {
 		"NAME": "Goop Armor",
 		"DESCRIPTIONS": [
-			"Whenever you consume Goop, gain ",
-			" Block."
+			"점액 을 흡수 할때 마다 방어도 를 ",
+			" 얻습니다."
 		]
 	}
 }
