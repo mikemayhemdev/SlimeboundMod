@@ -57,15 +57,15 @@
   },
 "Slimebound:LeadByExample": {
     "NAME": "身先士卒",
-    "DESCRIPTION": "每回合打出的第1张攻击牌会使最早 分裂 出的史莱姆发起攻击。",
-    "UPGRADE_DESCRIPTION": "每回合打出的前 !M! 张攻击牌会使最早 分裂 出的史莱姆发起攻击。"
+    "DESCRIPTION": "每回合打出的第1张目标为敌人的牌会使最早 分裂 出的史莱姆发起攻击。",
+    "UPGRADE_DESCRIPTION": "每回合打出的前 !M! 张目标为敌人的牌会使最早 分裂 出的史莱姆发起攻击。"
   },
   "Slimebound:SlimeTap": {
     "NAME": "污泥回用",
     "DESCRIPTION": "吸收 最早分裂出的史莱姆。获得 [E] [E] 并抽 !M! 张牌。 NL 消耗",
     "UPGRADE_DESCRIPTION": "吸收 最早分裂出的2只史莱姆。每吸收1只获得 [E] [E] 并抽2张牌。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
-      "需要……黏液……"
+      "需要……史莱姆……"
     ]
   },
 "Slimebound:Teamwork": {
@@ -88,7 +88,7 @@
   },
 "Slimebound:SpikyOuterGoop": {
     "NAME": "带刺芽孢",
-    "DESCRIPTION": "获得 !M! 点 荆棘 和 !M! 层 多层护甲 。"
+    "DESCRIPTION": "每当你攻击一个拥有 黏液 的敌人时，获得 !M! 点 格挡 。"
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "自成型黏液",
@@ -110,7 +110,7 @@
 "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
     "DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] 。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
-    "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] 。 NL 每回合你使用的前2张目标为敌人的牌将打出2次。",
+    "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] [E] 。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
     "EXTENDED_DESCRIPTION": [
         "需要... 生命..."
       ]
@@ -200,8 +200,8 @@
   },
 "Slimebound:Gluttony": {
     "NAME": "暴食",
-    "DESCRIPTION": "舔舐 牌提供额外 !M! 层 黏液 。",
-    "UPGRADE_DESCRIPTION": "每个回合你第1次使用 舔舐 牌时，将2张随机 舔舐 牌加入手牌。"
+    "DESCRIPTION": "每当你消耗掉敌人身上的 黏液 时，将一张随机 舔舐 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。每当你消耗掉敌人身上的 黏液 时，将一张随机 舔舐 牌加入手牌。"
   },
 "Slimebound:PressTheAttack": {
     "NAME": "强攻",
@@ -242,7 +242,9 @@
 },
   "Slimebound:FirmFortitude": {
     "NAME": "感同身受",
-    "DESCRIPTION": "下 !M! 次在你的回合将要失去生命时，一个随机敌人代你承受。"
+    "DESCRIPTION": "在你的每个回合，第一次将要失去生命时，一个随机敌人代你承受。",
+    "UPGRADE_DESCRIPTION": "固有 。在你的每个回合，第一次将要失去生命时，一个随机敌人代你承受。"
+
   },
 "Slimebound:AccelerateToxins": {
     "NAME": "毒性加速",
@@ -263,13 +265,12 @@
   },
 "Slimebound:Prepare": {
     "NAME": "伺机待发",
-    "DESCRIPTION": "下个回合获得 [E] [E] 并抽 !M! 张牌。 NL 消耗",
+    "DESCRIPTION": "获得 !B! 格挡 。下个回合获得 [E] [E] 并抽 !M! 张牌。 NL 消耗",
     "UPGRADE_DESCRIPTION": "下个回合获得 [E] [E] 并抽 !M! 张牌。 本回合 保留 至多 !M!  张牌。 消耗"
   },
 "Slimebound:Grow": {
     "NAME": "生长",
-    "DESCRIPTION": "失去1个史莱姆槽位，获得 !M! 点 力量 和 !M! 点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "失去1个史莱姆槽位，获得 !M! 点 力量 和 !M! 点 敏捷 。 NL 这张牌的耗能减少1。"
+    "DESCRIPTION": "失去1个史莱姆槽位，获得 !M! 点 力量 和 1 点 敏捷 。"
   },
 "Slimebound:HungryTackle": {
     "NAME": "饥饿冲撞",
@@ -278,7 +279,7 @@
   },
 "Slimebound:FinishingTackle": {
     "NAME": "最终冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成 !SlimeboundSelfharm! 点伤害。 NL 如果这张牌杀死敌人，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成 !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，获得 !B! 点 格挡 。"
   },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "黏液爆破",
@@ -317,7 +318,7 @@
   },
 "Slimebound:DouseInSlime": {
     "NAME": "浸入黏液",
-    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 本回合敌人的 黏液 层数不会减少。"
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 下次对这个目标的攻击不会消耗 黏液 。"
   },
 "Slimebound:FlameTackle": {
     "NAME": "烈焰冲撞",
@@ -325,7 +326,7 @@
   },
 "Slimebound:VenomTackle": {
     "NAME": "毒液冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 给予 !M! 层 中毒 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，给予 !M! 层 中毒 。"
   },
 "Slimebound:UsefulSlime": {
     "NAME": "实用黏液",
@@ -605,7 +606,7 @@
     "UPGRADE_DESCRIPTION": "获得 1 点 潜力 。每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。"
   },
   "Slimebound:BestDefense": {
-    "NAME": "最佳防御",
-    "DESCRIPTION": "冲撞 牌对敌人额外造成 !M! 点伤害，对自己造成的伤害减少 1 点。"
+    "NAME": "鲁莽",
+    "DESCRIPTION": "冲撞 牌对敌人额外造成 !M! 点伤害，对自己额外造成 1 点伤害。"
   }
 }
