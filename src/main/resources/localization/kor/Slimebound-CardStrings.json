@@ -92,8 +92,8 @@
   },
 "Slimebound:LeadByExample": {
     "NAME": "시범을 보여주지",
-    "DESCRIPTION": "매턴 첫번째 공격을 하면 가장 오래된 슬라임도 따라 공격 합니다.",
-    "UPGRADE_DESCRIPTION": "매턴 처음 !M! 번째 공격을 하면 가장 오래된 슬라임도 따라 공격 합니다."
+    "DESCRIPTION": "매턴 첫번째로 적을 대상으로 카드를 사용하면 가장 오래된 슬라임도 따라 공격 합니다.",
+    "UPGRADE_DESCRIPTION": "매턴 처음 !M! 번째로 적을 대상으로 카드를 사용하면 가장 오래된 슬라임도 따라 공격 합니다."
   },
   "Slimebound:SlimeTap": {
       "NAME": "슬라임 회수",
@@ -122,8 +122,8 @@
     "DESCRIPTION": "뽑을 카드 더미 맨 위의 카드를 사용한 뒤 소멸시킵니다. 슬라임 부하 수 만큼 반복합니다. NL 소멸."
   },
 "Slimebound:SpikyOuterGoop": {
-    "NAME": "뾰족한 외부 끈적이",
-    "DESCRIPTION": "가시 를 !M! 얻고 !M! 판금 갑옷 을 얻습니다."
+    "NAME": "끈적이 갑옷",
+    "DESCRIPTION": "점액 이 적용된 상대를 공격하면 !M! 방어도 를 얻습니다."
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "자가형성 점액",
@@ -149,7 +149,7 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "형상 복제",
-    "UPGRADE_DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음과 두번째 적에게 사용하는 카드가 두번 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] [E] 를 얻습니다. NL 매턴 처음과 두번째 적에게 사용하는 카드가 두번 사용됩니다.",
   "DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
   "EXTENDED_DESCRIPTION": [
       "너무.. 건강헤..."
@@ -240,8 +240,8 @@
   },
 "Slimebound:Gluttony": {
     "NAME": "폭식",
-    "DESCRIPTION": "핥기 카드가 추가로 !M! 점액 을 부여합니다.",
-    "UPGRADE_DESCRIPTION": "매턴 처음으로 핥기 계열 카드를 플레이 할때마다 다른 핥기 계열 카드를 2 장 얻습니다."
+    "DESCRIPTION": "매턴 처음으로 점액 이 적용된 적을 공격할때 마다 무작위 핥기 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. 매턴 처음으로 점액 이 적용된 적을 공격할때 마다 무작위 핥기 카드를 얻습니다."
   },
 "Slimebound:PressTheAttack": {
     "NAME": "계속 공격해",
@@ -282,7 +282,9 @@
 },
   "Slimebound:FirmFortitude": {
     "NAME": "내 고통을 느껴라",
-    "DESCRIPTION": "내 턴에 체력을 잃을때 적이 체력을 대신 잃습니다. !M! 번 지속."
+    "DESCRIPTION": "처음으로 내 턴에 체력을 잃을때 적이 체력을 대신 잃습니다.",
+	"UPGRADE_DESCRIPTION": "선천성. NL 처음으로 내 턴에 체력을 잃을때 적이 체력을 대신 잃습니다."
+	
   },
 "Slimebound:AccelerateToxins": {
     "NAME": "맹독 가속",
@@ -303,13 +305,12 @@
   },
 "Slimebound:Prepare": {
     "NAME": "준비",
-    "DESCRIPTION": "다음턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "다음턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 보존 합니다. 소멸."
   },
 "Slimebound:Grow": {
     "NAME": "성장",
-    "DESCRIPTION": "슬라임 슬롯을 1 개 잃고 힘 !M! 과 민첩 !M! 을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 1 개 잃고 힘 !M! 과 민첩 !M! 을 얻습니다. NL 이 카드의 비용이 1 감소합니다."
+    "DESCRIPTION": "슬라임 슬롯을 1 개 잃고 힘 !M! 과 민첩 1 을 얻습니다."    
   },
 "Slimebound:HungryTackle": {
     "NAME": "굶주린 태클",
@@ -318,7 +319,7 @@
   },
 "Slimebound:FinishingTackle": {
     "NAME": "끝내기 태클",
-    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 적을 해치우면, 방어도 를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 적이 점액 상태이면 방어도 를 !B! 얻습니다."
   },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "점액 폭발",
@@ -357,7 +358,7 @@
   },
 "Slimebound:DouseInSlime": {
     "NAME": "점액에 처박기",
-    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 적의 점액 이 이번턴이 끝날때 반감되지 않습니다."
+    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 다음번에 그 적을 공격해도 점액이 소모되지 않습니다."
   },
 "Slimebound:FlameTackle": {
     "NAME": "화염 태클",
@@ -365,7 +366,7 @@
   },
 "Slimebound:VenomTackle": {
     "NAME": "맹독 태클",
-    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 중독 을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 적이 점액 상태이면 중독 을 !M! 부여합니다."
   },
 "Slimebound:UsefulSlime": {
     "NAME": "쓸만한 점액이군!",
@@ -613,7 +614,7 @@
     "UPGRADE_DESCRIPTION": "잠재력 을 1 얻습니다. NL 생성된 슬라임이 점액, 중독, 방어도 를 부여할때 1 더 부여합니다."
   },
   "Slimebound:BestDefense": {
-    "NAME": "최고의 방어",
-    "DESCRIPTION": "태클 카드가 적에게 !M! 피해를 추가로 주고, 나에게 주는 피해는 1 감소합니다."
+    "NAME": "무모함",
+    "DESCRIPTION": "태클 카드가 적에게 !M! 피해를 추가로 주고, 나에게 주는 피해도 1 감소합니다."
   }
 }
