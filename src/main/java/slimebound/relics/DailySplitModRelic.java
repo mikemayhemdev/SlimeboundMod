@@ -33,8 +33,6 @@ public class DailySplitModRelic extends CustomRelic {
 
     public void atBattleStart() {
 
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(AllSplit.ID)) {
-            //logger.info("Daily Mod detecthed");
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                 if (m.id != AcidSlime_L.ID && m.id != SpikeSlime_L.ID && m.id != SlimeBoss.ID)
                     //logger.info("Daily Mod adding buff to " + m.name);
@@ -43,8 +41,6 @@ public class DailySplitModRelic extends CustomRelic {
 
             }
 
-
-        }
     }
 
 

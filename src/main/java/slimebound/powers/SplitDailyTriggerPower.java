@@ -1,6 +1,7 @@
 
 package slimebound.powers;
 
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.animations.AnimateShakeAction;
@@ -28,6 +29,9 @@ import com.megacrit.cardcrawl.monsters.exordium.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import slimebound.SlimeboundMod;
+import slimebound.monsters.AcidSlimeLDailyMod;
+import slimebound.monsters.SlimeBossDailyMod;
+import slimebound.monsters.SpikeSlimeLDailyMod;
 
 import java.lang.reflect.Field;
 
@@ -132,13 +136,13 @@ public class SplitDailyTriggerPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini1, false));
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini2, false));
             } else if (m.currentHealth < 80) {
-                AbstractMonster mini1 = new AcidSlime_L(saveX - 100F, -4F, 0,m.currentHealth);
+                AbstractMonster mini1 = new AcidSlimeLDailyMod(saveX - 100F, -4F, 0,m.currentHealth);
 
                 mini1.drawX = m.drawX +100F;
 
                 mini1.usePreBattleAction();
                 mini1.useUniversalPreBattleAction();
-                AbstractMonster mini2 = new SpikeSlime_L(saveX + 100F, 4F, 0,m.currentHealth);
+                AbstractMonster mini2 = new SpikeSlimeLDailyMod(saveX + 100F, 4F, 0,m.currentHealth);
 
                 mini2.drawX = m.drawX -100F;
                 mini2.usePreBattleAction();
@@ -147,17 +151,17 @@ public class SplitDailyTriggerPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini1, false));
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini2, false));
             } else {
-                AbstractMonster boss1 = new SlimeBoss();
+                AbstractMonster boss1 = new SlimeBossDailyMod();
                // boss1.hb_x = saveX + 134.0F;
-                boss1.drawX = m.drawX + 134.0F;
+                boss1.drawX = m.drawX + 164.0F;
                 boss1.maxHealth = m.currentHealth;
                 boss1.currentHealth = m.currentHealth;
 
                 boss1.usePreBattleAction();
                 boss1.useUniversalPreBattleAction();
-                AbstractMonster boss2 = new SlimeBoss();
+                AbstractMonster boss2 = new SlimeBossDailyMod();
                 //boss2.hb_x = saveX - 134.0F;
-                boss2.drawX = m.drawX - 134.0F;
+                boss2.drawX = m.drawX - 164.0F;
                 boss2.maxHealth = m.currentHealth;
                 boss2.currentHealth = m.currentHealth;
 

@@ -113,8 +113,11 @@
 	"Slimebound:SelfFormingGooPower": {
 		"NAME": "自成型黏液",
 		"DESCRIPTIONS": [
-			"每當你失去生命時，獲得 ",
-			" 點 格擋"
+			"Whenever you lose HP, at the start of your next turn, gain ",
+			" Block and apply ",
+			" Goop to a random enemy.",
+			" Goop to a random enemy ",
+			" times."
 		]
 	},
 	"Slimebound:LoseSlimesPower": {

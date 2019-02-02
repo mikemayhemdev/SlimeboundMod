@@ -38,7 +38,7 @@ public class SlimedPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 10 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+        return 15 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
     }
 }
 
