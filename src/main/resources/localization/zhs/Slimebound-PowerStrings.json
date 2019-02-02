@@ -86,10 +86,10 @@
 			"每回合打出的第1张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
 			"每回合打出的前 ",
 			" 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" NL This effect cannot be triggered again this turn."
+			" NL 本回合还能触发 ",
+			" 次。",
+			" 次。",
+			" NL 本回合不能再触发了。"
 		]
 	},
 	"Slimebound:RetainCardsOneTurnPower": {
@@ -150,9 +150,9 @@
 	"Slimebound:PreventSlimeDecayPower": {
 		"NAME": "浸入黏液",
 		"DESCRIPTIONS": [
-			"本回合黏液层数不会减少。",
-			"接下来的 ",
-			" 回合，黏液层数不会减少。"
+			"下 ",
+			"下 ",
+			" 次对该目标发动攻击时， 黏液 不会被消耗。"
 		]
 	},
 	"Slimebound:DuplicatedFormPower": {
@@ -180,13 +180,13 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "暴食",
 		"DESCRIPTIONS": [
-			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-			"The first .",
-			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" NL This effect cannot be triggered again this turn."
+			"每回合第 1 次对具有 黏液 的敌人发动攻击时，将一张随机 舔舐 牌加入手牌。",
+			"每回合前 ",
+			" 次对具有 黏液 的敌人发动攻击时，将一张随机 舔舐 牌加入手牌。",
+			" NL 本回合还能触发 ",
+			" 次。",
+			" 次。",
+			" NL 本回合不能再触发了。"
 
 		]
 	},
@@ -274,13 +274,13 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "感同身受",
 		"DESCRIPTIONS": [
-			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
-			"The next ",
-			" times you would lose HP on your turn, an enemy takes that much damage instead.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" This effect cannot be triggered again this turn."
+			"在你的这个回合，下 1 次即将失去生命时，一个随机的敌人代你承受。",
+			"在你的这个回合，下 ",
+			" 次即将失去生命时，一个随机的敌人代你承受。",
+			" NL 本回合还能触发 ",
+			" 次。",
+			" 次。",
+			" 本回合不能再触发了。"
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -484,9 +484,9 @@
 		]
 	},
 	"Slimebound:TackleSelfDamagePreventPower": {
-		"NAME": "防御型冲撞",
+		"NAME": "鲁莽",
 		"DESCRIPTIONS": [
-			"冲撞 牌对自身造成的伤害减少 ",
+			"冲撞 牌对自身造成的伤害提高 ",
 			" 点。"
 		]
 	},
@@ -501,10 +501,10 @@
 		]
 	},
 	"Slimebound:GoopArmorPower": {
-		"NAME": "Goop Armor",
+		"NAME": "黏液护甲",
 		"DESCRIPTIONS": [
-			"Whenever you consume Goop, gain ",
-			" Block."
+			"每当你消耗 黏液 时，获得 ",
+			" 点 格挡 。"
 		]
 	}
 }
