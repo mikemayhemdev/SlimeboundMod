@@ -75,7 +75,7 @@ public class ComboAttackPower extends TwoAmountPower {
     public void onAfterCardPlayed(AbstractCard usedCard) {
         super.onAfterCardPlayed(usedCard);
         if (usedCard.target == AbstractCard.CardTarget.ENEMY || usedCard.target == AbstractCard.CardTarget.ALL_ENEMY){
-            if(this.amount > 0){
+            if(this.amount2 > 0){
                 if (AbstractDungeon.player.orbs.get(0) != null);{
                     flash();
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(AbstractDungeon.player.orbs.get(0)));
