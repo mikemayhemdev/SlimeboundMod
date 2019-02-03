@@ -242,9 +242,8 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "痛みを感じろ",
-    "DESCRIPTION": "次の !M! 回の自分のターンのHPを失うダメージは、代わりに相手が多くのダメージを受ける。"
-	"UPGRADE_DESCRIPTION": "天賦 。 NL 次の !M! 回の自分のターンのHPを失うダメージは、代わりに相手が多くのダメージを受ける。"
-	
+    "DESCRIPTION": "次の !M! 回の自分のターンのHPを失うダメージは、代わりに相手が多くのダメージを受ける。",
+    "UPGRADE_DESCRIPTION": "天賦 。 NL 次の !M! 回の自分のターンのHPを失うダメージは、代わりに相手が多くのダメージを受ける。"
   },
   "Slimebound:AccelerateToxins": {
     "NAME": "アクセラレート・トキシン",
