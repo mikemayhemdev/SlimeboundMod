@@ -54,6 +54,7 @@ public class ServeAndProtectProtect extends AbstractSlimeboundCard {
         }
 
         this.baseBlock = 8 + slimecount;
+        if (slimecount>0) this.isBlockModified = true;
 
         return tmp ;
     }
