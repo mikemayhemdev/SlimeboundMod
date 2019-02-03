@@ -199,10 +199,10 @@
 		]
 	},
 	"Slimebound:PoisonThornsPower": {
-		"NAME": "Acid Gelatin",
+		"NAME": "Acidic Goop",
 		"DESCRIPTIONS": [
-			"When attacked, applies ",
-			" Poison to attacker."
+			"Apply ",
+			" Poison when you Attack an enemy who has Goop."
 		]
 	},
 	"Slimebound:SlimeRitualPower": {
@@ -489,16 +489,6 @@
 		"DESCRIPTIONS": [
 			"Cards containing Tackle deal ",
 			" more damage to you."
-		]
-	},
-	"Slimebound:NextTurnBlockAndGoopPower": {
-		"NAME": "Reactive Goop",
-		"DESCRIPTIONS": [
-			"At the start of your next turn, gain ",
-			" Block and apply ",
-			" Goop to a random enemy.",
-			" Goop to a random enemy ",
-			" times."
 		]
 	},
 	"Slimebound:GoopArmorPower": {

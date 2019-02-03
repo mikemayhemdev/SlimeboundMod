@@ -96,7 +96,7 @@ public class LivingWall extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeSlimed(2);
-            upgradeBlock(2);
+            upgradeBlock(3);
 
             //upgradeBlock(1);
 

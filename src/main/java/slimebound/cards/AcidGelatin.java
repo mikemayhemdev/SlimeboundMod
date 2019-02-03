@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.PoisonThornsPower;
+import slimebound.powers.GoopIntoPoisonPower;
 
 
 public class AcidGelatin extends AbstractSlimeboundCard {
@@ -38,7 +38,7 @@ public class AcidGelatin extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonThornsPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GoopIntoPoisonPower(p, p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() {

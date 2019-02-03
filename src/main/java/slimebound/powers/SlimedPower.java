@@ -2,7 +2,9 @@ package slimebound.powers;
 
 
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -11,12 +13,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomLickCardAction;
-import slimebound.cards.Gluttony;
-import slimebound.cards.GoopArmor;
 import slimebound.vfx.FakeFlashAtkImgEffect;
 import slimebound.vfx.SlimeDripsEffectPurple;
 
@@ -115,6 +115,12 @@ public class SlimedPower extends AbstractPower {
                     this.source.getPower(GoopArmorPower.POWER_ID).flash();
                 }
 
+                if (this.source.hasPower(GoopIntoPoisonPower.POWER_ID)){
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.source, new PoisonPower(this.owner, this.source, this.source.getPower(GoopIntoPoisonPower.POWER_ID).amount), this.source.getPower(GoopIntoPoisonPower.POWER_ID).amount, true, AbstractGameAction.AttackEffect.POISON));
+                    this.source.getPower(GoopIntoPoisonPower.POWER_ID).flash();
+                }
+
+
                 SlimeboundMod.checkForEndGoopCardVFX();
                 if (this.owner.hasPower(PreventSlimeDecayPower.POWER_ID)){
                    // AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, this.amount / 2));
@@ -122,6 +128,8 @@ public class SlimedPower extends AbstractPower {
                 } else {
                     AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 }
+
+
 
                 if (this.source.hasPower(GluttonyPower.POWER_ID)){
                         ((GluttonyPower)this.source.getPower(GluttonyPower.POWER_ID)).activate();

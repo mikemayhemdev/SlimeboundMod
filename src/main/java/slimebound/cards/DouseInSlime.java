@@ -47,7 +47,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.slimed = this.baseSlimed = 12;
+        this.slimed = this.baseSlimed = 14;
         upgradeSlimed(0);
 
 
@@ -78,7 +78,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(4);
+            upgradeSlimed(6);
 
         }
 

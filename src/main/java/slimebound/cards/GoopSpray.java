@@ -44,8 +44,6 @@ public class GoopSpray extends AbstractSlimeboundCard {
         upgradeSlimed(0);
 
 
-        this.exhaust = true;
-
     }
 
 
@@ -91,7 +89,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(4);
+            upgradeSlimed(2);
             upgradeMagicNumber(2);
 
         }

@@ -84,7 +84,7 @@
   },
 "Slimebound:SlimeBrawl": {
     "NAME": "Slime Brawl",
-    "DESCRIPTION": "Play and Exhaust the top card of your draw pile. Repeat for each of your spawned Slimes. NL Exhaust."
+    "DESCRIPTION": "Play the top card of your draw pile. Repeat for each of your spawned Slimes. NL Exhaust."
   },
 "Slimebound:SpikyOuterGoop": {
     "NAME": "Goop Armor",
@@ -92,7 +92,7 @@
   },
 "Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! Goop to a random enemy and gain !M! Block at the start of your next turn."
+    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! Goop to a random enemy and gain 2 Block at the start of your next turn."
   },
 "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
@@ -146,7 +146,7 @@
 "Slimebound:Repurpose": {
     "NAME": "Repurpose",
     "DESCRIPTION": "Morph a card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Morph up to 2 cards in your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Draw a card. NL Morph a card in your hand. NL Exhaust."
   },
 "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -154,7 +154,7 @@
   },
 "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "Morph all cards in your hand. NL Exhaust."
+    "DESCRIPTION": "Draw a card. NL Morph all cards in your hand. NL Exhaust."
   },
 "Slimebound:SoTasty": {
     "NAME": "SO TASTY!",
@@ -218,8 +218,8 @@
   "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Goop to Poison."
   },
 "Slimebound:AcidGelatin": {
-    "NAME": "Acid Gelatin",
-    "DESCRIPTION": "Whenever you are attacked, apply !M! Poison to the attacker."
+    "NAME": "Acidic Goop",
+    "DESCRIPTION": "Apply !M! Poison whenever you Attack an enemy who has Goop."
   },
 "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
@@ -227,8 +227,8 @@
   },
 "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. Add a random Lick card to your hand if the enemy was Gooped.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add two random Lick cards to your hand if the enemy was Gooped."
+    "DESCRIPTION": "Deal !D! damage. Add a random Lick card to your hand if the enemy has Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded Lick card to your hand if the enemy has Goop."
   },
 "Slimebound:AcidTongue": {
     "NAME": "Acid Tongue",
@@ -270,7 +270,7 @@
   },
 "Slimebound:Grow": {
     "NAME": "Grow",
-    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and 1 Dexterity."
+    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity."
   },
 "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
@@ -339,7 +339,7 @@
   },
 "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !M! Poison to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !M! Poison to ALL enemies."
   },
 "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
@@ -559,7 +559,7 @@
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
   },
   "Slimebound:SplitBronze": {
     "NAME": "Split: Bronze",
@@ -602,8 +602,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+    "DESCRIPTION": "Gain 1 Slime slot. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",

@@ -42,16 +42,14 @@ public class FormABlockadeAction extends AbstractGameAction {
 
 
     public void update() {
-        int slimecount = 0;
+
         for (AbstractOrb o : p.orbs) {
 
             if (o instanceof SpawnedSlime) {
                 com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffectInFront(o.cX, o.cY)));
-                slimecount++;
             }
 
         }
-        if (slimecount > 0) AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block * slimecount));
 
 
 

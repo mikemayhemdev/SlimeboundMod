@@ -53,7 +53,6 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY,2F,false,0.6F), 0.3F));
 
-
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
 
 
@@ -73,7 +72,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(3);
+            upgradeBaseCost(0);
 
         }
 

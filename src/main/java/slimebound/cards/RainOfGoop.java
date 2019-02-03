@@ -33,7 +33,7 @@ public class RainOfGoop extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 0;
-        this.slimed = this.baseSlimed = 2;
+        this.slimed = this.baseSlimed = 3;
         upgradeSlimed(0);
         this.magicNumber = this.baseMagicNumber = 4;
 

@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 
 
-public class PoisonThornsPower extends AbstractPower {
+public class GoopIntoPoisonPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:PoisonThornsPower";
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
@@ -25,7 +25,7 @@ public class PoisonThornsPower extends AbstractPower {
     private AbstractCreature source;
 
 
-    public PoisonThornsPower(AbstractCreature owner, AbstractCreature source, int amount) {
+    public GoopIntoPoisonPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -58,16 +58,6 @@ public class PoisonThornsPower extends AbstractPower {
 
 
     }
-
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if ((info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner)) {
-            flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new PoisonPower(info.owner, this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.POISON));
-        }
-
-        return damageAmount;
-    }
-
 
 }
 

@@ -52,7 +52,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
                 if (o instanceof SpawnedSlime) {
                     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.PlayTopCardAction(
 
-                            AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRng), true));
+                    AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRng), false));
 
                 }
             }

@@ -47,7 +47,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
 
 
         if (m.hasPower(SlimedPower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
+            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(this.upgraded));
             /*
             if (upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
@@ -73,7 +73,9 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(3);
+            upgradeDamage(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 
