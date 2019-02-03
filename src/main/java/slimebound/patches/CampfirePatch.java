@@ -38,9 +38,11 @@ public class CampfirePatch {
         if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID)) {
             campfireButtons.add(new ScrapBonfireOption(!AbstractDungeon.player.masterDeck.getPurgeableCards().isEmpty()));
 
+            /*
             if (AbstractDungeon.player.hasRelic(PeacePipe.ID)){
                 AbstractDungeon.player.relics.remove(AbstractDungeon.player.getRelic(PeacePipe.ID));
             }
+            */
 
         }
     }

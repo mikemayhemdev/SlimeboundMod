@@ -18,9 +18,7 @@ public class TokePatch {
 
     public static void Prefix() {
 
-
-        //TODO technically there's an exploit? here if Toke is available.  Need to turn off the bool when cancel is hit.
-        if (SlimeboundMod.scrapping && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && AbstractDungeon.gridSelectScreen.forPurge) {
+        if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID) && SlimeboundMod.scrapping && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && AbstractDungeon.gridSelectScreen.forPurge) {
             SlimeboundMod.scrapping = false;
             int amount = 0;
             AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
