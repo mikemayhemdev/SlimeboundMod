@@ -30,10 +30,11 @@ public class SlimeDeathParticleEffect extends com.megacrit.cardcrawl.vfx.Abstrac
         this.vY = (MathUtils.random(150.0F, 300.0F) * Settings.scale);
         this.floor = (y - 40.0F * Settings.scale);
     }
+
     public void dispose() {
-
-
+        this.isDone = true;
     }
+
     public void update() {
         this.vY -= 1000.0F * Settings.scale * Gdx.graphics.getDeltaTime();
         this.x += this.vX * Gdx.graphics.getDeltaTime();

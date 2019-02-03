@@ -71,5 +71,6 @@ public class FakeFlashAtkImgEffect extends AbstractGameEffect {
     }
 
     public void dispose() {
+        this.isDone = true;
     }
 }

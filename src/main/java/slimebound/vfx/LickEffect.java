@@ -106,7 +106,9 @@ public class LickEffect extends AbstractGameEffect {
 
     }
 
-    public void dispose() {
+    public void dispose()
+    {
         this.img.dispose();
+        this.isDone = true;
     }
 }

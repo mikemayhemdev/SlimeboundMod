@@ -134,6 +134,8 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
         }
     }
 
-    public void dispose() {this.img.dispose();
+    public void dispose() {
+        this.img.dispose();
+        this.isDone = true;
     }
 }

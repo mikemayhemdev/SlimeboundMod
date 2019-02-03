@@ -42,7 +42,7 @@ public class SticksParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffec
     }
     public void dispose() {
         this.img.dispose();
-
+        this.isDone = true;
     }
 
     public void render(SpriteBatch sb, float x, float y) {

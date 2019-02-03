@@ -85,6 +85,6 @@ public class GreedGlowParticle extends AbstractGameEffect {
 
 
     public void dispose() {
-
+        this.isDone = true;
     }
 }

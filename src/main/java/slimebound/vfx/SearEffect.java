@@ -49,7 +49,7 @@ import com.megacrit.cardcrawl.vfx.combat.LightFlareParticleEffect;
 
 
     public void dispose() {
-
+        this.isDone = true;
 
     }
 

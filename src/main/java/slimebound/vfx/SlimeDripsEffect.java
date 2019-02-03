@@ -20,7 +20,7 @@ public class SlimeDripsEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
     }
 
     public void dispose() {
-
+        this.isDone = true;
 
     }
     public void update() {

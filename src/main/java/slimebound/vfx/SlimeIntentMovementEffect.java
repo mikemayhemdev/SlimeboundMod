@@ -17,7 +17,7 @@ public class SlimeIntentMovementEffect extends com.megacrit.cardcrawl.vfx.Abstra
         this.o = o;
     }
     public void dispose() {
-
+        this.isDone = true;
 
     }
     public void update() {

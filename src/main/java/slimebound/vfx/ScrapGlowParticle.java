@@ -70,6 +70,6 @@ public class ScrapGlowParticle extends AbstractGameEffect {
 
 
     public void dispose() {
-
+        this.isDone = true;
     }
 }

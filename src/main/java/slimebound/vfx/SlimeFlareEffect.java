@@ -26,7 +26,7 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
         }
     }
     public void dispose() {
-
+        this.isDone = true;
 
     }
     public SlimeFlareEffect(AbstractOrb orb, OrbFlareColor setColor) {

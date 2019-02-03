@@ -36,7 +36,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
 
     }
     public void dispose() {
-
+        this.isDone = true;
         this.img.dispose();
     }
 

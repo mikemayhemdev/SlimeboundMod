@@ -38,7 +38,7 @@ public class SticksParticleRight extends com.megacrit.cardcrawl.vfx.AbstractGame
 
     }
     public void dispose() {
-
+        this.isDone = true;
         this.img.dispose();
     }
 

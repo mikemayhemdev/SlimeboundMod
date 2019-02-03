@@ -37,7 +37,7 @@ public class SlimeWaterDropEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
         this.color = new Color(0.5F, 0.8F, 0.05F, 0.0F);
     }
     public void dispose() {
-
+        this.isDone = true;
 
     }
     public void update() {

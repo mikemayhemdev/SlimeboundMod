@@ -41,7 +41,7 @@ public class SlimeBuffParticleEffect extends com.megacrit.cardcrawl.vfx.Abstract
     }
 
     public void dispose() {
-
+        this.isDone = true;
 
     }
     public void update() {
