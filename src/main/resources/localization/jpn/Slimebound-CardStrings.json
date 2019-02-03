@@ -269,7 +269,7 @@
   },
   "Slimebound:Grow": {
     "NAME": "成長",
-    "DESCRIPTION": "スライムスロットを1失う代わりに 筋力 !M! と 敏捷性 1 を得る。",
+    "DESCRIPTION": "スライムスロットを1失う代わりに 筋力 !M! と 敏捷性 1 を得る。"
   },
   "Slimebound:HungryTackle": {
     "NAME": "ハングリータックル",
