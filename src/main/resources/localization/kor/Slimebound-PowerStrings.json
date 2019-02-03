@@ -113,7 +113,12 @@
 		"NAME": "자가형성 점액",
 		"DESCRIPTIONS": [
 			"체력을 잃을때 마다 ",
-			" 방어도 를 얻습니다."
+			" 방어도 를 얻습니다.",
+			"Whenever you lose HP, at the start of your next turn, gain ",
+			" Block and apply ",
+			" Goop to a random enemy.",
+			" Goop to a random enemy ",
+			" times."
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
