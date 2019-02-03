@@ -7,11 +7,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
@@ -46,32 +44,27 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
 
 
     public void upgradeSlimed(int amount) {
-        if (CardCrawlGame.isInARun()) {
-
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                this.baseSlimed += amount;
-                this.slimed = this.baseSlimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
-                if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
-            }
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this))
+            this.baseSlimed += amount;
+            this.slimed = this.baseSlimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+            if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
         }
     }
 
     public void upgradeLickSlimed(int amount) {
-        if (CardCrawlGame.isInARun()) {
-
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this))
                 this.baseSlimed += amount;
-                this.slimed = this.baseSlimed + SlimeboundMod.getGluttonyBonus(AbstractDungeon.player);
-                if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
-            }
+            this.slimed = this.baseSlimed + SlimeboundMod.getGluttonyBonus(AbstractDungeon.player);
+            if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
         }
     }
 
-    public void upgradeSelfDamage(int originalAmount) {
-        if (CardCrawlGame.isInARun()) {
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-
-                this.selfDamage = originalAmount + SlimeboundMod.getTackleSelfDamageBonus(AbstractDungeon.player);
+    public void upgradeSelfDamage(int originalAmount){
+            if (AbstractDungeon.player != null) {
+                if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this))
+                    this.selfDamage = originalAmount + SlimeboundMod.getTackleSelfDamageBonus(AbstractDungeon.player);
                 if (this.selfDamage < 0) this.selfDamage = 0;
                 if (this.selfDamage < originalAmount) {
                     this.isSelfDamageModified = true;
@@ -80,7 +73,6 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
                 }
             }
         }
-    }
 
 
 
