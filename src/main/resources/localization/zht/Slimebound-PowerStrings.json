@@ -83,13 +83,13 @@
 	"Slimebound:ComboAttackPower": {
 		"NAME": "身先士卒",
 		"DESCRIPTIONS": [
-			"每回合打出的第1張攻擊牌會使你最早的史萊姆發起攻擊",
+			"每回合打出的第1張攻擊牌會使你最早的史萊姆發起攻擊。",
 			"每回合打出的前 ",
-			" 張攻擊牌會使你最早的史萊姆發起攻擊",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" NL This effect cannot be triggered again this turn."
+			" 張攻擊牌會使你最早的史萊姆發起攻擊。",
+			" NL 本回合還能觸發 ",
+			" 次",
+			" 次",
+			" NL 本回合不能再觸發"
 		]
 
 	},
@@ -113,11 +113,11 @@
 	"Slimebound:SelfFormingGooPower": {
 		"NAME": "自成型黏液",
 		"DESCRIPTIONS": [
-			"Whenever you lose HP, at the start of your next turn, gain ",
-			" Block and apply ",
-			" Goop to a random enemy.",
-			" Goop to a random enemy ",
-			" times."
+			"每當你失去生命時，獲得 ",
+			" 點 格檔 ，並給予隨機1名敵人 ",
+			" 層 黏液",
+			" 層 黏液 ",
+			" 次"
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
@@ -130,7 +130,7 @@
 	"Slimebound:TackleDebuffPower": {
 		"NAME": "束縛",
 		"DESCRIPTIONS": [
-			"受 衝撞 牌攻擊時，受到額外 ",
+			"衝撞 牌對該敵人額外造成 ",
 			" 點傷害"
 		]
 	},
@@ -151,9 +151,9 @@
 	"Slimebound:PreventSlimeDecayPower": {
 		"NAME": "浸入黏液",
 		"DESCRIPTIONS": [
-			"本回合 黏液 層數不會減少",
-			"接下來的 ",
-			" 回合， 黏液 層數不會減少"
+			"下次對該目標打出攻擊牌時， 黏液 生效後不會消失",
+			"下 ",
+			" 次對該目標打出攻擊牌時， 黏液 生效後不會消失"
 		]
 	},
 	"Slimebound:DuplicatedFormPower": {
@@ -181,13 +181,13 @@
 	"Slimebound:GluttonyPower": {
 		"NAME": "暴食",
 		"DESCRIPTIONS": [
-			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-			"The first .",
-			" times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" NL This effect cannot be triggered again this turn."
+			"每回合第 1 次對有 黏液 的敵人發動攻擊時，增加1張隨機 舔舐 牌到手牌。",
+			"每回合前 ",
+			" 次對有 黏液 的敵人發動攻擊時，增加1張隨機 舔舐 牌到手牌。",
+			" NL 本回合還能觸發 ",
+			" 次",
+			" 次",
+			" NL 本回合不能再觸發"
 
 		]
 	},
@@ -250,7 +250,7 @@
 		]
 	},
 	"Slimebound:TackleBuffPower": {
-		"NAME": "烈焰衝撞",
+		"NAME": "進攻型衝撞",
 		"DESCRIPTIONS": [
 			"衝撞 牌造成的傷害增加 ",
 			" 點"
@@ -275,13 +275,13 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "感同身受",
 		"DESCRIPTIONS": [
-			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
-			"The next ",
-			" times you would lose HP on your turn, an enemy takes that much damage instead.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" This effect cannot be triggered again this turn."
+			"下次你在自己的回合失去生命時，1名隨機敵人代你承受。",
+			"下 ",
+			" 次你在自己的回合失去生命時，1名隨機敵人代你承受。",
+			" NL 本回合還能觸發 ",
+			" 次",
+			" 次",
+			" 本回合不能再觸發"
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
@@ -477,11 +477,35 @@
 			"破爛史萊姆 將在回合結束時重生"
 		]
 	},
-	"Slimebound:GoopArmorPower": {
-		"NAME": "Goop Armor",
+	"Slimebound:BuffSecondarySlimeEffectsPower": {
+		"NAME": "爪牙大師",
 		"DESCRIPTIONS": [
-			"Whenever you consume Goop, gain ",
-			" Block."
+			"每當你的史萊姆給予 黏液 、 中毒 或 格擋 時，額外給予 ",
+			" 層"
+		]
+	},
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "魯莽",
+		"DESCRIPTIONS": [
+			"衝撞 牌對自身造成的傷害增加 ",
+			" 點"
+		]
+	},
+	"Slimebound:NextTurnBlockAndGoopPower": {
+		"NAME": "活性黏液",
+		"DESCRIPTIONS": [
+			"你的下回合開始時， 獲得 ",
+			" 點 格擋 ，並給予隨機敵人 ",
+			" 層 黏液",
+			" 層 黏液 ",
+			" 次"
+		]
+	},
+	"Slimebound:GoopArmorPower": {
+		"NAME": "黏液護甲",
+		"DESCRIPTIONS": [
+			"每當你消耗 黏液 時，獲得 ",
+			" 點 格擋"
 		]
 	}
 }
