@@ -199,10 +199,10 @@
 		]
 	},
 	"Slimebound:PoisonThornsPower": {
-		"NAME": "酸性胶团",
+		"NAME": "酸性黏液",
 		"DESCRIPTIONS": [
-			"每当你受到攻击，给予攻击者 ",
-			" 层 中毒 。"
+			"每当你攻击具有 黏液 的目标时，给予 ",
+			"  层 中毒 。"
 		]
 	},
 	"Slimebound:SlimeRitualPower": {
@@ -488,16 +488,6 @@
 		"DESCRIPTIONS": [
 			"冲撞 牌对自身造成的伤害提高 ",
 			" 点。"
-		]
-	},
-	"Slimebound:NextTurnBlockAndGoopPower": {
-		"NAME": "活性黏液",
-		"DESCRIPTIONS": [
-			"回合开始时， 获得 ",
-			" 点格挡，并给予一个随机敌人 ",
-			" 层 黏液 。",
-			" 层 黏液 ",
-			" 次。"
 		]
 	},
 	"Slimebound:GoopArmorPower": {
