@@ -10,8 +10,8 @@
     "NAME": "粘液",
     "DESCRIPTIONS": [
       "この敵に対する次の攻撃は",
-      " 多くのダメージを与えて",
-      "全ての #y粘液 を消費しHPを回復する。ターン終了時に半分になる。"
+      " 多くのダメージを与え、全ての #y粘液 を消費しHPを",
+      "回復する。 ターン終了時に半分になる。"
     ]
   },
   "Slimebound:SplitDailyTriggerPower": {
@@ -199,10 +199,10 @@
     ]
   },
   "Slimebound:PoisonThornsPower": {
-    "NAME": "酸性ゼラチン",
+    "NAME": "酸性の粘液",
     "DESCRIPTIONS": [
-      "攻撃してきた敵に #y毒",
-      "を付与する。"
+      "粘液状態の敵を攻撃すると #y毒",
+      " を付与する。"
     ]
   },
   "Slimebound:SlimeRitualPower": {
@@ -281,6 +281,7 @@
       " 回繰り返される。",
       " 回繰り返される。",
       " この効果はこのターン中もう繰り返されない。"
+	  
     ]
   },
   "Slimebound:NextTurnGainStrengthPower": {
@@ -488,16 +489,6 @@
 		"DESCRIPTIONS": [
 			"「タックル」を含むカードから受けるダメージを",
 			" 減らす。"
-		]
-	},
-	"Slimebound:NextTurnBlockAndGoopPower": {
-		"NAME": "リアクティブ粘液",
-		"DESCRIPTIONS": [
-			"次のターン開始時、",
-			" ブロックを得て、粘液",
-			" をランダムな敵に与える。",
-			" をランダムな敵に ",
-			" 回与える。"
 		]
 	},
   "Slimebound:GoopArmorPower": {
