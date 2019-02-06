@@ -98,6 +98,8 @@ public abstract class SpawnedSlime
     public Color extraFontColor = null;
     public boolean topSpawnVFX = false;
 
+    public boolean beingAbsorbed = false;
+
 
 
     public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
@@ -281,7 +283,9 @@ public void spawnVFX(){
             SlimeboundMod.slimeDelay = false;
         }
 
-        activateEffectUnique();
+        if (!beingAbsorbed) {
+            activateEffectUnique();
+        }
 
     }
 

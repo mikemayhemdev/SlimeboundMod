@@ -81,6 +81,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
            upgradeSlimed(2);
             this.poison = 3;
+            this.isPoisonModified = true;
 
         }
 
