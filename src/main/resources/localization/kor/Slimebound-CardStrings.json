@@ -149,8 +149,8 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "형상 복제",
-    "UPGRADE_DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
-  "DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
+  "DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
   "EXTENDED_DESCRIPTION": [
       "너무.. 건강헤..."
     ]
@@ -335,8 +335,8 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "콤보 태클",
-    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 손에 있는 무작위 카드 1 장을 이번전투 동안 강화합니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 손에 있는 무작위 카드 2 장을 이번전투 동안 강화합니다."
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 얻고 카드를 1 장 뽑습니다. ",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 이번 턴에 수행 된 각각의 공격에 대해 카드 한 장을 뽑는다. (얻고 카드를 !M! 장 뽑습니다)"
   },
  "Slimebound:Tackle": {
     "NAME": "태클",
@@ -370,7 +370,7 @@
   },
 "Slimebound:UsefulSlime": {
     "NAME": "쓸만한 점액이군!",
-    "DESCRIPTION": "[E] [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "카드를 2 장 뽑습니다. NL 소멸."
   },
 "Slimebound:RainOfGoop": {
     "NAME": "끈적이 비",
@@ -397,8 +397,8 @@
 "Slimebound:LeechEnergy": {
     "NAME": "에너지 흡수",
     "DESCRIPTION": "피해를 !D! 줍니다. 적이 점액 상태이면 [E] 를 얻고 카드를 1 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 중독 상태 이면 카드를 1 장 뽑습니다. 점액 상태이면 [E] 를 얻습니다."
-  },
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 점액 상태이면 [E] 를 얻고 카드를 2 장 뽑습니다."
+},
 "Slimebound:LeechLife": {
     "NAME": "생명력 흡수",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 중독 을 !M! 부여합니다. NL 체력 을 !M! 회복합니다. NL 소멸."
@@ -615,6 +615,6 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "무모함",
-    "DESCRIPTION": "태클 카드가 적에게 !M! 피해를 추가로 주고, 나에게 주는 피해도 1 감소합니다."
+    "DESCRIPTION": "태클 카드가 적에게 !M! 피해를 추가로 주고, 나에게 주는 피해도 2 감소합니다."
   }
 }

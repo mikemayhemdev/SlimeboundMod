@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
+import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 
 
@@ -70,7 +71,6 @@ public class FirmFortitudePower extends TwoAmountPower {
 
     public int onLoseHp(int damageAmount) {
 
-
         if (damageAmount > 0 && this.isActive && this.amount2 > 0) {
             this.flash();
             AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
@@ -83,7 +83,21 @@ public class FirmFortitudePower extends TwoAmountPower {
        return damageAmount;
     }
 
+    public int onAttackedPreBlock(DamageInfo info, int damageAmount) {
+        SlimeboundMod.logger.info("onAttacked triggered " + damageAmount + " " + this.isActive + " " + this.amount2);
+        if (damageAmount > 0 && this.isActive && this.amount2 > 0) {
+            SlimeboundMod.logger.info("Firmfortitude triggered " + damageAmount);
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
+            this.amount2--;
+            updateDescription();
+            return 0;
+        } else {
+            return damageAmount;
+
+        }
+    }
 
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;

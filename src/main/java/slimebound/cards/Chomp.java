@@ -46,10 +46,10 @@ public class Chomp extends AbstractSlimeboundCard {
 
 
         this.baseDamage = this.originalDamage = 4;
-        this.upgradeDamage = 1;
+        this.upgradeDamage = 2;
        // this.exhaust = true;
 
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 3;
 
 
     }
@@ -85,7 +85,6 @@ public class Chomp extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(upgradeDamage);
-            upgradeMagicNumber(1);
 
 
         }

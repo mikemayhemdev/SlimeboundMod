@@ -71,7 +71,7 @@ public class Tackle extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new DamageInfo(p, this.selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new DamageInfo(p, this.selfDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
 
 
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));

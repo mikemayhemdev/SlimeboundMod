@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.PreventCurrentOverMaxHealthAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.vfx.DoubleSlimeParticle;
@@ -27,7 +28,7 @@ import slimebound.vfx.DoubleSlimeParticle;
 public class DuplicatedFormNoHealPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:DuplicatedFormNoHealPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/HalvedS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
@@ -101,14 +102,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     }
 
     public void updateCurrentHealth(){
-        if (this.owner.currentHealth > this.owner.maxHealth - this.amount){
-
-            this.owner.currentHealth = this.owner.maxHealth - this.amount;
-
-            //int currentAmount = this.owner.currentHealth - (this.owner.maxHealth - this.amount);
-            //AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, currentAmount, DamageInfo.DamageType.HP_LOSS));
-
-        }
+        AbstractDungeon.actionManager.addToBottom(new PreventCurrentOverMaxHealthAction());
     }
 
     public void stackPower(int stackAmount) {
