@@ -28,7 +28,7 @@
         "効力"
       ],
       "PROPERNAME": "効力",
-      "DESCRIPTION": "すべての生み出したスライムのダメージを増加する。"
+      "DESCRIPTION": "生み出したすべてのスライムのダメージを増加する。"
     },
      {
       "NAMES": [
@@ -36,7 +36,7 @@
         "torch_head_slime"
       ],
       "PROPERNAME": "トーチヘッドスライム",
-      "DESCRIPTION": "ターン毎、6の攻撃する。 効力 の効果を2回得る。"
+      "DESCRIPTION": "毎ターン、6の攻撃する。 効力の効果を2倍得る。"
     },
      {
       "NAMES": [
@@ -66,7 +66,7 @@
         "leeching"
       ],
       "PROPERNAME": "リーチングスライム",
-      "DESCRIPTION": "毎ターン、2攻撃と2 ブロック を得る。"
+      "DESCRIPTION": "毎ターン、2の攻撃と2ブロックを得る。"
     },
      {
       "NAMES": [
@@ -77,7 +77,7 @@
         "acid"
       ],
       "PROPERNAME": "アシッドスライム",
-      "DESCRIPTION": "毎ターン、2の攻撃と 毒 1を与える。"
+      "DESCRIPTION": "毎ターン、2の攻撃と毒1を与える。"
     },
      {
       "NAMES": [
@@ -88,7 +88,7 @@
         "mire"
       ],
       "PROPERNAME": "マイヤースライム",
-      "DESCRIPTION": "毎ターン、1の攻撃と 粘液 2を与える。"
+      "DESCRIPTION": "毎ターン、1の攻撃と粘液2を与える。"
     },
      {
       "NAMES": [
