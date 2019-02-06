@@ -2,50 +2,50 @@
   "Slimebound:BronzeSlime": {
     "NAME": "ブロンズスライム",
     "DESCRIPTION": [
-      "ターン開始時に",
+      "ターン開始時、",
       " ダメージを与えて",
-      "ブロックを得る。"
+      " ブロックを得る。"
     ]
   },
   "Slimebound:AttackSlime": {
     "NAME": "ブルーザースライム",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージを与える。"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
     "NAME": "スクラップウーズ",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージを与える。 NL 吸収された際はすぐにリスポーンする。 NL 最大HPを減らさない。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "グリードウーズ",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージを与える。 NL 吸収された際はすぐにリスポーンする。 NL 最大HPを減らさない。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "トーチヘッドスライム",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージを与える。 効力の効果を2回得る。"
     ]
   },
   "Slimebound:CultistSlime": {
     "NAME": "カルティストスライム",
     "DESCRIPTION": [
-      "ターン開始時",
-      "にダメージを与える。その後ダメージが1増加する。"
+      "ターン開始時、",
+      " ダメージを与える。その後ダメージが1増加する。"
     ]
   },
   "Slimebound:ShieldSlime": {
     "NAME": "リーチングスライム",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージを与え、",
       " ブロックを得る。"
     ]
@@ -53,7 +53,7 @@
   "Slimebound:PoisonSlime": {
     "NAME": "アシッドスライム",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージと毒",
       " を与える。"
     ]
@@ -61,9 +61,9 @@
   "Slimebound:SlimingSlime": {
     "NAME": "マイヤースライム",
     "DESCRIPTION": [
-      "ターン開始時",
+      "ターン開始時、",
       " ダメージと粘液",
-      "を与える。"
+      " を与える。"
     ]
   },
   "Slimebound:HexSlime": {
