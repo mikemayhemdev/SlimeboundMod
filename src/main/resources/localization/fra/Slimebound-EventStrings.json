@@ -64,7 +64,7 @@
       "Vous n'arrivez pas � concevoir que des Slimes peuvent �tre redoutables - Il semble que leur seul technique est de se jeter comme des imb�ciles sur l'ennemi. Enfin bon, si �a marche pour eux alors..."
     ],
     "OPTIONS": [
-      "[Lire] #gRetire #gToutesLes Frappes. #gRecevez #g5 Tacles.",
+      "[Lire] #gRetire #gToutesLes Frappes. #gRecevez #g3 Tacles+.",
       "[Prendre] #gObtenez #gLivrede #gConsultation. #rActionnez #run #rpi�ge.",
       "[Partir]",
       "[Profaner] #rDevenez #rMaudit #r- #rD�go�tant.",

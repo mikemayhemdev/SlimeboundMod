@@ -64,7 +64,7 @@
       "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g5 Tackles.",
+      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
       "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
       "[Leave]",
       "[Dive] #rBecome #rCursed #r- #rIcky.",

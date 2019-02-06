@@ -47,7 +47,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
         this.baseSelfDamage = this.selfDamage = 3;
         this.upgradeDamage = 3;
 
-        this.magicNumber = this.baseMagicNumber = 0;
+        this.magicNumber = this.baseMagicNumber = 1;
 
         this.upgradeSelfDamage(this.baseSelfDamage);
 
@@ -62,7 +62,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
                 bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
             }
         }
-        if (upgraded) this.magicNumber = SlimeboundMod.attacksPlayedThisTurn + 1;
+        if (upgraded) this.baseMagicNumber = SlimeboundMod.attacksPlayedThisTurn + 1;
         return tmp + bonus;
     }
 
@@ -74,7 +74,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
 
         if (upgraded) {
-            for (int i = 0; i < SlimeboundMod.attacksPlayedThisTurn + 1; i++) {
+            for (int i = 0; i < SlimeboundMod.attacksPlayedThisTurn; i++) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
             }

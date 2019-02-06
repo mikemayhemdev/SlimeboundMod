@@ -65,7 +65,7 @@ import java.util.Properties;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";

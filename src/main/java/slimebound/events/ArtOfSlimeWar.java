@@ -58,7 +58,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
 
     public ArtOfSlimeWar() {
         super(NAME, DIALOG_START, "SlimeboundImages/events/slimeTome.jpg");
-        this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy("Slimebound:Tackle"));
+        this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy("Slimebound:Tackle",1,0));
         this.imageEventText.setDialogOption(OPTIONS[1], CardLibrary.getCopy("Slimebound:CheckThePlaybook"));
         this.imageEventText.setDialogOption(OPTIONS[2]);
         if (AbstractDungeon.ascensionLevel >= 15) {
@@ -161,8 +161,9 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
             AbstractCard e;
             do {
                 if (!i.hasNext()) {
-                    for(int i2 = 0; i2 < 5; ++i2) {
+                    for(int i2 = 0; i2 < 3; ++i2) {
                         AbstractCard c = new Tackle();
+                        c.upgrade();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                     }
 

@@ -25,7 +25,7 @@ public class Tackle extends AbstractSlimeboundCard {
     public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/eventtackle.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
@@ -43,7 +43,7 @@ public class Tackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = this.originalDamage = 12;
+        this.baseDamage = this.originalDamage = 10;
         this.baseSelfDamage = this.selfDamage = 3;
 
         this.upgradeDamage = 3;
