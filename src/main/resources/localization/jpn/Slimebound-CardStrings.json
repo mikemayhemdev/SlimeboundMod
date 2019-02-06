@@ -274,12 +274,12 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "ハングリータックル",
-    "DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! ダメージを受ける NL 廃棄されたランダムなコスト0のカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! ダメージを受ける NL 廃棄されたランダムなコスト0のカードを2枚手札に加える。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける NL 廃棄されたランダムなコスト0のカードを1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける NL 廃棄されたランダムなコスト0のカードを2枚手札に加える。"
   },
   "Slimebound:FinishingTackle": {
     "NAME": "フィニッシュタックル",
-    "DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! ダメージを受けるNL 敵が 粘液 状態のとき、 !B! ブロック を得る。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける。 敵が 粘液 状態のとき、 !B! ブロック を得る。"
   },
   "Slimebound:SlimesplosionOLD": {
     "NAME": "スライム爆発",
@@ -295,17 +295,17 @@
   },
   "Slimebound:ComboTackle": {
     "NAME": "コンボタックル",
-    "DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL この戦闘中、手札にあるカードをランダムに1枚アップグレードする。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL この戦闘中、手札にあるカードをランダムに2枚アップグレードする。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL この戦闘中、手札にあるカードをランダムに1枚アップグレードする。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL この戦闘中、手札にあるカードをランダムに2枚アップグレードする。"
   },
   "Slimebound:Tackle": {
     "NAME": "タックル",
-    "DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。"
   },
   "Slimebound:GoopTackle": {
     "NAME": "グープタックル",
-    "DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなアップグレードされたタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなアップグレードされたタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。"
 
   },
   "Slimebound:CorrosiveSpit": {
@@ -348,7 +348,7 @@
   "Slimebound:ViciousTackle": {
     "NAME": "悪質タックル",
     "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける。 粘液 から2倍のダメージボーナスを得る。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! のダメージを受ける。 粘液 から2倍のダメージボーナスとヒーリングボーナスを得る。"
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 粘液 から2倍のダメージボーナスとヒーリングボーナスを得る。"
   },
   "Slimebound:LeechEnergy": {
     "NAME": "リーチエネルギー",
@@ -361,7 +361,7 @@
   },
   "Slimebound:Equalize": {
     "NAME": "均等化",
-    "DESCRIPTION": "!D! ダメージを与えてHPを !M! 回復する。 NL HPが半分以下のとき2回プレイされる。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージを与え、HPを !M! 回復する。 NL HPが半分以下のとき2回プレイされる。 NL 廃棄 。"
 
   },
   "Slimebound:DisruptingSlam": {
