@@ -111,14 +111,12 @@
 	},
 	"Slimebound:SelfFormingGooPower": {
 		"NAME": "자가형성 점액",
-		"DESCRIPTIONS": [
-			"체력을 잃을때 마다 ",
-			" 방어도 를 얻습니다.",
-			"Whenever you lose HP, at the start of your next turn, gain ",
-			" Block and apply ",
-			" Goop to a random enemy.",
-			" Goop to a random enemy ",
-			" times."
+		"DESCRIPTIONS": [			
+			"체력을 잃을때 마다, 다음턴의 시작때 방어도 를 ",
+			" 얻고 무작위 적에게 점액을 ",
+			" 부여합니다.",
+			" 부여합니다. ",
+			" 번 부여합니다."
 		]
 	},
 	"Slimebound:LoseSlimesPower": {
@@ -203,7 +201,7 @@
 	"Slimebound:PoisonThornsPower": {
 		"NAME": "산성 젤라틴",
 		"DESCRIPTIONS": [
-			"공격 받으면 공격자에게 ",
+			"점액상태의 대상을 공격 할때마다 ",
 			" 중독을 부여합니다."
 		]
 	},
@@ -276,13 +274,13 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "꾿꾿히 견딤",
 		"DESCRIPTIONS": [
-			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
-			"The next ",
-			" times you would lose HP on your turn, an enemy takes that much damage instead.",
-			" NL This effect can be triggered ",
-			" more times this turn.",
-			" more time this turn.",
-			" This effect cannot be triggered again this turn."
+			"다음에 내턴에 체력을 잃으면, 적이 피해를 대신 받습니다.",
+			"다음 ",
+			" 번 내턴에 체력을 잃으면, 적이 피해를 대신 받습니다.",
+			" NL 이 효과가 이번턴에 ",
+			" 번 발동 가능합니다.",
+			" 번 발동 가능합니다.",
+			" NL 이번턴에 더이상 발동하지 않습니다."
 		]
 	},
 	"Slimebound:NextTurnGainStrengthPower": {
