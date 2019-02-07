@@ -3,7 +3,7 @@
     "NAME": "効力",
     "DESCRIPTIONS": [
       "生み出した #yスライム のダメージを",
-	  "増加させる。"
+	  " 増加させる。"
     ]
   },
   "Slimebound:SlimedPower": {
@@ -11,14 +11,14 @@
     "DESCRIPTIONS": [
       "この敵に対する次の攻撃は",
       " 多くのダメージを与え、全ての #y粘液 を消費しHPを",
-      "回復する。 ターン終了時に半分になる。"
+      " 回復する。 ターン終了時に半分になる。"
     ]
   },
   "Slimebound:SplitDailyTriggerPower": {
     "NAME": "スライム分裂",
     "DESCRIPTIONS": [
       "HPが #b50% 以下になると、",
-      "の現在のHPを持つ #b2 体のスライムに分裂する。"
+      " の現在のHPを持つ #b2 体のスライムに分裂する。"
     ]
   },
   "Slimebound:SplitDailyPower": {
@@ -59,8 +59,8 @@
     "NAME": "ヘックスパワー",
     "DESCRIPTIONS": [
       "次のターンにゴーストフレイムスライムを生み出す。",
-      "ゴーストフレイムスライムを",
-	  " ターン後に生み出す。"
+      "ゴーストフレイムスライムを、次の",
+	  " ターンの間生み出す。"
     ]
   },
   "Slimebound:ProtectTheBoss": {
@@ -75,7 +75,7 @@
     "NAME": "効率的ベトベト",
     "DESCRIPTIONS": [
       "分裂コストのHPは",
-      " 少なくなる。各ターン、",
+      " 少なくなる。毎ターン、",
       " 枚のランダムな分裂カードを手札に加える。",
       " 枚のランダムな、ランダムな分裂カードを手札に加える。"
     ]
@@ -96,16 +96,16 @@
     "NAME": "カードの準備",
     "DESCRIPTIONS": [
       "保留",
-      "1枚のカードをこのターン保留する。",
+      " 枚のカードをこのターン保留する。",
       " 枚のカードをこのターン保留する。"
     ]
   },
   "Slimebound:EnergizedSlimeboundPower": {
-    "NAME": "通電",
+    "NAME": "励起",
     "DESCRIPTIONS": [
       "次のターン#b",
-      "追加の [E] を得る。",
-      "追加の [E] を得る。",
+      " 追加の [E] を得る。",
+      " 追加の [E] を得る。",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
@@ -123,7 +123,7 @@
     "NAME": "やり過ぎ",
     "DESCRIPTIONS": [
       "次のターン、あなたが生み出したスライムを全て吸収する。",
-      " ターン後、あなたが生み出したスライムを全て吸収する。"
+      " ターンの間、あなたが生み出したスライムを全て吸収する。"
     ]
   },
   "Slimebound:TackleDebuffPower": {
@@ -136,8 +136,8 @@
   "Slimebound:LoseThornsPower": {
     "NAME": "格納式スパイク",
     "DESCRIPTIONS": [
-      "次のターン",
-      "トゲを失う。"
+      "次のターン、トゲ",
+      " を失う。"
     ]
   },
   "Slimebound:SlimedThornsPower": {
@@ -148,7 +148,7 @@
     ]
   },
   "Slimebound:PreventSlimeDecayPower": {
-    "NAME": "スライム入り",
+    "NAME": "スライムまみれ",
     "DESCRIPTIONS": [
       "粘液はこのターン減衰しない。",
       "次の",
@@ -158,9 +158,9 @@
   "Slimebound:DuplicatedFormPower": {
     "NAME": "複製フォーム",
     "DESCRIPTIONS": [
-      "各ターン、最初の敵を対象としてプレイされたカードは2回プレイされる。",
+      "各ターン初めて敵を対象としてプレイされたカードは2回プレイされる。",
       "各ターン、#b",
-      " 枚の敵を対象としてプレイされたカードは2回プレイされる。"
+      " 枚までの敵を対象としてプレイされたカードは2回プレイされる。"
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
@@ -173,16 +173,16 @@
   "Slimebound:DuplicatedFormEnergyPower": {
     "NAME": "タッグチーム",
     "DESCRIPTIONS": [
-      "各ターン",
+      "毎ターン",
       " [E] を得る。"
     ]
   },
   "Slimebound:GluttonyPower": {
     "NAME": "大食い",
     "DESCRIPTIONS": [
-      "このターン初めて行う、粘液状態の敵に対し攻撃すると、ランダムな リック カードを手札に加える。",
-      "このターンの .",
-      " 回目までは粘液状態に対し攻撃すると、ランダムなリックカードを手札に加える。",
+      "このターン初めて、粘液状態の敵に攻撃すると、ランダムなリックカードを手札に加える。",
+      "このターンの ",
+      " 回目まで粘液状態に攻撃すると、ランダムなリックカードを手札に加える。",
       " NL この効果はこのターン中、",
       " 回繰り返される。",
       " 回繰り返される。",
@@ -193,7 +193,7 @@
   "Slimebound:GluttonyPowerUpgraded": {
     "NAME": "大食い+",
     "DESCRIPTIONS": [
-      "各ターン",
+      "毎ターン",
       " ランダムなアップグレードされたリックカードを手札に加える。",
       " ランダムなアップグレードされたリックカードを手札に加える。"
     ]
@@ -230,22 +230,22 @@
   "Slimebound:AcidTonguePower": {
     "NAME": "酸の舌",
     "DESCRIPTIONS": [
-      "粘液を付与する度、 #y毒",
-      "を付与する。"
+      "粘液を与えるたび、 #y毒",
+      " を与える。"
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
     "NAME": "ベトベトの舌",
     "DESCRIPTIONS": [
-      "粘液を付与するとき、追加で粘液",
-      " を付与する。"
+      "粘液を与えるとき、追加で粘液",
+      " を与える。"
     ]
   },
   "Slimebound:SelfDamageSlimedPower": {
     "NAME": "ストレイグープ",
     "DESCRIPTIONS": [
       "HPを失った場合、ランダムな敵に粘液",
-      " を付与する。"
+      " を与える。"
     ]
   },
   "Slimebound:TackleBuffPower": {
@@ -277,12 +277,12 @@
       "次に自分のターンにHPを失うとき、代わりに敵がその分多くのダメージを受ける。",
       "次の ",
       " 回、自分のターンにHPを失うとき、代わりに敵がその分多くのダメージを受ける。",
-      " NL この効果はこのターン中 ",
+      " NL この効果はこのターン中",
       " 回繰り返される。",
       " 回繰り返される。",
       " この効果はこのターン中もう繰り返されない。"
 	  
-	  ]
+    ]
   },
   "Slimebound:NextTurnGainStrengthPower": {
     "NAME": "チャージアップ",
@@ -292,25 +292,25 @@
     ]
   },
   "Slimebound:NextTurnGainSlimeCrush": {
-    "NAME": "粉砕する準備",
+    "NAME": "クラッシュの準備",
     "DESCRIPTIONS": [
-      "次のターン「スライムクラッシュ」を手札に加える。",
+      "次のターンスライムクラッシュを手札に加える。",
       "次のターン",
-      " 枚の「スライムクラッシュ」を手札に加える。"
+      " 枚のスライムクラッシュを手札に加える。"
     ]
   },
   "Slimebound:StunnedPower": {
     "NAME": "すっかり疲れた",
     "DESCRIPTIONS": [
       "次の自分のターンをスキップする。",
-      "次の自分のターンを",
+      "自分のターンを",
       " 回スキップする。"
     ]
   },
   "Slimebound:SearingPower": {
     "NAME": "火傷",
     "DESCRIPTIONS": [
-      "各ターン",
+      "毎ターン",
       " ダメージを受ける。"
     ]
   },
@@ -466,36 +466,36 @@
     ]
   },
  	"Slimebound:GreedRespawnPower": {
-		"NAME": "グリード・リカバー",
-		"DESCRIPTIONS": [
-			"グリードウーズがターン終了時にリスポーンする。"
-		]
+	"NAME": "グリード・リカバー",
+	"DESCRIPTIONS": [
+	    "グリードウーズがターン終了時にリスポーンする。"
+	]
 	},
 	"Slimebound:ScrapRespawnPower": {
-		"NAME": "スクラップ・リカバー",
-		"DESCRIPTIONS": [
-			"スクラップウーズがターン終了時にリスポーンする。"
-		]
+	"NAME": "スクラップ・リカバー",
+	"DESCRIPTIONS": [
+		"スクラップウーズがターン終了時にリスポーンする。"
+	]
   },
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "ミニオンマスター",
     "DESCRIPTIONS": [
-      "あなたのスライムが粘液、毒、ブロックを与えるとき、",
-      " つ追加で与える。"
+        "あなたのスライムが粘液、毒、ブロックを与えるとき、",
+        " つ追加で与える。"
     ]
   },
 	"Slimebound:TackleSelfDamagePreventPower": {
-		"NAME": "ディフェンシブタックル",
-		"DESCRIPTIONS": [
-		"「タックル」を含むカードから受けるダメージを",
-		" 減らす。"
-		]
-	},
+	"NAME": "無謀",
+	"DESCRIPTIONS": [
+    	"「タックル」を含むカードから受けるダメージを",
+		" 増やす。"
+	]
+  },
   "Slimebound:GoopArmorPower": {
     "NAME": "粘液アーマー",
     "DESCRIPTIONS": [
-      "粘液を消費すると、ブロック",
-      " を得る。"
+        "粘液状態の敵を攻撃すると、ブロック",
+        " を得る。"
     ]
   }
 }

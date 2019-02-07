@@ -25,8 +25,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "サンプリングリック",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る。 NL カードを1枚引く。 NL 廃棄 。"
 
   },
   "Slimebound:DuplicateSlimes": {
@@ -35,11 +35,11 @@
   },
   "Slimebound:Replication": {
     "NAME": "複製",
-    "DESCRIPTION": "手札のカード1枚を選択する。そのカードのコピーを手札に加える。 NL 廃棄 。"
+    "DESCRIPTION": "手札のカード1枚を選択する。 そのカードのコピーを手札に加える。 NL 廃棄 。"
   },
   "Slimebound:AbsorbAll": {
     "NAME": "吸収",
-    "DESCRIPTION": "産み出したスライムを全て 吸収 する。 吸収 したスライム1体につき3のブロック を得る。"
+    "DESCRIPTION": "産み出したスライムを全て 吸収 する。 吸収 したスライム1体につき3の ブロック を得る。"
   },
   "Slimebound:Overexert": {
     "NAME": "やり過ぎ",
@@ -57,8 +57,8 @@
   },
   "Slimebound:LeadByExample": {
     "NAME": "手本を示す",
-    "DESCRIPTION": "各ターン初めての敵を対象にしたカードをプレイすると、一番古いスライムの攻撃を誘発する。",
-    "UPGRADE_DESCRIPTION": "各ターンの !M! 回目までの敵を対象にしたカードのプレイは一番古いスライムの攻撃を誘発する。"
+    "DESCRIPTION": "各ターン初めて敵を対象にしたカードをプレイすると、一番古いスライムの攻撃を誘発する。",
+    "UPGRADE_DESCRIPTION": "各ターンの !M! 回目までは、敵を対象にしたカードをプレイすると、一番古いスライムの攻撃を誘発する。"
   },
   "Slimebound:SlimeTap": {
     "NAME": "スライムタップ",
@@ -79,8 +79,8 @@
   },
   "Slimebound:MaxSlimes": {
     "NAME": "場所を空ける",
-    "DESCRIPTION": "!M! のスライムスロットを得る。",
-    "UPGRADE_DESCRIPTION": "!M! のスライムスロットを得る。"
+    "DESCRIPTION": "!M! つのスライムスロットを得る。",
+    "UPGRADE_DESCRIPTION": "!M! つのスライムスロットを得る。"
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "スライム乱闘",
@@ -88,11 +88,11 @@
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "粘液アーマー",
-    "DESCRIPTION": "粘液 状態の敵に攻撃すると、 !M! ブロックを得る。"
-	},
+    "DESCRIPTION": "粘液 状態の敵を攻撃すると、 !M! ブロックを得る。"
+  },
   "Slimebound:SelfFormingGoo": {
     "NAME": "自己形成グー",
-    "DESCRIPTION": "HPを失うと、次のターン開始時に 粘液 !SlimeboundSlimed! をランダムな敵に与え、2ブロック を得る。"
+    "DESCRIPTION": "HPを失うと、次のターン開始時に 粘液 !SlimeboundSlimed! をランダムな敵に与え、2 ブロック を得る。"
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "スライムスパイク",
@@ -104,13 +104,13 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "ディゾルブ",
-    "DESCRIPTION": "手札のカード1枚を 廃棄 する。 廃棄 したカードのコストに等しい枚数のランダムな0コストのカードを手札に加える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "手札のカード1枚を 廃棄 する。 廃棄 したカードのコスト+1に等しい枚数のランダムな0コストのカードを手札に加える。 NL 廃棄 。"
+    "DESCRIPTION": "カードを1枚引く。 カード1枚を 廃棄 する。 廃棄 したカードのコストに等しい枚数のランダムな リック カードを手札に加える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "カードを1枚引く。 カード1枚を 廃棄 する。 廃棄 したカードのコスト+1に等しい枚数のランダムな リック カードを手札に加える。 NL 廃棄 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "複製フォーム",
-    "UPGRADE_DESCRIPTION": "この戦闘中最大HPの半分を失う。 NL 各ターンに [E] を得る。 NL 各ターン、初めて敵を対象とするカードをプレイすると、2回プレイされる。",
-    "DESCRIPTION": "この戦闘中最大HPの半分を失う。  NL 敵を対象とする各ターンにプレイする最初のカードは、2回プレイされる。",
+    "UPGRADE_DESCRIPTION": "!M! HPを失い、この戦闘中最大HPを　!M! 失う。 NL 毎ターン [E] を得る。 NL 各ターン初めて敵を対象とするカードは2回プレイされる。",
+    "DESCRIPTION": "!M! HPを失い、この戦闘中最大HPを　!M! 失う。 NL 毎ターン [E] を得る。 NL 各ターン初めて敵を対象とするカードは2回プレイされる。",
     "EXTENDED_DESCRIPTION": [
       "ヘルスが... 必要だ..."
     ]
@@ -118,7 +118,7 @@
   "Slimebound:Recollect": {
     "NAME": "回想",
     "DESCRIPTION": "!B! ブロック を得る。 NL 廃棄されたコスト0のカードをランダムに1枚手札に戻す。",
-    "UPGRADE_DESCRIPTION": "!B! ブロック を得る。 NL 廃棄されたコスト0のカードをランダムに1枚手札に戻す。 ",
+    "UPGRADE_DESCRIPTION": "!B! ブロック を得る。 NL 廃棄されたコスト0のカードをランダムに2枚手札に戻す。 ",
     "EXTENDED_DESCRIPTION": [
       "廃棄なんて... させない..."
     ]
@@ -129,13 +129,13 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "グロースパンチ",
-    "DESCRIPTION": "!D! ダメージを与える。 NL このカードのダメージを永続的に!M! 増加させる。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL !B! ブロック を得る。 NL このカードのダメージを永続的に !M! 増加させる。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL このカードのダメージを永続的に !M! 増加させる。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL !B! ブロック を得る。 NL このカードのダメージと ブロック を永続的に !M! 増加させる。 NL 廃棄 。"
 
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "作戦の確認",
-    "DESCRIPTION": "手札に4枚のランダムなタックルカードを加える。それらのカードのコストは戦闘中1低下する。 NL 廃棄 。"
+    "DESCRIPTION": "手札に4枚のランダムなタックルカードを加える。 それらのカードのコストは戦闘中1低下する。 NL 廃棄 。"
 
   },
   "Slimebound:Recycling": {
@@ -158,7 +158,7 @@
   },
   "Slimebound:SoTasty": {
     "NAME": "とっても美味しい！",
-    "DESCRIPTION": "!D! ダメージをランダムな敵にX回与える。手札にランダムな リック カードをX枚加える。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージをランダムな敵にX回与える。 手札にランダムな リック カードをX枚加える。 NL 廃棄 。"
   },
   "Slimebound:Regenerate": {
     "NAME": "リジェネレイト",
@@ -170,13 +170,13 @@
   },
   "Slimebound:Lick": {
     "NAME": "リック",
-    "DESCRIPTION": "弱体 !SlimeboundSlimePoison! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "弱体 !SlimeboundSlimePoison! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:HauntingLick": {
     "NAME": "ホーンティング リック",
-    "DESCRIPTION": "脆弱化 1と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "脆弱化 1と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "弱体 !M! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "弱体 !M! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:PoisonLick": {
     "NAME": "ポイズンリック",
@@ -185,13 +185,13 @@
   },
   "Slimebound:MegaLick": {
     "NAME": "メガリック",
-    "DESCRIPTION": "敵全体に、 弱体 !SlimeboundSlimePoison! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "敵全体に、 弱体 !SlimeboundSlimePoison! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "敵全体に、 脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:FocusedLick": {
     "NAME": "フォーカスリック",
-    "DESCRIPTION": "全ての弱体と毒を除去して粘液に変換する。 NL 粘液 !M! を与える。",
-    "UPGRADE_DESCRIPTION": "全ての弱体と毒を除去して粘液に変換する。 NL 粘液 !M! を与える。"
+    "DESCRIPTION": "全ての 脱力 と 毒 を除去し、	粘液 に変換する。 NL 粘液 !M! を与える。",
+    "UPGRADE_DESCRIPTION": "全ての 脱力 と 毒 を除去し、 粘液 に変換する。 NL 粘液 !M! を与える。"
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "リジュブネイトリック",
@@ -205,14 +205,16 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "プレス・ザ・アタック",
-    "DESCRIPTION": "!D! ダメージを与える。 その敵が 粘液 状態のとき、一番古いスライムの攻撃を誘発する。",    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。その敵が 粘液 状態のとき、一番古いスライムの攻撃を2回誘発する。"  },
+    "DESCRIPTION": "!D! ダメージを与える。 敵が 粘液 状態のとき、一番古いスライムの攻撃を誘発する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 敵が 粘液 状態のとき、一番古いスライムの攻撃を2回誘発する。"
+  },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "弱者を切れ",
-    "DESCRIPTION": "敵が 虚弱 を受けているとき、ブロック を全て取り除き 虚弱 1を取り除く。 NL !D! ダメージを与える。"
+    "DESCRIPTION": "敵が 脆弱化 のとき、ブロック を全て取り除き 脆弱化 1を取り除く。 NL !D! ダメージを与える。"
   },
   "Slimebound:SoulSicken": {
     "NAME": "魂の痙攣",
-    "DESCRIPTION": "毒 !M! を与える。 NL 敵の 粘液 の半分を 毒 に変換する。 NL 廃棄 。",
+    "DESCRIPTION": "毒 !M! を与える。 NL 敵の 粘液 の半分を 毒 に変換する。",
     "UPGRADE_DESCRIPTION": "毒 !M! を与える。 NL 敵の 粘液 の半分を 毒 に変換する。"
   },
   "Slimebound:AcidGelatin": {
@@ -225,7 +227,9 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "美味しそう",
-    "DESCRIPTION": "!D! ダメージを与える。 敵が 粘液 状態のとき、ランダムな リック カード1枚を手札に加える。",    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 敵が 粘液 状態のとき、ランダムなアップグレードされた リック カード手札に加える。"  },
+    "DESCRIPTION": "!D! ダメージを与える。 敵が 粘液 状態のとき、ランダムな リック カード1枚を手札に加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 敵が 粘液 状態のとき、ランダムなアップグレードされた リック カード手札に加える。"
+  },
   "Slimebound:AcidTongue": {
     "NAME": "酸の舌",
     "DESCRIPTION": "粘液 を与えるたび、 毒 !M! を与える。",
@@ -233,12 +237,15 @@
   },
   "Slimebound:TendrilStrike": {
     "NAME": "トキシン・ストライク",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 毒 を持つ敵は、毒 のダメージを受け 毒 が1減少する。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 毒 を持つ敵は 毒 のダメージを2度受け、 毒 が2減少する。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージを与える。 毒 を持つ敵は、毒 のダメージを受け 毒 が1減少する。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 毒 を持つ敵は 毒 のダメージを2度受け、 毒 が2減少する。 NL 廃棄 。"
   },
   "Slimebound:FirmFortitude": {
     "NAME": "痛みを感じろ",
-    "DESCRIPTION": "次の !M! 回の自分のターンのHPを失うダメージは、代わりに相手が多くのダメージを受ける。",    "UPGRADE_DESCRIPTION": "天賦 。 NL 次の !M! 回の自分のターンのHPを失うダメージは、代わりに相手が多くのダメージを受ける。"  },
+    "DESCRIPTION": "自分のターンに初めてHPを失うダメージは、代わりに相手が多くのダメージを受ける。",
+    "UPGRADE_DESCRIPTION": "天賦 。 NL 自分のターンに初めてHPを失うダメージは、代わりに相手が多くのダメージを受ける。"
+	
+  },
   "Slimebound:AccelerateToxins": {
     "NAME": "アクセラレート・トキシン",
     "DESCRIPTION": "毒 の付与されている敵の 毒 の効果を誘発する。 NL 廃棄 。",
@@ -246,14 +253,14 @@
   },
   "Slimebound:QuickStudy": {
     "NAME": "クイックスタディ",
-    "DESCRIPTION": "手札にランダムな スパイアボス カードを1枚加える。 NL !M! のHPを失う。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "手札にランダムな スパイアボス カードを2枚加える。 NL !M! のHPを失う。 NL 廃棄 。"
+    "DESCRIPTION": "手札にランダムな スパイアボス カードを手札に1枚加える。 NL !M! のHPを失う。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "手札にランダムな スパイアボス カードを手札に2枚加える。 NL !M! のHPを失う。 NL 廃棄 。"
   },
   "Slimebound:WasteNot": {
-    "NAME": "無駄にしない",
+    "NAME": "無駄省き",
     "DESCRIPTION": "廃棄されたコスト0のカードを全て手札に戻す。 NL 廃棄 。",
     "EXTENDED_DESCRIPTION": [
-      "廃棄は... していない..."
+      "捨てては... いない..."
     ]
   },
   "Slimebound:Prepare": {
@@ -267,12 +274,12 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "ハングリータックル",
-    "DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! ダメージを受ける NL 廃棄されたランダムなコスト0のカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! ダメージを受ける NL 廃棄されたランダムなコスト0のカードを2枚手札に加える。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける。 NL 廃棄されたランダムなコスト0のカードを1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける。 NL 廃棄されたランダムなコスト0のカードを2枚手札に加える。"
   },
   "Slimebound:FinishingTackle": {
     "NAME": "フィニッシュタックル",
-    "DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! ダメージを受ける。 NL 敵が 粘液 状態のとき、 !B! ブロック を得る。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける。 NL 敵が 粘液 状態のとき、 !B! ブロック を得る。"
   },
   "Slimebound:SlimesplosionOLD": {
     "NAME": "スライム爆発",
@@ -283,22 +290,22 @@
     "DESCRIPTION": "!B! ブロック を得る。 NL このターン攻撃してきた敵に 粘液 !SlimeboundSlimed! を与える。"
   },
   "Slimebound:Slimepotheosis": {
-    "NAME": "スライムフォティオーシス",
-    "DESCRIPTION": "手札にあるカードを全てアップグレードする。カード1枚につきHPを !M! 失う。 NL 廃棄 。"
+    "NAME": "スライム神格化",
+    "DESCRIPTION": "手札のカードを全てアップグレードする。 アップグードしたカード1枚につきHPを !M! 失う。 NL 廃棄 。"
   },
   "Slimebound:ComboTackle": {
     "NAME": "コンボタックル",
-    "DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL てカードを1枚引く。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL このターンプレイした攻撃ごとにカードを１枚ドローする。 (てカードを !M! 枚引く)。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL カードを1枚引く。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL このターンにプレイしたアタックカードと同じ枚数カードを引く。 ( !M! 枚引く。)"
   },
   "Slimebound:Tackle": {
     "NAME": "タックル",
-    "DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。"
   },
   "Slimebound:GoopTackle": {
     "NAME": "グープタックル",
-    "DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与え !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなアップグレードされたタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。"
+    "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなアップグレードされたタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。"
 
   },
   "Slimebound:CorrosiveSpit": {
@@ -311,7 +318,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "スライムまみれ",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL 次のターンこの敵に対してアタックが使われたとき、 粘液 の効果は 粘液 を消費せずに適応される。"
+    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL 次のターンこの敵に対してアタックが使われたとき、 粘液 の効果は 粘液 を消費しない。"
   },
   "Slimebound:FlameTackle": {
     "NAME": "フレイムタックル",
@@ -323,7 +330,7 @@
   },
   "Slimebound:UsefulSlime": {
     "NAME": "便利なスライム！",
-    "DESCRIPTION": " てカードを2枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "カードを2枚引く。 NL 廃棄 。"
   },
   "Slimebound:RainOfGoop": {
     "NAME": "グープの雨",
@@ -341,7 +348,7 @@
   "Slimebound:ViciousTackle": {
     "NAME": "悪質タックル",
     "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! ダメージを受ける。 粘液 から2倍のダメージボーナスを得る。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与えて !SlimeboundSelfharm! のダメージを受ける。 粘液 から2倍のダメージボーナスとヒーリングボーナスを得る。"
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 粘液 から2倍のダメージボーナスと回復ボーナスを得る。"
   },
   "Slimebound:LeechEnergy": {
     "NAME": "リーチエネルギー",
@@ -350,7 +357,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "リーチライフ",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 毒 !M! を与える。 NL HP !M! を回復する。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 毒 !M! を与える。 NL HPを !M! 回復する。 NL 廃棄 。"
   },
   "Slimebound:Equalize": {
     "NAME": "均等化",
@@ -359,37 +366,37 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "破壊的なスラム",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。攻撃予定でない敵には2回ダメージを与える。"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 攻撃予定でない敵には2回ダメージを与える。"
   },
   "Slimebound:ChargeUp": {
     "NAME": "チャージアップ",
-    "DESCRIPTION": "次のターン、!B! ブロック と筋力 !M! を得る。 NL 廃棄 。"
+    "DESCRIPTION": "次のターン、!B! ブロック と 筋力 !M! を得る。 NL 廃棄 。"
   },
   "Slimebound:GuardianWhirl": {
     "NAME": "ガーディアンワール",
-    "DESCRIPTION": "敵全体に!D! ダメージを4回与える。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 !D! ダメージを3回与える。 NL 廃棄 。"
   },
   "Slimebound:DefensiveMode": {
     "NAME": "ディフェンシブモード",
-    "DESCRIPTION": "トゲ!M!を得る。 NL !B! ブロック と!B! ブロック を次のターン得る。"
+    "DESCRIPTION": "トゲ !M! を得る。 NL !B! ブロック と、 !B! ブロック を次のターン得る。"
   },
   "Slimebound:PrepareCrush": {
     "NAME": "準備:クラッシュ",
     "DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、スライムクラッシュを手札に加える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、スライムクラッシュを手札に加える。 NL 廃棄 。"
+    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] [E] と 筋力 !M! を得て、スライムクラッシュを手札に加える。 NL 廃棄 。"
   },
   "Slimebound:SlimeCrush": {
     "NAME": "スライムクラッシュ！！！",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 次の自分のターンをスキップする。 NL 廃棄 。"
+    "DESCRIPTION": "エセリアル 。 NL !D! ダメージを与える。 NL 廃棄 。"
   },
   "Slimebound:Icky": {
     "NAME": "べとべと",
-    "DESCRIPTION": "使用不可 。 NL このカードを引いたとき、スライム を手札に加える。"
+    "DESCRIPTION": "使用不可 。 NL このカードを引いたとき、状態異常:粘液を手札に加える。"
   },
   "Slimebound:PrepareDivider": {
     "NAME": "準備:分割",
     "DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、手札に 分割を加える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、手札に分割を加える。  NL 廃棄 。"
+    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] [E] と 筋力 !M! を得て、手札に分割を加える。  NL 廃棄 。"
   },
   "Slimebound:Hexaburn": {
     "NAME": "ヘキサバーン",
@@ -400,23 +407,23 @@
   "Slimebound:PrepareBeam": {
     "NAME": "準備:ビーム",
     "DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、手札にハイパービームを加える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、手札にハイパービームを加える。 NL 廃棄 。"
+    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] [E] と 筋力 !M! を得て、手札にハイパービームを加える。 NL 廃棄 。"
   },
   "Slimebound:SlimeBeam": {
     "NAME": "スライムビーム",
-    "DESCRIPTION": "敵全体に!D! ダメージを与える。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 !D! ダメージを与える。 NL 廃棄 。"
   },
   "Slimebound:Flail": {
     "NAME": "フレイル",
-    "DESCRIPTION": "敵全体に!D! ダメージを2回与える。 NL アーティファクト !M! を得る。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 !D! ダメージを2回与える。 NL アーティファクト !M! を得る。 NL 廃棄 。"
   },
   "Slimebound:DefensiveStance": {
     "NAME": "ディフェンシブスタンス",
-    "DESCRIPTION": "!B! ブロック を得る。 NL 各ターンの終わりに !M! ブロック を得る。"
+    "DESCRIPTION": "!B! ブロック を得る。 NL 毎ターンの終わりに !M! ブロック を得る。"
   },
   "Slimebound:FaceSlap": {
     "NAME": "平手打ち",
-    "DESCRIPTION": "敵の ブロック を全て消す。 NL !D! ダメージを与える。 脆弱化 !M!を与える。 NL 廃棄 。"
+    "DESCRIPTION": "敵の ブロック を全て取り除く。 NL !D! ダメージを与える。 弱体 !M!を与える。 NL 廃棄 。"
   },
   "Slimebound:LastStand": {
     "NAME": "最後の砦",
@@ -425,12 +432,12 @@
       "とっても... 元気..."
     ] },
   "Slimebound:Collect": {
-    "NAME": "コレクション",
+    "NAME": "収集",
     "DESCRIPTION": "筋力 !M! と 効力 1を得る。 NL !B! ブロック を得る。 NL 廃棄 。"
   },
   "Slimebound:YouAreMine": {
     "NAME": "お前は私のものだ！",
-    "DESCRIPTION": "敵全体に 弱体 !M! と 脆弱化 を与え、ブロック を全て取り除く。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 脱力 !M! と 弱体 を与え、 ブロック を全て取り除く。 NL 廃棄 。"
   },
   "Slimebound:OozeBath": {
     "NAME": "ウーズバス",
@@ -439,33 +446,33 @@
   },
   "Slimebound:CaCaw": {
     "NAME": "カーカー!",
-    "DESCRIPTION": "ターン開始時に 筋力 !M! を得る。",
-    "UPGRADE_DESCRIPTION": "筋力 !M! を得る。 NL ターン開始時に 筋力 !M! を得る。"
+    "DESCRIPTION": "ターン開始時、 筋力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "筋力 !M! を得る。 NL ターン開始時、 筋力 !M! を得る。"
   },
   "Slimebound:DarkVoid": {
     "NAME": "ダークヴォイド",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。 敵が攻撃しないとき、 筋力 1を得る。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 !D! ダメージを与える。 敵が攻撃しないとき、 筋力 1を得る。 NL 廃棄 。"
   },
   "Slimebound:TimeRipple": {
     "NAME": "時の乱れ",
-    "DESCRIPTION": "!B! ブロック を得る。 NL 敵全体に スロー を与える。 NL 廃棄 。"
+    "DESCRIPTION": "!B! ブロック を得る。 NL 敵全体に、 スロー を与える。 NL 廃棄 。"
   },
   "Slimebound:HeadSlam": {
-    "NAME": "ヘッドスライム",
-    "DESCRIPTION": "!D! ダメージを与える。 その敵がボスでないとき、スタンさせる。 NL 廃棄 。"
+    "NAME": "ヘッドスラム",
+    "DESCRIPTION": "ボスには !D! ダメージを与える。 ボス以外はスタンさせる。 NL 廃棄 。"
   },
   "Slimebound:ManipulateTime": {
     "NAME": "時間操作",
     "DESCRIPTION": "ターン開始時に発動する効果を全て誘発する。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "ターン開始時に発動する効果を全て誘発する。その後もう一度誘発する。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL ターン開始時に発動する効果を全て誘発する。 NL 廃棄 。",
     "EXTENDED_DESCRIPTION": [
       "もう... 遅い..."
     ]
   },
   "Slimebound:DonusPower": {
     "NAME": "ドヌーの力",
-    "DESCRIPTION": "筋力 1を得る。 NL ランダムなアタックカードを1枚手札に加える。そのカードのコストはこのターン0になる。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "筋力 1と アーティファクト 1を得る。 NL ランダムなアタックカードを1枚手札に加える。そのカードのコストはこのターン0になる。 NL 廃棄 。"
+    "DESCRIPTION": "筋力 1を得る。 NL ランダムなアタックカードを1枚手札に加える。 そのカードのコストはこのターン0になる。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "筋力 1と アーティファクト 1を得る。 NL ランダムなアタックカードを1枚手札に加える。 そのカードのコストはこのターン0になる。 NL 廃棄 。"
   },
   "Slimebound:DecasProtection": {
     "NAME": "デカの守り",
@@ -474,57 +481,57 @@
   },
   "Slimebound:PolyBeam": {
     "NAME": "ポリビーム",
-    "DESCRIPTION": "!D! ダメージを2回与える NL 次のターン開始時に、!D! ダメージを2回与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを2回与える。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージを2回与える。 NL 次のターン開始時に、!D! ダメージを2回与える。 NL 廃棄 。",
+  "UPGRADE_DESCRIPTION": "!D! ダメージを2回与える。 NL 廃棄 。"
   },
   "Slimebound:Sear": {
     "NAME": "焼印",
-    "DESCRIPTION": "!D! ダメージを与える。さらに毎ターン!M!のダメージを与える。 NL 廃棄 。"
+    "DESCRIPTION": "!D! ダメージを与える。 さらに毎ターン !M! のダメージを与える。 NL 廃棄 。"
   },
   "Slimebound:StudyAutomaton": {
-    "NAME": "学習オートマトン",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなオートマトンカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたオートマトンカードを1枚手札に加える。"
+    "NAME": "オートマトンの研究",
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「オートマトンカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「オートマトンカード」を1枚手札に加える。"
   },
   "Slimebound:StudyTheSpire": {
     "NAME": "スタディ・ザ・スパイア",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなスパイアボスカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなアップグレードされたスパイアボスカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな スパイアボス カードを1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムなアップグレードされた スパイアボス カードを1枚手札に加える。"
   },
   "Slimebound:StudyAwakened": {
     "NAME": "目覚めし者の研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムな目覚めし者カードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた目覚めし者カードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「目覚めし者カード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「目覚めし者カード」を1枚手札に加える。"
   },
   "Slimebound:StudyChamp": {
     "NAME": "チャンプの研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなチャンプカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたチャンプカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「チャンプカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「チャンプカード」を1枚手札に加える。"
   },
   "Slimebound:StudyCollector": {
     "NAME": "コレクターの研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなコレクターカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたコレクターカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「コレクターカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「コレクターカード」を1枚手札に加える。"
   },
   "Slimebound:StudyGuardian": {
     "NAME": "ガーディアンの研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなガーディアンカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたガーディアンカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「ガーディアンカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「ガーディアンカード」を1枚手札に加える。"
   },
   "Slimebound:StudyHexaghost": {
     "NAME": "へクサゴーストの研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなへクサゴーストカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたへクサゴーストカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「へクサゴーストカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「へクサゴーストカード」を1枚手札に加える。"
   },
   "Slimebound:StudyShapes": {
     "NAME": "デカ＆ドヌーの研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなデカ＆ドヌーカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたデカ＆ドヌーカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「デカ＆ドヌーカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「デカ＆ドヌーカード」を1枚手札に加える。"
   },
   "Slimebound:StudyTimeEater": {
     "NAME": "タイムイーターの研究",
-    "DESCRIPTION": "!M! ターンの間、ターン開始時にランダムなタイムイーターカードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされたタイムイーターカードを1枚手札に加える。"
+    "DESCRIPTION": "次の !M! ターンの間、ターン開始時にランダムな「タイムイーターカード」を1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "ターン開始時にランダムなアップグレードされた「タイムイーターカード」を1枚手札に加える。"
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "征服",

@@ -2,15 +2,15 @@
   "Slimebound:SlimedPotion": {
     "NAME": "スライムの瓶",
     "DESCRIPTIONS": [
-      "粘液 を #b",
-      " 与える。"
+      "粘液 #b",
+      " を与える。"
     ]
   },
 
   "Slimebound:SlimyTonguePotion": {
     "NAME": "スライミーエリクサー",
     "DESCRIPTIONS": [
-      "粘液 与えるとき度、さらに 粘液 #b",
+      "粘液 与えるとき、さらに 粘液 #b",
       " を与える。"
     ]
   },
@@ -19,7 +19,7 @@
     "NAME": "ボトル入りミニオン",
     "DESCRIPTIONS": [
       "ランダムなスライムを",
-      "　産み出す"
+      "　産み出す。"
     ]
   },
 
