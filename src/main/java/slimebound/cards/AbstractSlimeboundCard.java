@@ -44,43 +44,47 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
 
 
     public void upgradeSlimed(int amount) {
+        this.slimed += amount;
+
         if (AbstractDungeon.player != null) {
-            if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this))
-            this.baseSlimed += amount;
-            this.slimed = this.baseSlimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
-            if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
+            if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this)){
+                this.slimed += SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+            }
+
         }
+        if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
+
     }
 
     public void upgradeLickSlimed(int amount) {
+        /*
         if (AbstractDungeon.player != null) {
             if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this))
                 this.baseSlimed += amount;
             this.slimed = this.baseSlimed + SlimeboundMod.getGluttonyBonus(AbstractDungeon.player);
             if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
         }
+        */
     }
 
     public void upgradeSelfDamage(int originalAmount){
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this))
+
+        if (AbstractDungeon.player != null) {
+                if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this)){
                     this.selfDamage = originalAmount + SlimeboundMod.getTackleSelfDamageBonus(AbstractDungeon.player);
-                if (this.selfDamage < 0) this.selfDamage = 0;
-                if (this.selfDamage < originalAmount) {
-                    this.isSelfDamageModified = true;
-                } else {
-                    this.isSelfDamageModified = false;
+                    if (this.selfDamage < 0) this.selfDamage = 0;
+
+                    if (this.selfDamage > originalAmount) {
+                        this.isSelfDamageModified = true;
+                    } else {
+                        this.isSelfDamageModified = false;
+                    }
                 }
+
             }
+
         }
 
-
-
-    public void unlock() {
-        SlimeboundMod.logger.info("Unlocked.");
-        this.isLocked = false;
-
-    }
 
 
 

@@ -104,13 +104,13 @@
   },
 "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
+    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
-  "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
+  "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL The first card you play each turn that targets enemies is played twice.",
   "EXTENDED_DESCRIPTION": [
       "Need... Health..."
     ]
@@ -223,7 +223,7 @@
   },
 "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\"."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\" (including Exhausted cards)."
   },
 "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
@@ -242,7 +242,7 @@
 },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
-    "DESCRIPTION": "The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead.",
+    "DESCRIPTION": "The first time you would take damage or lose HP on each of YOUR turns, an enemy takes that much damage instead.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
 
   },
@@ -295,8 +295,8 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Upgrade a random card in your hand for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Upgrade 2 random cards in your hand for the rest of combat."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card for each Attack played this turn (Draws !M! cards)."
   },
   "Slimebound:Tackle": {
     "NAME": "Tackle",
@@ -330,7 +330,7 @@
   },
 "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
-    "DESCRIPTION": "Gain [E] [E]. NL Exhaust."
+    "DESCRIPTION": "Draw 2 Cards. NL Exhaust."
   },
 "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
@@ -353,8 +353,8 @@
 "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
     "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw a card if the enemy has Poison. Gain [E] if they have Goop."
-  },
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] and draw 2 cards if the enemy has Goop."
+},
 "Slimebound:LeechLife": {
     "NAME": "Leech Life",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Heal !M! HP. NL Exhaust."
@@ -607,6 +607,6 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
-    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 more damage to you."
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 2 more damage to you."
   }
 }

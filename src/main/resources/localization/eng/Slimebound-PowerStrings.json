@@ -274,9 +274,9 @@
 	"Slimebound:FirmFortitudePower": {
 		"NAME": "Feel Our Pain",
 		"DESCRIPTIONS": [
-			"The next time you would lose HP on your turn, an enemy takes that much damage instead.",
+			"The next time you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
 			"The next ",
-			" times you would lose HP on your turn, an enemy takes that much damage instead.",
+			" times you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
 			" NL This effect can be triggered ",
 			" more times this turn.",
 			" more time this turn.",

@@ -40,7 +40,7 @@ public class RollThrough extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 4;
+        this.baseDamage = 5;
         this.magicNumber=this.baseMagicNumber=2;
         this.selfDamage= 2;
         this.isMultiDamage=true;
@@ -80,8 +80,8 @@ public class RollThrough extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(2);
-            upgradeMagicNumber(1);
+            upgradeDamage(3);
+
         }
 
     }

@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -40,7 +41,7 @@ public class UsefulSlime extends AbstractSlimeboundCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(2));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player,2));
 
     }
 

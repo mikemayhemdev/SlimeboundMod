@@ -49,10 +49,11 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
     private static final int COST = 3;
 
     private static int upgradedamount = 1;
+    private static int baseHealthCost = 15;
 
     public DuplicatedForm() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 15;
+        this.magicNumber = this.baseMagicNumber = baseHealthCost;
         tags.add(BaseModCardTags.FORM);
 
 
@@ -62,7 +63,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
         int currentHealth = AbstractDungeon.player.currentHealth;
-        int healthCost = 15;
+        int healthCost = baseHealthCost;
 
         if (AbstractDungeon.player.hasPower(IntangiblePlayerPower.POWER_ID)){
             healthCost = 1;
@@ -114,12 +115,12 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormNoHealPower(p, p,  p.maxHealth / 2),  p.maxHealth / 2));
 
         int stack = 1;
-        if (upgraded) stack++;
+        //if (upgraded) stack++;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
 
 
-        int MaxHPActuallyLost = 15;
-        if (AbstractDungeon.player.maxHealth <= 15) {
+        int MaxHPActuallyLost = baseHealthCost;
+        if (AbstractDungeon.player.maxHealth <= baseHealthCost) {
             MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
         }
 

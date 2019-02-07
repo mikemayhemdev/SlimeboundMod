@@ -53,6 +53,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
         if (m.hasPower(SlimedPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
+            if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
 
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, 5, new Color(0.5F,0.75F,0.5F,1F)), 0.25F));
@@ -77,7 +78,9 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

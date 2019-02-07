@@ -54,7 +54,6 @@ import slimebound.potions.SlimyTonguePotion;
 import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
-import slimebound.powers.GluttonyPower;
 import slimebound.powers.TackleSelfDamagePreventPower;
 import slimebound.relics.*;
 import theAct.dungeons.Jungle;
@@ -66,7 +65,7 @@ import java.util.Properties;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber,  basemod.interfaces.OnStartBattleSubscriber {
     private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
 
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "SlimeboundImages";
@@ -84,7 +83,7 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     private static final String CHAR_BUTTON = "charSelect/button.png";
     private static final String CHAR_PORTRAIT = "charSelect/portrait.png";
-    public static int powersPlayedThisCombat;
+    public static int attacksPlayedThisTurn;
     public static boolean slimeDelay;
     public static boolean huntedTriggered;
     public static boolean scrapping;
@@ -293,11 +292,13 @@ public class SlimeboundMod implements  SetUnlocksSubscriber, AddCustomModeModsSu
 
     public static int getGluttonyBonus(AbstractCreature source) {
         int bonus = 0;
+        /*
         if (source != null) {
             if (source.hasPower(GluttonyPower.POWER_ID)) {
                 bonus = source.getPower(GluttonyPower.POWER_ID).amount;
             }
         }
+        */
         return bonus;
     }
 
@@ -963,29 +964,20 @@ public static void saveData() {
 
     }
 
-/*
+
     public void receiveCardUsed(AbstractCard c) {
 
-        if (c.type == AbstractCard.CardType.POWER) {
-            ++powersPlayedThisCombat;
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-
-                if (o.ID == TorchHeadSlime.ID) {
-                    logger.info("Sending power amount" + 1);
-                    ((TorchHeadSlime) o).applyUniqueFocus(1);
-                }
-            }
+        if (c.type == AbstractCard.CardType.ATTACK) {
+            ++attacksPlayedThisTurn;
         }
 
-
-           // this.printEnemies();
-
     }
-    */
+
 
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         slimeDelay = true;
+        attacksPlayedThisTurn = 0;
          //   this.printEnemies();
 
         return true;
@@ -997,10 +989,7 @@ public static void saveData() {
     }
 
     public void receiveOnBattleStart(AbstractRoom room) {
-        powersPlayedThisCombat = 0;
-
-
-
+        attacksPlayedThisTurn = 0;
 
     }
 

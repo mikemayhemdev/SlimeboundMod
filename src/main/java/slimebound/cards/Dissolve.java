@@ -3,6 +3,7 @@ package slimebound.cards;
 
 
 import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -46,6 +47,7 @@ public class Dissolve extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
        // AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false,this.block,1));

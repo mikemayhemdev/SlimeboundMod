@@ -154,7 +154,7 @@
 "Slimebound:DuplicatedForm": {
     "NAME": "Forme dupliquée",
     "UPGRADE_DESCRIPTION": "Perdez la moitié de vos PV max ce combat. NL Gagnez [E] chaque tour. NL Les deux premières cartes jouées chaque tour qui ciblent un ennemi sont jouées deux fois.",
-  "DESCRIPTION": "Perdez la moitié de vos PV max ce combat. NL Gagnez [E] chaque tour. NL La première carte qui cible un ennemi est jouée deux fois.",
+  "DESCRIPTION": "Perdez la moitié de vos PV max ce combat. NL La première carte qui cible un ennemi est jouée deux fois.",
   "EXTENDED_DESCRIPTION": [
       "Trop... De Santé..."
     ]
@@ -342,8 +342,8 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "Tacle Combiné",
-    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Améliore une carte aléatoire de votre main pour le reste du combat.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât !SlimeboundSelfharm! A vous même. NL Améliore 2 cartes aléatoires de votre main pour le reste du combat."
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Piochez une carte",
+    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât !SlimeboundSelfharm! A vous même. NL Piochez une carte pour chaque attaque jouée ce tour-ci (Piochez !M! cartes)."
   },
 "Slimebound:GoopTackle": {
     "NAME": "Tacle prévoyant",
@@ -373,7 +373,7 @@
   },
 "Slimebound:UsefulSlime": {
     "NAME": "Gentil Slime!",
-    "DESCRIPTION": "Gagnez [E] [E]. NL Epuisement."
+    "DESCRIPTION": "Piochez deux carte. NL Epuisement."
   },
 "Slimebound:RainOfGoop": {
     "NAME": "Pluie de dents",
@@ -399,9 +399,9 @@
   },
 "Slimebound:LeechEnergy": {
     "NAME": "Energie Vitale",
-    "DESCRIPTION": "Infligez !D! de dégât. Piochez une carte si l'ennemi à Poison.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât. Piochez une carte si l'ennemi à Poison. Gagnez [E] s'il à Slimed."
-  },
+    "DESCRIPTION": "Infligez !D! de dégât. Piochez une carte si l'ennemi à Slimed.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât. Piochez deux carte si l'ennemi à Slimed."
+},
 "Slimebound:LeechLife": {
     "NAME": "Energie Salutaire",
     "DESCRIPTION": "Infligez !D! de dégât. NL Appliquez !M! Poison. NL Soignez !M! PV. NL Epuisement."
@@ -614,6 +614,6 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "The Best Defense",
-    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 less damage to you."
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 2 more damage to you."
   }
 }

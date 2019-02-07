@@ -109,8 +109,8 @@
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "增殖形態",
-    "DESCRIPTION": "本場戰鬥中失去 !M! 點生命和 !M! 點最大生命。 NL 每回合獲得 [E] 。 NL 每回合打出的第1張目標為敵人的牌將打出2次",
-    "UPGRADE_DESCRIPTION": "本場戰鬥中失去 !M! 點生命和 !M! 點最大生命。 NL 每回合獲得 [E] [E] 。 NL 每回合打出的第1張目標為敵人的牌將打出2次",
+    "DESCRIPTION": "本場戰鬥中失去 !M! 點生命和 !M! 點最大生命。 NL 每回合打出的第1張目標為敵人的牌將打出2次",
+    "UPGRADE_DESCRIPTION": "本場戰鬥中失去 !M! 點生命和 !M! 點最大生命。 NL 每回合獲得 [E] 。 NL 每回合打出的第1張目標為敵人的牌將打出2次",
     "EXTENDED_DESCRIPTION": [
         "需要... 生命..."
       ]
@@ -269,7 +269,7 @@
   },
 "Slimebound:Grow": {
     "NAME": "生長",
-    "DESCRIPTION": "失去1個史萊姆槽位，獲得 !M! 點 力量 和 !M! 點 敏捷",
+    "DESCRIPTION": "失去1個史萊姆槽位，獲得 !M! 點 力量 和 !M! 點 敏捷"
   },
 "Slimebound:HungryTackle": {
     "NAME": "飢餓衝撞",
@@ -294,8 +294,8 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "連續衝撞",
-    "DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 本場戰鬥中 升級 1張隨機手牌",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 本場戰鬥中 升級 2張隨機手牌"
+    "DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 抽1張牌",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害，對自己造成 !SlimeboundSelfharm! 點傷害。 NL 每輪攻擊本回合抽1張牌 (抽 !M! 張牌)"
   },
 "Slimebound:Tackle": {
     "NAME": "衝撞",
@@ -329,7 +329,7 @@
   },
 "Slimebound:UsefulSlime": {
     "NAME": "實用黏液！",
-    "DESCRIPTION": "獲得 [E] [E] 。 NL 消耗"
+    "DESCRIPTION": "抽2牌。 NL 消耗"
   },
 "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
@@ -352,8 +352,8 @@
 "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
     "DESCRIPTION": "造成 !D! 點傷害。若敵人有 黏液 狀態，抽1張牌並獲得 [E]",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。若敵人有 中毒 狀態，抽1張牌。若敵人有 黏液 狀態，獲得 [E]"
-  },
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。若敵人有 黏液 狀態，抽2張牌並獲得 [E]"
+},
 "Slimebound:LeechLife": {
     "NAME": "吸取生命",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 給予 !M! 層 中毒 。 NL 回復 !M! 點生命。 NL 消耗"
@@ -605,6 +605,6 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "魯莽",
-    "DESCRIPTION": "衝撞 牌對敵人額外造成 !M! 點傷害，對自己造成的傷害增加 1 點"
+    "DESCRIPTION": "衝撞 牌對敵人額外造成 !M! 點傷害，對自己造成的傷害增加 2 點"
   }
 }
