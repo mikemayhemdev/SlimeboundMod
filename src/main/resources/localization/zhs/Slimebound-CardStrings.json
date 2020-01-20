@@ -104,13 +104,13 @@
   },
 "Slimebound:Dissolve": {
     "NAME": "裂解",
-    "DESCRIPTION": "消耗1张手牌，将等同其耗能的随机 舔舐 牌加入手牌。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "消耗1张手牌，将等同其耗能+1的随机 舔舐 牌加入手牌。 NL 消耗"
+    "DESCRIPTION": "抽 1 张牌，消耗 1 张手牌，将等同其耗能的随机 舔舐 牌加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌，消耗 1 张手牌，将等同其耗能+1的随机 舔舐 牌加入手牌。 NL 消耗"
 },
 "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
-    "DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
-    "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] 。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
+    "DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] ，你使用的第1张目标为敌人的牌将打出2次。",
+    "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
     "EXTENDED_DESCRIPTION": [
         "需要... 生命..."
       ]
@@ -200,8 +200,8 @@
   },
 "Slimebound:Gluttony": {
     "NAME": "暴食",
-    "DESCRIPTION": "每当你消耗掉敌人身上的 黏液 时，将一张随机 舔舐 牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "固有 。每当你消耗掉敌人身上的 黏液 时，将一张随机 舔舐 牌加入手牌。"
+    "DESCRIPTION": "每回合第 1 次消耗掉敌人身上的 黏液 时，将 1 张随机 舔舐 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。每回合第 1 次消耗掉敌人身上的 黏液 时，将 1 张随机 舔舐 牌加入手牌。"
   },
 "Slimebound:PressTheAttack": {
     "NAME": "强攻",
@@ -223,7 +223,7 @@
   },
 "Slimebound:TongueLash": {
     "NAME": "舌鞭",
-    "DESCRIPTION": "造成 !D! 点伤害。每拥有1张 舔舐 牌，造成额外 !M! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。每拥有 1 张 舔舐 牌（包括已消耗的），造成额外 !M! 点伤害。"
   },
 "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
@@ -274,12 +274,12 @@
   },
 "Slimebound:HungryTackle": {
     "NAME": "饥饿冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害，对自己造成 !SlimeboundSelfharm! 点伤害。 NL 随机将1张被消耗的0费牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，对自己造成 !SlimeboundSelfharm! 点伤害。 NL 随机将1张被消耗的0费牌加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害，对自身造成 !SlimeboundSelfharm! 点伤害。 NL 随机将1张被消耗的0费牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，对自身造成 !SlimeboundSelfharm! 点伤害。 NL 随机将1张被消耗的0费牌加入手牌。"
   },
 "Slimebound:FinishingTackle": {
     "NAME": "最终冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成 !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成 !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，获得 !B! 点 格挡 。"
   },
 "Slimebound:SlimesplosionOLD": {
     "NAME": "黏液爆破",
@@ -295,17 +295,17 @@
   },
 "Slimebound:ComboTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 抽一张牌",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 为每次攻击都画一张牌。 抽 !M! 张牌"
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 抽 1 张牌",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 本回合每打出 1 张攻击，额外抽 1 张牌（抽 !M! 张牌）"
   },
   "Slimebound:Tackle": {
     "NAME": "冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害，对自己造成 !SlimeboundSelfharm! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害，对自身造成 !SlimeboundSelfharm! 点伤害。"
   },
 "Slimebound:GoopTackle": {
     "NAME": "开幕冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 随机将1张 冲撞 牌加入你的手牌。它的耗能变为0。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 随机将1张 升级 过的 冲撞 牌加入你的手牌。它的耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 随机将1张 冲撞 牌加入你的手牌。它的耗能变为0。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 随机将1张 升级 过的 冲撞 牌加入你的手牌。它的耗能变为0。"
 
 },
 "Slimebound:CorrosiveSpit": {
@@ -322,15 +322,15 @@
   },
 "Slimebound:FlameTackle": {
     "NAME": "烈焰冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 本场战斗中敌人受到的来自 冲撞 牌的伤害增加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 本场战斗中敌人受到的来自 冲撞 牌的伤害增加 !M! 。"
   },
 "Slimebound:VenomTackle": {
     "NAME": "毒液冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，给予 !M! 层 中毒 。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，给予 !M! 层 中毒 。"
   },
 "Slimebound:UsefulSlime": {
     "NAME": "实用黏液",
-    "DESCRIPTION": "抽2一张牌。 NL 消耗"
+    "DESCRIPTION": "抽 2 张牌。 NL 消耗"
   },
 "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
@@ -347,13 +347,13 @@
   },
 "Slimebound:ViciousTackle": {
     "NAME": "狂暴冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 黏液 产生的额外伤害翻倍。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自己造成  !SlimeboundSelfharm! 点伤害。 NL 黏液 产生的额外伤害和回复翻倍。"
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 黏液 产生的额外伤害翻倍。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 黏液 产生的额外伤害和回复翻倍。"
   },
 "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
-    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽一张牌，获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽2一张牌，获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽 1 张牌，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽 2 张牌，获得 [E] 。"
 },
 "Slimebound:LeechLife": {
     "NAME": "吸取生命",
@@ -607,6 +607,6 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "鲁莽",
-    "DESCRIPTION": "冲撞 牌对敌人额外造成 !M! 点伤害，对自己额外造成 2 点伤害。"
+    "DESCRIPTION": "冲撞 牌对敌人额外造成 !M! 点伤害，对自身额外造成 2 点伤害。"
   }
 }
