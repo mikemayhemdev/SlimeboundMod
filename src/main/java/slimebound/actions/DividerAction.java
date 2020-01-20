@@ -39,8 +39,8 @@ public class DividerAction extends AbstractGameAction {
         }
 
         if (this.target.currentHealth > 0) {
-            this.target.damageFlash = true;
-            this.target.damageFlashFrames = 4;
+            // this.target.damageFlash = true;
+            // this.target.damageFlashFrames = 4;
             AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect(this.target.hb.cX, this.target.hb.cY));
             if (MathUtils.randomBoolean()) {
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("GHOST_ORB_IGNITE_1", 0.3F));

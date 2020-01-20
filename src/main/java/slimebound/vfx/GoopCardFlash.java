@@ -33,17 +33,17 @@ public class GoopCardFlash extends AbstractGameEffect {
         this.isSuper = isSuper;
         this.duration = 0.5F;
         if (isSuper) {
-            this.img = ImageMaster.CARD_FLASH_VFX;
+            this.img = ImageMaster.CARD_FLASH_VFX.getTexture();
         } else {
             switch(card.type) {
                 case POWER:
-                    this.img = ImageMaster.CARD_POWER_BG_SILHOUETTE;
+                    this.img = ImageMaster.CARD_POWER_BG_SILHOUETTE.getTexture();
                     break;
                 case ATTACK:
-                    this.img = ImageMaster.CARD_ATTACK_BG_SILHOUETTE;
+                    this.img = ImageMaster.CARD_ATTACK_BG_SILHOUETTE.getTexture();
                     break;
                 default:
-                    this.img = ImageMaster.CARD_SKILL_BG_SILHOUETTE;
+                    this.img = ImageMaster.CARD_SKILL_BG_SILHOUETTE.getTexture();
             }
         }
 
@@ -61,13 +61,13 @@ public class GoopCardFlash extends AbstractGameEffect {
         this.duration = 0.5F;
         switch(card.type) {
             case POWER:
-                this.img = ImageMaster.CARD_POWER_BG_SILHOUETTE;
+                this.img = ImageMaster.CARD_POWER_BG_SILHOUETTE.getTexture();
                 break;
             case ATTACK:
-                this.img = ImageMaster.CARD_ATTACK_BG_SILHOUETTE;
+                this.img = ImageMaster.CARD_ATTACK_BG_SILHOUETTE.getTexture();
                 break;
             default:
-                this.img = ImageMaster.CARD_SKILL_BG_SILHOUETTE;
+                this.img = ImageMaster.CARD_SKILL_BG_SILHOUETTE.getTexture();
         }
 
         this.color = c;

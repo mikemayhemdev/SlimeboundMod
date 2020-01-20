@@ -24,8 +24,8 @@ public class AddPreparedAction extends AbstractGameAction {
         AbstractCard c;
 
         c = CardLibrary.getCard(Prepare.ID).makeCopy();
-        c.modifyCostForTurn(-9);
-
+        // c.modifyCostForTurn(-9);
+        c.setCostForTurn(c.cost - 9);
 
         if (upgradeCard) {
             c.upgrade();
