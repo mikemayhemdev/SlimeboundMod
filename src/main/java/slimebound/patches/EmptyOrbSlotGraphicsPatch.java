@@ -24,21 +24,15 @@ import java.util.ArrayList;
 @SpirePatch(clz= EmptyOrbSlot.class,method="updateDescription"
    )
 public class EmptyOrbSlotGraphicsPatch {
-
+	static Texture NORMAL_ORB = ImageMaster.ORB_SLOT_1;
+	static Texture SLIME_ORB = ImageMaster.loadImage("SlimeboundImages/orbs/empty1.png");
     public static void Postfix(EmptyOrbSlot EmptyOrbSlot_instance) {
-
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-
-            Texture image = (Texture) ReflectionHacks.getPrivate(EmptyOrbSlot_instance, EmptyOrbSlot.class, "img1");
-            if (image != null){
-                ReflectionHacks.setPrivate(EmptyOrbSlot_instance, EmptyOrbSlot.class, "img1", ImageMaster.loadImage("SlimeboundImages/orbs/empty1.png"));
-
-            }
-
-
+            ImageMaster.ORB_SLOT_1 = SLIME_ORB;
+        } else {
+        	ImageMaster.ORB_SLOT_1 = NORMAL_ORB;
         }
-
     }
-    }
+}
 
 
