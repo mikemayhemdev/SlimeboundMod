@@ -24,8 +24,8 @@ import java.util.ArrayList;
 @SpirePatch(clz= EmptyOrbSlot.class,method="updateDescription"
    )
 public class EmptyOrbSlotGraphicsPatch {
-	static Texture NORMAL_ORB = ImageMaster.ORB_SLOT_1;
-	static Texture SLIME_ORB = ImageMaster.loadImage("SlimeboundImages/orbs/empty1.png");
+	public static Texture NORMAL_ORB = ImageMaster.ORB_SLOT_1;
+	public static Texture SLIME_ORB = ImageMaster.loadImage("SlimeboundImages/orbs/empty1.png");
     public static void Postfix(EmptyOrbSlot EmptyOrbSlot_instance) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
             ImageMaster.ORB_SLOT_1 = SLIME_ORB;
