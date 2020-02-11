@@ -42,6 +42,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
+        this.cardsToPreview = new SlimeCrush();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
