@@ -295,7 +295,7 @@ public void spawnVFX(){
 
     public void playChannelSFX() {
 
-        CardCrawlGame.sound.play("SLIMED_ATK", 0.1F);
+        CardCrawlGame.sound.play("MONSTER_SLIME_ATTACK", 0.1F);
 
     }
 
