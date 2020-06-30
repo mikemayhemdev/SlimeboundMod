@@ -1,5 +1,5 @@
 {
-  "Slimebound:Hunted": {
+  "SlimeboundClassic:Hunted": {
     "NAME": "ボスアプローチ",
     "DESCRIPTIONS": [
       "「~裏切り者！！~という声が轟いた…… NL NL 巨大なスライムはすぐにあなたに追いつき、道を塞いでいる。 どうも奴の手下が裏切ったことが不満なようだ。 そして、あなたを見つけ吸収するためにエクソディウムを放棄したようだ。」",
@@ -11,7 +11,7 @@
       "[恐れをなして逃げる] #r呪い - #r羞恥 。"
     ]
   },
-  "Slimebound:WorldofGoop": {
+  "SlimeboundClassic:WorldofGoop": {
     "NAME": "ベトベトした世界",
     "DESCRIPTIONS": [
       "水たまりにはまる。 NL @これは@ #g@スライムの@ #g@ベトベト@ @で@ @できている！！@ NL 冷静に、あなたは自分自身をベトベトと継ぐように入浴した。一時的な救済を楽しんで。 NL NL よじ登ると、不幸な冒険者が残した山のような #yゴールド と、輝く金属に魅了されている奇妙な生き物がプール内にいる。",
@@ -24,7 +24,7 @@
       "[離れる]"
     ]
   },
-  "Slimebound:SlimeTalk": {
+  "SlimeboundClassic:SlimeTalk": {
     "NAME": "文字列",
     "DESCRIPTIONS": [
       "~ミニオン...~ NL #r~裏切り者！！~",
@@ -41,7 +41,7 @@
       "~良い~ #r~帽子だな！！~"
     ]
   },
-  "Slimebound:ScrapOozePatch": {
+  "SlimeboundClassic:ScrapOozePatch": {
     "NAME": "スクラップウーズの選択",
     "DESCRIPTIONS": [
       "別の道を見つけたスライムはあなたの友達だ。 スクラップウーズが新たなスクラップと宝を差し出して仲間になる。"
@@ -52,7 +52,7 @@
       "[離れる]"
     ]
   },
-  "Slimebound:ArtOfSlimeWar": {
+  "SlimeboundClassic:ArtOfSlimeWar": {
     "NAME": "スライム戦争の絵画",
     "DESCRIPTIONS": [
       "#g輝く本 の置かれたおぞましい台座を見つけた。 #gスライムのボス やそのミニオンが使っている複雑で高度な戦闘技術について書かれているようだ。",

@@ -2,14 +2,838 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95595d9d-626c-4245-92ca-eee3427eedf3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/STSSlimeMod.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/META-INF/maven/slimeboundmod/slimeboundmod/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/META-INF/maven/slimeboundmod/slimeboundmod/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/SlimeboundMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/AddPreparedAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/CheckForSixHexAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/CoordinateAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/CopyCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/DissolveAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/DividerAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/DoublePoisonSlimedWeakAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/ExhumeToDrawAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/FinishingTackleAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/FormABlockadeAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/GangUpAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/MakeTempCardInHandActionReduceCost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/MassFeedAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/MassRepurposeAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/MorphCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/MultiLickAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/OverexertionAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/PlayExhausted0CostAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/PreventCurrentOverMaxHealthAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomAutomatonCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomAwakanedCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomChampCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomCollectorCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomGuardianCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomHexaghostCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomLickCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomShapesCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomStudyCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/RandomTimeEaterCardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/ReturnRandom0Cost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/SlimeAutoAttack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/SlimeAutoCultistBuff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/SlimeBuffUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/SlimeSpawnAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/SlimepotheosisAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/SlimesplosionAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/TendrilFlailAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/TriggerSlimeAttacksAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/TriggerStartOfTurnEffectsAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/TrigggerSpecificSlimeAttackAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/actions/VampireIntoBlockDamageAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/AbstractSlimeboundCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/AcidGelatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/AcidGelatin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/AcidTongue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/AcidTongue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/BestDefense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/BestDefense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/CaCaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/CaCaw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ChargeUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/ChargeUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/CheckThePlaybook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Chomp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Chomp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Collect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Collect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ComboTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/ComboTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/CorrosiveSpit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/CorrosiveSpit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DarkVoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/DarkVoid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DecasProtection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Defend_Slimebound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DefensiveMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/DefensiveMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DefensiveStance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DisruptingSlam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/DisruptingSlam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Dissolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Dissolve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DivideAndConquer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DivideAndConquerConquer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DivideAndConquerDivide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DonusPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/DonusPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DouseInSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/DouseInSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/DuplicatedForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/DuplicatedForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Equalize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Equalize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/FaceSlap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/FaceSlap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/FeelOurPain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/FeelOurPain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/FinishingTackle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Flail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Flail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/FlameTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/FlameTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/FormOfPuddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/FormOfPuddle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Gluttony.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Gluttony.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/GoopArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/GoopArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/GoopSpray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/GoopSpray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/GoopTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/GoopTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Grow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Grow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/GrowthPunch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/GrowthPunch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/GuardianWhirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/GuardianWhirl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/HauntingLick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/HauntingLick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/HeadSlam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/HeadSlam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Hexaburn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Hexaburn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/HungryTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/HungryTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Icky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Icky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ItLooksTasty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/ItLooksTasty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LastStand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LastStand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LeadByExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LeadByExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LeechEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LeechEnergy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LeechLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LeechLife.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LeechingTouch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LeechingTouch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LevelUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LevelUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Lick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Lick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/LivingWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/LivingWall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ManipulateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/ManipulateTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/MassFeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/MassFeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/MassRepurpose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/MassRepurpose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/MegaLick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/MegaLick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/MinionMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/MinionMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/OozeBath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/OozeBath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Overexert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Overexert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/PoisonLick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/PoisonLick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/PolyBeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/PolyBeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Prepare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Prepare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/PrepareCrush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/PrepareCrush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/PressTheAttack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ProtectTheBoss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/QuickStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/QuickStudy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/RainOfGoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/RainOfGoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Recollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Recollect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Recycling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Recycling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/RejuvenatingLick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Replication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Replication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Repurpose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Repurpose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/RollThrough.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/RollThrough.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SamplingLick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SamplingLick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Sear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Sear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SelfFormingGoo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ServeAndProtect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ServeAndProtectProtect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ServeAndProtectServe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeBarrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SlimeBarrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeBeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SlimeBeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeBrawl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SlimeBrawl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeCrush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SlimeCrush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeSpikes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SlimeSpikes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SlimeTap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SlimeTap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SoulSicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SoulSicken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Split.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Split.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitAcid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SplitAcid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitBronze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SplitBronze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitBruiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SplitBruiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitCultist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SplitCultist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitGhostflame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitLeeching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SplitLeeching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitLicking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SplitLicking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SplitTorchHead.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Strike_Slimebound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/StudyTheSpire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/StudyTheSpire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/SuperSplit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/SuperSplit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Tackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Tackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/Teamwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/Teamwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/TendrilStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/TendrilStrike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/TimeRipple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/TimeRipple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/TongueLash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/TongueLash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/UsefulSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/UsefulSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/VenomTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/VenomTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/ViciousTackle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/ViciousTackle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/WasteNot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/WasteNot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/YouAreMine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/YouAreMine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzAbsorbAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/zzzAbsorbAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzAccelerateToxins.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzDuplicateSlimes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzFocusedLick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzGangUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/zzzGangUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzMaxSlimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/zzzMaxSlimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzPrepareBeam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzPrepareDivider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzRollThrough.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzSlimeSlamOLD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzSlimepotheosis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzSlimesplosion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzSoTasty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/zzzSoTasty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStrayGoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/zzzStrayGoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStrikeFrailPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyAutomaton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyAwakened.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyChamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/cards/zzzStudyChamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyCollector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyGuardian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyHexaghost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyShapes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/cards/zzzStudyTimeEater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/dailymods/AllSplit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/events/ArtOfSlimeWar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/events/Hunted.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/events/WorldOfGoopSlimebound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/helpers/PoisonVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/helpers/SelfDamageVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/helpers/SlimeboundTags.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/helpers/SlimedVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/monsters/AcidSlimeLDailyMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/monsters/SlimeBossDailyMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/monsters/SpikeSlimeLDailyMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/AttackSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/AttackSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/BronzeSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/BronzeSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/CultistSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/CultistSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/GreedOozeSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/GreedOozeSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/HexSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/HexSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/PoisonSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/PoisonSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/ScrapOozeSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/ScrapOozeSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/ShieldSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/ShieldSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/SlimingSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/SlimingSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/SpawnedSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/SpawnedSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/TorchHeadSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/TorchHeadSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/orbs/zzzDebuffSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/orbs/zzzDebuffSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/AbstractCardEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/CampfirePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/CityBGPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/CityRemoveEventPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/CombatDrawPositionPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/EmptyOrbSlotGraphicsPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/EnergyPanelMovePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/EvokeOrbPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/GoopGlowEffectPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/HealthBarRenderBackPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/IntangiblePuddlePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/JungleBGPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/LibraryTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/MakeUsefulSlimeInHandPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/OrbPositionPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/PreBlockPowersTriggerPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/RefreshEnergyEffectMovePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/RenderHealthTextPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SadisticNaturePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/ScrapOozePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/ScrapOozePatchPre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeBossCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeBossMaxHPChange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkAcidL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkAcidM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkAcidS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkCollector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkDark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkSpikeL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkSpikeM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeTalkSpikeS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeboundEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/SlimeboundMetricsPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/StrikeEffectPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/TokeOptionPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/TokePatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/UnlockDebugPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/patches/VictoryPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/potions/SlimedPotion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/potions/SlimyTonguePotion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/potions/SpawnSlimePotion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/potions/ThreeZeroPotion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/AcidTonguePowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/AwakenedOnePower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/BuffAttackSlimesPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/BuffSecondarySlimeEffectsPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/BuffShieldSlimesPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/BuffSlimingSlimesPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/ComboAttackPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormEnergyPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormNoHealPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/DuplicatedFormPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/EnergizedSlimeboundPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/FirmFortitudePower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GluttonyPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GoopArmorPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GoopIntoPoisonPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/GreedRespawnPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/HexSlimePerTurnPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/LoseSlimesPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/LoseThornsPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnBlockAndGoopPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainDivider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainHyperBeam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainSlimeCrush.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/NextTurnGainStrengthPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/PolyBeamAgainPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/PolyBeamAgainPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/PotencyPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/PreventSlimeDecayPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/RecyclingPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/RecyclingPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/RetainCardsOneTurnPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/ScrapRespawnPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SearingPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SelfDamageSlimedPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SelfFormingGooPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimeRitualPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimeSacrificePower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimedPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SlimedThornsPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/SplitDailyTriggerPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAutomatonPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAwakenedPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyAwakenedPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyChampPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyChampPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyCollectorPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyCollectorPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyGuardianPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyGuardianPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyHexaghostPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyHexaghostPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyShapesPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StudyTimeEaterPowerUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/StunnedPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/TackleBuffPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/TackleDebuffPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/powers/TackleSelfDamagePreventPower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/AbsorbEndCombat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/AbsorbEndCombatUpgraded.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/AggressiveSlimeRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/DailySplitModRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/GreedOozeRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/MaxSlimesRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/PotencyRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/PreparedRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/ScrapOozeRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/SelfDamagePreventRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/SlimedSkullRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/SlimedTailRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/relics/StudyCardRelic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/ui/ScrapBonfireOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/ui/ScrapBonfireOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/DoubleSlimeParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/DoubleSlimeParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/FakeFlashAtkImgEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/FakeFlashAtkImgEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/GoldCoinsParticle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/GoopCardFlash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/GoopCardFlash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/GreedGlowParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/GreedGlowParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/GreenBeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/GreenBeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/GreenBeamEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/GreenBeamEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/LeechEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/LeechEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/LeechEffectParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/LeechEffectParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/LickEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/LickEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/ScrapGlowParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/ScrapGlowParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/ScrapParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/ScrapParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SearEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SearEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/ShieldParticleEffectInFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/ShieldParticleEffectInFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeBuffParticleEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeBuffParticleEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeDeathParticleEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeDeathParticleEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeDripsEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeDripsEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeDripsEffectPurple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeDripsEffectPurple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeFlareEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeFlareEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeIntentEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeIntentEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeIntentMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeIntentMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeIntentMovementEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeIntentMovementEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeIntentParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeIntentParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeProjectileEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeProjectileEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeSpawnProjectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeSpawnProjectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeSpawnProjectileDeath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeSpawnProjectileDeath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeWaterDropEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeWaterDropEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SlimeWaterDropEffectPurple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SlimeWaterDropEffectPurple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SticksParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SticksParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/SticksParticleRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slimeboundclassic/vfx/SticksParticleRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slimebound/vfx/TinyHatParticle.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/1024/bg_attack_slimebound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/1024/bg_power_slimebound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/1024/bg_power_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/1024/bg_skill_slimebound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/1024/card_slimebound_orb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/512/bg_attack_slimebound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/512/bg_power_slimebound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/512/bg_skill_slimebound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/512/card_slimebound_orb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/512/card_small_orb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/badge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/QuickStudy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/QuickStudy_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/absorball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/absorball_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/acceleratetoxins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/acceleratetoxins_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/acidgelatin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/acidgelatin_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/acidtongue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/acidtongue_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/alltogether.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/alltogether_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/attackSlime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/attackSlime_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/bodyblow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/bodyblow_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/chargeup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/chargeup_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/chomp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/chomp_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/circleofpower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/circleofpower_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/collect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/collect_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/conquer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/conquer_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/coordinatedstrike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/coordinatedstrike_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/corrosivespit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/corrosivespit_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/corrosivetackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/corrosivetackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/darkvoid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/darkvoid_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/defendSlime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/defendSlime_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/defensivemode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/defensivemode_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/defensivestance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/defensivestance_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/dissolve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/dissolve_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/divider.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/divider_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/doubleeverything.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/doubleeverything_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/douseinslime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/douseinslime_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/duplicatedform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/duplicatedform_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/duplicateslimes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/duplicateslimes_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/efficiency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/efficiency_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/eventtackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/eventtackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/faceslap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/faceslap_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/finishingtackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/finishingtackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/firmfortitude.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/firmfortitude_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/flail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/flail_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/flametackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/flametackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/focusedlick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/focusedlick_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/formablockade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/formablockade_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/formofpuddle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/formofpuddle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/gluttony.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/gluttony_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/goopspray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/goopspray_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/grow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/grow_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/guardianwhirl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/guardianwhirl_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/hardened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/hardened_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/hauntinglick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/hauntinglick_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/headslam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/headslam_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/hyper_beam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/hyper_beam_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/icky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/icky_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/itlookstasty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/itlookstasty_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/knowledgepool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/knowledgepool_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/laststand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/laststand_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/leechenergy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/leechenergy_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/leechingstrike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/leechingstrike_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/leechingtouch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/leechingtouch_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/levelup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/levelup_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/lick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/lick_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/makesomeroom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/makesomeroom_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/massfeed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/massfeed_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/megalick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/megalick_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/minionmaster.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/minionmaster_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/morphcard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/morphcard_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/morpheverything.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/morpheverything_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/overexertion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/overexertion_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/playbook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/playbook_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/poisonlick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/poisonlick_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/poisontackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/poisontackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/polybeam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/polybeam_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/prepare.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/prepare_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/preparedivider.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/preparedivider_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/preparingbeam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/preparingbeam_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/preparingcrush.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/preparingcrush_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/protect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/protect_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/quickspikes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/quickspikes_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/quicktackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/quicktackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/rainofgoop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/rainofgoop_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/rapidheal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/rapidheal_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/reckless.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/reckless_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/recollect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/recollect_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/recycling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/recycling_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/retaliate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/retaliate_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/ripple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/ripple_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/ritual.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/ritual_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/rollthrough.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/rollthrough_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/samplinglick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/samplinglick_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/sear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/sear_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/sickeningtendril.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/sickeningtendril_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimebarrage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimebarrage_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimecrush.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimecrush_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimepotheosis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimepotheosis_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimepunch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimepunch_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimesacrifice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimesacrifice_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimetap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimetap_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimewave.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/slimewave_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/spiked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/spiked_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/split_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitaggressive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitaggressive_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitbronze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitbronze_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitbruisertoxic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitbruisertoxic_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitcultist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitcultist_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splithex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splithex_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitlicking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitlicking_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitlickingshield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitlickingshield_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitshield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitshield_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitsludging.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splitsludging_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splittingstrike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splittingstrike_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splittorchhead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splittorchhead_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splittoxic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/splittoxic_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/squareofprotection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/squareofprotection_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/stoptime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/stoptime_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/straygoop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/straygoop_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/strikefrail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/strikefrail_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/strikeweak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/strikeweak_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyautomaton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyautomaton_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyawakened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyawakened_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studychamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studychamp_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studycollector.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studycollector_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyguardian.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyguardian_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyhexaghost.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyhexaghost_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyshapes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyshapes_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyspire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studyspire_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studytimeeater.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/studytimeeater_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/supersplit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/supersplit_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tackle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tackle_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tendrilflail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tendrilflail_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tendrillash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tendrillash_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tendrilstrike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tendrilstrike_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tonguelash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/tonguelash_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/usefulslime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/usefulslime_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/violentstop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/violentstop_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/wastenot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/wastenot_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/youaremine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/cards/youaremine_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/corpse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer1d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer2d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer3d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer4d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer5d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/layer6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/orb/vfx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/shoulder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/shoulder2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeleton.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeleton.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeleton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/char/skeletonPuddle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/charSelect/button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/charSelect/emptyButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/charSelect/portrait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/events/hunted.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/events/hunted.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/events/slimeTome.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/Torchhead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/aggressive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/attackBuff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/attackDebuff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/attackDefend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/bronzeslime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/cultist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/cultistleftstick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/debuff1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/debuff2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/empty1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/hex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/licking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/poisonous.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/sleep.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/orbs/sliming.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/AcidTongue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/AcidTongueP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/AcidTongueS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/BuffAttackSlimes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/BuffPoisonSlimes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/BuffSlimingSlimes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/BuffWeakenSlimes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Burning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/BurningS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/DelayedAttack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/DelayedAttackSmall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/DuplicatedEcho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/DuplicatedEchoS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/DuplicatedEnergy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/DuplicatedEnergyS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/EnergyNextTurnS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/FirmFortitude.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Gluttony.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/GluttonyS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/GreedRespawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Halved.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/HalvedS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/HasteSmall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/LivingWallS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Malleable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/PoisonThorns.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/PoisonThornsS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/PrepareCard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/PrepareCardS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Recycling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/RecyclingS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/ScrapRespawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Sleep.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/SleepSmall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/SlimeSacrifice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/SlimeSacrificeS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/Slimed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/SlimedS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/SplitForLess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/SplitForLessS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyAutomaton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyAutomatonS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyAwakened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyAwakenedS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyChamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyChampS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyCollector.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyCollectorS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyGuardian.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyGuardianS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyHexaghost.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyHexaghostS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyShapes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyShapesS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyTimeEater.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/StudyTimeEaterS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/TackleDebuff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/ThornsDown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/ThornsDownS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/darkRitual.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/excessslime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/nostalgia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/polybeampower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/potency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/recklessPower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/retaingreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/ritual.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/tackleProtection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/powers/toxicresidue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/dailysplitrelic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/dailysplitrelicOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/greedOoze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/greedOozeOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/heartofgoo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/heartofgooOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/heartofgooblack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/minion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/minionLarge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/minionOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/oozeStone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/oozeStoneLarge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/oozeStoneOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/protectiveGear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/protectiveGearOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/scrapOoze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/scrapOozeOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedSkull.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedSkullLarge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedSkullOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedTail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedTailLarge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedTailOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedTailUsed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedteaSet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedteaSetLarge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimedteaSetOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimeplushie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimeplushieLarge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/slimeplushieOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/tinybowlerhat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/tinybowlerhatOutline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/relics/tinybowlerhatinverted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/Cityscene.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/Junglescene.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/Junglescene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/scene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/scene2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/scene3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/scene5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/slimebound1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/slimebound2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/scenes/slimebound3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/ui/body7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/ui/scrapcampfire.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/ui/scrapcampfire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/ui/scrapcampfiredisabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/coins.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/coins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/cultistleftstick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/cultistrightstick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/scrap.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/scrap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/slap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/slimeball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/slimeballWhite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SlimeboundImages/vfx/tongue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/googly-eye-locations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/googly-eye-locations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-DailyModStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-DailyModStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-EventStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-EventStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-OrbStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-OrbStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-PotionStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-PotionStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/Slimebound-RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-DailyModStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-DailyModStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-EventStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-EventStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-OrbStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-OrbStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-PotionStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-PotionStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/fra/Slimebound-RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-DailyModStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-DailyModStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-EventStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-EventStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-OrbStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-OrbStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-PotionStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-PotionStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/jpn/Slimebound-RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-DailyModStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-DailyModStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-EventStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-EventStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-OrbStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-OrbStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-PotionStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-PotionStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/kor/Slimebound-RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-DailyModStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-DailyModStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-EventStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-EventStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-OrbStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-OrbStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-PotionStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-PotionStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/Slimebound-RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-DailyModStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-DailyModStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-EventStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-EventStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-OrbStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-OrbStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-PotionStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-PotionStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zht/Slimebound-RelicStrings.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +856,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/characters/SlimeboundCharacter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-727">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="1071">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/SlimeboundMod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2686">
+              <caret line="223" column="40" selection-start-line="223" selection-start-column="40" selection-end-line="223" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/events/ArtOfSlimeWar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="50" column="58" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ModTheSpire.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/monsters/SlimeBossDailyMod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -45,6 +905,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/slimeboundclassic/SlimeboundMod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/slimeboundclassic/events/ArtOfSlimeWar.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" />
+      </list>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -112,7 +981,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="slimebound" type="462c0819:PsiDirectoryNode" />
+              <item name="slimeboundclassic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="slimebound" type="b2602c69:ProjectViewProjectNode" />
@@ -120,8 +989,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="slimebound" type="462c0819:PsiDirectoryNode" />
+              <item name="slimeboundclassic" type="462c0819:PsiDirectoryNode" />
               <item name="characters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="slimebound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STSSlimeMod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="slimeboundclassic" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="slimebound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STSSlimeMod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="slimeboundclassic" type="462c0819:PsiDirectoryNode" />
+              <item name="monsters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="slimebound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STSSlimeMod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -130,6 +1024,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593485117539" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -161,9 +1056,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -171,7 +1065,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -184,7 +1078,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.15838926" />
+      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.15838926" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -199,10 +1093,38 @@
         <state relative-caret-position="-869" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/slimebound/characters/SlimeboundCharacter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/characters/SlimeboundCharacter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-727">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="1071">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/SlimeboundMod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2686">
+          <caret line="223" column="40" selection-start-line="223" selection-start-column="40" selection-end-line="223" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/events/ArtOfSlimeWar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slimeboundclassic/monsters/SlimeBossDailyMod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ModTheSpire.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>

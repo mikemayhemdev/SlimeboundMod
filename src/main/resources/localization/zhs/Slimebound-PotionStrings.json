@@ -1,5 +1,5 @@
 {
-  "Slimebound:SlimedPotion": {
+  "SlimeboundClassic:SlimedPotion": {
     "NAME": "罐装黏液",
     "DESCRIPTIONS": [
       "给予 #b",
@@ -7,7 +7,7 @@
     ]
   },
 
-  "Slimebound:SlimyTonguePotion": {
+  "SlimeboundClassic:SlimyTonguePotion": {
     "NAME": "黏液精华",
     "DESCRIPTIONS": [
       "本场战斗中，每次给予黏液时，额外给予 #b",
@@ -15,7 +15,7 @@
     ]
   },
 
-  "Slimebound:SpawnSlimePotion": {
+  "SlimeboundClassic:SpawnSlimePotion": {
     "NAME": "瓶装爪牙",
     "DESCRIPTIONS": [
       " 分裂 出 ",
@@ -23,7 +23,7 @@
     ]
   },
 
-  "Slimebound:ThreeZeroPotion": {
+  "SlimeboundClassic:ThreeZeroPotion": {
     "NAME": "稠化饮料",
     "DESCRIPTIONS": [
       "在你的手牌中加入 #b",

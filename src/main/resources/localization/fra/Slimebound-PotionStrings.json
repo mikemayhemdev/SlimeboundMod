@@ -1,5 +1,5 @@
 {
-  "Slimebound:SlimedPotion": {
+  "SlimeboundClassic:SlimedPotion": {
     "NAME": "Jarre de Slimed",
     "DESCRIPTIONS": [
       "Applique #b",
@@ -7,7 +7,7 @@
     ]
   },
 
-  "Slimebound:SlimyTonguePotion": {
+  "SlimeboundClassic:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
       "Quand vous appliquez Slimed sur un ennemi, appliquez #b",
@@ -15,7 +15,7 @@
     ]
   },
 
-  "Slimebound:SpawnSlimePotion": {
+  "SlimeboundClassic:SpawnSlimePotion": {
     "NAME": "Bottled Minion",
     "DESCRIPTIONS": [
       "Invoque ",
@@ -23,7 +23,7 @@
     ]
   },
 
-  "Slimebound:ThreeZeroPotion": {
+  "SlimeboundClassic:ThreeZeroPotion": {
     "NAME": "Ooze-Thé infusé",
     "DESCRIPTIONS": [
       "Ajoutez #b",

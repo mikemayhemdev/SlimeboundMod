@@ -1,5 +1,5 @@
 {
-  "Slimebound:SlimedPotion": {
+  "SlimeboundClassic:SlimedPotion": {
     "NAME": "スライムの瓶",
     "DESCRIPTIONS": [
       "粘液 #b",
@@ -7,7 +7,7 @@
     ]
   },
 
-  "Slimebound:SlimyTonguePotion": {
+  "SlimeboundClassic:SlimyTonguePotion": {
     "NAME": "スライミーエリクサー",
     "DESCRIPTIONS": [
       "粘液 与えるとき、さらに 粘液 #b",
@@ -15,7 +15,7 @@
     ]
   },
 
-  "Slimebound:SpawnSlimePotion": {
+  "SlimeboundClassic:SpawnSlimePotion": {
     "NAME": "ボトル入りミニオン",
     "DESCRIPTIONS": [
       "ランダムなスライムを",
@@ -23,7 +23,7 @@
     ]
   },
 
-  "Slimebound:ThreeZeroPotion": {
+  "SlimeboundClassic:ThreeZeroPotion": {
     "NAME": "ウーズ入りドリンク",
     "DESCRIPTIONS": [
       "#b",

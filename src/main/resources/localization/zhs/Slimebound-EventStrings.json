@@ -1,5 +1,5 @@
 {
-  "Slimebound:Hunted": {
+  "SlimeboundClassic:Hunted": {
     "NAME": "老大来了",
     "DESCRIPTIONS": [
       "尖塔中，一个声音在回荡…… NL NL #r~叛徒！！！~ NL NL 笨重的黏液很快追上了你，阻挡住了你前进的道路。看来它对自己曾经的爪牙跑出来单干非常不满。它从塔底一路追到这里，一心想要打倒并吞噬你。",
@@ -11,7 +11,7 @@
       "[惊慌逃离] #r被诅咒 #r- #r羞耻。"
     ]
   },
-  "Slimebound:WorldofGoop": {
+  "SlimeboundClassic:WorldofGoop": {
     "NAME": "黏液世界",
     "DESCRIPTIONS": [
       "你掉进了一个水坑里。 NL 可是坑里 @全是@ #g@史莱姆黏液@ ！ NL 不过冷静想想，你不就是黏液组成的吗？你沐浴在黏液里好好地放松了一下。 NL NL 准备爬出来的时候，你注意到不知哪个倒霉鬼的一堆金币掉在坑底，还有个被这闪亮的金币吸引来的好奇的生物。",
@@ -24,7 +24,7 @@
       "[离开]"
     ]
   },
-  "Slimebound:SlimeTalk": {
+  "SlimeboundClassic:SlimeTalk": {
     "NAME": "TalkStrings",
     "DESCRIPTIONS": [
       "~仆从...不...~ NL #r~叛徒！！！~",
@@ -41,7 +41,7 @@
       "~帽子...~ #r~好看...~"
     ]
   },
-  "Slimebound:ScrapOozePatch": {
+  "SlimeboundClassic:ScrapOozePatch": {
     "NAME": "另一只小史莱姆",
     "DESCRIPTIONS": [
       "任何不走寻常路的史莱姆在你征服尖塔的道路上都是你的朋友。 献上新的破烂和财宝, 破烂史莱姆 加入了你的征途。"
@@ -52,7 +52,7 @@
       "[离开]"
     ]
   },
-  "Slimebound:ArtOfSlimeWar": {
+  "SlimeboundClassic:ArtOfSlimeWar": {
     "NAME": "史莱姆的战争之道",
     "DESCRIPTIONS": [
       "你遇到了一个令人作呕的底座，上面放置着一本 #g发光的书 。 看上去，这本书记载着 #g史莱姆老大 和它的爪牙们所使用的复杂高深的战斗技巧...",

@@ -1,13 +1,13 @@
 {
   "cards": {
-    "Slimebound:DivideAndConquer": [
+    "SlimeboundClassic:DivideAndConquer": [
       {
         "x": 448.0,
         "y": 104.0,
         "size": 38.209946
       }
     ],
-    "Slimebound:DuplicatedForm": [
+    "SlimeboundClassic:DuplicatedForm": [
       {
         "x": 346.0,
         "y": 283.0,
@@ -34,7 +34,7 @@
         "size": 25.0
       }
     ],
-    "Slimebound:FormABlockade": [
+    "SlimeboundClassic:FormABlockade": [
       {
         "x": 76.0,
         "y": 281.0,
@@ -66,7 +66,7 @@
         "size": 11.045361
       }
     ],
-    "Slimebound:Gluttony": [
+    "SlimeboundClassic:Gluttony": [
       {
         "x": 282.0,
         "y": 277.0,
@@ -78,7 +78,7 @@
         "size": 25.0
       }
     ],
-    "Slimebound:LeadByExample": [
+    "SlimeboundClassic:LeadByExample": [
       {
         "x": 245.0,
         "y": 176.0,
@@ -115,14 +115,14 @@
         "size": 31.0
       }
     ],
-    "Slimebound:LeechEnergy": [
+    "SlimeboundClassic:LeechEnergy": [
       {
         "x": 251.0,
         "y": 269.0,
         "size": 13.928389
       }
     ],
-    "Slimebound:LeechingTouch": [
+    "SlimeboundClassic:LeechingTouch": [
       {
         "x": 220.0,
         "y": 289.0,
@@ -134,7 +134,7 @@
         "size": 25.0
       }
     ],
-    "Slimebound:Prepare": [
+    "SlimeboundClassic:Prepare": [
       {
         "x": 167.0,
         "y": 141.0,
@@ -171,7 +171,7 @@
         "size": 12.0415945
       }
     ],
-    "Slimebound:ProtectTheBoss": [
+    "SlimeboundClassic:ProtectTheBoss": [
       {
         "x": 264.0,
         "y": 207.0,
@@ -183,7 +183,7 @@
         "size": 16.03122
       }
     ],
-    "Slimebound:QuickStudy": [
+    "SlimeboundClassic:QuickStudy": [
       {
         "x": 270.0,
         "y": 282.0,
@@ -195,14 +195,14 @@
         "size": 14.764823
       }
     ],
-    "Slimebound:Recollect": [
+    "SlimeboundClassic:Recollect": [
       {
         "x": 274.0,
         "y": 270.0,
         "size": 8.944272
       }
     ],
-    "Slimebound:SlimeTap": [
+    "SlimeboundClassic:SlimeTap": [
       {
         "x": 305.0,
         "y": 208.0,
@@ -224,7 +224,7 @@
         "size": 17.262676
       }
     ],
-    "Slimebound:SplitAcid": [
+    "SlimeboundClassic:SplitAcid": [
       {
         "x": 225.0,
         "y": 311.0,

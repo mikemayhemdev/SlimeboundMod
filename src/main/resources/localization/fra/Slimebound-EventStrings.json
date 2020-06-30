@@ -1,5 +1,5 @@
 {
-  "Slimebound:Hunted": {
+  "SlimeboundClassic:Hunted": {
     "NAME": "Le Boss s'approche",
     "DESCRIPTIONS": [
       "Une forte voix résonne dans la Tour... NL NL #r~TRAITRE!!!~ NL NL L'immense slime tente de vous attraper, vous bloquant le passage. Il vous insulte de tra�tre, et veut d�sormais vous hanter jusqu'� la fin des temps pour vous punir. Il semble terriblement �nerv�.",
@@ -11,7 +11,7 @@
       "[Fuir comme un l�che] #rCursed #r- #rShame."
     ]
   },
-  "Slimebound:WorldofGoop": {
+  "SlimeboundClassic:WorldofGoop": {
     "NAME": "Monde baveux",
     "DESCRIPTIONS": [
       "Vous tombez dans une flaque. NL @C'EST@ @FAIT@ @DE@ #g@BAVE@ #g@SLIME!!@ NL Calmly, Calmement, vous prenez une grande inspiration pour vous calmer. NL NL Vous en sortez tout docuement, quand vous remarquez un amas de #ygold appartenant � d'autres aventuriers, jonchant sur une cr�ature qui semble int�r�ss� par tout ce m�tal.",
@@ -24,7 +24,7 @@
       "[Partir]"
     ]
   },
-  "Slimebound:SlimeTalk": {
+  "SlimeboundClassic:SlimeTalk": {
     "NAME": "Conversations",
     "DESCRIPTIONS": [
       "~SERVITEUR...~ NL #r~TRAITRE!!!~",
@@ -41,7 +41,7 @@
       "~NICE~ #r~HAT!!!~"
     ]
   },
-  "Slimebound:ScrapOozePatch": {
+  "SlimeboundClassic:ScrapOozePatch": {
     "NAME": "Scrap Ooze Amical",
     "DESCRIPTIONS": [
       "Chaque slime s'�tant �loign� du Boss est un potentiel ami.  Si vous lui offrez quelques babioles, le Scrap Ooze rejoindra votre aventure."
@@ -52,7 +52,7 @@
       "[Partir]"
     ]
   },
-  "Slimebound:ArtOfSlimeWar": {
+  "SlimeboundClassic:ArtOfSlimeWar": {
     "NAME": "L'art de la guerre selon les Slimes",
     "DESCRIPTIONS": [
       "Vous rencontrez un pi�destal tr�s sale qui contient � son sommet un #gbouquin #gscintillant. Il semble que ce bouquin renferme des techniques sp�ciales d�di�es au #gSlime #gBoss et ses serviteurs.",

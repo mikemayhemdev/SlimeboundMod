@@ -1,19 +1,19 @@
 {
-  "Slimebound:AbsorbEndCombat": {
+  "SlimeboundClassic:AbsorbEndCombat": {
     "NAME": "Heart of Goo",
     "FLAVOR": "You are not alone.",
     "DESCRIPTIONS": [
       "Split into a random Slime at the start of combat."
     ]
   },
-  "Slimebound:AbsorbEndCombatUpgraded": {
+  "SlimeboundClassic:AbsorbEndCombatUpgraded": {
     "NAME": "Black Heart of Goo",
     "FLAVOR": "You and ooze army.",
     "DESCRIPTIONS": [
       "Replaces #gHeart #gof #gGoo. At the start of combat, Split into two random slimes, gain 1 Potency, and gain 1 Slime slot."
     ]
   },
-  "Slimebound:SlimedTailRelic": {
+  "SlimeboundClassic:SlimedTailRelic": {
     "NAME": "Slimed Tail",
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
@@ -21,21 +21,21 @@
       "This relic has been used this combat. It will become active again next combat."
     ]
   },
-  "Slimebound:PotencyRelic": {
+  "SlimeboundClassic:PotencyRelic": {
     "NAME": "Ooze Stone",
     "FLAVOR": "It is said to gain power based on your mood.",
     "DESCRIPTIONS": [
       "At the start of combat, Split into a Mire Slime and gain #b1 Potency."
     ]
   },
-  "Slimebound:DailySplitRelic": {
+  "SlimeboundClassic:DailySplitRelic": {
     "NAME": "Slime the Spire",
     "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
     "DESCRIPTIONS": [
       "#bCustom #bRun #bModifier NL All enemies form into two Slime enemies at 50% HP."
     ]
   },
-  "Slimebound:ScrapOozeRelic": {
+  "SlimeboundClassic:ScrapOozeRelic": {
     "NAME": "Scrap Ooze",
     "FLAVOR": "",
     "DESCRIPTIONS": [
@@ -44,35 +44,35 @@
       "Nothing to give to the Scrap Ooze."
     ]
   },
-  "Slimebound:GreedOozeRelic": {
+  "SlimeboundClassic:GreedOozeRelic": {
     "NAME": "Greed Ooze",
     "FLAVOR": "A friend found in the Spire who hoards gold.",
     "DESCRIPTIONS": [
       "At the start of combat, spawn Greed Ooze. NL At Rest sites, Greed Ooze will take 50 of your gold, increasing its damage by 1."
     ]
   },
-  "Slimebound:PreparedRelic": {
+  "SlimeboundClassic:PreparedRelic": {
     "NAME": "Slimy Tea Set",
     "FLAVOR": "Definitely not the key to a refreshing night's rest.",
     "DESCRIPTIONS": [
       "When you enter a Rest site, begin the next combat with a Prepare card that costs 0 for your first turn."
     ]
   },
-  "Slimebound:StudyCardRelic": {
+  "SlimeboundClassic:StudyCardRelic": {
     "NAME": "Tiny Bowler Hat",
     "FLAVOR": "Whosoever controls the hat, controls the Spire.",
     "DESCRIPTIONS": [
       "At the start of combat, add a Study the Spire card to your hand. It costs 0."
     ]
   },
-  "Slimebound:AggressiveSlimeRelic": {
+  "SlimeboundClassic:AggressiveSlimeRelic": {
     "NAME": "Goop Dweller",
     "FLAVOR": "He followed me home. Can I keep it?",
     "DESCRIPTIONS": [
       "At the start of combat, Split into a Bruiser slime."
     ]
   },
-  "Slimebound:SlimedSkullRelic": {
+  "SlimeboundClassic:SlimedSkullRelic": {
     "NAME": "Slimy Skull",
     "FLAVOR": "A snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
     "DESCRIPTIONS": [
@@ -80,14 +80,14 @@
       " Goop."
     ]
   },
-  "Slimebound:MaxSlimesRelic": {
+  "SlimeboundClassic:MaxSlimesRelic": {
     "NAME": "Slime Plushie",
     "FLAVOR": "Too adorable.",
     "DESCRIPTIONS": [
       "At the start of combat, Split into a Leeching slime and gain 1 Slime slot."
     ]
   },
-  "Slimebound:SelfDamagePreventRelic": {
+  "SlimeboundClassic:SelfDamagePreventRelic": {
     "NAME": "Protective Gear",
     "FLAVOR": "The best defense is a good offense.",
     "DESCRIPTIONS": [

@@ -1,5 +1,5 @@
 {
-  "Slimebound:Hunted": {
+  "SlimeboundClassic:Hunted": {
     "NAME": "대장 출현",
     "DESCRIPTIONS": [
       "첨탑에 소리가 쩌렁쩌렁 울립니다... NL NL #r~배신자!!!~ NL NL 거대한 슬라임이 재빨리 당신을 따라와 당신의 앞을 막습니다. 자신의 부하가 구역을 이탈한게 마음에 들지 않는 듯합니다, 그래서 태초 지역을 벗어나 당신을 잡으러 왔습니다.",
@@ -11,7 +11,7 @@
       "[공포에 질려 도망간다] #r저주 #r- #r수치."
     ]
   },
-  "Slimebound:WorldofGoop": {
+  "SlimeboundClassic:WorldofGoop": {
     "NAME": "끈적이 세계",
     "DESCRIPTIONS": [
       "당신은 웅덩이에 빠졌습니다. NL 웅덩이는 #g@끈적이@ 로 되어있습니다!! NL 조용히, 끈적이 목욕을 하며 당신은 잠깐의 여유를 만끽합니다. NL NL 나와보니 불운한 모험가들이 떨어트린 #y골드 옆에 반짝이는 것을 좋아하는듯한 생명체가 있습니다.",
@@ -24,7 +24,7 @@
       "[떠난다]"
     ]
   },
-  "Slimebound:SlimeTalk": {
+  "SlimeboundClassic:SlimeTalk": {
     "NAME": "TalkStrings",
     "DESCRIPTIONS": [
       "~쫄다구...~ NL #r~배신자!!!~",
@@ -41,7 +41,7 @@
       "~NICE~ #r~HAT!!!~"
     ]
   },
-  "Slimebound:ScrapOozePatch": {
+  "SlimeboundClassic:ScrapOozePatch": {
     "NAME": "Scrap Ooze Alternate",
     "DESCRIPTIONS": [
       "다른 길을 걷는 모든 슬라임은 당신의 친구입니다.  새로운 날붙이와 보물을 받고, 날붙이 수액이 당신의 여정에 합류했습니다."
@@ -52,7 +52,7 @@
       "[떠난다]"
     ]
   },
-  "Slimebound:ArtOfSlimeWar": {
+  "SlimeboundClassic:ArtOfSlimeWar": {
     "NAME": "슬라임 병법",
     "DESCRIPTIONS": [
       "당신은 우연히 빛나는 책이 놓여진 역겨운 받침대를 발견했습니다. 이 책에는 #g대장 #g슬라임 과 그 하수인들이 사용하던 복잡하고 정교한 병법이 적혀져 있는 것 같습니다.",

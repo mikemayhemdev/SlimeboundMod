@@ -1,12 +1,12 @@
 {
-	"Slimebound:PotencyPower": {
+	"SlimeboundClassic:PotencyPower": {
 		"NAME": "Potency",
 		"DESCRIPTIONS": [
 			"Increase the damage of your spawned #ySlimes by ",
 			"."
 		]
 	},
-	"Slimebound:SlimedPower": {
+	"SlimeboundClassic:SlimedPower": {
 		"NAME": "Goop",
 		"DESCRIPTIONS": [
 			"The next Attack against this enemy deals ",
@@ -14,48 +14,48 @@
 			" HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
 		]
 	},
-	"Slimebound:SplitDailyTriggerPower": {
+	"SlimeboundClassic:SplitDailyTriggerPower": {
 		"NAME": "Slime Split",
 		"DESCRIPTIONS": [
 			"When its HP is at or below #b50%, will split into #b2 Slime enemies with ",
 			"'s current HP."
 		]
 	},
-	"Slimebound:SplitDailyPower": {
+	"SlimeboundClassic:SplitDailyPower": {
 		"NAME": "Splitting",
 		"DESCRIPTIONS": [
 			"This enemy is splitting this turn."
 		]
 	},
-	"Slimebound:BuffAttackSlimesPower": {
+	"SlimeboundClassic:BuffAttackSlimesPower": {
 		"NAME": "Upgrade: Bruiser",
 		"DESCRIPTIONS": [
 			"Bruiser Slimes deal ",
 			" more damage."
 		]
 	},
-	"Slimebound:BuffPoisonSlimesPower": {
+	"SlimeboundClassic:BuffPoisonSlimesPower": {
 		"NAME": "Upgrade: Acid",
 		"DESCRIPTIONS": [
 			"Poisoning Slimes apply ",
 			" more Poison."
 		]
 	},
-	"Slimebound:BuffSlimingSlimesPower": {
+	"SlimeboundClassic:BuffSlimingSlimesPower": {
 		"NAME": "Upgrade: Mire",
 		"DESCRIPTIONS": [
 			"Sliming Slimes apply ",
 			" more Goop."
 		]
 	},
-	"Slimebound:BuffShieldSlimesPower": {
+	"SlimeboundClassic:BuffShieldSlimesPower": {
 		"NAME": "Upgrade: Leeching",
 		"DESCRIPTIONS": [
 			"Leeching Slimes deal ",
 			" more damage."
 		]
 	},
-	"Slimebound:HexSlimePerTurnPower": {
+	"SlimeboundClassic:HexSlimePerTurnPower": {
 		"NAME": "Hex Power",
 		"DESCRIPTIONS": [
 			"Spawn a Ghostflame slime at the start of your next turn.",
@@ -63,7 +63,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:ProtectTheBoss": {
+	"SlimeboundClassic:ProtectTheBoss": {
 		"NAME": "Protect the Boss",
 		"DESCRIPTIONS": [
 			"Prevent the next time you would be damaged by an enemy Attack, Absorb your oldest slime instead.",
@@ -71,7 +71,7 @@
 			" times you would damaged by an enemy Attack, Absorbing your oldest slime instead."
 		]
 	},
-	"Slimebound:SplitForLessPower": {
+	"SlimeboundClassic:SplitForLessPower": {
 		"NAME": "Efficient Goo",
 		"DESCRIPTIONS": [
 			"Splitting costs ",
@@ -80,7 +80,7 @@
 			" random Split cards to your hand each turn."
 		]
 	},
-	"Slimebound:ComboAttackPower": {
+	"SlimeboundClassic:ComboAttackPower": {
 		"NAME": "Lead By Example",
 		"DESCRIPTIONS": [
 			"The first Attack you play each turn causes your oldest slime to also attack.",
@@ -92,7 +92,7 @@
 			" NL This effect cannot be triggered again this turn."
 		]
 	},
-	"Slimebound:RetainCardsOneTurnPower": {
+	"SlimeboundClassic:RetainCardsOneTurnPower": {
 		"NAME": "Preparing Cards",
 		"DESCRIPTIONS": [
 			"Retain ",
@@ -100,7 +100,7 @@
 			" cards this turn."
 		]
 	},
-	"Slimebound:EnergizedSlimeboundPower": {
+	"SlimeboundClassic:EnergizedSlimeboundPower": {
 		"NAME": "Energized",
 		"DESCRIPTIONS": [
 			"Gain #b",
@@ -109,7 +109,7 @@
 			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
 		]
 	},
-	"Slimebound:SelfFormingGooPower": {
+	"SlimeboundClassic:SelfFormingGooPower": {
 		"NAME": "Self-Forming Goo",
 		"DESCRIPTIONS": [
 			"Whenever you lose HP, at the start of your next turn, gain ",
@@ -119,35 +119,35 @@
 			" times."
 		]
 	},
-	"Slimebound:LoseSlimesPower": {
+	"SlimeboundClassic:LoseSlimesPower": {
 		"NAME": "Overexert",
 		"DESCRIPTIONS": [
 			"Next turn, Absorb all of your spawned slimes.",
 			" turns from now, Absorb all of your spawned slimes."
 		]
 	},
-	"Slimebound:TackleDebuffPower": {
+	"SlimeboundClassic:TackleDebuffPower": {
 		"NAME": "Battered",
 		"DESCRIPTIONS": [
 			"Receives ",
 			" more damage from cards containing Tackle."
 		]
 	},
-	"Slimebound:LoseThornsPower": {
+	"SlimeboundClassic:LoseThornsPower": {
 		"NAME": "Retracting Spikes",
 		"DESCRIPTIONS": [
 			"Lose ",
 			" Thorns at the start of your next turn."
 		]
 	},
-	"Slimebound:SlimedThornsPower": {
+	"SlimeboundClassic:SlimedThornsPower": {
 		"NAME": "Living Wall",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Goop to attackers this turn."
 		]
 	},
-	"Slimebound:PreventSlimeDecayPower": {
+	"SlimeboundClassic:PreventSlimeDecayPower": {
 		"NAME": "Doused in Slime",
 		"DESCRIPTIONS": [
 			"The next time an Attack is used on this enemy, Goop benefits will apply without consuming Goop.",
@@ -155,7 +155,7 @@
 			" times an Attack is used on this enemy, Goop benefits will apply without consuming Goop."
 		]
 	},
-	"Slimebound:DuplicatedFormPower": {
+	"SlimeboundClassic:DuplicatedFormPower": {
 		"NAME": "Duplicated Form",
 		"DESCRIPTIONS": [
 			"The first card you play that targets enemies each turn is played twice.",
@@ -163,21 +163,21 @@
 			" cards you play that targets enemies each turn are played twice."
 		]
 	},
-	"Slimebound:DuplicatedFormNoHealPower": {
+	"SlimeboundClassic:DuplicatedFormNoHealPower": {
 		"NAME": "Split",
 		"DESCRIPTIONS": [
 			"Max HP is temporarily reduced by ",
 			"."
 		]
 	},
-	"Slimebound:DuplicatedFormEnergyPower": {
+	"SlimeboundClassic:DuplicatedFormEnergyPower": {
 		"NAME": "Tag-Team",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" [E] each turn."
 		]
 	},
-	"Slimebound:GluttonyPower": {
+	"SlimeboundClassic:GluttonyPower": {
 		"NAME": "Gluttony",
 		"DESCRIPTIONS": [
 			"The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
@@ -190,7 +190,7 @@
 
 		]
 	},
-	"Slimebound:GluttonyPowerUpgraded": {
+	"SlimeboundClassic:GluttonyPowerUpgraded": {
 		"NAME": "Gluttony+",
 		"DESCRIPTIONS": [
 			"Add ",
@@ -198,21 +198,21 @@
 			" random Upgraded Lick cards to your hand each turn."
 		]
 	},
-	"Slimebound:PoisonThornsPower": {
+	"SlimeboundClassic:PoisonThornsPower": {
 		"NAME": "Acidic Goop",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Poison when you Attack an enemy who has Goop."
 		]
 	},
-	"Slimebound:SlimeRitualPower": {
+	"SlimeboundClassic:SlimeRitualPower": {
 		"NAME": "Ritual",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" Strength at the start of each turn."
 		]
 	},
-	"Slimebound:RecyclingPower": {
+	"SlimeboundClassic:RecyclingPower": {
 		"NAME": "Recycling",
 		"DESCRIPTIONS": [
 			"Return a random 0-cost Exhausted card to your hand at the start of next turn.",
@@ -220,42 +220,42 @@
 			" turns."
 		]
 	},
-	"Slimebound:RecyclingPowerUpgraded": {
+	"SlimeboundClassic:RecyclingPowerUpgraded": {
 		"NAME": "Recycling+",
 		"DESCRIPTIONS": [
 			"Heal ",
 			" HP and draw a card when you Exhaust a 0-cost card."
 		]
 	},
-	"Slimebound:AcidTonguePower": {
+	"SlimeboundClassic:AcidTonguePower": {
 		"NAME": "Acid Tongue",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Poison whenever you apply Goop."
 		]
 	},
-	"Slimebound:AcidTonguePowerUpgraded": {
+	"SlimeboundClassic:AcidTonguePowerUpgraded": {
 		"NAME": "Slimy Tongue",
 		"DESCRIPTIONS": [
 			"Effects that apply Goop apply ",
 			" more."
 		]
 	},
-	"Slimebound:SelfDamageSlimedPower": {
+	"SlimeboundClassic:SelfDamageSlimedPower": {
 		"NAME": "Stray Goop",
 		"DESCRIPTIONS": [
 			"Apply ",
 			" Goop to a random enemy whenever you lose HP."
 		]
 	},
-	"Slimebound:TackleBuffPower": {
+	"SlimeboundClassic:TackleBuffPower": {
 		"NAME": "Offensive Tackle",
 		"DESCRIPTIONS": [
 			"Cards containing Tackle deal ",
 			" more damage to enemies."
 		]
 	},
-	"Slimebound:PolyBeamAgainPower": {
+	"SlimeboundClassic:PolyBeamAgainPower": {
 		"NAME": "Alternating Beam",
 		"DESCRIPTIONS": [
 			"Poly Beam will be played at the start of your next turn. ",
@@ -263,7 +263,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:PolyBeamAgainPowerUpgraded": {
+	"SlimeboundClassic:PolyBeamAgainPowerUpgraded": {
 		"NAME": "Alternating Beam+",
 		"DESCRIPTIONS": [
 			"Poly Beam+ will be played at the start of your next turn. ",
@@ -271,7 +271,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:FirmFortitudePower": {
+	"SlimeboundClassic:FirmFortitudePower": {
 		"NAME": "Feel Our Pain",
 		"DESCRIPTIONS": [
 			"The next time you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
@@ -284,14 +284,14 @@
 
 		]
 	},
-	"Slimebound:NextTurnGainStrengthPower": {
+	"SlimeboundClassic:NextTurnGainStrengthPower": {
 		"NAME": "Charging Up",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" Strength on your next turn."
 		]
 	},
-	"Slimebound:NextTurnGainSlimeCrush": {
+	"SlimeboundClassic:NextTurnGainSlimeCrush": {
 		"NAME": "Preparing to Crush",
 		"DESCRIPTIONS": [
 			"Gain a SLIME CRUSH on your next turn.",
@@ -299,7 +299,7 @@
 			" copies of SLIME CRUSH on your next turn."
 		]
 	},
-	"Slimebound:StunnedPower": {
+	"SlimeboundClassic:StunnedPower": {
 		"NAME": "Completely Exhausted",
 		"DESCRIPTIONS": [
 			"Skip your next turn.",
@@ -307,14 +307,14 @@
 			" turns."
 		]
 	},
-	"Slimebound:SearingPower": {
+	"SlimeboundClassic:SearingPower": {
 		"NAME": "Burn",
 		"DESCRIPTIONS": [
 			"Taking ",
 			" damage each turn."
 		]
 	},
-	"Slimebound:NextTurnGainHyperBeam": {
+	"SlimeboundClassic:NextTurnGainHyperBeam": {
 		"NAME": "Preparing to Beam",
 		"DESCRIPTIONS": [
 			"Gain a Hyper Beam on your next turn.",
@@ -322,7 +322,7 @@
 			" copies of Hyper Beam on your next turn."
 		]
 	},
-	"Slimebound:NextTurnGainDivider": {
+	"SlimeboundClassic:NextTurnGainDivider": {
 		"NAME": "Preparing to Divide",
 		"DESCRIPTIONS": [
 			"Gain a Divide on your next turn.",
@@ -330,7 +330,7 @@
 			" copies of Divide on your next turn."
 		]
 	},
-	"Slimebound:StudyAutomatonPower": {
+	"SlimeboundClassic:StudyAutomatonPower": {
 		"NAME": "Study Automaton",
 		"DESCRIPTIONS": [
 			"Gain a random Automaton card at the start of next turn.",
@@ -338,7 +338,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyAutomatonPowerUpgraded": {
+	"SlimeboundClassic:StudyAutomatonPowerUpgraded": {
 		"NAME": "Study Automaton+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Automaton card at the start of next turn.",
@@ -346,7 +346,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyAwakenedPower": {
+	"SlimeboundClassic:StudyAwakenedPower": {
 		"NAME": "Study Awakened One",
 		"DESCRIPTIONS": [
 			"Gain a random Awakened One card at the start of next turn.",
@@ -354,7 +354,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyAwakenedPowerUpgraded": {
+	"SlimeboundClassic:StudyAwakenedPowerUpgraded": {
 		"NAME": "Study Awakened One+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Awakened One card at the start of next turn.",
@@ -362,14 +362,14 @@
 			" turns."
 		]
 	},
-	"Slimebound:AwakenedOnePower": {
+	"SlimeboundClassic:AwakenedOnePower": {
 		"NAME": "Dark Ritual",
 		"DESCRIPTIONS": [
 			"Gain ",
 			" Strength if this enemy does not attack on its turn."
 		]
 	},
-	"Slimebound:StudyChampPower": {
+	"SlimeboundClassic:StudyChampPower": {
 		"NAME": "Study Champ",
 		"DESCRIPTIONS": [
 			"Gain a random Champ card at the start of next turn.",
@@ -377,7 +377,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyChampPowerUpgraded": {
+	"SlimeboundClassic:StudyChampPowerUpgraded": {
 		"NAME": "Study Champ+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Champ card at the start of next turn.",
@@ -385,7 +385,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyCollectorPower": {
+	"SlimeboundClassic:StudyCollectorPower": {
 		"NAME": "Study Collector",
 		"DESCRIPTIONS": [
 			"Gain a random Collector card at the start of next turn.",
@@ -393,7 +393,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyCollectorPowerUpgraded": {
+	"SlimeboundClassic:StudyCollectorPowerUpgraded": {
 		"NAME": "Study Collector+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Collector card at the start of next turn.",
@@ -401,7 +401,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyGuardianPower": {
+	"SlimeboundClassic:StudyGuardianPower": {
 		"NAME": "Study Guardian",
 		"DESCRIPTIONS": [
 			"Gain a random Guardian card at the start of next turn.",
@@ -409,7 +409,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyGuardianPowerUpgraded": {
+	"SlimeboundClassic:StudyGuardianPowerUpgraded": {
 		"NAME": "Study Guardian+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Guardian card at the start of next turn.",
@@ -417,7 +417,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyHexaghostPower": {
+	"SlimeboundClassic:StudyHexaghostPower": {
 		"NAME": "Study Hexaghost",
 		"DESCRIPTIONS": [
 			"Gain a random Hexaghost card at the start of next turn.",
@@ -425,7 +425,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyHexaghostPowerUpgraded": {
+	"SlimeboundClassic:StudyHexaghostPowerUpgraded": {
 		"NAME": "Study Hexaghost+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Hexaghost card at the start of next turn.",
@@ -433,7 +433,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyShapesPower": {
+	"SlimeboundClassic:StudyShapesPower": {
 		"NAME": "Study Donu & Deca",
 		"DESCRIPTIONS": [
 			"Gain a random Donu & Deca card at the start of next turn.",
@@ -441,7 +441,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyShapesPowerUpgraded": {
+	"SlimeboundClassic:StudyShapesPowerUpgraded": {
 		"NAME": "Study Donu & Deca+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Donu & Deca card at the start of next turn.",
@@ -449,7 +449,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyTimeEaterPower": {
+	"SlimeboundClassic:StudyTimeEaterPower": {
 		"NAME": "Study Time Eater",
 		"DESCRIPTIONS": [
 			"Gain a random Time Eater card at the start of next turn.",
@@ -457,7 +457,7 @@
 			" turns."
 		]
 	},
-	"Slimebound:StudyTimeEaterPowerUpgraded": {
+	"SlimeboundClassic:StudyTimeEaterPowerUpgraded": {
 		"NAME": "Study Time Eater+",
 		"DESCRIPTIONS": [
 			"Gain a random Upgraded Time Eater card at the start of next turn.",
@@ -465,33 +465,33 @@
 			" turns."
 		]
 	},
-	"Slimebound:GreedRespawnPower": {
+	"SlimeboundClassic:GreedRespawnPower": {
 		"NAME": "Greed Recovering",
 		"DESCRIPTIONS": [
 			"Greed Ooze will respawn at the end of your turn."
 		]
 	},
-	"Slimebound:ScrapRespawnPower": {
+	"SlimeboundClassic:ScrapRespawnPower": {
 		"NAME": "Scrap Recovering",
 		"DESCRIPTIONS": [
 			"Scrap Ooze will respawn at the end of your turn."
 		]
 	},
-	"Slimebound:BuffSecondarySlimeEffectsPower": {
+	"SlimeboundClassic:BuffSecondarySlimeEffectsPower": {
 		"NAME": "Minion Master",
 		"DESCRIPTIONS": [
 			"When your slimes apply Goop, Poison, or Block, they apply ",
 			" more."
 		]
 	},
-	"Slimebound:TackleSelfDamagePreventPower": {
+	"SlimeboundClassic:TackleSelfDamagePreventPower": {
 		"NAME": "Reckless",
 		"DESCRIPTIONS": [
 			"Cards containing Tackle deal ",
 			" more damage to you."
 		]
 	},
-	"Slimebound:GoopArmorPower": {
+	"SlimeboundClassic:GoopArmorPower": {
 		"NAME": "Goop Armor",
 		"DESCRIPTIONS": [
 			"Whenever you Attack an enemy who has Goop, gain ",

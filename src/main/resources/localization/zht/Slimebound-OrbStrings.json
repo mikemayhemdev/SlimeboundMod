@@ -1,5 +1,5 @@
 {
-  "Slimebound:BronzeSlime": {
+  "SlimeboundClassic:BronzeSlime": {
     "NAME": "青銅史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
@@ -7,42 +7,42 @@
       " 點 格擋"
     ]
   },
-  "Slimebound:AttackSlime": {
+  "SlimeboundClassic:AttackSlime": {
     "NAME": "好鬥史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
       " 點傷害"
     ]
   },
-  "Slimebound:ScrapOozeSlime": {
+  "SlimeboundClassic:ScrapOozeSlime": {
     "NAME": "破爛史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
       " 點傷害。 NL 被 吸收 後在回合結束時重生。不減少最大生命"
     ]
   },
-  "Slimebound:GreedOozeSlime": {
+  "SlimeboundClassic:GreedOozeSlime": {
     "NAME": "貪婪史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
       " 點傷害。 NL 被 吸收 後在回合結束時重生。不減少最大生命"
     ]
   },
-  "Slimebound:TorchHeadSlime": {
+  "SlimeboundClassic:TorchHeadSlime": {
     "NAME": "火炬頭史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
       " 點傷害。 潛力 對其影響加倍"
     ]
   },
-  "Slimebound:CultistSlime": {
+  "SlimeboundClassic:CultistSlime": {
     "NAME": "邪教徒史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
       " 點傷害並提高下次造成的傷害1點"
     ]
   },
-  "Slimebound:ShieldSlime": {
+  "SlimeboundClassic:ShieldSlime": {
     "NAME": "水蛭史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
@@ -50,7 +50,7 @@
       " 點 格擋"
     ]
   },
-  "Slimebound:PoisonSlime": {
+  "SlimeboundClassic:PoisonSlime": {
     "NAME": "酸液史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
@@ -58,7 +58,7 @@
       " 層 中毒"
     ]
   },
-  "Slimebound:SlimingSlime": {
+  "SlimeboundClassic:SlimingSlime": {
     "NAME": "汙泥史萊姆",
     "DESCRIPTION": [
       "在你的回合開始時，造成 ",
@@ -66,7 +66,7 @@
       " 層 黏液"
     ]
   },
-  "Slimebound:HexSlime": {
+  "SlimeboundClassic:HexSlime": {
     "NAME": "鬼火史萊姆",
     "DESCRIPTION": [
       "不發起攻擊，潛力對其無效。提供1點 力量 、1點 敏捷 和2點 潛力"

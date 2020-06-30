@@ -1,5 +1,5 @@
 {
-  "Slimebound:BronzeSlime": {
+  "SlimeboundClassic:BronzeSlime": {
     "NAME": "Bronze Slime",
     "DESCRIPTION": [
       "Inflige ",
@@ -7,42 +7,42 @@
       " Armure."
     ]
   },
-  "Slimebound:AttackSlime": {
+  "SlimeboundClassic:AttackSlime": {
     "NAME": "Bruiser Slime",
     "DESCRIPTION": [
       "Inflige ",
       " de dégât au début de votre tour."
     ]
   },
-  "Slimebound:ScrapOozeSlime": {
+  "SlimeboundClassic:ScrapOozeSlime": {
     "NAME": "Scrap Ooze",
     "DESCRIPTION": [
       "Inflige ",
       " de dégât au début de votre tour. Réaparrait immédiatement si tué ou absorbé au lieu de rendre de la vie."
     ]
   },
-  "Slimebound:GreedOozeSlime": {
+  "SlimeboundClassic:GreedOozeSlime": {
     "NAME": "Greed Ooze",
     "DESCRIPTION": [
       "Inflige ",
       " de dégât au début du tour. Réaparrait immédiatement si tué ou absorbé au lieu de rendre de la vie."
     ]
   },
-  "Slimebound:TorchHeadSlime": {
+  "SlimeboundClassic:TorchHeadSlime": {
     "NAME": "Tête de Torche Slime",
     "DESCRIPTION": [
       "Inflige ",
       " de dégât au début de votre tour. Gagne 1 de force de frappe quand vous jouez un Pouvoir."
     ]
   },
-  "Slimebound:CultistSlime": {
+  "SlimeboundClassic:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
       "Inflige ",
       " de dégât au début de votre tout, puis augmente sa force de frappe de 2."
     ]
   },
-  "Slimebound:ShieldSlime": {
+  "SlimeboundClassic:ShieldSlime": {
     "NAME": "Leeching Slime",
     "DESCRIPTION": [
       "Inflige ",
@@ -50,7 +50,7 @@
       " Armure."
     ]
   },
-  "Slimebound:PoisonSlime": {
+  "SlimeboundClassic:PoisonSlime": {
     "NAME": "Acid Slime",
     "DESCRIPTION": [
       "Inflige ",
@@ -58,7 +58,7 @@
       " Poison au début de votre tour."
     ]
   },
-  "Slimebound:SlimingSlime": {
+  "SlimeboundClassic:SlimingSlime": {
     "NAME": "Mire Slime",
     "DESCRIPTION": [
       "Inflige ",
@@ -66,7 +66,7 @@
       " Slimed au début de votre tour."
     ]
   },
-  "Slimebound:HexSlime": {
+  "SlimeboundClassic:HexSlime": {
     "NAME": "FantômeBrûlant Slime",
     "DESCRIPTION": [
       "N'attaque pas s'il n'est pas affecté par Puissance. Donne 1 Force, 1 Dextérité, and 2 Puissance."

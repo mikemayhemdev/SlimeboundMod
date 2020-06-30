@@ -1,5 +1,5 @@
 {
-  "Slimebound:BronzeSlime": {
+  "SlimeboundClassic:BronzeSlime": {
     "NAME": "Bronze Slime",
     "DESCRIPTION": [
       "Deals ",
@@ -7,42 +7,42 @@
       " Block."
     ]
   },
-  "Slimebound:AttackSlime": {
+  "SlimeboundClassic:AttackSlime": {
     "NAME": "Bruiser Slime",
     "DESCRIPTION": [
       "Deals ",
       " damage at the start of your turn."
     ]
   },
-  "Slimebound:ScrapOozeSlime": {
+  "SlimeboundClassic:ScrapOozeSlime": {
     "NAME": "Scrap Ooze",
     "DESCRIPTION": [
       "Deals ",
       " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
     ]
   },
-  "Slimebound:GreedOozeSlime": {
+  "SlimeboundClassic:GreedOozeSlime": {
     "NAME": "Greed Ooze",
     "DESCRIPTION": [
       "Deals ",
       " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
     ]
   },
-  "Slimebound:TorchHeadSlime": {
+  "SlimeboundClassic:TorchHeadSlime": {
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals ",
       " damage at the start of your turn. Gains twice the normal benefit from Potency."
     ]
   },
-  "Slimebound:CultistSlime": {
+  "SlimeboundClassic:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
       "Deals ",
       " damage at the start of your turn, then increases its damage by 1."
     ]
   },
-  "Slimebound:ShieldSlime": {
+  "SlimeboundClassic:ShieldSlime": {
     "NAME": "Leeching Slime",
     "DESCRIPTION": [
       "Deals ",
@@ -50,7 +50,7 @@
       " Block."
     ]
   },
-  "Slimebound:PoisonSlime": {
+  "SlimeboundClassic:PoisonSlime": {
     "NAME": "Acid Slime",
     "DESCRIPTION": [
       "Deals ",
@@ -58,7 +58,7 @@
       " Poison at the start of your turn."
     ]
   },
-  "Slimebound:SlimingSlime": {
+  "SlimeboundClassic:SlimingSlime": {
     "NAME": "Mire Slime",
     "DESCRIPTION": [
       "Deals ",
@@ -66,7 +66,7 @@
       " Goop at the start of your turn."
     ]
   },
-  "Slimebound:HexSlime": {
+  "SlimeboundClassic:HexSlime": {
     "NAME": "Ghostflame Slime",
     "DESCRIPTION": [
       "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."

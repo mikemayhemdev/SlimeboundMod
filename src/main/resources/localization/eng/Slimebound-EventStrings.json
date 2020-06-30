@@ -1,5 +1,5 @@
 {
-  "Slimebound:Hunted": {
+  "SlimeboundClassic:Hunted": {
     "NAME": "The Boss Approaches",
     "DESCRIPTIONS": [
       "A booming voice echoes the spire... NL NL #r~BETRAYER!!!~ NL NL The hulking slime quickly catches up to you, blocking your path forward. It appears it isn't happy with one of it's own minions going rogue, and has abandoned the Exordium to hunt you down and absorb you.",
@@ -11,7 +11,7 @@
       "[Flee in Terror] #rCursed #r- #rShame."
     ]
   },
-  "Slimebound:WorldofGoop": {
+  "SlimeboundClassic:WorldofGoop": {
     "NAME": "World of Goop",
     "DESCRIPTIONS": [
       "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool a pile of #ygold from unfortunate adventurers, along with a curious creature who seems to be attracted to the shiny metal.",
@@ -24,7 +24,7 @@
       "[Leave]"
     ]
   },
-  "Slimebound:SlimeTalk": {
+  "SlimeboundClassic:SlimeTalk": {
     "NAME": "TalkStrings",
     "DESCRIPTIONS": [
       "~MINION...~ NL #r~BETRAYER!!!~",
@@ -41,7 +41,7 @@
       "~NICE~ #r~HAT!!!~"
     ]
   },
-  "Slimebound:ScrapOozePatch": {
+  "SlimeboundClassic:ScrapOozePatch": {
     "NAME": "Scrap Ooze Alternate",
     "DESCRIPTIONS": [
       "Any slime who has found a different path is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
@@ -52,7 +52,7 @@
       "[Leave]"
     ]
   },
-  "Slimebound:ArtOfSlimeWar": {
+  "SlimeboundClassic:ArtOfSlimeWar": {
     "NAME": "The Art of Slime War",
     "DESCRIPTIONS": [
       "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
